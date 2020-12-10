@@ -1,0 +1,33 @@
+\documentclass[a4paper]{article}
+
+\input{../../../../latex/package.tex}
+\input{config/config.tex}
+\makeindex
+
+\usepackage{hyperref}
+
+
+\begin{document}
+	\input{../../../../latex/titlepage.tex}
+	\pagebreak	
+	
+	% Diario delle modifiche
+	\input{../../../../latex/changelog.tex}
+	\input{config/changeloginput.tex} % modifica questo file       
+	\end{longtable}
+	\pagebreak
+		
+	% indice
+	\tableofcontents	
+	\pagebreak
+		
+	% contenuto del documento
+	\input{res/sections/01_introduzione.tex}
+	\pagebreak
+	
+	\input{res/sections/02_processi_primari.tex}
+	\pagebreak
+	
+	
+	
+\end{document}

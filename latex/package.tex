@@ -1,0 +1,94 @@
+%Tutti gli usepackage vanno qui
+
+\usepackage{geometry}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgschola}
+%\usepackage{tgbonum}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,      
+	urlcolor=blue,
+}
+% Numerazione figure 
+\let\counterwithout\relax
+\let\counterwithin\relax
+\usepackage{chngcntr}
+
+\counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
+
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\setcounter{secnumdepth}{4}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+
+\usepackage{ifthen}
+
+%\usepackage{float}
+\usepackage{layouts}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{float}
+\usepackage{eurosym}
+
+\usepackage{lastpage}
+\usepackage{layouts}
+\usepackage{float}
+\usepackage{eurosym}
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.07]{../../../../latex/images/logoTWM_crop.png}}
+%Titolo del documento
+\rhead{\doctitle{}}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage\ di \pageref{LastPage}}
+\setlength{\headheight}{35pt}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% multirow per tabelle
+\usepackage{multirow}
+
+% Permette tabelle su più pagine
+%\usepackage{longtable}
+
+
+% colore di sfondo per le celle
+\usepackage[table]{xcolor}
+
+%COMANDI TABELLE
+\newcommand{\rowcolorhead}{\rowcolor[HTML]{9b240a}} %intestazione 
+% check for missing commands
+\newcommand{\headertitle}[1]{\textbf{\color{white}#1}} %titolo colonna
+\definecolor{pari}{HTML}{FFDBCB}
+\definecolor{dispari}{HTML}{F1F7FD}
+
+% comandi glossario
+\newcommand{\glo}{$_{G}$}
+\newcommand{\glosp}{$_{G}$ }
+
+
+%label custom
+\makeatletter
+\newcommand{\uclabel}[2]{%
+	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{\thepage}{#2}{#1}{}} }%
+	\hypertarget{#1}{#2}
+}
+\makeatother
+
+%riportare pezzi di codice
+\definecolor{codegray}{gray}{0.9}
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+
+

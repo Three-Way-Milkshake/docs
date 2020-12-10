@@ -1,0 +1,34 @@
+\documentclass[a4paper]{article}
+% scrartcl
+% impostazioni generali
+\input{../../../../latex/package.tex}
+
+% dati relativi alla prima pagina
+\input{config/config.tex}
+
+\makeindex
+
+\begin{document}
+\counterwithin{table}{section}
+
+% Prima pagina
+\input{../../../../latex/titlepage.tex}
+
+% Diario delle modifiche
+\input{../../../../latex/changelog.tex}
+\input{config/changeloginput.tex}        
+\end{longtable}
+\pagebreak
+
+% Indice
+\tableofcontents
+\pagebreak
+
+% Informazioni generali
+\input{res/sections/01_Introduction.tex}
+\pagebreak
+
+% Contenuto
+\input{res/sections/02_Content.tex}
+
+\end{document}
