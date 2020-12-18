@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{studio di fattibilita c3}
+\author{crivealby }
+\date{December 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\pagebreak
+\subsection{Capitolato C3 - GDP - Gathering Detection Platform}
+
+
+\subsubsection{Informazioni generali}
+
+\begin{itemize}
+	\item{\textbf{Nome:}} GDP - Gathering Detection Platform
+	\item{\textbf{Proponente:}} SyncLab
+	\item{\textbf{Committente:}} Prof. Tullio Vardanega, Prof. Riccardo Cardin
+\end{itemize}
+
+
+
+\subsubsection{Descrizione del capitolato}
+
+Il software GDP (Gathering Detection Platform) consiste in una piattaforma che rappresenta mediante visualizzazione grafica zone potenzialmente a rischio di assembramento e previrne di nuove, attraverso sensoristica e varie sorgenti dati.
+
+
+\subsubsection{Finalità del progetto}
+
+Il software finale prevede l'acquisizione di informazione da sensoristica e altre sorgenti:
+\begin{itemize}
+	\item{\textbf{Sensoristica:}}
+	    \begin{itemize}
+	        \item telecamere
+	        \item dispositivi contapersone
+	        \item etc.
+	    \end{itemize}
+	\item{\textbf{Sorgenti varie e eterogenee:}}
+	    \begin{itemize}
+	        \item flussi di prenotazioni Uber
+	        \item orari dei mezzi di trasporto con capienze medie per corsia (autobus, metro, treno)
+	        \item etc.
+	\end{itemize}
+\end{itemize}
+Gli utilizzatori del software potranno vedere una rappresentazione delle zone a rischio (attuali o possibilmente in futuro), attraverso heat-map.
+Attraverso heat-map possono accedere alla situazione globale dei vari flussi:
+\begin{itemize}
+    \item in tempo reale, con bassa latenza
+    \item flussi previsti in futuro.
+    \item flussi vecchi raccolti e storicizzati.
+\end{itemize}
+
+
+\subsubsection{Tecnologie interessate}
+
+\begin{itemize}
+	\item{\textbf{Java, Angular:}} linguaggi suggeriti dal proponente per lo sviluppo del server back-end e della componente Web Application del sistema;
+	\item{\textbf{\textit{framework} Leaflet:}} framework da utilizzare per la gestione delle mappe, ad esempio heatmap;
+	\item{\textbf{protocolli asincroni:}} per la comunicazione tra le varie componenti;  
+	\item{\textbf{\textit{pattern} Publisher/Subscriber e protocollo MQTT:}}\newline (Message Queue Telemetry Transport), consigliato per essere open, di facile implementazione, di ampia diffusione in applicazioni IoT e M2M.
+\end{itemize}
+
+Inoltre il proponente specifica i seguenti requisiti minimi:
+\begin{itemize}
+	\item \textbf{\textit{responsive}} Sempre risposta a una richiesta di servizio (anche in caso di guasto);
+	\item \textbf{\textit{resilient}} Servizi ripristinabili a seguito di guasti;
+	\item \textbf{\textit{elastic}} Servizi scalati in base alla domanda;
+	\item \textbf{\textit{message-driven}} Servizi devono rispondere al mondo, non controllarlo.
+\end{itemize}
+Un sistema che soddisfa questi requisiti è definito un Sistema Reattivo.
+	
+	
+\subsubsection{Aspetti positivi}
+
+Il progetto si pone in un contesto molto attuale, di grande interesse del mercato e generale.
+Anche le tecnologie impiegate sono molto attuali e valide, il cui studio porterebbe a competenze molto utili in ambito lavorativo.
+
+
+
+\subsubsection{Criticità}
+
+Nonostante il capitolato abbia riscosso un buon interesse da parte del gruppo, le tecnologie da impiegare, in quanto alcune nuove e interessanti rappresentano una difficoltà.
+In particolare le criticità principali sono:
+\begin{itemize}
+    \item \textbf{Leaflet:} La tecnologia relativa alle heat-map e framework Leaflet;
+    \item \textbf{Linguaggio Angular:} mai affrontato, anche se penso la formazione riguardante Angular sia un carico leggero di lavoro;
+    \item \textbf{Protocolli asincroni, Pattern Publisher/Subscriber e protocollo MQTT: } anche queste tecnologie, mai affrontate finora, rappresentano un carico di lavoro.
+\end{itemize}
+
+
+\subsubsection{Conclusioni}
+
+Nonostante l'elevato interesse e attenzione che questi sistemi hanno attirato, il gruppo non ha preso in considerazione questo capitolato in quanto non era più disponibile tra le scelte possibili.
+
+
+
+
+
+
+\end{document}
