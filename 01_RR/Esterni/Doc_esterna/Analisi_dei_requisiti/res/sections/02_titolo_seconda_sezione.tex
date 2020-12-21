@@ -1,4 +1,39 @@
-\section{Processi primari}
-\subsection{Fornitura}
-\subsubsection{Scopo}
-Lo scopo del processo di fornitura è di determinare 
+\section{Descrizione generale}
+
+\subsection{Obbiettivi del prodotto}
+Il progetto Portacs si pone come obiettivo finale di dimostrare la fattibilità di sviluppare un software che permetta il monitoraggio in tempo reale di unità che si muovono in uno spazio per raggiungere una lista ordinata di punti d’interesse.
+
+\subsection{Caratteristiche del prodotto}
+Con questo progetto si vuole sviluppare un software che organizza lo spostamento di varie unità (che, per esempio, possono essere robot-camerieri, muletti o automobili) in una determinata mappa nella quale sono specificati i percorsi percorribili con annesse corsie parallele e sensi unici, e dove sono indicati i vari \textit{“Points Of Interest”} (POI\ped{G}), ovvero i punti che le unità devono raggiungere. 
+Il progetto si può suddividere in tre macro architetture, le cui caratteristiche sono di seguito descritte.
+\subsubsection{Unità}
+Una prima macro architettura è composta dall’insieme delle varie unità che si muovono nello spazio. Ognuna di queste unità dispone di un punto di partenza, di una velocità massima non superabile, e di una lista ordinata di POI\ped{G} da raggiungere.
+Inoltre, ogni unità deve inviare costantemente al sistema centrale la propria posizione, direzione e velocità.
+
+\subsubsection{Sistema}
+Il sistema centrale si occupa del coordinamento di ogni unità. Considerando la posizione, la direzione e la velocità di ognuna di esse, il sistema calcola la prossima mossa da far eseguire. Le calcola in funzione del successivo POI da raggiungere, della posizione delle altre unità nello spazio al fine di evitare le eventuali collisioni (predittività), dei vincoli dimensionali, i quali i limiti sulle corsie. Esso inoltre deve analizzare e accettare i seguenti input:
+\begin{itemize}
+	\item{\textbf{Scacchiera(mappa):} }
+			\begin{itemize}
+			\item{definizione percorrenze e relativi vincoli ;}
+			\item{definizione di POI.}
+			\end{itemize}
+	\item{\textbf{Definizione delle N unità:}}
+			\begin{itemize}
+			\item{identificativo di sistema;} 
+			\item{velocità massima; } 
+			\item{posizione iniziale ;} 
+			\item{lista dei POI da attraversare, già ordinata.}
+			\end{itemize}
+\end{itemize}
+
+\subsubsection{User Interface} 
+La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce
+direzionali (si “accenderà” quella suggerita dal sistema centrale), il pulsante di
+stop/start e l’indicatore di velocità attuale (che avrà come massimo la velocità
+massima anagrafica).
+
+
+\subsection{Caratteristiche degli utenti}
+
+\subsection{Vincoli progettuali}
