@@ -1,8 +1,8 @@
 \section{Preventivo}
-In questo documento verranno utilizzate le seguenti abbreviazioni per descrivere l'utilizzo delle risorse da parte del team:
+Questa sezione fornisce una stima dei costi che il gruppo dovrà sostenere nelle varie fasi che interessano lo svolgimento del progetto. In particolare, verranno utilizzate le seguenti abbreviazioni per descrivere l'utilizzo delle risorse da parte del team:
 \begin{itemize}
 	\item R  -> Responsabile
-	\item V  -> Verficatore
+	\item V  -> Verificatore
 	\item An -> Analista
 	\item Am -> Amministratore
 	\item Pr -> Programmatore
@@ -13,25 +13,35 @@ In questo documento verranno utilizzate le seguenti abbreviazioni per descrivere
 \subsection{Avvio}
 
 \subsubsection{Prospetto orario}
-Questa tabella descrive l'utilizzo della risorsa tempo (in ore) dei vari componenti del gruppo in questa fase: \\
+Di seguito viene illustrato l'utilizzo della risorsa tempo (espresso in ore) dei vari componenti del gruppo nella fase di Avvio:
 
-\begin{tabular}{|l|cccccc|c|}
-\hline
-Nome & R &  V & An & Am & Pr & Pt & Tot(h)\\
-\hline
+\begin{table}[hbt!]
+\begin{center}
+\begin{tabular}{c
+	!{\color[HTML]{9b240a}\vrule width 1pt}
+	cccccc
+	!{\color[HTML]{9b240a}\vrule width 1pt}	
+	c}
+\rowcolorhead
+\headertitle{Nome} & \headertitle{R} & \headertitle{V} & \headertitle{An} & \headertitle{Am} & \headertitle{Pr} & \headertitle{Pt} & \headertitle{Tot} \\
+
 Chiarello Sofia & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 Crivellari Alberto & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 De Renzis Simone & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 Greggio Nicolò & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 Tessari Andrea & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 Zuccolo Giada & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
-\hline
 \end{tabular}
-\\
-Vengono riportati i dati della tabella nel seguente istogramma: \\
+\caption{Per ogni componente, i ruoli ricoperti e la relativa occupazione oraria nella fase di Avvio}
+\end{center}
+\end{table}
 
-\pgfplotsset{width=10cm,compat=1.17}
+%%%%%DON'T COPY THIS%%%%%%
+\pagebreak
+%%%%%DON'T COPY THIS%%%%%%
 
+\begin{figure}[hbt!]
+\centering
 \begin{tikzpicture}
 \begin{axis}[
     ybar stacked,
@@ -64,38 +74,52 @@ Vengono riportati i dati della tabella nel seguente istogramma: \\
 \legend{Responsabile \\ Amministratore \\ Progettista \\ Analista \\ Programmatore \\ Verificatore \\}
 \end{axis}
 \end{tikzpicture}
+\caption{Istogramma che visualizza la ripartizione delle ore per la fase di Avvio} 
+\end{figure}
+
+
+
+
+
+
 
 \subsubsection{Prospetto economico}
-Questa tabella mostra il costo per ogni ruolo all'interno del team in questa fase. Viene mostrato anche il totale. \\
+Il costo derivante dalle ore impiegate dai componenti è descritto di seguito, calcolandone il totale.
 
-\begin{tabular}{|l|c|c|}
-\hline
-Ruolo & Ore & Costo(€)\\
-\hline
-Responsabile & 0 & 0\\
-Verificatore & 0 & 0\\
-Analista & 0 & 0\\
-Programmatore & 0 & 0\\
-Progettista & 0 & 0\\
-Totale & 0& 0\\
-\hline
-\end{tabular}\\
-
-
-Vengono riportati i dati della tabella nel seguente grafico a torta: \\
-
-\begin{tikzpicture}
-\pie [rotate = 180, sum = auto, explode=0.1]
+\begin{table}[hbt!]
+{\setlength{\parindent}{0cm}
+\begin{minipage}{.43\textwidth}
+	\begin{tabular}{ccc}
+	\rowcolorhead
+	\headertitle{Ruolo} & \headertitle{Ore} & \headertitle{Costo(€)}\\
+	Responsabile & 0 & 0\\
+	Verificatore & 0 & 0\\
+	Analista & 0 & 0\\
+	Programmatore & 0 & 0\\
+	Progettista & 0 & 0\\
+	\hline
+	Totale & 0& 0\\
+	\end{tabular}
+\end{minipage}% This must go next to `\end{minipage}`
+\begin{minipage}{.57\textwidth}
+  \begin{tikzpicture}
+\pie [rotate = 270,
+    sum = auto, 
+    %text = legend, 
+    radius = 2.7,
+    color = {red, pink, green, yellow, cyan, orange}]
     {
     20/Responsabile,
-	15/Verficatore,
-	15/Analista,
-	65/Amministratore,
-	3/Programmatore,
-	5/Progettista
+    65/Amministratore,
+    5/Progettista,
+    15/Analista,
+    3/Programmatore,
+	15/Verificatore
     }
-\end{tikzpicture}
-
+\end{tikzpicture} 
+\end{minipage} }
+\caption{Per ogni ruolo, il complessivo delle ore impiegate dai membri e il relativo ammontare in denaro. Il diagramma a torta visualizza la composizione del costo per la fase di Avvio}
+\end{table}
 
 
 
@@ -157,19 +181,16 @@ Vengono riportati i dati della tabella nel seguente istogramma: \\
 \subsubsection{Prospetto economico}
 Questa tabella mostra il costo per ogni ruolo all'interno del team in questa fase. Viene mostrato anche il totale. \\
 
-\begin{tabular}{|l|c|c|}
-\hline
-Ruolo & Ore & Costo(€)\\
-\hline
+\begin{tabular}{ccc}
+\rowcolorhead
+\headertitle{Ruolo} & \headertitle{Ore} & \headertitle{Costo(€)}\\
 Responsabile & 0 & 0\\
 Verificatore & 0 & 0\\
 Analista & 0 & 0\\
 Programmatore & 0 & 0\\
 Progettista & 0 & 0\\
 Totale & 0& 0\\
-\hline
 \end{tabular}\\
-
 
 Vengono riportati i dati della tabella nel seguente grafico a torta: \\
 
@@ -243,19 +264,16 @@ Vengono riportati i dati della tabella nel seguente istogramma: \\
 \subsubsection{Prospetto economico}
 Questa tabella mostra il costo per ogni ruolo all'interno del team in questa fase. Viene mostrato anche il totale. \\
 
-\begin{tabular}{|l|c|c|}
-\hline
-Ruolo & Ore & Costo(€)\\
-\hline
+\begin{tabular}{ccc}
+\rowcolorhead
+\headertitle{Ruolo} & \headertitle{Ore} & \headertitle{Costo(€)}\\
 Responsabile & 0 & 0\\
 Verificatore & 0 & 0\\
 Analista & 0 & 0\\
 Programmatore & 0 & 0\\
 Progettista & 0 & 0\\
 Totale & 0& 0\\
-\hline
 \end{tabular}\\
-
 
 Vengono riportati i dati della tabella nel seguente grafico a torta: \\
 
@@ -330,19 +348,16 @@ Vengono riportati i dati della tabella nel seguente istogramma: \\
 \subsubsection{Prospetto economico}
 Questa tabella mostra il costo per ogni ruolo all'interno del team in questa fase. Viene mostrato anche il totale. \\
 
-\begin{tabular}{|l|c|c|}
-\hline
-Ruolo & Ore & Costo(€)\\
-\hline
+\begin{tabular}{ccc}
+\rowcolorhead
+\headertitle{Ruolo} & \headertitle{Ore} & \headertitle{Costo(€)}\\
 Responsabile & 0 & 0\\
 Verificatore & 0 & 0\\
 Analista & 0 & 0\\
 Programmatore & 0 & 0\\
 Progettista & 0 & 0\\
 Totale & 0& 0\\
-\hline
 \end{tabular}\\
-
 
 Vengono riportati i dati della tabella nel seguente grafico a torta: \\
 
@@ -418,19 +433,16 @@ Vengono riportati i dati della tabella nel seguente istogramma: \\
 \subsubsection{Prospetto economico}
 Questa tabella mostra il costo per ogni ruolo all'interno del team in questa fase. Viene mostrato anche il totale. \\
 
-\begin{tabular}{|l|c|c|}
-\hline
-Ruolo & Ore & Costo(€)\\
-\hline
+\begin{tabular}{ccc}
+\rowcolorhead
+\headertitle{Ruolo} & \headertitle{Ore} & \headertitle{Costo(€)}\\
 Responsabile & 0 & 0\\
 Verificatore & 0 & 0\\
 Analista & 0 & 0\\
 Programmatore & 0 & 0\\
 Progettista & 0 & 0\\
 Totale & 0& 0\\
-\hline
 \end{tabular}\\
-
 
 Vengono riportati i dati della tabella nel seguente grafico a torta: \\
 
@@ -505,19 +517,16 @@ Vengono riportati i dati della tabella nel seguente istogramma: \\
 \subsubsection{Prospetto economico}
 Questa tabella mostra il costo totale per ogni ruolo all'interno del team. Viene mostrato anche il totale. \\
 
-\begin{tabular}{|l|c|c|}
-\hline
-Ruolo & Ore & Costo(€)\\
-\hline
+\begin{tabular}{ccc}
+\rowcolorhead
+\headertitle{Ruolo} & \headertitle{Ore} & \headertitle{Costo(€)}\\
 Responsabile & 0 & 0\\
 Verificatore & 0 & 0\\
 Analista & 0 & 0\\
 Programmatore & 0 & 0\\
 Progettista & 0 & 0\\
 Totale & 0& 0\\
-\hline
 \end{tabular}\\
-
 
 Vengono riportati i dati della tabella nel seguente grafico a torta: \\
 
@@ -592,19 +601,16 @@ Vengono riportati i dati della tabella nel seguente istogramma: \\
 \subsubsection{Prospetto economico}
 Questa tabella mostra il costo totale rendicontato per ogni ruolo all'interno del team. Viene mostrato anche il totale. \\
 
-\begin{tabular}{|l|c|c|}
-\hline
-Ruolo & Ore & Costo(€)\\
-\hline
+\begin{tabular}{ccc}
+\rowcolorhead
+\headertitle{Ruolo} & \headertitle{Ore} & \headertitle{Costo(€)}\\
 Responsabile & 0 & 0\\
 Verificatore & 0 & 0\\
 Analista & 0 & 0\\
 Programmatore & 0 & 0\\
 Progettista & 0 & 0\\
 Totale & 0& 0\\
-\hline
 \end{tabular}\\
-
 
 Vengono riportati i dati della tabella nel seguente grafico a torta: \\
 
