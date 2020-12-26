@@ -1,13 +1,17 @@
 \section{Analisi dei rischi}
-In un progetto di queste dimensioni è possibile incontrare problemi di varia natura. Per cercare di marginare ciò si può gestire attentamente 4 attività:
+
+In un progetto di queste dimensioni è possibile incontrare problemi di varia natura. Per cercare di marginare ciò si possono gestire attentamente 4 attività:
+
 \begin{itemize}
-	\item \textbf{Individuazione dei rischi} \\ Per trovare i vari casi che possono condurre a criticità proseguendo col progetto.
-	\item \textbf{Analisi dei rischi} \\ Per esaminare i suddetti casi col fine di estrapolare le informazioni relative alla probabilità che l'evento avvenga, l'impatto che ha e le sue conseguenze nel progetto.
-	\item \textbf{Pianificazione per il controllo} \\ Per pianificare delle misure atte a impedire il verificarsi della criticità e ad arginare le sue conseguenze.
-	\item \textbf{Monitoraggio dei rischi} \\ Per controllare continuamente tali rischi al fine di prevenirli.
+	\item \textbf{Individuazione dei rischi}: individuare i fattori che possono introdurre criticità nello svolgimento del progetto;
+	\item \textbf{Analisi dei rischi}: esaminare i fattori di rischio deducendone la probabilità che la criticità si manifesti, l'impatto che ha e le sue conseguenze nel progetto;
+	\item \textbf{Pianificazione per il controllo}: pianificare delle misure atte a impedire il verificarsi del problema e ad arginarne le conseguenze;
+	\item \textbf{Monitoraggio dei rischi}: controllare attivamente e in modo costante i fattori di rischio al fine di prevenirne o intercettarne in modo tempestivo gli effetti.
 \end{itemize}
 
+
 Per identificare e tracciare i rischi, viene introdotta la seguente nomenclatura:
+
 \begin{itemize}
 	\item \textbf{RIS\_ T} Rischio Tecnologico;
 	\item \textbf{RIS\_ O} Rischio Organizzativo;
@@ -16,124 +20,92 @@ Per identificare e tracciare i rischi, viene introdotta la seguente nomenclatura
 
 \subsection{Rischi tecnologici}
 
+
+
+%------------------------------------RIS\_ T \_ 1---------------------------------------
+
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable} { 
-		>{\centering}p{0.11\textwidth} 
-		>{}p{0.2775\textwidth}
-		>{\centering}p{0.13\textwidth}
-		>{\centering}p{0.2\textwidth} 
-		>{\centering \it}p{0.16\textwidth} }	
+		>{\raggedright}p{0.33\textwidth} 
+		>{\raggedright}p{0.33\textwidth} 
+		>{\raggedright}p{0.33\textwidth}    }
+		
+		\caption{RIS\_ T \_ 1} \endhead	
 
-0.0.3 & Conclusione redazione sezione \S 2 & 22-12-2020 & Andrea Tessari & Ruolo2
 
-\tabularnewline
+	\textbf{Nome}: \\ Novità del problema e delle tecnologie
+	& \textbf{Codice}: \\ RIS\_ T \_ 1  
+	& \textbf{Occorrenza}: Alta \\ \textbf{Pericolosità}: Media
+	
+	\tabularnewline
+	
+	\textbf{Descrizione}: \\ Il capitolato non pone vincoli sull'utilizzo delle tecnologie da adottare. Se da un lato questo permette libertà nell'implementazione, dall'altro può causare disorientamento nei membri meno esperti. Vista la novità del problema da trattare, le tecnologie da impiegare potranno risultare nuove per molti.
+	& 
+	\textbf{Rilevamento}: \\ Il responsabile si occuperà di censire le conoscenze e competenze dei membri del gruppo, al fine di individuare particolari lacune. I membri, qualora dovessero riscontrare difficoltà, lo comunicheranno al resto del gruppo. 	
+	&  
+	\textbf{Piano di contingenza}: \\ Dopo un'esplorazione generale delle tecnologie che si prestano a risolvere questo tipo di problemi, ci si confronterà con il proponente per confermare la bontà delle scelte adottate. I membri che hanno più esperienza guideranno lo studio di queste tecnologie.
 
-0.0.3 & Conclusione redazione sezione \S 2 & 22-12-2020 & Andrea Tessari & Ruolo2
+\end{longtable}
 
+%------------------------------------RIS\_ T \_ 2---------------------------------------
+
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable} { 
+		>{\raggedright}p{0.33\textwidth} 
+		>{\raggedright}p{0.33\textwidth} 
+		>{\raggedright}p{0.33\textwidth}    }
+	
+	\caption{RIS\_ T \_ 2} \endhead	
+	
+	
+	\textbf{Nome}: \\ Malfunzionamento dei dispositivi
+	& \textbf{Codice}: \\ RIS\_ T \_ 2  
+	& \textbf{Occorrenza}: Bassa \\ \textbf{Pericolosità}: Bassa
+	
+	\tabularnewline
+	
+	\textbf{Descrizione}: \\ I computer dei componenti del gruppo di lavoro possono andare incontro a guasti software o hardware. Questo può compromettere parte del lavoro svolto o rallentarne l'avanzamento.
+	& 
+	\textbf{Rilevamento}: \\ Il membro interessato dal guasto avviserà tempestivamente il gruppo se l'imprevisto dovesse causare difficoltà nel proseguimento del lavoro o se parte di esso fosse stato perso.
+		
+	&  
+	\textbf{Piano di contingenza}: \\ \'E caldamente consigliato mantenere una copia di backup del lavoro in corso di svolgimento. L'interessato dal guasto si adopererà con urgenza a ripristinare il funzionamento del proprio dispositivo. Se non fosse possibile recuperare il lavoro svolto, esso verrà suddiviso tra i membri ed elaborato nuovamente.
+	
 \end{longtable}
 
 
 
-
-{\setlength{\parindent}{0cm}
-\begin{minipage}{\textwidth} 
-\begin{multicols}{4}
-\textbf{Nome}: \\ Novità del problema e delle tecnologie \columnbreak
-
-\textbf{Codice}: \\ RIS\_ T \_ 1 
-\columnbreak
-
-\textbf{Occorrenza}: \\ Alta 
-\columnbreak
-
-\textbf{Pericolosità}: \\ Media
-
-\end{multicols}
-
-\begin{multicols}{3}
-
-\textbf{Descrizione}: \\ Il capitolato non pone vincoli sull'utilizzo delle tecnologie da adottare. Se da un lato questo permette libertà nell'implementazione, dall'altro può causare disorientamento nei membri meno esperti. Vista la novità del problema da trattare, le tecnologie da impiegare potranno risultare nuove per molti.
-\columnbreak
-
-\textbf{Rilevamento}: \\ Il responsabile si occuperà di censire le conoscenze e competenze dei membri del gruppo, al fine di individuare particolari lacune. I membri, qualora dovessero riscontrare difficoltà, lo comunicheranno al resto del gruppo.  
-\columnbreak
-
-\textbf{Piano di contingenza}: \\ Dopo un'esplorazione generale delle tecnologie che si prestano a risolvere questo tipo di problemi, ci si confronterà con il proponente per confermare la bontà delle scelte adottate. I membri che hanno più esperienza guideranno lo studio di queste tecnologie.\\
-
-\columnbreak
-\end{multicols}
-\end{minipage}} \\
-
-\noindent\rule{\textwidth}{1pt}\\
-
-{\setlength{\parindent}{0cm}
-\begin{minipage}{\textwidth} 
-\begin{multicols}{4}
-\textbf{Nome}: \\ Malfunzionamenti dei software di terze parti usati \columnbreak
-
-\textbf{Codice}: \\ RIS\_ T \_ 2 
-\columnbreak
-
-\textbf{Occorrenza}: \\ Bassa
-\columnbreak
-
-\textbf{Pericolosità}: \\ Media
-
-\end{multicols}
-
-\begin{multicols}{3}
-
-\textbf{Descrizione}: \\ Tutti i problemi derivanti il malfunzionamento dei software di terze parti usati.
-\columnbreak
-
-\textbf{Rilevamento}: \\ Gli errori più comuni che si potrebbero manifestare sono:
-\begin{itemize}
-	\item Corruzione dei file
-	\item Cancellazione dei file
-	\item Aspetti del software non funzionanti
-\end{itemize}
-
-\columnbreak
-
-\textbf{Piano di contingenza}: \\ Per limitare i danni provocati da un errore software si dovrà ripristinare il backup precedente, cambiando software con uno che offre simili prestazioni e caratteristiche.\\
-
-\columnbreak
-\end{multicols}
-\end{minipage}}
-
-\noindent\rule{\textwidth}{1pt}\\
-
-{\setlength{\parindent}{0cm}
-\begin{minipage}{\textwidth} 
-\begin{multicols}{4}
-\textbf{Nome}: \\ Tutti i problemi derivanti dal malfunzionamento hardware del computer su cui si lavora al progetto. \columnbreak
-
-\textbf{Codice}: \\ RIS\_ T \_ 3
-\columnbreak
-
-\textbf{Occorrenza}: \\ Bassa 
-\columnbreak
-
-\textbf{Pericolosità}: \\ Bassa
-
-\end{multicols}
-
-\begin{multicols}{3}
-
-\textbf{Descrizione}: \\ I computer dei partecipanti al gruppo di lavoro sono composti da vari elementi. Qualcuno potrebbe avere un malfunzionamento.
-\columnbreak
-
-\textbf{Rilevamento}: \\ Si potrebbero verificare casi in cui il monitor non si accenderà oppure presenterà solamente una schermata monocromatica all'accensione. Altri problemi potrebbero sorgere in caso di malfunzionamento della tastiera. Non vengono catalogati altri problemi hardware che non alternino la buona riuscita del progetto. 
-\columnbreak
-
-\textbf{Piano di contingenza}: \\ Se è possibile fare un backup. Dopodiché il Responsabile di progetto provvederà alla ridistribuzione dei compiti del malcapitato in attesa che il computer venga aggiustato.\\
-
-\columnbreak
-\end{multicols}
-\end{minipage}}
-
 \subsection{Rischi organizzativi}
+
+%------------------------------------RIS\_ O \_ 1---------------------------------------
+
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable} { 
+		>{\raggedright}p{0.33\textwidth} 
+		>{\raggedright}p{0.33\textwidth} 
+		>{\raggedright}p{0.33\textwidth}    }
+	
+	\caption{RIS\_ O \_ 1 } \endhead	
+	
+	
+	\textbf{Nome}: \\ Tempo di acquisizione delle conoscenze // GIà NELL'ANALISI DEI REQUISITI?
+	& \textbf{Codice}: \\ RIS\_ O \_ 1 
+	& \textbf{Occorrenza}: Alta \\ \textbf{Pericolosità}: Media
+	
+	\tabularnewline
+	
+	\textbf{Descrizione}: \\ Sia i software che le librerie usate necessitano di una prima comprensione. Ciò porta ad un iniziale largo uso del tempo per acquisire le conoscenze di base.
+	& 
+	\textbf{Rilevamento}: \\ Non si riesce ad utilizzare propriamente un software o una libreria.
+	
+	&  
+	\textbf{Piano di contingenza}: \\  Il responsabile di progetto sposterà le scadenze cronologicamente più avanti.
+	
+\end{longtable}
+
 
 {\setlength{\parindent}{0cm}
 \begin{minipage}{\textwidth} 
