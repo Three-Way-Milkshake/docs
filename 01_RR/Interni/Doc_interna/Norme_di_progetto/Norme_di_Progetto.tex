@@ -5,7 +5,7 @@
 \makeindex
 
 \usepackage{hyperref}
-
+\input{Glossario_Norme_di_Progetto.tex}
 
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
@@ -42,5 +42,7 @@
     \input{res/sections/04_processi_organizzativi.tex} % TODO modifica questo file
 	\pagebreak
 
+    %\printglossaries
+    \printglossary[type=domain]
 
 \end{document}
