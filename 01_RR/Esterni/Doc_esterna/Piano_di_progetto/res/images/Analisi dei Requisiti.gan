@@ -104,7 +104,7 @@
         </task>
         <task id="54" name="Attività di interfase" color="#009933" meeting="false" start="2021-01-12" duration="6" complete="0" thirdDate="2021-01-12" thirdDate-constraint="0" expand="true">
             <task id="55" name="Preparazione alla presentazione" color="#66ff99" meeting="false" start="2021-01-12" duration="6" complete="0" thirdDate="2020-11-08" thirdDate-constraint="0" expand="true"/>
-            <task id="57" name="Verifica fasi trascorse" color="#66ff99" meeting="false" start="2021-01-12" duration="3" complete="0" thirdDate="2021-01-12" thirdDate-constraint="0" expand="true"/>
+            <task id="57" name="Verifica fasi trascorse" color="#66ff99" meeting="false" start="2021-01-12" duration="4" complete="0" thirdDate="2021-01-12" thirdDate-constraint="0" expand="true"/>
             <task id="58" name="Approfondimento personale" color="#66ff99" meeting="false" start="2021-01-12" duration="6" complete="0" thirdDate="2021-01-12" thirdDate-constraint="0" expand="true"/>
         </task>
     </tasks>

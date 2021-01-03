@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Progettazione architetturale" company="" webLink="http://" view-date="2021-01-10" view-index="0" gantt-divider-location="319" resource-divider-location="300" version="2.8.11" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Progettazione architetturale" company="" webLink="http://" view-date="2021-01-17" view-index="0" gantt-divider-location="319" resource-divider-location="300" version="2.8.11" locale="it">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
         <field id="tpd3" name="Nome" width="300" order="0"/>
-        <option id="taskLabelUp" value="taskDates"/>
+        <option id="taskLabelUp" value=""/>
+        <option id="taskLabelLeft" value="taskDates"/>
         <option id="color.recent"><![CDATA[#99ccff #009933 #66ff99 #000000 #ff6666 #99ffff]]></option>
     </view>
     <view id="resource-table">
@@ -41,11 +42,11 @@
                 <depend id="26" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="2" name="Proof of Concept" color="#99ccff" meeting="false" start="2021-02-02" duration="26" complete="0" thirdDate="2020-11-22" thirdDate-constraint="0" expand="true">
+        <task id="2" name="Proof of Concept" color="#99ccff" meeting="false" start="2021-02-02" duration="27" complete="0" thirdDate="2020-11-22" thirdDate-constraint="0" expand="true">
             <task id="26" name="Implementazione" color="#ff6666" meeting="false" start="2021-02-02" duration="20" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true">
                 <depend id="43" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="43" name="Verifica" meeting="false" start="2021-02-22" duration="6" complete="0" expand="true">
+            <task id="43" name="Verifica" meeting="false" start="2021-02-22" duration="7" complete="0" expand="true">
                 <depend id="11" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
@@ -53,14 +54,12 @@
             <task id="28" name="Incremento" color="#ff6666" meeting="false" start="2021-01-18" duration="14" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true">
                 <depend id="44" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="44" name="Verifica" meeting="false" start="2021-02-01" duration="7" complete="0" expand="true">
-                <depend id="11" type="2" difference="0" hardness="Strong"/>
-            </task>
+            <task id="44" name="Verifica" meeting="false" start="2021-02-01" duration="7" complete="0" expand="true"/>
         </task>
-        <task id="6" name="Piano di Progetto" color="#99ccff" meeting="false" start="2021-01-18" duration="41" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
+        <task id="6" name="Piano di Progetto" color="#99ccff" meeting="false" start="2021-01-18" duration="42" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
             <task id="31" name="Incremento" color="#ff6666" meeting="false" start="2021-01-18" duration="14" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true"/>
-            <task id="34" name="Consuntivo" meeting="false" start="2021-02-27" duration="1" complete="0" expand="true"/>
-            <task id="45" name="Verifica" meeting="false" start="2021-02-21" duration="7" complete="0" expand="true">
+            <task id="34" name="Consuntivo" meeting="false" start="2021-02-28" duration="1" complete="0" expand="true"/>
+            <task id="45" name="Verifica" meeting="false" start="2021-02-22" duration="7" complete="0" expand="true">
                 <depend id="11" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
@@ -68,15 +67,13 @@
             <task id="35" name="Incremento" meeting="false" start="2021-01-18" duration="14" complete="0" expand="true">
                 <depend id="36" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="36" name="Verifica" color="#ff6666" meeting="false" start="2021-02-01" duration="7" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true">
-                <depend id="11" type="2" difference="0" hardness="Strong"/>
-            </task>
+            <task id="36" name="Verifica" color="#ff6666" meeting="false" start="2021-02-01" duration="7" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="8" name="Glossario" color="#99ccff" meeting="false" start="2021-01-18" duration="41" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
+        <task id="8" name="Glossario" color="#99ccff" meeting="false" start="2021-01-18" duration="42" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
             <task id="40" name="Incremento" meeting="false" start="2021-01-18" duration="34" complete="0" expand="true">
                 <depend id="46" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="46" name="Verifica" meeting="false" start="2021-02-21" duration="7" complete="0" expand="true">
+            <task id="46" name="Verifica" meeting="false" start="2021-02-21" duration="8" complete="0" expand="true">
                 <depend id="11" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
@@ -84,22 +81,20 @@
             <task id="42" name="Incremento" meeting="false" start="2021-01-18" duration="14" complete="0" expand="true">
                 <depend id="61" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="61" name="Verifica" color="#ff6666" meeting="false" start="2021-02-01" duration="7" complete="0" thirdDate="2020-12-27" thirdDate-constraint="0" expand="true">
-                <depend id="11" type="2" difference="0" hardness="Strong"/>
-            </task>
+            <task id="61" name="Verifica" color="#ff6666" meeting="false" start="2021-02-01" duration="7" complete="0" thirdDate="2020-12-27" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="10" name="Lettera di presentazione" color="#ff6666" meeting="false" start="2021-02-27" duration="1" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
+        <task id="10" name="Lettera di presentazione" color="#ff6666" meeting="false" start="2021-02-28" duration="1" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
             <depend id="11" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="11" name="Consegna Revisione di Progettazione" color="#000000" meeting="false" start="2021-02-28" duration="1" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
+        <task id="11" name="Consegna Revisione di Progettazione" color="#000000" meeting="false" start="2021-03-01" duration="1" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
             <depend id="48" type="2" difference="0" hardness="Strong"/>
             <depend id="49" type="2" difference="0" hardness="Strong"/>
             <depend id="50" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="12" name="Attività di transizione" color="#009933" meeting="false" start="2021-03-01" duration="7" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
-            <task id="48" name="Preparazione alla presentazione" color="#66ff99" meeting="false" start="2021-03-01" duration="7" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true"/>
-            <task id="49" name="Verifica fasi trascorse" color="#66ff99" meeting="false" start="2021-03-01" duration="4" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true"/>
-            <task id="50" name="Approfondimento personale" color="#66ff99" meeting="false" start="2021-03-01" duration="7" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true"/>
+        <task id="12" name="Attività di transizione" color="#009933" meeting="false" start="2021-03-02" duration="6" complete="0" thirdDate="2020-11-15" thirdDate-constraint="0" expand="true">
+            <task id="48" name="Preparazione alla presentazione" color="#66ff99" meeting="false" start="2021-03-02" duration="6" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true"/>
+            <task id="49" name="Verifica fasi trascorse" color="#66ff99" meeting="false" start="2021-03-02" duration="4" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true"/>
+            <task id="50" name="Approfondimento personale" color="#66ff99" meeting="false" start="2021-03-02" duration="6" complete="0" thirdDate="2021-01-03" thirdDate-constraint="0" expand="true"/>
         </task>
     </tasks>
     <resources/>
