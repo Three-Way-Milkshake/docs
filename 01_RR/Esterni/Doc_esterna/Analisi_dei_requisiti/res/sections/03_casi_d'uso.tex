@@ -14,4 +14,95 @@ Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso
 	\item{\textbf{Amministratore:}\\
 	Si riferisce ad un utente autenticato che ha il compito di creare nuovi account di operatori e di modificare la planimetria o la sua percorrenza in caso di cambiamenti del magazzino.}
 \end{itemize}
-\subsection{Casi d'uso}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:}
+	\item 	\textbf{Precondizioni:}
+	\item 	\textbf{Postcondizioni:}
+	\item 	\textbf{Scenario principale:}
+	\item 	\textbf{Descrizione:}
+	\item 	\textbf{Estensioni:}
+\end{itemize}
+
+\subsection{UC1 - Login}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} utente non autenticato;
+	\item 	\textbf{Precondizioni:} l'utente non è autenticato nell'applicativo;
+	\item 	\textbf{Postcondizioni:}	l'utente si è autenticato con successo come operatore, responsabile o amministratore. Il sistema rende disponibili diverse pagine e funzionalità a seconda della tipologia di utente;
+	\item 	\textbf{Scenario principale:} l'utente richiede il login inserendo nell'apposito form il proprio codice personale identificativo;
+	\item 	\textbf{Descrizione:} l'utente tenta di autenticarsi attraverso il suo codice personale identificativo;
+	\item 	\textbf{Estensioni:} 
+		\begin{itemize}
+			\item UC1.1: il codice non è stato inserito correttamente dal sistema e quindi viene visualizzato un messaggio d'errore.
+		\end{itemize}
+\end{itemize}
+\subsubsection{UC1.1 - Visualizzazione messaggio d'errore codice errato}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} utente non autenticato;
+	\item 	\textbf{Precondizioni:} l'utente ha inserito il suo codice personale identificativo;
+	\item 	\textbf{Postcondizioni:} viene visualizzato un messaggio d'errore che informa l'utente che il codice identificativo è errato e di riprovare;
+	\item 	\textbf{Scenario principale:} l'utente tenta di autenticarsi inserendo un codice non presente nel sistema o errato;
+	\item 	\textbf{Descrizione:} l'utente visualizza un messaggio d'errore in seguito al fatto di aver inserito un codice errato o non presente nel sistema e viene chiesto di riprovare o di recarsi dall'amministratore.
+	
+\end{itemize}
+
+\subsection{UC2 - Registrazione nuovo utente}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:}	l'amministratore intende registrare nel sistema un nuovo lavoratore assunto nell'azienda non ancora registrato nell'applicativo.
+	\item 	\textbf{Postcondizioni:} l’utente è registrato nel sistema correttamente come responsabile o operatore;
+	\item 	\textbf{Scenario principale:} l'amministratore inserisce i dati personali del lavoratore che vuole registrare nell'applicativo specificandone il ruolo che deve ricoprire all'interno del magazzino (responsabile o operatore);
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve compilare i dati dell'account che non deve essere presente all'interno del sistema. Il nuovo utente può essere un nuovo responsabile o un operatore.
+
+\end{itemize}
+
+\subsubsection{UC2.1 - Inserimento dati utente}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:}	l'amministratore sta eseguendo la registrazione del lavoratore nel sistema;
+	\item 	\textbf{Postcondizioni:} l'amministratore ha inserito tutti i campi del form di registrazione richiesti;
+	\item 	\textbf{Scenario principale:} l'amministratore compila tutti i campi del form richiesti per la registrazione, ovvero:
+	\begin{itemize}
+		\item inserisce il nome del lavoratore (UC2.1.1);
+		\item inserisce il cogonome del lavoratore (UC2.1.2);
+		\item inserisce il ruolo del lavoratore, ossia se è un operatore o un responsabile (UC2.1.3);
+	\end{itemize}
+	\item 	\textbf{Descrizione:} per effettuare la registrazione, l'amministratore deve fornire i seguenti dati dell'utente:
+	\begin{itemize}
+		\item nome;
+		\item cognome
+		\item ruolo (responsabile, operatore).
+	\end{itemize}
+
+\end{itemize}
+
+\paragraph{UC2.1.1 - Inserimento nome}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form per inserire il nome del lavoratore;
+	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il nome;
+	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form relativo al nome del lavoratore;
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il nome del lavoratore che si intende registrare.
+
+\end{itemize}
+
+\paragraph{UC2.1.2 - Inserimento cognome}
+\paragraph{UC2.1.3 - Inserimento ruolo}
+
+\subsubsection{UC2.2 - Conferma e invio dei dati}
+\subsubsection{UC2.1 - Visualizzazione messaggio d'errore account già presente}
+
+\subsection{UC3}
+\subsection{UC4}
+\subsection{UC5}
+\subsection{UC6}
+\subsection{UC7}
+\subsection{UC8}
+\subsection{UC9}
+\subsection{UC10}
+\subsection{UC11}
+\subsection{UC12}
+\subsection{UC13}
