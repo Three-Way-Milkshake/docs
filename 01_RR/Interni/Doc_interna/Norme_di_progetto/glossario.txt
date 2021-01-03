@@ -1,0 +1,2 @@
+A:uml:UML:Unified Modeling Language
+G:usecase:caso d'uso:casi d'uso:Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un utente (attore)

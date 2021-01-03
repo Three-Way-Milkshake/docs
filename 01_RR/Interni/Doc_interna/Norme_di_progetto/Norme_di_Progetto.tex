@@ -9,6 +9,15 @@
 
 \newcommand{\group}{Three Way Milkshake}
 \newcommand{\pparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\makeatletter
+\renewcommand\subparagraph{%
+    \@startsection {subparagraph}{5}{\z@ }{3.25ex \@plus 1ex
+        \@minus .2ex}{-1em}{\normalfont \normalsize \bfseries }}%
+\makeatother
+
+
+\newcommand{\ssubparagraph}[1]{\subparagraph{#1}\mbox{}\\}
 \newcommand{\hfoot}[1]{\footnote{\hyperref[ref]{#1}}}
 \newcommand{\hfootiso}[1]{\hfoot{Standard ISO 12207 \S\ #1}}
 
