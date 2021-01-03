@@ -82,12 +82,41 @@
 
             \ssubparagraph{Nomenclatura casi d'uso}
                 Ogni caso d'uso è univocamente identificato da un codice, secondo lo schema:
-                $$\text{UC[caso].[sottoCaso].[sottoSottoCaso]}$$ dove caso, sottoCaso e sottoSottoCaso sono numeri progressivi che partono da 1. Seguono poi un breve nome. Inoltre ogni caso d'uso avrà le seguenti sezioni (quelle indicate tra parentesi (...) sono opzionali):
+                $$\text{UC[caso].[sottoCaso].[sottoSottoCaso]}$$
+                dove caso, sottoCaso e sottoSottoCaso sono numeri progressivi che partono da 1. Segue poi un breve nome. Inoltre ogni caso dovrà avere le seguenti sezioni (quelle indicate tra parentesi (...) sono opzionali):
                 \begin{itemize}
-                    \item \textbf{attori primari: }
+                    \item attori primari;
+                    \item (attori secondari);
+                    \item descrizione;
+                    \item (estensioni);
+                    \item (inclusioni);
+                    \item precondizioni;
+                    \item postcondizioni;
+                    \\textbf{scenario principale: }uno solo per caso d'suo, rappresenta il normale flusso degli eventi;
+                    \item (scenari alternativi).
                 \end{itemize}
 
-                ..standard UML 2.0 \footnote{\url{https://www.omg.org/spec/UML/2.0/Superstructure/PDF} \S\ 16} \footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20Use\%20Case_4x4.pdf}}
+                Tutti i casi d'uso non banali verranno accompagnati da diagrammi secondo lo standard UML 2.0 \footnote{\url{https://www.omg.org/spec/UML/2.0/Superstructure/PDF} \S\ 16} \footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20Use\%20Case_4x4.pdf}}.
+                Questo è un esempio di caso d'uso conforme alle regole appena definite:
+                %todo add esempio corretto caso d'uso
+
+            \ssubparagraph{Classificazione dei requisiti}
+                Per favorire l'organizzazione ed il tracciamento dei requisiti, questi saranno classificati secondo la convenzione che segue:
+                $$\text{R[tipo]-[numero progressivo]-[importanza]}$$
+                dove tipo è uno tra:
+                \begin{itemize}
+                    \item \textbf{V}$\rightarrow$ vincolo;
+                    \item \textbf{F}$\rightarrow$ funzionale;
+                    \item \textbf{Q}$\rightarrow$ qualità;
+                    \item \textbf{P}$\rightarrow$ prestazionale;
+                \end{itemize}
+                mentre importanza può essere:
+                \begin{itemize}
+                    \item \textbf{O}$\rightarrow$ obbligatorio;
+                    \item \textbf{D}$\rightarrow$ desiderabile;
+                    \item \textbf{F}$\rightarrow$ facoltativo.
+                \end{itemize}
+                Il numero progressivo parte da 1 ed i sotto requisiti si indicano in maniera analogo ai sotto casi d'uso.
 
         \paragraph{Progettazione}
             ...
