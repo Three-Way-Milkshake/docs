@@ -90,16 +90,211 @@ Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso
 \end{itemize}
 
 \paragraph{UC2.1.2 - Inserimento cognome}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form per inserire il cognomo del lavoratore;
+	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il cognome;
+	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form relativo al cognome del lavoratore;
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il cognome del lavoratore che si intende registrare.
+	
+\end{itemize}
+
 \paragraph{UC2.1.3 - Inserimento ruolo}
 
-\subsubsection{UC2.2 - Conferma e invio dei dati}
-\subsubsection{UC2.1 - Visualizzazione messaggio d'errore account già presente}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form per inserire il ruolo del lavoratore;
+	\item 	\textbf{Postcondizioni:} l’amministratore ha compilato il campo con il ruolo;
+	\item 	\textbf{Scenario principale:} l’amministratore sceglie tramite una combobox il ruolo che deve intraprendere il nuovo lavoratore che può essere responsabile o operatore;
+	\item 	\textbf{Descrizione:} per effettuare l’aggiunta di un nuovo utente, l’amministratore deve inserire il ruolo del lavoratore che si intende registrare. Può scegliere tra responsabile e operatore.
+	
+\end{itemize}
 
-\subsection{UC3}
-\subsection{UC4}
-\subsection{UC5}
-\subsection{UC6}
+
+\subsubsection{UC2.2 - Conferma e invio dei dati}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore ha compilato il form per l’inserimento dei dati del nuovo utente e rende disponibile un pulsante per la conferma;
+	\item 	\textbf{Postcondizioni:} viene visualizzato a video un messaggio con la conferma della ricezione dei dati e il codice identificativo;
+	\item 	\textbf{Scenario principale:} l’amministratore preme il pulsante di conferma dopo aver completato tutti i campi del form;
+	\item 	\textbf{Descrizione:} l’amministratore preme il pulsante per la conferma e l’invio dei dati. A schermo viene visualizzato un messaggio con l’avvenuta registrazione e il codice identificativo relativo all’account registrato.
+
+\end{itemize}
+
+\subsubsection{UC2.3 - Visualizzazione messaggio d'errore account già presente}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} i dati del lavoratore sono già presenti nel sistema;
+	\item 	\textbf{Postcondizioni:} viene visualizzato a video un messaggio d’errore per informare l’amministratore che il lavoratore è già presente nel sistema;
+	\item 	\textbf{Scenario principale:} l’amministratore tenta di registrare nell’applicativo un lavoratore già registrato;
+	\item 	\textbf{Descrizione:} l’amministratore visualizza un messaggio d’errore dovuto al fatto di aver inserito i dati di un utente già presente nel sistema.
+\end{itemize}
+
+\subsection{UC3 - Modifica utente}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore intende modificare il profilo dell’utente già registrato all’interno dell’applicativo;
+	\item 	\textbf{Postcondizioni:} l’amministratore ha cambiato alcuni campi dell’account di un utente;
+	\item 	\textbf{Scenario principale:} l’amministratore modifica un campo del profilo dell’utente;
+	\item 	\textbf{Descrizione:} per modificare un campo dell’account di un lavoratore, l’amministratore deve modificare quello corrente con quello corretto;
+
+\end{itemize}
+
+\subsubsection{UC3.1 - Modifica nome}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form per modificare il nome del lavoratore;
+	\item 	\textbf{Postcondizioni:}  l’amministratore ha compilato il campo con il nome aggiornato;
+	\item 	\textbf{Scenario principale:} l’amministratore compila il campo del form relativo al nome del lavoratore con il nome aggiornato;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al nome del lavoratore, l’amministratore aggiorna il form.
+\end{itemize}
+
+\subsubsection{UC3.2 - Modifica cognome}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form per modificare il cognome del lavoratore;
+	\item 	\textbf{Postcondizioni:} l’amministratore ha compilato il campo con il cognome aggiornato;
+	\item 	\textbf{Scenario principale:} l’amministratore compila il campo del form relativo al cognome del lavoratore con il cognome aggiornato;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome del lavoratore, l’amministratore aggiorna il form.
+
+\end{itemize}
+\subsubsection{UC3.3 - Modifica ruolo}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form per modificare il ruolo del lavoratore;
+	\item 	\textbf{Postcondizioni:} l’amministratore ha compilato il campo con il ruolo aggiornato (responsabile o operatore);
+	\item 	\textbf{Scenario principale:} l’amministratore compila il campo del form relativo al ruolo del lavoratore con il ruolo aggiornato scegliendo tra responsabile o operatore;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al ruolo del lavoratore, l’amministratore aggiorna il form.
+
+\end{itemize}
+\subsection{UC4 - Gestione task}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} il responsabile è autenticato nel sistema e il sistema rende disponibile l’interfaccia per la gestione delle task che verranno assegnati alle unità;
+	\item 	\textbf{Postcondizioni:} la lista delle task è stata aggiornata;
+	\item 	\textbf{Scenario principale:} il responsabile effettua le operazioni necessarie per la gestione della lista delle task che verranno assegnate dal sistema alle unità, esse possono essere:
+	\begin{itemize}
+		\item l’inserimento di una nuova task (UC4.1) con la relativa priorità (UC4.2) e il POI a cui fa riferimento, in cui bisogna scaricare la merce (UC4.3);
+		\item la conferma dell’inserimento della nuova task (UC4.3);
+		\item l’eliminazione di una task dalla lista (UC4.4);
+		\item la modifica della priorità di una task esistente (UC4.5);
+	\end{itemize}
+	\item 	\textbf{Descrizione:} lo scarico delle merci in un determinato punto di interesse viene chiamato task. Il responsabile deve inserire nel sistema quali task devono essere completate e con quale priorità. L’applicativo riceve le informazioni, le ordina e le affida alle unità in base alle esigenze. 
+
+\end{itemize}
+
+\subsubsection{UC4.1 - Inserimento nuova task}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:}è resa disponibile l’interfaccia per l’inserimento di una nuova task;
+	\item 	\textbf{Postcondizioni:} il responsabile ha aggiunto con successo la task alla lista. Il sistema assegnerà la nuova task a un muletto la quale la visualizzerà nella propria lista di compiti (UC8);
+	\item 	\textbf{Scenario principale:} il responsabile preme l’apposito pulsante per l’aggiunta di una nuova task; 
+	\item 	\textbf{Descrizione:} il responsabile inserisce nella lista dei POI da soddisfare dagli operatore un nuovo POI;
+	\item 	\textbf{Inclusioni:}
+	\begin{itemize}
+		\item UC4.2 Inserimento priorità;
+		\item UC4.3 Inserimento relativo POI.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UC4.2 - Inserimento priorità}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task;
+	\item 	\textbf{Postcondizioni:} è stata compilata correttamente la priorità relativa alla task che si vuole inserire;
+	\item 	\textbf{Scenario principale:} il responsabile gli assegna una priorità (bassa, media, alta) tramite una combobox;
+	\item 	\textbf{Descrizione:} le task possono avere tre diversi gradi di priorità:
+	\begin{itemize}
+		\item bassa;
+		\item media;
+		\item alta.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UC4.3 - Inserimento relativo POI}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task;
+	\item 	\textbf{Postcondizioni:} è stato assegnato correttamente il POI relativo alla nuova task;
+	\item 	\textbf{Scenario principale:}
+	\begin{itemize}
+		\item visualizza la mappa con tutti i POI (UC6) e la lista di tutti i POI di scarico(UC12);
+		\item seleziona il POI in cui si vuole scaricare la merce;
+		\item viene confermata la selezione;
+	\end{itemize}
+	\item 	\textbf{Descrizione:} la task rappresenta lo scarico merci in un determinato punto di interesse del magazzino, quindi ad ogni task deve essere affidato il relativo POI.
+\end{itemize}
+\subsubsection{UC4.4 - Conferma inserimento}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} il responsabile ha creato la nuova task e il sistema rende disponibile il pulsante di conferma;
+	\item 	\textbf{Postcondizioni:} il sistema ha ricevuto la nuova task e lo assegna a un’unità che lo dovrà soddisfare;
+	\item 	\textbf{Scenario principale:} il responsabile conferma l’inserimento della nuova task tramite un apposito pulsante;
+	\item 	\textbf{Descrizione:} il responsabile visualizza il pulsante di conferma per inserire la task.
+\end{itemize}
+
+\subsubsection{UC4.5 - Eliminazione task dalla lista}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} il responsabile sta visualizzando la lista di task(UC13);
+	\item 	\textbf{Postcondizioni:} il responsabile ha eliminato una task dalla lista;
+	\item 	\textbf{Scenario principale:} il responsabile seleziona dalla lista delIe task quella che intende eliminare e procede alla cancellazione premendo l’apposito pulsante;
+	\item 	\textbf{Descrizione:} il responsabile si accorge che non è più necessario lo svolgimento di un compito, quindi lo elimina dalla lista delle task.
+
+\end{itemize}
+
+\subsubsection{UC4.6 - Modifica priorità}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} il responsabile sta visualizzando la lista di task(UC13);
+	\item 	\textbf{Postcondizioni:} la priorità della task selezionata è stata aggiornata;
+	\item 	\textbf{Scenario principale:} il responsabile seleziona la task che intende modificare, viene aperto un menu a tendina nel quale è possibile cambiare la priorità.
+	\item 	\textbf{Descrizione:} il responsabile si accorge che la priorità di una task è errata o necessita di un aggiornamento, quindi procede con la modifica.
+\end{itemize}
+
+\subsection{UC5 - Logout}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} utente autenticato;
+	\item 	\textbf{Precondizioni:} l’utente si trova in base e quindi può premere sul bottone che gli permette di fare il logout all’applicativo;
+	\item 	\textbf{Postcondizioni:} utente viene disconnesso dal sistema;
+	\item 	\textbf{Scenario principale:} utente autenticato richiede il logout;
+	\item 	\textbf{Descrizione:} l’utente vuole effettuare il logout dall’applicativo:
+	\begin{itemize}
+		\item se amministratore o responsabile, può effettuare il logout dall’applicativo in qualsiasi momento;
+		\item se operatore, può effettuare il logout solo dopo aver raggiunto la base, quindi aver finito il proprio turno.
+	\end{itemize}
+\end{itemize}
+
+\subsection{UC6 - Visualizzazione mappa}
+\begin{itemize}
+	\item 	\textbf{Attori primari:}
+	\item 	\textbf{Precondizioni:}
+	\item 	\textbf{Postcondizioni:}
+	\item 	\textbf{Scenario principale:}
+	\item 	\textbf{Descrizione:}
+	\item 	\textbf{Estensioni:}
+\end{itemize}
+\subsubsection{UC6.1 - Visualizzazione posizione muletti in real-time}
+
 \subsection{UC7}
+\subsubsection{UC7.1 - Modifica mappa}
+\subsubsection{UC7.2 - Modifica planimetria}
+\subsubsection{UC7.3 - Modifica percorrenza}
+\subsubsection{UC7.4 - Gestione POI}
+
 \subsection{UC8}
 \subsection{UC9}
 \subsection{UC10}
