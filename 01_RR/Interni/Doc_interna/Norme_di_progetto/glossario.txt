@@ -1,4 +1,16 @@
 A:uml:UML:Unified Modeling Language
 G:usecase:caso d'uso:casi d'uso:Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un utente (attore)
-G:precondizione:precondizione:precondizioni:condizioni che devono essere soddisfatte perché si verifichino determinati eventi successivi
-G:postcondizione:postcondizione:postcondizioni:condizioni che devono verificarsi dopo determinati eventi
+G:precondizione:precondizione:precondizioni:Condizioni che devono essere soddisfatte perché si verifichino determinati eventi successivi
+G:postcondizione:postcondizione:postcondizioni:Condizioni che devono verificarsi dopo determinati eventi
+A:eg:e.g.:Example given, si usa per indicare che ciò che segue è un esempio
+G:stakeholder:stakeholder:stakeholders:Tutti coloro che a vario titolo hanno influenza sul prodotto e sul progetto
+G:design pattern:design pattern:design patterns:Una soluzione progettuale generale ad un problema ricorrente
+A:cpu:CPU:Central Processing Unit
+A:ram:RAM:Random Access Memory
+G:safety:safety:X:Sicurezza rispetto a malfunzionamenti
+G:security:security:X:Non vulnerabilità rispetto a intrusioni
+G:proofconcept:proof of concept:X:Dimostratore eseguibile. Il suo codice può (ma non deve) essere usa-e-getta
+A:poc:PoC:Proof of Concept
+G:techbase:technology baseline:X:Motiva le tecnologie, i framework, e le librerie selezionate per la realizzazione del prodotto. Ne dimostra adeguatezza e fattibilità, tramite un proof of concept coerente con gli obiettivi
+G:prodbase:product baseline:X:Illustra la baseline architetturale del prodotto, coerente con la TB. Rappresenta il design definitivo.
+A:tb:TB:Technology Baseline

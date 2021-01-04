@@ -92,7 +92,7 @@
                     \item (inclusioni);
                     \item precondizioni;
                     \item postcondizioni;
-                    \\textbf{scenario principale: }uno solo per caso d'suo, rappresenta il normale flusso degli eventi;
+                    \\textbf{scenario principale: }uno solo per caso d'uso, rappresenta il normale flusso degli eventi;
                     \item (scenari alternativi).
                 \end{itemize}
 
@@ -112,14 +112,40 @@
                 \end{itemize}
                 mentre importanza può essere:
                 \begin{itemize}
-                    \item \textbf{O}$\rightarrow$ obbligatorio;
-                    \item \textbf{D}$\rightarrow$ desiderabile;
-                    \item \textbf{F}$\rightarrow$ facoltativo.
+                    \item \textbf{O}$\rightarrow$ obbligatorio, irrinunciabile per qualcuno degli stakeholder;
+                    \item \textbf{D}$\rightarrow$ desiderabile, non strettamente necessario, ma se ne riconosce il valore aggiunto;
+                    \item \textbf{F}$\rightarrow$ facoltativo, relativamente utile oppure contrattabile in futuro.
                 \end{itemize}
                 Il numero progressivo parte da 1 ed i sotto requisiti si indicano in maniera analogo ai sotto casi d'uso.
 
         \paragraph{Progettazione}
-            ...
+            \ssubparagraph{Descrizione}
+                I progettisti hanno il compito di tradurre il problema in una possibile soluzione, descritta come architettura, da dividere in parti che possono essere trattate individualmente. Sarà necessario:
+                \begin{itemize}
+                    \item svolgere le attività coerentemente con quanto individuato nell'analisi dei requisiti;
+                    \item adottare design pattern opportuni quando si individuano strutture che ne possono trarre beneficio;
+                    \item seguire i principi SOLID\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/SOLID\%20Principles\%20of\%20Object-Oriented\%20Design_4x4.pdf}};
+                    \item utilizzare sempre una nomenclatura significativa, parlante e consistente.
+                \end{itemize}
+                Affinché un'architettura si possa definire buona, deve perseguire i seguenti obiettivi di qualità: \footnote{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L09.pdf} \S\ 17..27}
+                \begin{itemize}
+                    \item \textbf{sufficienza: }soddisfa tutti i requisiti;
+                    \item \textbf{comprensibilità: }per tutti gli stakeholder;
+                    \item \textbf{modularità: }suddivisa in parti chiare e ben distinte;
+                    \item \textbf{robustezza: }capace di sopportare ingressi diversi da utenti ed ambienti differenti;
+                    \item \textbf{flessibilità: }permette modifiche a costo contenuto al variare dei requisiti;
+                    \item \textbf{riusabilità: }le sue parti possono essere impiegate in altre applicazioni;
+                    \item \textbf{efficienza: }nel tempo (CPU), nello spazio (RAM), nelle comunicazioni (rete);
+                    \item \textbf{affidabilità: }svolge bene il suo compito quando utilizzata con un'alta probabilità;
+                    \item \textbf{disponibilità: }la sua manutenzione la rende indisponibile per un tempo ridotto;
+                    \item \textbf{safety};
+                    \item \textbf{security};
+                    \item \textbf{semplicità: }ogni parte contiene solo il necessario e niente di superfluo;
+                    \item \textbf{incapsulazione: }l'interno delle componenti non è visibile all'esterno;
+                    \item \textbf{coesione: }le parti che stanno insieme hanno gli stessi obiettivi;
+                    \item \textbf{basso accoppiamento: }parti distinte hanno una dipendenza il più possibile ridotta.
+                \end{itemize}
+                La progettazione porterà in seguito alla produzione di una technology baseline e di una product baseline
         \paragraph{Codifica}
             ...
     \subsubsection{Strumenti}
