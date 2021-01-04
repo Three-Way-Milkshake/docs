@@ -14,3 +14,4 @@ A:poc:PoC:Proof of Concept
 G:techbase:technology baseline:X:Motiva le tecnologie, i framework, e le librerie selezionate per la realizzazione del prodotto. Ne dimostra adeguatezza e fattibilità, tramite un proof of concept coerente con gli obiettivi
 G:prodbase:product baseline:X:Illustra la baseline architetturale del prodotto, coerente con la TB. Rappresenta il design definitivo.
 A:tb:TB:Technology Baseline
+A:pb:PB:Product Baseline
