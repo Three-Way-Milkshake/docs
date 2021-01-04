@@ -1,0 +1,36 @@
+name: Glossary builder and updater
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ feature/* ]
+  pull_request:
+    branches: [ main, develop ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      - name: install latex
+        run: sudo apt install texlive texlive-latex-extra
+        #run: sudo apt install --fix-missing ; sudo apt install texlive xzdec ; sudo apt install --fix-missing ; tlmgr init-usertree ; tlmgr update --self ; tlmgr install glossaries ; echo 0
+
+      - name: Execute the glossary script
+        run: ./.github/workflows/glossary_builder.sh
+
+      - name: setup github identity
+        run: git config user.name "Glossaries Automation"
+      
+      - name: if something changed, commit and push
+        run: |
+          if [ `git status | grep -c "working tree clean"` -eq 0 ] ; then git add . ; git commit -m 'automatic update by glossary_builder automation' ; git fetch ; git push ; fi
