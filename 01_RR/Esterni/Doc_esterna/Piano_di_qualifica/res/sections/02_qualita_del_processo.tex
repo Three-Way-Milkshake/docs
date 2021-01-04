@@ -44,6 +44,7 @@ I processi individuati sono presentati di seguito.
 				\item \textbf{Valore preferibile:} DEP$\leq$2;
 				\item \textbf{Valore accettabile:} DEP$\leq$3.
 			\end{itemize}
+\pagebreak
 		\item[]
 			\textbf{Livello di Annidamento (LEV)}\\
 			Indica il livello di annidamento nei vari metodi presenti nel codice prodotto.
@@ -147,5 +148,31 @@ I processi individuati sono presentati di seguito.
 				\item \textbf{Valore accettabile:} 50$\leq$IG$\leq$100.
 			\end{itemize}
 		\end{enumerate}
-	
+\pagebreak
 \subsubsection{Tabella riassuntiva}
+%tabella
+\begin{table}[H]
+	\begin{center}
+				\caption{Tabella riassuntiva metriche di processo}
+		\begin{tabular}{cc!{\color[HTML]{9b240a}\vrule width 0.05cm}cc}
+			\rowcolorhead
+			\headertitle{Codice} & \headertitle{Tipo Processo} & \headertitle{Valori Preferibili} & \headertitle{Valori Accettabili} \\
+			
+			PROS & Analisi dei Requisiti & 100\% & 100\%\\
+			CBO & Progettazione & 0$\leq$CBO$\leq$1 & 0$\leq$CBO$\leq$6\\
+			DEP & Codifica & DEP$\leq$2 & DEP$\leq$3\\
+			LEV & Codifica & 1$\leq$LEV$\leq$3 & 1$\leq$LEV$\leq$6\\
+			PAR & Codifica & PAR$\leq$4 & PAR$\leq$6\\
+			RCC & Codifica & RCC$\geq$0.4 & RCC$\geq$0.2\\
+			BAC & Pianificazione & \textit{preventivo} & \textit{preventivo}$\pm$5\%\\
+			EV & Pianificazione & EV$\geq$0 & EV$\geq$0\\
+			PV & Pianificazione & PV$\geq$0 & PV$\geq$0\\
+			SV & Pianificazione & SV$\geq$0 & SV=0\\
+			AC & Pianificazione & 0$\leq$AC$\leq$PV & 0$\leq$AC$\leq$\textit{budget}\\
+			CV & Pianificazione & CV$\geq$0 & CV$\geq$0\\
+			CC & Verifica & 100\% & 75\%\\
+			IG & Documentazione & 80$\leq$IG$\leq$100 & 50$\leq$IG$\leq$100\\
+		\end{tabular}
+
+	\end{center}
+\end{table}
