@@ -3,12 +3,12 @@ Per valutare  la qualità del prodotto, il gruppo Three Way Milkshake ha deciso 
 Questo modello è mirato a  migliorare l'organizzazione e i processi di una società software.\\
 Di seguito verrà descritto il modello della qualità del software, in:
 \begin{itemize}
-	\item Funzionalità
-	\item Affidabilità
-	\item Efficienza
-	\item Usabilità
-	\item Manutenibilità
-	\item Portabilità
+	\item \textbf{Funzionalità}
+	\item \textbf{Affidabilità}
+	\item \textbf{Efficienza}
+	\item \textbf{Usabilità}
+	\item \textbf{Manutenibilità}
+	\item \textbf{Portabilità}
 \end{itemize}
 
 \subsection{Funzionalità}
@@ -16,39 +16,39 @@ La funzionalità è la capacità di un prodotto di rispondere ad esigenze specif
 In questo caso le esigenze vengono descritte nel documento Analisi dei Requisiti.
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item Appropriatezza: Capacità del software di riuscire a svolgere tutte le funzionalità prefissate con l'utente;
-	\item Accuratezza: Capacità del software di svolgere correttamente ciò che era stato precedentemente concordato;
-	\item Interoperabilità: Capacità del software di operare con più sistemi;
-	\item Conformità: Capacità del software di aderire agli standard relativi alla funzionalità;
-	\item Sicurezza: Capacità del software di non permettere alle persone non autorizzate di accedere o modificare dati sensibili dell'utente; consente alle persone autorizzate di accedere ai dati.
+	\item \textbf{Appropriatezza:} Capacità del software di riuscire a svolgere tutte le funzionalità prefissate con l'utente;
+	\item \textbf{Accuratezza:} Capacità del software di svolgere correttamente ciò che era stato precedentemente concordato;
+	\item \textbf{Interoperabilità:} Capacità del software di operare con più sistemi;
+	\item \textbf{Conformità:} Capacità del software di aderire agli standard relativi alla funzionalità;
+	\item \textbf{Sicurezza:} Capacità del software di non permettere alle persone non autorizzate di accedere o modificare dati sensibili dell'utente; consente alle persone autorizzate di accedere ai dati.
 \end{itemize}
 
 \subsubsection{Metriche}
-Viene specificata la completezza del software attraverso la seguente formula:
-\begin{center}
-	$C = (1-($Funzionalità non implementate$ / $Funzionalità implementate$))$
-\end{center}
-Con i valori:\\
-preferibile = 1;\\
-accettabile = 1.
-
+\textbf{Completezza del Software(Cs)}\\
+Viene specificata la completezza del software.
+\begin{itemize}
+	\item \textbf{Misurazione:} $C = (1-($Funzionalità non implementate$ / $Funzionalità implementate$))$;
+	\item \textbf{Valore preferibile:} Cs = 1;
+	\item \textbf{Valore accettabile:} Cs = 1.
+\end{itemize}
+\pagebreak
 \subsection{Affidabilità}
 L'affidabilità è la capacità di un certo software di mantenere un certo livello di prestazioni in determinate condizioni in un certo periodo.
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item Maturità: Capacità del prodotto di dare risultati corretti, esenti da malfunzionamenti o errori;
-	\item Tolleranza agli errori: Capacità del prodotto di poter essere usabile anche in presenza di malfunzionamenti o casi derivanti un uso scorretto del software;
-	\item Recuperabilità: Capacità del prodotto di recuperare almeno le informazioni rilevanti in seguito ad un malfunzionamento;
-	\item Aderenza: Capacità del prodotto di aderire a standard inerenti all'affidabilità.
+	\item \textbf{Maturità:} Capacità del prodotto di dare risultati corretti, esenti da malfunzionamenti o errori;
+	\item \textbf{Tolleranza agli errori:} Capacità del prodotto di poter essere usabile anche in presenza di malfunzionamenti o casi derivanti un uso scorretto del software;
+	\item \textbf{Recuperabilità:} Capacità del prodotto di recuperare almeno le informazioni rilevanti in seguito ad un malfunzionamento;
+	\item \textbf{Aderenza:} Capacità del prodotto di aderire a standard inerenti all'affidabilità.
 \end{itemize}
 \subsubsection{Metriche}
-Viene specificata l'abilità del software di resistere a malfunzionamenti attraverso la seguente formula:
-\begin{center}
-	$R = $Numero di errori$ / $Numero di test eseguiti
-\end{center}
-Con i valori:\\
-preferibile = 0;\\
-accettabile < 0.15.
+\textbf{Affidabilità del Software A}\\
+Viene specificata l'abilità del software di resistere a malfunzionamenti.
+\begin{itemize}
+	\item \textbf{Misurazione:} $A = $Numero di errori$ / $Numero di test eseguiti;
+	\item \textbf{Valore preferibile:} A = 0;
+	\item \textbf{Valore accettabile:} A < 0.15.
+\end{itemize}
 
 \subsection{Efficienza}
 L'efficienza è la capacità del software di poter offrire un determinato livello di prestazioni in date condizioni in un certo periodo.
@@ -66,52 +66,63 @@ L'usabilità è la capacità del prodotto di essere compreso ed utilizzato dall'
 
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item Comprensibilità: Capacità del prodotto di visualizzare le varie funzionalità del software e permette all'utente di capire se il software è indicato per le sue esigenze;
-	\item Apprendibilità: Capacità del prodotto di aumentare nel tempo l'abilità dell'utente di sfruttare il software;
-	\item Operabilità: Capacità del prodotto che permette agli utenti di farne uso per i loro scopi;
-	\item Attrattiva: Capacità del prodotto di rendere più piacevolo l'utilizzo del software;
-	\item Conformità: Capacità del prodotto di aderire a standard relativi all'usabilità.
+	\item \textbf{Comprensibilità:} Capacità del prodotto di visualizzare le varie funzionalità del software e permette all'utente di capire se il software è indicato per le sue esigenze;
+	\item \textbf{Apprendibilità:} Capacità del prodotto di aumentare nel tempo l'abilità dell'utente di sfruttare il software;
+	\item \textbf{Operabilità:} Capacità del prodotto che permette agli utenti di farne uso per i loro scopi;
+	\item \textbf{Attrattiva:} Capacità del prodotto di rendere più piacevolo l'utilizzo del software;
+	\item \textbf{Conformità:} Capacità del prodotto di aderire a standard relativi all'usabilità.
 \end{itemize}
 
 \subsubsection{Metriche}
+\textbf{Numero di tocchi/click necessari C)}\\
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento.\\
-Si considera la capacità dell'operatore di visualizzare la propria lista delle task:\\
-Numero di tocchi o click preferibili < 4;\\
-accettabile < 6. \\ \space \\
+Si considera la capacità dell'operatore di visualizzare la propria lista delle task.
+\begin{itemize}
+	\item \textbf{Misurazione:} $L = $Numero di tocchi o click necessari per il raggiungimento dell'obiettivo;
+	\item \textbf{Valore preferibile:} C < 4;
+	\item \textbf{Valore accettabile:} C < 6.
+\end{itemize}
+\textbf{Numero di secondi necessari S}
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
-Si considera la capacità dell'operatore di visualizzare la propria lista delle task:\\
-valore dei secondi preferibile < 15;\\
-accettabile < 40. \\ \space \\
-Viene specificata la profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software:\\
-valore preferibile < 4;\\
-accettabile < 6.
-
+Si considera la capacità dell'operatore di visualizzare la propria lista delle task.
+\begin{itemize}
+	\item \textbf{Misurazione:} $L = $Numero di secondi necessari per il raggiungimento dell'obiettivo;
+	\item \textbf{Valore preferibile:} S < 15;
+	\item \textbf{Valore accettabile:} S < 40.
+\end{itemize}
+Viene specificata la profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software.
+\begin{itemize}
+	\item \textbf{Misurazione:} $P = $Profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software;
+	\item \textbf{Valore preferibile:} P < 4;
+	\item \textbf{Valore accettabile:} P < 6.
+\end{itemize}
 \subsection{Manutenibilità}
 Capacità del prodotto di essere modificato anche in futuro.
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item Analizzabilità: Facilità con cui è possibile interpretare il codice del software;
-	\item Modificabilità: Capacità per cui risulta non troppo oneroso modificare il codice del software;
-	\item Stabilità: Capacità del software di evitare errori inaspettati derivanti da modifiche errate;
-	\item Testabilità: Capacità del prodotto di essere testato al fine di validare le modifiche al codice sorgente.
+	\item \textbf{Analizzabilità:} Facilità con cui è possibile interpretare il codice del software;
+	\item \textbf{Modificabilità:} Capacità per cui risulta non troppo oneroso modificare il codice del software;
+	\item \textbf{Stabilità:} Capacità del software di evitare errori inaspettati derivanti da modifiche errate;
+	\item \textbf{Testabilità:} Capacità del prodotto di essere testato al fine di validare le modifiche al codice sorgente.
 \end{itemize}
 \subsubsection{Metriche}
-Viene specificata la leggibilità del software attraverso la seguente formula:
-\begin{center}
-	$L = $Numero di linee di codice commentate$ / $Numero di linee di codice
-\end{center}
-Con i valori:\\
-preferibile > 0.15;\\
-accettabile > 0.10.
+\textbf{Leggibilità del Software L}\\
+Viene specificata l'abilità del software di resistere a malfunzionamenti.
+\begin{itemize}
+	\item \textbf{Misurazione:} $L = $Numero di linee di codice commentate$ / $Numero di linee di codice;
+	\item \textbf{Valore preferibile:} L > 0.15;
+	\item \textbf{Valore accettabile:} L > 0.10.
+\end{itemize}
+
 
 \subsection{Portabilità}
 La portabilità è la capacità del software di poter funzionare senza tener conto di uno specifico ambiente di lavoro.
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item Adattabilità: Capacità del prodotto di essere adattato per diversi ambienti operativi;
-	\item Installabilità: Capacità del prodotto di essere installato in uno specificato ambiente operativo;
-	\item Conformità: Capacità del software di aderire a standard relativi alla portabilità;
-	\item Sostituibilità: Capacità del software di sostituire un altro prodotto con le stesse funzionalità.
+	\item \textbf{Adattabilità:} Capacità del prodotto di essere adattato per diversi ambienti operativi;
+	\item \textbf{Installabilità:} Capacità del prodotto di essere installato in uno specificato ambiente operativo;
+	\item \textbf{Conformità:} Capacità del software di aderire a standard relativi alla portabilità;
+	\item \textbf{Sostituibilità:} Capacità del software di sostituire un altro prodotto con le stesse funzionalità.
 \end{itemize}
 \subsubsection{Metriche}
 IL software dovrà eseguire solamente su ambiente Docker, quindi non sono necessarie varie metriche.
@@ -129,9 +140,7 @@ IL software dovrà eseguire solamente su ambiente Docker, quindi non sono necess
 			Numero di tocchi/click necessari C & Numero di tocchi o click necessari per visualizzare la propria lista di task & Usabilità & C < 4 & C < 6\\
 			Numero di secondi necessari S & Numero di secondi necessari per visualizzare la propria lista di task & Usabilità & S < 15 & S < 40\\
 			Profondità gerarchica P & Profondità gerarchica massima dei collegamenti e funzionalità presenti all'interno del software & Usabilità & P < 4 & P < 6\\
-			Leggibilità software L & Numero di linee di codice commentate rispetto al totale di linee di codice & Manutenibilità & L > 0.15 & L > 0.10\\
-			
-			
+			Leggibilità software L & Numero di linee di codice commentate rispetto al totale di linee di codice & Manutenibilità & L > 0.15 & L > 0.10\\	
 		\end{tabular}
 		
 	\end{center}
