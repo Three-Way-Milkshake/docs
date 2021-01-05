@@ -386,6 +386,178 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 
 \subsubsection{UC7.4 - Gestione POI}
 \begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore è autenticato nel sistema e viene reso disponibile dal sistema l’interfaccia per la modifica dei POI;
+	\item 	\textbf{Postcondizioni:} nella mappa sono comparsi i cambiamenti dei POI; 
+	\item 	\textbf{Scenario principale:} l’amministratore dopo aver premuto il pulsante per la modifica dei POI, visualizza le opzioni tra cui può scegliere le operazioni da eseguire:
+	\begin{itemize}
+		\item modificare la posizione di un POI esistente (UC7.4.1);
+		\item aggiungere un nuovo POI nella mappa (UC7.4.2);
+		\item eliminare un POI esistente (UC7.4.6).
+	\end{itemize}
+	\item 	\textbf{Descrizione:} è possibile che sia necessaria la modifica dei punti di interesse nella mappa, l’amministratore ha appunto il compito di aggiungerne, modificarne o eliminarli in base alle esigenze del magazzino. Il responsabile deve tenere presente i vincoli del magazzino altrimenti non sarà permessa l’operazione:
+	\begin{itemize}
+		\item una base;
+		\item un POI di carico.
+	\end{itemize}
+	\item 	\textbf{Estensioni:}
+\end{itemize}
+
+\paragraph{UC7.4.1 - Modifica posizione di un POI esistente}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore ha selezionato l’opzione tra il menu della modifica dei POI per il cambiamento della posizione di un POI esistente;
+	\item 	\textbf{Postcondizioni:} il POI selezionato ha cambiato posizione nella mappa; 
+	\item 	\textbf{Scenario principale:} l’amministratore dopo aver premuto il pulsante per la modifica della posizione di un POI esistente, visualizza la mappa(UC6) con tutti i POI nella loro posizione, seleziona quello che gli interessa e lo sposta nella posizione aggiornata.
+	\item 	\textbf{Descrizione:} l’amministratore può dover cambiare la posizione di alcuni POI già esistenti all’interno del magazzino.
+\end{itemize}
+\paragraph{UC7.4.2 - Inserimento nuovo POI}
+
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore ha selezionato l’opzione tra il menu dell’aggiunta di un nuovo POI;
+	\item 	\textbf{Postcondizioni:} viene creato il nuovo POI nella mappa;
+	\item 	\textbf{Scenario principale:} l’amministratore dopo aver premuto il pulsante per l’aggiunta di un nuovo POI, visualizzerà l’interfaccia per la creazione del nuovo punto d’interesse. 
+	\item 	\textbf{Descrizione:} per inserire un nuovo POI all’interno della mappa devono essere specificati:
+	\begin{itemize}
+		\item codice identificativo;
+		\item posizione nella mappa;
+		\item tipo di POI (carico, scarico, base);
+	\end{itemize}
+	\item 	\textbf{Specializzazione:}
+	\begin{itemize}
+		\item UC7.4.3 - Inserimento posizione;
+		\item UC7.4.4 - Inserimento codice identificativo;
+		\item UC7.4.5 - Inserimento tipo di POI.
+	\end{itemize}
+\end{itemize}
+
+\paragraph{UC7.4.3 - Inserimento posizione}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore visualizza la mappa per l’inserimento dei dati del nuovo POI.
+	\item 	\textbf{Postcondizioni:} l’amministratore ha inserito il POI all’interno della mappa; 
+	\item 	\textbf{Scenario principale:}
+	\begin{itemize}
+		\item visualizza la mappa (UC6);
+		\item preme nel punto in cui vuole inserire il POI;
+		\item conferma l’inserimento premendo un pulsante apposito;
+	\end{itemize}
+	\item 	\textbf{Descrizione:} per completare l’aggiunta, l’amministratore deve posizionare il POI nella mappa.
+
+\end{itemize}
+
+\paragraph{UC7.4.4 - Inserimento codice identificativo}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore visualizza il form per l’inserimento del codice identificativo del nuovo POI;
+	\item 	\textbf{Postcondizioni:} l’amministratore ha inserito il codice identificativo del nuovo POI; 
+	\item 	\textbf{Scenario principale:} l’amministratore inserisce il codice identificativo del nuovo POI nell’apposita form;
+	\item 	\textbf{Descrizione:} per completare l’aggiunta, l’amministratore deve assegnare un codice identificativo al nuovo POI.
+
+\end{itemize}
+
+\paragraph{UC7.4.5 - Inserimento tipo POI}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore visualizza il form per l’inserimento del tipo di POI;
+	\item 	\textbf{Postcondizioni:} viene creato il nuovo POI nella mappa; 
+	\item 	\textbf{Scenario principale:} l’amministratore inserisce il tipo di POI e conferma;
+	\item 	\textbf{Descrizione:} per completare l’aggiunta, l’amministratore deve assegnare il tipo di POI nella mappa:
+	\begin{itemize}
+		\item scarico;
+		\item carico;
+		\item base.
+	\end{itemize}
+
+\end{itemize}
+
+\paragraph{UC7.4.6 - Eliminazione POI}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore ha selezionato l’opzione tra il menu per l’eliminazione di un POI esistente e visualizza la mappa con tutti i POI;
+	\item 	\textbf{Postcondizioni:} viene eliminato un POI dalla mappa e dalla lista; 
+	\item 	\textbf{Scenario principale:} seleziona dalla mappa il POI di interesse e conferma attraverso un apposito pulsante l’eliminazione;
+	\item 	\textbf{Descrizione:} si vuole eliminare un POI esistente dalla mappa.
+\end{itemize}
+\subsubsection{UC7.5 - Visualizzazione messaggio d'errore operazione non permessa}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l'amministratore ha tentato una modifica alla mappa esistente;
+	\item 	\textbf{Postcondizioni:} è stato visualizzato un messaggio d'errore che informa l'amministratore di aver cercato di fare un'operazione non concessa dal sistema;
+	\item 	\textbf{Scenario principale:} l'amministratore tenta di apportare una modifica non concessa alla mappa;
+	\item 	\textbf{Descrizione:} alcune operazioni della modifica della mappa non sono concesse, quindi il sistema informa l'amministratore.
+\end{itemize}
+
+\subsection{UC8 - Visualizzazione task}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore è sul muletto che si appresta a svolgere i propri compiti;
+	\item 	\textbf{Postcondizioni:} l’operatore ha una visione completa dei suoi compiti;
+	\item 	\textbf{Scenario principale:} il sistema rende disponibile la visualizzazione di tutte le task assegnate all’operatore;
+	\item 	\textbf{Descrizione:}per compiere il suo lavoro, l’operatore ha bisogno di visualizzare le task che gli sono assegnate e la loro posizione, così da poter scaricare la merce nel luogo corretto.
+
+\end{itemize}
+Attori primari: operatore;
+Precondizioni: l’operatore è sul muletto che si appresta a svolgere i propri compiti;
+Post condizione: vengono visualizzate nella mappa le task nella relativa posizione;
+Scenario principale: l’operatore visualizza la mappa con le task assegnatoli;
+Descrizione: vengono visualizzate nella mappa le task nel loro relativo POI.
+\subsubsection{UC8.1 - Visualizzazione task nella mappa}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore è sul muletto che si appresta a svolgere i propri compiti;
+	\item 	\textbf{Postcondizioni:} vengono visualizzate nella mappa le task nella relativa posizione;
+	\item 	\textbf{Scenario principale:} l’operatore visualizza la mappa con le task assegnatoli;
+	\item 	\textbf{Descrizione:} vengono visualizzate nella mappa le task nel loro relativo POI;
+	\item 	\textbf{Inclusioni:}
+	\begin{itemize}
+		\item UC8.2 - Evidenziazione prossima task.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UC8.2 - Evidenziazione prossima task}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore visualizza la mappa con le task (UC8.1);
+	\item 	\textbf{Postcondizioni:} viene evidenziata nella mappa la prossima task da svolgere;
+	\item 	\textbf{Scenario principale:} viene visualizzata nella mappa con un colore diverso la prossima task nella posizione in cui l’operatore deve recarsi;
+	\item 	\textbf{Descrizione:} per facilitare il compito dell’operatore, il  POI relativo alla prossima task da soddisfare viene evidenziato all’interno della mappa.
+
+\end{itemize}
+
+\subsubsection{UC8.3 - Visualizzazione lista di task}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore è sul muletto che svolge il suo lavoro e sta visualizzando la mappa con le task (UC8.1);
+	\item 	\textbf{Postcondizioni:} viene visualizzata una lista di tutte le task da eseguire;
+	\item 	\textbf{Scenario principale:} sotto alla mappa del magazzino, viene visualizzata una lista di tutte le task che l’operatore deve soddisfare;
+	\item 	\textbf{Descrizione:} per facilitare il compito dell’operatore, viene visualizzata una lista di tutti le task che deve soddisfare con il relativo codice identificativo.
+\end{itemize}
+
+\subsection{UC9 - Segnalazione della soddisazione di una task}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore ha raggiunto e soddisfatto una task;
+	\item 	\textbf{Postcondizioni:} il sistema ha ricevuto l’avvenuto incarico e viene cancellato dalla lista di task da soddisfare completa e da quelli personali dell’operatore;
+	\item 	\textbf{Scenario principale:} l’operatore, clicca sul POI evidenziato in UC8.3 e conferma l’avvenuto scarico;
+	\item 	\textbf{Descrizione:} l’operatore ha effettuato correttamente uno scarico, quindi deve segnalarlo per passare al prossimo compito da eseguire.
+
+\end{itemize}
+
+\subsection{UC10 - Visualizzazione spostamenti del pilota automatico}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore è a bordo di un muletto in cui è attiva la guida automatica;
+	\item 	\textbf{Postcondizioni:} l’operatore visualizza la direzione degli spostamenti del pilota automatico mentre è a bordo del muletto;
+	\item 	\textbf{Scenario principale:}il sistema accende le icone delle quattro frecce direzionali e dello start/stop in base agli spostamenti che intende effettuare;
+	\item 	\textbf{Descrizione:} le unità possono essere guidati dal pilota automatico, ma l’operatore deve controllare gli spostamenti che il sistema ha intenzione di effettuare.
+
+\end{itemize}
+\subsection{UC11}
+\begin{itemize}
 	\item 	\textbf{Attori primari:}
 	\item 	\textbf{Precondizioni:}
 	\item 	\textbf{Postcondizioni:}
@@ -394,32 +566,57 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 	\item 	\textbf{Estensioni:}
 \end{itemize}
 
-\paragraph{UC7.4.1 }
-\paragraph{UC7.4.2 }
-\paragraph{UC7.4.3 }
-\paragraph{UC7.4.4 }
-\paragraph{UC7.4.5 }
-\paragraph{UC7.4.6 }
-\subsubsection{UC7.5 - Visualizzazione messaggio d'errore operazione non permessa}
+
+\subsection{UC12 - Visualizzazione lista completa di POI}
 \begin{itemize}
-	\item 	\textbf{Attori primari:}
-	\item 	\textbf{Precondizioni:}
-	\item 	\textbf{Postcondizioni:}
-	\item 	\textbf{Scenario principale:}
-	\item 	\textbf{Descrizione:}
-	\item 	\textbf{Estensioni:}
+	\item 	\textbf{Attori primari:} amministratore, responsabile;
+	\item 	\textbf{Precondizioni:} gli utenti sono autenticati;
+	\item 	\textbf{Postcondizioni:}viene visualizzata la lista completa dei POI presenti nella mappa;
+	\item 	\textbf{Scenario principale:} vicino alla visualizzazione della mappa (UC6), vi è un pulsante apposito per visualizzare la lista completa di POI presenti nel magazzino;
+	\item 	\textbf{Descrizione:} per tener traccia di tutti i POI con il proprio tipo (carico, scarico, base) presenti nella mappa, il sistema rende disponibile la lista.
+
 \end{itemize}
-\subsection{UC8}
+
+\subsection{UC13 - Visualizzazione lista completa di task}
 \begin{itemize}
-	\item 	\textbf{Attori primari:}
-	\item 	\textbf{Precondizioni:}
-	\item 	\textbf{Postcondizioni:}
-	\item 	\textbf{Scenario principale:}
-	\item 	\textbf{Descrizione:}
-	\item 	\textbf{Estensioni:}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} l’utente è autenticato come utente responsabile;
+	\item 	\textbf{Postcondizioni:} il responsabile visualizza la lista di task;
+	\item 	\textbf{Scenario principale:} il responsabile clicca sul bottone apposito per poter visualizzare la lista completa delle task;
+	\item 	\textbf{Descrizione:} il responsabile necessita di visualizzare tutte le task che sono state create per tenere sotto controllo quali compiti vengono soddisfatti.
+
 \end{itemize}
-\subsection{UC9}
-\subsection{UC10}
-\subsection{UC11}
-\subsection{UC12}
-\subsection{UC13}
+
+\subsection{UC14 - Gestione unità}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’utente è autenticato come amministratore e viene resa disponibile l’interfaccia per la gestione delle unità;
+	\item 	\textbf{Postcondizioni:}è cambiata la quantità di unità gestite dal sistema;
+	\item 	\textbf{Scenario principale:}l’amministratore dopo aver premuto il pulsante per la gestione delle unità, visualizza le operazioni che può effettuare:
+	\begin{itemize}
+		\item l’aggiunta di un nuovo mezzo (UC14.1);
+		\item la rimozione di un mezzo esistente (UC14.2);
+	\end{itemize}
+	\item 	\textbf{Descrizione:}ogni unità (muletto) deve essere identificata all’interno del magazzino attraverso il proprio codice identificativo. L’amministratore ha il compito di gestire l’aggiunta di un nuovo muletto all’interno del magazzino e l’eliminazione.
+\end{itemize}
+
+\subsubsection{UC14.1 - Aggiunta nuova unità}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore sta visualizzando l’interfaccia per l’aggiunta di un nuovo mezzo;
+	\item 	\textbf{Postcondizioni:} è stata aggiunta un’unità all’interno del sistema con il relativo codice identificativo;
+	\item 	\textbf{Scenario principale:} l’amministratore visualizza un form per l’inserimento del codice identificativo del muletto e conferma l’aggiunta.
+	\item 	\textbf{Descrizione:} quando viene utilizzato un nuovo muletto all’interno del magazzino, esso deve venire registrato nel sistema dall’amministratore assegnandogli un proprio codice identificativo.
+
+\end{itemize}
+
+
+\subsubsection{UC14.2 - Rimozione unità}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore sta visualizzando l’interfaccia per la rimozione di un mezzo;
+	\item 	\textbf{Postcondizioni:} un’unità è stata rimossa dal sistema;
+	\item 	\textbf{Scenario principale:} l’amministratore seleziona l’unità che deve essere rimossa dal sistema e conferma la modifica;
+	\item 	\textbf{Descrizione:} quando un muletto all’interno del magazzino non viene più utilizzato e dismesso, esso deve venire rimosso dal sistema.
+	
+\end{itemize}
