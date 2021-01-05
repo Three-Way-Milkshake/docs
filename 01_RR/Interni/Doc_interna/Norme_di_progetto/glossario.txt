@@ -15,3 +15,4 @@ G:techbase:technology baseline:X:Motiva le tecnologie, i framework, e le libreri
 G:prodbase:product baseline:X:Illustra la baseline architetturale del prodotto, coerente con la TB. Rappresenta il design definitivo.
 A:tb:TB:Technology Baseline
 A:pb:PB:Product Baseline
+G:wiki:wiki:wikis:Termine di origine hawaiana che significa "veloce", con cui si identifica un tipo di sito internet che permette la creazione e la modifica di pagine multimediali attraverso un'interfaccia semplice

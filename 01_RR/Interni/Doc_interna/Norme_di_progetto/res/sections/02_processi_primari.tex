@@ -60,10 +60,11 @@
 
         \pparagraph{Consegna e completamento}
             Il fornitore dovrà consegnare il prodotto in accordo con quanto specificato nel contratto. A seguito della consegna del prodotto, il gruppo \group non si farà carico delle mansioni di supporto ed assistenza.
-    \subsubsection{Strumenti}
+    \begin{comment}\subsubsection{Strumenti}
         %todo rimuovere visto che niente in più?
         Oltre a quelli definiti nei processi di \hyperref[supporto]{supporto} e \hyperref[organizzativi]{organizzativi} non è stata individuata la necessità di ulteriori particolari strumenti.
         % todo rivedere se vero poi che non si usa altro
+    \end{comment}
 
 \subsection{Sviluppo}
 \label{sviluppo}
@@ -127,6 +128,7 @@
                     \item seguire i principi SOLID\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/SOLID\%20Principles\%20of\%20Object-Oriented\%20Design_4x4.pdf}};
                     \item utilizzare sempre una nomenclatura significativa, parlante e consistente.
                 \end{itemize}
+            \ssubparagraph{Obiettivi di qualità}
                 Affinché un'architettura si possa definire buona, deve perseguire i seguenti obiettivi di qualità: \footnote{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L09.pdf} \S\ 17..27}
                 \begin{itemize}
                     \item \textbf{sufficienza: }soddisfa tutti i requisiti;
@@ -145,8 +147,19 @@
                     \item \textbf{coesione: }le parti che stanno insieme hanno gli stessi obiettivi;
                     \item \textbf{basso accoppiamento: }parti distinte hanno una dipendenza il più possibile ridotta.
                 \end{itemize}
-                La progettazione porterà in seguito alla produzione di una technology baseline e di una product baseline
-        \paragraph{Codifica}
-            ...
-    \subsubsection{Strumenti}
-        ...
+            \ssubparagraph{Attività}
+                La progettazione porterà in seguito alla produzione di una technology baseline e di una product baseline. A supporto di queste, ci saranno diversi diagrammi, sempre secondo lo standard UML 2.0:
+                \begin{itemize}
+                    \item \textbf{delle classi\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20delle\%20Classi_4x4.pdf}}: }per rappresentare oggetti e relazioni tra questi in un sistema;
+                    \item \textbf{dei package\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20dei\%20Package_4x4.pdf}}: }per rappresentare dipendenze tra classi e package ad un livello di astrazione più alto rispetto a quello dei diagrammi delle classi;
+                        \item \textbf{delle attività\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20di\%20Attivit\%c3\%a0_4x4.pdf}}: }per descrivere processi o algoritmi;
+                    \item \textbf{di sequenza\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20di\%20Sequenza_4x4.pdf}}: }la collaborazione di un gruppo di oggetti che devono implementare collettivamente un comportamento.
+                \end{itemize}
+                Si dovranno indicare le tecnologie che si andranno ad utilizzare, descrivendo il loro impiego e le motivazioni che hanno portato alla loro scelta.
+        \pparagraph{Codifica}
+            Qui verranno definite le norme che i programmatori dovranno seguire, di modo da:
+             \begin{itemize}
+                 \item perseguire: leggibilità, uniformità e consistenza;
+                 \item agevolare: verifica, validazione e manutenzione.
+             \end{itemize}
+    %\subsubsection{Strumenti}
