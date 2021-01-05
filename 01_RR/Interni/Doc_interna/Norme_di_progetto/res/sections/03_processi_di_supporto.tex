@@ -129,47 +129,96 @@
                 \begin{itemize}
                     \item \textbf{corsivo: }per denotare termini tecnici appartenenti ad una particolare tecnologia che si sta trattando;
                     \item \textbf{grassetto: }per evidenziare termini rilevanti o dei quali viene dato un significato esteso immediatamente in seguito, come questi in un elenco puntato;
-                    \item \textbf{maiuscoletto: }...documenti...
-                    \item \textbf{pedice: } ... G..A...
+                    \item \textbf{maiuscoletto: }per indicare altri documenti (e.g.: \textsc{Piano di Progetto});
+                    \item \textbf{pedice: } G e A, per indicare rispettivamente una voce di glossario o un acronimo.
+                \end{itemize}
+            \pparagraph{Elenchi}
+                Ogni elemento deve terminare con un punto e virgola, eccetto quella finale che va seguito da un punto, quindi ogni prima parola deve avere iniziale minuscola a meno che non indichi qualcosa per la quale la capitalizzazione è importante. Gli elenchi puntati non numerati avranno come simbolo di primo livello un puntino pieno, come secondo un trattino, come terzo un asterisco. Gli elenchi numerati come primo livello numeri, come secondo lettere minuscole, come terzo numeri romani rappresentati con lettere minuscole
+                \begin{multicols}{2}
+                    \begin{itemize}
+                        \item elenco puntato non numerato
+                        \item secondo elemento
+                        \begin{itemize}
+                            \item secondo livello
+                            \begin{itemize}
+                                \item terzo livello
+                            \end{itemize}
+                        \end{itemize}
+                    \end{itemize}
+                    \begin{enumerate}
+                        \item elenco puntato numerato
+                        \item secondo elemento
+                        \begin{enumerate}
+                            \item secondo livello
+                            \begin{enumerate}
+                                \item terzo livello
+                            \end{enumerate}
+                        \end{enumerate}
+                    \end{enumerate}
+                \end{multicols}
+                \centerline{(Esempi elenchi puntati numerati e non corretti)}
+            \pparagraph{Data e ora}
+                In ogni documento si adotta lo \href{https://www.iso.org/iso-8601-date-and-time-format.html}{Standard ISO 8601} , quindi aaaa-mm-gg (e.g.: 5 Gennaio 2021 = 2021-01-05) e hh:mm. Se si scrive il mese in caratteri questo con l'iniziale maiuscola e vale lo stesso per i giorni della settimana.
+            \pparagraph{Codici di versioni}
+                % non trovato standard ufficiale, solo https://semver.org/ ma sempre essere più per il codice e basta e comunque introduce molte complicazioni
+                Si adotta la convenzione $x.y.z$ dove x, y e z sono numeri progressivi che partono da 0, x non si azzera mai, y si azzera ad ogni incremento di x e z si azzera ad ogni incremento di y o x. Gli incrementi avvengono:
+                \begin{itemize}
+                    \item \textbf{per x: }quando avviene un accertamento da parte del responsabile di modifiche sostanziali
+                    \item \textbf{per y: }quando viene apportato un insieme discreto di modifiche;
+                    \item \textbf{per z: }per ogni modifica o verifica minore.
                 \end{itemize}
 
+        \subsubsection{Strumenti}
+            Come già citato, per la scrittura dei documenti formali si usa \LaTeX\footnote{https://www.latex-project.org/} e come editor non c'è una preferenza assoluta, ma si consigliano \href{http://www.texstudio.org/}{TexStudio} o \href{https://www.xm1math.net/texmaker/}{TexMaker}. Per quanto riguarda i documenti informali invece, \href{https://www.atlassian.com/software/confluence}{Confluence} può essere usato in qualunque browser.
 
-\subsection{Versionamento} %TODO corretto averli qui o meglio in processi organizzativi?
+
+\subsection{Gestione della configurazione}
     \subsubsection{Scopo}
-    Lo scopo del processo di fornitura è di determinare
+        Lo scopo del processo di gestione della configurazione è quello di applicare procedure amministrative e tecniche al fine di controllare e registrare modifche e rilasci ed assicurare la correttezza, consistenza, completezza ed archiviazione di ogni elemento.
     \subsubsection{Aspettative}
-    ...
+        Avere uno spazio di lavoro versionato, condivisp ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
     \subsubsection{Descrizione}
-    ...
-    \subsubsection{Attività}
-    ...
+        Il gruppo \group ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le repo di cui necessita.
+    \subsubsection{Workflow}
+        Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di git e github si trovano nella wiki \textsc{GIT, Github \& Jira}
+        \pparagraph{Pull requests}
+
     \paragraph{singole attività...}
     \subsubsection{Strumenti}
     ...
+
+\subsection{Accertamento della qualità}
+    \subsubsection{Scopo}
+        Lo scopo del processo di ...
+    \subsubsection{Aspettative}
+        ...
+    \subsubsection{Descrizione}
+        ...
+    \subsubsection{altre sottosezioni}
+        ...
 
 \subsection{Verifica}
 \label{verifica}
     \subsubsection{Scopo}
-    Lo scopo del processo di fornitura è di determinare
+        Lo scopo del processo di ...
     \subsubsection{Aspettative}
-    ...
+        ...
     \subsubsection{Descrizione}
-    ...
-    \subsubsection{Attività}
-    ...
-    \paragraph{singole attività...}
+        ...
+    \subsubsection{altre sottosezioni}
+        ...
     \subsubsection{Strumenti}
-    ...
+        ...
+
 
 \subsection{Validazione}
     \subsubsection{Scopo}
-    Lo scopo del processo di fornitura è di determinare
+        Lo scopo del processo di ...
     \subsubsection{Aspettative}
-    ...
+        ...
     \subsubsection{Descrizione}
-    ...
-    \subsubsection{Attività}
-    ...
-    \paragraph{singole attività...}
+        ...
+    \subsubsection{altre sottosezioni}
+        ...
     \subsubsection{Strumenti}
-    ...
+        ...
