@@ -278,7 +278,113 @@ Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso
 	\end{itemize}
 \end{itemize}
 
+
 \subsection{UC6 - Visualizzazione mappa}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore, responsabile;
+	\item 	\textbf{Precondizioni:} gli attori sono autenticati nel sistema;
+	\item 	\textbf{Postcondizioni:} gli attori visualizzano la mappa del magazzino.
+	\item 	\textbf{Scenario principale:} il responsabile e l’amministratore, una volta autenticati, visualizzano la mappa completa del magazzino;
+	\item 	\textbf{Descrizione:}il responsabile e l’amministratore, per portare al termine i loro compiti, devono visualizzare la mappa del magazzino. Gli elementi della mappa sono:
+	\begin{itemize}
+		\item POI di carico; punto in cui i muletti prelevano il carico da scaricare per soddisfare la propria lista di task. Ogni volta che completano la loro lista di compiti (ma non hanno finito il turno), devono tornare il questo punto;
+		\item POI di scarico; punti in cui i muletti devono scaricare la merce prelevata. Sono i luoghi che fanno riferimento le task;
+		\item POI di sosta; punto in cui gli operatori partono con il proprio muletto a inizio turno e arrivano alla fine del turno.
+		\item zona di percorrenza; sono le strade in cui i muletti possono transitare, hanno delle loro caratteristiche:
+		\begin{itemize}
+			\item senso di marcia;
+			\item numero massimo di unità che può transitare;
+		\end{itemize}
+		\item aree non transitabili (muri, scaffali..).
+	\end{itemize}
+
+\end{itemize}
+
+
+\subsubsection{UC6.1 - Visualizzazione posizione muletti in real-time}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore, responsabile;
+	\item 	\textbf{Precondizioni:} gli attori sono autenticati nel sistema e visualizzano correttamente la mappa;
+	\item 	\textbf{Postcondizioni:} gli attori visualizzano gli spostamenti dei muletti in real-time nella mappa;
+	\item 	\textbf{Scenario principale:} il responsabile e l’amministratore una volta autenticati, visualizzano la mappa completa del magazzino e i muletti muoversi;
+	\item 	\textbf{Descrizione:} il responsabile e l’amministratore, per portare al termine i loro compiti, devono visualizzare la mappa del magazzino e gli spostamenti dei muletti;
+\end{itemize}
+
+\subsection{UC7 - Gestione mappa}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l’amministratore è autenticato nel sistema e viene reso disponibile dal sistema un pulsante per la modifica della mappa;
+	\item 	\textbf{Postcondizioni:} la mappa è stata modificata dall’amministratore;
+	\item 	\textbf{Scenario principale:} l’amministratore una volta autenticato preme il pulsante per la gestione della mappa dal quale può effettuare le seguenti operazioni:
+	\begin{itemize}
+		\item modificare la mappa (UC7.1);
+		\item gestire i punti d’interesse (UC7.4);
+	\end{itemize}
+	\item 	\textbf{Descrizione:} l’amministratore ha il compito di gestire la mappa e tenere aggiornati i cambiamenti reali del magazzino nell’applicativo.
+\end{itemize}
+
+
+\subsubsection{UC7.1 - Modifica mappa}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:}viene resa disponibile dal sistema l’interfaccia per la modifica della mappa;
+	\item 	\textbf{Postcondizioni:} la mappa è stata modificata dall’amministratore;
+	\item 	\textbf{Scenario principale:}l’amministratore dopo aver premuto il pulsante per la modifica, visualizza l’interfaccia per gestire i cambiamenti della mappa tra cui può scegliere tramite un menù a tendina se:
+	\begin{itemize}
+		\item modificare la planimetria del magazzino (UC7.2);
+		\item modificare la percorrenza del magazzino, per esempio i sensi di marcia e le corsie (UC7.3);
+		\item gestire i POI (UC7.4);
+	\end{itemize}
+	e viene visualizzata l’intera mappa (UC6).
+Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di conferma;
+	\item 	\textbf{Descrizione:} l’amministratore ha il compito di tenere aggiornata la mappa dai cambiamenti reali del magazzino, modificandone la planimetria, la percorrenza e i POI presenti.
+	\item 	\textbf{Specializzazione:} 
+	\begin{itemize}
+		\item UC7.2 - Modifica planimetria
+		\item UC7.3 - Modifica percorrenza
+		\item UC7.4 - Gestione POI
+	\end{itemize}
+	\item \textbf{Estensione}:
+	\begin{itemize}
+		\item UC7.5 - Visualizzazione messaggio d’errore operazione non permessa.
+	\end{itemize}Visualizzazione messaggio d’errore operazione non permessa.
+\end{itemize}
+
+
+\subsubsection{UC7.2 - Modifica planimetria}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} viene resa disponibile dal sistema l’interfaccia per la modifica della planimetria della mappa;
+	\item 	\textbf{Postcondizioni:} la mappa è stata modificata dall’amministratore;
+	\item 	\textbf{Scenario principale:} vengono visualizzati degli strumenti per la modifica della planimetria:
+	\begin{itemize}
+		\item ampliamento;
+		\item riduzione;
+		\item aggiunta, rimozione e modifica zone non transitabili.
+	\end{itemize}
+	Una volta raggiunto il risultato desiderato, l’amministratore conferma tramite il pulsante di salvataggio;
+	\item 	\textbf{Descrizione:} il magazzino con il passare del tempo, può apportare dei cambiamenti nella planimetria. Possono venire modificati:
+	\begin{itemize}
+		\item la dimensione del magazzino (ampliarlo o diminuirlo);
+		\item le zone in cui non è permessa la transizione dei mezzi (scaffali, muri ect).
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UC7.3 - Modifica percorrenza}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:}  l’amministratore è autenticato nel sistema e viene reso disponibile dal sistema l’interfaccia per la modifica della percorrenza della mappa;
+	\item 	\textbf{Postcondizioni:}la mappa è stata modificata dall’amministratore;
+	\item 	\textbf{Scenario principale:} viene visualizzata la mappa con le caratteristiche che ogni corsia ha (senso di marcia e numero massimo di unità). L’amministratore deve premere sopra la corsia che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l’amministratore conferma tramite il pulsante di salvataggio;
+	\item 	\textbf{Descrizione:} il magazzino con il passare del tempo, può apportare dei cambiamenti nella percorrenza, sarà possibile modificare:
+	\begin{itemize}
+		\item sensi unici;
+		\item numero massimo di unità nelle corsie.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{UC7.4 - Gestione POI}
 \begin{itemize}
 	\item 	\textbf{Attori primari:}
 	\item 	\textbf{Precondizioni:}
@@ -287,15 +393,31 @@ Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso
 	\item 	\textbf{Descrizione:}
 	\item 	\textbf{Estensioni:}
 \end{itemize}
-\subsubsection{UC6.1 - Visualizzazione posizione muletti in real-time}
 
-\subsection{UC7}
-\subsubsection{UC7.1 - Modifica mappa}
-\subsubsection{UC7.2 - Modifica planimetria}
-\subsubsection{UC7.3 - Modifica percorrenza}
-\subsubsection{UC7.4 - Gestione POI}
-
+\paragraph{UC7.4.1 }
+\paragraph{UC7.4.2 }
+\paragraph{UC7.4.3 }
+\paragraph{UC7.4.4 }
+\paragraph{UC7.4.5 }
+\paragraph{UC7.4.6 }
+\subsubsection{UC7.5 - Visualizzazione messaggio d'errore operazione non permessa}
+\begin{itemize}
+	\item 	\textbf{Attori primari:}
+	\item 	\textbf{Precondizioni:}
+	\item 	\textbf{Postcondizioni:}
+	\item 	\textbf{Scenario principale:}
+	\item 	\textbf{Descrizione:}
+	\item 	\textbf{Estensioni:}
+\end{itemize}
 \subsection{UC8}
+\begin{itemize}
+	\item 	\textbf{Attori primari:}
+	\item 	\textbf{Precondizioni:}
+	\item 	\textbf{Postcondizioni:}
+	\item 	\textbf{Scenario principale:}
+	\item 	\textbf{Descrizione:}
+	\item 	\textbf{Estensioni:}
+\end{itemize}
 \subsection{UC9}
 \subsection{UC10}
 \subsection{UC11}
