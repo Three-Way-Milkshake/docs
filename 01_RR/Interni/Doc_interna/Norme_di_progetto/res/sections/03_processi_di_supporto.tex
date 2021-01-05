@@ -20,6 +20,7 @@
 
         \end{itemize}
     \subsubsection{Ciclo di vita dei documenti}
+    \label{ciclovitadoc}
         Ogni documento formale si redige ed incrementa tramite queste attività:
         \begin{itemize}
             \item \textbf{stesura: }la scrittura del documento in sé, riguarda sia la creazione di nuove parti che l'aggiornamento di queste. Uno o più redattori si occupano di ciò;
@@ -27,12 +28,111 @@
             \item \textbf{approvazione: }quando i verificatori riporteranno la completa correttezza ed aderenza ai requisiti del documento, il responsabile provvederà all'approvazione finale ed al rilascio di una nuova versione dello stesso.
         \end{itemize}
         Adottando un approccio incrementale, queste attività possono ripetersi.
-    \subsubsection{Struttura dei documenti}
+    \subsubsection{Struttura dei documenti formali}
+        \pparagraph{Organizzazione in file e cartelle}
+            Ogni documento, ha una sua cartella dedicata, all'interno della quale ci devono essere:
+            \begin{itemize}
+                \item \textbf{file principale del documento: }(nome\_documento.tex) che contiene l'impostazione della struttura, le dichiarazioni per importare i package \LaTeX{} aggiuntivi e le dichiarazioni di inclusione delle sezioni e del glossario;
+                \item \textbf{cartella config: }contenente file di configurazione relativi al documento, che consentono l'impostazione del frontespizio e del registro delle modifiche;
+                \item \textbf{cartella res: }per contenere le risorse del documento, a sua volta questa contiene:
+                    \begin{itemize}
+                        \item \textbf{cartella images: }per le eventuali immagini;
+                        \item \textbf{cartella sections: }che contiene tutte le sezioni, ognuna in un file diverso, i quali seguono la convenzione di nomenclatura preceduta da un identificativo numerico progressivo ad indicare la posizione della stessa nel documento (e.g.: 01\_introduzione.tex, 02\_sezione1.tex)
+                        %todo add link convenzione nomi
+                    \end{itemize}
+                \item \textbf{file glossario.txt: }dove definire tutti gli acronimi e le voci di glossario, che verranno poi processate \hyperref[glossario]{dall'automazione}.
+            \end{itemize}
+        \pparagraph{Frontespizio}
+            Fornisce dele informazioni generali e di introduzione al documento, ed è così composto:
+            \begin{itemize}
+                \item logo esteso del gruppo;
+                \item nome del documento;
+                \item nome del gruppo e del progetto relativo al capitolato scelto;
+                \item indirizzo email di riferimento del gruppo;
+                \item versione del documento, secondo la \hyperref[versions]{convenzione};
+                \item stato, in accordo con quanto descritto nel \hyperref[ciclovitadoc]{ciclo di vita dei documenti};
+                \item elenco dei redattori;
+                \item elenco dei verificatori;
+                \item nome del responsabile che ha effettuato l'ultima approvazione
+                \item destinatari del documento
+                \item breve descrizione
+            \end{itemize}
+        \pparagraph{Registro delle modifiche}
+            Raccoglie in forma tabellare tutte le modifiche e conseguentemente la storia del documento, così strutturate:
+            \begin{itemize}
+                \item versione del documento relativa alla modifica
+                \item breve descrizione delle attività svolte
+                \item data della modifica, secondo lo standard \href{https://www.iso.org/iso-8601-date-and-time-format.html}{ISO 8601}
+                \item cognome e nome di chi ha apportato la modifica
+                \item ruolo del modificatore rispetto al ciclo di vita del documento, può quindi essere: redattore, verificatore, responsabile.
+            \end{itemize}
+        \pparagraph{Indice}
+            Riassume i contenuti del documento raccolti per sezioni ed intestazioni, indicando la pagina di inizio e collegando alla stessa
+        \pparagraph{Elenchi delle figure e tabelle}
+            Nel caso in cui un documento presenti una o più figure o tabelle, queste sezioni le indicheranno raccogliendole rispettivamente ed indicando la pagina di apparizione.
+        \pparagraph{Sezione di introduzione}
+            La prima sezione di contenuto di ogni documento formale è l'introduzione che si articola in:
+            \begin{itemize}
+                \item una sezione che descrive lo scopo del documento;
+                \item due sezioni condivise fra tutti i documenti, non verbali, che illustrano rispettivamente scopo del prodotto del capitolato scelto e funzionamento di acronimi, voci di glossario e riferimenti ad altri documenti;
+                \item una sezione che contiene tutti i riferimenti, di natura normativa o informativa.
+            \end{itemize}
+        \pparagraph{Ulteriori sezioni, appendici e glossari}
+            Come indicato precedentemente ogni sezione di primo livello deve avere un suo file dedicato e si svilupperà in seguito all'introduzione. Al termine di tutte le sezioni vi può essere un'appendice mentre le ultime pagine elencano la lista degli acronimi e i termini di glossario utilizzati nel documento, con riferimenti alle pagine dove questi appaiono.
 
+        \subsubsection{Verbali}
+            I verbali possono essere interni, se relativi ad una riunione dei soli membri del gruppo, o esterni, se relativi ad un qualche tipo di incontro con persone esterne al gruppo. Come gli altri documenti formali, hanno un frontespizio ed un registro delle modifiche, poi si articolano in questo modo:
+            \begin{itemize}
+                \item informazioni generali
+                    \subitem -- dettagli sull'incontro
+                        \subsubitem -- luogo, data\footnote{Standard ISO 8601}, orari di inizio e fine e partecipanti
+                    \subitem -- ordine del giorno;
+                \item verbale della riunione
+                    \subitem -- contiene tutte le sottosezioni necessarie a descrivere lo svolgimento dell'incontro;
+                \item conclusioni
+                    \subitem -- nel caso di verbale interno, una tabella di tracciamento delle decisioni;
+                    \subitem -- nel caso di verbale esterno, un paragrafo riassuntivo.
+            \end{itemize}
+            Ogni verbale avrà come nome "verbale\_[tipo]\_[num]" dove tipo può essere interno o esterno, e num e il progressivo rispetto al tipo.
+            \pparagraph{Tracciamento delle decisioni nei verbali interni}
+                Ogni riga della tabella di tracciamento delle decisioni si compone di:
+                \begin{itemize}
+                    \item \textbf{codice: }indentificativo univoco della decisione, così formato: VI\_numRiunione.numDecisione (e.g.: VI\_2.3 indica la terza decisione presa durante la riunione interna 2);
+                    \item \textbf{decisione: }breve riassunto che indichi in maniera chiara la decisione presa.
+                \end{itemize}
+        \subsubsection{Glossario e acronimi}
+            Ogni documento ha una sua sezione dedicata al glossario e agli acronimi a fine documento, dove sono indicate anche le pagine di apparizione delle rispettive voci.
+            \pparagraph{Definzione ed utilizzo delle voci}
+                Gli acronimi ed i termini di glossario vanno definiti nel glossario.txt, istruzioni precise su come utilizzare correttamente questo documento si trovano nella \textsc{wiki how-to glossario}. Una volta che una voce è stata aggiunta, la si può usare liberamente in qualsiasi sezione tramite il suo nome, singolare o plurale nel caso di termine nel glossario, o abbreviazione nel caso di acronimo
 
-    \paragraph{singole attività...}
-    \subsubsection{Strumenti}
-    ...
+            \pparagraph{Funzionamento}
+                Ad ogni azione di push su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash, glossary\_builder.sh il quale:
+                \begin{itemize}
+                    \item controlla tutti i documenti che hanno un glossario.txt;
+                    \item ne genera un glossario.tex;
+                    \item sostituisce tutte le occorrenze delle voci di glossario e acronimi in ogni sezione con i rispettivi comandi \LaTeX{}
+                    \item se ci sono stati cambiamenti, ricompila il glossario e ricompila il documento per ottenere un pdf aggiornato;
+                    \item se ci sono stati dei documenti aggiornati, effettua commit e push.
+                \end{itemize}
+                Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate e collegate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una pull prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una push, così da avere il documento aggioranto ed evitare problemi di conflitti e nel VCS.
+        \subsubsection{Norme tipografiche}
+            \pparagraph{Nomi di file e cartelle}
+                Ogni file e cartella dovrà avere un nome:
+                \begin{itemize}
+                    \item che sia il più possibile conciso ed esplicativo;
+                    \item composto di sole lettere minuscole, numeri, \_ e '-', ad eccetto del '.' per separare nome da estensione
+                    \item che abbia alla fine un'estensione coerente col suo tipo
+                    \item non contenere spazi o caratteri diversi da quelli indicati sopra, parole diverse si separano con '\_'
+                \end{itemize}
+            \pparagraph{Stile del testo}
+                Ai seguenti stili si attribuisce una specifica funzione semantica:
+                \begin{itemize}
+                    \item \textbf{corsivo: }per denotare termini tecnici appartenenti ad una particolare tecnologia che si sta trattando;
+                    \item \textbf{grassetto: }per evidenziare termini rilevanti o dei quali viene dato un significato esteso immediatamente in seguito, come questi in un elenco puntato;
+                    \item \textbf{maiuscoletto: }...documenti...
+                    \item \textbf{pedice: } ... G..A...
+                \end{itemize}
+
 
 \subsection{Versionamento} %TODO corretto averli qui o meglio in processi organizzativi?
     \subsubsection{Scopo}

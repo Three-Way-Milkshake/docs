@@ -4,7 +4,7 @@ G:precondizione:precondizione:precondizioni:Condizioni che devono essere soddisf
 G:postcondizione:postcondizione:postcondizioni:Condizioni che devono verificarsi dopo determinati eventi
 A:eg:e.g.:Example given, si usa per indicare che ciò che segue è un esempio
 G:stakeholder:stakeholder:stakeholders:Tutti coloro che a vario titolo hanno influenza sul prodotto e sul progetto
-G:design pattern:design pattern:design patterns:Una soluzione progettuale generale ad un problema ricorrente
+G:designpattern:design pattern:design patterns:Una soluzione progettuale generale ad un problema ricorrente
 A:cpu:CPU:Central Processing Unit
 A:ram:RAM:Random Access Memory
 G:safety:safety:X:Sicurezza rispetto a malfunzionamenti
@@ -12,7 +12,15 @@ G:security:security:X:Non vulnerabilità rispetto a intrusioni
 G:proofconcept:proof of concept:X:Dimostratore eseguibile. Il suo codice può (ma non deve) essere usa-e-getta
 A:poc:PoC:Proof of Concept
 G:techbase:technology baseline:X:Motiva le tecnologie, i framework, e le librerie selezionate per la realizzazione del prodotto. Ne dimostra adeguatezza e fattibilità, tramite un proof of concept coerente con gli obiettivi
-G:prodbase:product baseline:X:Illustra la baseline architetturale del prodotto, coerente con la TB. Rappresenta il design definitivo.
-A:tb:TB:Technology Baseline
-A:pb:PB:Product Baseline
-G:wiki:wiki:wikis:Termine di origine hawaiana che significa "veloce", con cui si identifica un tipo di sito internet che permette la creazione e la modifica di pagine multimediali attraverso un'interfaccia semplice
+G:prodbase:product baseline:X:G:prodbase:product baseline:X:Illustra la baseline architetturale del prodotto, coerente con la \\\\acrshort{tb}. Rappresenta il design definitivo
+A:tb:TB:\\\\gls{techbase}
+A:pb:PB:\\\\gls{prodbase}
+G:wiki:wiki:wikis:Termine di origine hawaiana che significa veloce, con cui si identifica un tipo di sito internet che permette la creazione e la modifica di pagine multimediali attraverso un'interfaccia semplice
+G:git:git:X:Sistema di controllo del versionamento distribuito
+G:gitpush:push:X:Comando di \\\\gls{git} che permette di caricare le proprie modifiche locali sul server remoto condiviso del repository
+G:repository:repository:X:Posizione di archiviazione per pacchetti software
+A:repo:repo:\\\\gls{repository}
+G:bash:bash:X:È una shell Unix ed un linguaggio interpretato scritto da Brian Fox per il progetto GNU come sostituto del software gratuito per la shell Bourne
+G:gitcommit:commit:commits:Comando di \\\\gls{git} che permette di salvare e versionare le modifiche attuate ai file in locale
+G:gitpull:pull:X:Comando di \\\\gls{git} che permette di aggiornare il proprio \\\\acrshort{repo} locale con i cambiamenti remoti
+A:vcs:VCS:Version Control System
