@@ -24,3 +24,10 @@ G:bash:bash:X:È una shell Unix ed un linguaggio interpretato scritto da Brian F
 G:gitcommit:commit:commits:Comando di \\\\gls{git} che permette di salvare e versionare le modifiche attuate ai file in locale
 G:gitpull:pull:X:Comando di \\\\gls{git} che permette di aggiornare il proprio \\\\acrshort{repo} locale con i cambiamenti remoti
 A:vcs:VCS:Version Control System
+G:sistematico:sistematico:X:Modo di lavorare metodico e rigoroso, che conosce, usa ed evolve le best practice di dominio
+G:efficacia:efficacia:X:Misura della capacità di raggiungere l'obiettivo prefissato
+G:efficienza:efficienza:X:Misura dell'abilità di raggiungere l'obiettivo impiegando le risorse minime indispensabili
+G:disciplinato:disciplinato:X:Che segue le regole che si è dato
+G:quantificabile:quantificabile:X:Che permette di misurare l’efficienza e l’efficacia del suo agire
+G:bestpractice:best practice:best practices:Modo di fare noto, che abbia mostrato di garantire i migliori risultati in circostanze note e specifiche
+A:jit:JiT:Just in Time
