@@ -180,10 +180,14 @@
         Avere uno spazio di lavoro versionato, condivisp ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
     \subsubsection{Descrizione}
         Il gruppo \group ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le \acrshort{repo}\textsubscript{A} di cui necessita.
-    \subsubsection{Workflow}
+    \subsubsection{Workflow di versionamento}
         Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno \acrshort{repo}\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di \gls{git}\textsubscript{G} e GitHub si trovano nella \gls{wiki}\textsubscript{G} \textsc{GIT, Github \& Jira}
         \pparagraph{Pull requests}
             Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una \gls{gitpull}\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in \gls{git}\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
+
+    \subsubsection{Integrazione con Jira}
+    \label{jiraintegration}
+        GitHub è stato configurato in maniera che ad ogni commit si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, Github \& Jira}} è possibile collegare ogni commit con una task o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
 
     \subsubsection{Strumenti}
         Come già detto, le \acrshort{repo}\textsubscript{A} sono tenute su GitHub, per quanto riguarda la gestione locale, ogni membro è libero di adottare lo strumento che preferisce.
@@ -223,3 +227,11 @@
         ...
     \subsubsection{Strumenti}
         ...
+
+\subsection{Risoluzione dei problemi}
+    \subsubsection{Scopo}
+        Questo processo ha lo scopo di definire un insieme di procedure atte alla risoluzione dei problemi.
+    \subsubsection{Aspettative}
+        Identificazione, segnalazione e risoluzione dei problemi devono avvenire in maniera standardizzata all'interno del gruppo così che tutto il processo possa essere svolto nei tempi più brevi possibili.
+    \subsubsection{Descrizione}
+        Quando un verificatore riscontra dei problemi, tramite il meccanismo degli \hyperref[jiraintegration]{\textit{smart commits}}, riporta la task o sottotask relativa al problema individuato nello stato \textit{in progress} ed aggiunge un commento che indica i problemi riscontrati. Nel caso sia necessario aggiungere più informazioni, il verificatore si può recare nella board ed aggiungere ulteriori commenti. Il verificatore viene quindi sollevato automaticamente dal compito, il responsabile controlla il problema segnalato, se necessario imposta una priorità diversa da \textit{medium}, aggiunge eventuali commenti o descrizioni e riassegna la task ad un altro membro. Il responsabile può sfruttare le sezioni \textit{history} e \textit{comments} di ogni task per controllare chi ha lavorato in passato a quel compito di modo da facilitare la scelta di assegnazione.
