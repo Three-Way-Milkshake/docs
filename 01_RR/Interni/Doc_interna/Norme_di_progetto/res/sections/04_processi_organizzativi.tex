@@ -17,12 +17,17 @@
         \item workspace \href{https://slack.com/intl/en-it/about}{Slack};
         \item workspace Confluence con spazio dedicato ai verbali e spazio dedicato alle wiki;
         \item progetto Jira con board condivisa per l'organizzazione, gestione e tracciamento dei compiti.
+    \end{itemize}
         \pparagraph{Jira}
         Come spiegato nella sezione \hyperref[jiraintegration]{Integrazione con Jira}, è stato configurato un processo automatico di collegamento fra commit su GitHub e task in Jira. Inoltre ad ogni azione, manuale o automatica, su Jira, viene generata una notifica nel canale dedicato di Slack.
         \pparagraph{workflow}
-        In
-        %\includegraphics{res/images/jira_workflow.png}
-    \end{itemize}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.32]{res/images/jira_workflow.png}
+            \caption{Diagramma degli stati e delle transizioni del workflow}
+        \end{figure}
+            Come si può vedere dall'immagine, il workflow di task e sottotask è stato configurato di modo che ci siano delle precise transizioni da uno stato all'altro e che solo quelle siano permesse. I nomi delle transizioni sulle frecce corrispondono ai comandi da usare nella sintassi degli smart commits. Maggiori dettagli si trovano nella wiki \textsc{Git, Github \& Jira}.
+
     \subsubsection{altre sottosezioni}
     ...
     \subsubsection{Strumenti}
