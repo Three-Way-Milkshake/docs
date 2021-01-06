@@ -1,0 +1,64 @@
+\section{Algoritmo del sistema centrale}
+\subsection{Introduzione}
+Viene ora presentato l'algoritmo che mostra come il sistema centrale si occuperà di gestire le task.
+\subsection{Algoritmo per la gestione delle task}
+%inserire immagine
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.52]{res/images/gerarchia.png}
+%	\caption{Attori primari}
+%\end{figure}
+
+\begin{itemize}
+	\item{\textbf{INPUT}\\
+	Il sistema centrale riceverà in input:
+	\begin{itemize}
+		\item{la mappa del magazzino\\}
+		\item{la lista unità disponibili\\}
+		\item{le task da soddisfare, mano a mano che il responsabile le inserisce\\}
+	\end{itemize}
+	}
+	\item{\textbf{OUTPUT}\\
+	Il sistema allora dovrà:
+	\begin{enumerate}
+		\item{Suddividere le task in liste da assegnare alle unità nel punto di carico. \\
+		Le liste sono calcolate suddividendo per zone di prossimità\\}
+		\item{Per ogni unità \texttt{(while tasks.length>0)}\\}
+		\begin{enumerate}
+			\item{viene calcolato il percorso ottimale per raggiungere il POI per soddisfare la prossima task\\}
+			\item{viene suggerita la prossima mossa per raggiungere il POI della task \texttt{i}\\}	
+			\begin{itemize}
+				\item{\texttt{while(mosse.length > 0)}\\}
+				\begin{itemize}
+					\item{verifica fattibilità della mossa (es: unità in mezzo, ostacolo, corsia occupata, ingorgo)\\}
+					\begin{itemize}
+						\item{se la mossa è fattibile e se la gestione della guida è automatica = \\
+						 attua la mossa\\}
+						\item{altrimenti = \\
+						ricalcolo del percorso a partire dalla mossa attuale\\}									\end{itemize}
+				\end{itemize}				
+				\item{attende la conferma dell'operatore che dichiara di aver eseguito lo scarico\\}
+			\end{itemize}						
+			\item{passa alla task successiva\\}				
+		\end{enumerate}
+		\item{Presenta un pulsante da cliccare se l'operatore ha finito il turno affinché lo riporti alla base. Se il pulsante non viene cliccato, esso viene portato al punto di carico. \\}
+	\end{enumerate}
+	}
+\end{itemize}
+\subsection{Diagramma di attività}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{res/images/diagramma_di_attivita2.png}
+	\caption{Diagramma di attività per ...}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{res/images/diagramma_di_attivita1.png}
+	\caption{Diagramma di attività per ...}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{res/images/diagramma_di_attivita3.png}
+	\caption{Diagramma di attività per ...}
+\end{figure}
+
