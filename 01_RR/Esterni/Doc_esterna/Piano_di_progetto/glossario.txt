@@ -1,1 +1,3 @@
-G:periodo:periodo:X:Nel documento, i lasso di tempo che intercorre tra due revisioni successive
+G:periodo:periodo:X:Nel documento, il lasso di tempo che intercorre tra due revisioni successive
+G:attivita:attività:X:
+G:modellosviluppo:modello di sviluppo:X:

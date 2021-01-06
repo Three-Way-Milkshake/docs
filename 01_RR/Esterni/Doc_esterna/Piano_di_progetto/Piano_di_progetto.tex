@@ -10,6 +10,7 @@
 \usepackage{verbatim}
 \usepackage{pgf-pie}
 \usepackage{ragged2e}
+\usepackage{glossaries}
 \setlength{\columnseprule}{1pt}
 
 \input{glossario.tex}
@@ -56,6 +57,7 @@
 	\pagebreak
 	
 
+	\glsaddall
 	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
 	\printglossary[title=Glossario dei Termini]	
 \end{document}

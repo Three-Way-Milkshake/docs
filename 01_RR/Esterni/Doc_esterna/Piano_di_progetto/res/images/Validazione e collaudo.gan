@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Validazione e collaudo" company="" webLink="http://" view-date="2021-03-28" view-index="0" gantt-divider-location="284" resource-divider-location="300" version="2.8.11" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Validazione e collaudo" company="" webLink="http://" view-date="2021-03-28" view-index="0" gantt-divider-location="276" resource-divider-location="300" version="2.8.11" locale="it">
     <description/>
     <view zooming-state="default:5" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="280" order="0"/>
+        <field id="tpd3" name="Nome" width="257" order="0"/>
         <option id="taskLabelUp" value=""/>
         <option id="taskLabelLeft" value="taskDates"/>
         <option id="color.recent"><![CDATA[#99ccff #000000 #009933 #66ff99 #ff6666 #99ffff]]></option>
@@ -55,6 +55,14 @@
                 <depend id="44" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="44" name="Verifica" color="#ff6666" meeting="false" start="2021-04-26" duration="7" complete="0" thirdDate="2021-04-23" thirdDate-constraint="0" expand="true">
+                <depend id="64" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="78" name="Manuale Utente" color="#99ccff" meeting="false" start="2021-04-17" duration="16" complete="0" thirdDate="2021-03-28" thirdDate-constraint="0" expand="true">
+            <task id="79" name="Stesura" meeting="false" start="2021-04-17" duration="9" complete="0" expand="true">
+                <depend id="80" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="80" name="Verifica" meeting="false" start="2021-04-26" duration="7" complete="0" expand="true">
                 <depend id="64" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
