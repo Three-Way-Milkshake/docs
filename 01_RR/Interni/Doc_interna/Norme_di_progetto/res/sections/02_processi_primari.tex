@@ -79,10 +79,10 @@
     \subsubsection{Attività}
         \paragraph{Analisi dei requisiti}
             \ssubparagraph{Descrizione}
-                Gli analisti devono stabilire, raccogliere e documentare tutti i requisiti stilando un documento che fornirà una base precisa su cui i progettisti si potranno fondare. Dovrà contenere, in accordo con quanto richiesto dal cliente, la raccolta dei casi d'uso, rappresentati anche tramite diagrammi UML, ed il tracciamento di tutti i requisiti individuati.
+                Gli analisti devono stabilire, raccogliere e documentare tutti i requisiti stilando un documento che fornirà una base precisa su cui i progettisti si potranno fondare. Dovrà contenere, in accordo con quanto richiesto dal cliente, la raccolta dei \glspl{usecase}\textsubscript{G}, rappresentati anche tramite diagrammi UML, ed il tracciamento di tutti i requisiti individuati.
 
             \ssubparagraph{Nomenclatura casi d'uso}
-                Ogni caso d'uso è univocamente identificato da un codice, secondo lo schema:
+                Ogni \gls{usecase}\textsubscript{G} è univocamente identificato da un codice, secondo lo schema:
                 $$\text{UC[caso].[sottoCaso].[sottoSottoCaso]}$$
                 dove caso, sottoCaso e sottoSottoCaso sono numeri progressivi che partono da 1. Segue poi un breve nome. Inoltre ogni caso dovrà avere le seguenti sezioni (quelle indicate tra parentesi (...) sono opzionali):
                 \begin{itemize}
@@ -93,13 +93,13 @@
                     \item (inclusioni);
                     \item precondizioni;
                     \item postcondizioni;
-                    \\textbf{scenario principale: }uno solo per caso d'uso, rappresenta il normale flusso degli eventi;
+                    \\textbf{scenario principale: }uno solo per \gls{usecase}\textsubscript{G}, rappresenta il normale flusso degli eventi;
                     \item (scenari alternativi).
                 \end{itemize}
 
-                Tutti i casi d'uso non banali verranno accompagnati da diagrammi secondo lo standard UML 2.0 \footnote{\url{https://www.omg.org/spec/UML/2.0/Superstructure/PDF} \S\ 16} \footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20Use\%20Case_4x4.pdf}}.
-                Questo è un esempio di caso d'uso conforme alle regole appena definite:
-                %todo add esempio corretto caso d'uso
+                Tutti i \glspl{usecase}\textsubscript{G} non banali verranno accompagnati da diagrammi secondo lo standard \acrshort{uml}\textsubscript{A} 2.0 \footnote{\url{https://www.omg.org/spec/UML/2.0/Superstructure/PDF} \S\ 16} \footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20Use\%20Case_4x4.pdf}}.
+                Questo è un esempio di \gls{usecase}\textsubscript{G} conforme alle regole appena definite:
+                %todo add esempio corretto \gls{usecase}\textsubscript{G}
 
             \ssubparagraph{Classificazione dei requisiti}
                 Per favorire l'organizzazione ed il tracciamento dei requisiti, questi saranno classificati secondo la convenzione che segue:
@@ -117,14 +117,14 @@
                     \item \textbf{D}$\rightarrow$ desiderabile, non strettamente necessario, ma se ne riconosce il valore aggiunto;
                     \item \textbf{F}$\rightarrow$ facoltativo, relativamente utile oppure contrattabile in futuro.
                 \end{itemize}
-                Il numero progressivo parte da 1 ed i sotto requisiti si indicano in maniera analogo ai sotto casi d'uso.
+                Il numero progressivo parte da 1 ed i sotto requisiti si indicano in maniera analogo ai sotto \glspl{usecase}\textsubscript{G}.
 
         \paragraph{Progettazione}
             \ssubparagraph{Descrizione}
                 I progettisti hanno il compito di tradurre il problema in una possibile soluzione, descritta come architettura, da dividere in parti che possono essere trattate individualmente. Sarà necessario:
                 \begin{itemize}
                     \item svolgere le attività coerentemente con quanto individuato nell'analisi dei requisiti;
-                    \item adottare design pattern opportuni quando si individuano strutture che ne possono trarre beneficio;
+                    \item adottare \gls{designpattern}\textsubscript{G} opportuni quando si individuano strutture che ne possono trarre beneficio;
                     \item seguire i principi SOLID\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/SOLID\%20Principles\%20of\%20Object-Oriented\%20Design_4x4.pdf}};
                     \item utilizzare sempre una nomenclatura significativa, parlante e consistente.
                 \end{itemize}
@@ -148,7 +148,7 @@
                     \item \textbf{basso accoppiamento: }parti distinte hanno una dipendenza il più possibile ridotta.
                 \end{itemize}
             \ssubparagraph{Attività}
-                La progettazione porterà in seguito alla produzione di una technology baseline e di una product baseline. A supporto di queste, ci saranno diversi diagrammi, sempre secondo lo standard UML 2.0:
+                La progettazione porterà in seguito alla produzione di una \gls{techbase}\textsubscript{G} e di una \gls{prodbase}\textsubscript{G}. A supporto di queste, ci saranno diversi diagrammi, sempre secondo lo standard \acrshort{uml}\textsubscript{A} 2.0:
                 \begin{itemize}
                     \item \textbf{delle classi\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20delle\%20Classi_4x4.pdf}}: }per rappresentare oggetti e relazioni tra questi in un sistema;
                     \item \textbf{dei package\footnote{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20dei\%20Package_4x4.pdf}}: }per rappresentare dipendenze tra classi e package ad un livello di astrazione più alto rispetto a quello dei diagrammi delle classi;

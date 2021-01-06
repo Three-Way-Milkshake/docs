@@ -2,7 +2,7 @@ A:uml:UML:Unified Modeling Language
 G:usecase:caso d'uso:casi d'uso:Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un utente (attore)
 G:precondizione:precondizione:precondizioni:Condizioni che devono essere soddisfatte perché si verifichino determinati eventi successivi
 G:postcondizione:postcondizione:postcondizioni:Condizioni che devono verificarsi dopo determinati eventi
-A:eg:e.g.:Example given, si usa per indicare che ciò che segue è un esempio
+A:eg:e\.g\.:Example given, si usa per indicare che ciò che segue è un esempio
 G:stakeholder:stakeholder:stakeholders:Tutti coloro che a vario titolo hanno influenza sul prodotto e sul progetto
 G:designpattern:design pattern:design patterns:Una soluzione progettuale generale ad un problema ricorrente
 A:cpu:CPU:Central Processing Unit
