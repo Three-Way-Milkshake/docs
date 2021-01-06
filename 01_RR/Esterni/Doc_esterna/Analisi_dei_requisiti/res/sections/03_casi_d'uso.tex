@@ -556,16 +556,141 @@ Descrizione: vengono visualizzate nella mappa le task nel loro relativo POI.
 	\item 	\textbf{Descrizione:} le unità possono essere guidati dal pilota automatico, ma l’operatore deve controllare gli spostamenti che il sistema ha intenzione di effettuare.
 
 \end{itemize}
-\subsection{UC11}
+ 
+\subsection{UC11 - Gestione guida}
 \begin{itemize}
-	\item 	\textbf{Attori primari:}
-	\item 	\textbf{Precondizioni:}
-	\item 	\textbf{Postcondizioni:}
-	\item 	\textbf{Scenario principale:}
-	\item 	\textbf{Descrizione:}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore si è autenticato nel sistema ed è pronto a svolgere il suo compito;
+	\item 	\textbf{Postcondizioni:} l’operatore ha interagito correttamente con il sistema; 
+	\item 	\textbf{Scenario principale:} l’operatore effettua le operazioni per la gestione della guida del muletto, ossia:
+	\begin{itemize}
+		\item l’inserimento della guida autonoma se è in modalità di guida manuale (UC11.1);
+		\item l’inserimento della guida manuale se è in modalità di guida autonoma (UC11.2);
+		\item la segnalazione di un evento eccezionale, per esempio ingorghi, collisioni o malfunzionamento (UC11.3);
+		\item lo spostamento del muletto all’interno della mappa (UC11.4);
+	\end{itemize}
+	\item 	\textbf{Descrizione:} l’operatore si appresta a compiere i suoi compiti di guida e supervisioni del muletto. 
+
+\end{itemize}
+
+\subsubsection{UC11.1 - Inserimento guida automatica}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore sta guidando manualmente il muletto;
+	\item 	\textbf{Postcondizioni:} il sistema controlla il movimento del muletto;
+	\item 	\textbf{Scenario principale:} l’operatore preme il pulsante apposito per il passaggio al pilota automatico;
+	\item 	\textbf{Descrizione:} i muletti possono essere guidati in modo automatico dal sistema o manuale in base all’esigenze dell’operatore.
+\end{itemize}
+
+\subsubsection{UC11.2 - Inserimento guida manuale}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} il sistema centrale controlla il movimento del muletto;
+	\item 	\textbf{Postcondizioni:} l’operatore guida il muletto manualmente; 
+	\item 	\textbf{Scenario principale:} l’operatore preme il pulsante apposito per il passaggio al pilota manuale;
+	\item 	\textbf{Descrizione:} i muletti possono essere guidati in modo automatico dal sistema o manuale in base all’esigenze dell’operatore.
+\end{itemize}
+
+\subsubsection{UC11.3 - Segnalazione evento eccezionale}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} il muletto si sta muovendo all’interno della mappa;
+	\item 	\textbf{Postcondizioni:} un evento eccezionale è stato segnalato al sistema centrale; 
+	\item 	\textbf{Scenario principale:} l’operatore preme il pulsante apposito per la segnalazione di un evento eccezionale;
+	\item 	\textbf{Descrizione:} durante la guida possono verificarsi degli eventi eccezionali per esempio collisioni, ingorghi o malfunzionamento del muletto. L’operatore deve segnalarli e il sistema centrali ha il compito di gestirli.
+
+\end{itemize}
+
+\subsubsection{UC11.4 - Spostamento muletto}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore controlla lo spostamento del muletto, la modalità di guida è quella manuale;
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento;
+	\item 	\textbf{Scenario principale:}il sistema rende disponibile l’interfaccia per lo spostamento del muletto, ossia le quattro frecce direzionali e un pulsante di start/stop. L’operatore può eseguire le seguenti operazioni:
+	\begin{itemize}
+		\item spostamento in avanti (UC1.4.1); 
+		\item spostamento indietro (UC1.4.2);
+		\item spostamento a destra (UC1.4.3);
+		\item spostamento a sinistra (UC1.4.4);
+		\item la fermata del muletto (UC1.4.5);
+		\item la partenza del muletto (UC1.4.6);
+	\end{itemize}
+	\item 	\textbf{Descrizione:} i muletti possono intraprendere degli spostamenti all’interno della mappa per raggiungere i vari POI. Essi possono essere controllati manualmente dall’operatore.
+\end{itemize}
+
+
+\paragraph{UC11.4.1 - Spostamento in avanti}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore controlla il movimento del muletto;
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento in avanti; 
+	\item 	\textbf{Scenario principale:} l’operatore preme la freccia in alto;
+	\item 	\textbf{Descrizione:} l’operatore intende far effettuare al muletto uno spostamento in avanti all’interno della mappa.
+
+\end{itemize}
+
+\paragraph{UC11.4.2 - Spostamento indietro}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore controlla il movimento del muletto;
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento indietro; 
+	\item 	\textbf{Scenario principale:} l’operatore preme la freccia in basso;
+	\item 	\textbf{Descrizione:} l’operatore intende far effettuare al muletto uno spostamento indietro all’interno della mappa.
+\end{itemize}
+
+\paragraph{UC11.4.3 - Spostamento a destra}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore controlla il movimento del muletto;
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento a destra; 
+	\item 	\textbf{Scenario principale:} l’operatore preme la freccia a destra;
+	\item 	\textbf{Descrizione:} l’operatore intende far effettuare al muletto uno spostamento a destra all’interno della mappa.
+
+\end{itemize}
+
+\paragraph{UC11.4.4 - Spostamento a sinistra}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore controlla il movimento del muletto;
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento a sinistra; 
+	\item 	\textbf{Scenario principale:} l’operatore preme la freccia a sinistra;
+	\item 	\textbf{Descrizione:} l’operatore intende far effettuare al muletto uno spostamento a sinistra all’interno della mappa.
+\end{itemize}
+
+
+\paragraph{UC11.4.5 - Fermata}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore controlla il movimento del muletto, esso è in azione e si sta muovendo; Il sistema rende disponibile il pulsante di stop;
+	\item 	\textbf{Postcondizioni:} il muletto è fermo all’interno della mappa o in base;
+	\item 	\textbf{Scenario principale:} l’operatore preme il pulsante di stop;
+	\item 	\textbf{Descrizione:} quando il muletto è in movimento è possibile fermarne il moto. Per ripartire sarà necessario azionare il pulsante di partenza (UC11.4.6).
+\end{itemize}
+
+
+\paragraph{UC11.4.6 - Partenza}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore controlla il movimento del muletto, esso è stato precedentemente fermato (UC11.4.5) oppure si trova alla base pronto per iniziare il primo turno; il sistema rende disponibile il pulsante di start;
+	\item 	\textbf{Postcondizioni:} il muletto è in azione;
+	\item 	\textbf{Scenario principale:} l’operatore preme il pulsante di start;
+	\item 	\textbf{Descrizione:} il muletto può essere azionato perchè l’operatore intende partire:
+	\begin{itemize}
+		\item dalla base per raggiungere i POI da soddisfare;
+		\item dopo aver effettuato una fermata a causa di un imprevisto o dello scarico delle merci (UC11.4.5).
+	\end{itemize}
 	\item 	\textbf{Estensioni:}
 \end{itemize}
 
+
+\subsubsection{UC11-5 - Ritorno alla base}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} operatore;
+	\item 	\textbf{Precondizioni:} l’operatore ha finito il turno e ha eseguito tutte le task assegnatoli. Il sistema rende disponibile un pulsante per il ritorno alla base;
+	\item 	\textbf{Postcondizioni:} il muletto è nel punto della mappa base;
+	\item 	\textbf{Scenario principale:} l’operatore preme nell’apposito pulsante per il ritorno alla base. Se la guida è impostata in manuale dovrà guidare fino al punto, altrimenti il sistema lo porta a destinazione;
+	\item 	\textbf{Descrizione:} quando ha finito il turno, l’operatore deve ritornare alla base dove lascia il proprio mezzo per essere usato da un altro operatore.
+\end{itemize}
 
 \subsection{UC12 - Visualizzazione lista completa di POI}
 \begin{itemize}
