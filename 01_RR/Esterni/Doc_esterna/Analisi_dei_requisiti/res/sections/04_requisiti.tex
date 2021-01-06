@@ -1,7 +1,7 @@
 \section{Requisiti}
 \subsection{Introduzione}
 In questa sezione vengono riportati i requisiti, strutturati secondo la loro classificazione per tipologia, ovvero requisiti funzionali, requisiti prestazionali, requisiti di qualità e requisiti di vincolo.
-
+\newline 
 \subsection{Requisiti funzionali}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
@@ -62,12 +62,12 @@ RF-23-O & L’operatore segnala al sistema la conclusione dell’incarico attrav
 RF-24-O & La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che indicano il suggerimento del sistema & UC10\tabularnewline
 RF-24.1-O & Il sistema permette all’operatore la visualizzazione di direzione e spostamento del muletto a cui è a bordo, in caso in cui nel muletto sia attiva la guida automatica & UC10\tabularnewline
 RF-25-O & Nella user interface è presente un pulsante che permette di passare dalla guida manuale alla guida autonoma dell’unità & UC11.1\tabularnewline
-RF-25.1-O & La User Interface del controllo manuale permette di passare alla guida autonoma & UC11.1, verbale_esterno_1\tabularnewline
+RF-25.1-O & La User Interface del controllo manuale permette di passare alla guida autonoma & UC11.1, verbale esterno 1\tabularnewline
 RF-26-O & Nella user interface è presente un pulsante che permette di passare dalla guida autonoma alla guida manuale dell’unità & UC11.2\tabularnewline
-RF-26.1-O & La User Interface del controllo automatico permette di passare alla guida manuale & UC11.2, verbale_esterno_1\tabularnewline
+RF-26.1-O & La User Interface del controllo automatico permette di passare alla guida manuale & UC11.2, verbale esterno 1\tabularnewline
 RF-27-O & Nella user interface è presente un pulsante che permette di segnalare al server un evento eccezionale & UC11.3\tabularnewline
 RF-28-O & Nella user interface comparirà  un pulsante per il ritorno alla base dell’unità se l'operatore avrà concluso tutte le task assegnategli e la guida sarà impostata ad autonoma  & UC11.5\tabularnewline
-RF-29-O & La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che permettono gli spostamenti manuali ed i pulsanti di start/stop & UC11.4, verbale_esterno_1\tabularnewline
+RF-29-O & La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che permettono gli spostamenti manuali ed i pulsanti di start/stop & UC11.4, verbale esterno 1\tabularnewline
 RF-30-D & Il pannello permette di visualizzare l’indicatore di velocità attuale (che avrà come massimo la velocità massima anagrafica) & Capitolato\tabularnewline
 RF-31-O & Il sistema centrale pilota e coordina tutte le unità per evitare incidenti e ingorghi & Capitolato\tabularnewline
 RF-32-F & il sistema fornisce il percorso migliore ad ogni unità tramite algoritmi di ricerca operativa & Capitolato\tabularnewline
@@ -77,11 +77,11 @@ RF-35-O & Il responsabile ha a disposizione un pulsante per poter vedere una lis
 RF-36-O & L'amministratore ha a disposizione un'interfaccia su cui può gestire le unità & UC14\tabularnewline
 RF-36.1-O & L'amministratore può aggiungere una nuova unità & UC14.1\tabularnewline
 RF-36.2-O & L'amministratore può eliminare un'unità & UC14.2\tabularnewline
-\end{longtable}
-
+\end{longtable}.
+\newline 
 \subsection{Requisiti prestazionali}
 In questo progetto non sono stati rilevati alcuni requisiti prestazionali per quanto riguarda i requisiti obbligatori.
-
+\newline 
 \subsection{Requisiti di qualità}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
@@ -101,12 +101,12 @@ RQ-3-O & Documentazione delle API che saranno realizzate & Capitolato\tabularnew
 RQ-4-O & Lista dei bug risolti durante la fase di sviluppo & Capitolato\tabularnewline
 RQ-5-O & Codice prodotto in formato sorgente utilizzando sistemi di versionamento del codice, quali Github o Bitbucket & Capitolato\tabularnewline
 RQ-6-O & Codice sorgente di quanto realizzato & Capitolato\tabularnewline
-RQ-7-O & Docker file (#1) con la componente applicativa, rappresentante il motore di calcolo & Capitolato\tabularnewline 
-RQ-8-O & Docker file (#2) con la componente applicativa rappresentante il visualizzatore/monitor real-time (in base all’implementazione, potrebbe essere incorporato nel #1) & Capitolato\tabularnewline
-RQ-9-O & Docker file (#3), da istanziare N volte, rappresentante la singola unità & Capitolato\tabularnewline
-RQ-10-F & Docker file (#4), da istanziare N volte, rappresentante il singolo pedone & Capitolato\tabularnewline 
-\end{longtable}
-
+RQ-7-O & Docker file ("\#"1) con la componente applicativa, rappresentante il motore di calcolo & Capitolato\tabularnewline 
+RQ-8-O & Docker file ("\#"2) con la componente applicativa rappresentante il visualizzatore/monitor real-time (in base all’implementazione, potrebbe essere incorporato nel "\#"1) & Capitolato\tabularnewline
+RQ-9-O & Docker file ("\#"3), da istanziare N volte, rappresentante la singola unità & Capitolato\tabularnewline
+RQ-10-F & Docker file ("\#"4), da istanziare N volte, rappresentante il singolo pedone & Capitolato\tabularnewline 
+\end{longtable}.
+\newline 
 \subsection{Requisiti di vincolo}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
