@@ -151,4 +151,230 @@ RV-28-O & Ogni unità torna ad un'area di carico se ha scaricato tutta la merce 
 RV-29-O & Il sistema centrale conosce ogni spostamento (in avanti, indietro, a destra e a sinistra) di ogni singola unità & Capitolato\tabularnewline
 RV-30-O & Il sistema centrale conosce la fermata di ogni singola unità & Capitolato\tabularnewline
 RV-31-O & Il sistema centrale conosce la partenza di ogni singola unità & Capitolato\tabularnewline
-\end{longtable}
+\end{longtable}.
+\newline
+\newline
+\subsection{Tracciamento}
+\subsubsection{Fonti - Requisiti}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{\centering}p{0.25\textwidth} 
+		>{}p{0.3\textwidth} }
+	\rowcolorhead
+	\headertitle{Fonte} &
+	\headertitle{\normalfont \textbf{Requisiti}}	
+	\endfirsthead	
+	\endhead
+Capitolato & 
+RV-1-O, RV-2-O\newline
+RV-3-F, RV-5-O\newline
+RV-6-O, RV-7-O\newline
+RV-8-O, RV-9-O\newline
+RV-10-F, RV-11-D\newline
+RV-12-D, RV-13-O\newline
+RV-14-O, RV-15-O\newline
+RV-16-D, RV-17-O\newline
+RV-18-O, RV-29-O\newline
+RV-30-O, RV-31-O\newline
+RF-17-F, RF-30-D\newline
+RF-31-O, RF-32-F\newline
+RQ-1-O, RQ-2-O\newline
+RQ-3-O, RQ-4-O\newline
+RQ-5-O, RQ-6-O\newline
+RQ-7-O, RQ-8-O\newline
+RQ-9-O, RQ-10-F\tabularnewline
+Decisione interna & 
+RV-4-O, RV-19-O\newline
+RV-20-O, RV-21-O\newline
+RV-22-O, RV-23-F\newline
+RV-24-F, RV-25-O\newline
+RV-26-O, RV-27-O\newline
+RV-28-O\tabularnewline
+\textsc{verbale esterno 1} & 
+RF-25.1-O, RF-26.1-O\newline
+RF-29-O\tabularnewline
+UC1 & 
+RF-1-O, RF-2-O\tabularnewline
+UC2 & 
+RF-3-O, RF-4-O\newline
+RF-4.1-O, RF-4.2-O\newline
+RF-4.3-O, RF-5-O\tabularnewline
+UC3 & 
+RF-6-O, RF-6.1-O\newline
+RF-6.2-O, RF-6.3-O\tabularnewline
+UC4 &
+RF-7-O, RF-8-O\newline
+RF-8.1-O, RF-8.2-O\newline
+RF-8.3-O, RF-9-O\newline
+RF-10-O\tabularnewline
+UC5 &
+RF-11-O, RF-12-O\newline
+RF-13-O, RF-14-O\tabularnewline
+UC6 &
+RF-15-O, RF-15.1-O\newline
+RF-15.2-O, RF-15.2.1-O\newline
+RF-16-O\tabularnewline
+UC7 &
+RF-18-O, RF-18.1-O\newline
+RF-18.2-O, RF-19-O\newline
+RF-19.1-O, RF-19.2-O\newline
+RF-19.2.1-O, RF-19.2.2-O\newline
+RF-19.2.3-O, RF-19.3-O\tabularnewline
+UC8 &
+RF-20-O, RF-21-O\newline
+RF-22-O, RF-22.1-O\tabularnewline
+UC9 &
+RF-23-O\tabularnewline
+UC10 &
+RF-24-O, RF-24.1-O\tabularnewline
+UC11 &
+RF-25-O, RF-25.1-O\newline
+RF-26-O, RF-26.1-O\newline
+RF-27-O, RF-28-O\newline
+RF-29-O\tabularnewline
+UC12 &
+RF-33-O, RF-34-O\tabularnewline
+UC13 &
+RF-35-O\tabularnewline
+UC14 &
+RF-36-O, RF-36.1-O\newline
+RF-36.2-O\tabularnewline
+\end{longtable}.\newline
+\subsubsection{Requisiti - Fonti}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{}p{0.15\textwidth} 
+		>{}p{0.35\textwidth} }
+	\rowcolorhead
+	\headertitle{Requisito} &
+	\headertitle{\normalfont \textbf{Fonti}}	
+	\endfirsthead	
+	\endhead
+RV-1-O & Capitolato\tabularnewline
+RV-2-O & Capitolato\tabularnewline
+RV-3-F & Capitolato\tabularnewline
+RV-4-O & Decisione interna\tabularnewline
+RV-5-O & Capitolato\tabularnewline
+RV-6-O & Capitolato\tabularnewline
+RV-7-O & Capitolato\tabularnewline
+RV-8-O & Capitolato\tabularnewline
+RV-9-O & Capitolato\tabularnewline
+RV-10-F & Capitolato\tabularnewline
+RV-11-D & Capitolato\tabularnewline
+RV-12-D & Capitolato\tabularnewline
+RV-13-O & Capitolato\tabularnewline
+RV-14-O & Capitolato\tabularnewline
+RV-15-O & Capitolato\tabularnewline
+RV-16-D & Capitolato\tabularnewline
+RV-17-O & Capitolato\tabularnewline
+RV-18-O & Capitolato\tabularnewline
+RV-19-O & Decisione interna\tabularnewline
+RV-20-O & Decisione interna\tabularnewline
+RV-21-O & Decisione interna\tabularnewline
+RV-22-O & Decisione interna\tabularnewline
+RV-23-F & Decisione interna\tabularnewline
+RV-24-F & Decisione interna\tabularnewline
+RV-25-O & Decisione interna\tabularnewline
+RV-26-O & Decisione interna\tabularnewline
+RV-27-O & Decisione interna\tabularnewline
+RV-28-O & Decisione interna\tabularnewline
+RV-29-O & Capitolato\tabularnewline
+RV-30-O & Capitolato\tabularnewline
+RV-31-O & Capitolato\tabularnewline
+RF-1-O & UC1\tabularnewline
+RF-2-O & UC1.1\tabularnewline
+RF-3-O & UC2\tabularnewline
+RF-4-O & UC2\tabularnewline
+RF-4.1-O & UC2.1.1\tabularnewline
+RF-4.2-O & UC2.1.2\tabularnewline
+RF-4.3-O & UC2.1.3\tabularnewline
+RF-5-O & UC2.3\tabularnewline
+RF-6-O & UC3\tabularnewline
+RF-6.1-O & UC3.1\tabularnewline
+RF-6.2-O & UC3.2\tabularnewline
+RF-6.3-O & UC3.3\tabularnewline
+RF-7-O & UC4\tabularnewline
+RF-8-O & UC4.1\tabularnewline
+RF-8.1-O & UC4.2\tabularnewline
+RF-8.2-O & UC4.3\tabularnewline
+RF-8.3-O & UC4.4\tabularnewline
+RF-9-O & UC4.5\tabularnewline
+RF-10-O & UC4.6\tabularnewline
+RF-11-O & UC5\tabularnewline
+RF-12-O & UC5\tabularnewline
+RF-13-O & UC5\tabularnewline
+RF-14-O & UC5\tabularnewline
+RF-15-O & UC6\tabularnewline
+RF-15.1-O & UC6\tabularnewline
+RF-15.2-O & UC6\tabularnewline
+RF-15.2.1-O & UC6\tabularnewline
+RF-16-O & UC6.1\tabularnewline
+RF-17-F & Capitolato\tabularnewline
+RF-18-O & UC7\tabularnewline
+RF-18.1-O & UC7.2\tabularnewline
+RF-18.2-O & UC7.3\tabularnewline
+RF-19-O & UC7.4\tabularnewline
+RF-19.1-O & UC7.4.1\tabularnewline
+RF-19.2-O & UC7.4.2\tabularnewline
+RF-19.2.1-O & UC7.4.3\tabularnewline
+RF-19.2.2-O & UC7.4.4\tabularnewline
+RF-19.2.3-O & UC7.4.5\tabularnewline
+RF-19.3-O & UC7.4.6\tabularnewline
+RF-20-O & UC8.1\tabularnewline
+RF-21-O & UC8.2\tabularnewline
+RF-22-O & UC8.3\tabularnewline
+RF-22.1-O & UC8.3\tabularnewline
+RF-23-O & UC9\tabularnewline
+RF-24-O & UC10\tabularnewline
+RF-24.1-O & UC10\tabularnewline
+RF-25-O & UC11.1\tabularnewline
+RF-25.1-O & UC11.1, \textsc{verbale esterno 1}\tabularnewline
+RF-26-O & UC11.2\tabularnewline
+RF-26.1-O & UC11.2, \textsc{verbale esterno 1}\tabularnewline
+RF-27-O & UC11.3\tabularnewline
+RF-28-O & UC11.5\tabularnewline
+RF-29-O & UC11.4, \textsc{verbale esterno 1}\tabularnewline
+RF-30-D & Capitolato\tabularnewline
+RF-31-O & Capitolato\tabularnewline
+RF-32-F & Capitolato\tabularnewline
+RF-33-O & UC12\tabularnewline
+RF-34-O & UC12\tabularnewline
+RF-35-O & UC13\tabularnewline
+RF-36-O & UC14\tabularnewline
+RF-36.1-O & UC14.1\tabularnewline
+RF-36.2-O & UC14.2\tabularnewline
+RQ-1-O & Capitolato\tabularnewline
+RQ-2-O & Capitolato\tabularnewline
+RQ-3-O & Capitolato\tabularnewline
+RQ-4-O & Capitolato\tabularnewline
+RQ-5-O & Capitolato\tabularnewline
+RQ-6-O & Capitolato\tabularnewline
+RQ-7-O & Capitolato\tabularnewline
+RQ-8-O & Capitolato\tabularnewline
+RQ-9-O & Capitolato\tabularnewline
+RQ-10-F & Capitolato\tabularnewline
+\end{longtable}.
+\newline
+\subsubsection{Riepilogo requisiti}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{\centering}p{0.15\textwidth} 
+		>{\centering}p{0.15\textwidth}
+		>{\centering}p{0.15\textwidth}
+		>{\centering}p{0.15\textwidth}
+		>{\centering}p{0.1\textwidth} }
+	\rowcolorhead
+	\headertitle{Tipologia} &
+	\centering \headertitle{Obbligatorio} &	
+	\centering \headertitle{Facoltativo} &	
+	\centering \headertitle{Desiderabile} &	
+	\headertitle{\normalfont \textbf{Totale}}	
+	\endfirsthead	
+	\endhead
+Funzionale & 59 & 2 & 1 & 62\tabularnewline
+Di Qualità & 9 & 1 & 0 & 10\tabularnewline
+Di Vincolo & 24 & 4 & 3 & 31\tabularnewline
+\end{longtable}.
