@@ -7,8 +7,8 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=black,
-    urlcolor=blue,
+    linkcolor=blue,
+    urlcolor=blue
 }
 \usepackage{verbatim}
 \usepackage{multicol}
@@ -42,7 +42,10 @@
 	\pagebreak
 
 	% indice
-	\tableofcontents
+    {
+        \hypersetup{linkcolor=black}
+        \tableofcontents
+    }
 	\pagebreak
 
 	% indice delle figure

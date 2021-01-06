@@ -160,6 +160,7 @@
             \pparagraph{Data e ora}
                 In ogni documento si adotta lo \href{https://www.iso.org/iso-8601-date-and-time-format.html}{Standard ISO 8601} , quindi aaaa-mm-gg (e.g.: 5 Gennaio 2021 = 2021-01-05) e hh:mm. Se si scrive il mese in caratteri questo con l'iniziale maiuscola e vale lo stesso per i giorni della settimana.
             \pparagraph{Codici di versioni}
+            \label{versions}
                 % non trovato standard ufficiale, solo https://semver.org/ ma sempre essere più per il codice e basta e comunque introduce molte complicazioni
                 Si adotta la convenzione $x.y.z$ dove x, y e z sono numeri progressivi che partono da 0, x non si azzera mai, y si azzera ad ogni incremento di x e z si azzera ad ogni incremento di y o x. Gli incrementi avvengono:
                 \begin{itemize}
@@ -180,14 +181,14 @@
     \subsubsection{Descrizione}
         Il gruppo \group ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le repo di cui necessita.
     \subsubsection{Workflow}
-        Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di git e github si trovano nella wiki \textsc{GIT, Github \& Jira}
+        Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di git e GitHub si trovano nella wiki \textsc{GIT, Github \& Jira}
         \pparagraph{Pull requests}
+            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una pull request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} via \textit{squash}.
 
-    \paragraph{singole attività...}
     \subsubsection{Strumenti}
-    ...
+        Come già detto, le repo sono tenute su GitHub, per quanto riguarda la gestione locale, ogni membro è libero di adottare lo strumento che preferisce.
 
-\subsection{Accertamento della qualità}
+\subsection{Accertamento della qualità} %todo
     \subsubsection{Scopo}
         Lo scopo del processo di ...
     \subsubsection{Aspettative}
@@ -197,7 +198,7 @@
     \subsubsection{altre sottosezioni}
         ...
 
-\subsection{Verifica}
+\subsection{Verifica} %todo
 \label{verifica}
     \subsubsection{Scopo}
         Lo scopo del processo di ...
@@ -211,7 +212,7 @@
         ...
 
 
-\subsection{Validazione}
+\subsection{Validazione} %todo
     \subsubsection{Scopo}
         Lo scopo del processo di ...
     \subsubsection{Aspettative}
