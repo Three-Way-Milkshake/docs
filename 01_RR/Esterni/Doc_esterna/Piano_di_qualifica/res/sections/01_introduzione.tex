@@ -1,27 +1,44 @@
 \section{Introduzione}
 \subsection{Scopo del documento}
-Il presente documento ha lo scopo di documentare le strategie di verifica e validazione che il gruppo \textbf{\textit{Three Way Milkshake}} ha deciso di adottare relativi al progetto \textbf{PORTACS}, per raggiungere gli obiettivi di qualità processo e prodotto.
+Il presente documento ha lo scopo di documentare le strategie di verifica e validazione che il gruppo \textit{Three Way Milkshake} ha deciso di adottare relativi al progetto \textbf{PORTACS}, per raggiungere gli obiettivi di qualità processo e prodotto.
 
 \subsection{Scopo del prodotto}
-Questo capitolato si concentra sulla realizzazione di un software che coordini lo spostamento di varie unità in una determinata griglia di movimento.
-Ogni unità (che può rappresentare un robot, un muletto o un'automobile) ha un punto di partenza nella griglia, una velocità massima e una lista di punti denominati "Points Of Interest" (POI) che deve raggiungere.\\
+Il capitolato C5 propone un progetto in cui viene richiesto lo sviluppo di un software per il monitoraggio in tempo reale di unità che si muovono in uno spazio definito. All’interno di questo spazio, creato dall’utente per riprodurre le caratteristiche di un ambiente reale, le unità dovranno essere in grado di circolare in autonomia, o sotto il controllo dell’utente, per raggiungere dei punti di interesse posti nella mappa.  La circolazione è sottoposta a vincoli di viabilità e ad ostacoli propri della topologia dell’ambiente, deve evitare le collisioni con le altre unità e prevedere la gestione di situazioni critiche nel traffico.
+\newline\newline
+Il progetto PORTACS si pone come obiettivo finale di dimostrare la fattibilità di sviluppare un software che permetta il monitoraggio in tempo reale di unità che si muovono in uno spazio per raggiungere una lista ordinata di punti d’interesse. Per facilitare lo sviluppo del progetto e dopo accordo con l'azienda, si è deciso di contestualizzare lo sviluppo ad un magazzino in cui il sistema centrale pilota i vari muletti verso le destinazioni.
 
-\subsection{Glossario}
-Nel seguente documento sono presenti termini tecnici, specifici o ambigui. Per semplificare la lettura viene fornito un glossario, reperibile nel file Glossario. I termini presenti in questo documento che verranno spiegati meglio nel Glossario vengono contrassengati dalla lettera \textbf{G} come pedice, per esempio Prova$_G$.
+\subsection{Termini, abbreviazioni}
+Tutti i termini che necessitano di una spiegazione, per fornire un’adeguata comprensione,
+o perché possono causare ambiguità nel contesto, sono definiti nel glossario alla fine del documento.
+\newline
+Ogni occorrenza di questi collega alla voce corrispondente. Analogamente vale lo
+stesso discorso per le abbreviazioni e gli acronimi. Le definizioni delle voci nel glossario e nel-
+la lista degli acronimi presentano inoltre collegamenti alle pagine dove vengono utilizzati, il
+che permette una comoda navigazione bidirezionale tra termini e significati corrispondenti.
+\newline\newline
+Le voci di glossario saranno seguite da una G pedice mentre gli acronimi da una A (e.g.: voce di glossario$_G$ ; acronimo$_A$ ). Inoltre quando si farà riferimento ad un altro documento o al documento stesso, il
+nome di questo sarà in maiuscoletto (e.g.: \textsc{esempio nome documento}).
+\pagebreak
 \subsection{Riferimenti}
 
-\subsection{Riferimenti normativi}
+\subsubsection{Normativi}
+
 \begin{itemize}
-	\item \textit{Norme di progetto v\_ 1.0.0};
-	\item Specifica tecnico-economica e organigramma: \\ \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/RO.html}}
-	\item Regolamento progetto didattico - slide del corso di Ingegneria del Software: \\ \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/P1.pdf}}
+	\item \textsc{Norme di progetto}: per qualsiasi convenzione sulla nomenclatura degli elementi presenti all’interno del documento;
+	\item Specifica tecnico-economica e organigramma: \newline  \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/RO.html}} 
+	\item Regolamento progetto didattico - slide del corso di Ingegneria del Software: \newline \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/P1.pdf}}
 \end{itemize}
-\subsection{Riferimenti informativi}
+
+\subsubsection{Informativi}
 \begin{itemize}
-	\item Slide L12 del corso Ingegneria del Software - Qualità del Software:
-	\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L12.pdf}}
-	\item Slide L13 del corso Ingegneria del Software - Qualità di Processo:
-	\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L13.pdf}}
-	\item Slide L14 del corso Ingegneria del Software - Verifica e Validazione: introduzione :
-	\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L14.pdf}}
+	\item \textsc{Glossario}: per la definizione dei termini e degli acronimi evidenziati nel documento;
+	\item Capitolato d'appalto C5-PORTACS: \newline
+	\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf}}
+	\item Software Engineering - Iam Sommerville - $10^{th}$ Edition
+\item Slide L12 del corso Ingegneria del Software - Qualità del Software:\newline
+\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L12.pdf}}
+\item Slide L13 del corso Ingegneria del Software - Qualità di Processo:\newline
+\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L13.pdf}}
+\item Slide L14 del corso Ingegneria del Software - Verifica e Validazione: introduzione :\newline
+\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L14.pdf}}
 \end{itemize}

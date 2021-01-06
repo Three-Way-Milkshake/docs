@@ -6,7 +6,8 @@
 
 \usepackage{hyperref}
 \usepackage{ulem}
-%\input{glossario.tex}
+\usepackage{listings}
+\input{glossario.tex}
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
 	\pagebreak	
@@ -22,8 +23,8 @@
 	\pagebreak
 	
 	% indice delle figure, non ci sono figure
-	%\listoffigures
-	%\pagebreak
+	\listoffigures
+	\pagebreak
 	
 	% indice delle tabelle
 	\listoftables
@@ -42,6 +43,6 @@
 	\input{res/sections/04_test.tex} % modifica questo file
 	\pagebreak
 	% ecc, aggiungere le sezioni successive creando i relativi file
-%	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
-%	\printglossary[title=Glossario dei Termini]
+	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
+	\printglossary[title=Glossario dei Termini]
 \end{document}
