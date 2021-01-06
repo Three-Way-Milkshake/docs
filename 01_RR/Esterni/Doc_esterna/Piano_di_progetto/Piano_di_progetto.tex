@@ -12,7 +12,7 @@
 \usepackage{ragged2e}
 \setlength{\columnseprule}{1pt}
 
-
+\input{glossario.tex}
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
 	\pagebreak	
@@ -56,5 +56,6 @@
 	\pagebreak
 	
 
-	
+	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
+	\printglossary[title=Glossario dei Termini]	
 \end{document}
