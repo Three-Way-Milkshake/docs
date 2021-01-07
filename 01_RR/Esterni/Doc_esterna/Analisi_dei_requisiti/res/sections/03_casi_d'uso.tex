@@ -2,7 +2,6 @@
 \subsection{Introduzione}
 Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso viene descritto attraverso diagrammi dei casi d'uso e rappresenta uno scenario di utilizzo da parte degli attori che si interfacciano con esso.
 \subsection{Attori primari}
-\subsection{UC1 - Login}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.52]{res/images/gerarchia.png}
@@ -18,7 +17,7 @@ Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso
 	\item{\textbf{Responsabile:}\\
 	Si riferisce ad un utente autenticato che si occupa di inserire la lista di POI da soddisfare.}
 	\item{\textbf{Amministratore:}\\
-	Si riferisce ad un utente autenticato che ha il compito di creare nuovi account di operatori e di modificare la planimetria o la sua percorrenza in caso di cambiamenti del magazzino.}
+	Si riferisce ad un utente autenticato che ha il compito di creare nuovi account di operatori, di modificare la planimetria o la sua percorrenza in caso di cambiamenti del magazzino e la gestione delle unità.}
 \end{itemize}
 
 \subsection{UC1 - Login}
@@ -63,7 +62,7 @@ Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso
 	\item 	\textbf{Precondizioni:}	l'amministratore intende registrare nel sistema un nuovo lavoratore assunto nell'azienda non ancora registrato nell'applicativo.
 	\item 	\textbf{Postcondizioni:} l’utente è registrato nel sistema correttamente come responsabile o operatore;
 	\item 	\textbf{Scenario principale:} l'amministratore inserisce i dati personali del lavoratore che vuole registrare nell'applicativo specificandone il ruolo che deve ricoprire all'interno del magazzino (responsabile o operatore);
-	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve compilare i dati dell'account che non deve essere presente all'interno del sistema. Il nuovo utente può essere un nuovo responsabile o un operatore.
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve compilare i dati dell'account che non devono essere presente all'interno del sistema. Il nuovo utente può essere un responsabile o un operatore.
 
 \end{itemize}
 
@@ -373,7 +372,7 @@ Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso
 	\item 	\textbf{Scenario principale:}l’amministratore dopo aver premuto il pulsante per la modifica, visualizza l’interfaccia per gestire i cambiamenti della mappa tra cui può scegliere tramite un menù a tendina se:
 	\begin{itemize}
 		\item modificare la planimetria del magazzino (UC7.2);
-		\item modificare la percorrenza del magazzino, per esempio i sensi di marcia e le corsie (UC7.3);
+		\item modificare la percorrenza del magazzino, per esempio i sensi di marcia (UC7.3);
 		\item gestire i POI (UC7.4);
 	\end{itemize}
 	e viene visualizzata l’intera mappa (UC6).
@@ -388,7 +387,7 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 	\item \textbf{Estensione}:
 	\begin{itemize}
 		\item UC7.5 - Visualizzazione messaggio d’errore operazione non permessa.
-	\end{itemize}Visualizzazione messaggio d’errore operazione non permessa.
+	\end{itemize}
 \end{itemize}
 
 
@@ -416,11 +415,11 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:}  l’amministratore è autenticato nel sistema e viene reso disponibile dal sistema l’interfaccia per la modifica della percorrenza della mappa;
 	\item 	\textbf{Postcondizioni:}la mappa è stata modificata dall’amministratore;
-	\item 	\textbf{Scenario principale:} viene visualizzata la mappa con le caratteristiche che ogni corsia ha (senso di marcia e numero massimo di unità). L’amministratore deve premere sopra la corsia che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l’amministratore conferma tramite il pulsante di salvataggio;
-	\item 	\textbf{Descrizione:} il magazzino con il passare del tempo, può apportare dei cambiamenti nella percorrenza, sarà possibile modificare:
+	\item 	\textbf{Scenario principale:} viene visualizzata la mappa con le caratteristiche che ogni area di perocrrenza ha (senso di marcia e numero massimo di unità). L’amministratore deve premere sopra la zona che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l’amministratore conferma tramite il pulsante di salvataggio;
+	\item 	\textbf{Descrizione:} il magazzino con il passare del tempo, può apportare dei cambiamenti nella percorrenza, sarà possibile modificare per ogni area:
 	\begin{itemize}
-		\item sensi unici;
-		\item numero massimo di unità nelle corsie.
+		\item i sensi unici;
+		\item il numero massimo di unità transitabili contemporaneamente.
 	\end{itemize}
 \end{itemize}
 
@@ -444,8 +443,8 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 	\end{itemize}
 	\item 	\textbf{Descrizione:} è possibile che sia necessaria la modifica dei punti di interesse nella mappa, l’amministratore ha appunto il compito di aggiungerne, modificarne o eliminarli in base alle esigenze del magazzino. Il responsabile deve tenere presente i vincoli del magazzino altrimenti non sarà permessa l’operazione:
 	\begin{itemize}
-		\item una base;
-		\item un POI di carico.
+		\item almeno una base;
+		\item almeno un POI di carico.
 	\end{itemize}
 \end{itemize}
 
@@ -459,7 +458,6 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 	\item 	\textbf{Descrizione:} l’amministratore può dover cambiare la posizione di alcuni POI già esistenti all’interno del magazzino.
 \end{itemize}
 \paragraph{UC7.4.2 - Inserimento nuovo POI}
-
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
@@ -592,7 +590,7 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l’operatore ha raggiunto e soddisfatto una task;
 	\item 	\textbf{Postcondizioni:} il sistema ha ricevuto l’avvenuto incarico e viene cancellato dalla lista di task da soddisfare completa e da quelli personali dell’operatore;
-	\item 	\textbf{Scenario principale:} l’operatore, clicca sul POI evidenziato in UC8.3 e conferma l’avvenuto scarico;
+	\item 	\textbf{Scenario principale:} l’operatore clicca sul POI evidenziato in UC8.3 e conferma l’avvenuto scarico;
 	\item 	\textbf{Descrizione:} l’operatore ha effettuato correttamente uno scarico, quindi deve segnalarlo per passare al prossimo compito da eseguire.
 
 \end{itemize}
@@ -602,7 +600,7 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l’operatore è a bordo di un muletto in cui è attiva la guida automatica;
 	\item 	\textbf{Postcondizioni:} l’operatore visualizza la direzione degli spostamenti del pilota automatico mentre è a bordo del muletto;
-	\item 	\textbf{Scenario principale:}il sistema accende le icone delle quattro frecce direzionali e dello start/stop in base agli spostamenti che intende effettuare;
+	\item 	\textbf{Scenario principale:} il sistema accende le icone delle quattro frecce direzionali e dello start/stop in base agli spostamenti che intende effettuare;
 	\item 	\textbf{Descrizione:} le unità possono essere guidati dal pilota automatico, ma l’operatore deve controllare gli spostamenti che il sistema ha intenzione di effettuare.
 
 \end{itemize}

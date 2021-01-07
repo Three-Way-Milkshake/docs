@@ -4,38 +4,6 @@
 Il progetto Portacs si pone come obiettivo finale di dimostrare la fattibilità di sviluppare un software che permetta il monitoraggio in tempo reale di unità che si muovono in uno spazio per raggiungere una lista ordinata di punti d’interesse. Per facilitare lo sviluppo del progetto e dopo accordo con l'azienda, si è deciso di contestualizzare lo sviluppo ad un magazzino in cui il sistema centrale pilota i vari muletti verso le destinazioni.
 
 \subsection{Caratteristiche del prodotto}
-Con questo progetto si vuole sviluppare un software che controlli lo spostamento di unità trasportatrici all’interno di un magazzino rappresentato tramite una mappa, nella quale vengono specificati i percorsi percorribili con annesse corsie parallele e sensi unici, e dove sono indicati i vari \textit{“Points Of Interest”} (POI\ped{G}), ovvero tutti i punti in cui è possibile scaricare le merci. 
-Il progetto si può suddividere in tre macro architetture, le cui caratteristiche sono di seguito descritte.
-\subsubsection{Unità}
-Una prima macro architettura è composta dall’insieme delle varie unità che si muovono nello spazio che rappresentano appunto i muletti all'interno del magazzino. Ognuna di queste unità dispone di un punto di partenza, di una velocità massima non superabile, e di una lista ordinata di POI\ped{G} da raggiungere, ossia un sottoinsieme di tutti i punti di scarico segnati nella mappa.
-Inoltre, ogni muletto deve inviare costantemente al sistema centrale la propria posizione, direzione e velocità.
-Essi sono guidati dal pilota automatico che decide quale direzione nello spazio fargli percorrere, però in qualsiasi momento l'operatore del mezzo può interrompere il sistema e decidere di guidare autonomamente. 
-Per essere messi in moto, c'è bisogno che il guidatore si identifichi all'interno del sistema tramite il proprio codice identificativo, così da poter visualizzare le mosse scelte dall'applicativo e la mappa del magazzino.
-Una volta che l'unità ha soddisfatto tutta la lista di POI deve ritornare al punto di partenza in cui gli verranno dati altri compiti oppure il veicolo resterà in attesa di un altro operatore.
-
-\subsubsection{Sistema}
-Il sistema centrale si occupa del coordinamento di ogni unità. Considerando la posizione, la direzione e la velocità di ognuna di esse, il sistema calcola la prossima mossa da far eseguire. Le calcola in funzione del successivo POI da raggiungere, della posizione delle altre unità nello spazio al fine di evitare le eventuali collisioni (predittività), dei vincoli dimensionali, i quali i limiti sulle corsie. Esso inoltre deve analizzare e accettare i seguenti input:
-\begin{itemize}
-	\item{\textbf{Mappa del magazzino:} }
-			\begin{itemize}
-			\item{definizione della percorrenza e relativi vincoli strutturali, quali corsie parallele o sensi unici ;}
-			\item{definizione e posizione dei possibili POI da raggiungere.}
-			\end{itemize}
-	\item{\textbf{Definizione delle N unità:}}
-			\begin{itemize}
-			\item{identificativo di sistema;} 
-			\item{velocità massima; } 
-			\item{posizione iniziale ;} 
-			\item{lista dei POI da soddisfare, già ordinata.}
-			\end{itemize}
-\end{itemize}
-
-\subsubsection{User Interface} 
-La user interface è diversa in base al ruolo del lavoratore all'interno del magazzino. Per gli operatori che guidano il muletto è disponibile la visualizzazione della mappa, i comandi per effettuare il passaggio al pilota manuale con le quattro frecce direzionali e un pulsante di start/stop per guidare la vettura e una schermata delle mosse che il sistema intende eseguire sempre identificate con i simboli delle quattro frecce direzionali e lo start/stop. 
-L'interfaccia dell'amministratore comprende la mappa e una pagina apposita per l'inserimento di nuovi utenti nella piattaforma, mentre i responsabili visualizzano sempre la mappa e la lista dei POI per selezionare quelli da aggiungere a quelli da soddisfare.
-
-
-\subsection{da tenere}
 Il dominio del software è ristretto alla gestione di unità trasportatrici (muletti) operative all’interno di un magazzino. Ogni unità è istruita di una lista di mansioni da svolgere, che prevedono il trasporto di merce da un punto di carico a uno o più punti di scarico. Ogni punto di interesse è legato ad un task da svolgere e costituisce per l’unità una tappa da raggiungere nel soddisfacimento dei propri compiti. Ogni muletto è caratterizzato dal proprio codice identificativo e sono tutti dello stesso tipo.
 La circolazione all’interno del magazzino è regolata da precisi vincoli di viabilità, deve tenere conto dell’architettura dell’ambiente e della presenza delle altre unità. 
 Il motore principale del prodotto risiede nel sistema centrale, il cui obiettivo è coordinare le unità in guida autonoma, dalle quali riceve informazioni sulla posizione e velocità, negli spostamenti necessari all’evasione dei task assegnati. L’interfaccia utente del software permetterà alle figure in carico della gestione del magazzino di riprodurre una mappa dell’ambiente, istruire il sistema dei compiti che devono essere eseguiti dalle unità e gestire il personale. Un sistema di autenticazione permetterà l’accesso degli operatori ai muletti: la guida manuale delle unità, se attivata, verrà simulata tramite un’interfaccia dedicata all’interno dell’applicazione.
@@ -43,7 +11,7 @@ Il motore principale del prodotto risiede nel sistema centrale, il cui obiettivo
 \subsubsection{Mappa}
 Il magazzino viene rappresentano nel sistema tramite una mappa, approssimata ad una matrice, in cui verranno identificati tutte le sue caratteristiche per permettere al sistema di coordinare le unità in modo autonomo.
 \begin{itemize}
-	\item \textsc{Vincoli sulla planimetria:} nella mappa viene stilizzata l'architettura dell'ambiente:
+	\item \textbf{Vincoli sulla planimetria:} nella mappa viene stilizzata l'architettura dell'ambiente:
 	\begin{itemize}
 		\item aree non transitabili: raffigurano le zone in cui non è permesso il transito delle unità, possono essere scaffali o delle pareti
 		\item zone di percorrenza: sono le aree in cui le unità possono spostarsi, ossia tutte le strade del magazzino per reggiungere i diversi POI;
@@ -54,11 +22,11 @@ Il magazzino viene rappresentano nel sistema tramite una mappa, approssimata ad 
 			\item scarico: dove vengono evasi i compiti dalle unità, ossia le merci sono scaricate.
 		\end{itemize}
 	\end{itemize}
-	\item \textsc{Vincoli di viabilità (percorrenza):} nella mappa devono essere identificati i sensi di marci e il numero massimo di unità che possono transitare per ogni zona di percorrenza.
+	\item \textbf{Vincoli di viabilità (percorrenza):} nella mappa devono essere identificati i sensi di marci e il numero massimo di unità che possono transitare per ogni zona di percorrenza.
 	
 \end{itemize}
 
 \subsection{Caratteristiche degli utenti}
-Il sistema Portacs, per scelta interna, è destinato all'utilizzo in un magazzino. In questa azienda ogni lavoratore avrà un ruolo importante all'interno del sistema: gli operatori potranno controllare le unità nel caso di guida manuale, il responsabile potrà inserire quali POI dovranno essere soddisfatti mentre l'amministratore potrà apportare modifiche alla planimetria e alla percorribilità, in base alle esigenze del magazzino.
+In questo magazzino ogni lavoratore avrà un ruolo importante all'interno del sistema: gli operatori potranno controllare le unità nel caso di guida manuale, il responsabile potrà inserire quali POI dovranno essere soddisfatti mentre l'amministratore potrà apportare modifiche alla planimetria e alla percorribilità, in base alle esigenze del magazzino.
 \subsection{Vincoli progettuali}
 Il prodotto deve soddisfare il vincolo che tutti i POI all'interno della mappa devono essere pubblici e globali, ogni unità deve quindi poter vedere tutti i punti nella mappa.
