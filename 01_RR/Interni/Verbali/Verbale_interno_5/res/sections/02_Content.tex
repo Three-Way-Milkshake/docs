@@ -1,45 +1,94 @@
 \section{Verbale della riunione}
-\subsection{Lingua dei commit}
-Come prima decisione si è affrontata la scelta della lingua con cui dovranno essere eseguiti i commit. Attraverso un sondaggio, si è deciso di utilizzare l'inglese, per essere tutti coerenti.
-
-\subsection{Glossario}
-Si è discusso il funzionamento del glossario. Ogni documento avrà il proprio glossario a cui fare riferimento. 
-Per uniformare le definizioni e gestire i conflitti, si è scelto di adottare un file condiviso su \textit{Confluence} dove verranno inseriti tutti i termini di tutti i documenti con la loro descrizione e occorrenza.
-Ogni documento avrà un file di testo (.txt) dove vi saranno i termini e gli acronimi riscontrati nella stesure. Le parole dovranno essere definite secondo la seguente sintassi:
+\subsection{Controllo e discussione avanzamento vari documenti}
+Come prima discussione si è controllato l'avanzamento dei vari documenti, con tutti i documenti a buon punto e da finire con scadenza 7-1-2021.\\
+In particolare:
 \begin{itemize}
-\item \textbf{termini:}
-	\\ \texttt{ G:key:nome singolare:nome plurale:descrizione}
-	\\ esempio: \texttt{G:analisirequisiti:Analisi dei Requisiti:l'analisi dei requisiti è quel documento..}
-\item \textbf{acronimi:}
-	\\ 	\texttt{A:key:nome lungo:descrizione} 
-	\\ esempio: \texttt{A:pdp:PdP:Piano di Progetto}
-\end{itemize}
-Nel file \LaTeX\ del documento basterà scrivere il termine interessato. Uno script troverà le occorrenze dei nomi all'interno del documento e li sostituirà con \texttt{\textbackslash gls\{chiave\}} , così una volta compilato nel pdf il termine risulterà sottolineato e con una \textit{G} a pedice.
-La chiave deve essere univoca per ogni nome e abbreviazione.
-
-\subsection{Convenzione scrittura}
-Si è deciso che convenzioni di scrittura utilizzare durante la stesura dei documenti così da ottenere una coerenza:
-\begin{itemize}
-\item Three Way Milkshake, Way of Working, nome delle fasi: le iniziali vanno in maiuscolo;
-\item PORTACS: tutto in maiuscolo;
-\item nomi dei documenti: scritte in maiuscoletto e con le iniziali in maiuscolo \texttt{\textbackslash textsc{....}} \\esempio: \textsc{Analisi dei Requisiti}
-\item nomi dei ruoli: iniziale maiuscola 
-\\esempio: Analista
-\item Software/tecnologie: in corsivo 
-\\esempio: \textit{GitHub}
-\item voci del glossario: sottolineato con G a pedice.
+	\item \textsc{Piano Di Progetto :} Correggere la fase di codifica dei requisiti desiderabili in desiderabili+opzionali;
+	\item \textsc{Piano di Qualifica :} Manca solo la sezione dei test.
+	\item \textsc{Analisi dei Requisiti :} In progress;
+	\item \textsc{Norme di Progetto :} In progress.
 \end{itemize}
 
-\subsection{Casi d'uso}
-Si sono letti e corretti i casi d'uso scritti degli Analisti. I problemi riscontrati sono:
+\subsection{Compilazione e discussione della tabella sul consuntivo dei costi}
+Si è discussa la sezione Consuntivo del \textsc{Piano di Progetto}, in particolare ogni membro ha compilato la tabella, e ci si è consultati sulla divisione delle ore e dei costi tra i vari membri.
+
+\subsection{Discussione sui ruoli per frontespizio e registro delle modifiche}
+Si sono decisi i ruoli di frontespizio e registro delle modifiche dei vari documenti; sono 3 ruoli e corrispondono.\\\newline Questi sono i ruoli su ci siamo accordati:
 \begin{itemize}
-	\item la formalizzazione del problema di avere carichi multipli per lo stesso POI;
-	\item la segnalazione di un'emergenza direttamente all'amministratore.
+	\item \textbf{Redattori:} Aggiungono contenuto al documento, non possono essere anche verificatori del documento;
+	\item \textbf{Verificatori:} Verificano le sezioni e apportano modifiche ove necessario;
+	\item \textbf{Approvatore / Responsabile di Progetto :} Approva il documento prima della pubblicazione in spazio, è il \textit{responsabile di progetto} nel registro delle modifiche, mentre è l'\textit{approvatore} nel frontespizio.
 \end{itemize}
-Entrambi i problemi sono stati risolti durante la discussione.
-
-\subsection{Requisiti}
-In un file condiviso si è discusso quali possano essere i requisiti all'interno del capitolato. Dopo averli elencati, sono stati divisi per il tipo: di vincolo, funzionali, di qualità e prestazionali. Successivamente sono stati divisi i casi d'uso con i membri del gruppo così che ognuno trovi i requisiti che ne derivano. Verranno poi riscritti e sistemati dai Redattori dell'\textsc{Analisi dei Requisiti}.
-
-\subsection{Algoritmo adottato dal sistema centrale}
-Si è deciso di trascrivere in generale l'algoritmo che dovrà essere adottato dal sistema centrale così da avere più presente il problema che si sta affrontando. Questo dovrà essere presente in una sottosezione dell'\textsc{Analisi dei requisiti}. 
+\pagebreak
+\subsection{Decisione numerazione della versione dei documenti}
+Per la numerazione della versione, si è deciso di adottare la convenzione \textit{x.y.z}.\\
+\begin{itemize}
+	\item \textbf{{per x:}} Incrementato dal responsabile a seguito di un’approvazione importante, non si azzera mai;
+	\item \textbf{{per y:}} Incrementato a seguito di un insieme discreto di modifiche, si azzera ad ogni incremento di x;
+	\item \textbf{{per z:}} Incrementato per ogni modifica o verifica minore.
+\end{itemize}
+\subsection{Discussione su rischi e sottoprocessi da aggiungere nelle norme di progetto}
+Si è discusso sulle integrazioni da fare nel documento \textsc{Norme di Progetto}, in particolare:
+\begin{itemize}
+	\item Discussione sull'aggiunta nella sezione Processi di Supporto, dei sottoprocessi di qualità, verifica e validazione;
+	\item Discussione sull'aggiunta nella sezione Processi Organizzativi (sottosezione Miglioramento), dei rischi:
+	\begin{itemize}
+		\item Rischi Tecnologici RIS$\_$T-1;
+		\item Rischi Organizzativi RIS$\_$O-1;
+		\item Rischi Interpersonali RIS$\_$O-1.
+	\end{itemize}
+\end{itemize}
+\pagebreak
+\subsection{Divisione verificatori e approvatori}
+Si è decisa la suddivisione di verificatori, per documento.\\
+\textbf{Verbali interni(5) :}
+\begin{enumerate}
+	\item Nicolò Greggio;
+	\item Giada Zuccolo;
+	\item Sofia Chiarello;
+	\item Alberto Crivellari;
+	\item Andrea Tessari.
+\end{enumerate}
+\textbf{Verbali esterni(2) :}
+\begin{enumerate}
+	\item Simone De Renzis;
+	\item Simone De Renzis.
+\end{enumerate}
+\textbf{Studio di fattibilità(7 capitolati) :}
+\begin{enumerate}
+	\item Sofia Chiarello;
+	\item Simone De Renzis;
+	\item Andrea Tessari;
+	\item Alberto Crivellari;
+	\item Giada Zuccolo;
+	\item Nicolò Greggio;
+	\item Alberto Crivellari.
+\end{enumerate}
+\textbf{\textsc{Piano di Progetto :}}
+\begin{itemize}
+	\item Sofia Chiarello.
+\end{itemize}
+\textbf{\textsc{Analisi dei Requisiti :}}
+\begin{itemize}
+	\item Simone De Renzis;
+	\item Andrea Tessari.
+\end{itemize}
+\textbf{\textsc{Norme di Progetto :}}
+\begin{itemize}
+	\item Alberto Crivellari;
+	\item Giada Zuccolo.
+\end{itemize}
+\textbf{\textsc{Piano di Qualifica :}}
+\begin{itemize}
+	\item Nicolò Greggio.
+\end{itemize}
+\textbf{\textsc{Glossario :}}
+\begin{itemize}
+	\item Nicolò Greggio;
+	\item Simone De Renzis.
+\end{itemize}
+\textbf{Responsabili approvatori :}
+\begin{itemize}
+	\item Nicolò Greggio;
+	\item Simone De Renzis.
+\end{itemize}
