@@ -1,5 +1,16 @@
 #!/bin/bash
 
+#install extra latex packages
+if [ $# -gt 0 ]
+then
+	if [ $1 == "--install-custom" ]
+	then
+		sudo cp -rv extra_latex_packages/pgfplots /usr/share/texlive/texmf-dist/tex/latex
+		sudo cp -rv extra_latex_packages/pgf-pie /usr/share/texlive/texmf-dist/tex/latex
+		sudo mktexlsr
+	fi
+fi
+
 cd ../../
 
 for doc in `find . -name glossario.txt`
