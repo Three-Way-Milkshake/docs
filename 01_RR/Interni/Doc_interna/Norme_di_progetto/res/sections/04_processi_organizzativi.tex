@@ -1,7 +1,7 @@
 \section{Processi Organizzativi}
 \label{organizzativi}
 
-% ruoli di progetto, gestione degli incontri, gestione degli strumenti di coordinamento e di versionamento, gestione dei rischi, gestione della formazione individuale
+%  gestione degli incontri, gestione dei rischi, gestione della formazione individuale
 
 \subsection{Gestione dei processi}
     \subsubsection{Scopo}
@@ -19,19 +19,22 @@
         \item progetto Jira con board condivisa per l'organizzazione, gestione e tracciamento dei compiti.
     \end{itemize}
         \pparagraph{Jira}
+        Il gruppo adotta \href{https://www.atlassian.com/software/jira}{Jira} per la gestione dei compiti, così da avere:
+        \begin{itemize}
+            \item cruscotto di lavoro che mostri lo stato di ogni compito:
+                \subitem -- ogni task ha diversi campi oltre al nome (descrizione, data di scadenza, assegnatari, eventuali sottotask), comprende una sezione \textit{history} che raccoglie tutte le modifiche avvenute sulla stessa, una sezione \textit{comments} che raccoglie commenti apportati manualmente o automaticamente importati dagli \textit{smart commits} ed una sezione per il tracciamento del tempo, nel quale si può impostare un tempo stimato e tracciare quello effettivo mano a mano che si prosegue;
+            \item integrazione con Confluence, essendo entrambi prodotti di \href{https://www.atlassian.com/}{Atlassian};
+            \item automazioni per azioni con gli \textit{smart commits};
+            \item automazioni di notifiche su Slack.
+        \end{itemize}
         Come spiegato nella sezione \hyperref[jiraintegration]{Integrazione con Jira}, è stato configurato un processo automatico di collegamento fra \gls{gitcommit}\textsubscript{G} su GitHub e task in Jira. Inoltre ad ogni azione, manuale o automatica, su Jira, viene generata una notifica nel canale dedicato di Slack.
-        \pparagraph{workflow}
+        \pparagraph{Workflow dei compiti}
         \begin{figure}[H]
             \centering
             \includegraphics[scale=0.32]{res/images/jira_workflow.png}
             \caption{Diagramma degli stati e delle transizioni del workflow}
         \end{figure}
             Come si può vedere dall'immagine, il workflow di task e sottotask è stato configurato di modo che ci siano delle precise transizioni da uno stato all'altro e che solo quelle siano permesse. I nomi delle transizioni sulle frecce corrispondono ai comandi da usare nella sintassi degli smart \glspl{gitcommit}\textsubscript{G}. Maggiori dettagli si trovano nella \gls{wiki}\textsubscript{G} \textsc{Git, Github \& Jira}.
-
-    \subsubsection{altre sottosezioni}
-    ...
-    \subsubsection{Strumenti}
-    ...
 
 \subsection{I ruoli di progetto}
     La suddivisione in ruoli è necessaria per favorire la parallelizzazione e distribuzione del lavoro e delle responsabilità.
@@ -48,7 +51,7 @@
     \subsubsection{Amministratore}
     Ha in carico la definizione, modifica ed agevolazione del way of working. È un percorso in logica \acrshort{jit}\textsubscript{A} procede per incrementi. È responsabile dell'efficacia e dell'efficienza nell'ambiente di lavoro, gestisce la documentazione, organizza il glossario, collabora alla redazione del \textsc{Piano di Progetto} e redige le \textsc{Norme di Progetto}.
 
-\subsection{Infrastruttura} %todo
+\subsection{Comunicazione} %todo
     \subsubsection{Scopo}
     Lo scopo del processo di ...
     \subsubsection{Aspettative}
@@ -60,7 +63,7 @@
     \subsubsection{Strumenti}
     ...
 
-\subsection{Miglioramento} %todo
+\subsection{Rischi} %todo
     \subsubsection{Scopo}
     Lo scopo del processo di ...
     \subsubsection{Aspettative}

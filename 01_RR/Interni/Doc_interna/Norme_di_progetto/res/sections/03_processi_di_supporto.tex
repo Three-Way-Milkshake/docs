@@ -24,7 +24,17 @@
     Ogni documento formale si redige ed incrementa tramite queste attività:
     \begin{itemize}
         \item \textbf{stesura: }la scrittura del documento in sé, riguarda sia la creazione di nuove parti che l'aggiornamento di queste. Uno o più redattori si occupano di ciò;
-        \item \textbf{verifica: }eseguita da uno o più verificatori, necessariamente diversi dai redattori, consiste nel controllo della correttezza sintattica, semantica, grammaticale ed ortografica e della conformità del documento rispetto alle suo scopo. Nel caso in cui si rendano necessarie modifiche sostanziali, i verificatori notificheranno il responsabile che provvederà a riportare il documento in stesura e solleciterà i redattori affinché apportino le correzioni richieste;
+        \item \textbf{verifica: }eseguita da uno o più verificatori, necessariamente diversi dai redattori, consiste nel controllo della correttezza sintattica, semantica, grammaticale ed ortografica e della conformità del documento rispetto alle suo scopo. Nel caso in cui si rendano necessarie modifiche sostanziali, i verificatori \hyperref[risoluzioneproblemi]{notificheranno il responsabile} che provvederà a riportare il documento in stesura e solleciterà i redattori affinché apportino le correzioni richieste. I verificatori sono autorizzati ad apportare piccole modifiche correttive quali:
+        \begin{itemize}
+            \item correzione di errori:
+                \begin{itemize}
+                    \item sintattici;
+                    \item ortografici;
+                    \item grammaticali;
+                \end{itemize}
+
+            \item riformulazione di frasi per dare aspetto più formale e consistente nel caso non sia già sufficiente;
+        \end{itemize}
         \item \textbf{approvazione: }quando i verificatori riporteranno la completa correttezza ed aderenza ai requisiti del documento, il responsabile provvederà all'approvazione finale ed al rilascio di una nuova versione dello stesso.
     \end{itemize}
     Adottando un approccio incrementale, queste attività possono ripetersi.
@@ -168,6 +178,7 @@
         \item \textbf{per y: }quando viene apportato un insieme discreto di modifiche;
         \item \textbf{per z: }per ogni modifica o verifica minore.
     \end{itemize}
+    Nel caso si voglia specificare la versione nel nome di un file, per esempio per condivisioni esterne al gruppo, la nomenclatura dovrà essere: $$\text{[nome\_file]\_\_v[x.y.z].[estensione]}$$ $$\text{(e.g.: norme\_di\_progetto\_\_v1.0.3.tex)}$$
 
     \subsubsection{Strumenti}
     Come già citato, per la scrittura dei documenti formali si usa \LaTeX\footnote{https://www.latex-project.org/} e come editor non c'è una preferenza assoluta, ma si consigliano \href{http://www.texstudio.org/}{TexStudio} o \href{https://www.xm1math.net/texmaker/}{TexMaker}. Per quanto riguarda i documenti informali invece, \href{https://www.atlassian.com/software/confluence}{Confluence} può essere usato in qualunque browser.
@@ -199,9 +210,9 @@
     \subsubsection{Aspettative}
     Identificazione, segnalazione e risoluzione dei problemi devono avvenire in maniera standardizzata all'interno del gruppo così che tutto il processo possa essere svolto nei tempi più brevi possibili.
     \subsubsection{Descrizione}
-    Quando un verificatore riscontra dei problemi, tramite il meccanismo degli \hyperref[jiraintegration]{\textit{smart commits}}, riporta la task o sottotask relativa al problema individuato nello stato \textit{in progress} ed aggiunge un commento che indica i problemi riscontrati. Nel caso sia necessario aggiungere più informazioni, il verificatore si può recare nella board ed aggiungere ulteriori commenti. Il verificatore viene quindi sollevato automaticamente dal compito, il responsabile controlla il problema segnalato, se necessario imposta una priorità diversa da \textit{medium}, aggiunge eventuali commenti o descrizioni e riassegna la task ad un altro membro. Il responsabile può sfruttare le sezioni \textit{history} e \textit{comments} di ogni task per controllare chi ha lavorato in passato a quel compito di modo da facilitare la scelta di assegnazione.
+    Quando un verificatore riscontra dei problemi o degli errori, aggiunge dei commenti che iniziano con "TODO", così da facilitare la ricerca poi, che indichino brevemente i problema individuati e, tramite il meccanismo degli \hyperref[jiraintegration]{\textit{smart commits}}, riporta la task o sottotask relativa nello stato \textit{in progress} ed aggiunge un commento che riassuntivo. Nel caso sia necessario aggiungere più informazioni, il verificatore si può recare nella board ed aggiungere ulteriori commenti. Il verificatore viene quindi sollevato automaticamente dal compito, il responsabile controlla il problema segnalato, se necessario imposta una priorità diversa da \textit{medium}, aggiunge eventuali commenti o descrizioni e riassegna la task ad un altro membro. Il responsabile può sfruttare le sezioni \textit{history} e \textit{comments} di ogni task per controllare chi ha lavorato in passato a quel compito di modo da facilitare la scelta di assegnazione.
 
-\subsection{Accertamento della qualità} %todo
+\subsection{Accertamento della qualità} %todo from PdQ
     \subsubsection{Scopo}
     Lo scopo del processo di ...
     \subsubsection{Aspettative}
@@ -211,7 +222,7 @@
     \subsubsection{altre sottosezioni}
     ...
 
-\subsection{Verifica} %todo
+\subsection{Verifica} %todo from PdQ
     \label{verifica}
     \subsubsection{Scopo}
     Lo scopo del processo di ...
@@ -224,7 +235,7 @@
     \subsubsection{Strumenti}
     ...
 
-\subsection{Validazione} %todo
+\subsection{Validazione} %todo from PdQ
     \subsubsection{Scopo}
     Lo scopo del processo di ...
     \subsubsection{Aspettative}
