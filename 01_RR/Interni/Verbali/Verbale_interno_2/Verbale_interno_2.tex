@@ -1,4 +1,5 @@
 \documentclass[a4paper]{article}
+\usepackage[normalem]{ulem}
 % scrartcl
 % impostazioni generali
 \input{../../../../latex/package.tex}
@@ -23,6 +24,8 @@
 % Indice
 \tableofcontents
 \pagebreak
+\InputIfFileExists{../../../verbali_sezioni_condivise/00_sezioni_condivise.tex}{}{}\pagebreak
+
 
 % Informazioni generali
 \input{res/sections/01_Introduction.tex}
