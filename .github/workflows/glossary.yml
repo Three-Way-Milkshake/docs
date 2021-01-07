@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: install latex
-        run: sudo apt install texlive texlive-latex-extra texlive-lang-italian
+        run: sudo apt install texlive texlive-latex-extra texlive-lang-italian texlive-pictures
         #run: sudo apt install --fix-missing ; sudo apt install texlive xzdec ; sudo apt install --fix-missing ; tlmgr init-usertree ; tlmgr update --self ; tlmgr install glossaries ; echo 0
 
       - name: Execute the glossary script
