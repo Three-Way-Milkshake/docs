@@ -13,13 +13,13 @@ Il magazzino viene rappresentano nel sistema tramite una mappa, approssimata ad 
 \begin{itemize}
 	\item \textbf{Vincoli sulla \gls{planimetria}\textsubscript{G}:} nella mappa viene stilizzata l'architettura dell'ambiente:
 	\begin{itemize}
-		\item aree non transitabili: raffigurano le zone in cui non è permesso il transito delle unità, possono essere scaffali o delle pareti
+		\item aree non transitabili: raffigurano le zone in cui non è permesso il transito delle unità, possono essere scaffali o delle pareti;
 		\item zone di \gls{percorrenza}\textsubscript{G}: sono le aree in cui le unità possono spostarsi, ossia tutte le strade del magazzino per reggiungere i diversi POI;
 		\item \acrshort{POI}\textsubscript{A}: i punti di interesse possono essere di tre tipi:
 		\begin{itemize}
-			\item base: rappresenta il punto dove ogni unità deve recarsi quando finisce il proprio lavoro e un altro lavoratore deve farsene carico.
-			\item carico: luogo dove vengono caricati i vari muletti con le merci necessarie prima di soddisfare i propri \gls{task}\textsubscript{G}.
-			\item scarico: dove vengono evasi i compiti dalle unità, ossia le merci sono scaricate.
+			\item base: rappresenta il punto dove ogni unità deve recarsi quando finisce il proprio lavoro e un altro lavoratore deve farsene carico;
+			\item carico: luogo dove vengono caricati i vari muletti con le merci necessarie prima di soddisfare i propri \gls{task}\textsubscript{G};
+			\item scarico: dove vengono evasi i compiti dalle unità, ossia dove le merci sono scaricate.
 		\end{itemize}
 	\end{itemize}
 	\item \textbf{Vincoli di viabilità (percorrenza):} nella mappa devono essere identificati i sensi di marci e il numero massimo di unità che possono transitare per ogni zona di \gls{percorrenza}\textsubscript{G}.
@@ -27,6 +27,6 @@ Il magazzino viene rappresentano nel sistema tramite una mappa, approssimata ad 
 \end{itemize}
 
 \subsection{Caratteristiche degli utenti}
-In questo magazzino ogni lavoratore avrà un ruolo importante all'interno del sistema: gli operatori potranno controllare le unità nel caso di guida manuale, il responsabile potrà inserire quali \acrshort{POI}\textsubscript{A} dovranno essere soddisfatti mentre l'amministratore potrà apportare modifiche alla \gls{planimetria}\textsubscript{G} e alla percorribilità, in base alle esigenze del magazzino.
+In questo magazzino ogni lavoratore avrà un ruolo importante all'interno del sistema: gli operatori potranno controllare le unità nel caso di guida manuale, il responsabile potrà inserire quali \acrshort{POI}\textsubscript{A} dovranno essere soddisfatti mentre l'amministratore potrà apportare modifiche alla \gls{planimetria}\textsubscript{G} e alla percorribilità, in base alle esigenze.
 \subsection{Vincoli progettuali}
 Il prodotto deve soddisfare il vincolo che tutti i \acrshort{POI}\textsubscript{A} all'interno della mappa devono essere pubblici e globali, ogni unità deve quindi poter vedere tutti i punti nella mappa.

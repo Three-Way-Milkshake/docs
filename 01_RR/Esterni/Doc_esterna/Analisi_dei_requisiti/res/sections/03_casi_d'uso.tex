@@ -208,9 +208,9 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 	\item 	\textbf{Scenario principale:} il responsabile effettua le operazioni necessarie per la gestione della lista delle \gls{task}\textsubscript{G} che verranno assegnate dal sistema alle unità, esse possono essere:
 	\begin{itemize}
 		\item l’inserimento di una nuova \gls{task}\textsubscript{G} (UC4.1) con la relativa priorità (UC4.2) e il \acrshort{POI}\textsubscript{A} a cui fa riferimento, in cui bisogna scaricare la merce (UC4.3);
-		\item la conferma dell’inserimento della nuova \gls{task}\textsubscript{G} (UC4.3);
-		\item l’eliminazione di una \gls{task}\textsubscript{G} dalla lista (UC4.4);
-		\item la modifica della priorità di una \gls{task}\textsubscript{G} esistente (UC4.5);
+		\item la conferma dell’inserimento della nuova \gls{task}\textsubscript{G} (UC4.4);
+		\item l’eliminazione di una \gls{task}\textsubscript{G} dalla lista (UC4.5);
+		\item la modifica della priorità di una \gls{task}\textsubscript{G} esistente (UC4.6);
 	\end{itemize}
 	\item 	\textbf{Descrizione:} lo scarico delle merci in un determinato punto di interesse viene chiamato \gls{task}\textsubscript{G}. Il responsabile deve inserire nel sistema quali \gls{task}\textsubscript{G} devono essere completate e con quale priorità. L’applicativo riceve le informazioni, le ordina e le affida alle unità in base alle esigenze. 
 
@@ -220,10 +220,10 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:}è resa disponibile l’interfaccia per l’inserimento di una nuova task;
+	\item 	\textbf{Precondizioni:} è resa disponibile l’interfaccia per l’inserimento di una nuova task;
 	\item 	\textbf{Postcondizioni:} il responsabile ha aggiunto con successo la \gls{task}\textsubscript{G} alla lista. Il sistema assegnerà la nuova \gls{task}\textsubscript{G} a un muletto la quale la visualizzerà nella propria lista di compiti (UC8);
 	\item 	\textbf{Scenario principale:} il responsabile preme l’apposito pulsante per l’aggiunta di una nuova task; 
-	\item 	\textbf{Descrizione:} il responsabile inserisce nella lista dei \acrshort{POI}\textsubscript{A} da soddisfare dagli operatore un nuovo POI;
+	\item 	\textbf{Descrizione:} il responsabile inserisce una nuovo compito da eseguire nella lista di task;
 	\item 	\textbf{Inclusioni:}
 	\begin{itemize}
 		\item UC4.2 Inserimento priorità;
@@ -276,7 +276,7 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 	\item 	\textbf{Attori primari:} responsabile;
 	\item 	\textbf{Precondizioni:} il responsabile sta visualizzando la lista di task(UC13);
 	\item 	\textbf{Postcondizioni:} il responsabile ha eliminato una \gls{task}\textsubscript{G} dalla lista;
-	\item 	\textbf{Scenario principale:} il responsabile seleziona dalla lista delIe \gls{task}\textsubscript{G} quella che intende eliminare e procede alla cancellazione premendo l’apposito pulsante;
+	\item 	\textbf{Scenario principale:} il responsabile seleziona dalla lista delle \gls{task}\textsubscript{G} quella che intende eliminare e procede alla cancellazione premendo l’apposito pulsante;
 	\item 	\textbf{Descrizione:} il responsabile si accorge che non è più necessario lo svolgimento di un compito, quindi lo elimina dalla lista delle \gls{task}\textsubscript{G}.
 
 \end{itemize}
@@ -295,7 +295,7 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 \begin{itemize}
 	\item 	\textbf{Attori primari:} utente autenticato;
 	\item 	\textbf{Precondizioni:} l’utente si trova in base e quindi può premere sul bottone che gli permette di fare il logout all’applicativo;
-	\item 	\textbf{Postcondizioni:} utente viene disconnesso dal sistema;
+	\item 	\textbf{Postcondizioni:} l'utente viene disconnesso dal sistema;
 	\item 	\textbf{Scenario principale:} utente autenticato richiede il logout;
 	\item 	\textbf{Descrizione:} l’utente vuole effettuare il logout dall’applicativo:
 	\begin{itemize}
@@ -316,11 +316,11 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
 	\item 	\textbf{Precondizioni:} gli \glspl{attore}\textsubscript{G} sono autenticati nel sistema;
-	\item 	\textbf{Postcondizioni:} gli \glspl{attore}\textsubscript{G} visualizzano la mappa del magazzino.
+	\item 	\textbf{Postcondizioni:} gli \glspl{attore}\textsubscript{G} visualizzano la mappa del magazzino;
 	\item 	\textbf{Scenario principale:} il responsabile e l’amministratore, una volta autenticati, visualizzano la mappa completa del magazzino;
 	\item 	\textbf{Descrizione:}il responsabile e l’amministratore, per portare al termine i loro compiti, devono visualizzare la mappa del magazzino. Gli elementi della mappa sono:
 	\begin{itemize}
-		\item \acrshort{POI}\textsubscript{A} di carico; punto in cui i muletti prelevano il carico da scaricare per soddisfare la propria lista di \gls{task}\textsubscript{G}. Ogni volta che completano la loro lista di compiti (ma non hanno finito il turno), devono tornare il questo punto;
+		\item \acrshort{POI}\textsubscript{A} di carico;  punto in cui i muletti prelevano il carico da scaricare per soddisfare la propria lista di \gls{task}\textsubscript{G}. Ogni volta che completano la loro lista di compiti (ma non hanno finito il turno), devono tornare il questo punto;
 		\item \acrshort{POI}\textsubscript{A} di scarico; punti in cui i muletti devono scaricare la merce prelevata. Sono i luoghi che fanno riferimento le task;
 		\item \acrshort{POI}\textsubscript{A} di sosta; punto in cui gli operatori partono con il proprio muletto a inizio turno e arrivano alla fine del turno.
 		\item zona di percorrenza; sono le strade in cui i muletti possono transitare, hanno delle loro caratteristiche:
@@ -415,7 +415,7 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:}  l’amministratore è autenticato nel sistema e viene reso disponibile dal sistema l’interfaccia per la modifica della \gls{percorrenza}\textsubscript{G} della mappa;
 	\item 	\textbf{Postcondizioni:}la mappa è stata modificata dall’amministratore;
-	\item 	\textbf{Scenario principale:} viene visualizzata la mappa con le caratteristiche che ogni area di perocrrenza ha (senso di marcia e numero massimo di unità). L’amministratore deve premere sopra la zona che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l’amministratore conferma tramite il pulsante di salvataggio;
+	\item 	\textbf{Scenario principale:} viene visualizzata la mappa con le caratteristiche che ogni area di percorrenza ha (senso di marcia e numero massimo di unità). L’amministratore deve premere sopra la zona che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l’amministratore conferma tramite il pulsante di salvataggio;
 	\item 	\textbf{Descrizione:} il magazzino con il passare del tempo, può apportare dei cambiamenti nella \gls{percorrenza}\textsubscript{G}, sarà possibile modificare per ogni area:
 	\begin{itemize}
 		\item i sensi unici;
@@ -610,7 +610,7 @@ Terminata la modifica, l’amministratore salva tramite l’apposito pulsante di
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.52]{res/images/uc11.png}
-	\caption{UC11 - Gestione guida}
+	\caption{ UC11 - Gestione guida}
 \end{figure}
 
 \begin{itemize}
