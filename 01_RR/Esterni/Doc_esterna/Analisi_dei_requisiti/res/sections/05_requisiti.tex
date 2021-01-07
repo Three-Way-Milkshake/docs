@@ -6,13 +6,13 @@ In questa sezione vengono riportati i requisiti, strutturati secondo la loro cla
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{ 
-		>{\centering}p{0.11\textwidth} 
-		>{}p{0.6075\textwidth}
-		>{\centering \it}p{0.16\textwidth} }
+		>{}p{0.135\textwidth} 
+		>{}p{0.5425\textwidth}
+		>{}p{0.2\textwidth} }
 	\rowcolorhead
-	\headertitle{Codice} &
+	\centering \headertitle{Codice} &
 	\centering \headertitle{Descrizione} &	
-	\headertitle{\normalfont \textbf{Fonte}}	
+	\centering \headertitle{\normalfont \textbf{Fonte}}	
 	\endfirsthead	
 	\endhead
 RF-1-O & Un utente deve effettuare il login alla piattaforma tramite il suo codice identificativo & UC1\tabularnewline
@@ -62,12 +62,12 @@ RF-23-O & L’operatore segnala al sistema la conclusione dell’incarico attrav
 RF-24-O & La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che indicano il suggerimento del sistema & UC10\tabularnewline
 RF-24.1-O & Il sistema permette all’operatore la visualizzazione di direzione e spostamento del muletto a cui è a bordo, in caso in cui nel muletto sia attiva la guida automatica & UC10\tabularnewline
 RF-25-O & Nella user interface è presente un pulsante che permette di passare dalla guida manuale alla guida autonoma dell’unità & UC11.1\tabularnewline
-RF-25.1-O & La User Interface del controllo manuale permette di passare alla guida autonoma & UC11.1,\textsc{verbale esterno 1}\tabularnewline
+RF-25.1-O & La User Interface del controllo manuale permette di passare alla guida autonoma & UC11.1,\newline \textsc{verbale esterno 1}\tabularnewline
 RF-26-O & Nella user interface è presente un pulsante che permette di passare dalla guida autonoma alla guida manuale dell’unità & UC11.2\tabularnewline
-RF-26.1-O & La User Interface del controllo automatico permette di passare alla guida manuale & UC11.2, \textsc{verbale esterno 1}\tabularnewline
+RF-26.1-O & La User Interface del controllo automatico permette di passare alla guida manuale & UC11.2,\newline \textsc{verbale esterno 1}\tabularnewline
 RF-27-O & Nella user interface è presente un pulsante che permette di segnalare al server un evento eccezionale & UC11.3\tabularnewline
 RF-28-O & Nella user interface comparirà  un pulsante per il ritorno alla base dell’unità se l'operatore avrà concluso tutte le task assegnategli e la guida sarà impostata ad autonoma  & UC11.5\tabularnewline
-RF-29-O & La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che permettono gli spostamenti manuali ed i pulsanti di start/stop & UC11.4, \textsc{verbale esterno 1}\tabularnewline
+RF-29-O & La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che permettono gli spostamenti manuali ed i pulsanti di start/stop & UC11.4, \newline \textsc{verbale esterno 1}\tabularnewline
 RF-30-D & Il pannello permette di visualizzare l’indicatore di velocità attuale (che avrà come massimo la velocità massima anagrafica) & Capitolato\tabularnewline
 RF-31-O & Il sistema centrale pilota e coordina tutte le unità per evitare incidenti e ingorghi & Capitolato\tabularnewline
 RF-32-F & il sistema fornisce il percorso migliore ad ogni unità tramite algoritmi di ricerca operativa & Capitolato\tabularnewline
@@ -77,6 +77,7 @@ RF-35-O & Il responsabile ha a disposizione un pulsante per poter vedere una lis
 RF-36-O & L'amministratore ha a disposizione un'interfaccia su cui può gestire le unità & UC14\tabularnewline
 RF-36.1-O & L'amministratore può aggiungere una nuova unità & UC14.1\tabularnewline
 RF-36.2-O & L'amministratore può eliminare un'unità & UC14.2\tabularnewline
+\caption{Tabella Requisiti Funzionali\label{ Tabella Requisiti Funzionali}}\\
 \end{longtable}.
 \newline 
 \subsection{Requisiti prestazionali}
@@ -86,13 +87,13 @@ In questo progetto non sono stati rilevati alcuni requisiti prestazionali per qu
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{ 
-		>{\centering}p{0.11\textwidth} 
-		>{}p{0.6075\textwidth}
-		>{\centering \it}p{0.16\textwidth} }
+		>{}p{0.135\textwidth} 
+		>{}p{0.5425\textwidth}
+		>{}p{0.2\textwidth} }
 	\rowcolorhead
-	\headertitle{Codice} &
+	\centering\headertitle{Codice} &
 	\centering \headertitle{Descrizione} &	
-	\headertitle{\normalfont \textbf{Fonte}}	
+	\centering \headertitle{\normalfont \textbf{Fonte}}	
 	\endfirsthead	
 	\endhead
 RQ-1-O & Diagrammi UML relativi agli use cases di progetto & Capitolato\tabularnewline
@@ -101,23 +102,24 @@ RQ-3-O & Documentazione delle API che saranno realizzate & Capitolato\tabularnew
 RQ-4-O & Lista dei bug risolti durante la fase di sviluppo & Capitolato\tabularnewline
 RQ-5-O & Codice prodotto in formato sorgente utilizzando sistemi di versionamento del codice, quali Github o Bitbucket & Capitolato\tabularnewline
 RQ-6-O & Codice sorgente di quanto realizzato & Capitolato\tabularnewline
-RQ-7-O & Docker file ("\#"1) con la componente applicativa, rappresentante il motore di calcolo & Capitolato\tabularnewline 
-RQ-8-O & Docker file ("\#"2) con la componente applicativa rappresentante il visualizzatore/monitor real-time (in base all’implementazione, potrebbe essere incorporato nel "\#"1) & Capitolato\tabularnewline
-RQ-9-O & Docker file ("\#"3), da istanziare N volte, rappresentante la singola unità & Capitolato\tabularnewline
-RQ-10-F & Docker file ("\#"4), da istanziare N volte, rappresentante il singolo pedone & Capitolato\tabularnewline 
+RQ-7-O & Docker file (\#1) con la componente applicativa, rappresentante il motore di calcolo & Capitolato\tabularnewline 
+RQ-8-O & Docker file (\#2) con la componente applicativa rappresentante il visualizzatore/monitor real-time (in base all'implementazione, potrebbe essere incorporato nel \#1) & Capitolato\tabularnewline
+RQ-9-O & Docker file (\#3), da istanziare N volte, rappresentante la singola unità & Capitolato\tabularnewline
+RQ-10-F & Docker file (\#4), da istanziare N volte, rappresentante il singolo pedone & Capitolato\tabularnewline 
+\caption{Tabella Requisiti di Qualità\label{ Tabella Requisiti di Qualità}}\\
 \end{longtable}.
 \newline 
 \subsection{Requisiti di vincolo}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{ 
-		>{\centering}p{0.11\textwidth} 
-		>{}p{0.6075\textwidth}
-		>{\centering \it}p{0.16\textwidth} }
+		>{}p{0.135\textwidth} 
+		>{}p{0.5425\textwidth}
+		>{}p{0.2\textwidth} }
 	\rowcolorhead
-	\headertitle{Codice} &
+	\centering\headertitle{Codice} &
 	\centering \headertitle{Descrizione} &	
-	\headertitle{\normalfont \textbf{Fonte}}	
+	\centering \headertitle{\normalfont \textbf{Fonte}}	
 	\endfirsthead	
 	\endhead
 RV-1-O & La geolocalizzazione va simulata & Capitolato\tabularnewline
@@ -151,15 +153,15 @@ RV-28-O & Ogni unità torna ad un'area di carico se ha scaricato tutta la merce 
 RV-29-O & Il sistema centrale conosce ogni spostamento (in avanti, indietro, a destra e a sinistra) di ogni singola unità & Capitolato\tabularnewline
 RV-30-O & Il sistema centrale conosce la fermata di ogni singola unità & Capitolato\tabularnewline
 RV-31-O & Il sistema centrale conosce la partenza di ogni singola unità & Capitolato\tabularnewline
+\caption{Tabella Requisiti di vincolo\label{ Tabella Requisiti di vincolo}}\\
 \end{longtable}.
-\newline
-\newline
+\pagebreak
 \subsection{Tracciamento}
 \subsubsection{Fonti - Requisiti}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{ 
-		>{\centering}p{0.25\textwidth} 
+		>{}p{0.2\textwidth} 
 		>{}p{0.3\textwidth} }
 	\rowcolorhead
 	\headertitle{Fonte} &
@@ -240,13 +242,14 @@ RF-35-O\tabularnewline
 UC14 &
 RF-36-O\newline RF-36.1-O\newline
 RF-36.2-O\tabularnewline
+\caption{Tabella Fonti - Requisiti\label{ Tabella Fonti - Requisiti}}\\
 \end{longtable}.\newline
 \subsubsection{Requisiti - Fonti}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{ 
-		>{}p{0.15\textwidth} 
-		>{}p{0.35\textwidth} }
+		>{}p{0.2\textwidth} 
+		>{}p{0.3\textwidth} }
 	\rowcolorhead
 	\headertitle{Requisito} &
 	\headertitle{\normalfont \textbf{Fonti}}	
@@ -355,7 +358,8 @@ RQ-7-O & Capitolato\tabularnewline
 RQ-8-O & Capitolato\tabularnewline
 RQ-9-O & Capitolato\tabularnewline
 RQ-10-F & Capitolato\tabularnewline
-\end{longtable}.
+\caption{Tabella Requisiti - Fonti\label{ Tabella Requisiti - Fonti}}\\
+\end{longtable} .
 \newline
 \subsubsection{Riepilogo requisiti}
 \renewcommand{\arraystretch}{1.5}
@@ -377,4 +381,5 @@ RQ-10-F & Capitolato\tabularnewline
 Funzionale & 59 & 2 & 1 & 62\tabularnewline
 Di Qualità & 9 & 1 & 0 & 10\tabularnewline
 Di Vincolo & 24 & 4 & 3 & 31\tabularnewline
+\caption{Tabella Riepilogo dei Requisiti\label{ Tabella Riepilogo dei Requisiti}}\\
 \end{longtable}.
