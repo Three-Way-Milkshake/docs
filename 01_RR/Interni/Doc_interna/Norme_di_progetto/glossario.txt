@@ -20,7 +20,7 @@ G:git:git:X:Sistema di controllo del versionamento distribuito
 G:gitpush:push:X:Comando di \\\\gls{git} che permette di caricare le proprie modifiche locali sul server remoto condiviso del repository
 G:repository:repository:X:Posizione di archiviazione per pacchetti software
 A:repo:repo:\\\\gls{repository}
-G:bash:bash:X:È una shell Unix ed un linguaggio interpretato scritto da Brian Fox per il progetto GNU come sostituto del software gratuito per la shell Bourne
+G:bash:bash:X:\\\\gls{shell} Unix ed un linguaggio interpretato scritto da Brian Fox per il progetto GNU come sostituto del software gratuito per la shell Bourne
 G:gitcommit:commit:commits:Comando di \\\\gls{git} che permette di salvare e versionare le modifiche attuate ai file in locale
 G:gitpull:pull:X:Comando di \\\\gls{git} che permette di aggiornare il proprio \\\\acrshort{repo} locale con i cambiamenti remoti
 A:vcs:VCS:Version Control System
@@ -31,3 +31,4 @@ G:disciplinato:disciplinato:X:Che segue le regole che si è dato
 G:quantificabile:quantificabile:X:Che permette di misurare l’efficienza e l’efficacia del suo agire
 G:bestpractice:best practice:best practices:Modo di fare noto, che abbia mostrato di garantire i migliori risultati in circostanze note e specifiche
 A:jit:JiT:Just in Time
+G:shell:shell:X:Interprete dei comandi
