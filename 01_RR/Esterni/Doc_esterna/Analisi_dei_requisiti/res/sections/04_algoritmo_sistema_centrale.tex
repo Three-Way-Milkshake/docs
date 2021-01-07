@@ -1,6 +1,6 @@
 \section{Algoritmo del sistema centrale}
 \subsection{Introduzione}
-Viene ora presentato l'algoritmo che mostra come il sistema centrale si occuperà di gestire le task.
+Viene ora presentato l'algoritmo che mostra come il sistema centrale si occuperà di gestire le \gls{task}\textsubscript{G}.
 \subsection{Algoritmo per la gestione delle task}
 %inserire immagine
 %\begin{figure}[H]
@@ -15,18 +15,18 @@ Viene ora presentato l'algoritmo che mostra come il sistema centrale si occuper�
 	\begin{itemize}
 		\item{la mappa del magazzino\\}
 		\item{la lista di unità disponibili\\}
-		\item{le task da soddisfare, mano a mano che il responsabile le inserisce\\}
+		\item{le \gls{task}\textsubscript{G} da soddisfare, mano a mano che il responsabile le inserisce\\}
 	\end{itemize}
 	}
 	\item{\textbf{OUTPUT}\\
 	Il sistema allora dovrà:
 	\begin{enumerate}
-		\item{Suddividere le task in liste da assegnare alle unità nel punto di carico. \\
+		\item{Suddividere le \gls{task}\textsubscript{G} in liste da assegnare alle unità nel punto di carico. \\
 		Le liste sono calcolate suddividendo per zone di prossimità\\}
-		\item{Per ogni unità \texttt{(while tasks.length>0)}\\}
+		\item{Per ogni unità \texttt{(while \glspl{task}\textsubscript{G}.length>0)}\\}
 		\begin{enumerate}
-			\item{viene calcolato il percorso ottimale per raggiungere il POI per soddisfare la prossima task\\}
-			\item{viene suggerita la prossima mossa per raggiungere il POI della task \texttt{i}\\}	
+			\item{viene calcolato il percorso ottimale per raggiungere il \acrshort{POI}\textsubscript{A} per soddisfare la prossima task\\}
+			\item{viene suggerita la prossima mossa per raggiungere il \acrshort{POI}\textsubscript{A} della \gls{task}\textsubscript{G} \texttt{i}\\}	
 			\begin{itemize}
 				\item{\texttt{while(mosse.length > 0)}\\}
 				\begin{itemize}
@@ -39,7 +39,7 @@ Viene ora presentato l'algoritmo che mostra come il sistema centrale si occuper�
 				\end{itemize}				
 				\item{attende la conferma dell'operatore che dichiara di aver eseguito lo scarico\\}
 			\end{itemize}						
-			\item{passa alla task successiva\\}				
+			\item{passa alla \gls{task}\textsubscript{G} successiva\\}				
 		\end{enumerate}
 		\item{Presenta un pulsante da cliccare se l'operatore ha finito il turno affinché lo riporti alla base. Se il pulsante non viene cliccato, esso viene portato al punto di carico. \\}
 	\end{enumerate}
