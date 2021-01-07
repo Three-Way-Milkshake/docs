@@ -1,47 +1,59 @@
 \section{Verbale della riunione}
 
-\subsection{Discussione riguardo le API}
-In primo luogo, è stata affrontata una discussione riguardo le API, dalla quale è emerso che ne saranno necessarie due, una per ogni singola unità che dovrà dichiarare al sistema centrale i suoi dati, una seconda che viene invocata dal monito grafico per interrogare una precisa unità per richiedere i dati. Per il loro sviluppo è stato consigliato l'uso del software Swagger e del linguaggio Curl.
+In occasione del meeting virtuale, il gruppo ha raccolto i dubbi sorti dopo una prima analisi del capitolato e li ha rivolti al proponente Beggiato Alex di San Marco Informatica sotto forma di domande. La discussione è proceduta per punti, intavolando un dialogo con il proponente che ha permesso di chiarire gli aspetti che risultavano oscuri.
 
-\subsection{Discussione riguardo le funzioni del server centrale e di ogni unità}
-Successivamente è stata affrontata una discussione generale sul progetto e sulle entità che ne fanno parte. I dubbi del gruppo vertevano sul ruolo del server nei confronti delle singole unità e viceversa. Dalla discussione è risultato come l'applicativo da realizzare non deve essere generale e utilizzabile in più contesti, ma in particolare applicabile in un preciso contesto a nostra scelta. Da qui la richiesta di definire il preciso contesto di sviluppo tra tre possibilità fornite:
+
+\subsection{Fornitura API}
+In primo luogo è stata affrontata la questione legata alla fornitura delle API, richiesta dal capitolato ma non del tutto chiara al gruppo nel significato e nelle modalità. \'E emersa la necessità di fornire due API:
 \begin{itemize}
-	\item \textit{Robot camerieri in un ristorante};
-	\item \textit{Muletti all'interno di una fabbrica};
-	\item \textit{Auto a guida autonoma}.
+	\item una per la gestione dell'invio dei dati da parte delle unità al sistema centrale;
+	\item l'altra utilizzata dal monitor grafico per interrogare le unità sui loro dati.
 \end{itemize}
-Definire uno scope ben preciso vincola poi le scelte dei vincoli, dei requisiti e lo sviluppo dei casi d'uso.
+Per il loro sviluppo è stato consigliato l'uso dei linguaggi \textit{Swagger} e \textit{Curl}.
 
-\subsection{Discussione riguardo lo sviluppo delle UI} 
+\subsection{Funzioni del server centrale e di ogni unità}
+Successivamente è stata affrontata una discussione generale sul progetto e sulle entità che ne fanno parte. I dubbi del gruppo vertevano sul rapporto tra il server e le unità. E? --TODO-- 
+
+Il proponente ha poi chiarito che l'applicativo da realizzare debba riguardare un preciso contesto a nostra scelta. Da qui la richiesta di scegliere tra tre possibilità:
+\begin{itemize}
+	\item Robot camerieri in un ristorante;
+	\item Muletti all'interno di una fabbrica;
+	\item Auto a guida autonoma.
+\end{itemize}
+La documentazione del capitolato fornisce indicazioni generali per queste tre categorie: definire uno contesto più ristretto porterà ad una selezione dei vincoli, dei requisiti e dei casi d'uso.
+
+--CONTINUARE DA QUI--
+
+\subsection{Sviluppo delle UI} 
 La direttiva generale per la UI per la gestione di un'unità, presenterebbe 4 frecce direzionali e un pulsante start/stop.
 Lo sviluppo delle UI necessarie dipende strettamente dalla decisione che verrà presa riguardo la definizione del preciso contesto di sviluppo. Sono state quindi delineate due idee.
 La prima proposta è quella di sviluppare un'interfaccia per ogni unità, con i controlli necessari al suo funzionamento. 
 La seconda proposta vede affiancato anche lo sviluppo di un'interfaccia per un ipotetico gestore del coordinamento delle unità, con i controlli necessari per poter gestire ciascuna unità singolarmente.
 In ogni caso il consiglio è stato di non lasciare il controllo totale al sistema e di fornire un'implementazione migliore, sviluppando al meglio le UI, quindi affiancando al pilota automatico per la gestione di ogni unità, anche dei controlli manuali che un operatore può scegliere di utilizzare. 
  
-\subsection{Discussione riguardo la presenza di server di backup per aggiornamenti}
+\subsection{Presenza di server di backup per aggiornamenti}
 La discussione poi si è orientata sulle specifiche del server, in particolare sulla presenza o meno di un server di backup. Anche in questa occasione è stato sottolineato come la scelta di un contesto preciso definirebbe tutti i vari aspetti aggiuntivi come quello di un server di backup. 
 Per esempio per quanto riguarda il contesto delle auto a guida autonoma, il server non può assolutamente andare in down, in quanto provocherebbe danni anche irreparabili. Invece nel contesto dei muletti all'interno di una fabbrica, si può pianificare un tempo accettabile in cui il server si può aggiornare e questo può avvenire nei giorni in cui la fabbrica è chiusa. 
 
-\subsection{Discussione riguardo le tecnologie da usare}
+\subsection{Tecnologie da usare}
 Successivamente, è stato chiesto un consiglio sulle tecnologie da utilizzare per lo sviluppo delle varie parti dell'applicativo. Non è stato dato nessun vincolo sulla scelta delle tecnologie, ma solo alcuni utili consigli.
 Per lo sviluppo della parte server, vista la necessità di fare algoritmi complessi per via dei messaggi in parallelo che dovranno essere elaborati abbastanza velocemente, viene sconsigliato il Node, in quanto troppo restrittivo per l'implementazione di algoritmi che potrebbero articolarsi con sviluppi nel multithreading.
 E' stato quindi suggerito lo sviluppo in Java (o di una qualche web application in Java) con l'ausilio di server web come Tomcat. 
 Per quanto riguarda lo sviluppo delle singole unità, vista la non presenza di design pattern molto strutturati, è stato invece proposto il Node.js, sia per la web app che lo sviluppo del motorino di comunicazione con il server centrale. Al contempo è comunque stata data anche la possibilità di scegliere liberamente quale tecnologia utilizzare. Analogamente per lo sviluppo delle UI è stato indicato come qualsiasi linguaggio web possa essere utilizzato senza problemi, come ad esempio Angular.js o React, permettendo quindi una velocità di sviluppo maggiore.
 
-\subsection{Discussione riguardo la geolocalizzazione simulata}
+\subsection{Geolocalizzazione simulata}
 Discutendo riguardo la geolocalizzazione simulata è emerso che tutto dipende da come si implementa il sistema. I dati da mandare al sistema centrale per la sua elaborazione si possono comunque proporre come coordinate di una matrice, e dichiarando se l'unità in quel preciso punto è ferma o aggiungendo la direzione nella quale sta andando. Come variabile facoltativa c'è la velocità con la quale l'unità si sta spostando. 
 
-\subsection{Discussione riguardo la richiesta della lista dei bug}
+\subsection{Richiesta della lista dei bug}
 Visto che nelle richieste era citata la presentazione di una lista dei bug, il gruppo ha voluto chiedere spiegazioni a riguardo. A questo proposito è stato spiegato che sarà necessario presentare la lista di bug incontrati e la loro risoluzione (qualora ci fosse stata). L'applicativo Jira proposto dal gruppo è stato indicato come servizio utilizzabile per generare ed esportare il report con la lista dei bug.
 
-\subsection{Discussione riguardo i POI}
+\subsection{Definizione POI}
 Successivamente è stato affrontato l'argomento dei POI, in particolare i vincoli riguardanti l'ordine di una lista di POI assegnati ad un'unità. Ad esempio è stato posto l'esempio di un'unità potesse rimandare il raggiungimento di un POI occupato o se dovesse rimanere in attesa e per quanto tempo. 
 Questo vale anche per la gestione dei POI dal punto di vista dell'unità. Ad esempio i nuovi POI assegnati ad un'unità possono essere posti in coda alla lista, oppure l'unità, una volta arrivata nel POI in cui si stava dirigendo, decidere il successivo POI da raggiungere facendo una valutazione su quale sarebbe il più veloce da raggiungere. 
 Risulta quindi necessaria la definizione di un contesto preciso per poter ragionare e successivamente sviluppare un modello che possa agire in modo adeguato e coerente con il contesto stesso.
 Inoltre, è stato dichiarato che i POI dovranno essere definiti globalmente e dovranno essere disponibili a tutti; ogni singola unità avrà la sua personale lista di interesse che dovrà raggiungere, che sarà un sottoinsieme della lista completa di tutti i possibili punti.
 
-\subsection{Confronto riguardo gli strumenti da usare per la comunicazione}
+\subsection{Strumenti da usare per la comunicazione}
 Nell'ultima parte della riunione ci si è accordati sugli strumenti da utilizzare per la comunicazione con l'azienda. 
 \begin{itemize}
 	\item \textit{Google Meet} per le riunioni;
