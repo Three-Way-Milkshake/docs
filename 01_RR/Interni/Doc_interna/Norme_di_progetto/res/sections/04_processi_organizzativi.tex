@@ -1,8 +1,6 @@
 \section{Processi Organizzativi}
 \label{organizzativi}
 
-%  gestione degli incontri, gestione dei rischi, gestione della formazione individuale
-
 \subsection{Gestione dei processi}
     \subsubsection{Scopo}
     Qui lo scopo è la gestione delle attività e dei compiti per ogni altro processo.
@@ -51,56 +49,66 @@
     \subsubsection{Amministratore}
     Ha in carico la definizione, modifica ed agevolazione del way of working. È un percorso in logica \acrshort{jit}\textsubscript{A} procede per incrementi. È responsabile dell'efficacia e dell'efficienza nell'ambiente di lavoro, gestisce la documentazione, organizza il glossario, collabora alla redazione del \textsc{Piano di Progetto} e redige le \textsc{Norme di Progetto}.
 
-\subsection{Comunicazione} %todo
-    \subsubsection{Scopo}
-    Lo scopo del processo di ...
-    \subsubsection{Aspettative}
-    ...
+\subsection{Gestione delle comunicazioni}
+    Di seguito si definiscono le procedure e gli strumenti adottati per standardizzare ed organizzare le comunicazioni all'interno ed all'esterno del gruppo.
+    \subsubsection{Comunicazioni interne}
+        Riguardano i soli componenti del gruppo \group e in base allo scopo si articolano tramite strumenti diversi.
+        \pparagraph{Google meet}
+            Piattaforma di videoconferenze\footnote{\url{https://meet.google.com/}} di Google che permette la condivisione di più schermi e non richiede l'installazione di programmi aggiuntivi in quanto fruibile da browser. Integrata con Google Calendar permette la creazione di meeting collegati ad eventi direttamente da quest'ultimo strumento, semplificando così il processo di creazione ed organizzazione di eventi comuni.
+            Viene utilizzata per le riunioni, le quali devono essere effettuate con una frequenza non inferiore a quella settimanale. Per ogni riunione il gruppo segue l'ordine del giorno che si sarà venuto a formare nel documento Confluence dedicato allo specifico incontro, al quale tutti possono collaborare. Le discussioni e le decisioni verranno raccolte dal segretario, che cambierà ad ogni riunione, per distribuire equamente questo compito a rotazione, nello stesso documento dal quale poi produrrà il verbale seguendo le regole definite in \ref{verbali}.
+        \pparagraph{Slack}
+            Strumento di messaggistica fortemente orientato alla collaborazione in gruppi di lavoro \footnote{\url{https://slack.com/intl/en-it/about}}. Il gruppo \group ha un workspace dedicato nel quale sono presenti diversi canali, per suddividere ed organizzare le comunicazioni. Durante lo svolgimento del progetto si possono creare tanti canali quanti se ne rendono necessari, il responsabile provvederà alla gestione di questi. Oltre ai canali dedicati alle attività appena citati ci sono i seguenti:
+            \begin{itemize}
+                \item \textbf{generale: }per le comunicazioni che non ricadono in nessun canale specifico già esistente e per le quali non si rende ncecessaria la creazione di un nuovo canale;
+                \item \textbf{capitolato-c5-portacs: }all'interno del quale l'amministratore configura le integrazioni automatizzate utili a notificare i componenti del gruppo:
+                \begin{itemize}
+                    \item jira, invierà una notifica ogni qualvolta che si intraprenderà un'azione, manuale o automatica (\textit{smart commits}) sul cruscotto di progetto;
+                    \item github, notificherà ogni azione intrapresa sui branch \textit{master} e \textit{develop};
+                    \item google calendar, che provvederà a notificare la programmazione di eventi e ricorderà quelli imminenti allegando codice Google meet per accedere direttamente alla riunione.
+                \end{itemize}
+            \end{itemize}
+        \pparagraph{Telegram}
+            Software di messaggistica \footnote{\url{https://telegram.org/}} nel quale il gruppo \group ha un gruppo dedicato utilizzato solamente per le comunicazioni informali e non strettamente legate al progetto di lavoro.
+    \subsubsection{Comunicazioni esterne}
+        Possono avvenire tra il gruppo \group ed il proponente e/o con il committente. Il gruppo si adatterà allo strumento preferito da questi in ogni momento nel quale si renda necessario il contatto. Per le comunicazioni rapide e dirette che non richiedono un incontro sincrono fra le parti, fornitore e proponente si sono accordati per l'utilizzo di uno spazio Google Chat\footnote{\url{https://workspace.google.com/products/chat/}}.
+
+\subsection{Gestione dei Rischi}
     \subsubsection{Descrizione}
-    ...
-    \subsubsection{altre sottosezioni}
-    ...
-    \subsubsection{Strumenti}
-    ...
+        I rischi previsti o identificati devono essere prontamente documentati nel \textsc{Piano di Progetto}. Ogni rischio dovrà essere così descritto:
+        \begin{itemize}
+            \item nome;
+            \item \textbf{codice}: secondo la classificazione in \ref{classifrischi};
+            \item \textbf{occorrenza e pericolosità: }possono assumere i valori bassa, media alta;
+            \item descrizione;
+            \item metodologie di rilevamento;
+            \item piano di contingenza.
+        \end{itemize}
+    \subsubsection{Classificazione dei Rischi}
+    \label{classifrischi}
+        Per facilitare raccolta e riferimenti successivi, il codice identificativo di ogni rischio deve seguire la seguente convenzione:
+        $$ \text{RIS\_[tipo]-[num]} $$
+        dove tipo può essere:
+        \begin{itemize}
+            \item \textbf{T} $\rightarrow$ tecnologico;
+            \item \textbf{O} $\rightarrow$ organizzativo;
+            \item \textbf{I} $\rightarrow$ interpersonale;
+        \end{itemize}
+    mentre num è un numero progressivo che parte da 1 per ogni categoria, ed è univoco all'interno della stessa.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.6]{res/images/esempio_rischio.png}
+        \caption{Esempio corretto di raccolta rischio.}
+    \end{figure}
 
-\subsection{Rischi} %todo
-    \subsubsection{Scopo}
-    Lo scopo del processo di ...
-    \subsubsection{Aspettative}
-    ...
-    \subsubsection{Descrizione}
-    ...
-    \subsubsection{altre sottosezioni}
-    ...
-    \subsubsection{Strumenti}
-    ...
-
-\subsection{Formazione} %todo
-    \subsubsection{Scopo}
-    Lo scopo del processo di ...
-    \subsubsection{Aspettative}
-    ...
-    \subsubsection{Descrizione}
-    ...
-    \subsubsection{altre sottosezioni}
-    ...
-    \subsubsection{Strumenti}
-    ...
-
-\begin{comment}
-\subsection{Comunicazione}
-\subsubsection{Scopo}
-Lo scopo del processo di ...
-
-\subsection{Riunioni}
-\subsubsection{Scopo}
-Lo scopo del processo di ...
-
-\subsection{Ruoli di Progetto}
-\subsubsection{Scopo}
-Lo scopo del processo di ...
-
-\subsection{Ambiente di Lavoro}
-\subsubsection{Scopo}
-Lo scopo del processo di ...
-\end{comment}
+\subsection{Formazione}
+    I membri del gruppo \group sono tenuti a formarsi individualmente in quanto si ritiene che i tempi e le modalità di questo processo siano altamente individuali. Per quanto riguarda tecnologie e strumenti di interesse al gruppo, ogni membro è libero di creare una wiki nello spazio dedicato di Confluence per raccogliere risorse e documentazioni utili, raccolte online o prodotte dallo stesso, così da condividere le proprie conoscenze apprese e velocizzarne l'assorbimento da parte degli altri componenti. \\
+    Per i compiti attuali e per quanto discusso fino a questo momento con il proponente, si rimandano i membri del gruppo alle seguenti fonti ufficiali:
+    \begin{itemize}
+        \item \textbf{\LaTeX: }
+            \subitem -- \url{https://www.latex-project.org/};
+            \subitem -- \url{https://www.overleaf.com/learn};
+        \item \textbf{Github: }\url{https://docs.github.com/en};
+        \item \textbf{Confluence: }\url{https://confluence.atlassian.com/alldoc/};
+        \item \textbf{Java: }\url{https://docs.oracle.com/en/java/};
+        \item \textbf{Nodejs: }\url{https://nodejs.org/en/docs/}.
+    \end{itemize}

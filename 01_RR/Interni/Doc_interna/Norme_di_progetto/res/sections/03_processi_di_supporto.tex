@@ -47,8 +47,7 @@
         \item \textbf{cartella res: }per contenere le risorse del documento, a sua volta questa contiene:
         \begin{itemize}
             \item \textbf{cartella images: }per le eventuali immagini;
-            \item \textbf{cartella sections: }che contiene tutte le sezioni, ognuna in un file diverso, i quali seguono la convenzione di nomenclatura preceduta da un identificativo numerico progressivo ad indicare la posizione della stessa nel documento (e.g.: 01\_introduzione.tex, 02\_sezione1.tex)
-            %todo add link convenzione nomi
+            \item \textbf{cartella sections: }che contiene tutte le sezioni, ognuna in un file diverso, i quali seguono la \hyperref[convezionenomifile]{convenzione di nomenclatura} preceduta da un identificativo numerico progressivo ad indicare la posizione della stessa nel documento (e.g.: 01\_introduzione.tex, 02\_sezione1.tex)
         \end{itemize}
         \item \textbf{file glossario.txt: }dove definire tutti gli acronimi e le voci di glossario, che verranno poi processate \hyperref[glossario]{dall'automazione}.
     \end{itemize}
@@ -91,6 +90,7 @@
     Come indicato precedentemente ogni sezione di primo livello deve avere un suo file dedicato e si svilupperà in seguito all'introduzione. Al termine di tutte le sezioni vi può essere un'appendice mentre le ultime pagine elencano la lista degli acronimi e i termini di glossario utilizzati nel documento, con riferimenti alle pagine dove questi appaiono.
 
     \subsubsection{Verbali}
+    \label{verbali}
     I verbali possono essere interni, se relativi ad una riunione dei soli membri del gruppo, o esterni, se relativi ad un qualche tipo di incontro con persone esterne al gruppo. Come gli altri documenti formali, hanno un frontespizio ed un registro delle modifiche, poi si articolano in questo modo:
     \begin{itemize}
         \item informazioni generali
@@ -107,7 +107,7 @@
     \pparagraph{Tracciamento delle decisioni nei verbali interni}
     Ogni riga della tabella di tracciamento delle decisioni si compone di:
     \begin{itemize}
-        \item \textbf{codice: }indentificativo univoco della decisione, così formato: VI\_numRiunione.numDecisione (e.g.: VI\_2.3 indica la terza decisione presa durante la riunione interna 2);
+        \item \textbf{codice: }identificativo univoco della decisione, così formato: VI\_numRiunione.numDecisione (e.g.: VI\_2.3 indica la terza decisione presa durante la riunione interna 2);
         \item \textbf{decisione: }breve riassunto che indichi in maniera chiara la decisione presa.
     \end{itemize}
     \subsubsection{Glossario e acronimi}
@@ -126,78 +126,79 @@
     \end{itemize}
     Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate e collegate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una \gls{gitpull}\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una \gls{gitpush}\textsubscript{G}, così da avere il documento aggioranto ed evitare problemi di conflitti e nel \acrshort{vcs}\textsubscript{A}.
     \subsubsection{Norme tipografiche}
-    \pparagraph{Nomi di file e cartelle}
-    Ogni file e cartella dovrà avere un nome:
-    \begin{itemize}
-        \item che sia il più possibile conciso ed esplicativo;
-        \item composto di sole lettere minuscole, numeri, \_ e '-', ad eccetto del '.' per separare nome da estensione
-        \item che abbia alla fine un'estensione coerente col suo tipo
-        \item non contenere spazi o caratteri diversi da quelli indicati sopra, parole diverse si separano con '\_'
-    \end{itemize}
-    \pparagraph{Stile del testo}
-    Ai seguenti stili si attribuisce una specifica funzione semantica:
-    \begin{itemize}
-        \item \textbf{corsivo: }per denotare termini tecnici appartenenti ad una particolare tecnologia che si sta trattando;
-        \item \textbf{grassetto: }per evidenziare termini rilevanti o dei quali viene dato un significato esteso immediatamente in seguito, come questi in un elenco puntato;
-        \item \textbf{maiuscoletto: }per indicare altri documenti (e.g.: \textsc{Piano di Progetto});
-        \item \textbf{pedice: } G e A, per indicare rispettivamente una voce di glossario o un acronimo.
-    \end{itemize}
-    \pparagraph{Elenchi}
-    Ogni elemento deve terminare con un punto e virgola, eccetto quella finale che va seguito da un punto, quindi ogni prima parola deve avere iniziale minuscola a meno che non indichi qualcosa per la quale la capitalizzazione è importante. Gli elenchi puntati non numerati avranno come simbolo di primo livello un puntino pieno, come secondo un trattino, come terzo un asterisco. Gli elenchi numerati come primo livello numeri, come secondo lettere minuscole, come terzo numeri romani rappresentati con lettere minuscole
-    \begin{multicols}{2}
+        \pparagraph{Nomi di file e cartelle}
+        \label{convezionenomifile}
+        Ogni file e cartella dovrà avere un nome:
         \begin{itemize}
-            \item elenco puntato non numerato
-            \item secondo elemento
+            \item che sia il più possibile conciso ed esplicativo;
+            \item composto di sole lettere minuscole, numeri, \_ e '-', ad eccetto del '.' per separare nome da estensione e per suddividere i numeri di versione, se indicata;
+            \item che abbia alla fine un'estensione coerente col suo tipo;
+            \item non contenere spazi o caratteri diversi da quelli indicati sopra, parole diverse si separano con '\_'.
+        \end{itemize}
+        \pparagraph{Stile del testo}
+        Ai seguenti stili si attribuisce una specifica funzione semantica:
+        \begin{itemize}
+            \item \textbf{corsivo: }per denotare termini tecnici appartenenti ad una particolare tecnologia che si sta trattando;
+            \item \textbf{grassetto: }per evidenziare termini rilevanti o dei quali viene dato un significato esteso immediatamente in seguito, come questi in un elenco puntato;
+            \item \textbf{maiuscoletto: }per indicare altri documenti (e.g.: \textsc{Piano di Progetto});
+            \item \textbf{pedice: } G e A, per indicare rispettivamente una voce di glossario o un acronimo.
+        \end{itemize}
+        \pparagraph{Elenchi}
+        Ogni elemento deve terminare con un punto e virgola, eccetto quella finale che va seguito da un punto, quindi ogni prima parola deve avere iniziale minuscola a meno che non indichi qualcosa per la quale la capitalizzazione è importante. Gli elenchi puntati non numerati avranno come simbolo di primo livello un puntino pieno, come secondo un trattino, come terzo un asterisco. Gli elenchi numerati come primo livello numeri, come secondo lettere minuscole, come terzo numeri romani rappresentati con lettere minuscole
+        \begin{multicols}{2}
             \begin{itemize}
-                \item secondo livello
+                \item elenco puntato non numerato
+                \item secondo elemento
                 \begin{itemize}
-                    \item terzo livello
+                    \item secondo livello
+                    \begin{itemize}
+                        \item terzo livello
+                    \end{itemize}
                 \end{itemize}
             \end{itemize}
-        \end{itemize}
-        \begin{enumerate}
-            \item elenco puntato numerato
-            \item secondo elemento
             \begin{enumerate}
-                \item secondo livello
+                \item elenco puntato numerato
+                \item secondo elemento
                 \begin{enumerate}
-                    \item terzo livello
+                    \item secondo livello
+                    \begin{enumerate}
+                        \item terzo livello
+                    \end{enumerate}
                 \end{enumerate}
             \end{enumerate}
-        \end{enumerate}
-    \end{multicols}
-    \centerline{(Esempi elenchi puntati numerati e non corretti)}
-    \pparagraph{Data e ora}
-    In ogni documento si adotta lo \href{https://www.iso.org/iso-8601-date-and-time-format.html}{Standard ISO 8601} , quindi aaaa-mm-gg (e.g.: 5 Gennaio 2021 = 2021-01-05) e hh:mm. Se si scrive il mese in caratteri questo con l'iniziale maiuscola e vale lo stesso per i giorni della settimana.
-    \pparagraph{Codici di versioni}
-    \label{versions}
-    % non trovato standard ufficiale, solo https://semver.org/ ma sempre essere più per il codice e basta e comunque introduce molte complicazioni
-    Si adotta la convenzione $x.y.z$ dove x, y e z sono numeri progressivi che partono da 0, x non si azzera mai, y si azzera ad ogni incremento di x e z si azzera ad ogni incremento di y o x. Gli incrementi avvengono:
-    \begin{itemize}
-        \item \textbf{per x: }quando avviene un accertamento da parte del responsabile di modifiche sostanziali
-        \item \textbf{per y: }quando viene apportato un insieme discreto di modifiche;
-        \item \textbf{per z: }per ogni modifica o verifica minore.
-    \end{itemize}
-    Nel caso si voglia specificare la versione nel nome di un file, per esempio per condivisioni esterne al gruppo, la nomenclatura dovrà essere: $$\text{[nome\_file]\_\_v[x.y.z].[estensione]}$$ $$\text{(e.g.: norme\_di\_progetto\_\_v1.0.3.tex)}$$
+        \end{multicols}
+        \centerline{(Esempi elenchi puntati numerati e non corretti)}
+        \pparagraph{Data e ora}
+        In ogni documento si adotta lo \href{https://www.iso.org/iso-8601-date-and-time-format.html}{Standard ISO 8601} , quindi aaaa-mm-gg (e.g.: 5 Gennaio 2021 = 2021-01-05) e hh:mm. Se si scrive il mese in caratteri questo con l'iniziale maiuscola e vale lo stesso per i giorni della settimana.
+        \pparagraph{Codici di versioni}
+        \label{versions}
+        % non trovato standard ufficiale, solo https://semver.org/ ma sempre essere più per il codice e basta e comunque introduce molte complicazioni
+        Si adotta la convenzione $x.y.z$ dove x, y e z sono numeri progressivi che partono da 0, x non si azzera mai, y si azzera ad ogni incremento di x e z si azzera ad ogni incremento di y o x. Gli incrementi avvengono:
+        \begin{itemize}
+            \item \textbf{per x: }quando avviene un accertamento da parte del responsabile di modifiche sostanziali
+            \item \textbf{per y: }quando viene apportato un insieme discreto di modifiche;
+            \item \textbf{per z: }per ogni modifica o verifica minore.
+        \end{itemize}
+        Nel caso si voglia specificare la versione nel nome di un file, per esempio per condivisioni esterne al gruppo, la nomenclatura dovrà essere: $$\text{[nome\_file]\_\_v[x.y.z].[estensione]}$$ $$\text{(e.g.: norme\_di\_progetto\_\_v1.0.3.tex)}$$
 
     \subsubsection{Strumenti}
     Come già citato, per la scrittura dei documenti formali si usa \LaTeX\footnote{https://www.latex-project.org/} e come editor non c'è una preferenza assoluta, ma si consigliano \href{http://www.texstudio.org/}{TexStudio} o \href{https://www.xm1math.net/texmaker/}{TexMaker}. Per quanto riguarda i documenti informali invece, \href{https://www.atlassian.com/software/confluence}{Confluence} può essere usato in qualunque browser.
 
 \subsection{Gestione della configurazione}
     \subsubsection{Scopo}
-    Lo scopo del processo di gestione della configurazione è quello di applicare procedure amministrative e tecniche al fine di controllare e registrare modifche e rilasci ed assicurare la correttezza, consistenza, completezza ed archiviazione di ogni elemento.
+        Lo scopo del processo di gestione della configurazione è quello di applicare procedure amministrative e tecniche al fine di controllare e registrare modifche e rilasci ed assicurare la correttezza, consistenza, completezza ed archiviazione di ogni elemento.
     \subsubsection{Aspettative}
-    Avere uno spazio di lavoro versionato, condivisp ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
+        Avere uno spazio di lavoro versionato, condivisp ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
     \subsubsection{Descrizione}
-    Il gruppo \group ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le \acrshort{repo}\textsubscript{A} di cui necessita.
+        Il gruppo \group ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le \acrshort{repo}\textsubscript{A} di cui necessita.
     \subsubsection{Workflow di versionamento}
-    Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno \acrshort{repo}\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di \gls{git}\textsubscript{G} e GitHub si trovano nella \gls{wiki}\textsubscript{G} \textsc{GIT, Github \& Jira}
-    \pparagraph{Pull requests}
-    Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una \gls{gitpull}\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in \gls{git}\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
+        Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno \acrshort{repo}\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di \gls{git}\textsubscript{G} e GitHub si trovano nella \gls{wiki}\textsubscript{G} \textsc{GIT, Github \& Jira}
+        \pparagraph{Pull requests}
+            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una \gls{gitpull}\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in \gls{git}\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
 
     \subsubsection{Integrazione con Jira}
     \label{jiraintegration}
-    GitHub è stato configurato in maniera che ad ogni \gls{gitcommit}\textsubscript{G} si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, Github \& Jira}} è possibile collegare ogni \gls{gitcommit}\textsubscript{G} con una task o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
+        GitHub è stato configurato in maniera che ad ogni \gls{gitcommit}\textsubscript{G} si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, Github \& Jira}} è possibile collegare ogni \gls{gitcommit}\textsubscript{G} con una task o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
 
     \subsubsection{Strumenti}
     Come già detto, le \acrshort{repo}\textsubscript{A} sono tenute su GitHub, per quanto riguarda la gestione locale, ogni membro è libero di adottare lo strumento che preferisce.
@@ -206,13 +207,14 @@
 \subsection{Risoluzione dei problemi}
     \label{risoluzioneproblemi}
     \subsubsection{Scopo}
-    Questo processo ha lo scopo di definire un insieme di procedure atte alla risoluzione dei problemi.
+        Questo processo ha lo scopo di definire un insieme di procedure atte alla risoluzione dei problemi.
     \subsubsection{Aspettative}
-    Identificazione, segnalazione e risoluzione dei problemi devono avvenire in maniera standardizzata all'interno del gruppo così che tutto il processo possa essere svolto nei tempi più brevi possibili.
+        Identificazione, segnalazione e risoluzione dei problemi devono avvenire in maniera standardizzata all'interno del gruppo così che tutto il processo possa essere svolto nei tempi più brevi possibili.
     \subsubsection{Descrizione}
-    Quando un verificatore riscontra dei problemi o degli errori, aggiunge dei commenti che iniziano con "TODO", così da facilitare la ricerca poi, che indichino brevemente i problema individuati e, tramite il meccanismo degli \hyperref[jiraintegration]{\textit{smart commits}}, riporta la task o sottotask relativa nello stato \textit{in progress} ed aggiunge un commento che riassuntivo. Nel caso sia necessario aggiungere più informazioni, il verificatore si può recare nella board ed aggiungere ulteriori commenti. Il verificatore viene quindi sollevato automaticamente dal compito, il responsabile controlla il problema segnalato, se necessario imposta una priorità diversa da \textit{medium}, aggiunge eventuali commenti o descrizioni e riassegna la task ad un altro membro. Il responsabile può sfruttare le sezioni \textit{history} e \textit{comments} di ogni task per controllare chi ha lavorato in passato a quel compito di modo da facilitare la scelta di assegnazione.
+        Quando un verificatore riscontra dei problemi o degli errori, aggiunge dei commenti che iniziano con "TODO", così da facilitare la ricerca poi, che indichino brevemente i problema individuati e, tramite il meccanismo degli \hyperref[jiraintegration]{\textit{smart commits}}, riporta la task o sottotask relativa nello stato \textit{in progress} ed aggiunge un commento che riassuntivo. Nel caso sia necessario aggiungere più informazioni, il verificatore si può recare nella board ed aggiungere ulteriori commenti. Il verificatore viene quindi sollevato automaticamente dal compito, il responsabile controlla il problema segnalato, se necessario imposta una priorità diversa da \textit{medium}, aggiunge eventuali commenti o descrizioni e riassegna la task ad un altro membro. Il responsabile può sfruttare le sezioni \textit{history} e \textit{comments} di ogni task per controllare chi ha lavorato in passato a quel compito di modo da facilitare la scelta di assegnazione.
 
 \subsection{Accertamento della qualità} %todo from PdQ
+    AGGIUNGERE DA PIANO DI QUALIFICA
     \subsubsection{Scopo}
     Lo scopo del processo di ...
     \subsubsection{Aspettative}
@@ -224,6 +226,7 @@
 
 \subsection{Verifica} %todo from PdQ
     \label{verifica}
+    AGGIUNGERE DA PIANO DI QUALIFICA
     \subsubsection{Scopo}
     Lo scopo del processo di ...
     \subsubsection{Aspettative}
@@ -236,6 +239,7 @@
     ...
 
 \subsection{Validazione} %todo from PdQ
+    AGGIUNGERE DA PIANO DI QUALIFICA
     \subsubsection{Scopo}
     Lo scopo del processo di ...
     \subsubsection{Aspettative}
