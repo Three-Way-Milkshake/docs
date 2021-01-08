@@ -6,23 +6,23 @@ Il \gls{progetto}\textsubscript{G} Portacs si pone come obiettivo finale di dimo
 \subsection{Caratteristiche del prodotto}
 Il dominio del software è ristretto alla gestione di unità trasportatrici (muletti) operative all’interno di un magazzino. Ogni unità è istruita di una lista di mansioni da svolgere, che prevedono il trasporto di merce da un punto di carico a uno o più punti di scarico. Ogni punto di interesse è legato ad un \gls{task}\textsubscript{G} da svolgere e costituisce per l’unità una tappa da raggiungere nel soddisfacimento dei propri compiti. Ogni muletto è caratterizzato dal proprio codice identificativo e sono tutti dello stesso tipo.
 La circolazione all’interno del magazzino è regolata da precisi vincoli di viabilità, deve tenere conto dell’architettura dell’ambiente e della presenza delle altre unità. 
-Il motore principale del prodotto risiede nel sistema centrale, il cui obiettivo è coordinare le unità in guida autonoma, dalle quali riceve informazioni sulla posizione e velocità, negli spostamenti necessari all’evasione dei \gls{task}\textsubscript{G} assegnati. L’interfaccia utente del software permetterà alle figure in carico della gestione del magazzino di riprodurre una mappa dell’ambiente, istruire il sistema dei compiti che devono essere eseguiti dalle unità e gestire il personale. Un sistema di autenticazione permetterà l’accesso degli operatori ai muletti: la guida manuale delle unità, se attivata, verrà simulata tramite un’interfaccia dedicata all’interno dell’applicazione.
+Il motore principale del prodotto risiede nel sistema centrale, il cui obiettivo è coordinare le unità in guida autonoma, dalle quali riceve informazioni sulla posizione e velocità per gli spostamenti necessari all’evasione dei \gls{task}\textsubscript{G} assegnati. L’interfaccia utente del software permetterà alle figure in carico della gestione del magazzino di riprodurre una mappa dell’ambiente, istruire il sistema dei compiti che devono essere eseguiti dalle unità e gestire il personale. Un sistema di autenticazione permetterà l’accesso degli operatori ai muletti: la guida manuale delle unità, se attivata, verrà simulata tramite un’interfaccia dedicata all’interno dell’applicazione.
 
 \subsubsection{Mappa}
 Il magazzino viene rappresentano nel sistema tramite una mappa, approssimata ad una matrice, in cui verranno identificati tutte le sue caratteristiche per permettere al sistema di coordinare le unità in modo autonomo.
 \begin{itemize}
 	\item \textbf{Vincoli sulla \gls{planimetria}\textsubscript{G}:} nella mappa viene stilizzata l'architettura dell'ambiente:
 	\begin{itemize}
-		\item aree non transitabili: raffigurano le zone in cui non è permesso il transito delle unità, possono essere scaffali o delle pareti;
-		\item zone di \gls{percorrenza}\textsubscript{G}: sono le aree in cui le unità possono spostarsi, ossia tutte le strade del magazzino per reggiungere i diversi POI;
-		\item \acrshort{POI}\textsubscript{A}: i punti di interesse possono essere di tre tipi:
+		\item \textbf{aree non transitabili}: raffigurano le zone in cui non è permesso il transito delle unità, possono essere ad esempio scaffali o pareti;
+		\item \textbf{zone di \gls{percorrenza}\textsubscript{G}}: sono le aree in cui le unità possono spostarsi, ossia tutte le strade del magazzino per reggiungere i diversi POI;
+		\item \textbf{\acrshort{POI}\textsubscript{A}}: i punti di interesse possono essere di tre tipi:
 		\begin{itemize}
-			\item base: rappresenta il punto dove ogni unità deve recarsi quando finisce il proprio lavoro e un altro lavoratore deve farsene carico;
-			\item carico: luogo dove vengono caricati i vari muletti con le merci necessarie prima di soddisfare i propri \gls{task}\textsubscript{G};
-			\item scarico: dove vengono evasi i compiti dalle unità, ossia dove le merci sono scaricate.
+			\item \textbf{base}: rappresenta il punto dove ogni unità deve recarsi quando finisce il proprio lavoro e un altro lavoratore deve farsene carico;
+			\item \textbf{carico}: luogo dove vengono caricati i vari muletti con le merci necessarie prima di soddisfare i propri \gls{task}\textsubscript{G};
+			\item \textbf{scarico}: dove vengono evasi i compiti dalle unità, ossia dove le merci sono scaricate.
 		\end{itemize}
 	\end{itemize}
-	\item \textbf{Vincoli di viabilità (percorrenza):} nella mappa devono essere identificati i sensi di marci e il numero massimo di unità che possono transitare per ogni zona di \gls{percorrenza}\textsubscript{G}.
+	\item \textbf{Vincoli di viabilità (percorrenza):} nella mappa devono essere identificati i sensi di marcia e il numero massimo di unità che possono transitare per ogni zona di \gls{percorrenza}\textsubscript{G}.
 	
 \end{itemize}
 
