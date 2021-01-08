@@ -1,5 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage[normalem]{ulem}
+\usepackage{glossaries}
 % scrartcl
 % impostazioni generali
 \input{../../../../latex/package.tex}
@@ -9,6 +10,7 @@
 
 \makeindex
 
+\input{glossario.tex}
 \begin{document}
 \counterwithin{table}{section}
 
@@ -33,10 +35,15 @@
 
 % Contenuto
 \input{res/sections/02_Content.tex}
-\pagebreak
+
 
 % Sintesi
 \input{res/sections/03_Summary.tex}
 \pagebreak
+
+
+\glsaddall
+\printglossary[type=\acronymtype,title=Lista degli Acronimi]
+\printglossary[title=Glossario dei Termini]
 
 \end{document}
