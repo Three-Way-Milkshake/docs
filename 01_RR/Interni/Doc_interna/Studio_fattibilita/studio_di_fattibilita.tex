@@ -6,8 +6,9 @@
 
 \usepackage{ulem}
 \usepackage{hyperref}
+\usepackage{glossaries}
 
-
+\input{glossario.tex}
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
 	\pagebreak	
@@ -59,6 +60,8 @@
 	\pagebreak
 	
 		
-	
+
+	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
+	\printglossary[title=Glossario dei Termini]
 	
 \end{document}
