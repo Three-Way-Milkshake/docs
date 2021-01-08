@@ -1,1 +1,4 @@
 G:vmodel:Modello a V:X:Modello di sviluppo software esteso dal modello a cascata. Pone la scrittura del test del software nelle fasi iniziali dello sviluppo e prima della codifica.
+G:percorrenza:percorrenza:percorrenze:Si intende i vincoli relativi alle zone di percorrenza quali sensi di marcia e numero massimo di unità che vi possono transitare
+G:task:task:tasks:Nel contesto del capitolato, con questo termine si identifica un compito da svolgere da parte di un unità (muletto) che consiste nel raggiungere un \\\\acrshort{POI} e caricare o scaricare la merce
+A:POI:POI:Point Of Interest
