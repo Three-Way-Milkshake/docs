@@ -1,3 +1,4 @@
-G:periodo:periodo:X:Nel documento, il lasso di tempo che intercorre tra due revisioni successive
+G:periodo:periodo:X:Nel documento, il lasso di tempo che intercorre tra due revisioni successive.
 G:attivita:attività:X:
 G:modellosviluppo:modello di sviluppo:X:
+G:capitolato:capitolato:capitolati:Documento tecnico redatto dal cliente in cui vengono specificati i vincoli contrattuali(prezzo e scadenze) per lo sviluppo di un determinato prodotto software. Viene presentato in un bando d’appalto per trovare qualcuno che possa svolgere il lavoro richiesto.
