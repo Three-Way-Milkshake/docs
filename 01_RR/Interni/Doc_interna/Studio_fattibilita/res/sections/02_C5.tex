@@ -1,34 +1,26 @@
 \subsection{Capitolato C5 - Portacs}
 \subsubsection{Informazioni generali}
 	\begin{itemize}
-	\item \textbf{Nome:} \textit{Portacs;}
+	\item \textbf{Nome:} \textit{PORTACS;}
 	\item \textbf{Proponente:} \textit{San Marco Informatica;}
 	\item \textbf{Committente:}  \textit{Prof. Tullio Vardanega e Prof. Riccardo Cardin;}
 	\end{itemize}
 \subsubsection{Descrizione del capitolato}
-Questo capitolato si concentra sulla realizzazione di un software che coordini lo spostamento di varie unità in una determinata griglia di movimento.
-Ogni unità (che può rappresentare un robot, un muletto o un'automobile) ha un punto di partenza nella griglia, una velocità massima e una lista di punti denominati "Points Of Interest" (POI) che deve raggiungere.\\
-La scacchiera ha i seguenti vincoli:
+Il capitolato C5 propone lo sviluppo di un software per il monitoraggio in tempo reale di varie unità e dei loro spostamenti in uno spazio creato dall'utente. \\
+Ogni unità (rappresentabile da un robot cameriere, da un muletto o da un'auto a guida autonoma) dovrà raggiungere dei "Points Of Interest" (POI).
+Ognuna di esse avrà: 
 \begin{itemize}
-	\item Percorsi definiti e con possibilità di percorrenze in parallelo e/o sensi unici;
-	\item Definizione dei POI.
-\end{itemize}
-Le varie unità avranno:
-\begin{itemize}
-	\item Identificativo di sistema;
+	\item Codice identificativo;
 	\item Velocità massima;
 	\item Posizione iniziale;
 	\item Lista ordinata dei POI da attraversare.
 \end{itemize}
+Lo spazio sarà definito da una mappa inserita dall'utente e avrà la struttura di una scacchiera con dei vincoli sulla viabilità (percorrenze in parallelo e/o sensi unici) e ostacoli in base alla topologia fornita.
+Il software inoltre dovrà occuparsi di prevedere situazioni critiche, come il traffico ed eventuali collisioni esterne.
 
 \subsubsection{Finalità del progetto}
-Tramite la realizzazione di questo capitolato, si acquisiranno le seguenti competenze in diversi ambiti:
-\begin{itemize}
-	\item Real time monitoring \& analysis;
-	\item Predictivity e real time decision making;
-	\item Introduzione alle problematiche del mondo della logistica e ottimizzazione delle performance nelle consegne in magazzini.
-\end{itemize}
-Inoltre il progetto è finalizzato alla consegna dei seguenti documenti:
+Il progetto PORTACS si pone come obiettivo finale di dimostrare la fattibilità dello sviluppo di un software che permetta il coordinamento di unità che si muovono in uno spazio per raggiungere una lista ordinata di punti d'interesse. Questo implica che bisognerà sviluppare un progetto negli ambiti del real time monitoring e analysis, e del predictivity e real time decision making. Inoltre, esso affronta le problematiche del mondo della logistica e dell'ottimizzazione delle performance di consegna.
+Verranno quindi consegnati i seguenti documenti:
 \begin{itemize}
 	\item Codice sorgente di quanto realizzato
 	\item Docker file con la componente applicativa, rappresentante il motore di calcolo;
@@ -40,14 +32,15 @@ Inoltre il progetto è finalizzato alla consegna dei seguenti documenti:
 Le tecnologie interessate sono:
 \begin{itemize}
 	\item \textbf{Diagrammi UML};
-	\item \textbf{Github} o \textbf{Bitbucket};
+	\item \textbf{Github} o \textbf{Bitbucket};	
 	\item \textbf{Docker}.
 \end{itemize}
 \subsubsection{Aspetti positivi}
 L'azienda mette a disposizione figure di diverso livello in modo tale da poter coprire nella maniera più appropriata le esigenze degli studenti.
 Inoltre il codice prodotto sarà reso disponibile al pubblico con licenza libera su Github o BitBucket alla fine del progetto.
 \subsubsection{Criticità e fattori di rischio}
-Può risultare difficoltoso individuare un algoritmo che risolvi il problema del Path Finding.
+Per lo sviluppo di questo progetto, si andrà a lavorare con il multithreading e sarà necessario prendere delle decisioni per il paradigma di programmazione che si sceglierà di usare. 
+Tutto questo, sommato al fatto che si deve anche individuare un algoritmo che risolvi il problema del Path Finding, potrebbe non essere immediato e portare al riscontro di diverse difficoltà.\\
 \subsubsection{Conclusioni}
-La disponibilità dell'azienda assieme alla curiosità scaturita dopo il seminario offerto hanno favorito la scelta di questo capitolato.
-Inoltre questo progetto aiuta a mettere in pratica le proprie conoscenze di ricerca operativa ed è infine molto utile acquisire competenze nel mondo Docker.
+La disponibilità dell'azienda assieme alla curiosità scaturita dopo il seminario offerto hanno favorito la scelta di questo capitolato, già presa in considerazione visto l'argomento di interesse comune del gruppo riguardo gli argomenti di sviluppo proposti.
+Inoltre questo progetto aiuta a mettere in pratica le proprie conoscenze di ricerca operativa ed è infine molto utile acquisire competenze nel mondo Docker e nell'ambito del real time monitoring e analysis, e del predictivity e real time decision making.
