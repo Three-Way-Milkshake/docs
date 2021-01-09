@@ -1,19 +1,19 @@
 \subsection{Capitolato C5 - Portacs}
 \subsubsection{Informazioni generali}
 	\begin{itemize}
-	\item \textbf{Nome:} \textit{PORTACS;}
-	\item \textbf{Proponente:} \textit{Sanmarco Informatica;}
-	\item \textbf{Committente:}  \textit{Prof. Tullio Vardanega e Prof. Riccardo Cardin;}
+	\item \textbf{Nome:} PORTACS;
+	\item \textbf{Proponente:} Sanmarco Informatica;
+	\item \textbf{Committente:}  Prof. Vardanega Tullio e Prof. Cardin Riccardo;
 	\end{itemize}
 \subsubsection{Descrizione del capitolato}
 Il capitolato C5 propone lo sviluppo di un software per il monitoraggio in tempo reale di varie unità e dei loro spostamenti in uno spazio creato dall'utente. \\
 Ogni unità (rappresentabile da un robot cameriere, da un muletto o da un'auto a guida autonoma) dovrà raggiungere dei "Points Of Interest" (POI).
 Ognuna di esse avrà: 
 \begin{itemize}
-	\item Codice identificativo;
-	\item Velocità massima;
-	\item Posizione iniziale;
-	\item Lista ordinata dei POI da attraversare.
+	\item \textbf{Codice identificativo};
+	\item \textbf{Velocità massima};
+	\item \textbf{Posizione iniziale};
+	\item \textbf{Lista ordinata dei POI da attraversare}.
 \end{itemize}
 Lo spazio sarà definito da una mappa inserita dall'utente e avrà la struttura di una scacchiera con dei vincoli sulla viabilità (percorrenze in parallelo e/o sensi unici) e ostacoli in base alla topologia fornita.
 Il software inoltre dovrà occuparsi di prevedere situazioni critiche, come il traffico ed eventuali collisioni esterne.
@@ -22,7 +22,7 @@ Il software inoltre dovrà occuparsi di prevedere situazioni critiche, come il t
 Il progetto PORTACS si pone come obiettivo finale di dimostrare la fattibilità dello sviluppo di un software che permetta il coordinamento di unità che si muovono in uno spazio per raggiungere una lista ordinata di punti d'interesse. Questo implica che bisognerà sviluppare un progetto negli ambiti del real time monitoring e analysis, e del predictivity e real time decision making. Inoltre, esso affronta le problematiche del mondo della logistica e dell'ottimizzazione delle performance di consegna.
 Verranno quindi consegnati i seguenti documenti:
 \begin{itemize}
-	\item Codice sorgente di quanto realizzato
+	\item Codice sorgente di quanto realizzato;
 	\item Docker file con la componente applicativa, rappresentante il motore di calcolo;
 	\item Docker file con la componente applicativa, rappresentante il visualizzatore/monitor real time;
 	\item Docker file, da istanziare N volte, rappresentante la singola unità;
