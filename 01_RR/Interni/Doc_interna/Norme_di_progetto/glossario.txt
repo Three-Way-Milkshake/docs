@@ -18,7 +18,7 @@ A:pb:PB:\\\\gls{prodbase}
 G:wiki:wiki:wikis:Termine di origine hawaiana che significa veloce, con cui si identifica un tipo di sito internet che permette la creazione e la modifica di pagine multimediali attraverso un'interfaccia semplice
 G:git:git:X:Sistema di controllo del versionamento distribuito
 G:gitpush:push:X:Comando di \\\\gls{git} che permette di caricare le proprie modifiche locali sul server remoto condiviso del repository
-G:repository:repository:X:Posizione di archiviazione per pacchetti software
+G:repository:repository:X:Posizione di archiviazione per pacchetti software (esempio: github)
 A:repo:repo:\\\\gls{repository}
 G:bash:bash:X:\\\\gls{shell} Unix ed un linguaggio interpretato scritto da Brian Fox per il progetto GNU come sostituto del software gratuito per la shell Bourne
 G:gitcommit:commit:commits:Comando di \\\\gls{git} che permette di salvare e versionare le modifiche attuate ai file in locale
