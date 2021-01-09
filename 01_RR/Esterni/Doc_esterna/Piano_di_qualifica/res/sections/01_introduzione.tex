@@ -1,30 +1,41 @@
 \section{Introduzione}
 \subsection{Scopo del documento}
-Il presente documento ha lo scopo di documentare le strategie di verifica e validazione che il gruppo \textit{Three Way Milkshake} ha deciso di adottare relativi al progetto \textbf{PORTACS}, per raggiungere gli obiettivi di qualità processo e prodotto.
+    Il presente documento ha lo scopo di:
+    \begin{itemize}
+        \item fissare le politiche per il perseguimento della qualità trasversale sull'intera organizzazione e specifica di ogni prodotto e servizio;
+        \item documentare le strategie di verifica e validazione che il gruppo Three Way Milkshake ha deciso di adottare relativi al progetto PORTACS, per raggiungere gli obiettivi di qualità e soddisfare il cliente.
+    \end{itemize}
+
 
 \subsection{Scopo del prodotto}
-Il capitolato C5 propone un progetto in cui viene richiesto lo sviluppo di un software per il monitoraggio in tempo reale di unità che si muovono in uno spazio definito. All’interno di questo spazio, creato dall’utente per riprodurre le caratteristiche di un ambiente reale, le unità dovranno essere in grado di circolare in autonomia, o sotto il controllo dell’utente, per raggiungere dei punti di interesse posti nella mappa.  La circolazione è sottoposta a vincoli di viabilità e ad ostacoli propri della topologia dell’ambiente, deve evitare le collisioni con le altre unità e prevedere la gestione di situazioni critiche nel traffico.
-\newline\newline
-Il progetto PORTACS si pone come obiettivo finale di dimostrare la fattibilità di sviluppare un software che permetta il monitoraggio in tempo reale di unità che si muovono in uno spazio per raggiungere una lista ordinata di punti d’interesse. Per facilitare lo sviluppo del progetto e dopo accordo con l'azienda, si è deciso di contestualizzare lo sviluppo ad un magazzino in cui il sistema centrale pilota i vari muletti verso le destinazioni.
+    %todo check versione final sezione
+    Il capitolato C5 propone un progetto in cui viene richiesto lo sviluppo di un software per il monitoraggio in tempo reale di unità che si muovono in uno spazio definito. All'interno di questo spazio, creato dall'utente per riprodurre le caratteristiche di un ambiente reale, le unità dovranno essere in grado di circolare in autonomia, o sotto il controllo dell'utente, per raggiungere dei punti di interesse posti nella mappa.  La circolazione è sottoposta a vincoli di viabilità e ad ostacoli propri della topologia dell'ambiente, deve evitare le collisioni con le altre unità e prevedere la gestione di situazioni critiche nel traffico.
+    \newline\newline
+    Il progetto PORTACS si pone come obiettivo finale di dimostrare la fattibilità di sviluppare un software che permetta il monitoraggio in tempo reale di unità che si muovono in uno spazio per raggiungere una lista ordinata di punti d’interesse. Per facilitare lo sviluppo del progetto e dopo accordo con l'azienda, si è deciso di contestualizzare lo sviluppo ad un magazzino in cui il sistema centrale pilota i vari muletti verso le destinazioni.
 
 \subsection{Riferimenti}
-\subsubsection{Normativi}
-\begin{itemize}
-	\item \textsc{Norme di progetto}: per qualsiasi convenzione sulla nomenclatura degli elementi presenti all’interno del documento;
-	\item Specifica tecnico-economica e organigramma: \newline  \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/RO.html}} 
-	\item Regolamento progetto didattico - slide del corso di Ingegneria del Software: \newline \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/P1.pdf}}
-\end{itemize}
+\label{ref}
+    \subsubsection{Normativi}
+    \begin{itemize}
+    	\item \textsc{Norme di progetto}: per qualsiasi convenzione sulla nomenclatura degli elementi presenti all'interno del documento;
+    	\item offerta tecnico-economica ed organigramma: \newline  \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/RO.html}};
+    	\item regolamento progetto didattico - slide del corso di Ingegneria del Software: \newline \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/P1.pdf}};
+        \item standard ISO 12207:\\ \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}};
+        \item standard ISO/IEC 25010:2011:\\
+        \uline{\url{https://www.iso.org/standard/35733.html}}.
+    \end{itemize}
 
-\subsubsection{Informativi}
-\begin{itemize}
-	\item \textsc{Glossario}: per la definizione dei termini e degli acronimi evidenziati nel documento;
-	\item Capitolato d'appalto C5-PORTACS: \newline
-	\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf}}
-	\item Software Engineering - Iam Sommerville - $10^{th}$ Edition
-\item Slide L12 del corso Ingegneria del Software - Qualità del Software:\newline
-\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L12.pdf}}
-\item Slide L13 del corso Ingegneria del Software - Qualità di Processo:\newline
-\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L13.pdf}}
-\item Slide L14 del corso Ingegneria del Software - Verifica e Validazione: introduzione :\newline
-\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L14.pdf}}
-\end{itemize}
+    \subsubsection{Informativi}
+    \begin{itemize}
+        %todo decidere standard per indicare o no il glossario nell'intro
+    	\item \textsc{Glossario}: per la definizione dei termini e degli acronimi evidenziati nel documento;
+    	\item capitolato d'appalto C5-PORTACS: \newline
+    	\uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C5.pdf}};
+       	\item Software Engineering - Iam Sommerville - $10^{th}$ Edition;
+        \item slide L12 del corso Ingegneria del Software - Qualità del Software:\newline
+        \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L12.pdf}};
+        \item slide L13 del corso Ingegneria del Software - Qualità di Processo:\newline
+        \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L13.pdf}};
+        \item slide L14 del corso Ingegneria del Software - Verifica e Validazione: introduzione :\newline
+        \uline{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L14.pdf}}.
+    \end{itemize}

@@ -1,151 +1,148 @@
-
-
 \section{Qualità del processo}
 
 \subsection{Scopo}
-Per valutare  la qualità del prodotto, il gruppo Three Way Milkshake ha deciso di avvalersi degli standard ISO/IEC$_G$ 12207:1995 e ISO/IEC$_G$ 15504, semplificandoli e riadattandoli in base alle esigenze del gruppo di lavoro.\\
-I processi individuati sono presentati di seguito.
+    Per valutare  la qualità del prodotto, il gruppo Three Way Milkshake ha deciso di avvalersi degli standard ISO/IEC 12207 e ISO/IEC 25010:2011\footnote{Vedi \hyperref[ref]{riferimenti}}, semplificandoli e riadattandoli in base alle esigenze. Le metriche per i processi individuati sono presentate di seguito, al nome si affianca una sigla che verrà utilizzata per riferirsi alle stesse successivamente.
 
 \subsection{Processi di Sviluppo}
 
 	\subsubsection{Analisi dei Requisiti}
-		\paragraph{Metriche} 
+		\paragraph{Metriche}
 		\begin{enumerate}
 		\item []
 			 \textbf{Requisiti obbligatori soddisfatti (PROS)}\\
 			Indica la quantità di requisiti obbligatori soddisfatti rispetto al totale.
 			\begin{itemize}
-				\item \textbf{Misurazione:} percentuale; $\frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali}$;
-				\item \textbf{Valore preferibile:} 100\%;
-				\item \textbf{Valore accettabile:} 100\%.
+				\item \textbf{misurazione:} percentuale; $\frac{\text{requisiti\_obbligatori\_soddisfatti}}{requisiti\_obbligatori\_totali}$; %todo lasciare math text (corsivo) o forzare text normale
+				\item \textbf{valore preferibile:} 100\%;
+				\item \textbf{valore accettabile:} 100\%.
 			\end{itemize}
-		\end{enumerate}	
-	\subsubsection{Progettazione}	
-		\paragraph{Metriche} 
+		\end{enumerate}
+	\subsubsection{Progettazione}
+		\paragraph{Metriche}
 		\begin{enumerate}
 		\item []
-			\textbf{Accoppiamento tra classi ed oggetti (CBO)}\\ 
+			\textbf{Accoppiamento tra classi ed oggetti (CBO)}\\
 			Indica l'accoppiamento tra classi e oggetti; due classi si dicono accoppiate se una utilizza metodi o variabili dell'altra.
 			\begin{itemize}
-				\item \textbf{Misurazione:} valore intero;
-				\item \textbf{Valore preferibile:} 0$\leq$CBO$\leq$1;
-				\item \textbf{Valore accettabile:} 0$\leq$CBO$\leq$6.
+				\item \textbf{misurazione:} valore intero;
+				\item \textbf{valore preferibile:} 0$\leq$CBO$\leq$1;
+				\item \textbf{valore accettabile:} 0$\leq$CBO$\leq$6.
 			\end{itemize}
 		\end{enumerate}
 	\subsubsection{Codifica}
-		\paragraph{Metriche} 
+		\paragraph{Metriche}
 		\begin{enumerate}
 		\item[]
-		
+
 			\textbf{Profondità delle gerarchie(DEP)}\\
 			Indica la profondità delle gerarchie nel codice sviluppato.
 			\begin{itemize}
-				\item \textbf{Misurazione:} valore intero;
-				\item \textbf{Valore preferibile:} DEP$\leq$2;
-				\item \textbf{Valore accettabile:} DEP$\leq$3.
+				\item \textbf{misurazione:} valore intero;
+				\item \textbf{valore preferibile:} DEP$\leq$2;
+				\item \textbf{valore accettabile:} DEP$\leq$3.
 			\end{itemize}
 \pagebreak
 		\item[]
 			\textbf{Livello di Annidamento (LEV)}\\
 			Indica il livello di annidamento nei vari metodi presenti nel codice prodotto.
 			\begin{itemize}
-				\item \textbf{Misurazione:} valore intero;
-				\item \textbf{Valore preferibile:} 1$\leq$LEV$\leq$3;
-				\item \textbf{Valore accettabile:} 1$\leq$LEV$\leq$6.
+				\item \textbf{misurazione:} valore intero;
+				\item \textbf{valore preferibile:} 1$\leq$LEV$\leq$3;
+				\item \textbf{valore accettabile:} 1$\leq$LEV$\leq$6.
 			\end{itemize}
 		\item[]
 			\textbf{Parametri per metodo (PAR)}\\
 			Indica il numero di parametri presenti nei metodi sviluppati nel codice.
 			\begin{itemize}
-				\item \textbf{Misurazione:} valore intero;
-				\item \textbf{Valore preferibile:} PAR$\leq$4;
-				\item \textbf{Valore accettabile:} PAR$\leq$6.
+				\item \textbf{misurazione:} valore intero;
+				\item \textbf{valore preferibile:} PAR$\leq$4;
+				\item \textbf{valore accettabile:} PAR$\leq$6.
 			\end{itemize}
 		\item[]
 			\textbf{Rapporto Codice-Commenti (RCC)}\\
 			Indica il rapporto tra le linee di codice e le linee di commento all'interno del file.
 			\begin{itemize}
-				\item \textbf{Misurazione:} valore decimale; $\frac{linee\_codice}{linee\_commento}$;
-				\item \textbf{Valore preferibile:} RCC$\geq$0.4;
-				\item \textbf{Valore accettabile:} RCC$\geq$0.2.
+				\item \textbf{misurazione:} valore decimale; $\frac{linee\_codice}{linee\_commento}$;
+				\item \textbf{valore preferibile:} RCC$\geq$0.4;
+				\item \textbf{valore accettabile:} RCC$\geq$0.2.
 			\end{itemize}
 		\end{enumerate}
 
 \subsection{Processi di Supporto}
 	\subsubsection{Pianificazione}
-		\paragraph{Metriche} 
+		\paragraph{Metriche}
 		\begin{enumerate}
 		\item[]
 			\textbf{Budget at Completion (BAC)}\\
 			Indica il budget totale allocato per il progetto
 			\begin{itemize}
-				\item \textbf{Misurazione:} valore intero;
-				\item \textbf{Valore preferibile:} \textit{preventivo};
-				\item \textbf{Valore accettabile:} \textit{preventivo}-5\%$\leq$BAC$\leq$\textit{preventivo}+5\%.
+				\item \textbf{misurazione:} valore intero;
+				\item \textbf{valore preferibile:} \textit{preventivo};
+				\item \textbf{valore accettabile:} \textit{preventivo}-5\%$\leq$BAC$\leq$\textit{preventivo}+5\%.
 			\end{itemize}
 		\item[]
 			\textbf{Earned Value (EV)}\\
 			Indica la quantità di guadagno ottenuta dal lavoro effettuato fino al momento del calcolo.
 			\begin{itemize}
-				\item \textbf{Misurazione:} \textit{preventivo} $\cdot$ \%$\_$lavoro$\_$pianificato;
-				\item \textbf{Valore preferibile:} EV$\geq$0;
-				\item \textbf{Valore accettabile:} EV$\geq$0.
+				\item \textbf{misurazione:} \textit{preventivo} $\cdot$ \%$\_$lavoro$\_$pianificato;
+				\item \textbf{valore preferibile:} EV$\geq$0;
+				\item \textbf{valore accettabile:} EV$\geq$0.
 			\end{itemize}
 		\item[]
 			\textbf{Planned Value (PV)}\\
 			Indica la quantità di guadagno stimata sul lavoro pianificato al momento del calcolo.
 			\begin{itemize}
-				\item \textbf{Misurazione:} \textit{preventivo} $\cdot$ \%$\_$lavoro$\_$pianificato;
-				\item \textbf{Valore preferibile:} PV$\geq$0;
-				\item \textbf{Valore accettabile:} PV$\geq$0;
+				\item \textbf{misurazione:} \textit{preventivo} $\cdot$ \%$\_$lavoro$\_$pianificato;
+				\item \textbf{valore preferibile:} PV$\geq$0;
+				\item \textbf{valore accettabile:} PV$\geq$0;
 			\end{itemize}
 		\item[]
 			\textbf{Schedule Variance (SV)}\\
 			Indica l'anticipo o il ritardo del lavoro effettuato rispetto alla pianificazione.
 			\begin{itemize}
-				\item \textbf{Misurazione:} EV-PV;
-				\item \textbf{Valore preferibile:} SV$\geq$0;
-				\item \textbf{Valore accettabile:} SV=0.
+				\item \textbf{misurazione:} EV-PV;
+				\item \textbf{valore preferibile:} SV$\geq$0;
+				\item \textbf{valore accettabile:} SV=0.
 			\end{itemize}
 		\item[]
 			\textbf{Actual Cost (AC)}\\
 			Il denaro speso fino al momento del calcolo.
 			\begin{itemize}
-				\item \textbf{Misurazione:} valore intero;
-				\item \textbf{Valore preferibile:} 0$\leq$AC$\leq$PV;
-				\item \textbf{Valore accettabile:} 0$\leq$AC$\leq$\textit{budget}.
+				\item \textbf{misurazione:} valore intero;
+				\item \textbf{valore preferibile:} 0$\leq$AC$\leq$PV;
+				\item \textbf{valore accettabile:} 0$\leq$AC$\leq$\textit{budget}.
 			\end{itemize}
 		\item[]
 			\textbf{Cost Variance (CV)}\\
 			Il discostamento tra il costo del lavoro ad ora effettuato e il costo preventivato.
 			\begin{itemize}
-				\item \textbf{Misurazione:} EV-AC;
-				\item \textbf{Valore preferibile:} CV$\geq$0;
-				\item \textbf{Valore accettabile:} CV$\geq$0.
+				\item \textbf{misurazione:} EV-AC;
+				\item \textbf{valore preferibile:} CV$\geq$0;
+				\item \textbf{valore accettabile:} CV$\geq$0.
 			\end{itemize}
 		\end{enumerate}
 	\subsubsection{Verifica}
-		\paragraph{Metriche} 
+		\paragraph{Metriche}
 		\begin{enumerate}
-		\item[]	
+		\item[]
 			\textbf{Code Coverage (CC)}\\
 			Indica la quantità di codice attraversato durante l'esecuzione dei test; aiuta a valuare la completezza dei test.
 			\begin{itemize}
-				\item \textbf{Misurazione:} percentuale; $\frac{linee\_codice\_verificate}{linee\_codice\_totali}$;
-				\item \textbf{Valore preferibile:} 100\%;
-				\item \textbf{Valore accettabile:} 75\%.
+				\item \textbf{misurazione:} percentuale; $\frac{linee\_codice\_verificate}{linee\_codice\_totali}$;
+				\item \textbf{valore preferibile:} 100\%;
+				\item \textbf{valore accettabile:} 75\%.
 			\end{itemize}
 		\end{enumerate}
 	\subsubsection{Documentazione}
-		\paragraph{Metriche} 
+		\paragraph{Metriche}
 		\begin{enumerate}
 		\item[]
 			\textbf{Indice di Gulpease(IG)}\\
 			Esprime una valutazione della qualità prodotta, stimandone la leggibilità.
 			\begin{itemize}
-				\item \textbf{Misurazione:} [ $89+ \frac{(300-num\_frasi-10\cdot num\_lettere)}{num\_parole}$ ];
-				\item \textbf{Valore preferibile:} 80$\leq$IG$\leq$100;
-				\item \textbf{Valore accettabile:} 50$\leq$IG$\leq$100.
+				\item \textbf{misurazione:} [ $89+ \frac{(300-num\_frasi-10\cdot num\_lettere)}{num\_parole}$ ];
+				\item \textbf{valore preferibile:} 80$\leq$IG$\leq$100;
+				\item \textbf{valore accettabile:} 50$\leq$IG$\leq$100.
 			\end{itemize}
 		\end{enumerate}
 \pagebreak
@@ -157,7 +154,7 @@ I processi individuati sono presentati di seguito.
 		\begin{tabular}{cc!{\color[HTML]{9b240a}\vrule width 0.05cm}cc}
 			\rowcolorhead
 			\headertitle{Codice} & \headertitle{Tipo Processo} & \headertitle{Valori Preferibili} & \headertitle{Valori Accettabili} \\
-			
+
 			PROS & Analisi dei Requisiti & 100\% & 100\%\\
 			CBO & Progettazione & 0$\leq$CBO$\leq$1 & 0$\leq$CBO$\leq$6\\
 			DEP & Codifica & DEP$\leq$2 & DEP$\leq$3\\

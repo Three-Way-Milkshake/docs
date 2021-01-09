@@ -10,42 +10,42 @@
 \input{glossario.tex}
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
-	\pagebreak	
-	
+	\pagebreak
+
 	% Registro delle modifiche
 	\input{../../../../latex/changelog.tex}
-	\input{config/changelog_input.tex} % modifica questo file       
+	\input{config/changelog_input.tex} % modifica questo file
 	\end{longtable}
 	\pagebreak
-		
+
 	% indice
-	\tableofcontents	
+	\tableofcontents
 	\pagebreak
-	
+
 	% indice delle figure, non ci sono figure
 	\listoffigures
 	\pagebreak
-	
+
 	% indice delle tabelle
 	\listoftables
 	\pagebreak
-		
+
 	% contenuto del documento, ogni sezione in un file
-	\input{res/sections/01_introduzione.tex} % modifica questo file
+	\input{res/sections/01_introduzione.tex} % todo check
 	\pagebreak
-	
-	\input{res/sections/02_qualita_del_processo.tex} % modifica questo file
+
+	\input{res/sections/02_qualita_del_processo.tex} % todo verifica
 	\pagebreak
-	
-	\input{res/sections/03_qualita_del_prodotto.tex} % modifica questo file
+
+	\input{res/sections/03_qualita_del_prodotto.tex} % todo verifica
 	\pagebreak
-	
-	\input{res/sections/04_test.tex} % modifica questo file
+
+	\input{res/sections/04_test.tex} % todo verifica
 	\pagebreak
-	
-	\input{res/sections/05_resoconto.tex}
+
+	\input{res/sections/05_resoconto.tex} %todo verifica
+
 	\pagebreak
-	% ecc, aggiungere le sezioni successive creando i relativi file
 	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
 	\printglossary[title=Glossario dei Termini]
 \end{document}
