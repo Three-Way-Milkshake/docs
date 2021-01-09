@@ -1,4 +1,31 @@
 \section{Verbale della riunione}
+
+\subsection{Confronto con l'azienda}
+\subsubsection{Domande effettuate}
+\begin{enumerate}
+	\item Riguardo i vincoli tra tipologie di mezzo e corsie: dobbiamo prevedere la presenza di mezzi di tipo diverso che possono quindi avere capienza di merce diversa? 
+	
+	\item Sempre riguardo la merce: 1. dobbiamo considerare la quantità di merci da scaricare per ogni POI ? 2. dobbiamo considerare dimensioni diverse per le merci che quindi occupano spazi diversi sui muletti? 
+	
+	\item Pensavamo di porre come vincolo il fatto che una persona fisica si muove a piedi solo per caricare/scaricare le merci, per il resto si muove a bordo di un muletto. Il che implicherebbe la geolocalizzazione solo per i muletti. Va bene questa assunzione? 
+	
+	\item I POI devono essere differenziati a seconda del loro scopo. Pensavamo di dividerli in: carico merci (sul muletto), scarico merci (dal muletto, nel magazzino), base deposito muletti. È necessario considerare più punti di carico e più basi di deposito muletti all'interno di uno stesso magazzino? 
+	
+	\item Siccome le unità in movimento hanno sempre un operatore a bordo, pensavamo di identificare quell'unità con l'ID univoco di quella persona a bordo in quel momento finché svolge la sua funzione. Può andare?
+\end{enumerate}
+\subsubsection{Risposte ricevute}
+\begin{enumerate}
+	\item Non serve, si può ipotizzare che tutti i mezzi siano "uguali" e che occupino un numero fisso di posizioni (anche 1x1 può andar bene).
+	
+	\item No, non sono temi legati a questo capitolato, in quanto si andrebbero ad aprire numerosi altri fronti (tipo problema dello zaino, impilamento, etc...).
+	
+	\item Il tema dei pedoni è un tema facoltativo, se decidete di implementarlo, dovete prevedere che i pedoni si possano muovere in tutta l'area di lavoro. 
+	
+	\item La caratterizzazione dei POI non è richiesta, tuttavia facilita la chiarezza del tema. Per cui, secondo me, è possibile prevedere più POI per ogni tipologia all'interno di un magazzino.
+	
+	\item Consiglio di identificare l'unità tramite l'id univoco del muletto stesso. Al cambio turno, ad esempio, il muletto resta sempre nella stessa posizione mentre chi lascia o inizia il turno si muove. Il muletto, in questo frangente, continua ad "occupare spazio" e quindi deve essere tracciato.
+\end{enumerate}
+
 \subsection{Controllo e discussione avanzamento vari documenti}
 Si è iniziato il meeting controllando l'avanzamento dei vari documenti, dove tutti sono a buon punto e con data di scadenza 2021-01-07.\\
 In particolare:
