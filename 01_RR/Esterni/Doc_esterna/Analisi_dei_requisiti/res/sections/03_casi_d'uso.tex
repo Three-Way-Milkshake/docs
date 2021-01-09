@@ -147,23 +147,43 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 	\item 	\textbf{Descrizione:} l'amministratore visualizza un messaggio d'errore dovuto al fatto di aver inserito i dati di un utente già presente nel sistema.
 \end{itemize}
 
-\subsection{UC3 - Modifica utente}
-
+\subsection{UC3 - Gestione account già presenti}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.52]{res/images/uc3.png}
-	\caption{UC3 - Modifica utente}
+	\caption{UC3 - Gestione account già presenti}
+\end{figure}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l'amministratore intende effettuare un cambiamento degli account già presenti nel sistema;
+	\item 	\textbf{Postcondizioni:} vi è un cambiamento degli account registrati;
+	\item 	\textbf{Scenario principale:} vengono visualizzate le operazioni che l'amministratore può effettuare per gestire gli account già presenti:
+	\begin{itemize}
+		\item modificare i dati di un utente (UC3.1);
+		\item eliminare l'account di un utente (UC3.2).
+	\end{itemize}
+	Viene poi mostrato un form di ricerca per inserire il codice identificativo dell'utente interessato;
+	\item 	\textbf{Descrizione:} l'amministratore ha il compito di gestire gli account presenti nel sistema e aggiornarli in base all'organico del magazzino.
+\end{itemize}
+
+\subsubsection{UC3.1 - Modifica utente}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.52]{res/images/uc3-1.png}
+	\caption{UC3.1 - Modifica utente}
 \end{figure}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore intende modificare il profilo dell'utente già registrato all'interno dell'applicativo;
+	\item 	\textbf{Precondizioni:} l'amministratore intende modificare il profilo dell'utente selezionato già registrato all'interno dell'applicativo;
 	\item 	\textbf{Postcondizioni:} l'amministratore ha cambiato alcuni campi dell'account di un utente;
 	\item 	\textbf{Scenario principale:} l'amministratore modifica un campo del profilo dell'utente;
 	\item 	\textbf{Descrizione:} per modificare un campo dell'account di un lavoratore, l'amministratore deve modificare quello corrente con quello corretto.
 
 \end{itemize}
 
-\subsubsection{UC3.1 - Modifica nome}
+\paragraph{UC3.1.1 - Modifica nome}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
@@ -173,7 +193,7 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al nome del lavoratore, l'amministratore aggiorna il \gls{form}\textsubscript{G}.
 \end{itemize}
 
-\subsubsection{UC3.2 - Modifica cognome}
+\paragraph{UC3.1.2 - Modifica cognome}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
@@ -183,7 +203,7 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome del lavoratore, l'amministratore aggiorna il \gls{form}\textsubscript{G}.
 
 \end{itemize}
-\subsubsection{UC3.3 - Modifica ruolo}
+\paragraph{UC3.1.3 - Modifica ruolo}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
@@ -193,6 +213,17 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al ruolo del lavoratore, l'amministratore aggiorna il \gls{form}\textsubscript{G}.
 
 \end{itemize}
+
+\subsubsection{UC3.2 - Elimina utente}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l'amministratore intende eliminare il profilo dell'utente selezionato;
+	\item 	\textbf{Postcondizioni:} è stato eliminato dal sistema l'account dell'utente selezionato;
+	\item 	\textbf{Scenario principale:} l'amministratore preme il pulsante apposito per l'eliminazione dell'account;
+	\item 	\textbf{Descrizione:} può essere necessario eliminare l'account di un utente.
+\end{itemize}
+
 \subsection{UC4 - Gestione task}
 
 \begin{figure}[H]
