@@ -1,13 +1,11 @@
 \section{Descrizione generale}
 
-\subsection{Obiettivi del prodotto}
-Il \gls{progetto}\textsubscript{G} PORTACS si pone come obiettivo finale di dimostrare la fattibilità di sviluppare un software che permetta il monitoraggio in tempo reale di unità che si muovono in uno spazio per raggiungere una lista ordinata di punti d’interesse. Per facilitare lo sviluppo del \gls{progetto}\textsubscript{G} e dopo accordo con l'azienda, si è deciso di contestualizzare lo sviluppo ad un magazzino in cui il sistema centrale pilota i vari muletti verso le destinazioni.
 
 \subsection{Caratteristiche del prodotto}
 Il dominio del software è ristretto alla gestione di unità trasportatrici (muletti) operative all’interno di un magazzino. Ogni unità è istruita di una lista di mansioni da svolgere, che prevedono il trasporto di merce da un punto di carico a uno o più punti di scarico. Ogni punto di interesse è legato ad un \gls{task}\textsubscript{G} da svolgere e costituisce per l’unità una tappa da raggiungere nel soddisfacimento dei propri compiti. Ogni muletto è caratterizzato dal proprio codice identificativo e sono tutti dello stesso tipo.
 La circolazione all’interno del magazzino è regolata da precisi vincoli di viabilità, deve tenere conto dell’architettura dell’ambiente e della presenza delle altre unità.
 
-Il motore principale del prodotto risiede nel sistema centrale, il cui obiettivo è coordinare le unità in guida autonoma, dalle quali riceve informazioni sulla posizione e velocità per gli spostamenti necessari all’evasione dei \gls{task}\textsubscript{G} assegnati. L’interfaccia utente del software permetterà alle figure in carico della gestione del magazzino di riprodurre una mappa dell’ambiente, istruire il sistema dei compiti che devono essere eseguiti dalle unità e gestire il personale. Un sistema di autenticazione permetterà l’accesso degli operatori ai muletti: la guida manuale delle unità, se attivata, verrà simulata tramite un’interfaccia dedicata all’interno dell’applicazione.
+Il motore principale del prodotto risiede nel server centrale, il cui obiettivo è coordinare le unità in guida autonoma, dalle quali riceve informazioni sulla posizione e velocità per gli spostamenti necessari all’evasione dei \gls{task}\textsubscript{G} assegnati. L’interfaccia utente del software permetterà alle figure in carico della gestione del magazzino di riprodurre una mappa dell’ambiente, istruire il sistema dei compiti che devono essere eseguiti dalle unità e gestire il personale. Un sistema di autenticazione permetterà l’accesso degli operatori ai muletti: la guida manuale delle unità, se attivata, verrà simulata tramite un’interfaccia dedicata all’interno dell’applicazione.
 
 \subsubsection{Mappa}
 Il magazzino viene rappresentano nel sistema tramite una mappa, approssimata ad una matrice, in cui verranno identificati tutte le sue caratteristiche per permettere al sistema di coordinare le unità in modo autonomo.
@@ -28,6 +26,11 @@ Il magazzino viene rappresentano nel sistema tramite una mappa, approssimata ad 
 \end{itemize}
 
 \subsection{Caratteristiche degli utenti}
-In questo magazzino ogni lavoratore avrà un ruolo importante all'interno del sistema: gli operatori controlleranno le unità nel caso di guida manuale, il responsabile potrà inserire i \glspl{task}\textsubscript{G} da soddisfare, mentre l'amministratore gestirà il personale e potrà apportare modifiche alla \gls{planimetria}\textsubscript{G} e alla percorribilità della mappa, in base alle esigenze.
+Nel magazzino ogni lavoratore ha un ruolo: 
+\begin{itemize}
+	\item gli \textbf{operatori} sono a bordo dei muletti, guidano o supervisionano il mezzo;
+	\item il \textbf{responsabile} è la figura in capo della logistica del magazzino: inserisce i compiti \glspl{task}\textsubscript{G} che devono essere svolti dagli operatori; 
+	\item l'\textbf{amministratore} ha in capo la gestione operativa: inserisce, modifica ed elimina gli account del personale per l'accesso al sistema, censisce i muletti nel database, crea e modifica la \gls{planimetria}\textsubscript{G} e la percorribilità della mappa del magazzino.
+\end{itemize}
 \subsection{Vincoli progettuali}
 Il prodotto deve soddisfare il vincolo che tutti i \acrshort{POI}\textsubscript{A} all'interno della mappa devono essere pubblici e globali, ogni unità deve quindi poter vedere tutti i punti nella mappa.
