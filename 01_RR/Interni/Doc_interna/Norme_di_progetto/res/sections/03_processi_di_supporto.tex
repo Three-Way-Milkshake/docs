@@ -213,41 +213,122 @@
     \subsubsection{Descrizione}
         Quando un verificatore riscontra dei problemi o degli errori, aggiunge dei commenti che iniziano con "TODO", così da facilitare la ricerca poi, che indichino brevemente i problema individuati e, tramite il meccanismo degli \hyperref[jiraintegration]{\textit{smart commits}}, riporta la task o sottotask relativa nello stato \textit{in progress} ed aggiunge un commento che riassuntivo. Nel caso sia necessario aggiungere più informazioni, il verificatore si può recare nella board ed aggiungere ulteriori commenti. Il verificatore viene quindi sollevato automaticamente dal compito, il responsabile controlla il problema segnalato, se necessario imposta una priorità diversa da \textit{medium}, aggiunge eventuali commenti o descrizioni e riassegna la task ad un altro membro. Il responsabile può sfruttare le sezioni \textit{history} e \textit{comments} di ogni task per controllare chi ha lavorato in passato a quel compito di modo da facilitare la scelta di assegnazione.
 
-\subsection{Accertamento della qualità} %todo from PdQ
-    AGGIUNGERE DA PIANO DI QUALIFICA
+\subsection{Accertamento della qualità} 
     \subsubsection{Scopo}
-    Lo scopo del processo di ...
+    Lo scopo del processo di accertamento della qualità è di garantire che il prodotto e i servizi offerti rispettino gli obiettivi di qualità e che i bisogni del proponente siano soddisfatti.
     \subsubsection{Aspettative}
-    ...
+    Gli obiettivi che si desidera raggiungere tramite la gestione della qualità sono i seguenti:
+    \begin{itemize}
+    	\item qualità nell'organizzazione e nei suoi processi;
+    	\item qualità del prodotto;
+    	\item soddisfazione finale sul prodotto e il lavoro svolto da parte del proponente;
+    	\item qualità provata oggettivamente.
+    \end{itemize}
     \subsubsection{Descrizione}
-    ...
-    \subsubsection{altre sottosezioni}
-    ...
-
-\subsection{Verifica} %todo from PdQ
+    Per trattare approfonditamente la gestione della qualità si fa riferimento al \textsc{Piano di Qualifica v1.0.0} dove sono descritte le modalità impiegate per garantire la qualità nello sviluppo del progetto.\\In particolare, in tale documento:
+    \begin{itemize}
+    	\item sono presentati gli standard utilizzati;
+    	\item sono individuati i processi di interesse negli standard;
+    	\item sono individuati gli attributi del software più significativi per il progetto.
+    \end{itemize}
+	Per ogni processo vengono descritti:
+	\begin{itemize}
+		\item gli obiettivi da perseguire;
+		\item le strategie da applicare;
+		\item le metriche da utilizzare.
+	\end{itemize}
+	In questo caso si mira ad ottenere software e documentazione di qualità soddisfacente.
+    \subsubsection{Attività}
+    Le tre attività principali del processo sono:
+    \begin{itemize}
+    	\item \textbf{Pianificazione:} porsi degli obiettivi di qualità, definire strategie per raggiungerli e disporre di conseguenza persone e risore nel modo migliore;
+    	\item \textbf{Valutazione:} mettere in atto la pianificazione, applicando i criteri, misurando e monitorando i risultati;
+    	\item \textbf{Reazione:} sulla base dei risultati, adottare le proprie strategie e criteri.
+    \end{itemize}
+	\subsubsection{Strumenti}
+	Gli strumenti predefiniti per la qualità sono:
+	\begin{itemize}
+		\item forniti dallo standard ISO 12207;
+		\item le metriche.
+	\end{itemize}
+\subsection{Verifica} 
     \label{verifica}
-    AGGIUNGERE DA PIANO DI QUALIFICA
     \subsubsection{Scopo}
-    Lo scopo del processo di ...
+    Il processo di verifica ha per scopo la realizzazione di prodotti corretti, funzionali e completi.\\Sono soggetti a verifica il software e i documenti.
     \subsubsection{Aspettative}
-    ...
+    Il corretto svolgimento del processo di verifica rispetta i punti seguenti:
+    \begin{itemize}
+    	\item viene effettuata seguendo le procedure definite;
+    	\item vi sono criteri chiari e affidabili da seguire per verificare;
+    	\item ogni fase del ciclo di vita attraverso cui i prodotti passano deve essere verificata;
+    	\item dopo la fase di  verifica, il prodotto è in uno stato stabile;
+    	\item rende possibile la validazione del prodotto.
+    \end{itemize}
     \subsubsection{Descrizione}
-    ...
-    \subsubsection{altre sottosezioni}
-    ...
-    \subsubsection{Strumenti}
-    ...
+    Il processo di verifica prende in input ciò che è già stato prodotto e lo restituisce in uno stato conforme alle aspettative.\\Per ottenere tale risultato, il processo si divide in due fasi:una di analisi e una di test.
+    \subsubsection{Attività}
+    \paragraph{Analisi}
+    La fase di analisi si divide in analisi statica e analisi dinamica.\\
+    \textbf{Analisi statica}\\
+    L'analisi statica è un processo che esegue controlli sulla correttezza di documenti e codice, senza alcuna esecuzione dello stesso.\\I metodi di analisi statica verificano la conformità dei prodotti con le regole fissate, tramite metodi manuali oppure metodi automatizzati.\\ 
+    \textbf{Analisi dinamica}\\
+    L'analisi dinamica richiede l'esecuzione del codice per valutarne la qualità.\\Vengono realizzati dei test  che verificano la funzionalità dei frammenti di codice analizzati.
+    
+    \paragraph{Test}
+    Per approfondimenti sui test, si fa riferimento al \textsc{Piano di Qualifica v1.0.0}.
+    L'attività di testing è necessaria per assicurarsi del corretto funzionamento del prodotto.\\Ogni test verrà indicato nel seguente modo:\\
+    \centering{\textbf{T[Tipo_test][Tipo_Requisito]-[Codice]-[Importanza]}}
+    \\Dove:
+    \begin{itemize}
+    	\item \textbf{Tipo_test:} indica il livello di astrazione a cui va operare il test, può essere:
+    	\begin{itemize}
+    		\item \textbf{A:} per i test di accettazione;
+    		\item \textbf{I:} per i test di integrazione;
+    		\item \textbf{S:} per i test di sistema;
+    		\item \textbf{U:} per i test di unità.
+    	\end{itemize}
+    	\item \textbf{Tipo_requisito:} indica il tipo di requisito a cui il test è associato, può essere:
+    	\begin{itemize}
+    		\item \textbf{F:} per i requisiti funzionali;
+    		\item \textbf{V:} per i requisiti di vincolo;
+    		\item \textbf{Q:} per i requisiti di qualità;
+    		\item \textbf{P:} per i requisiti prestazionali.
+    	\end{itemize}
+    	\item \textbf{Importanza:} indica l'importanza del requisito, può essere:
+    	\begin{itemize}
+    		\item \textbf{O:} per i requisiti obbligatori;
+    		\item \textbf{D:} per i requisiti desiderabili;
+    		\item \textbf{F:} per i requisiti facoltativi.
+    	\end{itemize}
+    \end{itemize}
+    Dei test ben scritti devono:
+    \begin{itemize}
+    	\item essere ripetibili;
+    	\item specificare i valori dei parametri sopraelencati: tipo_test,tipo_requisito,importanza;
+    	\item avvertire di esiti inattesi.
+    \end{itemize}
+	\textbf{Tipi di test}
+	Di seguito una breve descrizione dei tipi di test:
+	\begin{itemize}
+		\item \textbf{Test di Sistema:} effettuato sulla totalità del sistema, verificandone la corretta integrazione tra le varie parti e corretto comportamento;
+		\item \textbf{Test di Unità:} effettuati sulle più piccole parti analizzabili individualmente sall'interno del prodotto;
+		\item \textbf{Test di Integrazione:} verificano la corretta collaborazione e integrazione tra le varie parti del sistema;
+		\item \textbf{Test di Accettazione:} verificano che il prodotto realizzato nel suo complesso soddisfi i criteri di accettazione decisi con il cliente.
+	\end{itemize}
 
-\subsection{Validazione} %todo from PdQ
-    AGGIUNGERE DA PIANO DI QUALIFICA
+\subsection{Validazione} 
     \subsubsection{Scopo}
-    Lo scopo del processo di ...
+    Lo scopo del processo di validazione è necessaria per verificare che il prodotto sia conforme alle pretese del cliente e ad i requisiti stabiliti nelle fasi iniziali del progetto.
     \subsubsection{Aspettative}
-    ...
+    L'obiettivo della fase di validazione è portare i prodotti ad un livello soddisfacente.
     \subsubsection{Descrizione}
-    ...
-    \subsubsection{altre sottosezioni}
-    ...
-    \subsubsection{Strumenti}
-    ...
+    Il processo di validazione prende in input ciò che è stato prodotto e verificare che sia ad un livello atteso.
+    \subsubsection{Attività}
+    Anche la fase di validazione segue un processo diviso in più fasi:
+    \begin{itemize}
+    	\item identificare i prodotti completati che devono essere validati;
+    	\item identificare una strategia di validazione adatta e riutilizzabile;
+    	\item validare i documenti in esame con la strategia individuata e valutare gli esiti ottenuti.
+    \end{itemize}
+    
 
