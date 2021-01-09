@@ -190,7 +190,7 @@
     \subsubsection{Aspettative}
         Avere uno spazio di lavoro versionato, condivisp ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
     \subsubsection{Descrizione}
-        Il gruppo \group ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le \acrshort{repo}\textsubscript{A} di cui necessita.
+        Il gruppo, \group, ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le \acrshort{repo}\textsubscript{A} di cui necessita.
     \subsubsection{Workflow di versionamento}
         Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno \acrshort{repo}\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di \gls{git}\textsubscript{G} e GitHub si trovano nella \gls{wiki}\textsubscript{G} \textsc{GIT, Github \& Jira}
         \pparagraph{Pull requests}
@@ -267,7 +267,7 @@
     \subsubsection{Descrizione}
     Il processo di verifica prende in input ciò che è già stato prodotto e lo restituisce in uno stato conforme alle aspettative.\\Per ottenere tale risultato, il processo si divide in due fasi:una di analisi e una di test.
     \subsubsection{Attività}
-    \textbf{Analisi}\\
+    \pparagraph{Analisi}
     La fase di analisi si divide in analisi statica e analisi dinamica.\\
     \textbf{Analisi statica}\\
     L'analisi statica è un processo che esegue controlli sulla correttezza di documenti e codice, senza alcuna esecuzione dello stesso.\\I metodi di analisi statica verificano la conformità dei prodotti con le regole fissate, tramite metodi manuali oppure metodi automatizzati.\\ 
@@ -275,14 +275,12 @@
     L'analisi dinamica richiede l'esecuzione del codice per valutarne la qualità.\\Vengono realizzati dei test  che verificano la funzionalità dei frammenti di codice analizzati.
     
     \pparagraph{Test}
-    \begin{itemize}
-    	\item[]
     Per approfondimenti sui test, si fa riferimento al \textsc{Piano di Qualifica v1.0.0}.
     L'attività di testing è necessaria per assicurarsi del corretto funzionamento del prodotto.\\Ogni test verrà indicato nel seguente modo:\\
     \begin{center}
     	\textbf{T[Tipo$\_$test][Tipo$\_$Requisito]-[Codice]-[Importanza]}
     \end{center}
-    \\Dove:
+    Dove:
     \begin{itemize}
     	\item \textbf{Tipo$\_$test:} indica il livello di astrazione a cui va operare il test, può essere:
     	\begin{itemize}
@@ -311,7 +309,7 @@
     	\item specificare i valori dei parametri sopraelencati: tipo$\_$test,tipo$\_$requisito,importanza;
     	\item avvertire di esiti inattesi.
     \end{itemize}
-	\textbf{Tipi di test}
+	\textbf{Tipi di test}\\
 	Di seguito una breve descrizione dei tipi di test:
 	\begin{itemize}
 		\item \textbf{Test di Sistema:} effettuato sulla totalità del sistema, verificandone la corretta integrazione tra le varie parti e corretto comportamento;
@@ -319,7 +317,6 @@
 		\item \textbf{Test di Integrazione:} verificano la corretta collaborazione e integrazione tra le varie parti del sistema;
 		\item \textbf{Test di Accettazione:} verificano che il prodotto realizzato nel suo complesso soddisfi i criteri di accettazione decisi con il cliente.
 	\end{itemize}
-  \end{itemize}
 \subsection{Validazione} 
     \subsubsection{Scopo}
     Lo scopo del processo di validazione è necessaria per verificare che il prodotto sia conforme alle pretese del cliente e ad i requisiti stabiliti nelle fasi iniziali del progetto.
