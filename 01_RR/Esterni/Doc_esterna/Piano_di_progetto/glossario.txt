@@ -1,5 +1,5 @@
 G:periodo:periodo:X:Nel documento, il lasso di tempo che intercorre tra due revisioni successive.
-G:attivita:attività:X:
+G:attivita:attività:X:Insieme di una o più azioni il cui completamento porta ad un avanzamento nel complesso.
 G:modellosviluppo:modello di sviluppo:X:principio teorico che indica il metodo da seguire nel progettare e nello scrivere un programma. Essi simulano la realtà per vedere cosa accadrebbe e al fine di ridurre gli errori e ottimizzare prestazioni e risultati.
 G:capitolato:capitolato:capitolati:Documento tecnico redatto dal cliente in cui vengono specificati i vincoli contrattuali(prezzo e scadenze) per lo sviluppo di un determinato prodotto software. Viene presentato in un bando d’appalto per trovare qualcuno che possa svolgere il lavoro richiesto.
 G:requisito:requisito:requisiti:Esistono due interpretazioni principali di un requisito: (1)dal lato del bisogno(ovvero il cliente/utente) è la capacità necessaria a un utente per risolvere un problema  o  raggiungere  un  obiettivo; (2)dal  lato  della  soluzione  (ovvero  lo sviluppatore) è la capacità che deve essere posseduta (o condizione che deve essere  soddisfatta)  da  un  sistema  per  adempiere  a  un  obbligo.
