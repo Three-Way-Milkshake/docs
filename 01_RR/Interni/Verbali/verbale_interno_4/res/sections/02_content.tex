@@ -1,0 +1,50 @@
+\section{Verbale della riunione}
+\subsection{Lingua dei commit}
+Come prima decisione si è affrontata la scelta della lingua con cui dovranno essere eseguiti i commit. \\Attraverso un sondaggio, si è deciso di utilizzare l'inglese, per essere tutti coerenti.
+
+\subsection{Glossario}
+Si è discusso il funzionamento del glossario. Ogni documento avrà il proprio glossario a cui fare riferimento. 
+Per uniformare le definizioni e gestire i conflitti, si è scelto di adottare un file condiviso su \textit{Confluence} dove verranno inseriti tutti i termini di tutti i documenti con la loro descrizione e occorrenza.
+Ogni documento avrà un file di testo (.txt) dove vi saranno i termini e gli acronimi riscontrati nella stesure. Le parole dovranno essere definite secondo la seguente sintassi:
+\begin{itemize}
+\item \textbf{termini:}
+	\\ \texttt{ G:key:nome singolare:nome plurale:descrizione}
+	\\ esempio: \texttt{G:analisirequisiti:Analisi dei Requisiti:l'analisi dei requisiti è quel documento..}
+\item \textbf{acronimi:}
+	\\ 	\texttt{A:key:nome lungo:descrizione} 
+	\\ esempio: \texttt{A:pdp:PdP:Piano di Progetto}
+\end{itemize}
+Nel file \LaTeX\ del documento basterà scrivere il termine interessato. Uno script troverà le occorrenze dei nomi all'interno del documento e li sostituirà con \texttt{\textbackslash gls\{chiave\}} , così una volta compilato nel pdf il termine risulterà sottolineato e con una \textit{G} a pedice.
+La chiave deve essere univoca per ogni nome e abbreviazione.
+
+\subsection{Convenzione scrittura}
+Si è deciso che convenzioni di scrittura utilizzare durante la stesura dei documenti così da ottenere una coerenza:
+\begin{itemize}
+\item Three Way Milkshake, Way of Working, nome delle fasi: le iniziali vanno in maiuscolo;
+\item PORTACS: tutto in maiuscolo;
+\item nomi dei documenti: scritte in maiuscoletto e con le iniziali in maiuscolo \texttt{\textbackslash textsc{....}} \\esempio: \textsc{Analisi dei Requisiti}
+\item nomi dei ruoli: iniziale maiuscola 
+\\esempio: Analista
+\item Software/tecnologie: in corsivo 
+\\esempio: \textit{GitHub}
+\item voci del glossario: con G a pedice.
+\end{itemize}
+
+\subsection{Casi d'uso}
+Si sono letti e corretti i casi d'uso scritti degli Analisti. I problemi riscontrati sono:
+\begin{itemize}
+	\item la formalizzazione del problema di avere carichi multipli per lo stesso POI;
+	\item la segnalazione di un'emergenza direttamente all'amministratore.
+\end{itemize}
+Entrambi i problemi sono stati risolti durante la discussione.
+
+\subsection{Requisiti}
+In un file condiviso si è discusso quali possano essere i requisiti all'interno del capitolato. Dopo averli elencati, sono stati divisi per il tipo: di vincolo, funzionali, di qualità e prestazionali. \\Successivamente sono stati divisi i casi d'uso con i membri del gruppo così che ognuno trovi i requisiti che ne derivano. \\Verranno poi riscritti e sistemati dai Redattori dell'\textsc{Analisi dei Requisiti}.
+
+\subsection{Algoritmo adottato dal sistema centrale}
+Si è deciso di trascrivere in generale l'algoritmo che dovrà essere adottato dal sistema centrale così da avere più presente il problema che si sta affrontando. Questo dovrà essere presente in una sottosezione dell'\textsc{Analisi dei requisiti}. 
+
+\subsection{Discussione con il proponente via Google Chat}
+Discussione con il proponente via Google Chat, relativamente ai casi d'uso e ai vari attori principali.
+Riassumendo è  stata una conferma della correttezza dei nostri casi d'uso.
+Questo scambio di messaggi è avvenuto in data 2020-12-23.
