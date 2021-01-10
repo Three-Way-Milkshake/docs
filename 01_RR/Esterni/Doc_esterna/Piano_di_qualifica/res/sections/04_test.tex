@@ -2,7 +2,7 @@
 
 \subsection{Specifica dei test}
 
-Per garantire la qualità del prodotto, Three Way Milkshake adotta il \gls{vmodel}\textsubscript{G} per verificare tramite test ogni passo della produzione software.\\Qui vedremo un immagine rappresentativa del \gls{vmodel}\textsubscript{G} (o V-Model), quest'ultimo si può schematizzare posizionando il tempo nell'asse delle ascisse e il livello di astrazione nell'asse delle ordinate.\\Il modello idealmente si divide in 2 rami.\\Il ramo sinistro contiene le fasi di progettazione e ideazione; il ramo destro contiene le fasi di test e integrazione.
+Per garantire la qualità del prodotto, Three Way Milkshake adotta il \gls{vmodel}\textsubscript{G} per verificare tramite test ogni passo della produzione software.\\Qui vedremo un immagine rappresentativa del \gls{vmodel}\textsubscript{G} (o V-Model), quest'ultimo si può schematizzare posizionando il tempo nell'asse delle ascisse e il livello di astrazione nell'asse delle ordinate.\\Il modello idealmente si divide in 2 rami.\\Il ramo sinistro contiene le \glspl{fase}\textsubscript{G} di progettazione e ideazione; il ramo destro contiene le \glspl{fase}\textsubscript{G} di test e integrazione.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{res/images/v_model.jpg}
@@ -30,19 +30,19 @@ Verificano che il software nel suo complesso soddisfi i criteri di accettazione 
 \end{center}
 dove:
 \begin{itemize}
-    \item \textbf{Tipo:} indica il tipo dei requisiti tra i seguenti tipi:
+    \item \textbf{Tipo:} indica il tipo dei \glspl{requisito}\textsubscript{G} tra i seguenti tipi:
     \begin{itemize}
-        \item \textbf{F} per i requisiti funzionali;
-        \item \textbf{V} per i requisiti di vincolo;
-        \item \textbf{Q} per i requisiti di qualità;
-        \item \textbf{P} per i requisiti prestazionali.
+        \item \textbf{F} per i \glspl{requisito}\textsubscript{G} funzionali;
+        \item \textbf{V} per i \glspl{requisito}\textsubscript{G} di vincolo;
+        \item \textbf{Q} per i \glspl{requisito}\textsubscript{G} di qualità;
+        \item \textbf{P} per i \glspl{requisito}\textsubscript{G} prestazionali.
     \end{itemize}
 	\item \textbf{Codice:} rappresenta il codice identificativo crescente del componente da verificare.
-	\item \textbf{Importanza:} indica l'importanza del requisito che può essere:
+	\item \textbf{Importanza:} indica l'importanza del \gls{requisito}\textsubscript{G} che può essere:
 		\begin{itemize}
-			\item \textbf{O} per i requisiti obbligatori;
-			\item \textbf{D} per i requisiti desiderabili;
-			\item \textbf{F} per i requisiti facoltativi.
+			\item \textbf{O} per i \glspl{requisito}\textsubscript{G} obbligatori;
+			\item \textbf{D} per i \glspl{requisito}\textsubscript{G} desiderabili;
+			\item \textbf{F} per i \glspl{requisito}\textsubscript{G} facoltativi.
 		\end{itemize}
 \end{itemize}
 
@@ -93,7 +93,7 @@ dove:
 
 	TAF-9-O & Il sistema deve permettere all'amministratore la visualizzazione di una notifica in caso della segnalazione da parte di un utente di un evento eccezionale. & 0\tabularnewline
 
-	TAF-10-O & Il sistema deve permettere all'amministratore di modificare la mappa, in particolare modificare planimetria e \gls{percorrenza}\textsubscript{G}.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come amministratore; \item selezionare il pulsante per la gestione mappa; \item selezionare il pulsante relativo alla modifica della mappa da effettuare.\end{itemize} & 0\tabularnewline
+	TAF-10-O & Il sistema deve permettere all'amministratore di modificare la mappa, in particolare modificare \gls{planimetria}\textsubscript{G} e \gls{percorrenza}\textsubscript{G}.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come amministratore; \item selezionare il pulsante per la gestione mappa; \item selezionare il pulsante relativo alla modifica della mappa da effettuare.\end{itemize} & 0\tabularnewline
 
 	TAF-10.1-O & Il sistema deve permettere all'amministratore di gestire i \acrshort{POI}\textsubscript{A} nella mappa, in particolare modificarne la posizione di uno già esistente.\newline All'amministratore è richiesto: \begin{itemize}\item autenticarsi come amministratore; \item selezionare il pulsante per la gestione mappa; \item selezionare il pulsante per la gestione dei \acrshort{POI}\textsubscript{A}; \item selezionare il pulsante per la modifica della posizione di un \acrshort{POI}\textsubscript{A}; \item selezionare il \acrshort{POI}\textsubscript{A} interessato e aggiornarne la posizione.\end{itemize} & 0\tabularnewline
 
@@ -141,10 +141,10 @@ dove:
 %fine tabella
 
 \subsection{Test di Sistema}
-I Test di Sistema verificano la conformità dell'intero sistema con i requisiti specificati.\\I Test di Sistema verranno sviluppati quando verrà raggiunta la fase appropriata, secondo il \gls{vmodel}\textsubscript{G}.
+I Test di Sistema verificano la conformità dell'intero sistema con i \glspl{requisito}\textsubscript{G} specificati.\\I Test di Sistema verranno sviluppati quando verrà raggiunta la \gls{fase}\textsubscript{G} appropriata, secondo il \gls{vmodel}\textsubscript{G}.
 
 \subsection{Test di Integrazione}
-I Test di Integrazione verificano l'integrazione di più componenti software o hardware.\\I Test di Integrazione verranno sviluppati quando verrà raggiunta la fase appropriata, secondo il \gls{vmodel}\textsubscript{G}.
+I Test di Integrazione verificano l'integrazione di più componenti software o hardware.\\I Test di Integrazione verranno sviluppati quando verrà raggiunta la \gls{fase}\textsubscript{G} appropriata, secondo il \gls{vmodel}\textsubscript{G}.
 
 \subsection{Test di Unità}
-I Test di Unità verificano le parti atomiche del software (per esempio funzioni o procedure). Vengono utilizzati per assicurarsi che la logica interna del codice sia rispettata.\\I Test di Unità verranno sviluppati quando verrà raggiunta la fase appropriata, secondo il \gls{vmodel}\textsubscript{G}.
+I Test di Unità verificano le parti atomiche del software (per esempio funzioni o procedure). Vengono utilizzati per assicurarsi che la logica interna del codice sia rispettata.\\I Test di Unità verranno sviluppati quando verrà raggiunta la \gls{fase}\textsubscript{G} appropriata, secondo il \gls{vmodel}\textsubscript{G}.
