@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 
 
+\input{glossario.tex}
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
 	\pagebreak	
@@ -33,9 +34,19 @@
 	\input{res/sections/01_introduzione.tex} % modifica questo file
 	\pagebreak
 	
-	\input{res/sections/02_titolo_seconda_sezione.tex} % modifica questo file
+	\input{res/sections/02_descrizione_generale.tex} % modifica questo file
 	\pagebreak
 	
-	% ecc, aggiungere le sezioni successive creando i relativi file
+	\input{res/sections/03_casi_d'uso.tex}
+	\pagebreak
+	
+	\input{res/sections/04_algoritmo_sistema_centrale.tex}
+	\pagebreak
+
+	\input{res/sections/05_requisiti.tex}
+	\pagebreak
+	
+	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
+	\printglossary[title=Glossario dei Termini]	
 	
 \end{document}
