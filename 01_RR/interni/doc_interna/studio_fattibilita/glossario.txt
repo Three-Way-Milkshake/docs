@@ -62,7 +62,7 @@ A:portacs:PORTACS:\\\\acrshort{POI} Oriented Real Time Anti Collision System
 A:ram:RAM:Random Access Memory
 A:repo:repo:\\\\gls{repository}
 A:rest:REST:REpresentational State Transfer
-A:spa:spa:X:Single Page Applications
+A:spa:SPA:Single Page Application
 A:tb:TB:\\\\gls{techbase}
 A:uml:UML:Unified Modeling Language
 A:vcs:VCS:Version Control System
