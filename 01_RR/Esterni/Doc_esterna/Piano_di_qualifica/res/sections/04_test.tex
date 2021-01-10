@@ -50,8 +50,9 @@ ove:
 	\begin{longtable}{ >{\centering}p{0.20\textwidth} >{}p{0.655\textwidth}
 		>{\centering}p{0.15\textwidth}}% >{\centering}p{0.14\textwidth}}
 	
-	%\hline
-	\caption{Riepilogo Test di Accettazione}\\	
+	
+	\caption{Riepilogo Test di Accettazione}\\
+	\hline
 	\rowcolorhead
 	\headertitle{Requisito} & \headertitle{Descrizione} & \headertitle{Esito}
 	\endfirsthead	
@@ -72,6 +73,8 @@ ove:
 	
 	TAF-3-O & L'amministratore può modificare un account già esistente di un lavoratore.\newline In particolare può: \begin{itemize}\item modificare campo nome; \item modificare campo cognome; \item modificare campo ruolo. \end{itemize} & 0\tabularnewline
 	
+	TAF-3.1-O & L'amministratore può elimiare un account già esistente. & 0\tabularnewline
+	
 	TAF-4-O & Il responsabile deve poter aggiungere una \gls{task}\textsubscript{G} alla lista delle \gls{task}\textsubscript{G}.\newline Al responsabile è richiesto di: \begin{itemize}\item autenticarsi con account con ruolo responsabile; \item selezionare il pulsante per aggiungere una nuova \gls{task}\textsubscript{G}; \item inserire la priorità della \gls{task}\textsubscript{G}; \item inserire il \acrshort{POI}\textsubscript{A} a cui fa riferimento; \item confermare l'inserimento di nuova \gls{task}\textsubscript{G}. \end{itemize} & 0\tabularnewline
 	
 	TAF-5-O & Il responsabile deve poter modificare la priorità di una \gls{task}\textsubscript{G}.\newline Al responsabile è richiesto di: \begin{itemize}\item autenticarsi con account con ruolo responsabile; \item selezionare la \gls{task}\textsubscript{G} da modificare; \item inserire la nuova priorità; \item confermare la modifica priorità della \gls{task}\textsubscript{G}. \end{itemize} & 0\tabularnewline
@@ -86,7 +89,9 @@ ove:
 	
 	TAF-8-O & Il sistema deve permettere a responsabili e amministratore di visualizzare la mappa, e in particolare visualizzare i \acrshort{POI}\textsubscript{A}, aree non transitabili, muletti in real-time e le zone di \gls{percorrenza}\textsubscript{G}.\newline All'utente è richiesto:\begin{itemize} \item autenticarsi come responsabile o amministratore; \item selezionare il pulsante per la visualizzazione della mappa; \item visualizzare i vari elementi della mappa (\acrshort{POI}\textsubscript{A}, zona di \gls{percorrenza}\textsubscript{G}, aree non transitabili e muletti in real-time). \end{itemize} & 0\tabularnewline
 	
-	TAF-9-F & Il sistema deve permettere agli utenti la visualizzazione delle persone in real-time sulla mappa & 0\tabularnewline
+	TAF-8.1-F & Il sistema deve permettere agli utenti la visualizzazione delle persone in real-time sulla mappa & 0\tabularnewline
+	
+	TAF-9-O & Il sistema deve permettere all'amministratore la visualizzazione di una notifica in caso della segnalazione da parte di un utente di un evento eccezionale. & 0\tabularnewline
 	
 	TAF-10-O & Il sistema deve permettare all'amministratore di modificare la mappa, in particolare modificare planimetria e \gls{percorrenza}\textsubscript{G}.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come amministratore; \item selezionare il pulsante per la gestione mappa; \item selezionare il pulsante relativo alla modifica della mappa da effettuare.\end{itemize} & 0\tabularnewline
 	
