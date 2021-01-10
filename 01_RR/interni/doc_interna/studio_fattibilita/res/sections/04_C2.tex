@@ -1,0 +1,59 @@
+\subsection{Capitolato C2 - Emporio Lambda}
+
+
+\subsubsection{Informazioni generali}
+
+\begin{itemize}
+	\item{\textbf{Nome:}} Emporio Lambda
+	\item{\textbf{Proponente:}} Red Babel
+	\item{\textbf{Committente:}} Prof. Vardanega Tullio, Prof. Cardin Riccardo
+\end{itemize}
+
+
+
+\subsubsection{Descrizione del capitolato}
+
+L'idea alla base di Emporio Lambda è quella di costruire una piattaforma di e-commerce che si basi interamente su tecnologie serverless.
+
+
+\subsubsection{Finalità del progetto}
+
+Il prodotto in questione dovrà fornire due insiemi di funzionalità principali:
+\begin{itemize}
+	\item una orientata ai clienti (pagina principale, lista e descrizione prodotti, carrello degli acquisti, pagamento, gestione account);
+	\item l'altra alle funzioni di back office (tutto ciò che può servire agli impiegati, ossia gestione di contabilità, inventario, ordini, giacenza, distribuzione, spedizioni...).
+\end{itemize}
+
+L'esecuzione del sistema avviene su architetture serverless che possono incorporare \acrshort{baas}\textsubscript{A} di terze parti, o che contengono codice proprietario eseguito su container effimeri (che hanno una durata limitata ad una singola invocazione) su piattaforme \acrshort{faas}\textsubscript{A}. \acrshort{spa}\textsubscript{A} è l'approccio da adottare per la realizzazione dell'applicazione web. Tramite queste caratteristiche, il sistema nel suo complesso dovrebbe beneficiare di una riduzione in termini di costi di operazioni, complessità e tempi di consegna.
+
+
+\subsubsection{Tecnologie interessate}
+
+Il linguaggio principale che dev'essere adottato è \href{https://www.typescriptlang.org/}{Typescript}. Segue un elenco di altre tecnoglogie a supporto, obbligatorie o consigliate dal proponente:
+\begin{itemize}
+    \item \textbf{\href{https://aws.amazon.com/it/lambda/}{AWS Lambda}}: piattaforma di calcolo serverless basata su eventi, parte della suite di servizi web forniti da Amazon;
+    \item \textbf{\href{https://aws.amazon.com/it/cloudformation/}{CloudFormation}}: strumento consigliato per il rilascio di infrastrutture AWS;
+    \item \textbf{Serverless Framework}: framework Node.js da utilizzare per la parte back end;
+    \item \textbf{\href{https://nextjs.org/}{Next.js}:} framework da usare per la parte front end;
+    \item \textbf{\href{https://aws.amazon.com/it/cloudwatch/}{CloudWatch} o \href{https://www.datadoghq.com/}{Datadog}}: per implementare il sistema di monitoring;
+    \item \textbf{\href{https://www.contentful.com/}{Contentful}}: \acrshort{cms}\textsubscript{A} suggerito per l'implementazione di una parte opzionale.
+\end{itemize}
+
+
+\subsubsection{Aspetti positivi}
+
+Emporio Lambda rappresenta sicuramente una realtà familiare a tutti, in quanto sono sempre più numerose e diffuse le piattaforme per gli acquisti online. Inoltre offre l'opportunità di lavorare con tecnologie nuove e all'avanguardia, adottando paradigmi diversi a quelli tradizionali e fornendo delle ottime opportunità di apprendimento.
+
+
+\subsubsection{Criticità}
+
+I \glspl{requisito}\textsubscript{G} imposti sembrano essere molto vincolanti, e le possibilità di scelte libere attuabili in \gls{fase}\textsubscript{G} di sviluppo appaiono limitate. Le piattaforme di e-commerce sono un dominio estremamente diffuso e conosciuto e, almeno dal lato dell'utente, non rappresentano una novità per i membri del team: altri \glspl{capitolato}\textsubscript{G} sono stati giudicati più stimolanti.
+
+
+\subsubsection{Conclusioni}
+
+Questo \gls{capitolato}\textsubscript{G} non ha suscitato fin dall'inizio interesse nel gruppo. Non essendoci inoltre stato un seminario di approfondimento, non è stato possibile rivedere in chiave diversa le tematiche coinvolte, dunque l'opinione generale interna è rimasta invariata. Il gruppo si orienta verso un'altra scelta.
+
+
+
+
