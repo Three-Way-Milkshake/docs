@@ -21,48 +21,51 @@
 \input{glossario.tex}
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
-	\pagebreak	
-	
+	\pagebreak
+
 	% Registro delle modifiche
 	\input{../../../../latex/changelog.tex}
-	\input{config/changelog_input.tex} % modifica questo file       
+	\input{config/changelog_input.tex} % modifica questo file
 	\end{longtable}
 	\pagebreak
-		
+
 	% indice
-	\tableofcontents	
+	{
+        \hypersetup{linkcolor=black}
+        \tableofcontents
+    }
 	\pagebreak
-	
+
 	% indice delle figure
 	\listoffigures
 	\pagebreak
-	
+
 	% indice delle tabelle
 	\listoftables
 	\pagebreak
-		
+
 	% contenuto del documento, ogni sezione in un file
-	\input{res/sections/01_introduzione.tex} 
+	\input{res/sections/01_introduzione.tex}
 	\pagebreak
-	
-	\input{res/sections/02_analisi_dei_rischi.tex} 
+
+	\input{res/sections/02_analisi_dei_rischi.tex}
 	\pagebreak
-	
-	\input{res/sections/03_pianificazione.tex} 
+
+	\input{res/sections/03_pianificazione.tex}
 	\pagebreak
-	
-	\input{res/sections/04_preventivo.tex} 
+
+	\input{res/sections/04_preventivo.tex}
 	\pagebreak
-	
-	\input{res/sections/05_consuntivo.tex} 
+
+	\input{res/sections/05_consuntivo.tex}
 	\pagebreak
-	
+
 	\appendix
-	\input{res/sections/06_appendice.tex} 
+	\input{res/sections/06_appendice.tex}
 	\pagebreak
-	
+
 
 	\glsaddall
 	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
-	\printglossary[title=Glossario dei Termini]	
+	\printglossary[title=Glossario dei Termini]
 \end{document}
