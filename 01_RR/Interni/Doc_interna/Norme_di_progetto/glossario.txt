@@ -1,34 +1,68 @@
-A:uml:UML:Unified Modeling Language
-G:usecase:caso d'uso:casi d'uso:Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un utente (attore)
-G:precondizione:precondizione:precondizioni:Condizioni che devono essere soddisfatte perché si verifichino determinati eventi successivi
-G:postcondizione:postcondizione:postcondizioni:Condizioni che devono verificarsi dopo determinati eventi
-A:eg:e\.g\.:Example given, si usa per indicare che ciò che segue è un esempio
-G:stakeholder:stakeholder:stakeholders:Tutti coloro che a vario titolo hanno influenza sul prodotto e sul progetto
-G:designpattern:design pattern:design patterns:Una soluzione progettuale generale ad un problema ricorrente
-A:cpu:CPU:Central Processing Unit
-A:ram:RAM:Random Access Memory
-G:safety:safety:X:Sicurezza rispetto a malfunzionamenti
-G:security:security:X:Non vulnerabilità rispetto a intrusioni
-G:proofconcept:proof of concept:X:Dimostratore eseguibile. Il suo codice può (ma non deve) essere usa-e-getta
-A:poc:PoC:Proof of Concept
-G:techbase:technology baseline:X:Motiva le tecnologie, i framework, e le librerie selezionate per la realizzazione del prodotto. Ne dimostra adeguatezza e fattibilità, tramite un proof of concept coerente con gli obiettivi
-G:prodbase:product baseline:X:G:prodbase:product baseline:X:Illustra la baseline architetturale del prodotto, coerente con la \\\\acrshort{tb}. Rappresenta il design definitivo
-A:tb:TB:\\\\gls{techbase}
-A:pb:PB:\\\\gls{prodbase}
+G:attivita:attività:X:Insieme di una o più azioni il cui completamento porta ad un avanzamento nel complesso.
+G:agile:agile:X:Approccio stutturato e iterativo alla gestione dei progetti e alla sviluppo di software. Riconosce la volatilità dello sviluppo del prodotto e propone un metodo per permettere ai team di rispondere in maniera rapida a cambiamenti non pianificati e di produrre valore fin dalle prime iterazioni. Per maggiori dettagli: \\\\url{https://www.atlassian.com/agile/kanban/kanban-vs-scrum}
+G:artefatto:artefatto:artefatti:Sottoprodotto che viene realizzato durante lo sviluppo software. Sono artefatti i casi d'uso, i diagrammi delle classi, i modelli UML, il codice sorgente e la documentazione varia, che aiutano a descrivere la funzione, l'architettura e la progettazione del software.
+G:attore:attore:attori:Ruolo interpretato da un utente (persona o sistema esterno) nei confronti del sistema. \\\\begin{itemize} \\\\item \textbf{attore primario}: attore richiede l'assistenza del sistema \\\\item\textbf{attore secondario}: attore di cui è il sistema stesso a richiedere l'intervento \\\\end{itemize} .
+G:bash:bash:X:G:bash:bash:X:\\\\gls{shell} Unix ed un linguaggio interpretato scritto da Brian Fox per il progetto GNU come sostituto del software gratuito per la shell Bourne.
+G:bestpractice:best practice:best practices:Modo di fare noto, che abbia mostrato di garantire i migliori risultati in circostanze note e specifiche.
+G:bug:bug:X:Problema che porta al malfunzionamento del software, per esempio producendo un risultato inatteso o errato, tipicamente dovuto a un errore nella scrittura del codice sorgente di un programma.
+G:baseline:baseline:X:Istantanea dello stato di avanzamento del progetto. Misura i risultati ottenuti e li fissa in una versione consolidata del prodotto. Può essere associata ad un rifermento temporale (\\gls{milestone}).
+G:capitolato:capitolato:capitolati:Documento tecnico redatto dal cliente in cui vengono specificati i vincoli contrattuali (prezzo e scadenze) per lo sviluppo di un determinato prodotto software. Viene presentato in un bando d'appalto per trovare qualcuno che possa svolgere il lavoro richiesto.
+G:cruscotto:cruscotto:cruscotti:Interfaccia utente grafica che fornisce viste indicatori chiave di prestazione rilevanti per un particolare obiettivo o processo aziendale.
+G:combobox:combobox:X:Controllo grafico (widget) che permette all'utente di effettuare una scelta scrivendola in una casella di testo o selezionandola da un elenco.
+G:designpattern:design pattern:design patterns:Soluzione progettuale generale ad un problema ricorrente.
+G:disciplinato:disciplinato:X:Che segue le regole che si è dato.
+G:efficacia:efficacia:X:Misura della capacità di raggiungere l'obiettivo prefissato.
+G:efficienza:efficienza:X:Misura dell'abilità di raggiungere l'obiettivo impiegando le risorse in maniera ottimale.
+G:fase:fase:fasi:Segmento temporale contiguo che che presuppone uno stazionamento in uno stato o in una transizione di ciclo di vita.
+G:form:form:X:Interfaccia di un programma che consente a un utente di inserire e inviare uno o più dati.
+G:git:git:X:Sistema di controllo del versionamento distribuito.
+G:gitcommit:commit:commits:Comando di \\\\gls{git} che permette di salvare e versionare le modifiche attuate ai file in locale.
+G:gitpull:pull:X:Comando di \\\\gls{git} che permette di aggiornare il proprio \\\\acrshort{repo} locale con i cambiamenti remoti.
+G:gitpush:git-push:X:Azione di git che permette di caricare le proprie modifiche locali sul server remoto condiviso del repository.
+G:gantt:Gantt:X:Diagramma per la pianificazione di un progetto. Esplicita le attività volte al suo svolgimento e per ognuna ne identifica data di inizio e di fine a seconda delle stime effettuate. Facilità la visualizzazione delle connessioni tra le attività e lo stato di avanzamento del progetto.
+G:incrementale:incrementale:X:Che procede per incrementi, ossia migliorie che, partendo da un impianto base, portano al raggiungimento dell'obiettivo producendo valore e limitando al massimo la regressione a stati già attraversati.
+G:kanban:kanban: Framework usato per implementare modelli di sviluppo Agili e DevOps. Richiede comunicazione in tempo reale tra i componenti de team e totale trasparenza. I work item vengono visualizzati su una Kanban Board, permettendo ai membri del team di vedere lo stato di ogni attività in ogni momento. Per maggiori dettagli: \\\\url{https://www.atlassian.com/agile/kanban/kanban-vs-scrum}
+G:vmodel:Modello a V:X:Modello che illustra le relazioni tra ogni fase del ciclo di vita del software con la relativa fase di testing ad essa associata.
+G:milestone:milestone:X:Pietra miliare, istante temporale su cui si misura l'avanzamento del progetto. Viene fissata nel futuro per stabilire un avanzamento atteso. Una buona milestone è delimitata per ampiezza ed ambizioni, misurabile in termini di tempo e impegno necessario per raggiungerla, traducibile in compiti assegnabili ai membri del team e coerente con le scadenze del progetto.
+G:modellosviluppo:modello di sviluppo:X:Principio teorico che indica il metodo da seguire nel progettare e nello scrivere un programma. Esistono tre principali modelli di sviluppo, ossia sequenziale, \\\\gls{incrementale} ed evolutivo. 
+G:postcondizione:postcondizione:postcondizioni:Condizioni che devono verificarsi dopo determinati eventi.
+G:precondizione:precondizione:precondizioni:Condizioni che devono essere soddisfatte affinché si verifichino determinati eventi successivi.
+G:prodbase:product baseline:X:Illustra la baseline architetturale del prodotto, coerente con la \\\\acrshort{tb}. Rappresenta il design definitivo.
+G:proofconcept:proof of concept:X:Dimostratore eseguibile. Il suo codice può (ma non deve) essere usa-e-getta.
+G:percorrenza:percorrenza:percorrenze:Nel contesto del capitolato, i vincoli relativi alle zone transitabili: \\\\begin{itemize} \\\\item sensi di marcia \\\\item numero massimo di unità che vi possono transitare \\\\end{itemize} .
+G:periodo:periodo:periodi:Nel contesto del documento, l'intervallo di tempo che intercorre tra due revisioni successive.
+G:progetto:progetto:progetti:Insieme di attività che devono raggiungere determinati obiettivi a partire da determinate specifiche; hanno una data d'inizio e una data di fine fissate, dispongono di risorse limitate e consumano tali risorse nel loro svolgersi.
+G:planimetria:planimetria:planimetrie:Rappresentazione in piano del magazzino che ne evidenzia le caratteristiche (aree non transitabili, zone di percorrenza, punti di interesse).
+G:quantificabile:quantificabile:X:Che permette di misurare l'efficienza e l'efficacia del suo agire.
+G:repository:repository:X:Posizione di archiviazione per pacchetti software.
+G:risorsa:risorsa:risorse:Mezzo o capacità disponibile, nello sviluppo software ad esempio le persone, il tempo, il denaro, gli strumenti necessari allo sviluppo del progetto. Le attività di progetto consumano le risorse disponibili.
+G:requisito:requisito:requisiti:Esistono due interpretazioni principali di un requisito \\\\begin{itemize}\\\\item dal lato del bisogno(ovvero il cliente/utente) è la capacità necessaria a un utente per risolvere un problema  o  raggiungere  un  obiettivo\\\\item dal  lato  della  soluzione  (ovvero  lo sviluppatore) è la capacità che deve essere posseduta (o condizione che deve essere  soddisfatta)  da  un  sistema  per  adempiere  a  un  obbligo \\\\end{itemize}
+G:revisione:revisione:revisioni:Esame o controllo, per lo più periodico, inteso a verificare il grado dell'efficienza, della funzionalità, della corrispondenza a determinati requisiti. Nell'ambito del corso di Ingegneria del Software, la revisione di avanzamento identifica il momento in cui il team consegna e presenta gli artefatti sviluppati durante il periodo appena trascorso.
+G:safety:safety:X:Sicurezza rispetto a malfunzionamenti.
+G:scenario:scenario:scenari:Nell'ambito dello sviluppo software, sequenza di passi che descrive l'interazione tra l'\\\\gls{attore} e il sistema, e le elaborazioni necessarie per soddisfare la richiesta dell'\\\\gls{attore}.
+G:security:security:X:Non vulnerabilità rispetto a intrusioni.
+G:shell:shell:X:Interprete dei comandi.
+G:sistematico:sistematico:X:Modo di lavorare metodico e rigoroso, che conosce, usa ed evolve le best practice di dominio.
+G:stakeholder:stakeholder:stakeholders:Tutti coloro che a vario titolo hanno influenza sul prodotto e sul progetto. Sono stakeholders il committente, il proponente, gli utenti, il team di sviluppo.
+G:techbase:technology baseline:X:Motiva le tecnologie, i framework, e le librerie selezionate per la realizzazione del prodotto. Ne dimostra adeguatezza e fattibilità, tramite un proof of concept coerente con gli obiettivi.
+G:task:task:tasks:Nel contesto del capitolato, con questo termine si identifica un compito da svolgere da parte di un unità (muletto) che consiste nel raggiungere un \\\\acrshort{POI} e caricare o scaricare la merce.
+G:usecase:caso d'uso:casi d'uso:Un caso d'uso è un insieme di \\\\glspl{scenario} che hanno in comune uno scopo finale (obiettivo) per un utente (\\\\gls{attore}).
 G:wiki:wiki:wikis:Termine di origine hawaiana che significa veloce, con cui si identifica un tipo di sito internet che permette la creazione e la modifica di pagine multimediali attraverso un'interfaccia semplice
-G:git:git:X:Sistema di controllo del versionamento distribuito
-G:gitpush:push:X:Comando di \\\\gls{git} che permette di caricare le proprie modifiche locali sul server remoto condiviso del repository
-G:repository:repository:X:Posizione di archiviazione per pacchetti software
-A:repo:repo:\\\\gls{repository}
-G:bash:bash:X:\\\\gls{shell} Unix ed un linguaggio interpretato scritto da Brian Fox per il progetto GNU come sostituto del software gratuito per la shell Bourne
-G:gitcommit:commit:commits:Comando di \\\\gls{git} che permette di salvare e versionare le modifiche attuate ai file in locale
-G:gitpull:pull:X:Comando di \\\\gls{git} che permette di aggiornare il proprio \\\\acrshort{repo} locale con i cambiamenti remoti
-A:vcs:VCS:Version Control System
-G:sistematico:sistematico:X:Modo di lavorare metodico e rigoroso, che conosce, usa ed evolve le best practice di dominio
-G:efficacia:efficacia:X:Misura della capacità di raggiungere l'obiettivo prefissato
-G:efficienza:efficienza:X:Misura dell'abilità di raggiungere l'obiettivo impiegando le risorse minime indispensabili
-G:disciplinato:disciplinato:X:Che segue le regole che si è dato
-G:quantificabile:quantificabile:X:Che permette di misurare l’efficienza e l’efficacia del suo agire
-G:bestpractice:best practice:best practices:Modo di fare noto, che abbia mostrato di garantire i migliori risultati in circostanze note e specifiche
+A:api:API:Application Programming Interface
+A:baas:BaaS:Backend as a Service
+A:cpu:CPU:Central Processing Unit
+A:cms:CMS:Content Management System
+A:eg:e\.g\.:Example given, si usa per indicare che ciò che segue è un esempio
+A:faas:FaaS:Functions as a Service
 A:jit:JiT:Just in Time
-G:shell:shell:X:Interprete dei comandi
+A:pb:PB:\\\\gls{prodbase}
+A:poc:PoC:Proof of Concept
+A:POI:POI:Point Of Interest
+A:portacs:PORTACS:\\\\acrshort{POI} Oriented Real Time Anti Collision System
+A:ram:RAM:Random Access Memory
+A:repo:repo:\\\\gls{repository}
+A:rest:REST:REpresentational State Transfer
+A:spa:spa:X:Single Page Applications
+A:tb:TB:\\\\gls{techbase}
+A:uml:UML:Unified Modeling Language
+A:vcs:VCS:Version Control System
