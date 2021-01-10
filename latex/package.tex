@@ -23,6 +23,12 @@
 \let\counterwithin\relax
 \usepackage{chngcntr}
 
+% distanziare elenco delle figure e delle tabelle
+\usepackage{tocbasic}
+\DeclareTOCStyleEntry[numwidth=3.5em]{tocline}{figure}% for figure entries
+\DeclareTOCStyleEntry[numwidth=3.5em]{tocline}{table}% for table entries
+
+
 \counterwithin{table}{subsection}
 \counterwithin{figure}{subsection}
 

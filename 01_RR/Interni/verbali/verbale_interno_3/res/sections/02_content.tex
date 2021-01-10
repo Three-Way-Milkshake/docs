@@ -1,0 +1,40 @@
+\section{Verbale della riunione}
+\subsection{Chiarimenti su documenti}
+\subsubsection{Analisi dei Requisiti}
+Per questo documento si è discusso principalmente sulla modalità di logout da parte di un operatore dall'unità da lui usata. Infatti ci si è posti la seguente domanda: \textit{"Quando può un operatore disconnettersi dal sistema?"}\\
+Si è pensato a vari casi utili alla risoluzione:
+\begin{itemize}
+	\item l'operatore non può lasciare il luogo di lavoro senza aver prima concluso tutte le attività collegate alla lista contenente i Point of Interest;
+	\item ogni unità ha un punto iniziale di generazione chiamato "Base".
+\end{itemize}
+Si è quindi pensato di aggiungere un pulsante di logout che appare solamente nel caso in cui l'operatore abbia già concluso la sua lista di POI e che l'unità si trovi in "Base".
+
+\subsubsection{Piano di Progetto}
+Per questo documento si è svolta una discussione in merito ai vari punti strutturali. Si è deciso inoltre che il modello di riferimento su cui si baserà sarà \textit{incrementale} con elementi di tipo \textit{agile}.\\
+Si è deciso di dividere le fasi del documento in:
+\begin{itemize}
+	\item Avvio;
+	\item Analisi dei Requisiti (divisa in Inizio e Verifica);
+	\item Progettazione Architetturale;
+	\item Progettazione di Dettaglio e Codifica;
+	\item Validazione e Collaudo.
+\end{itemize}
+
+\subsubsection{Verbali Esterni}
+Per i verbali esterni si è pensato di sostituire la tabella delle decisioni prese con una sezione contenente la sintesi dell'incontro.
+
+\subsubsection{Piano di Qualifica}
+Non si sono evidenziate particolari problematiche.
+
+
+\subsubsection{Norme di Progetto}
+Per questo documento si sono discussi i vari stili di nome che potranno avere i file e le cartelle che si andranno a creare. Si è preferito optare per una notazione "Delimiter-separated words" (\texttt{three\_way\_milkshake}) rispetto alla "notazione a cammello" (threeWayMilkshake) in quanto sembra incrementare la velocità di lettura dei nomi dei file e delle cartelle. Inoltre i suddetti file e/o non utilizzeranno caratteri maiuscoli.\\
+Si è consigliato inoltre di utilizzare \textit{TexStudio} al posto di \textit{TexMaker} in quanto ha molte più funzionalità interne e gestisce meglio il collegamento con più file in uno unico.
+
+\subsubsection{Studio di Fattibilità}
+Si è deciso di sezionare meglio i vari capitoli dello studio di fattibilità aggiungendo una sezione di pagina per ogni capitolato d'appalto discusso.
+
+\subsubsection{Glossario}
+Per il glossario si è deciso di creare oltre al \textsc{Glossario} comune, contenente le varie definizioni in ordine alfabetico dei termini, anche una piccola sezione specifica di glossario all'interno di ogni documento. Questa parte conterrà solamente la definizione dei termini presenti in quello specifico documento. Il tutto grazie alla funzione \texttt{glossaries} di \LaTeX\.\\
+Inoltre verrà creato uno script che automatizza la sostituzione delle parole con il loro significato.
+ 
