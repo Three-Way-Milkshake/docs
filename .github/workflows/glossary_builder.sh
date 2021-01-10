@@ -24,7 +24,7 @@ do
 			# glossario
 			sing=`echo $line | cut -f3 -d ':'`
 			plur=`echo $line | cut -f4 -d ':'`
-			mean=`echo $line | cut -f5 -d ':'`
+			mean=`echo $line | cut -f5- -d ':'`
 			if [ `grep -c "newglossaryentry{$key}" glossario.tex` -lt 1 ]
 			then
 				echo "missing G: $key, adding it"
