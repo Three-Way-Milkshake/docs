@@ -1,5 +1,18 @@
 #!/bin/bash
 
+cd `dirname $0`
+
+#install extra latex packages
+if [ $# -gt 0 ]
+then
+	if [ $1 == "--install-custom" ]
+	then
+		sudo cp -rv extra_latex_packages/pgfplots /usr/share/texlive/texmf-dist/tex/latex
+		sudo cp -rv extra_latex_packages/pgf-pie /usr/share/texlive/texmf-dist/tex/latex
+		sudo mktexlsr
+	fi
+fi
+
 cd ../../
 
 for doc in `find . -name glossario.txt`
@@ -23,8 +36,8 @@ do
 			# glossario
 			sing=`echo $line | cut -f3 -d ':'`
 			plur=`echo $line | cut -f4 -d ':'`
-			mean=`echo $line | cut -f5 -d ':'`
-			if [ `grep -c "newglossaryentry{$key" glossario.tex` -lt 1 ]
+			mean=`echo $line | cut -f5- -d ':'`
+			if [ `grep -c "newglossaryentry{$key}" glossario.tex` -lt 1 ]
 			then
 				echo "missing G: $key, adding it"
 				
@@ -43,7 +56,9 @@ do
 				for f in `grep -ril "$plur" | grep '\.tex' | grep -v glossario`
 				do
 					# lookbehind needed (?<!gls{)
-					perl -i -p -e "s/(?<!(ls|pl|rt)\{)$plur(?!{)/\\\glspl{$key}\\\textsubscript{G}/gi" $f
+					#perl -i -p -e "s/(?<!(ls|pl|rt)\{)$plur(?!{)/\\\glspl{$key}\\\textsubscript{G}/gi" $f
+					#perl -i -p -e "s/(?<!(ls\{|pl\{|rt\{|[a-z]{3}))$plur(?!\{)/\\\glspl{$key}\\\textsubscript{G}/g" $f
+					perl -i -p -e "s/(?<=\s)$plur(?=\s|\.|\:|,|'|;)/\\\glspl{$key}\\\textsubscript{G}/g" $f
 					echo "found in $f"
 					#cat $f | perl -p -e "s/(?<!gls{)$plur/\\\glspl{$key}/g"
 				done
@@ -54,7 +69,9 @@ do
 			for f in `grep -ril "$sing" | grep '\.tex' | grep -v glossario`
 			do
 				# lookbehind needed (?<!gls{)
-				perl -i -p -e "s/(?<!(ls|pl|rt)\{)$sing(?!{)/\\\gls{$key}\\\textsubscript{G}/gi" $f
+				#perl -i -p -e "s/(?<!(ls|pl|rt)\{)$sing(?!{)/\\\gls{$key}\\\textsubscript{G}/gi" $f
+				#perl -i -p -e "s/(?<!(ls\{|pl\{|rt\{|[a-z]{3}))$sing(?!\{)/\\\gls{$key}\\\textsubscript{G}/g" $f
+				perl -i -p -e "s/(?<=\s)$sing(?=\s|\.|\:|,|'|;)/\\\gls{$key}\\\textsubscript{G}/g" $f
 				echo "found in $f"
 				#cat $f | perl -p -e "s/(?<!gls{)$sing/\\\gls{$key}/g"
 			done
@@ -74,7 +91,10 @@ do
 			echo "checking $short occurencies..."
 			for f in `grep -ril "$short" | grep '\.tex' | grep -v glossario`
 			do
-				perl -i -p -e "s/(?<!(ls|pl|rt|[a-z]{2})\{)$short(?!{)/\\\acrshort{$key}\\\textsubscript{A}/gi" $f
+				#(?<!(ls\{|pl\{|rt\{|[a-z]{3}))$WORD(?!\{)
+				#perl -i -p -e "s/(?<!(ls\{|pl\{|rt\{|[a-z]{3}))$short(?!\{)/\\\acrshort{$key}\\\textsubscript{A}/g" $f
+				perl -i -p -e "s/(?<=\s)$short(?=(\s|\.|\:|'|;))/\\\acrshort{$key}\\\textsubscript{A}/g" $f
+				#perl -i -p -e "s/(?<!(ls|pl|rt|[a-z]{2})\{)$short(?!{)/\\\acrshort{$key}\\\textsubscript{A}/gi" $f
 				echo "found in $f"
 				#cat $f | perl -p -e "s/(?<!acrshort{)$short(?!{)/\\\acrshort{$key}/g"
 			done
@@ -94,6 +114,7 @@ do
 			exit 1
 		fi
 		makeglossaries `basename -s .tex $docName`
+		pdflatex -file-line-error -halt-on-error $docName
 		pdflatex -file-line-error -halt-on-error $docName
 		if [ $? -eq 1 ]
 		then 

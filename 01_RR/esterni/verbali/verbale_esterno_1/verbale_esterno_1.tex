@@ -1,0 +1,43 @@
+\documentclass[a4paper]{article}
+\usepackage[normalem]{ulem}
+\usepackage{glossaries}
+% scrartcl
+% impostazioni generali
+\input{../../../../latex/package.tex}
+
+% dati relativi alla prima pagina
+\input{config/titlepage_input.tex} % editare questo
+
+\makeindex
+
+\input{glossario.tex}
+\begin{document}
+\counterwithin{table}{section}
+
+% Prima pagina
+\input{../../../../latex/titlepage.tex}
+
+% Diario delle modifiche
+\input{../../../../latex/changelog.tex}
+\input{config/changelog_input.tex} % editare questo
+\end{longtable}
+\pagebreak
+
+% Indice
+\tableofcontents
+\pagebreak
+
+\InputIfFileExists{../../../verbali_sezioni_condivise/00_sezioni_condivise.tex}{}{} \pagebreak
+
+% Informazioni generali
+\input{res/sections/01_introduction.tex}
+\pagebreak
+
+% Contenuto
+\input{res/sections/02_content.tex}
+
+
+% Sintesi
+\input{res/sections/03_summary.tex}
+
+\end{document}
