@@ -1,0 +1,175 @@
+\section{Qualità del processo}
+
+\subsection{Scopo}
+Per valutare  la qualità del prodotto, il gruppo Three Way Milkshake ha deciso di avvalersi degli standard ISO/IEC 12207 e ISO/IEC 25010:2011\footnote{Vedi \hyperref[ref]{riferimenti}}, semplificandoli e riadattandoli in base alle esigenze. Le metriche per i processi individuati sono presentate di seguito, al nome si affianca una sigla che verrà utilizzata per riferirsi alle stesse successivamente.
+
+\subsection{Processi di Sviluppo}
+
+\subsubsection{Analisi dei Requisiti}
+\paragraph{Metriche}
+\begin{enumerate}
+	\item []
+	      \textbf{Percentuale Requisiti Obbligatori Soddisfatti (PROS)}\\
+	      Indica la quantità di \glspl{requisito}\textsubscript{G} obbligatori soddisfatti rispetto al totale.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} percentuale; $\frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali}$;
+		      \item \textbf{valore preferibile:} $100\%$;
+		      \item \textbf{valore accettabile:} $100\%$.
+	      \end{itemize}
+\end{enumerate}
+\subsubsection{Progettazione}
+\paragraph{Metriche}
+\begin{enumerate}
+	\item []
+	      \textbf{Coupling Between Objects (CBO)}\\
+	      Indica l'accoppiamento tra classi e oggetti; due classi si dicono accoppiate se una utilizza metodi o variabili dell'altra.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} valore intero;
+		      \item \textbf{valore preferibile:} $0\leq CBO\leq 1$;
+		      \item \textbf{valore accettabile:} $0\leq CBO\leq 6$.
+	      \end{itemize}
+\end{enumerate}
+\subsubsection{Codifica}
+\paragraph{Metriche}
+\begin{enumerate}
+	\item[]
+
+	      \textbf{DEPth of hierarchies(DEP)}\\
+	      Indica la profondità delle gerarchie nel codice sviluppato.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} valore intero;
+		      \item \textbf{valore preferibile:} $DEP\leq2$;
+		      \item \textbf{valore accettabile:} $DEP\leq3$.
+	      \end{itemize}
+	      \pagebreak
+	\item[]
+	      \textbf{LEVel of nesting (LEV)}\\
+	      Indica il livello di annidamento nei vari metodi presenti nel codice prodotto.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} valore intero;
+		      \item \textbf{valore preferibile:} $1\leq LEV\leq3$;
+		      \item \textbf{valore accettabile:} $\leq LEV\leq6$.
+	      \end{itemize}
+	\item[]
+	      \textbf{PARametri per metodo (PAR)}\\
+	      Indica il numero di parametri presenti nei metodi sviluppati nel codice.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} valore intero;
+		      \item \textbf{valore preferibile:} $PAR\leq 4$;
+		      \item \textbf{valore accettabile:} $PAR\leq 6$.
+	      \end{itemize}
+	\item[]
+	      \textbf{Rapporto Codice Commenti (RCC)}\\
+	      Indica il rapporto tra le linee di codice e le linee di commento all'interno del file.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} valore decimale; $\frac{linee\_codice}{linee\_commento}$;
+		      \item \textbf{valore preferibile:} $RCC\geq 0.4$;
+		      \item \textbf{valore accettabile:} $RCC\geq 0.2$.
+	      \end{itemize}
+\end{enumerate}
+
+\subsection{Processi di Supporto}
+\subsubsection{Pianificazione}
+\paragraph{Metriche}
+\begin{enumerate}
+	\item[]
+	      \textbf{Budget At Completion (BAC)}\\
+	      Indica il budget totale allocato per il \gls{progetto}\textsubscript{G}
+	      \begin{itemize}
+		      \item \textbf{misurazione:} valore intero;
+		      \item \textbf{valore preferibile:} $preventivo$;
+		      \item \textbf{valore accettabile:} $preventivo-5\%\leq BAC\leq preventivo+5\%$.
+	      \end{itemize}
+	\item[]
+	      \textbf{Earned Value (EV)}\\
+	      Indica la quantità di guadagno ottenuta dal lavoro effettuato fino al momento del calcolo.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} $preventivo\cdot \%\_lavoro\_pianificato$;
+		      \item \textbf{valore preferibile:} $EV\geq 0$;
+		      \item \textbf{valore accettabile:} $EV\geq 0$.
+	      \end{itemize}
+	\item[]
+	      \textbf{Planned Value (PV)}\\
+	      Indica la quantità di guadagno stimata sul lavoro pianificato al momento del calcolo.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} $preventivo \cdot \%\_lavoro\_pianificato$;
+		      \item \textbf{valore preferibile:} $PV\geq 0$;
+		      \item \textbf{valore accettabile:} $PV\geq 0$;
+	      \end{itemize}
+	\item[]
+	      \textbf{Schedule Variance (SV)}\\
+	      Indica l'anticipo o il ritardo del lavoro effettuato rispetto alla pianificazione.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} $EV-PV$;
+		      \item \textbf{valore preferibile:} $SV\geq 0$;
+		      \item \textbf{valore accettabile:} $SV=0$.
+	      \end{itemize}
+	\item[]
+	      \textbf{Actual Cost (AC)}\\
+	      I costi sostenuti fino al momento del calcolo.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} valore intero;
+		      \item \textbf{valore preferibile:} $0\leq AC\leq PV$;
+		      \item \textbf{valore accettabile:} $0\leq AC\leq budget$.
+	      \end{itemize}
+	\item[]
+	      \textbf{Cost Variance (CV)}\\
+	      La differenza tra il costo del lavoro ad ora effettuato ed quello preventivato.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} $EV-AC$;
+		      \item \textbf{valore preferibile:} $CV\geq 0$;
+		      \item \textbf{valore accettabile:} $CV\geq 0$.
+	      \end{itemize}
+\end{enumerate}
+\subsubsection{Verifica}
+\paragraph{Metriche}
+\begin{enumerate}
+	\item[]
+	      \textbf{Code Coverage (CC)}\\
+	      Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} percentuale; $\frac{linee\_codice\_verificate}{linee\_codice\_totali}$;
+		      \item \textbf{valore preferibile:} $100\%$;
+		      \item \textbf{valore accettabile:} $75\%$.
+	      \end{itemize}
+\end{enumerate}
+\subsubsection{Documentazione}
+\paragraph{Metriche}
+\begin{enumerate}
+	\item[]
+	      \textbf{Indice di Gulpease(IG)}\\
+	      Indica la leggibilità di un testo, tarato sulla lingua italiana.
+	      \begin{itemize}
+		      \item \textbf{misurazione:} [ $89+ \frac{300\cdot (num\_frasi) - 10\cdot (num\_lettere)}{num\_parole}$ ];
+		      \item \textbf{valore preferibile:} $80\leq IG\leq 100$;
+		      \item \textbf{valore accettabile:} $50\leq IG\leq 100$.
+	      \end{itemize}
+\end{enumerate}
+\pagebreak
+\subsubsection{Tabella riassuntiva}
+%tabella
+\begin{table}[H]
+	\begin{center}
+		\caption{Tabella riassuntiva metriche di processo}
+		\begin{tabular}{cc!{\color[HTML]{9b240a}\vrule width 0.05cm}cc}
+			\rowcolorhead
+			\headertitle{Codice} & \headertitle{Tipo Processo} & \headertitle{Valori Preferibili} & \headertitle{Valori Accettabili} \\
+
+			$PROS$               & Analisi dei Requisiti       & $100\%$                          & $100\% $                           \\
+			$CBO$                & Progettazione               & $0\leq CBO\leq 1$                & $0 \leq CBO \leq 6$                    \\
+			$DEP$                & Codifica                    & $DEP\leq 2$                      & $DEP \leq 3     $                    \\
+			$LEV$                & Codifica                    & $1\leq LEV \leq 3$               & $1\leq LEV \leq 6$                    \\
+			$PAR$                & Codifica                    & $PAR\leq 4$                      & $PAR\leq6     $                    \\
+			$RCC$                & Codifica                    & $RCC \geq 0.4$                   & $RCC\geq0.2   $                    \\
+			$BAC$                & Pianificazione              & $preventivo$                     & $preventivo \pm 5\%$      \\
+			$EV$                 & Pianificazione              & $EV \geq 0$                      & $EV\geq0$                          \\
+			$PV$                 & Pianificazione              & $PV \geq0$                       & $PV\geq0$                          \\
+			$SV$                 & Pianificazione              & $SV \geq 0$                      & $SV=0   $                          \\
+			$AC$                 & Pianificazione              & $0 \leq AC \leq PV$              & $0 \leq AC\leq budget$       \\
+			$CV$                 & Pianificazione              & $CV \geq 0 $                     & $CV\geq 0$                          \\
+			$CC$                 & Verifica                    & $100\% $                         & $75\%    $                         \\
+			$IG$                 & Documentazione              & $80\leq IG \leq 100$             & $50\leq IG \leq 100$                  \\
+		\end{tabular}
+
+	\end{center}
+\end{table}

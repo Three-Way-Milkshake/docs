@@ -1,0 +1,51 @@
+\documentclass[a4paper]{article}
+
+\input{../../../../latex/package.tex}
+\input{config/titlepage_input.tex} % modifica questo file
+\makeindex
+
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{listings}
+\input{glossario.tex}
+\begin{document}
+	\input{../../../../latex/titlepage.tex}
+	\pagebreak
+
+	% Registro delle modifiche
+	\input{../../../../latex/changelog.tex}
+	\input{config/changelog_input.tex} % modifica questo file
+	\end{longtable}
+	\pagebreak
+
+	% indice
+	\tableofcontents
+	\pagebreak
+
+	% indice delle figure, non ci sono figure
+	\listoffigures
+	\pagebreak
+
+	% indice delle tabelle
+	\listoftables
+	\pagebreak
+
+	% contenuto del documento, ogni sezione in un file
+	\input{res/sections/01_introduzione.tex}
+	\pagebreak
+
+	\input{res/sections/02_qualita_del_processo.tex}
+	\pagebreak
+
+	\input{res/sections/03_qualita_del_prodotto.tex}
+	\pagebreak
+
+	\input{res/sections/04_test.tex}
+	\pagebreak
+
+	\input{res/sections/05_resoconto.tex}
+
+	\pagebreak
+	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
+	\printglossary[title=Glossario dei Termini]
+\end{document}
