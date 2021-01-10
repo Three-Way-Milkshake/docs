@@ -24,7 +24,7 @@ do
 			# glossario
 			sing=`echo $line | cut -f3 -d ':'`
 			plur=`echo $line | cut -f4 -d ':'`
-			mean=`echo $line | cut -f5 -d ':'`
+			mean=`echo $line | cut -f5- -d ':'`
 			if [ `grep -c "newglossaryentry{$key}" glossario.tex` -lt 1 ]
 			then
 				echo "missing G: $key, adding it"
@@ -46,7 +46,7 @@ do
 					# lookbehind needed (?<!gls{)
 					#perl -i -p -e "s/(?<!(ls|pl|rt)\{)$plur(?!{)/\\\glspl{$key}\\\textsubscript{G}/gi" $f
 					#perl -i -p -e "s/(?<!(ls\{|pl\{|rt\{|[a-z]{3}))$plur(?!\{)/\\\glspl{$key}\\\textsubscript{G}/g" $f
-					perl -i -p -e "s/(?<=\s)$plur(?=\s|\.|\:|,|')/\\\glspl{$key}\\\textsubscript{G}/g" $f
+					perl -i -p -e "s/(?<=\s)$plur(?=\s|\.|\:|,|'|;)/\\\glspl{$key}\\\textsubscript{G}/g" $f
 					echo "found in $f"
 					#cat $f | perl -p -e "s/(?<!gls{)$plur/\\\glspl{$key}/g"
 				done
@@ -59,7 +59,7 @@ do
 				# lookbehind needed (?<!gls{)
 				#perl -i -p -e "s/(?<!(ls|pl|rt)\{)$sing(?!{)/\\\gls{$key}\\\textsubscript{G}/gi" $f
 				#perl -i -p -e "s/(?<!(ls\{|pl\{|rt\{|[a-z]{3}))$sing(?!\{)/\\\gls{$key}\\\textsubscript{G}/g" $f
-				perl -i -p -e "s/(?<=\s)$sing(?=\s|\.|\:|,|')/\\\gls{$key}\\\textsubscript{G}/g" $f
+				perl -i -p -e "s/(?<=\s)$sing(?=\s|\.|\:|,|'|;)/\\\gls{$key}\\\textsubscript{G}/g" $f
 				echo "found in $f"
 				#cat $f | perl -p -e "s/(?<!gls{)$sing/\\\gls{$key}/g"
 			done
@@ -81,7 +81,7 @@ do
 			do
 				#(?<!(ls\{|pl\{|rt\{|[a-z]{3}))$WORD(?!\{)
 				#perl -i -p -e "s/(?<!(ls\{|pl\{|rt\{|[a-z]{3}))$short(?!\{)/\\\acrshort{$key}\\\textsubscript{A}/g" $f
-				perl -i -p -e "s/(?<=\s)$short(?=(\s|\.|\:|'))/\\\acrshort{$key}\\\textsubscript{A}/g" $f
+				perl -i -p -e "s/(?<=\s)$short(?=(\s|\.|\:|'|;))/\\\acrshort{$key}\\\textsubscript{A}/g" $f
 				#perl -i -p -e "s/(?<!(ls|pl|rt|[a-z]{2})\{)$short(?!{)/\\\acrshort{$key}\\\textsubscript{A}/gi" $f
 				echo "found in $f"
 				#cat $f | perl -p -e "s/(?<!acrshort{)$short(?!{)/\\\acrshort{$key}/g"
