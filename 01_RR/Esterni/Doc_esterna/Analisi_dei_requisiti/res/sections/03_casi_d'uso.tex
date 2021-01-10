@@ -132,7 +132,7 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:} l'amministratore ha compilato il \gls{form}\textsubscript{G} per l'inserimento dei dati del nuovo utente e rende disponibile un pulsante per la conferma;
 	\item 	\textbf{Postcondizioni:} viene visualizzato a video un messaggio con la conferma della ricezione dei dati e il codice identificativo;
-	\item 	\textbf{Scenario principale:} l'amministratore preme il pulsante di conferma dopo aver completato tutti i campi del form;
+	\item 	\textbf{Scenario principale:} l'amministratore preme il pulsante di conferma dopo aver completato tutti i campi del \gls{form}\textsubscript{G};
 	\item 	\textbf{Descrizione:} l'amministratore preme il pulsante per la conferma e l'invio dei dati. A schermo viene visualizzato un messaggio con l'avvenuta registrazione e il codice identificativo relativo all'account registrato.
 
 \end{itemize}
@@ -251,10 +251,10 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} è resa disponibile l'interfaccia per l'inserimento di una nuova task;
+	\item 	\textbf{Precondizioni:} è resa disponibile l'interfaccia per l'inserimento di una nuova \gls{task}\textsubscript{G};
 	\item 	\textbf{Postcondizioni:} il responsabile ha aggiunto con successo la \gls{task}\textsubscript{G} alla lista. Il sistema assegnerà la nuova \gls{task}\textsubscript{G} a un muletto, il quale la visualizzerà nella propria lista di compiti (UC8);
-	\item 	\textbf{Scenario principale:} il responsabile preme l'apposito pulsante per l'aggiunta di una nuova task; 
-	\item 	\textbf{Descrizione:} il responsabile inserisce un nuovo compito da eseguire nella lista dei task;
+	\item 	\textbf{Scenario principale:} il responsabile preme l'apposito pulsante per l'aggiunta di una nuova \gls{task}\textsubscript{G}; 
+	\item 	\textbf{Descrizione:} il responsabile inserisce un nuovo compito da eseguire nella lista dei \gls{task}\textsubscript{G};
 	\item 	\textbf{Inclusioni:}
 	\begin{itemize}
 		\item UC4.2 Inserimento priorità;
@@ -266,9 +266,9 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task;
+	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova \gls{task}\textsubscript{G};
 	\item 	\textbf{Postcondizioni:} è stata compilata correttamente la priorità relativa alla \gls{task}\textsubscript{G} che si vuole inserire;
-	\item 	\textbf{Scenario principale:} il responsabile le assegna una priorità (bassa, media, alta) tramite una combobox;
+	\item 	\textbf{Scenario principale:} il responsabile le assegna una priorità (bassa, media, alta) tramite una \gls{combobox}\textsubscript{G};
 	\item 	\textbf{Descrizione:} le \gls{task}\textsubscript{G} possono avere tre diversi gradi di priorità:
 	\begin{itemize}
 		\item bassa;
@@ -281,8 +281,8 @@ Nella seguente sezione vengono esposti i \glspl{usecase}\textsubscript{G} indivi
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task;
-	\item 	\textbf{Postcondizioni:} è stato assegnato correttamente il \acrshort{POI}\textsubscript{A} relativo alla nuova task;
+	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova \gls{task}\textsubscript{G};
+	\item 	\textbf{Postcondizioni:} è stato assegnato correttamente il \acrshort{POI}\textsubscript{A} relativo alla nuova \gls{task}\textsubscript{G};
 	\item 	\textbf{Scenario principale:}
 	\begin{itemize}
 		\item visualizza la mappa con tutti i \acrshort{POI}\textsubscript{A} (UC6) e la lista di tutti i \acrshort{POI}\textsubscript{A} di scarico (UC12);
@@ -473,8 +473,8 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore è autenticato nel sistema e viene reso disponibile dal sistema l'interfaccia per la modifica dei POI;
-	\item 	\textbf{Postcondizioni:} nella mappa sono comparsi i cambiamenti dei POI; 
+	\item 	\textbf{Precondizioni:} l'amministratore è autenticato nel sistema e viene reso disponibile dal sistema l'interfaccia per la modifica dei \acrshort{POI}\textsubscript{A};
+	\item 	\textbf{Postcondizioni:} nella mappa sono comparsi i cambiamenti dei \acrshort{POI}\textsubscript{A}; 
 	\item 	\textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per la modifica dei POI, visualizza le opzioni tra cui può scegliere le operazioni da eseguire:
 	\begin{itemize}
 		\item modificare la posizione di un \acrshort{POI}\textsubscript{A} esistente (UC7.4.1);
@@ -501,7 +501,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore ha selezionato l'opzione, tra il menu, dell'aggiunta di un nuovo POI;
+	\item 	\textbf{Precondizioni:} l'amministratore ha selezionato l'opzione, tra il menu, dell'aggiunta di un nuovo \acrshort{POI}\textsubscript{A};
 	\item 	\textbf{Postcondizioni:} viene creato il nuovo \acrshort{POI}\textsubscript{A} nella mappa;
 	\item 	\textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per l'aggiunta di un nuovo POI, visualizzerà l'interfaccia per la creazione del nuovo punto d'interesse;
 	\item 	\textbf{Descrizione:} per inserire un nuovo \acrshort{POI}\textsubscript{A} all'interno della mappa devono essere specificati:
@@ -526,7 +526,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Scenario principale:}
 	\begin{itemize}
 		\item visualizza la mappa (UC6);
-		\item preme nel punto in cui vuole inserire il POI;
+		\item preme nel punto in cui vuole inserire il \acrshort{POI}\textsubscript{A};
 		\item conferma l'inserimento premendo un pulsante apposito;
 	\end{itemize}
 	\item 	\textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve posizionare il \acrshort{POI}\textsubscript{A} nella mappa.
@@ -536,9 +536,9 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \paragraph{UC7.4.4 - Inserimento codice identificativo}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore visualizza il \gls{form}\textsubscript{G} per l'inserimento del codice identificativo del nuovo POI;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha inserito il codice identificativo del nuovo POI; 
-	\item 	\textbf{Scenario principale:} l'amministratore inserisce il codice identificativo del nuovo \acrshort{POI}\textsubscript{A} nell'apposito form;
+	\item 	\textbf{Precondizioni:} l'amministratore visualizza il \gls{form}\textsubscript{G} per l'inserimento del codice identificativo del nuovo \acrshort{POI}\textsubscript{A};
+	\item 	\textbf{Postcondizioni:} l'amministratore ha inserito il codice identificativo del nuovo \acrshort{POI}\textsubscript{A}; 
+	\item 	\textbf{Scenario principale:} l'amministratore inserisce il codice identificativo del nuovo \acrshort{POI}\textsubscript{A} nell'apposito \gls{form}\textsubscript{G};
 	\item 	\textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare un codice identificativo al nuovo \acrshort{POI}\textsubscript{A}.
 
 \end{itemize}
@@ -546,7 +546,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \paragraph{UC7.4.5 - Inserimento tipo POI}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore visualizza il \gls{form}\textsubscript{G} per l'inserimento del tipo di POI;
+	\item 	\textbf{Precondizioni:} l'amministratore visualizza il \gls{form}\textsubscript{G} per l'inserimento del tipo di \acrshort{POI}\textsubscript{A};
 	\item 	\textbf{Postcondizioni:} viene creato il nuovo \acrshort{POI}\textsubscript{A} nella mappa; 
 	\item 	\textbf{Scenario principale:} l'amministratore inserisce il tipo di \acrshort{POI}\textsubscript{A} e conferma;
 	\item 	\textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di \acrshort{POI}\textsubscript{A} nella mappa:
@@ -561,7 +561,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \paragraph{UC7.4.6 - Eliminazione POI}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu per l'eliminazione di un \acrshort{POI}\textsubscript{A} esistente e visualizza la mappa con tutti i POI;
+	\item 	\textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu per l'eliminazione di un \acrshort{POI}\textsubscript{A} esistente e visualizza la mappa con tutti i \acrshort{POI}\textsubscript{A};
 	\item 	\textbf{Postcondizioni:} viene eliminato un \acrshort{POI}\textsubscript{A} dalla mappa e dalla lista; 
 	\item 	\textbf{Scenario principale:} seleziona dalla mappa il \acrshort{POI}\textsubscript{A} di interesse e conferma, attraverso un apposito pulsante, l'eliminazione;
 	\item 	\textbf{Descrizione:} si vuole eliminare un \acrshort{POI}\textsubscript{A} esistente dalla mappa.
@@ -599,7 +599,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Precondizioni:} l'operatore è sul muletto che si appresta a svolgere i propri compiti;
 	\item 	\textbf{Postcondizioni:} vengono visualizzate nella mappa le \gls{task}\textsubscript{G} nella relativa posizione;
 	\item 	\textbf{Scenario principale:} l'operatore visualizza la mappa con le \gls{task}\textsubscript{G} assegnatogli;
-	\item 	\textbf{Descrizione:} vengono visualizzate nella mappa le \gls{task}\textsubscript{G} nel loro relativo POI;
+	\item 	\textbf{Descrizione:} vengono visualizzate nella mappa le \gls{task}\textsubscript{G} nel loro relativo \acrshort{POI}\textsubscript{A};
 	\item 	\textbf{Inclusioni:}
 	\begin{itemize}
 		\item UC8.2 - Evidenziazione prossima \gls{task}\textsubscript{G}.
@@ -628,7 +628,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \subsection{UC9 - Segnalazione del completamento di una task}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
-	\item 	\textbf{Precondizioni:} l'operatore ha raggiunto e soddisfatto una task;
+	\item 	\textbf{Precondizioni:} l'operatore ha raggiunto e soddisfatto una \gls{task}\textsubscript{G};
 	\item 	\textbf{Postcondizioni:} il sistema ha registrato il completamento della \gls{task}\textsubscript{G} che verrà cancellata dalla lista completa di tutte le \gls{task}\textsubscript{G} da soddisfare e da quella personale dell'operatore;
 	\item 	\textbf{Scenario principale:} l'operatore clicca sul \acrshort{POI}\textsubscript{A} evidenziato in UC8.3 e conferma l'avvenuto scarico;
 	\item 	\textbf{Descrizione:} l'operatore ha scaricato la merce nel punto destinato, quindi deve segnalare di aver completato la \gls{task}\textsubscript{G} per poter proseguire con la prossima.
@@ -807,8 +807,8 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
 	\item 	\textbf{Precondizioni:} l'utente è autenticato come utente responsabile;
-	\item 	\textbf{Postcondizioni:} il responsabile visualizza la lista di task;
-	\item 	\textbf{Scenario principale:} il responsabile clicca sul bottone apposito per poter visualizzare la lista completa delle task;
+	\item 	\textbf{Postcondizioni:} il responsabile visualizza la lista di \gls{task}\textsubscript{G};
+	\item 	\textbf{Scenario principale:} il responsabile clicca sul bottone apposito per poter visualizzare la lista completa delle \gls{task}\textsubscript{G};
 	\item 	\textbf{Descrizione:} il responsabile necessita di visualizzare tutte le \gls{task}\textsubscript{G} che sono state create per tenere sotto controllo quali compiti vengono soddisfatti.
 
 \end{itemize}
