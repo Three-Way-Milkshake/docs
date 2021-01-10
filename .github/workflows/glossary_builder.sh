@@ -115,6 +115,7 @@ do
 		fi
 		makeglossaries `basename -s .tex $docName`
 		pdflatex -file-line-error -halt-on-error $docName
+		pdflatex -file-line-error -halt-on-error $docName
 		if [ $? -eq 1 ]
 		then 
 			echo "********** latex compilation went wrong. exiting **********"
