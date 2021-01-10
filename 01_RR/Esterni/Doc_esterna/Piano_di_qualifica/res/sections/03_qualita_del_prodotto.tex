@@ -45,56 +45,57 @@ L'affidabilità è la capacità di un certo software di mantenere un certo livel
 \textbf{Affidabilità del Software (A)}\\
 Viene specificata l'abilità del software di resistere a malfunzionamenti.
 \begin{itemize}
-	\item \textbf{misurazione:} $A = $Numero di errori$ / $Numero di test eseguiti;
-	\item \textbf{valore preferibile:} A = 0;
-	\item \textbf{valore accettabile:} A < 0.15.
+	\item \textbf{misurazione:} $A = \frac{numero\_di\_errori}{numero\_di\_test\_eseguiti}$;
+	\item \textbf{valore preferibile:} $A = 0$;
+	\item \textbf{valore accettabile:} $A < 0.15$.
 \end{itemize}
 
 \subsection{Efficienza}
 L'efficienza è la capacità del software di poter offrire un determinato livello di prestazioni in date condizioni in un certo periodo.
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item comportamento rispetto al tempo: capacità del prodotto di fornire adeguati livelli di elaborazione, velocità e tempi di risposta;
-	\item utilizzo delle risorse: capacità del prodotto di utilizzare le risorse in maniera adeguata;
-	\item conformità: capacità del prodotto di aderire a standard sull'efficienza.
+	\item \textbf{comportamento rispetto al tempo}: capacità del prodotto di fornire adeguati livelli di elaborazione, velocità e tempi di risposta;
+	\item \textbf{utilizzo delle risorse}: capacità del prodotto di utilizzare le risorse in maniera adeguata;
+	\item \textbf{conformità}: capacità del prodotto di aderire a standard sull'efficienza.
 \end{itemize}
 \subsubsection{Metriche}
-Visto che il proponente non ha incluso dettagli relativi alla qualità dell'efficienza, non verranno proposte metriche per questa sezione.
+Non avendo ricevuto dettagli relativi alla qualità dell'efficienza da parte del proponente, non verranno proposte metriche per questa sezione.
 
 \subsection{Usabilità}
-L'usabilità è la capacità del prodotto di essere compreso ed utilizzato dall'utente senza difficoltà tenendo conto certe condizioni.
+L'usabilità è la capacità del prodotto di essere compreso ed utilizzato dall'utente senza difficoltà eccessive.
 
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item \textbf{comprensibilità:} capacità del prodotto di visualizzare le varie funzionalità del software e permette all'utente di capire se il software è indicato per le sue esigenze;
+	\item \textbf{comprensibilità:} capacità del prodotto di visualizzare le varie funzionalità del software e di permettere all'utente di capire se questo è indicato per le sue esigenze;
 	\item \textbf{apprendibilità:} capacità del prodotto di aumentare nel tempo l'abilità dell'utente di sfruttare il software;
 	\item \textbf{operabilità:} capacità del prodotto che permette agli utenti di farne uso per i loro scopi;
-	\item \textbf{attrattiva:} capacità del prodotto di rendere più piacevolo l'utilizzo del software;
+	\item \textbf{attrattività:} capacità del prodotto di rendere più piacevole l'utilizzo del software;
 	\item \textbf{conformità:} capacità del prodotto di aderire a standard relativi all'usabilità.
 \end{itemize}
 
 \subsubsection{Metriche}
-\textbf{Numero di tocchi/click necessari C)}\\
+\textbf{Numero di tocchi/click necessari (C)}\\
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento.\\
 Si considera la capacità dell'operatore di visualizzare la propria lista delle \gls{task}\textsubscript{G}.
 \begin{itemize}
-	\item \textbf{misurazione:} $L = $Numero di tocchi o click necessari per il raggiungimento dell'obiettivo;
-	\item \textbf{valore preferibile:} C < 4;
-	\item \textbf{valore accettabile:} C < 6.
+	\item \textbf{misurazione:} numero di tocchi o click necessari per il raggiungimento dell'obiettivo;
+	\item \textbf{valore preferibile:} $C < 4$;
+	\item \textbf{valore accettabile:} $C < 6$.
 \end{itemize}
-\textbf{Numero di secondi necessari S}
+\textbf{Numero di secondi necessari (S)}\\
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
 Si considera la capacità dell'operatore di visualizzare la propria lista delle \gls{task}\textsubscript{G}.
 \begin{itemize}
-	\item \textbf{misurazione:} $L = $Numero di secondi necessari per il raggiungimento dell'obiettivo;
-	\item \textbf{valore preferibile:} S < 15;
-	\item \textbf{valore accettabile:} S < 40.
+	\item \textbf{misurazione:} numero di secondi necessari per il raggiungimento dell'obiettivo;
+	\item \textbf{valore preferibile:} $S < 15$;
+	\item \textbf{valore accettabile:} $S < 40$.
 \end{itemize}
+\textbf{Profondità della gerarchia dei collegamenti (P)}\\
 Viene specificata la profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software.
 \begin{itemize}
-	\item \textbf{misurazione:} $P = $Profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software;
-	\item \textbf{valore preferibile:} P < 4;
-	\item \textbf{valore accettabile:} P < 6.
+	\item \textbf{misurazione:} profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software;
+	\item \textbf{valore preferibile:} $P < 4$;
+	\item \textbf{valore accettabile:} $P < 6$.
 \end{itemize}
 \subsection{Manutenibilità}
 Capacità del prodotto di essere modificato anche in futuro.
@@ -106,12 +107,11 @@ Capacità del prodotto di essere modificato anche in futuro.
 	\item \textbf{testabilità:} capacità del prodotto di essere testato al fine di validare le modifiche al codice sorgente.
 \end{itemize}
 \subsubsection{Metriche}
-\textbf{Leggibilità del Software L}\\
-Viene specificata l'abilità del software di resistere a malfunzionamenti.
+\textbf{Leggibilità del software (L)}\\
 \begin{itemize}
-	\item \textbf{misurazione:} $L = $Numero di linee di codice commentate$ / $Numero di linee di codice;
-	\item \textbf{valore preferibile:} L > 0.15;
-	\item \textbf{valore accettabile:} L > 0.10.
+	\item \textbf{misurazione:} $\frac{numero\_di\_linee\_di\_codice\_commentate}{numero\_di\_linee\_di\_codice}$;
+	\item \textbf{valore preferibile:} $L > 0.15$;
+	\item \textbf{valore accettabile:} $L > 0.10$.
 \end{itemize}
 
 
@@ -125,7 +125,7 @@ La portabilità è la capacità del software di poter funzionare senza tener con
 	\item \textbf{sostituibilità:} capacità del software di sostituire un altro prodotto con le stesse funzionalità.
 \end{itemize}
 \subsubsection{Metriche}
-IL software dovrà eseguire solamente su ambiente Docker, quindi non sono necessarie varie metriche.
+Il software dovrà eseguire solamente su ambiente \href{https://www.docker.com/why-docker}{Docker}, al momento non sono state individuate metriche nel contesto di portabilità.
 \subsection{Tabella Riassuntiva}
 %tabella
 \begin{table}[H]
@@ -135,12 +135,12 @@ IL software dovrà eseguire solamente su ambiente Docker, quindi non sono necess
 			\rowcolorhead
 			\headertitle{Nome Metrica}         & \headertitle{Descrizione}                                                                           & \headertitle{Tipo Capacità} & \headertitle{Val. Pref.} & \headertitle{Val. Accett.} \\
 
-			Completezza del Software Cs        & Funzionalità non implementate rispetto alle funzionalità implementate                               & Funzionalità                & Cs = 1                   & Cs = 1                     \\
-			Affidabilità del Software A        & Errori rispetto al numero di test eseguiti                                                          & Affidabilità                & A = 0                    & A < 0.15                   \\
-			Numero di tocchi/click necessari C & Numero di tocchi o click necessari per visualizzare la propria lista di \gls{task}\textsubscript{G} & Usabilità                   & C < 4                    & C < 6                      \\
-			Numero di secondi necessari S      & Numero di secondi necessari per visualizzare la propria lista di \gls{task}\textsubscript{G}        & Usabilità                   & S < 15                   & S < 40                     \\
-			Profondità gerarchica P            & Profondità gerarchica massima dei collegamenti e funzionalità presenti all'interno del software     & Usabilità                   & P < 4                    & P < 6                      \\
-			Leggibilità software L             & Numero di linee di codice commentate rispetto al totale di linee di codice                          & Manutenibilità              & L > 0.15                 & L > 0.10                   \\
+			Completezza del Software ($Cs$)        & Funzionalità non implementate rispetto alle funzionalità implementate                               & Funzionalità                & $Cs = 1  $                 & $Cs = 1   $                  \\
+			Affidabilità del Software ($A$)        & Errori rispetto al numero di test eseguiti                                                          & Affidabilità                & $A = 0   $                 & $A < 0.15 $                  \\
+			Numero di tocchi/click necessari ($C$) & Numero di tocchi o click necessari per visualizzare la propria lista di \gls{task}\textsubscript{G} & Usabilità                   & $C < 4   $                 & $C < 6    $                  \\
+			Numero di secondi necessari ($S$)      & Numero di secondi necessari per visualizzare la propria lista di \gls{task}\textsubscript{G}        & Usabilità                   & $S < 15  $                 & $S < 40   $                  \\
+			Profondità gerarchica ($P$)            & Profondità gerarchica massima dei collegamenti e funzionalità presenti all'interno del software     & Usabilità                   & $P < 4   $                 & $P < 6    $                  \\
+			Leggibilità software ($L$)             & Numero di linee di codice commentate rispetto al totale di linee di codice                          & Manutenibilità              & $L > 0.15$                 & $L > 0.10 $                  \\
 		\end{tabular}
 
 	\end{center}
