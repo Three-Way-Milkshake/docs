@@ -10,47 +10,47 @@
 \input{glossario.tex}
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
-	\pagebreak	
-	
+	\pagebreak
+
 	% Registro delle modifiche
 	\input{../../../../latex/changelog.tex}
-	\input{config/changelog_input.tex} % modifica questo file       
+	\input{config/changelog_input.tex} % modifica questo file
 	\end{longtable}
 	\pagebreak
-		
+
 	% indice
 	{
 		\hypersetup{linkcolor=black}
 		\tableofcontents
-		
+		\pagebreak
+
+        % indice delle figure
+        \listoffigures
+        \pagebreak
+
+        % indice delle tabelle
+        \listoftables
+        \pagebreak
 	}
-	\pagebreak
-	
-	% indice delle figure
-	\listoffigures
-	\pagebreak
-	
-	% indice delle tabelle
-	\listoftables
-	\pagebreak
-		
+
+
 	% contenuto del documento, ogni sezione in un file
 	\input{res/sections/01_introduzione.tex} % modifica questo file
 	\pagebreak
-	
+
 	\input{res/sections/02_descrizione_generale.tex} % modifica questo file
 	\pagebreak
-	
+
 	\input{res/sections/03_casi_d'uso.tex}
 	\pagebreak
-	
+
 	\input{res/sections/04_algoritmo_sistema_centrale.tex}
 	\pagebreak
 
 	\input{res/sections/05_requisiti.tex}
 	\pagebreak
-	
+
 	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
-	\printglossary[title=Glossario dei Termini]	
-	
+	\printglossary[title=Glossario dei Termini]
+
 \end{document}

@@ -17,12 +17,15 @@
 
 % Diario delle modifiche
 \input{../../../../latex/changelog.tex}
-\input{config/changelog_input.tex} % editare questo   
+\input{config/changelog_input.tex} % editare questo
 \end{longtable}
 \pagebreak
 
 % Indice
-\tableofcontents
+{
+    \hypersetup{linkcolor=black}
+    \tableofcontents
+}
 \pagebreak
 \InputIfFileExists{../../../verbali_sezioni_condivise/00_sezioni_condivise.tex}{}{}\pagebreak
 % Informazioni generali

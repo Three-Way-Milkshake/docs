@@ -20,19 +20,19 @@
 
 	% indice
 	{
-	\hypersetup{linkcolor=black}
-	\tableofcontents
-	
+    	\hypersetup{linkcolor=black}
+    	\tableofcontents
+    	\pagebreak
+
+        % indice delle figure, non ci sono figure
+        \listoffigures
+        \pagebreak
+
+        % indice delle tabelle
+        \listoftables
+        \pagebreak
 	}
-	\pagebreak
 
-	% indice delle figure, non ci sono figure
-	\listoffigures
-	\pagebreak
-
-	% indice delle tabelle
-	\listoftables
-	\pagebreak
 
 	% contenuto del documento, ogni sezione in un file
 	\input{res/sections/01_introduzione.tex}

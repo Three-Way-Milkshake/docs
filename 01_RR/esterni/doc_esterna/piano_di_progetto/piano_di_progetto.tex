@@ -33,16 +33,17 @@
 	{
         \hypersetup{linkcolor=black}
         \tableofcontents
+        \pagebreak
+
+        % indice delle figure
+        \listoffigures
+        \pagebreak
+
+        % indice delle tabelle
+        \listoftables
+        \pagebreak
     }
-	\pagebreak
 
-	% indice delle figure
-	\listoffigures
-	\pagebreak
-
-	% indice delle tabelle
-	\listoftables
-	\pagebreak
 
 	% contenuto del documento, ogni sezione in un file
 	\input{res/sections/01_introduzione.tex}
@@ -65,7 +66,7 @@
 	\pagebreak
 
 
-	\glsaddall
+	%\glsaddall
 	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
 	\printglossary[title=Glossario dei Termini]
 \end{document}

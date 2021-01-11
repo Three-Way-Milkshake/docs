@@ -46,25 +46,26 @@
     {
         \hypersetup{linkcolor=black}
         \tableofcontents
+        \pagebreak
+
+        % indice delle figure
+        \listoffigures
+        \pagebreak
+
+        % indice delle tabelle
+        %\listoftables  non ci sono tabelle
+        %\pagebreak
     }
-	\pagebreak
 
-	% indice delle figure
-	\listoffigures
-	\pagebreak
-
-	% indice delle tabelle
-	%\listoftables  non ci sono tabelle
-	\pagebreak
 
 	% contenuto del documento, ogni sezione in un file
-	\input{res/sections/01_introduzione.tex} 
+	\input{res/sections/01_introduzione.tex}
 	\pagebreak
 
 	\input{res/sections/02_processi_primari.tex}
     \pagebreak
 
-    \input{res/sections/03_processi_di_supporto.tex} 
+    \input{res/sections/03_processi_di_supporto.tex}
     \pagebreak
 
     \input{res/sections/04_processi_organizzativi.tex}
