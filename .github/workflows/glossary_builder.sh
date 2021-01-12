@@ -104,8 +104,8 @@ do
 		fi
 	done
 
-	if [ `git status | grep -c "working tree clean"` -eq 0 ]
-	then
+	#if [ `git status | grep -c "working tree clean"` -eq 0 ]
+	#then
 		docName=`ls *.tex | grep -v glossario`
 		pdflatex -file-line-error -halt-on-error $docName
 		if [ $? -eq 1 ]
@@ -121,7 +121,7 @@ do
 			echo "********** latex compilation went wrong. exiting **********"
 			exit 1
 		fi
-	fi
+	#fi
 
 	#get back for the next doc, if any
 	cd -
