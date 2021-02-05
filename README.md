@@ -2,6 +2,7 @@
 Repository per la documentazione del progetto PORTACS del gruppo Three Way Milkshake per il corso di Ingegneria del Software 2020/2021
 
 ## Contenuti
+- [Glossario](https://github.com/Three-Way-Milkshake/docs/wiki/Glossario)
 ### Documentazione esterna
 - [Analisi dei Requisiti](01_RR/esterni/doc_esterna/analisi_dei_requisiti/analisi_dei_requisiti.pdf)
 - [Lettera di Presentazione](01_RR/esterni/doc_esterna/lettera_di_presentazione/lettera_di_presentazione.pdf)
