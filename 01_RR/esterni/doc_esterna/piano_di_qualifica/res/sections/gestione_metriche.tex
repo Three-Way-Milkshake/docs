@@ -1,0 +1,134 @@
+\section{Gestione amministrativa}
+\subsection{Misure e metriche in dettaglio}
+In questa sezione vengono descritte in dettaglio le varie metriche utilizzate, con una breve descrizione e la modalità di calcolo. In seguito sarà fornita una tabella riassuntiva con i valori limiti accettati.
+\subsection{Metriche per i processi}
+\subsubsection{Scarto riunioni}
+Viene utilizzata alla fine di ogni periodo per monitorare e valutare una ripianificazione delle riunioni. Viene rappresentato tramite la differenza tra il tempo preventivato della durata di una riunione e la sua durata effettiva. Sono identificati tre sottometriche in base al tipo di riunione:
+\begin{itemize}
+    \item scarto riunioni;
+    \item scarto riunioni interne;
+    \item scarto riunioni esterne.
+\end{itemize}
+
+\subsubsection{Totale riunioni}
+Viene tenuto traccia il numero totale di riunioni effettuate.
+\subsubsection{Totale riunioni interne}
+Viene tenuto traccia il numero totale di riunioni interne effettuate.
+\subsubsection{Totale riunioni esterne}
+Viene tenuto traccia il numero totale di riunioni esterne con il proponente effettuate.
+
+\subsubsection{Scarto ticket}
+Anch'esso utilizzato alla fine di ogni periodo per monitorare e valutare una ripianificazione sul tempo assegnato ad ogni ticket per completarlo. 
+\[
+    (tempo preventivato completamento ticket)-(tempo effettivo completamento ticket)
+\]
+
+\subsubsection{Differenza ToVerify}
+Metrica utilizzata per monitorare il tempo impiegato per eseguire un ticket, ossia da passare dallo stato \textit{To Do} a \textit{To Verify}. Viene calcolato ..
+
+\subsubsection{Differenza Done Verify}
+
+\subsubsection{Uniformità del lavoro nel tempo}
+Per ogni periodo, vengono contati il numero di ticket passati a \textit{To Verify} e quelli passati a \textit{Done Verify}.
+
+\subsubsection{Budget At Completion}
+Indica il budget totale allocato per il progetto.
+
+\subsubsection{Earned Value (EV)}
+Indica la quantità di guadagno ottenuta dal lavoro effettuato fino al momento di calcolo.
+\[
+    (preventivo)*(\%\_lavoro\_pianificato)
+\]
+
+\subsubsection{Planned Value (PV)}
+Indica la quantità di guadagno stimata sul lavoro pianificato al momento del calcolo.
+\[
+    (consuntivo)*(\%_lavoro_pianificato)
+\]
+
+\subsubsection{Schedule Variance (SV)}
+Indica l'anticipo o il ritardo del lavoro effettuato rispetto alla pianificazione.
+\[
+    EV - PV
+\]
+
+\subsubsection{Actual Cost (AC)}
+I costi sostenuti fino al momento del calcolo.
+
+\subsubsection{Cost Variance (CV)}
+La differenza tra il coste del lavoro ad ora effettuato e quello preventivato.
+
+\[
+    EV-AC
+\]
+
+\subsection{Metriche per la documentazione}
+
+\subsection{Indice di Gulpease (IG)}
+Indica la leggibilità di un testo, tarato sulla lingua italiana. Differentemente da indici di lingua straniera, ha il vantaggio di controllare la lunghezza delle parole anzichè il numero di sillabe per parola, semplificandone il calcolo automatico. 
+Nel calcolo vengono ignorati frontespizio, registro modifiche, elenco figure, elenco ta-belle e figure e tabelle; in modo da poter valutare appieno la leggibilità del contenutotestuale dei documenti.
+Il valore risultante è compreso tra 0 e 100, dove un indice più alto corrisponde ad un indice di leggibilità più semplice.
+Le soglie dei valori dell’indice di leggibilità Gulpease sono:
+\begin{itemize}
+    \item inferiore a 80, il documento `e difficile da leggere per chi ha la licenza elementare;
+    \item inferiore a 60, il documento `e difficile da leggere per chi possiede la licenza media;
+    \item inferiore a 40, il documento `e difficile da leggere per chi ha un diploma superiore.
+\end{itemize}
+\[
+    89+ \frac{300\cdot (num\_frasi) - 10\cdot (num\_lettere)}{num\_parole}
+\]
+
+\subsection{Metriche per il software}
+Questa sezione contiene le metriche che si cercherà di applicare al software prodotto. A causa dell’inesperienza del gruppo, tali valori sono una dichiarazione di intenti per la qualità del software e potrebbero essere rivisti con le successive revisioni.
+
+\subsubsection{Percentuale Requisiti Obbligatori Soddisfatti (PROS)}
+Indica la quantità di requisiti obbligatori soddisfatti rispetto al totale.
+\[\frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali}\]
+
+\subsubsection{Coupling Between Objects (CBO)}
+Indica l'accoppiamento tra classi e oggetti; due classi si dicono accoppiate se una utilizza metodi o variabili dell'altra.
+
+\subsubsection{DEPth of hierarchies(DEP)}
+Indica la profondità delle gerarchie nel codice sviluppato.
+
+\subsubsection{LEVel of nesting (LEV)}
+Indica il livello di annidamento nei vari metodi presenti nel codice prodotto.
+\textbf{Profondità della gerarchia dei collegamenti (P)}\\
+Viene specificata la profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software.
+\begin{itemize}
+	\item \textbf{misurazione:} profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software;
+	\item \textbf{valore preferibile:} $P < 4$;
+	\item \textbf{valore accettabile:} $P < 6$.
+\end{itemize}
+
+\subsubsection{PARametri per metodo (PAR)}
+Indica il numero di parametri presenti nei metodi sviluppati nel codice.
+
+\subsubsection{Rapporto Codice Commenti (RCC)}
+Indica il rapporto tra le linee di codice e le linee di commento all'interno del file.
+\[\frac{linee\_codice}{linee\_commento}\]
+
+\subsubsection{Code Coverage (CC)}
+Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi.
+\[\frac{linee\_codice\_verificate}{linee\_codice\_totali}\]
+
+\subsubsection{Completezza del Software(Cs)}
+Viene specificata la completezza del software.
+\[C = (1- \frac{funzionalita\_non\_implementate }{funzionalita\_implementate})\]
+
+\subsubsection{Affidabilità del Software (A)}
+Viene specificata l'abilità del software di resistere a malfunzionamenti.
+\[A = \frac{numero\_di\_errori}{numero\_di\_test\_eseguiti}\]
+
+\subsubsection{Numero di tocchi/click necessari (C)}
+Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento.\\
+Si considera la capacità dell'operatore di visualizzare la propria lista delle task.
+
+\subsubsection{Numero di secondi necessari (S)}
+Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
+Si considera la capacità dell'operatore di visualizzare la propria lista delle task.
+
+\subsubsection{Leggibilità del Software (L)}
+\[\frac{numero\_di\_linee\_di\_codice\_commentate}{numero\_di\_linee\_di\_codice}\]
+
+\subsection{Comunicazione e risoluzione delle anomalie}
