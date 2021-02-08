@@ -22,92 +22,134 @@ I prodotti realizzati sono:
 \subsection{Tabella Obiettivi}
 Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e le relative metriche di misura.
 
-miglioramento continuo - excel
 
-corretta pianificazione - preventivo
 
-Leggibilità dei documenti - Gulpease
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{}p{0.135\textwidth} 
+		>{}p{0.18\textwidth}
+        >{}p{0.27\textwidth}
+        >{\centering}p{0.30\textwidth} }
+        
+	\rowcolorhead
+	\centering \headertitle{Codice} &
+	\centering \headertitle{Nome} &	
+    \centering \headertitle{Descrizione} &
+    \centering \headertitle{Metriche}	
+	\endfirsthead	
+    \endhead
+    
+        01 & Miglioramento continuo & Capacità del processo di misurare e migliorare le proprie capacità & SR: Scarto Riunioni \newline
+                         TR: Totale Riunioni \newline
+                        TRI: Totale Riunioni Interne \newline
+                        TRE: Totsli Riunioni Esterne \newline
+                        ST: Scarto Ticket \newline
+                        DV: Differenza To Verify \newline
+                         UL: Uniformità del lavoro nel tempo \tabularnewline
+        02 & Corretta pianificazione & La pianificazione del progetto non deve discostarsi dall'effettivo andamento & BAC: Budget at Completion \newline 
+                                            EV: Earned Value \newline
+                                            PV: Planned Value \newline
+                                            SV: Schedule Variance \newline
+                                            AC: Actual Cost \tabularnewline
 
-Implementazione Requisiti Obbligatori - PROS
+        03 & Leggibilità dei documentazione & I documenti devono essere leggibili e comprensibili da persone con licenza di scuola media/superiore & IG: Indice di Gulpease \tabularnewline
 
-Manutenzione e comprensione del codice - CBO DEP LEV PAR RCC L
+        04 & Implementazione Requisiti Obbligatori & Devono venire implementati tutti i requisiti obbligatori descritti dall'\textsc{Analisi dei Requisiti} & PROS: Requisiti Obbligatori Soddisfatti \tabularnewline
 
-Copertura del codice - CC 
+        05 & Manutenzione e comprensione del codice & Il codice deve essere quanto più comprensibile e mantenibile & CBO: Coupling Between Objects \newline DEP: Depth of hierarchies \newline LEV: Level of nesting \newline PAR: Parametri per metodo \newline RCC: Rapporto Codice Commenti \newline L: Leggibilità del software \tabularnewline
 
-Superamento test - Percentuale superamento test DAFARE
+        06 & Copertura del codice & Il codice dovrà essere testato in ogni sua parte per garantire le funzionalità previste dai requisiti & CC: Code Coverage \tabularnewline
 
-Conformità - CS
+        07 & Superamento test & La Percentuale di superamento dei test dovrà essere $\geq 80$ del totale & Percentuale superamento test \tabularnewline
 
-Robustezza - A
+        08 & Conformità & Il prodotto dovrà essere conforme ai requisiti, implementando le funzionalità richieste & CS: Completezza del Software \tabularnewline
 
-Usabilità - C S
+        09 & Robustezza & Il prodotto dovrà far fronte a situazioni anomale gestendole senza arrestare la sua esecuzione & A: Affidabilità del software \tabularnewline
+
+        10 & Usabilità & Il prodotto dovrà essere il più semplice possibile da utilizzare & C: Numero di tocchi/click necessari \newline S: Numero di secondi necessari\tabularnewline
+        \caption{Tabella Obiettivi}
+    \end{longtable}.
+
+
 
 \subsection{Metriche}
 Al fine del raggiungimento degli obiettivi di qualità è necessario che il processo di verifica produca dei risultati quantificabili, così da poterli confrontare con gli obiettivi fissati a priori. Per questo vengono prefissate delle metriche e i valori di sufficienza minimi necessari, che indicano se i livelli qualitativi di processo e di prodotto sono in linea con gli obiettivi prefissati. La seguente tabella riporta le metriche utilizzate, le rispettive soglie di valori preferibili e accetabili e i relativi obiettivi, così da monitorare e controllare gli obiettivi raggiunti e monitorarne i progressi.
 
 %sistemare
-\begin{table}[H]
-	\begin{center}
-		\caption{Tabella delle metriche}
-		\begin{tabular}{p{0.25\linewidth} p{0.25\linewidth}c!{\color[HTML]{9b240a}\vrule width 0.05cm}cc}
-			\rowcolorhead
-			\headertitle{Codice} & \headertitle{Nome}         & \headertitle{Valori Preferibili} & \headertitle{Valori Accettabili} & \headertitle{Obiettivi} \\
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{\centering}p{0.1\textwidth} 
+		>{}p{0.18\textwidth}
+        >{\centering}p{0.20\textwidth}
+        >{\centering}p{0.20\textwidth}
+        >{}p{0.12\textwidth} }
+        
+	\rowcolorhead
+	\centering \headertitle{Codice} &
+	\centering \headertitle{Nome} &	
+    \centering \headertitle{Valori Preferibili} &
+    \centering \headertitle{Valori Accettabili}	&
+    \centering \headertitle{Obiettivi}	
+	\endfirsthead	
+    \endhead
 
-            SR & Scarto Riunioni & 2 & 3 & Ob1 \\
+            SR & Scarto Riunioni & 2 & 3 & 01 \\
             
-            TR & Totale Riunioni & 2 & 3 & Ob1 \\
+            TR & Totale Riunioni & 2 & 3 & 01 \tabularnewline
             
-            TRI & Totale Riunioni Interne & 2 & 3 & Ob1 \\
+            TRI & Totale Riunioni Interne & 2 & 3 & 01 \\
             
-            TRE & Totale Riunioni Esterne & 2 & 3 & Ob1 \\
+            TRE & Totale Riunioni Esterne & 2 & 3 & 01 \\
 
-            ST & Scarto Ticket & 2 & 3 & Ob1 \\
+            ST & Scarto Ticket & 2 & 3 & 01 \\
 
-            DV & Differenza To Verify & 2 & 3 & Ob1 \\
+            DV & Differenza To Verify & 2 & 3 & 01 \\
 
-            DD & Differenza Done Verify & 2 & 3 & Ob1 \\
+            DD & Differenza Done Verify & 2 & 3 & 01 \\
 
-            UL & Uniformità del lavoro nel tempo &2 & 2 & ob2 \\
+            UL & Uniformità del lavoro nel tempo &2 & 2 & 01 \\
 
-            BAC & Budget at Completion & preventivo & $preventivo-5\%\leq BAC \leq preventivo+5\%$ & ob \\
+            BAC & Budget at Completion & preventivo & $preventivo-5\%\leq BAC \leq preventivo+5\%$ & 02 \\
 
-            EV & Earned Value & $EV \geq 0$ & $EV \geq 0$ & ob \\
+            EV & Earned Value & $EV \geq 0$ & $EV \geq 0$ & 02 \\
 
-            PV & Planned Value & $PV \geq 0$ & $PV \geq 0$ & ob \\
+            PV & Planned Value & $PV \geq 0$ & $PV \geq 0$ & 02 \\
 
-            SV & Schedule Variance & $SV \geq 0$ & $SV = 0$ & ob \\
+            SV & Schedule Variance & $SV \geq 0$ & $SV = 0$ & 02 \\
 
-            AC & Actual Cost & $0 \leq AC \leq PV$ & $0 \leq AC \leq budget$ & ob \\
+            AC & Actual Cost & $0 \leq AC \leq PV$ & $0 \leq AC \leq budget$ & 02 \\
 
-            IG & Indice di Gulpease & $70 \leq IG \leq 100$ & $50 \leq IG \leq 100$ & ob \\
+            IG & Indice di Gulpease & $70 \leq IG \leq 100$ & $50 \leq IG \leq 100$ & 03 \\
 
-            PROS & Requisiti Obbligatori Soddisfatti & 100\% & 100\% & ob \\
+            PROS & Requisiti Obbligatori Soddisfatti & 100\% & 100\% & 04 \\
 
-            CBO & Coupling Between Objects & $0\leq CBO \leq 1$ & $0\leq CBO \leq 6$ & ob \\
+            CBO & Coupling Between Objects & $0\leq CBO \leq 1$ & $0\leq CBO \leq 6$ & 05 \\
 
-            DEP & Depth og hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & ob \\
+            DEP & Depth og hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 05 \\
 
-            LEV & Level of nesting & $1\leq LEV \leq 3$ & $1\leq CBO \leq 6$ & ob \\
+            LEV & Level of nesting & $1\leq LEV \leq 3$ & $1\leq CBO \leq 6$ & 05 \\
 
-            PAR & Parametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & ob \\
+            PAR & Parametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 05 \\
 
-            RCC & Rapporto Codice Commenti & $RCC \geq 0.4$ & $RCC \geq 0.2$  & ob \\
+            RCC & Rapporto Codice Commenti & $RCC \geq 0.4$ & $RCC \geq 0.2$  & 05 \\
 
-            CC & Code Coverage & 100\% & 75\% & ob \\
+            CC & Code Coverage & 100\% & 75\% & 06 \\
 
-            CS & Completezza del Software & $CS=1$ & $CS=1$ & ob \\
+            ST & Percentuale superamento test & 80\% & 75\% & 07 \\
 
-            A & Affidabilità del Software & $A=0$ & $A < 0.15$ & ob \\
+            CS & Completezza del Software & $CS=1$ & $CS=1$ & 08 \\
 
-           C & Numero di tocchi/click necessari & $C<4$ & $C<6$& ob \\
+            A & Affidabilità del Software & $A=0$ & $A < 0.15$ & 09 \\
 
-           S & Numero di secondi necessari & $S<15$ & $S<40$ & ob \\
+           C & Numero di tocchi/click necessari & $C<4$ & $C<6$& 10 \\
 
-           L & Leggibilità del Software & $L<0.15$ & $L>0.10$ & ob \\
-		\end{tabular}
+           S & Numero di secondi necessari & $S<15$ & $S<40$ & 10 \\
 
-	\end{center}
-\end{table}
+           L & Leggibilità del Software & $L<0.15$ & $L>0.10$ & 05 \\
+           \caption{Tabella delle Metriche}
+        \end{longtable}.
 
 \subsection{Scadenze temporali}
 
