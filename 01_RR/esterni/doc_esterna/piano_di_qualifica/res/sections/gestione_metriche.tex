@@ -1,8 +1,9 @@
 \section{Gestione amministrativa}
 \subsection{Misure e metriche in dettaglio}
-In questa sezione vengono descritte in dettaglio le varie metriche utilizzate, con una breve descrizione e la modalità di calcolo. In seguito sarà fornita una tabella riassuntiva con i valori limiti accettati.
+In questa sezione vengono descritte in dettaglio le varie metriche utilizzate, con una breve descrizione e la modalità di calcolo. 
+Le soglie di accettabilità sono riportate nella tabella 2.4.1 "Tabella delle Metriche", valori inferiori ai limiti accettabili sono considerati negativi e il prodotto o processo dovrà essere sottoposto ad ulteriori indagini e verifiche.
 \subsection{Metriche per i processi}
-\subsubsection{Scarto riunioni}
+\subsubsection{Scarto riunioni (SR)}
 Viene utilizzata alla fine di ogni periodo per monitorare e valutare una ripianificazione delle riunioni. Viene rappresentato tramite la differenza tra il tempo preventivato della durata di una riunione e la sua durata effettiva. Sono identificati tre sottometriche in base al tipo di riunione:
 \begin{itemize}
     \item scarto riunioni;
@@ -10,28 +11,28 @@ Viene utilizzata alla fine di ogni periodo per monitorare e valutare una ripiani
     \item scarto riunioni esterne.
 \end{itemize}
 
-\subsubsection{Totale riunioni}
+\subsubsection{Totale riunioni (TR)}
 Viene tenuto traccia il numero totale di riunioni effettuate.
-\subsubsection{Totale riunioni interne}
+\subsubsection{Totale riunioni interne (TRI)}
 Viene tenuto traccia il numero totale di riunioni interne effettuate.
-\subsubsection{Totale riunioni esterne}
+\subsubsection{Totale riunioni esterne (TRE)}
 Viene tenuto traccia il numero totale di riunioni esterne con il proponente effettuate.
 
-\subsubsection{Scarto ticket}
+\subsubsection{Scarto ticket (ST)}
 Anch'esso utilizzato alla fine di ogni periodo per monitorare e valutare una ripianificazione sul tempo assegnato ad ogni ticket per completarlo. 
 \[
     (tempo preventivato completamento ticket)-(tempo effettivo completamento ticket)
 \]
 
-\subsubsection{Differenza ToVerify}
+\subsubsection{Differenza ToVerify (DV)}
 Metrica utilizzata per monitorare il tempo impiegato per eseguire un ticket, ossia da passare dallo stato \textit{To Do} a \textit{To Verify}. Viene calcolato ..
 
-\subsubsection{Differenza Done Verify}
+\subsubsection{Differenza Done Verify (DD)}
 
-\subsubsection{Uniformità del lavoro nel tempo}
+\subsubsection{Uniformità del lavoro nel tempo (UL)}
 Per ogni periodo, vengono contati il numero di ticket passati a \textit{To Verify} e quelli passati a \textit{Done Verify}.
 
-\subsubsection{Budget At Completion}
+\subsubsection{Budget At Completion (BAC)}
 Indica il budget totale allocato per il progetto.
 
 \subsubsection{Earned Value (EV)}
@@ -132,3 +133,13 @@ Si considera la capacità dell'operatore di visualizzare la propria lista delle 
 \[\frac{numero\_di\_linee\_di\_codice\_commentate}{numero\_di\_linee\_di\_codice}\]
 
 \subsection{Comunicazione e risoluzione delle anomalie}
+
+Questa attività è finalizzata alla tempestiva individuazione e risoliuzione delle anomalie, ovvero le deviazioni del piano prefissato. Rappresentano un'anomalia:
+\begin{itemize}
+    \item violazioni delle norme tipografiche prefissate;
+    \item presenza di contenuti non inerenti con l'argomento trattato;
+    \item mancato rispetto dei valori contenuti in questo documento;
+    \item incongruenze tra il prodotto e le funzionalità descritte nell'\textsc{Analisi dei Requisiti};
+    \item 
+\end{itemize}
+Nel caso venga individuata una nuova anomalia, deve essere segnalata tempestivamente, nella modalità descritta nelle \textsc{Norme di Progetto}. In questo modo il Responsabile sarà informato dell'anomalia e sarà possibile gestirla in modo corretto.
