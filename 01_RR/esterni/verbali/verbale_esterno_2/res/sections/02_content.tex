@@ -4,30 +4,30 @@
 \begin{itemize}
     \item Nel contesto reale si rende naturalmente necessaria una parte di sensoristica
     \subitem -- per gli scopi di questo progetto si può tralasciare;
-    \item Il sistema ha tutte le informazioni di cui ha bisogno
+    \item il sistema ha tutte le informazioni di cui ha bisogno
     \subitem -- il server centrale si occupa di tutto;
-    \item Non è necessario simulare i sensori.
+    \item non è necessario simulare i sensori.
 \end{itemize}
 
 \subsection{Tecnologie e formazione}
 Sono state confermate le tecnologie discusse in confronti precedenti con il proponente.\\Sono emerse diverse fonti da sfruttare.
     \subsubsection{Java}
         \begin{itemize}
-            \item Corso html.it;
-            \item Si possono approfondire alcune novità delle versioni > 11
+            \item Corso su html.it;
+            \item si possono approfondire alcune novità delle versioni > 11
                 \subitem -- tuttavia versione 8 va bene.
         \end{itemize}
 
     \subsubsection{Node.js}
         \begin{itemize}
             \item Documentazione ufficiale;
-            \item Corsi su html.it.
+            \item corso su html.it.
         \end{itemize}
 
     \subsubsection{Frontend}
         \begin{itemize}
-            \item Angular o AngularJS
-            \item Guide e documentazioni ufficiali su corrispondenti siti;
+            \item Angular o AngularJS;
+            \item guide e documentazioni ufficiali su corrispondenti siti;
             \item TypeScript vs JavaScript
                 \subitem -- dipende dal tempo che ci vogliamo dedicare.
         \end{itemize}
@@ -35,7 +35,7 @@ Sono state confermate le tecnologie discusse in confronti precedenti con il prop
     \subsubsection{Design pattern}
         \begin{itemize}
             \item Nessun vincolo su design pattern;
-            \item Potrebbe essere comodo il concetto di factory
+            \item potrebbe essere comodo il concetto di factory
                 \subitem -- eventualmente bypassato da librerie;
                 \subitem -- ma in generale come pattern più pulito è più pratico;
                 \subitem -- adatto per sistemi composti da tanti piccoli componenti.
@@ -44,31 +44,31 @@ Sono state confermate le tecnologie discusse in confronti precedenti con il prop
     \subsubsection{Salvataggio dati}
         \begin{itemize}
             \item Non è per forza necessaria una base di dati;
-            \item La configurazione iniziale può essere ricevuta da un file di testo;
-            \item Consigliate strutture noSQL comunque;
-            \item Semplici JSON possono essere sufficienti;
-            \item Non è richiesto il tracciamento delle operazioni.
+            \item la configurazione iniziale può essere ricevuta da un file di testo;
+            \item consigliate strutture noSQL comunque;
+            \item semplici JSON possono essere sufficienti;
+            \item non è richiesto il tracciamento delle operazioni.
         \end{itemize}
 
     \subsubsection{Approccio al multithreading}
         \begin{itemize}
             \item L'introduzione di framework in questo ambito può portare ad una elevata complessità;
-            \item Preferire come approccio l'uso di thread puri
+            \item preferire come approccio l'uso di thread puri
                 \subitem -- timer task, runnable...;
-            \item Solo in caso di difficoltà valutare e discutere l'introduzione di un framework per il multithreading;
-            \item Limitare l'uso in generale di librerie di terze parti.
+            \item solo in caso di difficoltà valutare e discutere l'introduzione di un framework per il multithreading;
+            \item limitare l'uso in generale di librerie di terze parti.
         \end{itemize}
 
     \subsubsection{Simulazione muletti}
         \begin{itemize}
-            \item Carta bianca, si può usare tutto ciò che può dare una mano:
-            \item In questo contesto anche diverse librerie, anche se ne sfruttiamo solo  una piccola percentuale.
+            \item Carta bianca, si può usare tutto ciò che può dare una mano;
+            \item in questo contesto anche diverse librerie, anche se ne sfruttiamo solo  una piccola percentuale.
         \end{itemize}
 
     \subsubsection{Controllo diagrammi attività server}
         \begin{itemize}
             \item Bene in generale;
-            \item Quando si introdurrà il concetto di tempo e timer task utilizzare apposita icona start con orologio.
+            \item quando si introdurrà il concetto di tempo e timer task utilizzare apposita icona start con orologio.
         \end{itemize}
 
     \subsubsection{Possibili requisiti qualitativi}
@@ -88,7 +88,7 @@ Sono state confermate le tecnologie discusse in confronti precedenti con il prop
                             \item sistema qualità basato su tempi di risposta e numero di fail, questi ultimi in ogni caso non devono mai bloccare l'applicativo (input received, no output producecd);
                         \end{itemize}
                 \end{itemize}
-            \item Decisioni che spettano al gruppo
+            \item decisioni che spettano al gruppo
                 \begin{itemize}
                     \item i muletti vanno ad una certa velocità;
                     \item considerando tempi di reazione e velocità, conseguirà uno spazio di spostamento;
@@ -103,8 +103,8 @@ Sono state confermate le tecnologie discusse in confronti precedenti con il prop
             \item Inizialmente si consiglia di procedere in parallelo:
                 \subitem -- 3 progettazione;
                 \subitem -- 3 studio tecnologie ed approccio codice;
-            \item Questo da vantaggi;
-            \item Valutando eventuali scostamenti, riequilibrare le partizioni.
+            \item questo da vantaggi;
+            \item valutando eventuali scostamenti, riequilibrare le partizioni.
         \end{itemize}
 
 
