@@ -5,7 +5,7 @@
 
 % dati relativi alla prima pagina
 \input{config/titlepage_input.tex} % editare questo
-
+\usepackage{hyperref}
 \makeindex
 
 \begin{document}
@@ -20,8 +20,13 @@
 \pagebreak
 
 % Indice
-\tableofcontents
-\pagebreak
+{
+		\hypersetup{linkcolor=black}
+		\tableofcontents
+		\pagebreak
+
+        
+	}
 
 % Informazioni generali
 \input{res/sections/01_Introduction.tex}
