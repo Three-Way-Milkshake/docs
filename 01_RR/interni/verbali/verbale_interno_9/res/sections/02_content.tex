@@ -1,34 +1,38 @@
 \section{Verbale della riunione}
 \subsection{Refactoring changelog}
-Si è deciso di modificare la struttura del changelog a livello di latex dei vari documenti.
+A seguito della decisione VI\_8.1, tutti i membri sono invitati ad eseguire al più presto il refactoring del registro delle modifiche dei documenti redatti seguendo le istruzioni della wiki "Refactoring del Registro delle Modifiche" su Confluence.
 
-\subsection{Ampliamento del cruscotto}
-Abbiamo deciso di aggiungere nuove metriche, attraverso un foglio excel.Abbiamo sottolineato alcune correzioni da aggiungere al foglio excel:
+\subsection{Sistemazione del cruscotto}
+Sono state evidenziate alcune correzioni da aggiungere al foglio di calcolo sul cruscotto:
 \begin{itemize}
-	\item bloccare range di formule e fogli(proteggi) dei grafici;
+	\item bloccare range di formule e fogli (proteggi) dei grafici per evitare modifiche accidentali alla struttura;
 	\item sistemare formato date secondo ISO 8601;
-	\item completare la sincronizzazione dei vari dati.
+	\item completare la sincronizzazione i fogli "Sincronizzazione - Dati" e "Durata Riunioni", per quanto riguarda i valori di durata;
+	\item su "Sincronizzazione - Dati" prevedere una sezione per il tracciamento dei tempi di verifica similmente a quanto accade per i tempi di realizzazione della task;
+	\item aggiungere una metrica relativa allo scostamento tra data di completamento e verifica di un artefatto;
+	\item collegare il consuntivo con dati effettivi derivanti dalle ore di ogni task.
 \end{itemize}
 
-\subsection{Utilizzo della sequenza verbali per assegnare verifica una volta terminata stesura del verbali}
-Usare sequenza verbali per assegnare verifica una volta terminata stesura.
+\subsection{Organizzazione della verifica dei verbali}
+Utilizzare il documento "Sequenza Stesura e Verifica verbali" nello spazio Verbali di Confluence per seguire l'ordine di stesura e verifica dei verbali. In particolare, terminata la scrittura, assegnare il verificatore secondo l'ordine stabilito.
+
 
 \subsection{Rimozione del registro modifiche nei verbali}
-Abbiamo deciso di non rimuovere il registro modifiche nei verbali.
+\'E stato deciso di non rimuovere il registro modifiche nei verbali.
 
 \subsection{Revisione del PdQ}
 \begin{itemize}	
-	\item Rivedere la struttura (ex: rimuovere paragrafi "Metriche" dove non servono);
-	\item Capire metriche da utilizzare e aggiungere nuove metriche da Excel;
-	\item Modifica stile futura: rappresentare metriche in tabella, piuttosto che elenco puntato;
-	\item Aggiungere al cruscotto metriche già valorizzate, e paragrafo vuoto per metriche non valorizzate.
+	\item rivedere la struttura del documento, riorganizzarne le sezioni per facilitare la leggibilità del documento (ad esempio, rimuovere paragrafi "Metriche" dove non servono);
+	\item a fronte delle nuove metriche introdotte, definire con precisioni quali metriche siano da utilizzare, eliminare eventuali indici già presenti e stabilire quali metriche vengano tracciate nei vari periodi;
+	\item modifica dello stile: rappresentare metriche in tabella, piuttosto che elenco puntato;
+	\item aggiungere al cruscotto le metriche già valorizzate, con a seguire un paragrafo vuoto per metriche non valorizzate.
 \end{itemize}
 
 \subsection{Divisione tecnologie da studiare}
-Suddivisione tecnologie da studiare per lo sviluppo del Proof Of Concept, per persona:
+Per approcciarsi alla realizzazione del Proof Of Concept, il gruppo ha deciso di esplorare le tecnologie necessarie alla realizzazione del software: è stata operata la seguente suddivisione:
 \begin{itemize}
-	\item Angular per interfaccia e collegamenti: Zuccolo Giada e Chiarello Sofia;
-	\item NodeJs per comunicazione tra unità e server: Tessari Andrea e Crivellari Alberto;
-	\item Java per il server centrale: Greggio Nicolò e De Renzis Simone;
+	\item Angular (per interfaccia e collegamenti): Zuccolo Giada e Chiarello Sofia;
+	\item NodeJs (per comunicazione tra unità e server): Tessari Andrea e Crivellari Alberto;
+	\item Java (per il server centrale): Greggio Nicolò e De Renzis Simone;
 	\item JSON: tutti.
 \end{itemize}
