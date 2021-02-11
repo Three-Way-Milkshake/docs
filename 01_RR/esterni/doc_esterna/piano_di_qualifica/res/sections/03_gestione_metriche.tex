@@ -28,7 +28,6 @@ Anch'esso utilizzato alla fine di ogni periodo per monitorare e valutare una rip
 Metrica utilizzata per monitorare il tempo impiegato per eseguire un ticket, ossia da passare dallo stato \textit{To Do} a \textit{To Verify}. Viene calcolato ..
 
 \subsubsection{Differenza Done Verify (DD)}
-Metrica utilizzata per monitorare il tempo impiegato per eseguire un ticket, ossia da passare dallo stato \textit{To Verify} a \textit{Done Verify}. Viene calcolato ..
 
 \subsubsection{Uniformità del lavoro nel tempo (UL)}
 Per ogni periodo, vengono contati il numero di ticket passati a \textit{To Verify} e quelli passati a \textit{Done Verify}.
@@ -39,13 +38,13 @@ Indica il budget totale allocato per il progetto.
 \subsubsection{Earned Value (EV)}
 Indica la quantità di guadagno ottenuta dal lavoro effettuato fino al momento di calcolo.
 \[
-    (preventivo)*(\%\_lavoro\_completato)
+    (preventivo)*(\%\_lavoro\_pianificato)
 \]
 
 \subsubsection{Planned Value (PV)}
 Indica la quantità di guadagno stimata sul lavoro pianificato al momento del calcolo.
 \[
-    (preventivo)*(\%\_lavoro\_pianificato)
+    (consuntivo)*(\%_lavoro_pianificato)
 \]
 
 \subsubsection{Schedule Variance (SV)}
@@ -58,7 +57,7 @@ Indica l'anticipo o il ritardo del lavoro effettuato rispetto alla pianificazion
 I costi sostenuti fino al momento del calcolo.
 
 \subsubsection{Cost Variance (CV)}
-La differenza tra il costo del lavoro ad ora effettuato e quello preventivato.
+La differenza tra il coste del lavoro ad ora effettuato e quello preventivato.
 
 \[
     EV-AC
@@ -135,11 +134,12 @@ Si considera la capacità dell'operatore di visualizzare la propria lista delle 
 
 \subsection{Comunicazione e risoluzione delle anomalie}
 
-Questa attività è finalizzata alla tempestiva individuazione e risoluzione delle anomalie, ovvero le deviazioni del piano prefissato. Rappresentano un'anomalia:
+Questa attività è finalizzata alla tempestiva individuazione e risoliuzione delle anomalie, ovvero le deviazioni del piano prefissato. Rappresentano un'anomalia:
 \begin{itemize}
     \item violazioni delle norme tipografiche prefissate;
     \item presenza di contenuti non inerenti con l'argomento trattato;
     \item mancato rispetto dei valori contenuti in questo documento;
     \item incongruenze tra il prodotto e le funzionalità descritte nell'\textsc{Analisi dei Requisiti};
+    \item 
 \end{itemize}
 Nel caso venga individuata una nuova anomalia, deve essere segnalata tempestivamente, nella modalità descritta nelle \textsc{Norme di Progetto}. In questo modo il Responsabile sarà informato dell'anomalia e sarà possibile gestirla in modo corretto.
