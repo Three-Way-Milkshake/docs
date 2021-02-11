@@ -3,35 +3,93 @@
 In questa sezione vengono descritte in dettaglio le varie metriche utilizzate, con una breve descrizione e la modalità di calcolo. 
 Le soglie di accettabilità sono riportate nella tabella 2.4.1 "Tabella delle Metriche", valori inferiori ai limiti accettabili sono considerati negativi e il prodotto o processo dovrà essere sottoposto ad ulteriori indagini e verifiche.
 \subsection{Metriche per i processi}
-\subsubsection{Scarto riunioni (SR)}
-Viene utilizzata alla fine di ogni periodo per monitorare e valutare una ripianificazione delle riunioni. Viene rappresentato tramite la differenza tra il tempo preventivato della durata di una riunione e la sua durata effettiva. Sono identificati tre sottometriche in base al tipo di riunione:
+Per tenere traccia delle metriche per i processi, sono stati utilizzati dei fogli Google Sheet, così che ogni membro del gruppo possa inserire i dati relativo al proprio lavoro e al lavoro colletivo nelle apposite tabelle. Inoltre esso permette di calcolare in automatico i valori e visualizzarli sotto forma di grafico. 
+
+\subsubsection{Rapporto riunioni Esterne e Interne (REI)}
+Si tratta del rapporto tra il tempo totale impiegato nelle riunioni esterne e quello nelle riunioni interne. Serve per raggiungere un equilibrio negli incontri del gruppo.
+\[\frac{\sum_{i=1}^{num\_riunioni\_esterne} durata_i}{\sum_{i=1}^{num\_riunioni\_interne} durata_i}\]
+
+Se il valore calcolato tende a:
 \begin{itemize}
-    \item scarto riunioni;
-    \item scarto riunioni interne;
-    \item scarto riunioni esterne.
+    \item 1: vi è una distribuzione equa del tempo impiegato nelle riunioni interne e esterne;
+    \item 0: il tempo impiegato nelle riunioni esterne è molto inferiore rispetto a quello delle riunioni interne;
+    \item $+\infty$: il tempo impiegato nelle riunioni esterne è molto superiore rispetto a quello delle riunioni interne.
+\end{itemize}
+\subsubsection{Rapporto tempo Riunioni e Lavoro individuale (RRL)}
+Indica il rapporto delle ore dedicate alle riunioni, quindi al lavoro colletivo, e quelle dedicate al lavoro individuale. 
+\[\dfrac{\sum_{i=1}^{num\_riunioni\_totali} durataRiunioni_i}{\sum_{i=1}^{num_persone_gruppo} durataLavoro_i}\]
+Offre una visione sulla distribuzione del lavoro collettivo e individuale.
+\subsubsection{Rapporto Tempo Effettivo totale e Individuale (RTEI)}
+Indica il rapporto tra i minuti di lavoro effettivamente spesi da ogni membro e il tempo di lavoro totale del gruppo. 
+\[tot\_ore\_effettive\_persona / tot\_ore
+\]
+Questa metrica viene calcolata per ogni membro del gruppo.
+\subsubsection{Distribuzione Lavoro Effettivo (DLE)}
+Mostra quanto è distribuito in modo uniforme il lavoro effettuato, così da poter ripianificare in caso l'organizzazione dei compiti.
+\[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
+
+Se il risultato tende a:
+\begin{itemize}
+    \item 0: significa che il lavoro è uniformemente distribuito;
+    \item $+\infty$: il lavoro è distribuito in modo poco uniforme.
 \end{itemize}
 
-\subsubsection{Totale riunioni (TR)}
-Viene tenuto traccia il numero totale di riunioni effettuate.
-\subsubsection{Totale riunioni interne (TRI)}
-Viene tenuto traccia il numero totale di riunioni interne effettuate.
-\subsubsection{Totale riunioni esterne (TRE)}
-Viene tenuto traccia il numero totale di riunioni esterne con il proponente effettuate.
+\subsubsection{Rapporto tempo Preventivato totale e Individuale (RTPI)}
+Indica il rapporto tra i minuti di lavoro preventivato per svolgere i propri compiti da ogni membro e il tempo di lavoro totale preventivato dal gruppo. 
+\[tot\_min\_preventivate\_persona / tot\_min\_preventivato\]
+Questa metrica deve essere calcolata per ogni membro del gruppo.
+\subsubsection{Distribuzione Lavoro Preventivato (DLP)}
+Mostra se la pianificazione del lavoro preventivata è bilanciata, quindi distribuita in modo equo all'interno del gruppo.
+\[\sqrt{\frac{\sum_{i=1}^{componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
+con $lavoro_i$ = lavoro individuale preventivato;\\
+$media\_lavoro$ = lavoro medio preventivato;\\
+$n\_componenti$ = numero totale dei componenti (6).
+\\Se il risultato tende a:
+\begin{itemize}
+    \item 0: significa che il lavoro è uniformemente distribuito;
+    \item $+\infty$: il lavoro è distribuito in modo poco uniforme.
+\end{itemize}
+\subsubsection{Differenza tempo Effettivo e Preventivato (DTEP)}
+Questa metrica mostra la discrepanza tra il tempo effettivo impiegato allo svolgimento dei compiti e quello preventivato precedentemente, per ogni membro del gruppo.
+\[tempo\_effettivo_i - tempo\_preventivato_i\]
+con $i \in {componenti}$
+\subsubsection{Percentuale Discostamento Totale (in Tempo) (PDTT)}
+Indica la percentuale dei compiti completati in tempo rispetto al numero totale dei compiti. Per completati si intendono le task che hanno completato il loro ciclo, quindi che sono state verificate entro la data di scadenza prefissata.
+\[\frac{n\_compiti\_risolti\_intempo}{tot\_num\_compiti}\]
+\subsubsection{Percentuale Discostamento Totale (in Ritardo) (PDTR)}
+Indica la percentuale dei compiti completati in ritardo rispetto al numero totale dei compiti. Per completati si intendono le task che hanno completato il loro ciclo, quindi che sono state verificate dopo la data di scadenza prefissata.
+\[\frac{n\_compiti\_risolti\_inritardo}{tot\_num\_compiti}\]
+\subsubsection{Percentuale Discostamento Totale (in Anticipo) (PDTA)}
+Indica la percentuale dei compiti completati in anticipo rispetto al numero totale dei compiti. Per completati si intendono le task che hanno completato il loro ciclo, quindi che sono state verificate prima della data di scadenza prefissata.
+\[\frac{n\_compiti\_risolti\_inanticipo}{tot\_num\_compiti}\]
 
-\subsubsection{Scarto ticket (ST)}
-Anch'esso utilizzato alla fine di ogni periodo per monitorare e valutare una ripianificazione sul tempo assegnato ad ogni ticket per completarlo. 
-\[
-    (tempo preventivato completamento ticket)-(tempo effettivo completamento ticket)
-\]
+\subsubsection{Percentuale Discostamento DoneWorking (in Tempo) (PDDWT)}
+Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo i compiti completati entro la data di scadenza prefissata.
+\[\frac{n\_compiti\_risoltiDW\_intempo}{tot\_num\_compiti}\]
+\subsubsection{Percentuale Discostamento DoneWorking (in Ritardo) (PDDWR)}
+Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo i compiti completati dopo la data di scadenza prefissata.
+\[\frac{n\_compiti\_risoltiDW\_inritardo}{tot\_num\_compiti}\]
+\subsubsection{Percentuale Discostamento DoneWorking (in Anticipo) (PDDWA)}
+Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo i compiti completati prima della data di scadenza prefissata.
+\[\frac{n\_compiti\_risoltiDW\_inanticipo}{tot\_num\_compiti}\]
+\subsubsection{Percentuale Discostamento DoneVerifying (in Tempo) (PDDVT)}
+Indica la percentuale dei compiti verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo le operazioni di verifica effettuate entro la data di scadenza prefissata.
+\[\frac{n\_compiti\_risoltiDV\_intempo}{tot\_num\_compiti}\]
 
-\subsubsection{Differenza ToVerify (DV)}
-Metrica utilizzata per monitorare il tempo impiegato per eseguire un ticket, ossia da passare dallo stato \textit{To Do} a \textit{To Verify}. Viene calcolato ..
-
-\subsubsection{Differenza Done Verify (DD)}
-
-\subsubsection{Uniformità del lavoro nel tempo (UL)}
-Per ogni periodo, vengono contati il numero di ticket passati a \textit{To Verify} e quelli passati a \textit{Done Verify}.
-
+\subsubsection{Percentuale Discostamento DoneVerifying (in Ritardo) (PDDVR)}
+Indica la percentuale dei compiti verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo le operazioni di verifica effettuate dopo la data di scadenza prefissata.
+\[\frac{n\_compiti\_risoltiDV\_inritardo}{tot\_num\_compiti}\]
+\subsubsection{Percentuale Discostamento DoneVerifying (in Anticipo) (PDDVA)}
+Indica la percentuale dei compiti verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo le operazioni di verifica effettuate prima della data di scadenza prefissata.
+\[\frac{n\_compiti\_risoltiDV\_inanticipo}{tot\_num\_compiti}\]
+\subsubsection{Scarto Riunioni Interne (SRI)}
+Questa metrica mostra la differenza fra il tempo preventivato e il tempo effettivo delle riunioni interne. In questo modo si può vedere se la pianificazione è corretta, oppure serve un controllo.
+\[min\_durata\_preventivata_i-min\_durata\_effettiva_i\] 
+con i = numero della riunione interna.
+\subsubsection{Scarto Riunioni Esterne (SRE)}
+Con questo calcolo si può trovare la differenza tra il tempo preventivato e il tempo effettivo delle riunioni esterne, così da controllare se la pianificazione è corretta.
+\[min\_durata\_preventivata_i-min\_durata\_effettiva_i\]
+con i = numero della riunione esterna.
 \subsubsection{Budget At Completion (BAC)}
 Indica il budget totale allocato per il progetto.
 
@@ -44,7 +102,7 @@ Indica la quantità di guadagno ottenuta dal lavoro effettuato fino al momento d
 \subsubsection{Planned Value (PV)}
 Indica la quantità di guadagno stimata sul lavoro pianificato al momento del calcolo.
 \[
-    (consuntivo)*(\%_lavoro_pianificato)
+    (consuntivo)*(\%\_lavoro\_pianificato)
 \]
 
 \subsubsection{Schedule Variance (SV)}
@@ -56,24 +114,18 @@ Indica l'anticipo o il ritardo del lavoro effettuato rispetto alla pianificazion
 \subsubsection{Actual Cost (AC)}
 I costi sostenuti fino al momento del calcolo.
 
-\subsubsection{Cost Variance (CV)}
-La differenza tra il coste del lavoro ad ora effettuato e quello preventivato.
-
-\[
-    EV-AC
-\]
 
 \subsection{Metriche per la documentazione}
 
 \subsection{Indice di Gulpease (IG)}
 Indica la leggibilità di un testo, tarato sulla lingua italiana. Differentemente da indici di lingua straniera, ha il vantaggio di controllare la lunghezza delle parole anzichè il numero di sillabe per parola, semplificandone il calcolo automatico. 
-Nel calcolo vengono ignorati frontespizio, registro modifiche, elenco figure, elenco ta-belle e figure e tabelle; in modo da poter valutare appieno la leggibilità del contenutotestuale dei documenti.
+Nel calcolo vengono ignorati frontespizio, registro modifiche, elenco figure, elenco tabelle, tabelle e figure; in modo da poter valutare appieno la leggibilità del contenutotestuale dei documenti.
 Il valore risultante è compreso tra 0 e 100, dove un indice più alto corrisponde ad un indice di leggibilità più semplice.
 Le soglie dei valori dell’indice di leggibilità Gulpease sono:
 \begin{itemize}
-    \item inferiore a 80, il documento `e difficile da leggere per chi ha la licenza elementare;
-    \item inferiore a 60, il documento `e difficile da leggere per chi possiede la licenza media;
-    \item inferiore a 40, il documento `e difficile da leggere per chi ha un diploma superiore.
+    \item inferiore a 80, il documento è difficile da leggere per chi ha la licenza elementare;
+    \item inferiore a 60, il documento è difficile da leggere per chi possiede la licenza media;
+    \item inferiore a 40, il documento è difficile da leggere per chi ha un diploma superiore.
 \end{itemize}
 \[
     89+ \frac{300\cdot (num\_frasi) - 10\cdot (num\_lettere)}{num\_parole}
@@ -83,54 +135,65 @@ Le soglie dei valori dell’indice di leggibilità Gulpease sono:
 Questa sezione contiene le metriche che si cercherà di applicare al software prodotto. A causa dell’inesperienza del gruppo, tali valori sono una dichiarazione di intenti per la qualità del software e potrebbero essere rivisti con le successive revisioni.
 
 \subsubsection{Percentuale Requisiti Obbligatori Soddisfatti (PROS)}
-Indica la quantità di requisiti obbligatori soddisfatti rispetto al totale.
+Indica la quantità di requisiti obbligatori soddisfatti rispetto al totale così da poterli monitorare in ogni istante.
 \[\frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali}\]
 
 \subsubsection{Coupling Between Objects (CBO)}
 Indica l'accoppiamento tra classi e oggetti; due classi si dicono accoppiate se una utilizza metodi o variabili dell'altra.
 
-\subsubsection{DEPth of hierarchies(DEP)}
-Indica la profondità delle gerarchie nel codice sviluppato.
+\subsubsection{Depth of hierarchies(DEP)}
+Indica la profondità delle gerarchie nel codice sviluppato. Va limitato questo valore in modo da limitare l'accoppiamento. Preferibilmente le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. In ogni caso non deve venire usata l'ereditarietà multipla.
 
-\subsubsection{LEVel of nesting (LEV)}
-Indica il livello di annidamento nei vari metodi presenti nel codice prodotto.
-\textbf{Profondità della gerarchia dei collegamenti (P)}\\
-Viene specificata la profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software.
-\begin{itemize}
-	\item \textbf{misurazione:} profondità gerarchica massima dei collegamenti e delle funzionalità presenti all'interno del software;
-	\item \textbf{valore preferibile:} $P < 4$;
-	\item \textbf{valore accettabile:} $P < 6$.
-\end{itemize}
+\subsubsection{Level of nesting (LEV)}
+Questa metrica indica il livello di annidamento nei vari metodi presenti nel codice prodotto. Questo valore deve essere il più basso possibile, sia per una questione di leggibilità del codice, che di manutenibilità.
 
-\subsubsection{PARametri per metodo (PAR)}
-Indica il numero di parametri presenti nei metodi sviluppati nel codice.
+
+\subsubsection{Parametri per metodo (PAR)}
+Indica il numero di parametri presenti nei metodi sviluppati nel codice. Un numero troppo elevato potrebbe indicare una complessità troppo elevata del metodo.
+
+\subsection{Attributi per classe (ATT)}
+Considera il numero totale di attributi per ogni classe. Un valore elevato potrebbe indicare classe si fa carico di una quantitaà eccessiva di responsabilità, in questo caso si può optare per incapsulare parte di essa in un'altra classe.
+
+\subsection{Metodi per classe (MET)}
+Rappresenta il numero di metodi per classe. Se è troppo elevato significa che questa classe svolge più compiti, quindi è preferibile scomporla in più classi.
 
 \subsubsection{Rapporto Codice Commenti (RCC)}
-Indica il rapporto tra le linee di codice e le linee di commento all'interno del file.
+Indica il rapporto tra le linee di codice e le linee di commento all'interno del file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto
 \[\frac{linee\_codice}{linee\_commento}\]
 
+\subsection{Complessità Ciclomatica (CCL)}
+Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o classi di un programma. Questo valore rappresenta quanto complesso è un metodo tramite la misura del numero di cammini linearmente indipendenti che attraversano il grafo di flusso di controllo. Un valore troppo elevato porta ad un’eccessiva complessità del codice, che comporta difficile manutenzione. Al contrario, un valore ridotto potrebbe indicare una scarsa efficienza dei metodi. Per calcolarlo si rappresenta il programma con un grafo dove i  nodi (\textbf{N}) sono i gruppi indivisibili di istruzioni e un arco (\textbf{E}) connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l’esecuzione delle istruzioni dell’altro nodo. Quindi il valore interessato è:
+\[E-N+2P\] 
+dove P è il numero di componenti connesse.
 \subsubsection{Code Coverage (CC)}
-Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi.
+Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi. Maggiore sarà la copertura del codice, maggiore sarà la possibilità che eventuali errori vengano risolti e individuati. Se il valore è troppo basso, significa che troppe istruzioni non sono state testate e quindi non si può sapere se esse funzionino effettivamente.
 \[\frac{linee\_codice\_verificate}{linee\_codice\_totali}\]
 
-\subsubsection{Completezza del Software(Cs)}
-Viene specificata la completezza del software.
+\subsection{Percentuale Superamento Test (PST)}
+La seguente metrica indica la percentuale di test superati correttamente.
+\[\frac{n\_test\_superati}{n\_totale\_test\_implementati}\]
+
+\subsubsection{Completezza del Software(CS)}
+Viene specificata la completezza del software. Questo rapporto serve per capire a che percentuale di completamento del software ci si trova. 
 \[C = (1- \frac{funzionalita\_non\_implementate }{funzionalita\_implementate})\]
+Se il valore calcolato è:
+\begin{itemize}
+    \item 1, allora sono state implementate tutte le funzionalità;
+    \item 0, non sono state implementate nessuna delle funzionalità.
+\end{itemize}
 
 \subsubsection{Affidabilità del Software (A)}
 Viene specificata l'abilità del software di resistere a malfunzionamenti.
 \[A = \frac{numero\_di\_errori}{numero\_di\_test\_eseguiti}\]
 
 \subsubsection{Numero di tocchi/click necessari (C)}
-Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento.\\
-Si considera la capacità dell'operatore di visualizzare la propria lista delle task.
+Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento. Più il valore è basso, più è facile per l'utente interagire con il sistema.\\
+Si considera per esempio la capacità dell'operatore di visualizzare la propria lista delle task.
 
 \subsubsection{Numero di secondi necessari (S)}
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
 Si considera la capacità dell'operatore di visualizzare la propria lista delle task.
 
-\subsubsection{Leggibilità del Software (L)}
-\[\frac{numero\_di\_linee\_di\_codice\_commentate}{numero\_di\_linee\_di\_codice}\]
 
 \subsection{Comunicazione e risoluzione delle anomalie}
 
