@@ -40,6 +40,39 @@
         
         \pparagraph{Google Sites}
         Collegato direttamente con i grafici del cruscotto presente in Google Sheet, il sito interattivo creato tramite Google Sites permette di avere una rapida visualizzazione dell'avanzamento del progetto. Questo sito, diviso in periodi, propone delle "fotografie" ritraenti degli specifici grafici utili a verificare velocemente metriche essenziali del \textsc{Piano di Qualifica} e la loro variazione tra periodi diversi.
+        
+        \pparagraph{Workflow di inizio di una nuova task}
+        \begin{enumerate}
+        	\item Si prende il codice della task da Jira: PCS-\#\#\# e si va sull’Excel \textbf{Sincronizzazione Dati} nella riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo al lavoro);
+        	\item in \textbf{ATA \#StartWorking → \#DoneWorking: }
+        	\begin{itemize}
+        		\item Settare date: \textbf{AVVIO} e \textbf{SCADENZA PREFISSATA};
+        		\item Ogni qualvolta si committa con 'git commit -m “PCS-\#\#\# \#comment <commento> \#time <tempo>” ' (quindi usando tracciamento temporale di Jira) e si incrementa sull’excel.
+        	\end{itemize}
+        	\item Al termine del lavoro della task si dovrà andare ad inserire la data di fine effettiva della colonna \textbf{DATA \#StartWorking → \#DoneWorking FINE EFFETTIVA};
+        	\item Aggiungere il \textbf{TEMPO (minuti) EFFETTIVO} con relativo \textbf{Ruolo};
+        	\item quando finito controllare \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verbali} e assegnare la verifica a chi tocca, secondo l’ordine.
+        \end{enumerate}
+    	
+    	\pparagraph{Workflow di verifica di una task}
+    	\begin{enumerate}
+    		\item Si prende il codice della task da Jira: PCS-\#\#\# e si va sull’Excel \textbf{Sincronizzazione Dati} nella riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo alla verifica);
+    		\item settare \textbf{SCADENZA PREFISSATA} in \textbf{DATA \#StartVerifying → \#DoneVerifying};
+    		\item Al termine della verifica si dovrà andare ad inserire la data di fine effettiva della colonna \textbf{DATA \#StartVerifying → \#DoneVerifying AVVIO (=EFFETTIVA FINE DI \#TOVERIFY) FINE EFFETTIVA}.
+    	\end{enumerate}
+    
+    	\pparagraph{Workflow per le riunioni}
+    	Chi dovrà redigere il verbale dovrà::
+    	\begin{enumerate}
+    		\item In \textbf{Durata Riunioni - Dati} inserire la \textbf{Data, Prevista ed Effettiva}  sotto \textbf{Durata riunioni interne / esterne};
+    		\item Creare branch feature/VT-n con T → {I, E}, n → numero
+    		\item Quando finito, oltre a settare tempi come per task normali, controllare file in \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verb} e:
+    		\begin{itemize}
+    			\item Checkare la propria box;
+    			\item Una volta che la task è in toVerify con l’assignee cancellato (si cancella da solo tramite automazione) assegnare a chi tocca la verifica.
+    		\end{itemize}
+    		\item Spostare note su Confluence → Trascritti.
+    	\end{enumerate}
 
 \subsection{I ruoli di progetto}
     La suddivisione in ruoli è necessaria per favorire la parallelizzazione e distribuzione del lavoro e delle responsabilità.
