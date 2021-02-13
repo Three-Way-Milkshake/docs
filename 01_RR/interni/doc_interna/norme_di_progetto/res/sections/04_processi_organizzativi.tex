@@ -16,7 +16,8 @@
         \item workspace Confluence con spazio dedicato ai verbali e spazio dedicato alle wiki\textsubscript{G};
         \item progetto\textsubscript{G} Jira con board condivisa per l'organizzazione, gestione e tracciamento dei compiti;
         \item organizzazione del cruscotto contenete varie informazioni sull'andamento del progetto, presente su Google Sheet;
-        \item organizzazione di un sito per la visualizzazione del cruscotto, tramite Google Sites.
+        \item organizzazione di un sito per la visualizzazione del cruscotto, tramite Google Sites;
+        \item organizzazione di Google Drive.
     \end{itemize}
         \pparagraph{Jira}
         Il gruppo adotta \href{https://www.atlassian.com/software/jira}{Jira} per la gestione dei compiti, così da avere:
@@ -41,7 +42,10 @@
         \pparagraph{Google Sites}
         Collegato direttamente con i grafici del cruscotto presente in Google Sheet, il sito interattivo creato tramite Google Sites permette di avere una rapida visualizzazione dell'avanzamento del progetto. Questo sito, diviso in periodi, propone delle "fotografie" ritraenti degli specifici grafici utili a verificare velocemente metriche essenziali del \textsc{Piano di Qualifica} e la loro variazione tra periodi diversi.
         
-        \pparagraph{Workflow di inizio di una nuova task}
+        \pparagraph{Google Drive}
+        Viene utilizzato uno spazio Google Drive per contenere tutti i file utili al gruppo, come presentazioni, materiale utile alla comprensione delle tecnologie da utilizzare, un foglio elettronico contenente le varie metriche per \textsc{Piano di Qualifica} e diagrammi \href{https://drawio-app.com/}{Draw.io}
+        
+        \pparagraph{Workflow per l'inizio di una nuova task}
         \begin{enumerate}
         	\item Si prende il codice della task da Jira: PCS-\#\#\# e si va sull’Excel \textbf{Sincronizzazione Dati} nella riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo al lavoro);
         	\item in \textbf{ATA \#StartWorking → \#DoneWorking: }
@@ -54,7 +58,7 @@
         	\item quando finito controllare \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verbali} e assegnare la verifica a chi tocca, secondo l’ordine.
         \end{enumerate}
     	
-    	\pparagraph{Workflow di verifica di una task}
+    	\pparagraph{Workflow per la verifica di una task}
     	\begin{enumerate}
     		\item Si prende il codice della task da Jira: PCS-\#\#\# e si va sull’Excel \textbf{Sincronizzazione Dati} nella riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo alla verifica);
     		\item settare \textbf{SCADENZA PREFISSATA} in \textbf{DATA \#StartVerifying → \#DoneVerifying};
@@ -68,7 +72,7 @@
     		\item Creare branch feature/VT-n con T → {I, E}, n → numero
     		\item Quando finito, oltre a settare tempi come per task normali, controllare file in \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verb} e:
     		\begin{itemize}
-    			\item Checkare la propria box;
+    			\item Spuntare la propria box;
     			\item Una volta che la task è in toVerify con l’assignee cancellato (si cancella da solo tramite automazione) assegnare a chi tocca la verifica.
     		\end{itemize}
     		\item Spostare note su Confluence → Trascritti.
