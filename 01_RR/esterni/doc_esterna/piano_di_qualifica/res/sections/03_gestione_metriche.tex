@@ -137,7 +137,7 @@ Rappresenta il numero di metodi per classe. Se è troppo elevato significa che q
 Indica il rapporto tra le linee di codice e le linee di commento all'interno del file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto
 \[\frac{linee\_commento}{linee\_codice}\]
 
-\subsubsection{Complessità CicLomatica (CCL)}
+\subsubsection{Complessità Ciclomatica (CCL)}
 Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o classi di un programma. Questo valore rappresenta quanto complesso è un metodo tramite la misura del numero di cammini linearmente indipendenti che attraversano il grafo di flusso di controllo. Un valore troppo elevato porta ad un’eccessiva complessità del codice, che comporta difficile manutenzione. Al contrario, un valore ridotto potrebbe indicare una scarsa efficienza\textsubscript{G} dei metodi. Per calcolarlo si rappresenta il programma con un grafo dove i  nodi (\textbf{N}) sono i gruppi indivisibili di istruzioni e un arco (\textbf{E}) connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l’esecuzione delle istruzioni dell’altro nodo. Quindi il valore interessato è:
 \[E-N+2P\] 
 dove P è il numero di componenti connesse.

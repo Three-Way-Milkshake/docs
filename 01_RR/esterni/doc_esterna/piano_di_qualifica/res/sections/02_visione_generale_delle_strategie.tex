@@ -65,7 +65,7 @@ Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e 
 
         03 & Implementazione Requisiti Obbligatori & Devono venire implementati tutti i requisiti obbligatori descritti dall'\textsc{Analisi dei Requisiti} & \textbf{PROS}: Requisiti Obbligatori Soddisfatti \tabularnewline
 
-        04 & Manutenzione e comprensione del codice & Il codice deve essere quanto più comprensibile e mantenibile & \textbf{CBO}: Coupling Between Objects \newline \textbf{DEP}: DEPth of hierarchies \newline \textbf{LEV}: LEVel of nesting \newline \textbf{PAR}: PARametri per metodo \newline \textbf{ATT}: ATTributi per classe \newline \textbf{MET}: METodi per classe \newline\textbf{RCC}: Rapporto Codice Commenti \newline\textbf{{CCL}}: Complessità CicLomatica \tabularnewline
+        04 & Manutenzione e comprensione del codice & Il codice deve essere quanto più comprensibile e mantenibile & \textbf{CBO}: Coupling Between Objects \newline \textbf{DEP}: Depth of hierarchies \newline \textbf{LEV}: Level of nesting \newline \textbf{PAR}: Parametri per metodo \newline \textbf{ATT}: Attributi per classe \newline \textbf{MET}: Metodi per classe \newline\textbf{RCC}: Rapporto Codice Commenti \newline\textbf{{CCL}}: Complessità Ciclomatica \tabularnewline
 
         05 & Copertura del codice & Il codice dovrà essere testato in ogni sua parte per garantire le funzionalità previste dai requisiti & \textbf{CC}: Code Coverage \tabularnewline
 
@@ -145,15 +145,15 @@ Per raggiungere gli obiettivi di qualità è necessario che il processo di verif
 
             CBO & Coupling Between Objects & $0\leq CBO \leq 1$ & $0\leq CBO \leq 6$ & 04 \\
 
-            DEP & DEPth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 04 \\
+            DEP & Depth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 04 \\
 
-            LEV & LEVel of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 04 \\
+            LEV & Level of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 04 \\
 
-            PAR & PARametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 04 \\
+            PAR & Parametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 04 \\
 
-            ATT & ATTributi per classe & $0 \leq ATT \leq 8$ & $0 \leq ATT \leq 15$ & 04 \\
+            ATT & Attributi per classe & $0 \leq ATT \leq 8$ & $0 \leq ATT \leq 15$ & 04 \\
 
-            MET & METodi per classe & $0 \leq MET \leq 5$ & $0 \leq MET \leq 15$ & 04 \\
+            MET & Metodi per classe & $0 \leq MET \leq 5$ & $0 \leq MET \leq 15$ & 04 \\
 
             RCC & Rapporto Codice Commenti & $RCC \geq 0.4$ & $RCC \geq 0.2$  & 04 \\
 
@@ -163,23 +163,13 @@ Per raggiungere gli obiettivi di qualità è necessario che il processo di verif
 
             PST & Percentuale Superamento Test & 100\% & 85\% & 06 \\
 
-            DEP & DEepth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 05 \\
-
-            LEV & Level of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 05 \\
-
-            PAR & Parametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 05 \\
-
-            ATT & Attributi per classe & $0 \leq ATT \leq 8$ & $0 \leq ATT \leq 15$ & 05 \\
-
-            MET & Metodi per classe & $0 \leq MET \leq 5$ & $0 \leq MET \leq 15$ & 05 \\
-
             CS & Completezza del Software & $CS=1$ & $CS=1$ & 07 \\
 
             A & Affidabilità del software & $A=0$ & $A < 0.15$ & 08 \\
 
-           C & numero di tocchi/Click necessari & $C<4$ & $C<6$& 09 \\
+            C & Numero di tocchi/Click necessari & $C<4$ & $C<6$& 09 \\
 
-           S & numero di Secondi necessari & $S<15$ & $S<40$ & 09 \\
+            S & Numero di Secondi necessari & $S<15$ & $S<40$ & 09 \\
 
            
            \caption{Tabella delle Metriche}
