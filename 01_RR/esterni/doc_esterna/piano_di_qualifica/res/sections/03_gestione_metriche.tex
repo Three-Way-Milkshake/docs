@@ -118,7 +118,7 @@ I costi sostenuti fino al momento del calcolo.
 
 \subsection{Metriche per la documentazione}
 
-\subsection{Indice di Gulpease (IG)}
+\subsubsection{Indice di Gulpease (IG)}
 Indica la leggibilità di un testo, tarato sulla lingua italiana. Differentemente da indici di lingua straniera, ha il vantaggio di controllare la lunghezza delle parole anzichè il numero di sillabe per parola, semplificandone il calcolo automatico. 
 Nel calcolo vengono ignorati frontespizio, registro modifiche, elenco figure, elenco tabelle, tabelle e figure; in modo da poter valutare appieno la leggibilità del contenuto testuale dei documenti.
 Il valore risultante è compreso tra 0 e 100, dove un indice più alto corrisponde ad un indice di leggibilità più semplice.
@@ -162,7 +162,7 @@ Rappresenta il numero di metodi per classe. Se è troppo elevato significa che q
 Indica il rapporto tra le linee di codice e le linee di commento all'interno del file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto
 \[\frac{linee\_commento}{linee\_codice}\]
 
-\subsection{Complessità CicLomatica (CCL)}
+\subsection{Complessità Ciclomatica (CCL)}
 Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o classi di un programma. Questo valore rappresenta quanto complesso è un metodo tramite la misura del numero di cammini linearmente indipendenti che attraversano il grafo di flusso di controllo. Un valore troppo elevato porta ad un’eccessiva complessità del codice, che comporta difficile manutenzione. Al contrario, un valore ridotto potrebbe indicare una scarsa efficienza\textsubscript{G} dei metodi. Per calcolarlo si rappresenta il programma con un grafo dove i  nodi (\textbf{N}) sono i gruppi indivisibili di istruzioni e un arco (\textbf{E}) connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l’esecuzione delle istruzioni dell’altro nodo. Quindi il valore interessato è:
 \[E-N+2P\] 
 dove P è il numero di componenti connesse.
@@ -187,11 +187,11 @@ Se il valore calcolato è:
 Viene specificata l'abilità del software di resistere a malfunzionamenti.
 \[A = \frac{numero\_di\_errori}{numero\_di\_test\_eseguiti}\]
 
-\subsubsection{numero di tocchi/Click necessari (C)}
+\subsubsection{Numero di tocchi/Click necessari (C)}
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento. Più il valore è basso, più è facile per l'utente interagire con il sistema.\\
 Si considera per esempio la capacità dell'operatore di visualizzare la propria lista delle task\textsubscript{G}.
 
-\subsubsection{numero di Secondi necessari (S)}
+\subsubsection{Numero di Secondi necessari (S)}
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
 Si considera la capacità dell'operatore di visualizzare la propria lista delle task\textsubscript{G}.
 
