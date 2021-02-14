@@ -91,34 +91,9 @@ con $i = {numero\_della\_riunione\_interna}$.
 Con questo calcolo si può trovare la differenza tra il tempo preventivato e il tempo effettivo delle riunioni esterne in minuti, così da controllare se la pianificazione è corretta.
 \[min\_durata\_preventivata_i-min\_durata\_effettiva_i\]
 con $i = {numero\_della\_riunione\_esterna}$.
-\subsubsection{Budget At Completion (BAC)}
-Indica il budget totale allocato per il progetto\textsubscript{G}.
-
-\subsubsection{Earned Value (EV)}
-Indica la quantità di guadagno ottenuta dal lavoro effettuato fino al momento del calcolo.
-\[
-    (preventivo)*(\%\_lavoro\_pianificato)
-\]
-
-\subsubsection{Planned Value (PV)}
-Indica la quantità di guadagno stimata sul lavoro pianificato al momento del calcolo.
-\[
-    (consuntivo)*(\%\_lavoro\_pianificato)
-\]
-
-\subsubsection{Schedule Variance (SV)}
-Indica l'anticipo o il ritardo del lavoro effettuato rispetto alla pianificazione.
-\[
-    EV - PV
-\]
-
-\subsubsection{Actual Cost (AC)}
-I costi sostenuti fino al momento del calcolo.
-
-
 \subsection{Metriche per la documentazione}
 
-\subsection{Indice di Gulpease (IG)}
+\subsubsection{Indice di Gulpease (IG)}
 Indica la leggibilità di un testo, tarato sulla lingua italiana. Differentemente da indici di lingua straniera, ha il vantaggio di controllare la lunghezza delle parole anzichè il numero di sillabe per parola, semplificandone il calcolo automatico. 
 Nel calcolo vengono ignorati frontespizio, registro modifiche, elenco figure, elenco tabelle, tabelle e figure; in modo da poter valutare appieno la leggibilità del contenuto testuale dei documenti.
 Il valore risultante è compreso tra 0 e 100, dove un indice più alto corrisponde ad un indice di leggibilità più semplice.
@@ -152,17 +127,17 @@ Questa metrica indica il livello di annidamento nei vari metodi presenti nel cod
 \subsubsection{Parametri per metodo (PAR)}
 Indica il numero di parametri presenti nei metodi sviluppati nel codice. Un numero troppo elevato potrebbe indicare una complessità troppo elevata del metodo.
 
-\subsection{Attributi per classe (ATT)}
+\subsubsection{Attributi per classe (ATT)}
 Considera il numero totale di attributi per ogni classe. Un valore elevato potrebbe indicare che la classe si fa carico di una quantità eccessiva di responsabilità, in questo caso si può optare per incapsulare parte di essa in un'altra classe.
 
-\subsection{Metodi per classe (MET)}
+\subsubsection{Metodi per classe (MET)}
 Rappresenta il numero di metodi per classe. Se è troppo elevato significa che questa classe svolge più compiti, quindi è preferibile scomporla in più classi.
 
 \subsubsection{Rapporto Codice Commenti (RCC)}
 Indica il rapporto tra le linee di codice e le linee di commento all'interno del file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto
 \[\frac{linee\_commento}{linee\_codice}\]
 
-\subsection{Complessità CicLomatica (CCL)}
+\subsubsection{Complessità CicLomatica (CCL)}
 Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o classi di un programma. Questo valore rappresenta quanto complesso è un metodo tramite la misura del numero di cammini linearmente indipendenti che attraversano il grafo di flusso di controllo. Un valore troppo elevato porta ad un’eccessiva complessità del codice, che comporta difficile manutenzione. Al contrario, un valore ridotto potrebbe indicare una scarsa efficienza\textsubscript{G} dei metodi. Per calcolarlo si rappresenta il programma con un grafo dove i  nodi (\textbf{N}) sono i gruppi indivisibili di istruzioni e un arco (\textbf{E}) connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l’esecuzione delle istruzioni dell’altro nodo. Quindi il valore interessato è:
 \[E-N+2P\] 
 dove P è il numero di componenti connesse.
@@ -170,13 +145,13 @@ dove P è il numero di componenti connesse.
 Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi. Maggiore sarà la copertura del codice, maggiore sarà la possibilità che eventuali errori vengano risolti e individuati. Se il valore è troppo basso, significa che troppe istruzioni non sono state testate e quindi non si può sapere se esse funzionino effettivamente.
 \[\frac{linee\_codice\_verificate}{linee\_codice\_totali}\]
 
-\subsection{Percentuale Superamento Test (PST)}
+\subsubsection{Percentuale Superamento Test (PST)}
 La seguente metrica indica la percentuale di test superati correttamente.
 \[\frac{n\_test\_superati}{n\_totale\_test\_implementati}\]
 
 \subsubsection{Completezza del Software(CS)}
 Viene specificata la completezza del software. Questo rapporto serve per capire a che percentuale di completamento del software ci si trova. 
-\[C = (1- \frac{funzionalita\_non\_implementate }{funzionalita\_implementate})\]
+\[C = \frac{funzionalita\_implementate }{funzionalita\_totali}A\]
 Se il valore calcolato è:
 \begin{itemize}
     \item 1, allora sono state implementate tutte le funzionalità;
@@ -205,4 +180,4 @@ Questa attività\textsubscript{G} è finalizzata alla tempestiva individuazione 
     \item mancato rispetto dei valori contenuti in questo documento;
     \item incongruenze tra il prodotto e le funzionalità descritte nell'\textsc{Analisi dei Requisiti}.
 \end{itemize}
-Nel caso venga individuata una nuova anomalia, deve essere segnalata tempestivament, nella modalità descritta nelle \textsc{Norme di Progetto}. In questo modo il Responsabile sarà informato dell'anomalia e sarà possibile gestirla in maniera corretta.
+Nel caso venga individuata una nuova anomalia, deve essere segnalata tempestivamente, nella modalità descritta nelle \textsc{Norme di Progetto}. In questo modo il Responsabile sarà informato dell'anomalia e sarà possibile gestirla in maniera corretta.

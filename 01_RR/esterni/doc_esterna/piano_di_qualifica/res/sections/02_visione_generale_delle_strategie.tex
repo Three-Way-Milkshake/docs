@@ -27,9 +27,9 @@ Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e 
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{ 
-		>{}p{0.135\textwidth} 
+		>{}p{0.1\textwidth} 
 		>{}p{0.18\textwidth}
-        >{}p{0.27\textwidth}
+        >{}p{0.35\textwidth}
         >{\centering}p{0.30\textwidth} }
         
 	\rowcolorhead
@@ -40,7 +40,7 @@ Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e 
 	\endfirsthead	
     \endhead
     
-        01 & Miglioramento continuo & Capacità del processo di misurare e migliorare le proprie capacità & \textbf{SR}: Scarto Riunioni \newline
+        01 & Miglioramento continuo & Capacità del processo di misurare e migliorare le proprie capacità & 
                          \textbf{REI}: Rapporto riunioni Esterne e Interne \newline
                          \textbf{RRL}: Rapporto tempo Riunioni e Lavoro individuale \newline
                          \textbf{RTEI}: Rapporto Tempo Effettivo totale e Individuale \newline
@@ -60,27 +60,22 @@ Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e 
                          \textbf{SRI}: Scarto Riunioni Interne \newline 
                          \textbf{SRE}: Scarto Riunioni Esterne 
                          \tabularnewline
-        02 & Corretta pianificazione & La pianificazione del progetto\textsubscript{G} non deve discostarsi dall'effettivo andamento &\textbf{ BAC}: Budget At Completion \newline 
-                                            \textbf{EV}: Earned Value \newline
-                                            \textbf{PV}: Planned Value \newline
-                                            \textbf{SV}: Schedule Variance \newline
-                                            \textbf{AC}: Actual Cost \tabularnewline
 
-        03 & Leggibilità dei documentazione & I documenti devono essere leggibili e comprensibili da persone con licenza di scuola media/superiore & \textbf{IG}: Indice di Gulpease \tabularnewline
+        02 & Leggibilità dei documentazione & I documenti devono essere leggibili e comprensibili da persone con licenza di scuola media/superiore & \textbf{IG}: Indice di Gulpease \tabularnewline
 
-        04 & Implementazione Requisiti Obbligatori & Devono venire implementati tutti i requisiti obbligatori descritti dall'\textsc{Analisi dei Requisiti} & \textbf{PROS}: Requisiti Obbligatori Soddisfatti \tabularnewline
+        03 & Implementazione Requisiti Obbligatori & Devono venire implementati tutti i requisiti obbligatori descritti dall'\textsc{Analisi dei Requisiti} & \textbf{PROS}: Requisiti Obbligatori Soddisfatti \tabularnewline
 
-        05 & Manutenzione e comprensione del codice & Il codice deve essere quanto più comprensibile e mantenibile & \textbf{CBO}: Coupling Between Objects \newline \textbf{DEP}: DEPth of hierarchies \newline \textbf{LEV}: LEVel of nesting \newline \textbf{PAR}: PARametri per metodo \newline \textbf{ATT}: ATTributi per classe \newline \textbf{MET}: METodi per classe \newline\textbf{RCC}: Rapporto Codice Commenti \newline\textbf{{CCL}}: Complessità CicLomatica \tabularnewline
+        04 & Manutenzione e comprensione del codice & Il codice deve essere quanto più comprensibile e mantenibile & \textbf{CBO}: Coupling Between Objects \newline \textbf{DEP}: DEPth of hierarchies \newline \textbf{LEV}: LEVel of nesting \newline \textbf{PAR}: PARametri per metodo \newline \textbf{ATT}: ATTributi per classe \newline \textbf{MET}: METodi per classe \newline\textbf{RCC}: Rapporto Codice Commenti \newline\textbf{{CCL}}: Complessità CicLomatica \tabularnewline
 
-        06 & Copertura del codice & Il codice dovrà essere testato in ogni sua parte per garantire le funzionalità previste dai requisiti & \textbf{CC}: Code Coverage \tabularnewline
+        05 & Copertura del codice & Il codice dovrà essere testato in ogni sua parte per garantire le funzionalità previste dai requisiti & \textbf{CC}: Code Coverage \tabularnewline
 
-        07 & Superamento test & La Percentuale di superamento dei test dovrà essere $\geq 80$ del totale & \textbf{PST}: Percentuale Superamento Test \tabularnewline
+        06 & Superamento test & La Percentuale di superamento dei test dovrà essere $\geq 80$ del totale & \textbf{PST}: Percentuale Superamento Test \tabularnewline
 
-        08 & Conformità & Il prodotto dovrà essere conforme ai requisiti, implementando le funzionalità richieste & \textbf{CS}: Completezza del Software \tabularnewline
+        07 & Conformità & Il prodotto dovrà essere conforme ai requisiti, implementando le funzionalità richieste & \textbf{CS}: Completezza del Software \tabularnewline
 
-        09 & Robustezza & Il prodotto dovrà far fronte a situazioni anomale gestendole senza arrestare la sua esecuzione & \textbf{A}: Affidabilità del software \tabularnewline
+        08 & Robustezza & Il prodotto dovrà far fronte a situazioni anomale gestendole senza arrestare la sua esecuzione & \textbf{A}: Affidabilità del software \tabularnewline
 
-        10 & Usabilità & Il prodotto dovrà essere il più semplice possibile da utilizzare & \textbf{C}: numero di tocchi/Click necessari \newline \textbf{S}: numero di Secondi necessari\tabularnewline
+        09 & Usabilità & Il prodotto dovrà essere il più semplice possibile da utilizzare & \textbf{C}: numero di tocchi/Click necessari \newline \textbf{S}: numero di Secondi necessari\tabularnewline
         \caption{Tabella Obiettivi}
     \end{longtable}
 
@@ -144,48 +139,38 @@ Per raggiungere gli obiettivi di qualità è necessario che il processo di verif
 
             SRE & Scarto Riunioni Esterne &  0 & $-90 \leq SRE \leq 90$ & 01 \\
 
-            BAC & Budget At Completion & preventivo & $preventivo-5\%\leq BAC \leq preventivo+5\%$ & 02 \\
+            IG & Indice di Gulpease & $70 \leq IG \leq 100$ & $50 \leq IG \leq 100$ & 02 \\
 
-            EV & Earned Value & $EV \geq 0$ & $EV \geq 0$ & 02 \\
+            PROS & Requisiti Obbligatori Soddisfatti & 100\% & 100\% & 03 \\
 
-            PV & Planned Value & $PV \geq 0$ & $PV \geq 0$ & 02 \\
+            CBO & Coupling Between Objects & $0\leq CBO \leq 1$ & $0\leq CBO \leq 6$ & 04 \\
 
-            SV & Schedule Variance & $SV \geq 0$ & $SV = 0$ & 02 \\
+            DEP & DEPth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 04 \\
 
-            AC & Actual Cost & $0 \leq AC \leq PV$ & $0 \leq AC \leq budget$ & 02 \\
+            LEV & LEVel of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 04 \\
 
-            IG & Indice di Gulpease & $70 \leq IG \leq 100$ & $50 \leq IG \leq 100$ & 03 \\
+            PAR & PARametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 04 \\
 
-            PROS & Requisiti Obbligatori Soddisfatti & 100\% & 100\% & 04 \\
+            ATT & ATTributi per classe & $0 \leq ATT \leq 8$ & $0 \leq ATT \leq 15$ & 04 \\
 
-            CBO & Coupling Between Objects & $0\leq CBO \leq 1$ & $0\leq CBO \leq 6$ & 05 \\
+            MET & METodi per classe & $0 \leq MET \leq 5$ & $0 \leq MET \leq 15$ & 04 \\
 
-            DEP & DEPth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 05 \\
+            RCC & Rapporto Codice Commenti & $RCC \geq 0.4$ & $RCC \geq 0.2$  & 04 \\
 
-            LEV & LEVel of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 05 \\
+            CCL & Complessità CicLomatica & $CCL \leq 10 $ & $CCL \leq 20 $& 04 \\
 
-            PAR & PARametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 05 \\
+            CC & Code Coverage & $CC\leq 70\%$ & $CC\leq 50\%$ & 05 \\
 
-            ATT & ATTributi per classe & $0 \leq ATT \leq 8$ & $0 \leq ATT \leq 15$ & 05 \\
-
-            MET & METodi per classe & $0 \leq MET \leq 5$ & $0 \leq MET \leq 15$ & 05 \\
-
-            RCC & Rapporto Codice Commenti & $RCC \geq 0.4$ & $RCC \geq 0.2$  & 05 \\
-
-            CCL & Complessità CicLomatica & $CCL \leq 10 $ & $CCL \leq 20 $& 05 \\
-
-            CC & Code Coverage & $CC\leq 70\%$ & $CC\leq 50\%$ & 06 \\
-
-            PST & Percentuale Superamento Test & 100\% & 85\% & 07 \\
+            PST & Percentuale Superamento Test & 100\% & 85\% & 06 \\
 
 
-            CS & Completezza del Software & $CS=1$ & $CS=1$ & 08 \\
+            CS & Completezza del Software & $CS=1$ & $CS=1$ & 07 \\
 
-            A & Affidabilità del software & $A=0$ & $A < 0.15$ & 09 \\
+            A & Affidabilità del software & $A=0$ & $A < 0.15$ & 08 \\
 
-           C & numero di tocchi/Click necessari & $C<4$ & $C<6$& 10 \\
+           C & numero di tocchi/Click necessari & $C<4$ & $C<6$& 09 \\
 
-           S & numero di Secondi necessari & $S<15$ & $S<40$ & 10 \\
+           S & numero di Secondi necessari & $S<15$ & $S<40$ & 09 \\
 
            
            \caption{Tabella delle Metriche}
