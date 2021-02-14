@@ -57,8 +57,8 @@ Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e 
                          \textbf{PDDVT}: Percentuale Discostamento DoneVerifying (in Tempo) \newline
                          \textbf{PDDVR}: Percentuale Discostamento DoneVerifying (in Ritardo) \newline
                          \textbf{PDDVA}: Percentuale Discostamento DoneVerifying (in Anticipo) \newline
-                         \textbf{SRI}: Scarto Riunioni Interne \newline 
-                         \textbf{SRE}: Scarto Riunioni Esterne 
+                         \textbf{SRI}: Scarto Riun. Interne \newline 
+                         \textbf{SRE}: Scarto Riun. Esterne 
                          \tabularnewline
 
         02 & Leggibilità dei documentazione & I documenti devono essere leggibili e comprensibili da persone con licenza di scuola media/superiore & \textbf{IG}: Indice di Gulpease \tabularnewline
@@ -163,6 +163,15 @@ Per raggiungere gli obiettivi di qualità è necessario che il processo di verif
 
             PST & Percentuale Superamento Test & 100\% & 85\% & 06 \\
 
+            DEP & DEepth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 05 \\
+
+            LEV & Level of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 05 \\
+
+            PAR & Parametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 05 \\
+
+            ATT & Attributi per classe & $0 \leq ATT \leq 8$ & $0 \leq ATT \leq 15$ & 05 \\
+
+            MET & Metodi per classe & $0 \leq MET \leq 5$ & $0 \leq MET \leq 15$ & 05 \\
 
             CS & Completezza del Software & $CS=1$ & $CS=1$ & 07 \\
 
