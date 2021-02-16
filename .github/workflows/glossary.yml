@@ -35,3 +35,11 @@ jobs:
       - name: if something changed, commit and push
         run: |
           if [ `git status | grep -c "working tree clean"` -eq 0 ] ; then git add . ; git commit -m 'automatic update by glossary_builder automation' ; git fetch ; git push ; fi
+          
+      - name: upload df artifacts to internal drive folder
+      	run: ./github/workflows/artifacts_uploader.sh -i -c
+      	env:
+      		CID: ${{ secrets.CID }}
+      		CSEC: ${{ secrets.CSEC }}
+      		RTOKEN: ${{ secrets.RTOKEN }}
+      		ROOT_FLD: ${{ secrets.ROOT_FOLDER_DOCS }}
