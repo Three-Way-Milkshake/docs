@@ -17,10 +17,14 @@ then
 	then
     	echo "configuring drive env with secrets..."
 		cp drive_conf.template cnf
-		sed -i 's/CID/'"${CID}"'/g' cnf
-        sed -i 's/CSEC/'"${CSEC}"'/g' cnf
-        sed -i 's/RTOKEN/'"${RTOKEN}"'/g' cnf
-        sed -i 's/ROOT_FLD/'"${ROOT_FLD}"'/g' cnf
+		#sed -i 's/CID/'"${CID}"'/g' cnf
+        #sed -i 's/CSEC/'"${CSEC}"'/g' cnf
+        #sed -i 's/RTOKEN/'"${RTOKEN}"'/g' cnf
+        #sed -i 's/ROOT_FLD/'"${ROOT_FLD}"'/g' cnf
+        echo "CLIENT_ID=\"${CID}\"" > cnf
+        echo "CLIENT_SECRET=\"${CSEC}\"" > cnf
+        echo "REFRESH_TOKEN=\"${RTOKEN}\"" > cnf
+        echo "ROOT_FOLDER=\"${ROOT_FLD}\"" > cnf
 		mv cnf ~/.googledrive.conf
 		echo "Done."
 	fi
@@ -36,4 +40,10 @@ do
 	gupload $file
 done
 
-echo "Completed!"
+if [ $? -eq 0 ]
+then
+    echo " Successfully Completed!"
+else
+    echo "something went wrong"
+    exit 1
+fi
