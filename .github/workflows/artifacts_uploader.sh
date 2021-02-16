@@ -22,9 +22,9 @@ then
         #sed -i 's/RTOKEN/'"${RTOKEN}"'/g' cnf
         #sed -i 's/ROOT_FLD/'"${ROOT_FLD}"'/g' cnf
         echo "CLIENT_ID=\"${CID}\"" > cnf
-        echo "CLIENT_SECRET=\"${CSEC}\"" > cnf
-        echo "REFRESH_TOKEN=\"${RTOKEN}\"" > cnf
-        echo "ROOT_FOLDER=\"${ROOT_FLD}\"" > cnf
+        echo "CLIENT_SECRET=\"${CSEC}\"" >> cnf
+        echo "REFRESH_TOKEN=\"${RTOKEN}\"" >> cnf
+        echo "ROOT_FOLDER=\"${ROOT_FLD}\"" >> cnf
 		mv cnf ~/.googledrive.conf
 		echo "Done."
 	fi
