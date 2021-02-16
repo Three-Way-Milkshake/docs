@@ -17,10 +17,10 @@ then
 	then
     	echo "configuring drive env with secrets..."
 		cp drive_conf.template cnf
-		sed -i "s/CID/$CID/g" cnf
-		sed -i "s/CSEC/$CSEC/g" cnf
-		sed -i "s/RTOKEN/$RTOKEN/g" cnf
-		sed -i "s/ROOT_FLD/$ROOT_FLD/g" cnf
+		sed -i 's/CID/'"${CID}"'/g' cnf
+        sed -i 's/CSEC/'"${CSEC}"'/g' cnf
+        sed -i 's/RTOKEN/'"${RTOKEN}"'/g' cnf
+        sed -i 's/ROOT_FLD/'"${ROOT_FLD}"'/g' cnf
 		mv cnf ~/.googledrive.conf
 		echo "Done."
 	fi
