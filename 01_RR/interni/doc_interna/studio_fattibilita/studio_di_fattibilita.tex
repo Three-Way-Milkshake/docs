@@ -1,0 +1,64 @@
+\documentclass[a4paper]{article}
+
+\input{../../../../latex/package.tex}
+\input{config/titlepage_input.tex} % modifica questo file
+\makeindex
+
+\usepackage{ulem}
+\usepackage{hyperref}
+
+
+\begin{document}
+	\input{../../../../latex/titlepage.tex}
+	\pagebreak
+
+	% Registro delle modifiche
+	\input{../../../../latex/changelog.tex}
+	\input{config/changelog_input.tex} % modifica questo file
+	\pagebreak
+
+	% indice
+    {
+        \hypersetup{linkcolor=black}
+        \tableofcontents
+    }
+	\pagebreak
+
+	% indice delle figure
+	%\listoffigures
+	%\pagebreak
+
+	% indice delle tabelle
+	%\listoftables
+	%\pagebreak
+
+	% contenuto del documento, ogni sezione in un file
+
+	\input{res/sections/01_introduzione.tex} % andrea
+	\pagebreak
+
+	\section{Analisi del capitolato\textsubscript{G} scelto}
+	\input{res/sections/02_C5.tex} % andrea e un po' tutti
+	\pagebreak
+
+	\section{Analisi dei capitolato\textsubscript{G} rimanenti}
+	\input{res/sections/03_C1.tex} % simone
+	\pagebreak
+
+	\input{res/sections/04_C2.tex} % modifica questo file
+	\pagebreak
+
+	\input{res/sections/05_C3.tex} % modifica questo file
+	\pagebreak
+
+	\input{res/sections/06_C4.tex} % modifica questo file
+	\pagebreak
+
+	\input{res/sections/07_C6.tex} % modifica questo file
+	\pagebreak
+
+	\input{res/sections/08_C7.tex} % modifica questo file
+	\pagebreak
+
+
+\end{document}

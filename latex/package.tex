@@ -15,13 +15,23 @@
 \hypersetup{
 	colorlinks=true,
 	linkcolor=blue,
+<<<<<<< HEAD
 	filecolor=magenta,      
+=======
+	filecolor=magenta,
+>>>>>>> develop
 	urlcolor=blue,
 }
-% Numerazione figure 
+% Numerazione figure
 \let\counterwithout\relax
 \let\counterwithin\relax
 \usepackage{chngcntr}
+
+% distanziare elenco delle figure e delle tabelle
+\usepackage{tocbasic}
+\DeclareTOCStyleEntry[numwidth=3.5em]{tocline}{figure}% for figure entries
+\DeclareTOCStyleEntry[numwidth=3.5em]{tocline}{table}% for table entries
+
 
 \counterwithin{table}{subsection}
 \counterwithin{figure}{subsection}
@@ -70,7 +80,7 @@
 \usepackage[table]{xcolor}
 
 %COMANDI TABELLE
-\newcommand{\rowcolorhead}{\rowcolor[HTML]{9b240a}} %intestazione 
+\newcommand{\rowcolorhead}{\rowcolor[HTML]{9b240a}} %intestazione
 % check for missing commands
 \newcommand{\headertitle}[1]{\textbf{\color{white}#1}} %titolo colonna
 \definecolor{pari}{HTML}{FFDBCB}

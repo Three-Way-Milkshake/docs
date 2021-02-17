@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+
+\input{../../../../latex/package.tex}
+\input{config/titlepage_input.tex} % modifica questo file
+\makeindex
+
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{listings}
+
+\begin{document}
+	\input{../../../../latex/titlepage.tex}
+	\pagebreak
+
+	% Registro delle modifiche
+	\input{../../../../latex/changelog.tex}
+	\input{config/changelog_input.tex} % modifica questo file
+	\pagebreak
+
+	% indice
+	{
+    	\hypersetup{linkcolor=black}
+    	\tableofcontents
+    	\pagebreak
+
+        % indice delle figure, non ci sono figure
+        \listoffigures
+        \pagebreak
+
+        % indice delle tabelle
+        \listoftables
+        \pagebreak
+	}
+
+
+	% contenuto del documento, ogni sezione in un file
+	\input{res/sections/01_introduzione.tex}
+	\pagebreak
+
+	\input{res/sections/02_visione_generale_delle_strategie.tex}
+	\pagebreak
+
+	\input{res/sections/03_gestione_metriche.tex}
+	\pagebreak
+	\appendix
+	\input{res/sections/04_test.tex}
+	\pagebreak
+
+	\input{res/sections/05_resoconto.tex}
+	\pagebreak
+
+	\input{res/sections/06_valutazioni_per_il_miglioramento.tex}
+	\pagebreak
+	\input{res/sections/07_standard_qualita.tex}
+	
+\end{document}

@@ -1,0 +1,436 @@
+\section{Requisiti}
+\subsection{Introduzione}
+In questa sezione vengono riportati i requisito\textsubscript{G}, strutturati secondo la loro classificazione per tipologia, ovvero requisito\textsubscript{G} funzionali, requisito\textsubscript{G} prestazionali, requisito\textsubscript{G} di qualità e requisito\textsubscript{G} di vincolo.
+\subsection{Requisiti funzionali}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{}p{0.135\textwidth} 
+		>{}p{0.5425\textwidth}
+		>{\centering}p{0.22\textwidth} }
+	\rowcolorhead
+	\centering \headertitle{Codice} &
+	\centering \headertitle{Descrizione} &	
+	\centering \headertitle{\normalfont \textbf{Fonte}}	
+	\endfirsthead	
+	\endhead
+RF-1-O		&	Un utente deve effettuare il login alla piattaforma tramite il suo codice identificativo	&	UC1\tabularnewline
+RF-2-O		&	Il processo di login dell'utente non va a buon fine se il codice inserito non è corretto o non è presente nel sistema	&	UC1.1\tabularnewline
+RF-3-O		&	L'amministratore può registrare un nuovo lavoratore all'interno del sistema	&	UC2\tabularnewline
+RF-4-O		&	L'amministratore può creare l'account di un responsabile o di un operatore	&	UC2\tabularnewline
+RF-4.1-O		&	La registrazione di un nuovo utente necessita del nome del lavoratore	&	UC2.1.1\tabularnewline
+RF-4.2-O		&	La registrazione di un nuovo utente necessita del cognome del lavoratore	&	UC2.1.2\tabularnewline
+RF-4.3-O		&	La registrazione di un nuovo utente necessita del ruolo del lavoratore (responsabile, operatore)	&	UC2.1.3\tabularnewline
+RF-5-O		&	La fase\textsubscript{G} di registrazione non va a buon fine se i dati inseriti risultano già presenti nel sistema	&	UC2.3\tabularnewline
+RF-6-O		&	Il sistema permette all'amministratore di gestire gli account inseriti	&	UC3\tabularnewline
+RF-6.1-O		&	Il sistema permette la modifica di un utente già registrato	&	UC3.1\tabularnewline
+RF-6.1.1-O	&	L'amministratore può modificare il campo nome di un account esistente	&	UC3.1.1\tabularnewline
+RF-6.1.2-O	&	L'amministratore può modificare il campo cognome di un account esistente	&	UC3.1.2\tabularnewline
+RF-6.1.3-O	&	L'amministratore può modificare il campo ruolo di un account esistente (responsabile, lavoratore)	&	UC3.1.3\tabularnewline
+RF-6.2-O		&	Il sistema permette l'eliminazione di un utente precedentemente registrato	&	UC3.2\tabularnewline				
+RF-7-O		&	Il responsabile si occupa della gestione della lista delle task\textsubscript{G}	&	UC4\tabularnewline
+RF-8-O		&	Il responsabile può inserire una nuova task\textsubscript{G} 	&	UC4.1\tabularnewline
+RF-8.1-O		&	Quando il responsabile inserisce una nuova task\textsubscript{G} dovrà specificare la sua priorità 	&	UC4.2\tabularnewline
+RF-8.2-O		&	Quando il responsabile inserisce una nuova task\textsubscript{G} dovrà specificare il POI\textsubscript{A} a cui fa riferimento	&	UC4.3\tabularnewline
+RF-8.3-O		&	Quando il responsabile conferma l'inserimento di una nuova task\textsubscript{G} e il sistema la assegna ad un'unità che la dovrà soddisfare	&	UC4.4\tabularnewline
+RF-9-O		&	Il responsabile può eliminare una task\textsubscript{G} 	&	UC4.5\tabularnewline
+RF-10-O		&	Il responsabile può modificare la priorità di una task\textsubscript{G} 	&	UC4.6\tabularnewline				
+RF-11-O		&	Il sistema permette all'utente di fare il logout dall'applicativo	&	UC5\tabularnewline
+RF-12-O		&	Il sistema abilita il logout all'amministratore in qualsiasi momento	&	UC5\tabularnewline
+RF-13-O		&	Il sistema abilita il logout al responsabile in qualsiasi momento	&	UC5\tabularnewline
+RF-14-O		&	Il sistema abilita il logout all'operatore solo quando si trova in base 	&	UC5\tabularnewline				
+RF-15-O		&	Il sistema permette la visualizzazione della mappa all'amministratore e ai responsabili	&	UC6\tabularnewline
+RF-15.1-O		&	Il sistema permette la visualizzazione di tutti i tipi di POI\textsubscript{A} nella mappa all'amministratore e ai responsabili	&	UC6\tabularnewline
+RF-15.2-O		&	Il sistema permette la visualizzazione delle caratteristiche delle zone di percorrenza\textsubscript{G} (senso di marcia, numero massimo di unità che possono transitare) all'amministratore e ai responsabili	& UC6\tabularnewline
+RF-15.2.1-O	&	Il sistema permette la visualizzazione delle zone non transitabili all'amministratore e ai responsabili	&	UC6 \tabularnewline
+RF-16-O		&	Il sistema permette la visualizzazione della posizione dei muletti in real-time sulla mappa	&	UC6.1\tabularnewline
+RF-17-F		&	Il sistema permette la visualizzazione della posizione delle persone in real-time sulla mappa	&	Capitolato\tabularnewline
+RF-18-O		&	Il sistema permette all'amministratore la visualizzazione di una notifica in caso della segnalazione da parte di un operatore di un evento eccezionale	&	UC6.2\tabularnewline				
+RF-19-O		&	L'amministratore autenticato può accedere all'interfaccia per gestire la mappa 	&	UC7\tabularnewline
+RF-19.1-O		&	L'amministratore può modificare planimetria\textsubscript{G} del magazzino	&	UC7.2\tabularnewline
+RF-19.2-O		&	L'amministratore può modificare la percorrenza\textsubscript{G} del magazzino	&	UC7.3\tabularnewline
+RF-20-O		&	L'amministratore può gestire i POI\textsubscript{A}	&	UC7.4\tabularnewline
+RF-20.1-O		&	L'amministratore può modificare la posizione di un POI\textsubscript{A} già esistente	&	UC7.4.1\tabularnewline
+RF-20.2-O		&	L'amministratore può inserire un nuovo POI\textsubscript{A}	&	UC7.4.2\tabularnewline
+RF-20.2.1-O	&	Inserendo un nuovo POI\textsubscript{A}, l'amministratore dovrà specificare la sua posizione nella mappa	&	UC7.4.3\tabularnewline
+RF-20.2.2-O	&	Inserendo un nuovo POI\textsubscript{A}, l'amministratore dovrà specificare il suo codice identificativo	&	UC7.4.4\tabularnewline
+RF-20.2.3-O	&	Inserendo un nuovo POI\textsubscript{A}, l'amministratore dovrà specificare il tipo di POI\textsubscript{A} inserito (carico, scarico, base)	&	UC7.4.5\tabularnewline
+RF-20.3-O		&	L'amministratore può eliminare un POI\textsubscript{A}	&	UC7.4.6\tabularnewline
+RF-20-O		&	La User Interface di una specifica unità attiva implementa una mappa contente i relativi POI\textsubscript{A} presenti nella lista delle task\textsubscript{G} da soddisfare, numerati secondo la lista	&	UC8.1\tabularnewline
+RF-22-O		&	La User Interface implementa sotto alla mappa una lista ordinata contenente la task\textsubscript{G} rimanenti da eseguire dell'operatore che sta usando l'unità	&	UC8.2\tabularnewline
+RF-23-O		&	La mappa mostra il prossimo task\textsubscript{G} da soddisfare (POI da raggiungere) 	&	UC8.3\tabularnewline
+RF-23.1-O		&	Nella mappa specifica dell'unità verrà evidenziato con un colore diverso il prossimo POI\textsubscript{A} da raggiungere	&	UC8.3\tabularnewline
+RF-24-O		&	L'operatore segnala al sistema la conclusione dell'incarico attraverso la User Interface	&	UC9\tabularnewline				
+RF-25-O		&	La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che indicano il suggerimento del server centrale	&	UC10\tabularnewline
+RF-25.1-O		&	Il sistema permette all'operatore la visualizzazione di direzione e spostamento del muletto a cui è a bordo, in caso in cui nel muletto sia attiva la guida automatica 	&	UC10\tabularnewline				
+RF-26-O		&	Nella User Interface è presente un pulsante che permette di passare dalla guida manuale alla guida autonoma dell'unità	&	UC11.1\tabularnewline
+RF-26.1-O		&	La User Interface del controllo manuale permette di passare alla guida autonoma	&	UC11.1, \textsc{\textsc{Verbale Esterno 1}}\tabularnewline
+RF-27-O		&	Nella User Interface è presente un pulsante che permette di passare dalla guida autonoma alla guida manuale dell'unità	&	UC11.2\tabularnewline
+RF-27.1-O		&	La User Interface del controllo automatico permette di passare alla guida manuale	&	UC11.2, \textsc{\textsc{Verbale Esterno 1}}\tabularnewline
+RF-28-O		&	Nella User Interface è presente un pulsante che permette di segnalare al server un evento eccezionale	&	UC11.3\tabularnewline
+RF-29-O		&	Nella User Interface comparirà  un pulsante per il ritorno alla base dell'unità se l'operatore avrà concluso tutte le task\textsubscript{G} assegnategli e la guida sarà impostata ad autonoma 	&	UC11.5\tabularnewline 
+RF-30-O		&	La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che permettono gli spostamenti manuali ed i pulsanti di start/stop	&	UC11.4, \textsc{\textsc{Verbale Esterno 1}}\tabularnewline
+RF-31-D		&	Il pannello permette di visualizzare l'indicatore di velocità attuale (che avrà come massimo la velocità massima anagrafica)	&	Capitolato\tabularnewline				
+RF-32-O		&	Il server centrale pilota e coordina tutte le unità per evitare incidenti e ingorghi	&	Capitolato\tabularnewline
+RF-33-F		&	Il server centrale fornisce il percorso migliore ad ogni unità tramite algoritmi di ricerca operativa	&	Capitolato\tabularnewline				
+RF-34-O		&	Il sistema permette al responsabile di visualizzare la lista di tutti i POI\textsubscript{A} con il proprio tipo (carico, scarico, base) presenti nella mappa	&	UC12\tabularnewline
+RF-35-O		&	Il sistema permette all'amministratore di visualizzare la lista di tutti i POI\textsubscript{A} con il proprio tipo (carico, scarico, base) presenti nella mappa	&	UC12\tabularnewline				
+RF-36-O		&	Il responsabile ha a disposizione un pulsante per poter vedere una lista completa delle task\textsubscript{G}	&	UC13\tabularnewline			
+RF-37-O		&	L'amministratore ha a disposizione un'interfaccia su cui può gestire le unità	&	UC14\tabularnewline
+RF-37.1-O		&	L'amministratore può aggiungere una nuova unità	&	UC14.1\tabularnewline
+RF-37.2-O		&	L'amministratore può eliminare un'unità	&	UC14.2\tabularnewline
+\caption{Tabella Requisiti Funzionali\label{ Tabella Requisiti Funzionali}}
+\end{longtable}.
+\subsection{Requisiti prestazionali}
+In questo progetto\textsubscript{G} non sono stati rilevati alcuni requisito\textsubscript{G} prestazionali per quanto riguarda i requisito\textsubscript{G} obbligatori.
+\subsection{Requisiti di qualità}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{}p{0.135\textwidth} 
+		>{}p{0.5425\textwidth}
+		>{\centering}p{0.2\textwidth} }
+	\rowcolorhead
+	\centering\headertitle{Codice} &
+	\centering \headertitle{Descrizione} &	
+	\centering \headertitle{\normalfont \textbf{Fonte}}	
+	\endfirsthead	
+	\endhead
+RQ-1-O & Disporre di diagrammi uml\textsubscript{A} relativi agli use cases di progetto\textsubscript{G} & Capitolato\tabularnewline
+RQ-2-O & Disporre di uno schema design relativo alla base dati (se ritenuta necessaria) & Capitolato\tabularnewline
+RQ-3-O & Rendere disponibile la documentazione delle api\textsubscript{A} che saranno realizzate & Capitolato\tabularnewline
+RQ-4-O & Rendere disponibile la lista dei bug\textsubscript{G} risolti durante la fase\textsubscript{G} di sviluppo & Capitolato\tabularnewline
+RQ-5-O & Fornire il codice prodotto in formato sorgente utilizzando sistemi di versionamento del codice, quali GitHub o Bitbucket & Capitolato\tabularnewline
+RQ-6-O & Rilasciare il codice sorgente di quanto realizzato & Capitolato\tabularnewline
+RQ-7-O & Rendere disponibile il Docker file (\#1) con la componente applicativa, rappresentante il motore di calcolo & Capitolato\tabularnewline 
+RQ-8-O & Fornire il Docker file (\#2) con la componente applicativa rappresentante il visualizzatore/monitor real-time (in base all'implementazione, potrebbe essere incorporato nel \#1) & Capitolato\tabularnewline
+RQ-9-O & Erogare il Docker file (\#3), da istanziare N volte, rappresentante la singola unità & Capitolato\tabularnewline
+RQ-10-F & Rendere disponibile il Docker file (\#4), da istanziare N volte, rappresentante il singolo pedone & Capitolato\tabularnewline 
+\caption{Tabella Requisiti di Qualità\label{ Tabella Requisiti di Qualità}}
+\end{longtable}.
+\newline 
+\subsection{Requisiti di vincolo}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{}p{0.135\textwidth} 
+		>{}p{0.5425\textwidth}
+		>{\centering}p{0.2\textwidth} }
+	\rowcolorhead
+	\centering\headertitle{Codice} &
+	\centering \headertitle{Descrizione} &	
+	\centering \headertitle{\normalfont \textbf{Fonte}}	
+	\endfirsthead	
+	\endhead
+RV-1-O & La geolocalizzazione va simulata & Capitolato\tabularnewline
+RV-2-O & L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle unità & Capitolato\tabularnewline
+RV-3-F & L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle persone & Capitolato\tabularnewline
+RV-4-O & Le persone si muovano solo a bordo di mezzi & Decisione interna\tabularnewline
+RV-5-O & Il server centrale deve prevedere ed evitare le collisioni & Capitolato\tabularnewline
+RV-6-O & Ogni zona di percorrenza\textsubscript{G} ha un numero massimo di unità che possono percorrerla contemporaneamente (dimensione della zona) & Capitolato\tabularnewline
+RV-7-O & Ogni zona di percorrenza\textsubscript{G} ha un modo in cui può essere percorsa (senso unico, doppio senso) & Capitolato\tabularnewline
+RV-8-O & Ogni unità deve rispettare i vincoli dimensionali delle zone & Capitolato\tabularnewline
+RV-9-O & Tutte le unità, quando sono in movimento, viaggiano alla stessa velocità che rimane costante & Capitolato\tabularnewline
+RV-10-F & L'applicativo permette di gestire il cambiamento della velocità di un'unità & Capitolato\tabularnewline
+RV-11-D & Ogni unità ha una velocità di crociera & Capitolato\tabularnewline
+RV-12-D & Ogni unità ha una velocità massima & Capitolato\tabularnewline
+RV-13-O & Ogni unità ha un suo identificativo & Capitolato\tabularnewline
+RV-14-O & Il server centrale conosce la posizione di ogni singola unità & Capitolato\tabularnewline
+RV-15-O & Il server centrale centrale conosce la direzione di ogni singola unità & Capitolato\tabularnewline
+RV-16-D & Il server centrale conosce la velocità di ogni singola unità & Capitolato\tabularnewline
+RV-17-O & Ogni unità ha una lista di task\textsubscript{G} da risolvere ogni volta che fa carico & Capitolato\tabularnewline
+RV-18-O & Ogni task\textsubscript{G} è collegata ad un POI\textsubscript{A} da raggiungere & Capitolato\tabularnewline
+RV-19-O & Ogni POI\textsubscript{A} può essere di carico o scarico o base & Decisione interna\tabularnewline
+RV-20-O & Ci devono essere più di un POI\textsubscript{A} di scarico & Decisione interna\tabularnewline
+RV-21-O & Ci deve essere almeno un POI\textsubscript{A} di base & Decisione interna\tabularnewline
+RV-22-O & Ci deve essere almeno un POI\textsubscript{A} di carico & Decisione interna\tabularnewline
+RV-23-F & Ci possono essere più POI\textsubscript{A} di base & Decisione interna\tabularnewline
+RV-24-F & Ci possono essere più POI\textsubscript{A} di carico & Decisione interna\tabularnewline
+RV-25-O & Ogni unità parte da una base. La sua partenza dalla base determina l'inizio del turno di un operatore & Decisione interna\tabularnewline
+RV-26-O & Ogni unità torna ad una base quando termina il turno dell'operatore & Decisione interna\tabularnewline
+RV-27-O & Ogni unità passa per un'area di carico prima di iniziare la sequenza di scarichi (tasks) & Decisione interna\tabularnewline
+RV-28-O & Ogni unità torna ad un'area di carico se ha scaricato tutta la merce (completato i task) e il turno dell'operatore non è terminato & Decisione interna\tabularnewline
+RV-29-O & Il server centrale conosce ogni spostamento (in avanti, indietro, a destra e a sinistra) di ogni unità & Capitolato\tabularnewline
+RV-30-O & Il server centrale recepisce la fermata di ogni unità & Capitolato\tabularnewline
+RV-31-O & Il server centrale recepisce la partenza di ogni unità & Capitolato\tabularnewline
+RV-32-O	&	Ci deve uno e un solo account registrato con il ruolo di amministratore	&	Decisione interna	\tabularnewline
+RV-33-O	&	Ci deve essere almeno un account registrato con il ruolo di responsabile	&	Decisione interna	\tabularnewline
+RV-34-F	&	Ci possono essere più account registrati con il ruolo di responsabile	&	Decisione interna	\tabularnewline
+RV-35-O	&	Ci devono essere più account registrati con il ruolo di operatore	&	Decisione interna	\tabularnewline
+\caption{Tabella Requisiti di vincolo\label{ Tabella Requisiti di vincolo}}
+\end{longtable}.
+\pagebreak
+\subsection{Tracciamento}
+\subsubsection{Fonti - Requisiti}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{}p{0.22\textwidth} 
+		>{}p{0.25\textwidth} }
+	\rowcolorhead
+	\headertitle{Fonte} &
+	\headertitle{\normalfont \textbf{Requisiti}}	
+	\endfirsthead	
+	\endhead
+Capitolato &	
+	RV-1-O	\newline
+	RV-2-O	\newline
+	RV-3-F	\newline
+	RV-5-O	\newline
+	RV-6-O	\newline
+	RV-7-O	\newline
+	RV-8-O	\newline
+	RV-9-O	\newline
+	RV-10-F	\newline
+	RV-11-D	\newline
+	RV-12-D	\newline
+	RV-13-O	\newline
+	RV-14-O	\newline
+	RV-15-O	\newline
+	RV-16-D	\newline
+	RV-17-O	\newline
+	RV-18-O	\newline
+	RV-29-O	\newline
+	RV-30-O	\newline
+	RV-31-O	\newline
+	RF-17-F	\newline
+	RF-31-D	\newline
+	RF-32-O	\newline
+	RF-33-F	\newline
+	RQ-1-O	\newline
+	RQ-2-O	\newline
+	RQ-3-O	\newline
+	RQ-4-O	\newline
+	RQ-5-O	\newline
+	RQ-6-O	\newline
+	RQ-7-O	\newline
+	RQ-8-O	\newline
+	RQ-9-O	\newline
+	RQ-10-F	\tabularnewline
+Decisione interna &	RV-4-O	\newline
+	RV-19-O	\newline
+	RV-20-O	\newline
+	RV-21-O	\newline
+	RV-22-O	\newline
+	RV-23-F	\newline
+	RV-24-F	\newline
+	RV-25-O	\newline
+	RV-26-O	\newline
+	RV-27-O	\newline
+	RV-28-O	\newline
+	RV-32-O	\newline
+	RV-33-O	\newline
+	RV-34-O	\newline
+	RV-35-O	\tabularnewline
+\textsc{Verbale Esterno 1} &	RF-26.1-O	\newline
+	RF-27.1-O	\newline
+	RF-30-O	\tabularnewline
+UC1 &	RF-1-O	\newline
+	RF-2-O	\tabularnewline
+UC2 &	RF-3-O	\newline
+	RF-4-O	\newline
+	RF-4.1-O	\newline
+	RF-4.2-O	\newline
+	RF-4.3-O	\newline
+	RF-5-O	\tabularnewline
+UC3 &	RF-6-O	\newline
+	RF-6.1-O	\newline
+	RF-6.1.1-O	\newline
+	RF-6.1.2-O	\newline
+	RF-6.1.3-O	\newline
+	RF-6.2-O	\tabularnewline
+UC4 &	RF-7-O	\newline
+	RF-8-O	\newline
+	RF-8.1-O	\newline
+	RF-8.2-O	\newline
+	RF-8.3-O	\newline
+	RF-9-O	\newline
+	RF-10-O	\tabularnewline
+UC5 &	RF-11-O	\newline
+	RF-12-O	\newline
+	RF-13-O	\newline
+	RF-14-O	\tabularnewline
+UC6 &	RF-15-O	\newline
+	RF-15.1-O	\newline
+	RF-15.2-O	\newline
+	RF-15.2.1-O	\newline
+	RF-16-O	\newline
+	RF-18-O	\tabularnewline
+UC7 &	RF-19-O	\newline
+	RF-19.1-O	\newline
+	RF-19.2-O	\newline
+	RF-20-O	\newline
+	RF-20.1-O	\newline
+	RF-20.2-O	\newline
+	RF-20.2.1-O	\newline
+	RF-20.2.2-O	\newline
+	RF-20.2.3-O	\newline
+	RF-20.3-O	\tabularnewline
+UC8 &	RF-20-O	\newline
+	RF-22-O	\newline
+	RF-23-O	\newline
+	RF-23.1-O	\tabularnewline
+UC9 &	RF-24-O	\tabularnewline
+UC10 &	RF-25-O	\newline
+	RF-25.1-O	\tabularnewline
+UC11 &	RF-26-O	\newline
+	RF-26.1-O	\newline
+	RF-27-O	\newline
+	RF-27.1-O	\newline
+	RF-28-O	\newline
+	RF-29-O	\newline
+	RF-30-O	\tabularnewline
+UC12 &	RF-34-O	\newline
+	RF-35-O	\tabularnewline
+UC13 &	RF-36-O	\tabularnewline
+UC14 &	RF-37-O	\newline
+	RF-37.1-O	\newline
+	RF-37.2-O	\tabularnewline
+\caption{Tabella Fonti - Requisiti\label{ Tabella Fonti - Requisiti}}
+\end{longtable}.
+\pagebreak
+\subsubsection{Requisiti - Fonti}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{}p{0.2\textwidth} 
+		>{}p{0.35\textwidth} }
+	\rowcolorhead
+	\headertitle{Requisito} &
+	\headertitle{\normalfont \textbf{Fonti}}	
+	\endfirsthead	
+	\endhead
+RF-1-O	&	UC1	\tabularnewline
+RF-2-O	&	UC1.1	\tabularnewline
+RF-3-O	&	UC2	\tabularnewline
+RF-4-O	&	UC2	\tabularnewline
+RF-4.1-O	&	UC2.1.1	\tabularnewline
+RF-4.2-O	&	UC2.1.2	\tabularnewline
+RF-4.3-O	&	UC2.1.3	\tabularnewline
+RF-5-O	&	UC2.3	\tabularnewline
+RF-6-O	&	UC3	\tabularnewline
+RF-6.1-O	&	UC3.1	\tabularnewline
+RF-6.1.1-O	&	UC3.1.1	\tabularnewline
+RF-6.1.2-O	&	UC3.1.2	\tabularnewline
+RF-6.1.3-O	&	UC3.1.3	\tabularnewline
+RF-6.2-O	&	UC3.2	\tabularnewline
+RF-7-O	&	UC4	\tabularnewline
+RF-8-O	&	UC4.1	\tabularnewline
+RF-8.1-O	&	UC4.2	\tabularnewline
+RF-8.2-O	&	UC4.3	\tabularnewline
+RF-8.3-O	&	UC4.4	\tabularnewline
+RF-9-O	&	UC4.5	\tabularnewline
+RF-10-O	&	UC4.6	\tabularnewline
+RF-11-O	&	UC5	\tabularnewline
+RF-12-O	&	UC5	\tabularnewline
+RF-13-O	&	UC5	\tabularnewline
+RF-14-O	&	UC5	\tabularnewline
+RF-15-O	&	UC6	\tabularnewline
+RF-15.1-O	&		\tabularnewline
+RF-15.2-O	&	UC6	\tabularnewline
+RF-15.2.1-O	&	UC6	\tabularnewline
+RF-16-O	&	UC6.1	\tabularnewline
+RF-17-F	&	Capitolato	\tabularnewline
+RF-18-O	&	UC6.2	\tabularnewline
+RF-19-O	&	UC7	\tabularnewline
+RF-19.1-O	&	UC7.2	\tabularnewline
+RF-19.2-O	&	UC7.3	\tabularnewline
+RF-20-O	&	UC7.4	\tabularnewline
+RF-20.1-O	&	UC7.4.1	\tabularnewline
+RF-20.2-O	&	UC7.4.2	\tabularnewline
+RF-20.2.1-O	&	UC7.4.3	\tabularnewline
+RF-20.2.2-O	&	UC7.4.4	\tabularnewline
+RF-20.2.3-O	&	UC7.4.5	\tabularnewline
+RF-20.3-O	&	UC7.4.6	\tabularnewline
+RF-20-O	&	UC8.1	\tabularnewline
+RF-22-O	&	UC8.2	\tabularnewline
+RF-23-O	&	UC8.3	\tabularnewline
+RF-23.1-O	&	UC8.3	\tabularnewline
+RF-24-O	&	UC9	\tabularnewline
+RF-25-O	&	UC10	\tabularnewline
+RF-25.1-O	&	UC10	\tabularnewline
+RF-26-O	&	UC11.1	\tabularnewline
+RF-26.1-O	&	UC11.1, \textsc{Verbale Esterno 1}	\tabularnewline
+RF-27-O	&	UC11.2	\tabularnewline
+RF-27.1-O	&	UC11.2, \textsc{Verbale Esterno 1}	\tabularnewline
+RF-28-O	&	UC11.3	\tabularnewline
+RF-29-O	&	UC11.5	\tabularnewline
+RF-30-O	&	UC11.4, \textsc{Verbale Esterno 1}	\tabularnewline
+RF-31-D	&	Capitolato	\tabularnewline
+RF-32-O	&	Capitolato	\tabularnewline
+RF-33-F	&	Capitolato	\tabularnewline
+RF-34-O	&	UC12	\tabularnewline
+RF-35-O	&	UC12	\tabularnewline
+RF-36-O	&	UC13	\tabularnewline
+RF-37-O	&	UC14	\tabularnewline
+RF-37.1-O	&	UC14.1	\tabularnewline
+RF-37.2-O	&	UC14.2	\tabularnewline
+RQ-1-O	&	Capitolato	\tabularnewline
+RQ-2-O	&	Capitolato	\tabularnewline
+RQ-3-O	&	Capitolato	\tabularnewline
+RQ-4-O	&	Capitolato	\tabularnewline
+RQ-5-O	&	Capitolato	\tabularnewline
+RQ-6-O	&	Capitolato	\tabularnewline
+RQ-7-O	&	Capitolato	\tabularnewline
+RQ-8-O	&	Capitolato	\tabularnewline
+RQ-9-O	&	Capitolato	\tabularnewline
+RQ-10-F	&	Capitolato	\tabularnewline
+RV-1-O	&	Capitolato	\tabularnewline
+RV-2-O	&	Capitolato	\tabularnewline
+RV-3-F	&	Capitolato	\tabularnewline
+RV-4-O	&	Decisione interna	\tabularnewline
+RV-5-O	&	Capitolato	\tabularnewline
+RV-6-O	&	Capitolato	\tabularnewline
+RV-7-O	&	Capitolato	\tabularnewline
+RV-8-O	&	Capitolato	\tabularnewline
+RV-9-O	&	Capitolato	\tabularnewline
+RV-10-F	&	Capitolato	\tabularnewline
+RV-11-D	&	Capitolato	\tabularnewline
+RV-12-D	&	Capitolato	\tabularnewline
+RV-13-O	&	Capitolato	\tabularnewline
+RV-14-O	&	Capitolato	\tabularnewline
+RV-15-O	&	Capitolato	\tabularnewline
+RV-16-D	&	Capitolato	\tabularnewline
+RV-17-O	&	Capitolato	\tabularnewline
+RV-18-O	&	Capitolato	\tabularnewline
+RV-19-O	&	Decisione interna	\tabularnewline
+RV-20-O	&	Decisione interna	\tabularnewline
+RV-21-O	&	Decisione interna	\tabularnewline
+RV-22-O	&	Decisione interna	\tabularnewline
+RV-23-F	&	Decisione interna	\tabularnewline
+RV-24-F	&	Decisione interna	\tabularnewline
+RV-25-O	&	Decisione interna	\tabularnewline
+RV-26-O	&	Decisione interna	\tabularnewline
+RV-27-O	&	Decisione interna	\tabularnewline
+RV-28-O	&	Decisione interna	\tabularnewline
+RV-29-O	&	Capitolato	\tabularnewline
+RV-30-O	&	Capitolato	\tabularnewline
+RV-31-O	&	Capitolato	\tabularnewline
+RV-32-O	&	Decisione interna	\tabularnewline
+RV-33-O	&	Decisione interna	\tabularnewline
+RV-34-F	&	Decisione interna	\tabularnewline
+RV-35-O	&	Decisione interna	\tabularnewline
+\caption{Tabella Requisiti - Fonti\label{ Tabella Requisiti - Fonti}}
+\end{longtable}.
+\subsubsection{Riepilogo requisiti}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{ 
+		>{\centering}p{0.15\textwidth} 
+		>{\centering}p{0.15\textwidth}
+		>{\centering}p{0.15\textwidth}
+		>{\centering}p{0.15\textwidth}
+		>{\centering}p{0.1\textwidth} }
+	\rowcolorhead
+	\headertitle{Tipologia} &
+	\centering \headertitle{Obbligatorio} &	
+	\centering \headertitle{Facoltativo} &	
+	\centering \headertitle{Desiderabile} &	
+	\headertitle{\normalfont \textbf{Totale}}	
+	\endfirsthead	
+	\endhead
+Funzionale & 62 & 2 & 1 & 65\tabularnewline
+Di Qualità & 9 & 1 & 0 & 10\tabularnewline
+Di Vincolo & 27 & 5 & 3 & 35\tabularnewline
+\caption{Tabella Riepilogo dei Requisiti\label{ Tabella Riepilogo dei Requisiti}}
+\end{longtable}.
