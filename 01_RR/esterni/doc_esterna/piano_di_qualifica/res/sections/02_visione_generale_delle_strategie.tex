@@ -67,22 +67,22 @@ Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e 
 
         04 & Manutenzione e comprensione del codice & Il codice deve essere quanto più comprensibile e mantenibile & \textbf{CBO}: Coupling Between Objects \newline \textbf{DEP}: Depth of hierarchies \newline \textbf{LEV}: Level of nesting \newline \textbf{PAR}: Parametri per metodo \newline \textbf{ATT}: Attributi per classe \newline \textbf{MET}: Metodi per classe \newline\textbf{RCC}: Rapporto Codice Commenti \newline\textbf{{CCL}}: Complessità Ciclomatica \tabularnewline
 
-        05 & Copertura del codice & Il codice dovrà essere testato in ogni sua parte per garantire le funzionalità previste dai requisiti & \textbf{CC}: Code Coverage \tabularnewline
+        05 & Copertura del codice & Il codice dovrà essere testato per buona parte per garantire le funzionalità previste dai requisiti &
+        	\textbf{CC}: Code Coverage \newline
+        	\textbf{PST}: Percentuale Superamento Test \tabularnewline
 
-        06 & Superamento test & La Percentuale di superamento dei test dovrà essere $\geq 80$ del totale & \textbf{PST}: Percentuale Superamento Test \tabularnewline
+        06 & Conformità & Il prodotto dovrà essere conforme ai requisiti, implementando le funzionalità richieste & \textbf{CS}: Completezza del Software \tabularnewline
 
-        07 & Conformità & Il prodotto dovrà essere conforme ai requisiti, implementando le funzionalità richieste & \textbf{CS}: Completezza del Software \tabularnewline
+        07 & Robustezza & Il prodotto dovrà far fronte a situazioni anomale gestendole senza arrestare la sua esecuzione & \textbf{A}: Affidabilità del software \tabularnewline
 
-        08 & Robustezza & Il prodotto dovrà far fronte a situazioni anomale gestendole senza arrestare la sua esecuzione & \textbf{A}: Affidabilità del software \tabularnewline
-
-        09 & Usabilità & Il prodotto dovrà essere il più semplice possibile da utilizzare & \textbf{C}: numero di tocchi/Click necessari \newline \textbf{S}: numero di Secondi necessari\tabularnewline
+        08 & Usabilità & Il prodotto dovrà essere il più semplice possibile da utilizzare & \textbf{C}: numero di tocchi/Click necessari \newline \textbf{S}: numero di Secondi necessari\tabularnewline
         \caption{Tabella Obiettivi}
     \end{longtable}
 
 
-
+\pagebreak
 \subsection{Metriche}
-Per raggiungere gli obiettivi di qualità è necessario che il processo di verifica produca dei risultati quantificabili, così da poterli confrontare con gli obiettivi fissati a priori. Per questo vengono prefissate delle metriche e dei valori di sufficienza minimi necessari, i quali serviranno a controllare che i livelli qualitativi di processo e di prodotto siano in linea con gli obiettivi prefissati.\\La seguente tabella riporta le metriche utilizzate, le rispettive soglie di valori preferibili e accetabili e i relativi obiettivi, così da poter monitorare e controllare gli obiettivi raggiunti e gli eventuali progressi.
+Per raggiungere gli obiettivi di qualità è necessario che il processo di verifica produca dei risultati quantificabili, così da poterli confrontare con gli obiettivi fissati a priori. Per questo vengono prefissate delle metriche e dei valori di sufficienza minimi necessari, i quali serviranno a controllare che i livelli qualitativi di processo e di prodotto siano in linea con gli obiettivi prefissati.\\La seguente tabella riporta le metriche utilizzate, le rispettive soglie di valori preferibili e accettabili e i relativi obiettivi, così da poter monitorare e controllare gli obiettivi raggiunti e gli eventuali progressi.
 
 %sistemare
 \renewcommand{\arraystretch}{1.5}
@@ -103,20 +103,24 @@ Per raggiungere gli obiettivi di qualità è necessario che il processo di verif
 	\endfirsthead	
     \endhead
 
+			SRI & Scarto Riunioni Interne & 0 & $-90 \leq SRI \leq 90$ & 01 \\
+			
+			SRE & Scarto Riunioni Esterne &  0 & $-90 \leq SRE \leq 90$ & 01 \\
+			
             REI & Rapporto riunioni Esterne e Interne & $0.4 \leq REI \leq 0.5$ & $0.3 \leq REI \leq 0.5$ & 01\\
 
             RRL & Rapporto tempo Riunioni e Lavoro individuale & $0.08 \leq RRL \leq 0.12$ & $0.08 \leq RRL \leq 0.4$ & 01 \\
 
-            RTEI & Rapporto Tempo Effettivo totale e Individuale & $0.17$ & $0.15 \leq RTEI \leq 0.19$ & 01 \\
-
-            DLE & Distribuzione Lavoro Effettivo & $0 \leq DLE \leq 600$ & $0 \leq DLE \leq 900$ & 01 \\
-
+            RTEI & Rapporto Tempo Effettivo totale e Individuale & $0.17$ & $0.1 \leq RTEI \leq 0.2$ & 01 \\
+            
             RTPI & Rapporto Tempo Preventivato totale e Individuale & $0.17$ & $0.15 \leq RTPI \leq 0.19$ & 01 \\
 
-            DLP & Distribuzione Lavoro Preventivato & $0 \leq DLP \leq 600$ & $0 \leq DLP \leq 900$ & 01 \\
-
             DTEP & Differenza Tempo Effettivo e Preventivato & $0$ & $-600 \leq DTEP \leq 600$ & 01 \\
-
+            
+            DLP & Distribuzione Lavoro Preventivato & $0 \leq DLP \leq 600$ & $0 \leq DLP \leq 900$ & 01 \\
+            
+            DLE & Distribuzione Lavoro Effettivo & $0 \leq DLE \leq 600$ & $0 \leq DLE \leq 900$ & 01 \\
+            
             PDTT & Percentuale Discostamento Totale (in Tempo) & $1$ & $PDTT \geq 0.4$ & 01 \\
 
             PDTR & Percentuale Discostamento Totale (in Ritardo) & $0$ & $PDTR \leq 0.3$ & 01 \\   
@@ -134,10 +138,6 @@ Per raggiungere gli obiettivi di qualità è necessario che il processo di verif
             PDDVR & Percentuale Discostamento DoneVerifying (in Ritardo) & $0$ & $PDDVR \leq 0.3$ & 01 \\   
             
             PDDVA & Percentuale Discostamento DoneVerifying (in Anticipo) & $0$ & $PDDVA \leq 0.3$ & 01 \\
-
-            SRI & Scarto Riunioni Interne & 0 & $-90 \leq SRI \leq 90$ & 01 \\
-
-            SRE & Scarto Riunioni Esterne &  0 & $-90 \leq SRE \leq 90$ & 01 \\
 
             IG & Indice di Gulpease & $70 \leq IG \leq 100$ & $50 \leq IG \leq 100$ & 02 \\
 
@@ -157,19 +157,19 @@ Per raggiungere gli obiettivi di qualità è necessario che il processo di verif
 
             RCC & Rapporto Codice Commenti & $RCC \geq 0.4$ & $RCC \geq 0.2$  & 04 \\
 
-            CCL & Complessità CicLomatica & $CCL \leq 10 $ & $CCL \leq 20 $& 04 \\
+            CCL & Complessità Ciclomatica & $CCL \leq 10 $ & $CCL \leq 20 $& 04 \\
 
             CC & Code Coverage & $CC\leq 70\%$ & $CC\leq 50\%$ & 05 \\
 
-            PST & Percentuale Superamento Test & 100\% & 85\% & 06 \\
+            PST & Percentuale Superamento Test & 100\% & 85\% & 05 \\
 
-            CS & Completezza del Software & $CS=1$ & $CS=1$ & 07 \\
+            CS & Completezza del Software & $CS=1$ & $CS=1$ & 06 \\
 
-            A & Affidabilità del software & $A=0$ & $A < 0.15$ & 08 \\
+            A & Affidabilità del software & $A=0$ & $A < 0.15$ & 07 \\
 
-            C & Numero di tocchi/Click necessari & $C<4$ & $C<6$& 09 \\
+            C & Numero di tocchi/Click necessari & $C<4$ & $C<6$& 08 \\
 
-            S & Numero di Secondi necessari & $S<15$ & $S<40$ & 09 \\
+            S & Numero di Secondi necessari & $S<15$ & $S<40$ & 08 \\
 
            
            \caption{Tabella delle Metriche}

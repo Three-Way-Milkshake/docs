@@ -5,6 +5,14 @@ Le soglie di accettabilità sono riportate nella tabella 2.4.1 "Tabella delle Me
 \subsection{Metriche per i processi}
 Per tenere traccia delle metriche per i processi, è stato utilizzato un foglo Google Sheet, così che ogni membro del gruppo possa inserire i dati relativi al proprio lavoro e al lavoro colletivo nelle apposite tabelle. Inoltre esso permette di calcolare in automatico i valori e visualizzarli sotto forma di grafico.
 
+\subsubsection{Scarto Riunioni Interne (SRI)}
+Questa metrica mostra la differenza fra il tempo preventivato e il tempo effettivo delle riunioni interne in minuti. In questo modo si può vedere se la pianificazione è corretta, oppure se serve un controllo.
+\[\frac{\sum_{i=1}^{num\_riunioni\_interne}min\_durata\_preventivata_i-min\_durata\_effettiva_i}{num\_riunioni\_interne}\] 
+con $i = {numero\_della\_riunione\_interna}$.
+\subsubsection{Scarto Riunioni Esterne (SRE)}
+Con questo calcolo si può trovare la differenza tra il tempo preventivato e il tempo effettivo delle riunioni esterne in minuti, così da controllare se la pianificazione è corretta.
+\[\frac{\sum_{i=1}^{num\_riunioni\_esterne}min\_durata\_preventivata_i-min\_durata\_effettiva_i}{num\_riunioni\_esterne}\]
+con $i = {numero\_della\_riunione\_esterna}$.
 \subsubsection{Rapporto riunioni Esterne e Interne (REI)}
 Si tratta del rapporto tra il tempo totale impiegato nelle riunioni esterne e quello nelle riunioni interne. Serve per raggiungere un equilibrio negli incontri del gruppo.
 \[\frac{\sum_{i=1}^{num\_riunioni\_esterne} durata_i}{\sum_{i=1}^{num\_riunioni\_interne} durata_i}\]
@@ -24,20 +32,14 @@ Indica il rapporto tra i minuti di lavoro effettivamente spesi da ogni membro e 
 \[tot\_ore\_effettive\_persona / tot\_ore
 \]
 Questa metrica viene calcolata per ogni membro del gruppo.
-\subsubsection{Distribuzione Lavoro Effettivo (DLE)}
-Mostra quanto è distribuito in modo uniforme il lavoro effettuato, così da poter ripianificare in caso l'organizzazione dei compiti.
-\[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
-
-Se il risultato tende a:
-\begin{itemize}
-    \item 0: significa che il lavoro è uniformemente distribuito;
-    \item $+\infty$: il lavoro è distribuito in modo poco uniforme.
-\end{itemize}
-
 \subsubsection{Rapporto Tempo Preventivato totale e Individuale (RTPI)}
 Indica il rapporto tra i minuti di lavoro preventivato per svolgere i propri compiti da parte di ogni membro e il tempo di lavoro totale preventivato dal gruppo. 
 \[tot\_min\_preventivati\_persona / tot\_min\_preventivato\]
 Questa metrica deve essere calcolata per ogni membro del gruppo.
+\subsubsection{Differenza Tempo Effettivo e Preventivato (DTEP)}
+Questa metrica mostra la discrepanza tra il tempo effettivo impiegato allo svolgimento dei compiti e quello preventivato precedentemente, per ogni membro del gruppo.
+\[tempo\_effettivo_i - tempo\_preventivato_i\]
+con $i \in {componenti\_del\_gruppo}$
 \subsubsection{Distribuzione Lavoro Preventivato (DLP)}
 Mostra se la pianificazione del lavoro preventivata è bilanciata, ovverosia distribuita in modo equo all'interno del gruppo.
 \[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
@@ -47,13 +49,19 @@ $media\_lavoro$ = media lavoro preventivato;\\
 $n\_componenti$ = numero totale dei componenti (6).
 \\Se il risultato tende a:
 \begin{itemize}
-    \item 0: significa che il lavoro è uniformemente distribuito;
-    \item $+\infty$: il lavoro è distribuito in modo poco uniforme.
+	\item 0: significa che il lavoro è uniformemente distribuito;
+	\item $+\infty$: il lavoro è distribuito in modo poco uniforme.
 \end{itemize}
-\subsubsection{Differenza Tempo Effettivo e Preventivato (DTEP)}
-Questa metrica mostra la discrepanza tra il tempo effettivo impiegato allo svolgimento dei compiti e quello preventivato precedentemente, per ogni membro del gruppo.
-\[tempo\_effettivo_i - tempo\_preventivato_i\]
-con $i \in {componenti\_del\_gruppo}$
+\subsubsection{Distribuzione Lavoro Effettivo (DLE)}
+Mostra quanto è distribuito in modo uniforme il lavoro effettuato, così da poter ripianificare in caso l'organizzazione dei compiti.
+\[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
+
+Se il risultato tende a:
+\begin{itemize}
+	\item 0: significa che il lavoro è uniformemente distribuito;
+	\item $+\infty$: il lavoro è distribuito in modo poco uniforme.
+\end{itemize}
+
 \subsubsection{Percentuale Discostamento Totale (in Tempo) (PDTT)}
 Indica la percentuale dei compiti completati in tempo rispetto al numero totale dei compiti. Per completati si intendono le task\textsubscript{G} che hanno completato il loro ciclo, ovverosia che sono state verificate esattamente alla data di scadenza prefissata.
 \[\frac{n\_compiti\_risolti\_intempo}{tot\_num\_compiti}\]
@@ -83,14 +91,6 @@ Indica la percentuale dei compiti verificati, rispetto al numero totale dei comp
 \subsubsection{Percentuale Discostamento DoneVerifying (in Anticipo) (PDDVA)}
 Indica la percentuale dei compiti verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo le operazioni di verifica concluse prima della data di scadenza prefissata.
 \[\frac{n\_compiti\_risoltiDV\_inanticipo}{tot\_num\_compiti}\]
-\subsubsection{Scarto Riunioni Interne (SRI)}
-Questa metrica mostra la differenza fra il tempo preventivato e il tempo effettivo delle riunioni interne in minuti. In questo modo si può vedere se la pianificazione è corretta, oppure se serve un controllo.
-\[min\_durata\_preventivata_i-min\_durata\_effettiva_i\] 
-con $i = {numero\_della\_riunione\_interna}$.
-\subsubsection{Scarto Riunioni Esterne (SRE)}
-Con questo calcolo si può trovare la differenza tra il tempo preventivato e il tempo effettivo delle riunioni esterne in minuti, così da controllare se la pianificazione è corretta.
-\[min\_durata\_preventivata_i-min\_durata\_effettiva_i\]
-con $i = {numero\_della\_riunione\_esterna}$.
 \subsection{Metriche per la documentazione}
 
 \subsubsection{Indice di Gulpease (IG)}
@@ -151,7 +151,7 @@ La seguente metrica indica la percentuale di test superati correttamente.
 
 \subsubsection{Completezza del Software(CS)}
 Viene specificata la completezza del software. Questo rapporto serve per capire a che percentuale di completamento del software ci si trova. 
-\[C = \frac{funzionalita\_implementate }{funzionalita\_totali}A\]
+\[C = \frac{funzionalita\_implementate }{funzionalita\_totali}\]
 Se il valore calcolato è:
 \begin{itemize}
     \item 1, allora sono state implementate tutte le funzionalità;
