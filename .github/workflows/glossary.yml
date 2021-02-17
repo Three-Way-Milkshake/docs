@@ -43,3 +43,4 @@ jobs:
           CSEC: ${{ secrets.CSEC }}
           RTOKEN: ${{ secrets.RTOKEN }}
           ROOT_FLD: ${{ secrets.ROOT_FOLDER_DOCS }}
+          VERBALI_FLD: ${{ secrets.VERBALI_FLD }}

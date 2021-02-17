@@ -38,13 +38,13 @@ echo "Uploading pdf files to gdrive..."
 # uploads docs
 find . -name '*.pdf' | grep -v verbale | while read file
 do
-	gupload $file
+	gupload -o $file
 done
 
 # uploads verbali
 find . -name '*.pdf' | grep verbale | while read file
 do
-	gupload $file verbali
+	gupload -o $file -r $VERBALI_FLD
 done
 
 if [ $? -eq 0 ]
