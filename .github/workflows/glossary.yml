@@ -4,13 +4,7 @@ name: Glossary builder and updater
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-<<<<<<< HEAD
-    branches: [ feature/* ]
-  pull_request:
-    branches: [ main, develop ]
-=======
     branches: [ main, develop, feature/* ]
->>>>>>> develop
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,11 +21,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: install latex
-<<<<<<< HEAD
-        run: sudo apt install texlive texlive-latex-extra texlive-lang-italian texlive-font-utils
-=======
         run: sudo apt install texlive texlive-latex-extra texlive-lang-italian texlive-font-utils texlive-pictures
->>>>>>> develop
         #run: sudo apt install --fix-missing ; sudo apt install texlive xzdec ; sudo apt install --fix-missing ; tlmgr init-usertree ; tlmgr update --self ; tlmgr install glossaries ; echo 0
 
       - name: Execute the glossary script
@@ -43,8 +33,6 @@ jobs:
       - name: if something changed, commit and push
         run: |
           if [ `git status | grep -c "working tree clean"` -eq 0 ] ; then git add . ; git commit -m 'automatic update by glossary_builder automation' ; git fetch ; git push ; fi
-<<<<<<< HEAD
-=======
           
       - name: upload pdf artifacts to internal drive folder
         run: ./.github/workflows/artifacts_uploader.sh -i -c
@@ -54,4 +42,3 @@ jobs:
           RTOKEN: ${{ secrets.RTOKEN }}
           ROOT_FLD: ${{ secrets.ROOT_FOLDER_DOCS }}
           VERBALI_FLD: ${{ secrets.VERBALI_FLD }}
->>>>>>> develop
