@@ -16,7 +16,7 @@ then
 	if [ $2 == "-c" ]
 	then
     	echo "configuring drive env with secrets..."
-		cp drive_conf.template cnf
+		#cp drive_conf.template cnf
 		#sed -i 's/CID/'"${CID}"'/g' cnf
         #sed -i 's/CSEC/'"${CSEC}"'/g' cnf
         #sed -i 's/RTOKEN/'"${RTOKEN}"'/g' cnf
@@ -35,9 +35,16 @@ cd ../../
 source ~/.profile
 
 echo "Uploading pdf files to gdrive..."
-find . -name '*.pdf' | while read file
+# uploads docs
+find . -name '*.pdf' | grep -v verbale | while read file
 do
 	gupload $file
+done
+
+# uploads verbali
+find . -name '*.pdf' | grep verbale | while read file
+do
+	gupload $file verbali
 done
 
 if [ $? -eq 0 ]
