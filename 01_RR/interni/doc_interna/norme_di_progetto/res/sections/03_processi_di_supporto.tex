@@ -117,14 +117,14 @@
     Gli acronimi ed i termini di glossario vanno definiti ed inseriti in ordine alfabetico all'interno della pagina web "Glossario" di GitHub, istruzioni precise su come utilizzare correttamente questo documento si trovano nella \textsc{wiki how-to glossario}. Una volta che una voce è stata aggiunta, la si può usare liberamente in qualsiasi sezione tramite il suo nome, nel caso di termine nel glossario, o abbreviazione nel caso di acronimo.
 
     \pparagraph{Funzionamento}
-    Ad ogni azione di git push\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
+    Ad ogni azione di git\textsubscript{G} push\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
     \begin{itemize}
         \item controlla tutti i documenti che hanno almeno un termine definito nella pagina "Glossario" di GitHub;
         \item sostituisce tutte le occorrenze delle voci di glossario e acronimi in ogni sezione con i rispettivi comandi \LaTeX{}\ (pedice A o G);
         \item se ci sono stati cambiamenti, ricompila il documento per ottenere un pdf aggiornato;
-        \item se ci sono stati dei documenti aggiornati, effettua commit\textsubscript{G} e git push\textsubscript{G}.
+        \item se ci sono stati dei documenti aggiornati, effettua commit\textsubscript{G} e git\textsubscript{G} push\textsubscript{G}.
     \end{itemize}
-    Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una git pull\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una git push\textsubscript{G}, così da avere il documento aggiornato ed evitare problemi di conflitti e nel VCS\textsubscript{A}.
+    Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una git\textsubscript{G} pull\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una git\textsubscript{G} push\textsubscript{G}, così da avere il documento aggiornato ed evitare problemi di conflitti e nel VCS\textsubscript{A}.
     \subsubsection{Norme tipografiche}
         \pparagraph{Nomi di file e cartelle}
         \label{convezionenomifile}
@@ -194,7 +194,7 @@
     \subsubsection{Workflow di versionamento}
         Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di git\textsubscript{G} e GitHub si trovano nella wiki\textsubscript{G} \textsc{GIT, Github \& Jira}
         \pparagraph{Pull requests}
-            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una git pull\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
+            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una git\textsubscript{G} pull\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
 
     \subsubsection{Integrazione con Jira}
     \label{jiraintegration}
