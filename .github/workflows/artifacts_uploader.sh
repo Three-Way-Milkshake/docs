@@ -34,18 +34,38 @@ cd ../../
 
 source ~/.profile
 
-echo "Uploading pdf files to gdrive..."
-# uploads docs
-find . -name '*.pdf' | grep -v verbale | while read file
-do
-	gupload -o $file
-done
+branch=`git status  | grep -Po '(?<=On branch ).*'`
 
-# uploads verbali
-find . -name '*.pdf' | grep verbale | while read file
-do
-	gupload -o $file -r $VERBALI_FLD
-done
+echo "i'm in $branch"
+
+if [ $branch == "develop" ]
+then
+    echo "upload all"
+    echo "Uploading pdf files to gdrive..."
+    # uploads docs
+    find . -name '*.pdf' | grep -v verbale | while read file
+    do
+	    gupload -o $file
+    done
+
+    # uploads verbali
+    find . -name '*.pdf' | grep verbale | while read file
+    do
+	    gupload -o $file -r $VERBALI_FLD
+    done
+
+else
+    doc=`echo $branch | cut -f2 -d '/'`
+    file=`find . -name $doc.pdf`
+    
+    echo "upload $file"
+    if [ `echo $file | grep -c verbale` -gt 0 ]
+    then
+        gupload -o $file -r $VERBALI_FLD
+    else
+        gupload -o $file
+    fi   
+fi
 
 if [ $? -eq 0 ]
 then
