@@ -74,13 +74,16 @@ else
     doc=`echo $branch | cut -f2 -d '/'`
     file=`find . -name $doc.pdf`
     
-    echo "upload $file"
-    if [ `echo $file | grep -c verbale` -gt 0 ]
+    if [ ! -z $file ] #false if in branch that is not develop nor of an existing document
     then
-        gupload -o $file -r $VERBALI_FLD
-    else
-        gupload -o $file
-    fi   
+        echo "upload $file"
+        if [ `echo $file | grep -c verbale` -gt 0 ]
+        then
+            gupload -o $file -r $VERBALI_FLD
+        else
+            gupload -o $file
+        fi
+    fi
 fi
 
 if [ $? -eq 0 ]
