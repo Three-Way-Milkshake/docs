@@ -1,0 +1,12 @@
+ID,Nome,Data d'inizio,Data di fine,Durata,Completamento,Costo,Coordinatore,Predecessori,Numero dello schema,Risorse,Assignments,Colore attività,Link Web,Note
+11,Visione dei seminari,12/11/20,28/11/20,17,0,0,,,1,,,,,
+13,Setup strumenti,23/11/20,01/12/20,9,0,0,,,2,,,"#99ccff",,
+22,"  Strumenti meeting e calendario",23/11/20,24/11/20,2,0,0,,,2.1,,,,,
+25,"  Tracciamento e versionamento",24/11/20,26/11/20,3,0,0,,,2.2,,,,,
+23,"  Configurazione documenti",25/11/20,01/12/20,7,0,0,,,2.3,,,,,
+29,Studio di Fattibilità,28/11/20,13/12/20,16,0,0,,,3,,,"#99ccff",,
+31,"  Analisi capitolati",28/11/20,13/12/20,16,0,0,,,3.1,,,,,
+32,"  Scelta capitolato",06/12/20,11/12/20,6,0,0,,,3.2,,,,,
+33,Piano di Progetto,09/12/20,13/12/20,5,0,0,,,4,,,"#99ccff",,
+35,"  Analisi dei rischi",09/12/20,11/12/20,3,0,0,,,4.1,,,,,
+37,"  Abbozzo fasi",12/12/20,13/12/20,2,0,0,,,4.2,,,,,
