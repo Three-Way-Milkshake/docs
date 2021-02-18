@@ -34,18 +34,57 @@ cd ../../
 
 source ~/.profile
 
-echo "Uploading pdf files to gdrive..."
-# uploads docs
-find . -name '*.pdf' | grep -v verbale | while read file
-do
-	gupload -o $file
-done
+branch=`git status  | grep -Po '(?<=On branch ).*'`
 
-# uploads verbali
-find . -name '*.pdf' | grep verbale | while read file
-do
-	gupload -o $file -r $VERBALI_FLD
-done
+echo "i'm in $branch"
+
+if [ $branch == "develop" ]
+then
+    echo "upload all"
+    echo "Uploading pdf files to gdrive..."
+    # uploads docs
+    find . -name '*.pdf' | grep -v verbale | while read file
+    do
+        doc=`echo $file | grep -Po '\w*(?=\.pdf)'` ; git branch -r | grep -q $doc
+        if [ `echo $?` -eq 0 ]
+        then 
+            echo "DO NOT push $doc"
+        else 
+            echo "pushing $doc"
+            gupload -o $file
+        fi
+	    
+    done
+
+    # uploads verbali
+    find . -name '*.pdf' | grep verbale | while read file
+    do
+        doc=`echo $file | grep -Po '\w*(?=\.pdf)'` ; git branch -r | grep -q $doc
+        if [ `echo $?` -eq 0 ]
+        then 
+            echo "DO NOT push $doc"
+        else 
+            echo "pushing $doc"
+            gupload -o $file -r $VERBALI_FLD
+        fi
+
+    done
+
+else
+    doc=`echo $branch | cut -f2 -d '/'`
+    file=`find . -name $doc.pdf`
+    
+    if [ ! -z $file ] #false if in branch that is not develop nor of an existing document
+    then
+        echo "upload $file"
+        if [ `echo $file | grep -c verbale` -gt 0 ]
+        then
+            gupload -o $file -r $VERBALI_FLD
+        else
+            gupload -o $file
+        fi
+    fi
+fi
 
 if [ $? -eq 0 ]
 then
