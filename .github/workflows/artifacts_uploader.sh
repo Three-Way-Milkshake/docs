@@ -45,13 +45,29 @@ then
     # uploads docs
     find . -name '*.pdf' | grep -v verbale | while read file
     do
-	    gupload -o $file
+        doc=`echo $file | grep -Po '\w*(?=\.pdf)'` ; git branch -r | grep -q $doc
+        if [ `echo $?` -eq 0 ]
+        then 
+            echo "DO NOT push $doc"
+        else 
+            echo "pushing $doc"
+            gupload -o $file
+        fi
+	    
     done
 
     # uploads verbali
     find . -name '*.pdf' | grep verbale | while read file
     do
-	    gupload -o $file -r $VERBALI_FLD
+        doc=`echo $file | grep -Po '\w*(?=\.pdf)'` ; git branch -r | grep -q $doc
+        if [ `echo $?` -eq 0 ]
+        then 
+            echo "DO NOT push $doc"
+        else 
+            echo "pushing $doc"
+            gupload -o $file -r $VERBALI_FLD
+        fi
+
     done
 
 else
