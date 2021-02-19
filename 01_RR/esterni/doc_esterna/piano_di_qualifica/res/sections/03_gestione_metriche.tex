@@ -1,13 +1,13 @@
 \section{Gestione amministrativa}
 \subsection{Misure e metriche in dettaglio}
-In questa sezione vengono descritte in dettaglio le varie metriche utilizzate, con una breve descrizione e la modalità di calcolo. 
+In questa sezione vengono descritte nel dettaglio le varie metriche utilizzate, accompagnate dalle relative modalità di calcolo.
 Le soglie di accettabilità sono riportate nella tabella 2.4.1 "Tabella delle Metriche", valori inferiori ai limiti accettabili sono considerati negativi e il prodotto o processo dovrà essere sottoposto ad ulteriori indagini e verifiche.
 \subsection{Metriche per i processi}
-Per tenere traccia delle metriche per i processi, è stato utilizzato un foglo Google Sheet, così che ogni membro del gruppo possa inserire i dati relativi al proprio lavoro e al lavoro colletivo nelle apposite tabelle. Inoltre esso permette di calcolare in automatico i valori e visualizzarli sotto forma di grafico.
+Per tenere traccia delle metriche per i processi, è stato utilizzato un foglio Google Sheet, così che ogni membro del gruppo possa inserire i dati relativi al lavoro proprio e collettivo nelle apposite tabelle. Inoltre esso permette di calcolare in automatico i valori e visualizzarli sotto forma di grafico.
 
 \subsubsection{Scarto Riunioni Interne (SRI)}
 Questa metrica mostra la differenza fra il tempo preventivato e il tempo effettivo delle riunioni interne in minuti. In questo modo si può vedere se la pianificazione è corretta, oppure se serve un controllo.
-\[\frac{\sum_{i=1}^{num\_riunioni\_interne}min\_durata\_preventivata_i-min\_durata\_effettiva_i}{num\_riunioni\_interne}\] 
+\[\frac{\sum_{i=1}^{num\_riunioni\_interne}min\_durata\_preventivata_i-min\_durata\_effettiva_i}{num\_riunioni\_interne}\]
 con $i = {numero\_della\_riunione\_interna}$.
 \subsubsection{Scarto Riunioni Esterne (SRE)}
 Con questo calcolo si può trovare la differenza tra il tempo preventivato e il tempo effettivo delle riunioni esterne in minuti, così da controllare se la pianificazione è corretta.
@@ -24,16 +24,16 @@ Se il valore calcolato tende a:
     \item $+\infty$: il tempo impiegato nelle riunioni esterne è molto superiore rispetto a quello delle riunioni interne.
 \end{itemize}
 \subsubsection{Rapporto tempo Riunioni e Lavoro individuale (RRL)}
-Indica il rapporto tra le ore dedicate alle riunioni, quindi al lavoro colletivo, e quelle dedicate al lavoro individuale. 
+Indica il rapporto tra le ore dedicate alle riunioni, quindi al lavoro collettivo, e quelle dedicate al lavoro individuale.
 \[\dfrac{\sum_{i=1}^{num\_riunioni\_totali} durataRiunioni_i}{\sum_{i=1}^{num\_persone\_gruppo} durataLavoro_i}\]
 Offre una visione sulla distribuzione del lavoro collettivo e individuale.
 \subsubsection{Rapporto Tempo Effettivo totale e Individuale (RTEI)}
-Indica il rapporto tra i minuti di lavoro effettivamente spesi da ogni membro e il tempo di lavoro totale del gruppo. 
+Indica il rapporto tra i minuti di lavoro effettivamente spesi da ogni membro e il tempo di lavoro totale del gruppo.
 \[tot\_ore\_effettive\_persona / tot\_ore
 \]
 Questa metrica viene calcolata per ogni membro del gruppo.
 \subsubsection{Rapporto Tempo Preventivato totale e Individuale (RTPI)}
-Indica il rapporto tra i minuti di lavoro preventivato per svolgere i propri compiti da parte di ogni membro e il tempo di lavoro totale preventivato dal gruppo. 
+Indica il rapporto tra i minuti di lavoro preventivato per svolgere i propri compiti da parte di ogni membro e il tempo di lavoro totale preventivato dal gruppo.
 \[tot\_min\_preventivati\_persona / tot\_min\_preventivato\]
 Questa metrica deve essere calcolata per ogni membro del gruppo.
 \subsubsection{Differenza Tempo Effettivo e Preventivato (DTEP)}
@@ -94,10 +94,10 @@ Indica la percentuale dei compiti verificati, rispetto al numero totale dei comp
 \subsection{Metriche per la documentazione}
 
 \subsubsection{Indice di Gulpease (IG)}
-Indica la leggibilità di un testo, tarato sulla lingua italiana. Differentemente da indici di lingua straniera, ha il vantaggio di controllare la lunghezza delle parole anzichè il numero di sillabe per parola, semplificandone il calcolo automatico. 
+Indica la leggibilità di un testo, tarato sulla lingua italiana. Differentemente da indici di lingua straniera, ha il vantaggio di controllare la lunghezza delle parole anziché il numero di sillabe per parola, semplificandone il calcolo automatico.
 Nel calcolo vengono ignorati frontespizio, registro modifiche, elenco figure, elenco tabelle, tabelle e figure; in modo da poter valutare appieno la leggibilità del contenuto testuale dei documenti.
 Il valore risultante è compreso tra 0 e 100, dove un indice più alto corrisponde ad un indice di leggibilità più semplice.
-Le soglie dei valori dell’indice di leggibilità di Gulpease sono:
+Le soglie dei valori dell'indice di leggibilità di Gulpease sono:
 \begin{itemize}
     \item inferiore a 80, il documento è difficile da leggere per chi ha la licenza elementare;
     \item inferiore a 60, il documento è difficile da leggere per chi possiede la licenza media;
@@ -108,7 +108,7 @@ Le soglie dei valori dell’indice di leggibilità di Gulpease sono:
 \]
 
 \subsection{Metriche per il software}
-Questa sezione contiene le metriche che si cercherà di applicare al software prodotto. A causa dell’inesperienza del gruppo, tali valori sono una dichiarazione di intenti per la qualità del software e potrebbero essere rivisti con le successive revisioni.
+Questa sezione contiene le metriche che si cercherà di applicare al software prodotto. A causa dell'inesperienza del gruppo, tali valori sono una dichiarazione di intenti per la qualità del software e potrebbero essere rivisti con le successive revisioni.
 
 \subsubsection{Percentuale Requisiti Obbligatori Soddisfatti (PROS)}
 Indica la quantità di requisiti obbligatori soddisfatti rispetto al totale, così da poterli monitorare in ogni istante.
@@ -138,8 +138,8 @@ Indica il rapporto tra le linee di codice e le linee di commento all'interno del
 \[\frac{linee\_commento}{linee\_codice}\]
 
 \subsubsection{Complessità Ciclomatica (CCL)}
-Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o classi di un programma. Questo valore rappresenta quanto complesso è un metodo tramite la misura del numero di cammini linearmente indipendenti che attraversano il grafo di flusso di controllo. Un valore troppo elevato porta ad un’eccessiva complessità del codice, che comporta difficile manutenzione. Al contrario, un valore ridotto potrebbe indicare una scarsa efficienza\textsubscript{G} dei metodi. Per calcolarlo si rappresenta il programma con un grafo dove i  nodi (\textbf{N}) sono i gruppi indivisibili di istruzioni e un arco (\textbf{E}) connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l’esecuzione delle istruzioni dell’altro nodo. Quindi il valore interessato è:
-\[E-N+2P\] 
+Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o classi di un programma. Questo valore rappresenta quanto complesso è un metodo tramite la misura del numero di cammini linearmente indipendenti che attraversano il grafo di flusso di controllo. Un valore troppo elevato porta ad un'eccessiva complessità del codice, che comporta difficile manutenzione. Al contrario, un valore ridotto potrebbe indicare una scarsa efficienza\textsubscript{G} dei metodi. Per calcolarlo si rappresenta il programma con un grafo dove i  nodi (\textbf{N}) sono i gruppi indivisibili di istruzioni e un arco (\textbf{E}) connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Quindi il valore interessato è:
+\[E-N+2P\]
 dove P è il numero di componenti connesse.
 \subsubsection{Code Coverage (CC)}
 Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi. Maggiore sarà la copertura del codice, maggiore sarà la possibilità che eventuali errori vengano risolti e individuati. Se il valore è troppo basso, significa che troppe istruzioni non sono state testate e quindi non si può sapere se esse funzionino effettivamente.
@@ -150,7 +150,7 @@ La seguente metrica indica la percentuale di test superati correttamente.
 \[\frac{n\_test\_superati}{n\_totale\_test\_implementati}\]
 
 \subsubsection{Completezza del Software(CS)}
-Viene specificata la completezza del software. Questo rapporto serve per capire a che percentuale di completamento del software ci si trova. 
+Viene specificata la completezza del software. Questo rapporto serve per capire a che percentuale di completamento del software ci si trova.
 \[C = \frac{funzionalita\_implementate }{funzionalita\_totali}\]
 Se il valore calcolato è:
 \begin{itemize}
