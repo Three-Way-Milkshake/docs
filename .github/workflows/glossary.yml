@@ -5,8 +5,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main, develop, feature/* ]
-  pull_request:
-    branches: [ main, develop ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -35,3 +33,12 @@ jobs:
       - name: if something changed, commit and push
         run: |
           if [ `git status | grep -c "working tree clean"` -eq 0 ] ; then git add . ; git commit -m 'automatic update by glossary_builder automation' ; git fetch ; git push ; fi
+          
+      - name: upload pdf artifacts to internal drive folder
+        run: ./.github/workflows/artifacts_uploader.sh -i -c
+        env:
+          CID: ${{ secrets.CID }}
+          CSEC: ${{ secrets.CSEC }}
+          RTOKEN: ${{ secrets.RTOKEN }}
+          ROOT_FLD: ${{ secrets.ROOT_FOLDER_DOCS }}
+          VERBALI_FLD: ${{ secrets.VERBALI_FLD }}
