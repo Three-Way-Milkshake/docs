@@ -22,13 +22,13 @@ jobs:
       
       - name: install latex
         run: |
-            branch=`git status | grep  -Po '(?<=On branch ).*' | grep -E '(VE-2|verbale)'`
+            branch=`git status | grep  -Po '(?<=On branch ).*' | grep -E '(VE-2|verbale)'` || true
             if [ -z "$branch" ] ; then sudo apt install texlive texlive-latex-extra texlive-lang-italian texlive-font-utils texlive-pictures ; fi
         #run: sudo apt install --fix-missing ; sudo apt install texlive xzdec ; sudo apt install --fix-missing ; tlmgr init-usertree ; tlmgr update --self ; tlmgr install glossaries ; echo 0
 
       - name: Execute the glossary script
         run: |
-            branch=`git status | grep  -Po '(?<=On branch ).*' | grep -E '(VE-2|verbale)'`
+            branch=`git status | grep  -Po '(?<=On branch ).*' | grep -E '(VE-2|verbale)'` || true
             if [ -z "$branch" ] ; then ./.github/workflows/glossary_builder.sh --install-custom ; fi
 
       - name: setup github identity
