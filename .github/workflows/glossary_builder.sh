@@ -2,6 +2,12 @@
 
 cd `dirname $0`
 
+if [ `git status | grep  -Po '(?<=On branch ).*' | grep -Eq '(VE-2|verbale)'` -eq 0 ]
+then
+    echo "verbale branch, no need to glossary"
+    exit 0
+fi
+
 git clone https://github.com/Three-Way-Milkshake/docs.wiki.git wiki
 cd wiki
 mapfile -t acr < <(more Glossario.md | grep "Glossario dei Termini" -B9999 | grep -E "\*\*.+\*\*" -o | cut -f3 -d '*' ) #save acronyms in acr array
