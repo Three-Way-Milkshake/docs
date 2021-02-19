@@ -1,0 +1,29 @@
+# Systemd service file - start
+[Unit]
+Description=google-drive-upload synchronisation service
+After=network.target
+
+[Service]
+Type=simple
+User=username
+Restart=on-abort
+RestartSec=3
+EnvironmentFile=/home/username/.google-drive-upload/google-drive-upload.info
+ExecStart=/usr/bin/env bash "${INSTALL_PATH}/${SYNC_COMMAND_NAME}" --foreground --command "${INSTALL_PATH}/${COMMAND_NAME}" /home/username/somefolder
+
+# Security
+PrivateTmp=true
+ProtectSystem=full
+NoNewPrivileges=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+PrivateDevices=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_NETLINK
+RestrictNamespaces=true
+RestrictRealtime=true
+SystemCallArchitectures=native
+
+[Install]
+WantedBy=multi-user.target
+# Systemd service file - end
