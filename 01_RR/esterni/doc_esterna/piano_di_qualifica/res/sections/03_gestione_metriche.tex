@@ -53,7 +53,7 @@ $n\_componenti$ = numero totale dei componenti (6).
 	\item $+\infty$: il lavoro è distribuito in modo poco uniforme.
 \end{itemize}
 \subsubsection{Distribuzione Lavoro Effettivo (DLE)}
-Mostra quanto è distribuito in modo uniforme il lavoro effettuato, così da poter ripianificare in caso l'organizzazione dei compiti.
+Mostra quanto sia distribuito in modo uniforme il lavoro effettuato, così da poter adattare le future organizzazioni dei compiti.
 \[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
 
 Se il risultato tende a:
@@ -63,41 +63,41 @@ Se il risultato tende a:
 \end{itemize}
 
 \subsubsection{Percentuale Discostamento Totale (in Tempo) (PDTT)}
-Indica la percentuale dei compiti completati in tempo rispetto al numero totale dei compiti. Per completati si intendono le task\textsubscript{G} che hanno completato il loro ciclo, ovverosia che sono state verificate esattamente alla data di scadenza prefissata.
+Indica la percentuale dei compiti completati in tempo rispetto al numero totale. Per completati in tempo si intendono le task\textsubscript{G} che hanno terminato il loro ciclo, ovverosia che sono state verificate esattamente alla data di scadenza prefissata.
 \[\frac{n\_compiti\_risolti\_intempo}{tot\_num\_compiti}\]
 \subsubsection{Percentuale Discostamento Totale (in Ritardo) (PDTR)}
-Indica la percentuale dei compiti completati in ritardo rispetto al numero totale dei compiti. Per completati si intendono le task\textsubscript{G} che hanno completato il loro ciclo, ovverosia che sono state verificate dopo la data di scadenza prefissata.
+Indica la percentuale dei compiti completati in ritardo rispetto al numero totale. Per completati in ritardo si intendono le task\textsubscript{G} che hanno completato il loro ciclo, ovverosia che sono state verificate dopo la data di scadenza prefissata.
 \[\frac{n\_compiti\_risolti\_inritardo}{tot\_num\_compiti}\]
 \subsubsection{Percentuale Discostamento Totale (in Anticipo) (PDTA)}
-Indica la percentuale dei compiti completati in anticipo rispetto al numero totale dei compiti. Per completati si intendono le task\textsubscript{G} che hanno completato il loro ciclo, ovverosia che sono state verificate prima della data di scadenza prefissata.
+Indica la percentuale dei compiti completati in anticipo rispetto al numero totale. Per completati in anticipo si intendono le task\textsubscript{G} che hanno completato il loro ciclo, ovverosia che sono state verificate prima della data di scadenza prefissata.
 \[\frac{n\_compiti\_risolti\_inanticipo}{tot\_num\_compiti}\]
 
 \subsubsection{Percentuale Discostamento DoneWorking (in Tempo) (PDDWT)}
-Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo i compiti completati esattamente alla data di scadenza prefissata.
+Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale. In questo caso si intendono solo i compiti completati esattamente alla data di scadenza prefissata.
 \[\frac{n\_compiti\_risoltiDW\_intempo}{tot\_num\_compiti}\]
 \subsubsection{Percentuale Discostamento DoneWorking (in Ritardo) (PDDWR)}
-Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo i compiti completati dopo la data di scadenza prefissata.
+Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale. In questo caso si intendono solo i compiti completati dopo la data di scadenza prefissata.
 \[\frac{n\_compiti\_risoltiDW\_inritardo}{tot\_num\_compiti}\]
 \subsubsection{Percentuale Discostamento DoneWorking (in Anticipo) (PDDWA)}
-Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo i compiti completati prima della data di scadenza prefissata.
+Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale. In questo caso si intendono solo i compiti completati prima della data di scadenza prefissata.
 \[\frac{n\_compiti\_risoltiDW\_inanticipo}{tot\_num\_compiti}\]
 \subsubsection{Percentuale Discostamento DoneVerifying (in Tempo) (PDDVT)}
-Indica la percentuale dei compiti verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo le operazioni di verifica concluse esattamente alla data di scadenza prefissata.
+Indica la percentuale dei compiti verificati, rispetto al numero totale. In questo caso si intendono solo le operazioni di verifica concluse esattamente alla data di scadenza prefissata.
 \[\frac{n\_compiti\_risoltiDV\_intempo}{tot\_num\_compiti}\]
 
 \subsubsection{Percentuale Discostamento DoneVerifying (in Ritardo) (PDDVR)}
-Indica la percentuale dei compiti verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo le operazioni di verifica concluse dopo la data di scadenza prefissata.
+Indica la percentuale dei compiti verificati, rispetto al numero totale. In questo caso si intendono solo le operazioni di verifica concluse dopo la data di scadenza prefissata.
 \[\frac{n\_compiti\_risoltiDV\_inritardo}{tot\_num\_compiti}\]
 \subsubsection{Percentuale Discostamento DoneVerifying (in Anticipo) (PDDVA)}
-Indica la percentuale dei compiti verificati, rispetto al numero totale dei compiti. In questo caso si intendono solo le operazioni di verifica concluse prima della data di scadenza prefissata.
+Indica la percentuale dei compiti verificati, rispetto al numero totale. In questo caso si intendono solo le operazioni di verifica concluse prima della data di scadenza prefissata.
 \[\frac{n\_compiti\_risoltiDV\_inanticipo}{tot\_num\_compiti}\]
 \subsection{Metriche per la documentazione}
 
 \subsubsection{Indice di Gulpease (IG)}
 Indica la leggibilità di un testo, tarato sulla lingua italiana. Differentemente da indici di lingua straniera, ha il vantaggio di controllare la lunghezza delle parole anziché il numero di sillabe per parola, semplificandone il calcolo automatico.
 Nel calcolo vengono ignorati frontespizio, registro modifiche, elenco figure, elenco tabelle, tabelle e figure; in modo da poter valutare appieno la leggibilità del contenuto testuale dei documenti.
-Il valore risultante è compreso tra 0 e 100, dove un indice più alto corrisponde ad un indice di leggibilità più semplice.
-Le soglie dei valori dell'indice di leggibilità di Gulpease sono:
+Il valore risultante è compreso tra 0 e 100, dove ad un indice più alto corrisponde una maggiore leggibilità.
+Le soglie dei valori dell'indice di Gulpease sono:
 \begin{itemize}
     \item inferiore a 80, il documento è difficile da leggere per chi ha la licenza elementare;
     \item inferiore a 60, il documento è difficile da leggere per chi possiede la licenza media;
@@ -131,10 +131,10 @@ Indica il numero di parametri presenti nei metodi sviluppati nel codice. Un nume
 Considera il numero totale di attributi per ogni classe. Un valore elevato potrebbe indicare che la classe si fa carico di una quantità eccessiva di responsabilità, in questo caso si può optare per incapsulare parte di essa in un'altra classe.
 
 \subsubsection{Metodi per classe (MET)}
-Rappresenta il numero di metodi per classe. Se è troppo elevato significa che questa classe svolge più compiti, quindi è preferibile scomporla in più classi.
+Rappresenta il numero di metodi per classe. Se troppo elevato, potrebbe indicare che questa classe svolge troppi compiti, sarà quindi preferibile scomporla in più classi.
 
 \subsubsection{Rapporto Codice Commenti (RCC)}
-Indica il rapporto tra le linee di codice e le linee di commento all'interno del file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto
+Indica il rapporto tra le linee di codice e le linee di commento all'interno dei file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto
 \[\frac{linee\_commento}{linee\_codice}\]
 
 \subsubsection{Complessità Ciclomatica (CCL)}
@@ -142,7 +142,7 @@ Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o c
 \[E-N+2P\]
 dove P è il numero di componenti connesse.
 \subsubsection{Code Coverage (CC)}
-Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi. Maggiore sarà la copertura del codice, maggiore sarà la possibilità che eventuali errori vengano risolti e individuati. Se il valore è troppo basso, significa che troppe istruzioni non sono state testate e quindi non si può sapere se esse funzionino effettivamente.
+Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi. Maggiore sarà la copertura del codice, maggiore sarà la possibilità che eventuali errori vengano individuati e risolti. Un valore troppo basso indica un'insufficiente verifica della correttezza del codice.
 \[\frac{linee\_codice\_verificate}{linee\_codice\_totali}\]
 
 \subsubsection{Percentuale Superamento Test (PST)}
@@ -163,11 +163,11 @@ Viene specificata l'abilità del software di resistere a malfunzionamenti.
 \[A = \frac{numero\_di\_errori}{numero\_di\_test\_eseguiti}\]
 
 \subsubsection{Numero di tocchi/Click necessari (C)}
-Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento. Più il valore è basso, più è facile per l'utente interagire con il sistema.\\
+Viene specificata la facilità con la quale l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento. Più il valore è basso, più è facile per l'utente interagire con il sistema.\\
 Si considera per esempio la capacità dell'operatore di visualizzare la propria lista delle task\textsubscript{G}.
 
 \subsubsection{Numero di Secondi necessari (S)}
-Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
+Viene specificata la rapidità con la quale l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
 Si considera la capacità dell'operatore di visualizzare la propria lista delle task\textsubscript{G}.
 
 
