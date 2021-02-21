@@ -1,0 +1,87 @@
+\section{Verbale della riunione}
+
+\subsection{Meccanismi di login}
+    \begin{itemize}
+        \item adottare login con user e password per amministratori e responsabili;
+        \item muletti come entità diventano nuovi attori per le operazioni che si possono svolgere a bordo
+            \subitem -- non serve login operatore;
+            \subitem -- al momento della connessione scambio token con server per identificazione;
+            \subitem utente a bordo è informazione in più
+                \subsubitem * fa parte della sezione facoltativa "pedoni" solo quando scende dal mezzo;
+            \subitem il muletto comunica con il server indipendentemente;
+        \item non serve appoggiarsi a servizi esterni, può essere realizzato internamente dal gruppo, seguendo buone pratiche di sicurezza:
+            \begin{itemize}
+                \item comunicazioni con protocollo https
+                    \subitem * certificato autogenerato "self signed" va bene;
+                    \subitem * non serve acquistare/generare;
+                \item salvare hash delle password
+                    \subitem * potenzialmente anche salted hash;
+                \item se si adottano sessioni queste devono avere scadenza.
+            \end{itemize}
+    \end{itemize}
+
+\subsection{Interfaccia di guida}
+    \begin{itemize}
+        \item guida manuale rimane obbligatoria
+            \subitem -- unico modo di testare capacità di adattamento del sistema;
+        \item il controllo delle unità non deve per forza avvenire su dispositivi/schermi/interfacce dedicate ma può essere centralizzato in unico pannello tramite il quale l'amministratore può far intraprendere qualunque azione ad ogni unità
+    \end{itemize}
+
+\subsection{Riclassificazione dei Requisiti}
+    Durante il confronto sono emersi i seguenti punti notabili riguardo le differenze tra requisiti di vincolo e funzionali:
+    \begin{itemize}
+        \item \textbf{vincolo: }
+            \begin{itemize}
+                \item tutto ciò che a sistema tratto come condizione iniziale:
+
+                \item sistema in cui lavoro è rigido, non c'è possibilità di ridiscutere; questi punti fermi
+
+                \item eg: tutto ciò che riguarda mappa e spazi;
+            \end{itemize}
+        \item \textbf{funzionale: }
+            \begin{itemize}
+                \item comportamento del sistema;
+                \item ciò che il software fa, su cui posso quindi lavorare e migliorare.
+            \end{itemize}
+    \end{itemize}
+    I requisiti di vincolo sono dunque stati rivisti e classificati come segue (\textbf{F: }funzionale, \textbf{V: }vincolo):
+    \begin{enumerate}
+        \item F;
+        \item F;
+        \item F;
+        \item tutto quello che si muove all’interno del … è censita dal sistema
+            \subitem (a) \; non esiste unità non riconosciuta e controllata dal sistema;
+            \subitem (b) \; non c'è nulla che il sistema non conosca e non riceva dati;
+        \item F;
+        \item V;
+        \item V;
+        \item F, compito del nostro lavoro , derivato da 6 e 7, renderlo valido;
+        \item F (sparisce se 10..12 vengono fatte) (10..12 sono funzionalità 2,3,4 della 9);
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+        \item F;
+
+    \end{enumerate}
