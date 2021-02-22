@@ -2,6 +2,7 @@
 
 cd `dirname $0`
 
+
 git clone https://github.com/Three-Way-Milkshake/docs.wiki.git wiki
 cd wiki
 mapfile -t acr < <(more Glossario.md | grep "Glossario dei Termini" -B9999 | grep -E "\*\*.+\*\*" -o | cut -f3 -d '*' ) #save acronyms in acr array
