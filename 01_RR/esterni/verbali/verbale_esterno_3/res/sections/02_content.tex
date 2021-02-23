@@ -6,8 +6,8 @@
         \item adottare login con user e password per amministratori e responsabili;
         \item muletti come entità diventano nuovi attori per le operazioni che si possono svolgere a bordo
             \subitem -- non serve login operatore;
-            \subitem -- al momento della connessione scambio token con server per identificazione;
-            \subitem -- utente a bordo è informazione in più
+            \subitem -- al momento della connessione viene scambiato token con server per identificazione;
+            \subitem -- utente a bordo è un'informazione in più
                 \subsubitem * fa parte della sezione facoltativa "pedoni" solo quando scende dal mezzo;
                 \subsubitem * il muletto comunica con il server indipendentemente;
         \item non serve appoggiarsi a servizi esterni, può essere realizzato internamente dal gruppo, seguendo buone pratiche di sicurezza:
@@ -25,7 +25,7 @@
     \begin{itemize}
         \item guida manuale rimane obbligatoria
             \subitem -- unico modo di testare capacità di adattamento del sistema;
-        \item il controllo delle unità non deve per forza avvenire su dispositivi/schermi/interfacce dedicate ma può essere centralizzato in unico pannello tramite il quale l'amministratore può far intraprendere qualunque azione ad ogni unità
+        \item il controllo delle unità non deve per forza avvenire su dispositivi/schermi/interfacce dedicate ma può essere centralizzato in unico pannello tramite il quale l'amministratore può far intraprendere qualunque azione ad ogni unità.
     \end{itemize}
 
 \subsection{Riclassificazione dei Requisiti}
@@ -34,14 +34,14 @@
     \begin{itemize}
         \item \textbf{vincolo: }
             \begin{itemize}
-                \item tutto ciò che a sistema tratto come condizione iniziale:
-                \item sistema in cui lavoro è rigido, non c'è possibilità di ridiscutere; questi punti fermi
+                \item tutto ciò che a sistema viene trattato come condizione iniziale;
+                \item sistema in cui si lavora è rigido, non c'è possibilità di ridiscutere questi punti fermi;
                 \item eg: tutto ciò che riguarda mappa e spazi;
             \end{itemize}
         \item \textbf{funzionale: }
             \begin{itemize}
                 \item comportamento del sistema;
-                \item ciò che il software fa, su cui posso quindi lavorare e migliorare.
+                \item ciò che il software fa, su cui si può quindi lavorare e migliorare.
             \end{itemize}
     \end{itemize}
     I requisiti di vincolo sono dunque stati rivisti e classificati come segue (\textbf{F: }funzionale, \textbf{V: }vincolo):
@@ -104,7 +104,7 @@
             \begin{enumerate}
                 \item completamente real time;
                 \item completamente temporizzata: il sistema rielabora ad ogni intervallo specifico;
-                \item ibrida: rielaboro ad intervalli, a meno che non ci siano dei segnali importanti che richiedono una gestione immediata;
+                \item ibrida: si rielabora ad intervalli, a meno che non ci siano dei segnali importanti che richiedono una gestione immediata;
             \end{enumerate}
         \item si consiglia di adottare approccio temporizzato tramite timer task, almeno per il PoC
             \subitem -- gestire casi particolari (non ho ricevuto segnale da unità...);
