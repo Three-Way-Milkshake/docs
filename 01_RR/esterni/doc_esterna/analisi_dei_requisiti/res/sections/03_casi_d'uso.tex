@@ -121,7 +121,34 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per inserire il ruolo del lavoratore;
 	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il ruolo;
 	\item 	\textbf{Scenario principale:} l'amministratore sceglie tramite una combobox\textsubscript{G} il ruolo che dovrà intraprendere il nuovo lavoratore, ovverosia responsabile o operatore;
-	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il ruolo del lavoratore che si intende registrare. Può scegliere tra responsabile e operatore.
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il ruolo del lavoratore che si intende registrare. Può scegliere tra responsabile e operatore;
+	\item  \textbf{Specializzazione:} 
+	\begin{itemize}
+		\item UC2.1.4 - Inserimento ruolo responsabile;
+		\item UC2.1.5 - Inserimento ruolo operatore.
+	\end{itemize}
+	
+\end{itemize}
+
+\paragraph{UC2.1.4 - Inserimento ruolo responsabile}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per inserire il ruolo del lavoratore;
+	\item 	\textbf{Postcondizioni:} l'amministratore ha assegnato il ruolo responsabile al nuovo utente che si intende registrare;
+	\item 	\textbf{Scenario principale:} l'amministratore sceglie tramite una combobox\textsubscript{G} il ruolo responsabile.
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il ruolo del lavoratore che si intende registrare.
+	
+\end{itemize}
+
+\paragraph{UC2.1.5 - Inserimento ruolo operatore}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per inserire il ruolo del lavoratore;
+	\item 	\textbf{Postcondizioni:} l'amministratore ha assegnato il ruolo di operatore al nuovo utente che si intende registrare;
+	\item 	\textbf{Scenario principale:} l'amministratore sceglie tramite una combobox\textsubscript{G} il ruolo operatore;
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il ruolo del lavoratore che si intende registrare. 
 	
 \end{itemize}
 
@@ -210,6 +237,33 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il ruolo del lavoratore;
 	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il ruolo aggiornato (responsabile o operatore);
 	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al ruolo del lavoratore con il ruolo aggiornato scegliendo tra responsabile o operatore;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al ruolo del lavoratore, l'amministratore aggiorna il form\textsubscript{G}.
+	\item 	\textbf{Specializzazioni:}
+	\begin{itemize}
+		\item UC3.1.4 - Aggiornamento ruolo a responsabile;
+		\item UC3.1.5 - Aggiornamento ruolo a operatore.
+	\end{itemize}
+
+\end{itemize}
+
+\paragraph{UC3.1.4 - Aggiornamento ruolo a responsabile}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il ruolo del lavoratore;
+	\item 	\textbf{Postcondizioni:} l'amministratore ha assegnato all'utente il ruole di responsabile, sostituendolo a quello precedente;
+	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al ruolo del lavoratore aggiornandolo a responsabile;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al ruolo del lavoratore, l'amministratore aggiorna il form\textsubscript{G}.
+
+\end{itemize}
+
+\paragraph{UC3.1.5 - Aggiornamento ruolo a operatore}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il ruolo del lavoratore;
+	\item 	\textbf{Postcondizioni:} l'amministratore ha assegnato all'utente il ruole di operatore, sostituendolo a quello precedente;
+	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al ruolo del lavoratore aggiornandolo a operatore;
 	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al ruolo del lavoratore, l'amministratore aggiorna il form\textsubscript{G}.
 
 \end{itemize}
