@@ -494,172 +494,395 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 
 \subsection{UC7 - Modifica mappa}
 
+
+
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.52]{res/images/uc7.png}
-	\caption{UC7 - Gestione mappa}
+
+​    \centering
+
+​    \includegraphics[scale=0.52]{res/images/uc7.png}
+
+​    \caption{UC7 - Gestione mappa}
+
 \end{figure}
 
+
+
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} viene resa disponibile dal sistema l'interfaccia per la modifica della mappa;
-	\item 	\textbf{Postcondizioni:} la mappa è stata modificata dall'amministratore;
-	\item 	\textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per la modifica, visualizza l'interfaccia per gestire i cambiamenti della mappa tra cui può scegliere tramite un menù a tendina se:
-	\begin{itemize}
-		\item modificare la planimetria\textsubscript{G} del magazzino (UC7.1);
-		\item modificare la percorrenza\textsubscript{G} del magazzino, per esempio i sensi di marcia (UC7.2);
-		\item gestire i POI\textsubscript{A} (UC7.3);
-	\end{itemize}
-	e viene visualizzata l'intera mappa (UC6).
+
+​    \item   \textbf{Attori primari} amministratore;
+
+​    \item   \textbf{Precondizioni:} viene resa disponibile dal sistema l'interfaccia per la modifica della mappa;
+
+​    \item   \textbf{Postcondizioni:} la mappa è stata modificata dall'amministratore;
+
+​    \item   \textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per la modifica, visualizza l'interfaccia per gestire i cambiamenti della mappa tra cui può scegliere tramite un menù a tendina se:
+
+​    \begin{itemize}
+
+​        \item modificare la planimetria\textsubscript{G} del magazzino (UC7.1);
+
+​        \item modificare la percorrenza\textsubscript{G} del magazzino, per esempio i sensi di marcia (UC7.2);
+
+​        \item gestire i POI\textsubscript{A} (UC7.3);
+
+​    \end{itemize}
+
+​    e viene visualizzata l'intera mappa (UC6).
+
 Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di conferma;
-	\item 	\textbf{Descrizione:} l'amministratore ha il compito di tenere aggiornata la mappa dai cambiamenti reali del magazzino, modificandone la planimetria\textsubscript{G}, la percorrenza\textsubscript{G} e i POI\textsubscript{A} presenti.
+
+​    \item   \textbf{**Descrizione:**} l'amministratore ha il compito di tenere aggiornata la mappa dai cambiamenti reali del magazzino, modificandone la planimetria\textsubscript{G}, la percorrenza\textsubscript{G} e i POI\textsubscript{A} presenti.
+
 \end{itemize}
+
+
+
 
 
 \subsubsection{UC7.1 - Modifica planimetria}
+
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} viene resa disponibile dal sistema l'interfaccia per la modifica della planimetria\textsubscript{G} della mappa; nessuna unità deve circolare al momento della modifica;
-	\item 	\textbf{Postcondizioni:} la mappa è stata modificata dall'amministratore;
-	\item 	\textbf{Scenario principale:} vengono visualizzati degli strumenti per la modifica della planimetria\textsubscript{G}:
-	\begin{itemize}
-		\item ampliamento;
-		\item riduzione;
-		\item aggiunta, rimozione e modifica zone non transitabili.
-	\end{itemize}
-	Una volta raggiunto il risultato desiderato, l'amministratore conferma tramite il pulsante di salvataggio;
-	\item 	\textbf{Descrizione:} il magazzino, con il passare del tempo, può subire dei cambiamenti nella planimetria\textsubscript{G}. Possono venire modificati:
-	\begin{itemize}
-		\item la dimensione del magazzino (ampliarlo o diminuirlo);
-		\item le zone in cui non è permessa la transizione dei mezzi (scaffali, muri, elementi e zone del magazzino che non prevedono il transito di un muletto).
-	\end{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} viene resa disponibile dal sistema l'interfaccia per la modifica della planimetria\textsubscript{G} della mappa; nessuna unità deve circolare al momento della modifica;
+
+​    \item   \textbf{**Postcondizioni:**} la mappa è stata modificata dall'amministratore;
+
+​    \item   \textbf{**Scenario principale:**} vengono visualizzati degli strumenti per la modifica della planimetria\textsubscript{G}:
+
+​    \begin{itemize}
+
+​        \item ampliamento;
+
+​        \item riduzione;
+
+​        \item aggiunta, rimozione e modifica zone non transitabili.
+
+​    \end{itemize}
+
+​    Una volta raggiunto il risultato desiderato, l'amministratore conferma tramite il pulsante di salvataggio;
+
+​    \item   \textbf{**Descrizione:**} il magazzino, con il passare del tempo, può subire dei cambiamenti nella planimetria\textsubscript{G}. Possono venire modificati:
+
+​    \begin{itemize}
+
+​        \item la dimensione del magazzino (ampliarlo o diminuirlo);
+
+​        \item le zone in cui non è permessa la transizione dei mezzi (scaffali, muri, elementi e zone del magazzino che non prevedono il transito di un muletto).
+
+​    \end{itemize}
+
 \end{itemize}
 
+
+
 \subsubsection{UC7.2 - Modifica percorrenza}
+
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:}  l'amministratore è autenticato nel sistema e viene reso disponibile dal sistema l'interfaccia per la modifica della percorrenza\textsubscript{G} della mappa; nessuna unità deve circolare nell'area selezionata per il cambiamento;
-	\item 	\textbf{Postcondizioni:} la mappa è stata modificata dall'amministratore;
-	\item 	\textbf{Scenario principale:} viene visualizzata la mappa con le caratteristiche che ogni area di percorrenza\textsubscript{G} ha (senso di marcia e numero massimo di unità). L'amministratore deve premere sopra la zona che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l'amministratore conferma tramite il pulsante di salvataggio;
-	\item 	\textbf{Descrizione:} il magazzino può subire dei cambiamenti nella percorrenza\textsubscript{G}. Sarà possibile modificare per ogni area:
-	\begin{itemize}
-		\item il senso di marcia;
-		\item il numero massimo di unità transitabili contemporaneamente.
-	\end{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**}  l'amministratore è autenticato nel sistema e viene reso disponibile dal sistema l'interfaccia per la modifica della percorrenza\textsubscript{G} della mappa; nessuna unità deve circolare nell'area selezionata per il cambiamento;
+
+​    \item   \textbf{**Postcondizioni:**} la mappa è stata modificata dall'amministratore;
+
+​    \item   \textbf{**Scenario principale:**} viene visualizzata la mappa con le caratteristiche che ogni area di percorrenza\textsubscript{G} ha (senso di marcia e numero massimo di unità). L'amministratore deve premere sopra la zona che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l'amministratore conferma tramite il pulsante di salvataggio;
+
+​    \item   \textbf{**Descrizione:**} il magazzino può subire dei cambiamenti nella percorrenza\textsubscript{G}. Sarà possibile modificare per ogni area:
+
+​    \begin{itemize}
+
+​        \item il senso di marcia;
+
+​        \item il numero massimo di unità transitabili contemporaneamente.
+
+​    \end{itemize}
+
 \end{itemize}
+
+
 
 \subsubsection{UC7.3 - Gestione POI}
 
+
+
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.52]{res/images/uc7-3.png}
-	\caption{UC7.3 - Gestione POI}
+
+​    \centering
+
+​    \includegraphics[scale=0.52]{res/images/uc7-3.png}
+
+​    \caption{UC7.3 - Gestione POI}
+
 \end{figure}
 
+
+
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore è autenticato nel sistema e viene reso disponibile dal sistema l'interfaccia per la modifica dei POI\textsubscript{A};
-	\item 	\textbf{Postcondizioni:} nella mappa sono comparsi i cambiamenti dei POI\textsubscript{A}; 
-	\item 	\textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per la modifica dei POI\textsubscript{A}, visualizza le opzioni tra cui può scegliere le operazioni da eseguire:
-	\begin{itemize}
-		\item modificare la posizione di un POI\textsubscript{A} esistente (UC7.3.1);
-		\item aggiungere un nuovo POI\textsubscript{A} nella mappa (UC7.3.2);
-		\item eliminare un POI\textsubscript{A} esistente (UC7.3.3).
-	\end{itemize}
-	\item 	\textbf{Descrizione:} è possibile che sia necessaria la modifica dei punti di interesse nella mappa, l'amministratore ha appunto il compito di aggiungerne, modificarne o eliminarli in base alle esigenze del magazzino. Il responsabile deve tenere presente i vincoli del magazzino altrimenti non sarà permessa l'operazione:
-	\begin{itemize}
-		\item almeno una base;
-		\item almeno un POI\textsubscript{A} di carico.
-	\end{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore è autenticato nel sistema e viene reso disponibile dal sistema l'interfaccia per la modifica dei POI\textsubscript{A};
+
+​    \item   \textbf{**Postcondizioni:**} nella mappa sono comparsi i cambiamenti dei POI\textsubscript{A}; 
+
+​    \item   \textbf{**Scenario principale:**} l'amministratore dopo aver premuto il pulsante per la modifica dei POI\textsubscript{A}, visualizza le opzioni tra cui può scegliere le operazioni da eseguire:
+
+​    \begin{itemize}
+
+​        \item modificare la posizione di un POI\textsubscript{A} esistente (UC7.3.1);
+
+​        \item aggiungere un nuovo POI\textsubscript{A} nella mappa (UC7.3.2);
+
+​        \item eliminare un POI\textsubscript{A} esistente (UC7.3.3).
+
+​    \end{itemize}
+
+​    \item   \textbf{**Descrizione:**} è possibile che sia necessaria la modifica dei punti di interesse nella mappa, l'amministratore ha appunto il compito di aggiungerne, modificarne o eliminarli in base alle esigenze del magazzino. Il responsabile deve tenere presente i vincoli del magazzino altrimenti non sarà permessa l'operazione:
+
+​    \begin{itemize}
+
+​        \item almeno una base;
+
+​        \item almeno un POI\textsubscript{A} di carico.
+
+​    \end{itemize}
+
 \end{itemize}
+
+
 
 \paragraph{UC7.3.1 - Modifica posizione di un POI\textsubscript{A} esistente}
 
+
+
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu della modifica dei POI\textsubscript{A} per il cambiamento della posizione di un POI\textsubscript{A} esistente; nessuna unità si trova nel POI\textsubscript{A} selezionato;
-	\item 	\textbf{Postcondizioni:} il POI\textsubscript{A} selezionato ha cambiato posizione nella mappa; 
-	\item 	\textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per la modifica della posizione di un POI\textsubscript{A} esistente, visualizza la mappa (UC6) con tutti i POI\textsubscript{A} nella loro posizione, seleziona quello che gli interessa e lo sposta nella posizione aggiornata;
-	\item 	\textbf{Descrizione:} l'amministratore può dover cambiare la posizione di alcuni POI\textsubscript{A} già esistenti all'interno del magazzino.
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore ha selezionato l'opzione tra il menu della modifica dei POI\textsubscript{A} per il cambiamento della posizione di un POI\textsubscript{A} esistente; nessuna unità si trova nel POI\textsubscript{A} selezionato;
+
+​    \item   \textbf{**Postcondizioni:**} il POI\textsubscript{A} selezionato ha cambiato posizione nella mappa; 
+
+​    \item   \textbf{**Scenario principale:**} l'amministratore dopo aver premuto il pulsante per la modifica della posizione di un POI\textsubscript{A} esistente, visualizza la mappa (UC6) con tutti i POI\textsubscript{A} nella loro posizione, seleziona quello che gli interessa e lo sposta nella posizione aggiornata;
+
+​    \item   \textbf{**Descrizione:**} l'amministratore può dover cambiare la posizione di alcuni POI\textsubscript{A} già esistenti all'interno del magazzino.
+
 \end{itemize}
+
+
 
 \paragraph{UC7.3.2 - Inserimento nuovo POI}
+
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.52]{res/images/uc7-3-2.png}
-	\caption{UC7.3.2 - Inserimento nuovo POI}
+
+​    \centering
+
+​    \includegraphics[scale=0.52]{res/images/uc7-3-2.png}
+
+​    \caption{UC7.3.2 - Inserimento nuovo POI}
+
 \end{figure}
 
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore ha selezionato l'opzione, tra il menu, dell'aggiunta di un nuovo POI\textsubscript{A};
-	\item 	\textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa;
-	\item 	\textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per l'aggiunta di un nuovo POI\textsubscript{A}, visualizzerà l'interfaccia per la creazione del nuovo punto d'interesse;
-	\item 	\textbf{Descrizione:} per inserire un nuovo POI\textsubscript{A} all'interno della mappa devono essere specificati:
-	\begin{itemize}
-		\item codice identificativo;
-		\item posizione nella mappa;
-		\item tipo di POI\textsubscript{A} (carico, scarico, base);
-	\end{itemize}
-\end{itemize}
 
-\subparagraph{UC7.4.3 - Inserimento posizione}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore visualizza la mappa per l'inserimento dei dati del nuovo POI\textsubscript{A}.
-	\item 	\textbf{Postcondizioni:} l'amministratore ha inserito il POI\textsubscript{A} all'interno della mappa; 
-	\item 	\textbf{Scenario principale:}
-	\begin{itemize}
-		\item visualizza la mappa (UC6);
-		\item preme nel punto in cui vuole inserire il POI\textsubscript{A};
-		\item conferma l'inserimento premendo un pulsante apposito;
-	\end{itemize}
-	\item 	\textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve posizionare il POI\textsubscript{A} nella mappa.
 
-\end{itemize}
-
-\paragraph{UC7.4.4 - Inserimento codice identificativo}
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del codice identificativo del nuovo POI\textsubscript{A};
-	\item 	\textbf{Postcondizioni:} l'amministratore ha inserito il codice identificativo del nuovo POI\textsubscript{A}; 
-	\item 	\textbf{Scenario principale:} l'amministratore inserisce il codice identificativo del nuovo POI\textsubscript{A} nell'apposito form\textsubscript{G};
-	\item 	\textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare un codice identificativo al nuovo POI\textsubscript{A}.
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore ha selezionato l'opzione, tra il menu, dell'aggiunta di un nuovo POI\textsubscript{A};
+
+​    \item   \textbf{**Postcondizioni:**} viene creato il nuovo POI\textsubscript{A} nella mappa;
+
+​    \item   \textbf{**Scenario principale:**} l'amministratore dopo aver premuto il pulsante per l'aggiunta di un nuovo POI\textsubscript{A}, visualizzerà l'interfaccia per la creazione del nuovo punto d'interesse;
+
+​    \item   \textbf{**Descrizione:**} per inserire un nuovo POI\textsubscript{A} all'interno della mappa devono essere specificati:
+
+​    \begin{itemize}
+
+​        \item codice identificativo;
+
+​        \item posizione nella mappa;
+
+​        \item tipo di POI\textsubscript{A} (carico, scarico, base);
+
+​    \end{itemize}
 
 \end{itemize}
 
-\paragraph{UC7.4.5 - Inserimento tipo POI}
+
+
+\subparagraph{UC7.3.2.1 - Inserimento posizione}
+
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
-	\item 	\textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa; 
-	\item 	\textbf{Scenario principale:} l'amministratore inserisce il tipo di POI\textsubscript{A} e conferma;
-	\item 	\textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa:
-	\begin{itemize}
-		\item scarico;
-		\item carico;
-		\item base.
-	\end{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore visualizza la mappa per l'inserimento dei dati del nuovo POI\textsubscript{A}.
+
+​    \item   \textbf{**Postcondizioni:**} l'amministratore ha inserito il POI\textsubscript{A} all'interno della mappa; 
+
+​    \item   \textbf{**Scenario principale:**}
+
+​    \begin{itemize}
+
+​        \item visualizza la mappa (UC6);
+
+​        \item preme nel punto in cui vuole inserire il POI\textsubscript{A};
+
+​        \item conferma l'inserimento premendo un pulsante apposito;
+
+​    \end{itemize}
+
+​    \item   \textbf{**Descrizione:**} per completare l'aggiunta, l'amministratore deve posizionare il POI\textsubscript{A} nella mappa.
+
+
 
 \end{itemize}
 
-\paragraph{UC7.4.6 - Eliminazione POI}
+
+
+\subparagraph{UC7.3.2.2 - Inserimento codice identificativo}
+
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu per l'eliminazione di un POI\textsubscript{A} esistente e visualizza la mappa con tutti i POI\textsubscript{A};
-	\item 	\textbf{Postcondizioni:} viene eliminato un POI\textsubscript{A} dalla mappa e dalla lista; 
-	\item 	\textbf{Scenario principale:} seleziona dalla mappa il POI\textsubscript{A} di interesse e conferma, attraverso un apposito pulsante, l'eliminazione;
-	\item 	\textbf{Descrizione:} si vuole eliminare un POI\textsubscript{A} esistente dalla mappa.
-\end{itemize}
-\subsubsection{UC7.5 - Visualizzazione messaggio d'errore operazione non permessa}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore ha tentato una modifica alla mappa esistente;
-	\item 	\textbf{Postcondizioni:} è stato visualizzato un messaggio d'errore che informa l'amministratore di aver cercato di fare un'operazione non concessa dal sistema;
-	\item 	\textbf{Scenario principale:} l'amministratore tenta di apportare una modifica non concessa alla mappa;
-	\item 	\textbf{Descrizione:} alcune operazioni di modifica della mappa non sono concesse, quindi il sistema informa l'amministratore.
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del codice identificativo del nuovo POI\textsubscript{A};
+
+​    \item   \textbf{**Postcondizioni:**} l'amministratore ha inserito il codice identificativo del nuovo POI\textsubscript{A}; 
+
+​    \item   \textbf{**Scenario principale:**} l'amministratore inserisce il codice identificativo del nuovo POI\textsubscript{A} nell'apposito form\textsubscript{G};
+
+​    \item   \textbf{**Descrizione:**} per completare l'aggiunta, l'amministratore deve assegnare un codice identificativo al nuovo POI\textsubscript{A}.
+
+
+
 \end{itemize}
 
+
+
+\subparagraph{UC7.3.2.3 - Inserimento tipo POI}
+
+\begin{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
+
+​    \item   \textbf{**Postcondizioni:**} viene creato il nuovo POI\textsubscript{A} nella mappa; 
+
+​    \item   \textbf{**Scenario principale:**} l'amministratore inserisce il tipo di POI\textsubscript{A} e conferma;
+
+​    \item   \textbf{**Descrizione:**} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa:
+
+​    \begin{itemize}
+
+​        \item scarico;
+
+​        \item carico;
+
+​        \item base.
+
+​    \end{itemize}
+
+​    \item   \textsc{Specializzazione:}
+
+​    \begin{itemize}
+
+​        \item UC7.3.2.4 - Inserimento tipo base;
+
+​        \item UC7.3.2.5 - Inserimento tipo carico;
+
+​        \item UC7.3.2.6 - Inserimento tipo scarico;
+
+​    \end{itemize}
+
+
+
+\end{itemize}
+
+
+
+\subparagraph{UC7.3.2.4 - Inserimento tipo base}
+
+\begin{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
+
+​    \item   \textbf{**Postcondizioni:**} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo base; 
+
+​    \item   \textbf{**Scenario principale:**} l'amministratore assegna al POI il tipo base;
+
+​    \item   \textbf{**Descrizione:**} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI di base è il punto in cui un'unità inizia il proprio turno.
+
+
+
+\end{itemize}
+
+
+
+\subparagraph{UC7.3.2.5 - Inserimento tipo carico}
+
+\begin{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
+
+​    \item   \textbf{**Postcondizioni:**} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo carico; 
+
+​    \item   \textbf{**Scenario principale:**} l'amministratore assegna al POI il tipo carico;
+
+​    \item   \textbf{**Descrizione:**} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI di carico è il punto in cui un'unità prende la merce da trasportare per completare le proprie task.
+
+
+
+\end{itemize}
+
+
+
+\subparagraph{UC7.3.2.6 - Inserimento tipo scarico}
+
+\begin{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
+
+​    \item   \textbf{**Postcondizioni:**} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo scarico; 
+
+​    \item   \textbf{**Scenario principale:**} l'amministratore assegna al POI il tipo scarico;
+
+​    \item   \textbf{**Descrizione:**} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI di scarico è il punto che un'unità deve raggiungere per completare una relativa task.
+
+
+
+\end{itemize}
+
+
+
+
+
+\paragraph{UC7.3.3 - Eliminazione POI}
+
+\begin{itemize}
+
+​    \item   \textbf{**Attori primari:**} amministratore;
+
+​    \item   \textbf{**Precondizioni:**} l'amministratore ha selezionato l'opzione tra il menu per l'eliminazione di un POI\textsubscript{A} esistente e visualizza la mappa con tutti i POI\textsubscript{A}; nessuna unità deve essere nel POI selezionato;
+
+​    \item   \textbf{**Postcondizioni:**} viene eliminato un POI\textsubscript{A} dalla mappa e dalla lista; 
+
+​    \item   \textbf{**Scenario principale:**} seleziona dalla mappa il POI\textsubscript{A} di interesse e conferma, attraverso un apposito pulsante, l'eliminazione;
+
+​    \item   \textbf{**Descrizione:**} si vuole eliminare un POI\textsubscript{A} esistente dalla mappa.
+
+\end{itemize}
 \subsection{UC8 - Visualizzazione task}
 
 \begin{figure}[H]
