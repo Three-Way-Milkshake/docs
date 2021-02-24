@@ -807,9 +807,9 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo base; 
 
-   \item   \textbf{Scenario principale:} l'amministratore assegna al POI il tipo base;
+   \item   \textbf{Scenario principale:} l'amministratore assegna al POI\textsubscript{A} il tipo base;
 
-   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI di base è il punto in cui un'unità inizia il proprio turno.
+   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI\textsubscript{A} di base è il punto in cui un'unità inizia il proprio turno.
 
 
 
@@ -827,9 +827,9 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo carico; 
 
- \item   \textbf{Scenario principale:} l'amministratore assegna al POI il tipo carico;
+ \item   \textbf{Scenario principale:} l'amministratore assegna al POI\textsubscript{A} il tipo carico;
 
-   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI di carico è il punto in cui un'unità prende la merce da trasportare per completare le proprie task.
+   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI\textsubscript{A} di carico è il punto in cui un'unità prende la merce da trasportare per completare le proprie task\textsubscript{G}.
 
 
 
@@ -847,9 +847,9 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo scarico; 
 
-   \item   \textbf{Scenario principale:} l'amministratore assegna al POI il tipo scarico;
+   \item   \textbf{Scenario principale:} l'amministratore assegna al POI\textsubscript{A} il tipo scarico;
 
-  \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI di scarico è il punto che un'unità deve raggiungere per completare una relativa task.
+  \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI\textsubscript{A} di scarico è il punto che un'unità deve raggiungere per completare una relativa task\textsubscript{G}.
 
 
 
@@ -865,7 +865,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Attori primari:} amministratore;
 
-   \item   \textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu per l'eliminazione di un POI\textsubscript{A} esistente e visualizza la mappa con tutti i POI\textsubscript{A}; nessuna unità deve essere nel POI selezionato;
+   \item   \textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu per l'eliminazione di un POI\textsubscript{A} esistente e visualizza la mappa con tutti i POI\textsubscript{A}; nessuna unità deve essere nel POI\textsubscript{A} selezionato;
 
    \item   \textbf{Postcondizioni:} viene eliminato un POI\textsubscript{A} dalla mappa e dalla lista; 
 
@@ -886,8 +886,8 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore è sul muletto che si appresta a svolgere i propri compiti;
-	\item 	\textbf{Postcondizioni:} l'operatore ha una visione completa dei suoi compiti tramite la mappa con i POI interessati e la lista completa di task da eseguire;
-	\item 	\textbf{Scenario principale:} il sistema rende disponibile la visualizzazione di tutte le task\textsubscript{G} assegnate all'operatore; essa avviene tramite la mappa con i POI di interesse per l'operatore e sottostante la lista di tutte le task con le relative informazioni;
+	\item 	\textbf{Postcondizioni:} l'operatore ha una visione completa dei suoi compiti tramite la mappa con i POI\textsubscript{A} interessati e la lista completa di task\textsubscript{G} da eseguire;
+	\item 	\textbf{Scenario principale:} il sistema rende disponibile la visualizzazione di tutte le task\textsubscript{G} assegnate all'operatore; essa avviene tramite la mappa con i POI\textsubscript{A} di interesse per l'operatore e sottostante la lista di tutte le task\textsubscript{G} con le relative informazioni;
 	\item 	\textbf{Descrizione:} per compiere il suo lavoro, l'operatore ha bisogno di visualizzare le task\textsubscript{G} che gli sono assegnate e la loro posizione, così da poter scaricare la merce nel luogo corretto.
 
 \end{itemize}
@@ -896,9 +896,9 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore è sul muletto che si appresta a svolgere i propri compiti;
-	\item 	\textbf{Postcondizioni:} vengono visualizzate nella mappa le task\textsubscript{G} nella relativa posizione, il prossimo POI che deve raggiungere per completare la task sarà evidenziato con un colore diverso;
-	\item 	\textbf{Scenario principale:} l'operatore visualizza la mappa del magazzino. Sono rappresentati graficamente i POI relativi alle task assegnate, inoltre il prossimo da raggiungere sarà evidenziato da un colore diverso;
-	\item 	\textbf{Descrizione:} per capire dove si trovano nel magazzino i punti da raggiungere per soddisfare le proprie task, l'operatore deve avere una visione della mappa e dei POI che gli interessano. Inoltre deve essere ben visibile il prossimo POI che deve raggiungere per completare il prossimo compito che intende intraprendere.
+	\item 	\textbf{Postcondizioni:} vengono visualizzate nella mappa le task\textsubscript{G} nella relativa posizione, il prossimo POI\textsubscript{A} che deve raggiungere per completare la task\textsubscript{G} sarà evidenziato con un colore diverso;
+	\item 	\textbf{Scenario principale:} l'operatore visualizza la mappa del magazzino. Sono rappresentati graficamente i POI\textsubscript{A} relativi alle task\textsubscript{G} assegnate, inoltre il prossimo da raggiungere sarà evidenziato da un colore diverso;
+	\item 	\textbf{Descrizione:} per capire dove si trovano nel magazzino i punti da raggiungere per soddisfare le proprie task\textsubscript{G}, l'operatore deve avere una visione della mappa e dei POI\textsubscript{A} che gli interessano. Inoltre deve essere ben visibile il prossimo POI\textsubscript{A} che deve raggiungere per completare il prossimo compito che intende intraprendere.
 \end{itemize}
 
 
@@ -907,9 +907,9 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore è sul muletto che si appresta a svolgere i propri compiti;
-	\item 	\textbf{Postcondizioni:} viene visualizzata una lista di tutte le task\textsubscript{G} da eseguire con l'informazione sul relativo POI di scarico;
-	\item 	\textbf{Scenario principale:} sotto alla mappa del magazzino, viene visualizzata una lista di tutte le task\textsubscript{G} che l'operatore deve soddisfare. Ognuna mostra anche il codice identificativo del relativo POI di scarico;
-	\item 	\textbf{Descrizione:} viene visualizzata la lista di task da completare da l'operatore.
+	\item 	\textbf{Postcondizioni:} viene visualizzata una lista di tutte le task\textsubscript{G} da eseguire con l'informazione sul relativo POI\textsubscript{A} di scarico;
+	\item 	\textbf{Scenario principale:} sotto alla mappa del magazzino, viene visualizzata una lista di tutte le task\textsubscript{G} che l'operatore deve soddisfare. Ognuna mostra anche il codice identificativo del relativo POI\textsubscript{A} di scarico;
+	\item 	\textbf{Descrizione:} viene visualizzata la lista di task\textsubscript{G} da completare da l'operatore.
 \end{itemize}
 
 \subsection{UC9 - Segnalazione del completamento di una task}
