@@ -23,7 +23,7 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 \subsection{UC1 - Login}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.52]{res/images/uc1.png}
+	\includegraphics[scale=0.52]{res/images/uc1.PNG}
 	\caption{UC1 - Login}
 \end{figure}
 
@@ -31,23 +31,27 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 \begin{itemize}
 	\item 	\textbf{Attori primari:} utente non autenticato;
 	\item 	\textbf{Precondizioni:} l'utente non è autenticato nell'applicativo;
-	\item 	\textbf{Postcondizioni:}	l'utente si è autenticato con successo come operatore, responsabile o amministratore. Il sistema rende disponibili diverse pagine e funzionalità a seconda della tipologia di utente;
-	\item 	\textbf{Scenario principale:} l'utente richiede il login inserendo nell'apposito form\textsubscript{G} il proprio codice personale identificativo;
-	\item 	\textbf{Descrizione:} l'utente tenta di autenticarsi attraverso il suo codice personale identificativo;
-	\item 	\textbf{Estensioni:} 
-		\begin{itemize}
-			\item UC1.1: il codice non è stato inserito correttamente dal sistema e quindi viene visualizzato un messaggio d'errore.
-		\end{itemize}
+	\item 	\textbf{Postcondizioni:}	l'utente si è autenticato con successo come amministratore o responsabile. Il server rende disponibili diverse pagine e funzionalità a seconda della tipologia di utente;
+	\item 	\textbf{Scenario principale:} un utente non ancora autenticato richiede il login inserendo nell'apposito form i dati necessari;
+	\item 	\textbf{Descrizione:} l'utente tenta di autenticarsi attraverso il suo codice personale identificativo e la sua password;
 \end{itemize}
-\subsubsection{UC1.1 - Visualizzazione messaggio d'errore codice errato}
 
+\subsubsection{UC1.1 – Inserimento codice identificativo}
 \begin{itemize}
-	\item 	\textbf{Attori primari:} utente non autenticato;
-	\item 	\textbf{Precondizioni:} l'utente ha inserito il suo codice personale identificativo;
-	\item 	\textbf{Postcondizioni:} viene visualizzato un messaggio d'errore che informa l'utente che il codice identificativo è errato e di riprovare;
-	\item 	\textbf{Scenario principale:} l'utente tenta di autenticarsi inserendo un codice non presente nel sistema o errato;
-	\item 	\textbf{Descrizione:} l'utente visualizza un messaggio d'errore dopo aver inserito un codice errato o non presente nel sistema; quindi gli viene chiesto di riprovare o di recarsi dall'amministratore.
-	
+	\item \textbf{Attori primari}: utente non autenticato;
+\item \textbf{Precondizioni}: l'utente vuole autenticarsi;
+\item \textbf{Postcondizioni}: l'utente si è autenticato con successo come amministratore o responsabile;
+\item \textbf{Scenario principale}: l'utente non ancora autenticato, inserisce il suo codice identificativo nell'apposito form;
+\item \textbf{Descrizione}: l'utente vuole autenticarsi, inserendo il suo codice identificativo.
+\end{itemize}
+
+\subsubsection{UC1.2 – Inserimento password}
+\begin{itemize}
+\item \textbf{Attori primari}: utente non autenticato;
+\item \textbf{Precondizioni}: l'utente vuole autenticarsi;
+\item \textbf{Postcondizioni}: l'utente si è autenticato con successo come amministratore o responsabile;
+\item \textbf{Scenario principale}: l'utente non ancora autenticato, inserisce la sua password nell'apposito input dentro form;
+\item \textbf{Descrizione}: l'utente vuole autenticarsi, inserendo il suo codice identificativo.
 \end{itemize}
 
 \subsection{UC2 - Registrazione nuovo utente}
@@ -60,9 +64,9 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:}	l'amministratore intende registrare nel sistema un nuovo lavoratore assunto nell'azienda non ancora registrato nell'applicativo.
-	\item 	\textbf{Postcondizioni:} l'utente è registrato nel sistema correttamente come responsabile o operatore;
-	\item 	\textbf{Scenario principale:} l'amministratore inserisce i dati personali del lavoratore che vuole registrare nell'applicativo specificandone il ruolo che deve ricoprire all'interno del magazzino (responsabile o operatore);
-	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve compilare i dati dell'account che non devono essere presente all'interno del sistema. Il nuovo utente può essere un responsabile o un operatore.
+	\item 	\textbf{Postcondizioni:} l'utente è registrato nel sistema correttamente come responsabile;
+	\item 	\textbf{Scenario principale:} l'amministratore inserisce i dati personali del lavoratore che vuole registrare nell'applicativo;
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo responsabile, l'amministratore deve compilare i dati dell'account che non devono essere presente all'interno del sistema.
 
 \end{itemize}
 
@@ -76,21 +80,19 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:}	l'amministratore sta eseguendo la registrazione del lavoratore nel sistema;
+	\item 	\textbf{Precondizioni:}	l'amministratore sta eseguendo la registrazione del lavoratore nel server;
 	\item 	\textbf{Postcondizioni:} l'amministratore ha inserito tutti i campi del form\textsubscript{G} di registrazione richiesti;
 	\item 	\textbf{Scenario principale:} l'amministratore compila tutti i campi del form\textsubscript{G} richiesti per la registrazione, ovvero:
 	\begin{itemize}
 		\item inserisce il nome del lavoratore (UC2.1.1);
 		\item inserisce il cognome del lavoratore (UC2.1.2);
-		\item inserisce il ruolo del lavoratore, ovverosia operatore o responsabile (UC2.1.3);
 	\end{itemize}
 	\item 	\textbf{Descrizione:} per effettuare la registrazione, l'amministratore deve fornire i seguenti dati dell'utente:
 	\begin{itemize}
 		\item nome;
-		\item cognome
-		\item ruolo (responsabile, operatore).
+		\item cognome.
 	\end{itemize}
-
+Il server poi ritornerà un codice identificativo e una password standard con il quale il responsabile potrà fare il primo login, dove poi potrà modificare la password (UC3.1.4) per averne una tutta sua.
 \end{itemize}
 
 \paragraph{UC2.1.1 - Inserimento nome}
@@ -113,45 +115,6 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il cognome del lavoratore che si intende registrare.
 	
 \end{itemize}
-
-\paragraph{UC2.1.3 - Inserimento ruolo}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per inserire il ruolo del lavoratore;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il ruolo;
-	\item 	\textbf{Scenario principale:} l'amministratore sceglie tramite una combobox\textsubscript{G} il ruolo che dovrà intraprendere il nuovo lavoratore, ovverosia responsabile o operatore;
-	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il ruolo del lavoratore che si intende registrare. Può scegliere tra responsabile e operatore;
-	\item  \textbf{Specializzazione:} 
-	\begin{itemize}
-		\item UC2.1.4 - Inserimento ruolo responsabile;
-		\item UC2.1.5 - Inserimento ruolo operatore.
-	\end{itemize}
-	
-\end{itemize}
-
-\paragraph{UC2.1.4 - Inserimento ruolo responsabile}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per inserire il ruolo del lavoratore;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha assegnato il ruolo responsabile al nuovo utente che si intende registrare;
-	\item 	\textbf{Scenario principale:} l'amministratore sceglie tramite una combobox\textsubscript{G} il ruolo responsabile.
-	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il ruolo del lavoratore che si intende registrare.
-	
-\end{itemize}
-
-\paragraph{UC2.1.5 - Inserimento ruolo operatore}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per inserire il ruolo del lavoratore;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha assegnato il ruolo di operatore al nuovo utente che si intende registrare;
-	\item 	\textbf{Scenario principale:} l'amministratore sceglie tramite una combobox\textsubscript{G} il ruolo operatore;
-	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il ruolo del lavoratore che si intende registrare. 
-	
-\end{itemize}
-
 
 \subsubsection{UC2.2 - Conferma}
 
@@ -188,9 +151,9 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item 	\textbf{Scenario principale:} vengono visualizzate le operazioni che l'amministratore può effettuare per gestire gli account già presenti:
 	\begin{itemize}
 		\item modificare i dati di un utente (UC3.1);
-		\item eliminare l'account di un utente (UC3.2).
+		\item eliminare l'account di un utente (UC3.2);
+		\item visualizzare la lista di degli utenti presenti (UC3.3).
 	\end{itemize}
-	Viene poi mostrato un form\textsubscript{G} di ricerca per inserire il codice identificativo dell'utente interessato;
 	\item 	\textbf{Descrizione:} l'amministratore ha il compito di gestire gli account presenti nel sistema e aggiornarli in base all'organico del magazzino.
 \end{itemize}
 
@@ -213,60 +176,24 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 \paragraph{UC3.1.1 - Modifica nome}
 
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Attori primari:} amministratore, responsabile;
 	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il nome del lavoratore;
-	\item 	\textbf{Postcondizioni:}  l'amministratore ha compilato il campo con il nome aggiornato;
-	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al nome del lavoratore con il nome aggiornato;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al nome del lavoratore, l'amministratore aggiorna il form\textsubscript{G}.
+	\item 	\textbf{Postcondizioni:}  l'utente ha compilato il campo con il nome aggiornato;
+	\item 	\textbf{Scenario principale:} l'utente compila il campo del form\textsubscript{G} per aggiornare il nome;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al nome, l'utente aggiorna il valore nel form\textsubscript{G}.
 \end{itemize}
 
 \paragraph{UC3.1.2 - Modifica cognome}
 
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Attori primari:} amministratore, responsabile;
 	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il cognome del lavoratore;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il cognome aggiornato;
-	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al cognome del lavoratore con il cognome aggiornato;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome del lavoratore, l'amministratore aggiorna il form\textsubscript{G}.
-
-\end{itemize}
-\paragraph{UC3.1.3 - Modifica ruolo}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il ruolo del lavoratore;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il ruolo aggiornato (responsabile o operatore);
-	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al ruolo del lavoratore con il ruolo aggiornato scegliendo tra responsabile o operatore;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al ruolo del lavoratore, l'amministratore aggiorna il form\textsubscript{G}.
-	\item 	\textbf{Specializzazioni:}
-	\begin{itemize}
-		\item UC3.1.4 - Aggiornamento ruolo a responsabile;
-		\item UC3.1.5 - Aggiornamento ruolo a operatore.
-	\end{itemize}
+	\item 	\textbf{Postcondizioni:} l'utente ha compilato il campo con il cognome aggiornato;
+	\item 	\textbf{Scenario principale:} l'utente compila il campo del form\textsubscript{G} relativo al cognome da aggiornare;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome, l'utente aggiorna il valore form\textsubscript{G}.
 
 \end{itemize}
 
-\paragraph{UC3.1.4 - Aggiornamento ruolo a responsabile}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il ruolo del lavoratore;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha assegnato all'utente il ruole di responsabile, sostituendolo a quello precedente;
-	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al ruolo del lavoratore aggiornandolo a responsabile;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al ruolo del lavoratore, l'amministratore aggiorna il form\textsubscript{G}.
-
-\end{itemize}
-
-\paragraph{UC3.1.5 - Aggiornamento ruolo a operatore}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il ruolo del lavoratore;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha assegnato all'utente il ruole di operatore, sostituendolo a quello precedente;
-	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al ruolo del lavoratore aggiornandolo a operatore;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al ruolo del lavoratore, l'amministratore aggiorna il form\textsubscript{G}.
-
-\end{itemize}
 
 \subsubsection{UC3.2 - Elimina utente}
 
@@ -276,6 +203,16 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item 	\textbf{Postcondizioni:} è stato eliminato dal sistema l'account dell'utente selezionato;
 	\item 	\textbf{Scenario principale:} l'amministratore preme il pulsante apposito per l'eliminazione dell'account;
 	\item 	\textbf{Descrizione:} può essere necessario eliminare l'account di un utente.
+\end{itemize}
+
+\subsubsection{UC3.3 - Visualizzazione lista utenti}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l'amministratore vuole vedere la lista dei responsabili presenti nel server;
+	\item 	\textbf{Postcondizioni:} l'amministratore può vedere una lista con tutti i responsabili registrati nel server;
+	\item 	\textbf{Scenario principale:} l'amministratore vuole vedere la lista dei responsabili presenti nel server con tutti i loro dati pubblici (quindi nome, cognome e codice identificativo);
+	\item 	\textbf{Descrizione:} può essere necessario da parte dell'amministratore, visualizzare la lista di tutti i responsabili inseriti e i loro relativi dati pubblici.
 \end{itemize}
 
 \subsection{UC4 - Gestione task}
