@@ -23,7 +23,7 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 \subsection{UC1 - Login}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.52]{res/images/uc1.PNG}
+	\includegraphics[scale=0.6]{res/images/uc1.PNG}
 	\caption{UC1 - Login}
 \end{figure}
 
@@ -32,7 +32,7 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item 	\textbf{Attori primari:} utente non autenticato;
 	\item 	\textbf{Precondizioni:} l'utente non è autenticato nell'applicativo;
 	\item 	\textbf{Postcondizioni:}	l'utente si è autenticato con successo come amministratore o responsabile. Il server rende disponibili diverse pagine e funzionalità a seconda della tipologia di utente;
-	\item 	\textbf{Scenario principale:} un utente non ancora autenticato richiede il login inserendo nell'apposito form\textsubscript{G} i dati necessari;
+	\item 	\textbf{Scenario principale:} un utente non ancora autenticato richiede il login inserendo nell'apposito form i dati necessari;
 	\item 	\textbf{Descrizione:} l'utente tenta di autenticarsi attraverso il suo codice personale identificativo e la sua password;
 \end{itemize}
 
@@ -41,7 +41,7 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item \textbf{Attori primari}: utente non autenticato;
 \item \textbf{Precondizioni}: l'utente vuole autenticarsi;
 \item \textbf{Postcondizioni}: l'utente si è autenticato con successo come amministratore o responsabile;
-\item \textbf{Scenario principale}: l'utente non ancora autenticato, inserisce il suo codice identificativo nell'apposito form\textsubscript{G};
+\item \textbf{Scenario principale}: l'utente non ancora autenticato, inserisce il suo codice identificativo nell'apposito form;
 \item \textbf{Descrizione}: l'utente vuole autenticarsi, inserendo il suo codice identificativo.
 \end{itemize}
 
@@ -50,8 +50,8 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 \item \textbf{Attori primari}: utente non autenticato;
 \item \textbf{Precondizioni}: l'utente vuole autenticarsi;
 \item \textbf{Postcondizioni}: l'utente si è autenticato con successo come amministratore o responsabile;
-\item \textbf{Scenario principale}: l'utente non ancora autenticato, inserisce la sua password nell'apposito input dentro form\textsubscript{G};
-\item \textbf{Descrizione}: l'utente vuole autenticarsi, inserendo il suo codice identificativo.
+\item \textbf{Scenario principale}: l'utente non ancora autenticato, inserisce la sua password nell'apposito input dentro il form;
+\item \textbf{Descrizione}: l'utente vuole autenticarsi, inserendo la sua password.
 \end{itemize}
 
 \subsection{UC2 - Registrazione nuovo utente}
@@ -177,7 +177,7 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il nome del lavoratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il nome dell'utente;
 	\item 	\textbf{Postcondizioni:}  l'utente ha compilato il campo con il nome aggiornato;
 	\item 	\textbf{Scenario principale:} l'utente compila il campo del form\textsubscript{G} per aggiornare il nome;
 	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al nome, l'utente aggiorna il valore nel form\textsubscript{G}.
@@ -187,13 +187,34 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il cognome del lavoratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il cognome dell'utente;
 	\item 	\textbf{Postcondizioni:} l'utente ha compilato il campo con il cognome aggiornato;
 	\item 	\textbf{Scenario principale:} l'utente compila il campo del form\textsubscript{G} relativo al cognome da aggiornare;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome, l'utente aggiorna il valore form\textsubscript{G}.
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome, l'utente aggiorna il valore nel form\textsubscript{G}.
 
 \end{itemize}
 
+\paragraph{UC3.1.4 - Modifica password}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore, responsabile;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare la password dell'utente;
+	\item 	\textbf{Postcondizioni:} l'utente ha compilato il campo con la password aggiornata;
+	\item 	\textbf{Scenario principale:} l'utente compila il campo del form\textsubscript{G} relativo alla password da aggiornare;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo alla password, l'utente aggiorna il valore nel form\textsubscript{G}.
+
+\end{itemize}
+
+\paragraph{UC3.1.5 - Reset password responsabile}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile la visualizzazione della lista dei responsabili, nella quale l'amministratore può resettare la password;
+	\item 	\textbf{Postcondizioni:} il sistema riporta un messaggio di conferma del reset della password del responsabile specificato;
+	\item 	\textbf{Scenario principale:} l'amministratore segnala al server il responsabile a cui deve resettare la password;
+	\item 	\textbf{Descrizione:} qualora fosse necessario resettare la password ad un responsabile, l'amministratore deve segnalarlo al server tramite un bottone e il server imposta al responsabile indicato una password standard e manda un messaggio di conferma all'amministratore. Sarà poi compito del responsabile modificare la sua password (UC3.1.4) a suo piacimento, dopo aver fatto il login con la password standard.
+
+\end{itemize}
 
 \subsubsection{UC3.2 - Elimina utente}
 
