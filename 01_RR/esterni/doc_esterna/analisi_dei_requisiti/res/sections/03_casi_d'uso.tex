@@ -147,14 +147,14 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
 	\item 	\textbf{Precondizioni:} l'utente intende svolgere delle azioni su uno o più account inseriti;
-	\item 	\textbf{Postcondizioni:} l'utente ha effettuato le azioni (o di modifica/eliminazione di uno o più utenti o di visualizzazione della lista di utenti inseriti) che intendeva fare;
-	\item 	\textbf{Scenario principale:} vengono visualizzate le operazioni che possono essere effettuate per gestire gli account già presenti:
+	\item 	\textbf{Postcondizioni:} l'utente ha effettuato le azioni che intendeva fare (o di modifica o di eliminazione di uno o più utenti o di visualizzazione della lista di utenti inseriti);
+	\item 	\textbf{Scenario principale:} vengono visualizzate le operazioni che possono essere effettuate per gestire gli account già presenti. Esse sono:
 	\begin{itemize}
 		\item modificare i dati di un utente (UC3.1);
 		\item eliminare l'account di un utente (UC3.2);
 		\item visualizzare la lista di degli utenti presenti (UC3.3).
 	\end{itemize}
-	\item 	\textbf{Descrizione:} Ogni account può gestire (e quindi modificare) i propri dati personali mentre solo l'amministratore ha il compito di gestire tutti gli account presenti, visualizzandone la lista e aggiornandoli o eliminandoli.
+	\item 	\textbf{Descrizione:} Ogni account può gestire (e quindi modificare) i propri dati personali mentre solo l'amministratore ha il compito di gestire tutti gli account presenti, quindi di poterli visualizzare in lista e di poterli aggiornare o eliminare.
 \end{itemize}
 
 \subsubsection{UC3.1 - Modifica utente}
@@ -165,11 +165,11 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 	\caption{UC3.1 - Modifica utente}
 \end{figure}
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore intende modificare il profilo dell'utente selezionato già registrato all'interno dell'applicativo;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha cambiato alcuni campi dell'account di un utente;
-	\item 	\textbf{Scenario principale:} l'amministratore modifica un campo del profilo dell'utente;
-	\item 	\textbf{Descrizione:} per modificare un campo dell'account di un lavoratore, l'amministratore deve modificare quello corrente con quello corretto.
+	\item 	\textbf{Attori primari:} amministratore, responsabile;
+	\item 	\textbf{Precondizioni:} l'utente intende modificare o il proprio profilo (nel caso del responsabile) o il profilo di un altro utente selezionato (amministratore). In entrambi i casi i profili sono già stati precedentemente registrati all'interno dell'applicativo;
+	\item 	\textbf{Postcondizioni:} l'utente ha cambiato alcuni campi dell'account di un profilo;
+	\item 	\textbf{Scenario principale:} l'utente modifica un campo del profilo;
+	\item 	\textbf{Descrizione:} per modificare un campo dell'account, l'utente deve modificare quello corrente con quello corretto.
 
 \end{itemize}
 
