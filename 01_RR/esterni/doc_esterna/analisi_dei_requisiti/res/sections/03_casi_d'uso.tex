@@ -17,7 +17,7 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item{\textbf{Responsabile:}\\
 	 \'E la figura in capo della logistica del magazzino: inserisce i task\textsubscript{G} che devono essere svolti dagli operatori.}
 	\item{\textbf{Amministratore:}\\
- Ha in capo la gestione operativa: inserisce, modifica ed elimina gli account del personale per l'accesso al sistema, censisce i muletti nel database, crea e modifica la planimetria\textsubscript{G} e la percorribilità della mappa del magazzino.}
+ Ha in capo la gestione operativa: inserisce, modifica ed elimina gli account del personale per l'accesso al server, censisce i muletti nel database, crea e modifica la planimetria\textsubscript{G} e la percorribilità della mappa del magazzino.}
 \end{itemize}
 
 \subsection{UC1 - Login}
@@ -63,10 +63,10 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 \end{figure}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:}	l'amministratore intende registrare nel sistema un nuovo lavoratore assunto nell'azienda non ancora registrato nell'applicativo.
-	\item 	\textbf{Postcondizioni:} l'utente è registrato nel sistema correttamente come responsabile;
+	\item 	\textbf{Precondizioni:}	l'amministratore intende inserire un nuovo responsabile assunto nell'azienda e non ancora registrato nell'applicativo.
+	\item 	\textbf{Postcondizioni:} l'utente è registrato nel server correttamente come responsabile;
 	\item 	\textbf{Scenario principale:} l'amministratore inserisce i dati personali del lavoratore che vuole registrare nell'applicativo;
-	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo responsabile, l'amministratore deve compilare i dati dell'account che non devono essere presente all'interno del sistema.
+	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo responsabile, l'amministratore deve compilare i dati dell'account che non devono essere presente all'interno del server.
 
 \end{itemize}
 
@@ -81,8 +81,8 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:}	l'amministratore sta eseguendo la registrazione del lavoratore nel server;
-	\item 	\textbf{Postcondizioni:} l'amministratore ha inserito tutti i campi del form\textsubscript{G} di registrazione richiesti;
-	\item 	\textbf{Scenario principale:} l'amministratore compila tutti i campi del form\textsubscript{G} richiesti per la registrazione, ovvero:
+	\item 	\textbf{Postcondizioni:} l'amministratore ha inserito i dati in tutti i campi del form di registrazione richiesti;
+	\item 	\textbf{Scenario principale:} l'amministratore compila tutti i campi del form richiesti per la registrazione, ovvero:
 	\begin{itemize}
 		\item inserisce il nome del lavoratore (UC2.1.1);
 		\item inserisce il cognome del lavoratore (UC2.1.2);
@@ -92,15 +92,15 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 		\item nome;
 		\item cognome.
 	\end{itemize}
-Il server poi ritornerà un codice identificativo e una password standard con il quale il responsabile potrà fare il primo login, dove poi potrà modificare la password (UC3.1.4) per averne una tutta sua.
+Il server poi ritornerà un codice identificativo e una password standard, con i quali il responsabile potrà fare il primo login, dove poi potrà modificare la password (UC3.1.4) per averne una tutta sua.
 \end{itemize}
 
 \paragraph{UC2.1.1 - Inserimento nome}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per inserire il nome del lavoratore;
+	\item 	\textbf{Precondizioni:} il server ha reso disponibile il campo del form per inserire il nome del lavoratore;
 	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il nome;
-	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al nome del lavoratore;
+	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form relativo al nome del lavoratore;
 	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il nome del lavoratore che si intende registrare.
 
 \end{itemize}
@@ -109,9 +109,9 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per inserire il cognome del lavoratore;
+	\item 	\textbf{Precondizioni:} il server ha reso disponibile il campo del form per inserire il cognome del lavoratore;
 	\item 	\textbf{Postcondizioni:} l'amministratore ha compilato il campo con il cognome;
-	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form\textsubscript{G} relativo al cognome del lavoratore;
+	\item 	\textbf{Scenario principale:} l'amministratore compila il campo del form relativo al cognome del lavoratore;
 	\item 	\textbf{Descrizione:} per effettuare l'aggiunta di un nuovo utente, l'amministratore deve inserire il cognome del lavoratore che si intende registrare.
 	
 \end{itemize}
@@ -120,9 +120,9 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore ha compilato il form\textsubscript{G} per l'inserimento dei dati del nuovo utente e rende disponibile un pulsante per la conferma;
+	\item 	\textbf{Precondizioni:} l'amministratore ha compilato il form per l'inserimento dei dati del nuovo utente e rende disponibile un pulsante per la conferma;
 	\item 	\textbf{Postcondizioni:} viene visualizzato a video un messaggio con la conferma della ricezione dei dati e il codice identificativo;
-	\item 	\textbf{Scenario principale:} l'amministratore preme il pulsante di conferma dopo aver completato tutti i campi del form\textsubscript{G};
+	\item 	\textbf{Scenario principale:} l'amministratore preme il pulsante di conferma dopo aver completato tutti i campi del form;
 	\item 	\textbf{Descrizione:} l'amministratore preme il pulsante per la conferma dell'inserimento dei dati. A schermo viene visualizzato un messaggio con l'avvenuta registrazione e il codice identificativo relativo all'account registrato.
 
 \end{itemize}
@@ -131,10 +131,10 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} i dati del lavoratore sono già presenti nel sistema;
-	\item 	\textbf{Postcondizioni:} viene visualizzato a video un messaggio d'errore per informare l'amministratore che il lavoratore è già presente nel sistema;
+	\item 	\textbf{Precondizioni:} i dati del lavoratore sono già presenti nel server;
+	\item 	\textbf{Postcondizioni:} viene visualizzato a video un messaggio d'errore per informare l'amministratore che il lavoratore è già presente nel server;
 	\item 	\textbf{Scenario principale:} l'amministratore tenta di registrare nell'applicativo un lavoratore già registrato;
-	\item 	\textbf{Descrizione:} l'amministratore visualizza un messaggio d'errore dovuto al fatto di aver inserito i dati di un utente già presente nel sistema.
+	\item 	\textbf{Descrizione:} l'amministratore visualizza un messaggio d'errore dovuto al fatto di aver inserito i dati di un utente già presente nel server.
 \end{itemize}
 
 \subsection{UC3 - Gestione account già presenti}
@@ -177,20 +177,20 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il nome dell'utente;
+	\item 	\textbf{Precondizioni:} il server ha reso disponibile il campo del form per modificare il nome dell'utente;
 	\item 	\textbf{Postcondizioni:}  l'utente ha compilato il campo con il nome aggiornato;
-	\item 	\textbf{Scenario principale:} l'utente compila il campo del form\textsubscript{G} per aggiornare il nome;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al nome, l'utente aggiorna il valore nel form\textsubscript{G}.
+	\item 	\textbf{Scenario principale:} l'utente compila il campo del form per aggiornare il nome;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al nome, l'utente aggiorna il valore nel form.
 \end{itemize}
 
 \paragraph{UC3.1.2 - Modifica cognome}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare il cognome dell'utente;
+	\item 	\textbf{Precondizioni:} il server ha reso disponibile il campo del form per modificare il cognome dell'utente;
 	\item 	\textbf{Postcondizioni:} l'utente ha compilato il campo con il cognome aggiornato;
-	\item 	\textbf{Scenario principale:} l'utente compila il campo del form\textsubscript{G} relativo al cognome da aggiornare;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome, l'utente aggiorna il valore nel form\textsubscript{G}.
+	\item 	\textbf{Scenario principale:} l'utente compila il campo del form relativo al cognome da aggiornare;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome, l'utente aggiorna il valore nel form.
 
 \end{itemize}
 
@@ -198,10 +198,10 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile il campo del form\textsubscript{G} per modificare la password dell'utente;
+	\item 	\textbf{Precondizioni:} il server ha reso disponibile il campo del form per modificare la password dell'utente;
 	\item 	\textbf{Postcondizioni:} l'utente ha compilato il campo con la password aggiornata;
-	\item 	\textbf{Scenario principale:} l'utente compila il campo del form\textsubscript{G} relativo alla password da aggiornare;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo alla password, l'utente aggiorna il valore nel form\textsubscript{G}.
+	\item 	\textbf{Scenario principale:} l'utente compila il campo del form relativo alla password da aggiornare;
+	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo alla password, l'utente aggiorna il valore nel form.
 
 \end{itemize}
 
@@ -209,8 +209,8 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il sistema ha reso disponibile la visualizzazione della lista dei responsabili, nella quale l'amministratore può resettare la password;
-	\item 	\textbf{Postcondizioni:} il sistema riporta un messaggio di conferma del reset della password del responsabile specificato;
+	\item 	\textbf{Precondizioni:} il server ha reso disponibile la visualizzazione della lista dei responsabili, nella quale l'amministratore può resettare la password;
+	\item 	\textbf{Postcondizioni:} il server riporta un messaggio di conferma del reset della password del responsabile specificato;
 	\item 	\textbf{Scenario principale:} l'amministratore segnala al server il responsabile a cui deve resettare la password;
 	\item 	\textbf{Descrizione:} qualora fosse necessario resettare la password ad un responsabile, l'amministratore deve segnalarlo al server tramite un bottone e il server imposta al responsabile indicato una password standard e manda un messaggio di conferma all'amministratore. Sarà poi compito del responsabile modificare la sua password (UC3.1.4) a suo piacimento, dopo aver fatto il login con la password standard.
 
@@ -221,7 +221,7 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:} l'amministratore intende eliminare il profilo dell'utente selezionato;
-	\item 	\textbf{Postcondizioni:} è stato eliminato dal sistema l'account dell'utente selezionato;
+	\item 	\textbf{Postcondizioni:} è stato eliminato dal server l'account dell'utente selezionato;
 	\item 	\textbf{Scenario principale:} l'amministratore preme il pulsante apposito per l'eliminazione dell'account;
 	\item 	\textbf{Descrizione:} può essere necessario eliminare l'account di un utente.
 \end{itemize}
@@ -700,11 +700,11 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
   \item   \textbf{Attori primari:} amministratore;
 
-   \item   \textbf{Precondizioni:} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del codice identificativo del nuovo POI\textsubscript{A};
+   \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del codice identificativo del nuovo POI\textsubscript{A};
 
    \item   \textbf{Postcondizioni:} l'amministratore ha inserito il codice identificativo del nuovo POI\textsubscript{A}; 
 
-   \item   \textbf{Scenario principale:} l'amministratore inserisce il codice identificativo del nuovo POI\textsubscript{A} nell'apposito form\textsubscript{G};
+   \item   \textbf{Scenario principale:} l'amministratore inserisce il codice identificativo del nuovo POI\textsubscript{A} nell'apposito form;
 
    \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare un codice identificativo al nuovo POI\textsubscript{A}.
 
@@ -720,7 +720,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Attori primari:} amministratore;
 
-  \item   \textbf{Precondizioni:} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
+  \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del tipo di POI\textsubscript{A};
 
    \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa; 
 
@@ -761,7 +761,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Attori primari:} amministratore;
 
-   \item   \textbf{Precondizioni:} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
+   \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del tipo di POI\textsubscript{A};
 
    \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo base; 
 
@@ -781,7 +781,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Attori primari:} amministratore;
 
-   \item   \textbf{Precondizioni:} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
+   \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del tipo di POI\textsubscript{A};
 
    \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo carico; 
 
@@ -801,7 +801,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Attori primari:} amministratore;
 
-   \item   \textbf{Precondizioni:} l'amministratore visualizza il form\textsubscript{G} per l'inserimento del tipo di POI\textsubscript{A};
+   \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del tipo di POI\textsubscript{A};
 
    \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo scarico; 
 
@@ -1083,7 +1083,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:} l'amministratore sta visualizzando l'interfaccia per l'aggiunta di un nuovo mezzo;
 	\item 	\textbf{Postcondizioni:} è stata aggiunta un'unità all'interno del sistema con il relativo codice identificativo;
-	\item 	\textbf{Scenario principale:} l'amministratore visualizza un form\textsubscript{G} per l'inserimento del codice identificativo del muletto e conferma l'aggiunta.
+	\item 	\textbf{Scenario principale:} l'amministratore visualizza un form per l'inserimento del codice identificativo del muletto e conferma l'aggiunta.
 	\item 	\textbf{Descrizione:} quando viene utilizzato un nuovo muletto all'interno del magazzino, esso deve venire registrato nel sistema dall'amministratore assegnandogli un proprio codice identificativo.
 
 \end{itemize}
