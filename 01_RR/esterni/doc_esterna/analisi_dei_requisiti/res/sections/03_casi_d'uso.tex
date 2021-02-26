@@ -140,21 +140,21 @@ Il server poi ritornerà un codice identificativo e una password standard con il
 \subsection{UC3 - Gestione account già presenti}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.52]{res/images/uc3.png}
+	\includegraphics[scale=0.6]{res/images/uc3.png}
 	\caption{UC3 - Gestione account già presenti}
 \end{figure}
 
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore intende effettuare un cambiamento degli account già presenti nel sistema;
-	\item 	\textbf{Postcondizioni:} vi è un cambiamento degli account registrati;
-	\item 	\textbf{Scenario principale:} vengono visualizzate le operazioni che l'amministratore può effettuare per gestire gli account già presenti:
+	\item 	\textbf{Attori primari:} amministratore, responsabile;
+	\item 	\textbf{Precondizioni:} l'utente intende svolgere delle azioni su uno o più account inseriti;
+	\item 	\textbf{Postcondizioni:} l'utente ha effettuato le azioni (o di modifica/eliminazione di uno o più utenti o di visualizzazione della lista di utenti inseriti) che intendeva fare;
+	\item 	\textbf{Scenario principale:} vengono visualizzate le operazioni che possono essere effettuate per gestire gli account già presenti:
 	\begin{itemize}
 		\item modificare i dati di un utente (UC3.1);
 		\item eliminare l'account di un utente (UC3.2);
 		\item visualizzare la lista di degli utenti presenti (UC3.3).
 	\end{itemize}
-	\item 	\textbf{Descrizione:} l'amministratore ha il compito di gestire gli account presenti nel sistema e aggiornarli in base all'organico del magazzino.
+	\item 	\textbf{Descrizione:} Ogni account può gestire (e quindi modificare) i propri dati personali mentre solo l'amministratore ha il compito di gestire tutti gli account presenti, visualizzandone la lista e aggiornandoli o eliminandoli.
 \end{itemize}
 
 \subsubsection{UC3.1 - Modifica utente}
