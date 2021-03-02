@@ -23,7 +23,7 @@
     \end{itemize}
     \subsubsection{Ciclo di vita dei documenti}
     \label{ciclovitadoc}
-    Ogni documento formale si redige ed incrementa tramite queste attivita\textsubscript{G}:
+    Ogni documento formale si redige ed incrementa tramite queste attività\textsubscript{G}:
     \begin{itemize}
         \item \textbf{stesura: }la scrittura del documento in sé, riguarda sia la creazione di nuove parti che l'aggiornamento di queste. Uno o più redattori si occupano di ciò;
         \item \textbf{verifica: }eseguita da uno o più verificatori, necessariamente diversi dai redattori, consiste nel controllo della correttezza sintattica, semantica, grammaticale ed ortografica e della conformità del documento rispetto alle suo scopo. Nel caso in cui si rendano necessarie modifiche sostanziali, i verificatori \hyperref[risoluzioneproblemi]{notificheranno il responsabile} che provvederà a riportare il documento in stesura e solleciterà i redattori affinché apportino le correzioni richieste. I verificatori sono autorizzati ad apportare piccole modifiche correttive quali:
@@ -39,7 +39,7 @@
         \end{itemize}
         \item \textbf{approvazione: }quando i verificatori riporteranno la completa correttezza ed aderenza ai requisito\textsubscript{G} del documento, il responsabile provvederà all'approvazione finale ed al rilascio di una nuova versione dello stesso.
     \end{itemize}
-    Adottando un approccio incrementale\textsubscript{G}, queste attivita\textsubscript{G} possono ripetersi.
+    Adottando un approccio incrementale\textsubscript{G}, queste attività\textsubscript{G} possono ripetersi.
     \subsubsection{Struttura dei documenti formali}
     \pparagraph{Organizzazione in file e cartelle}
     Ogni documento, ha una sua cartella dedicata, all'interno della quale ci devono essere:
@@ -71,7 +71,7 @@
     Raccoglie in forma tabellare tutte le modifiche e conseguentemente la storia del documento, così strutturate:
     \begin{itemize}
         \item versione del documento relativa alla modifica
-        \item breve descrizione delle attivita\textsubscript{G} svolte
+        \item breve descrizione delle attività\textsubscript{G} svolte
         \item data della modifica, secondo lo standard \href{https://www.iso.org/iso-8601-date-and-time-format.html}{ISO 8601}
         \item cognome e nome di chi ha apportato la modifica
         \item ruolo del modificatore rispetto al ciclo di vita del documento, può quindi essere: redattore, verificatore, responsabile.
@@ -117,14 +117,14 @@
     Gli acronimi ed i termini di glossario vanno definiti ed inseriti in ordine alfabetico all'interno della pagina web "Glossario" di GitHub, istruzioni precise su come utilizzare correttamente questo documento si trovano nella \textsc{wiki how-to glossario}. Una volta che una voce è stata aggiunta, la si può usare liberamente in qualsiasi sezione tramite il suo nome, nel caso di termine nel glossario, o abbreviazione nel caso di acronimo.
 
     \pparagraph{Funzionamento}
-    Ad ogni azione di gitpush\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
+    Ad ogni azione di git\textsubscript{G} push\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
     \begin{itemize}
         \item controlla tutti i documenti che hanno almeno un termine definito nella pagina "Glossario" di GitHub;
         \item sostituisce tutte le occorrenze delle voci di glossario e acronimi in ogni sezione con i rispettivi comandi \LaTeX{}\ (pedice A o G);
         \item se ci sono stati cambiamenti, ricompila il documento per ottenere un pdf aggiornato;
-        \item se ci sono stati dei documenti aggiornati, effettua gitcommit\textsubscript{G} e gitpush\textsubscript{G}.
+        \item se ci sono stati dei documenti aggiornati, effettua commit\textsubscript{G} e git\textsubscript{G} push\textsubscript{G}.
     \end{itemize}
-    Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una gitpull\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una gitpush\textsubscript{G}, così da avere il documento aggiornato ed evitare problemi di conflitti e nel vcs\textsubscript{A}.
+    Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una git\textsubscript{G} pull\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una git\textsubscript{G} push\textsubscript{G}, così da avere il documento aggiornato ed evitare problemi di conflitti e nel VCS\textsubscript{A}.
     \subsubsection{Norme tipografiche}
         \pparagraph{Nomi di file e cartelle}
         \label{convezionenomifile}
@@ -194,11 +194,11 @@
     \subsubsection{Workflow di versionamento}
         Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di git\textsubscript{G} e GitHub si trovano nella wiki\textsubscript{G} \textsc{GIT, Github \& Jira}
         \pparagraph{Pull requests}
-            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una gitpull\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
+            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una git\textsubscript{G} pull\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
 
     \subsubsection{Integrazione con Jira}
     \label{jiraintegration}
-        GitHub è stato configurato in maniera che ad ogni gitcommit\textsubscript{G} si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, Github \& Jira}} è possibile collegare ogni gitcommit\textsubscript{G} con una task\textsubscript{G} o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
+        GitHub è stato configurato in maniera che ad ogni commit\textsubscript{G} si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, Github \& Jira}} è possibile collegare ogni commit\textsubscript{G} con una task\textsubscript{G} o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
 
     \subsubsection{Strumenti}
     Come già detto, le repo\textsubscript{A} sono tenute su GitHub, per quanto riguarda la gestione locale, ogni membro è libero di adottare lo strumento che preferisce.
@@ -239,7 +239,7 @@
 	\end{itemize}
 	In questo caso si mira ad ottenere software e documentazione di qualità soddisfacente.
     \subsubsection{Attività}
-    Le tre attivita\textsubscript{G} principali del processo sono:
+    Le tre attività\textsubscript{G} principali del processo sono:
     \begin{itemize}
     	\item \textbf{Pianificazione:} porsi degli obiettivi di qualità, definire strategie per raggiungerli e disporre di conseguenza persone e risorse nel modo migliore;
     	\item \textbf{Valutazione:} mettere in atto la pianificazione, applicando i criteri, misurando e monitorando i risultati;
