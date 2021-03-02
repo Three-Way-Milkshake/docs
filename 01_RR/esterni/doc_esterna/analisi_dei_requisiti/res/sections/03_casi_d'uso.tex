@@ -32,23 +32,23 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item 	\textbf{Attori primari:} utente non autenticato;
 	\item 	\textbf{Precondizioni:} l'utente non è autenticato nell'applicativo;
 	\item 	\textbf{Postcondizioni:}	l'utente si è autenticato con successo come amministratore o responsabile. Il server rende disponibili diverse pagine e funzionalità a seconda della tipologia di utente;
-	\item 	\textbf{Scenario principale:} un utente non ancora autenticato richiede il login inserendo nell'apposito form i dati necessari;
+	\item 	\textbf{Scenario principale:} un utente non ancora autenticato richiede il login inserendo nell'apposito form i dati necessari, ossia codice identificativo e password;
 	\item 	\textbf{Descrizione:} l'utente tenta di autenticarsi attraverso il suo codice personale identificativo e la sua password;
 \end{itemize}
 
-\subsubsection{UC1.1 – Inserimento codice identificativo}
+\subsubsection{UC1.1 - Inserimento codice identificativo}
 \begin{itemize}
 	\item \textbf{Attori primari}: utente non autenticato;
-\item \textbf{Precondizioni}: l'utente vuole autenticarsi;
+\item \textbf{Precondizioni}: l'utente non è autenticato nell'applicativo e si appresta a iniziare il proprio lavoro;
 \item \textbf{Postcondizioni}: l'utente si è autenticato con successo come amministratore o responsabile;
 \item \textbf{Scenario principale}: l'utente non ancora autenticato, inserisce il suo codice identificativo nell'apposito form;
 \item \textbf{Descrizione}: l'utente vuole autenticarsi, inserendo il suo codice identificativo.
 \end{itemize}
 
-\subsubsection{UC1.2 – Inserimento password}
+\subsubsection{UC1.2 - Inserimento password}
 \begin{itemize}
 \item \textbf{Attori primari}: utente non autenticato;
-\item \textbf{Precondizioni}: l'utente vuole autenticarsi;
+\item \textbf{Precondizioni}: l'utente non è autenticato nell'applicativo e si appresta a iniziare il proprio lavoro;
 \item \textbf{Postcondizioni}: l'utente si è autenticato con successo come amministratore o responsabile;
 \item \textbf{Scenario principale}: l'utente non ancora autenticato, inserisce la sua password nell'apposito input dentro il form;
 \item \textbf{Descrizione}: l'utente vuole autenticarsi, inserendo la sua password.
@@ -289,9 +289,9 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 	\end{itemize}
 	\item 	\textbf{Specializzazione:}
 	\begin{itemize}
-		\item UC4.1.2 - Inserimento priotità 0;
-		\item UC4.1.3 - Inserimento priotità 0;
-		\item UC4.1.4 - Inserimento priotità 0;
+		\item UC4.1.2 - Inserimento priorità 0;
+		\item UC4.1.3 - Inserimento priorità 1;
+		\item UC4.1.4 - Inserimento priorità 2;
 	\end{itemize}
 \end{itemize}
 
@@ -369,9 +369,9 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 	\item 	\textbf{Descrizione:} il responsabile si accorge che la priorità di una task\textsubscript{G} è errata o necessita di un aggiornamento, quindi procede con la modifica.
 	\item \textbf{Specializzazione:}
 	\begin{itemize}
-		\item UC4.5 - Aggiornamento priotità a 0;
-		\item UC4.1.3 - Aggiornamento priotità a 1;
-		\item UC4.1.4 - Aggiornamento priotità a 2;
+		\item UC4.5 - Aggiornamento priorità a 0;
+		\item UC4.1.3 - Aggiornamento priorità a 1;
+		\item UC4.1.4 - Aggiornamento priorità a 2;
 	\end{itemize}
 \end{itemize}
 
@@ -447,8 +447,8 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 \subsubsection{UC6.1 - Visualizzazione posizione muletti in real-time}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} gli attore\textsubscript{G} sono autenticati nel sistema e visualizzano correttamente la mappa;
-	\item 	\textbf{Postcondizioni:} gli attore\textsubscript{G} visualizzano gli spostamenti dei muletti in real-time nella mappa;
+	\item 	\textbf{Precondizioni:} gli attori sono autenticati nel sistema e visualizzano correttamente la mappa;
+	\item 	\textbf{Postcondizioni:} gli attori visualizzano gli spostamenti dei muletti in real-time nella mappa;
 	\item 	\textbf{Scenario principale:} il responsabile e l'amministratore una volta autenticati, visualizzano la mappa completa del magazzino con i muletti in movimento;
 	\item 	\textbf{Descrizione:} il responsabile e l'amministratore supervisionano il magazzino tramite una mappa che visualizza in real-time la posizione dei muletti al suo interno.
 \end{itemize}
@@ -885,9 +885,9 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \subsection{UC9 - Segnalazione del completamento di una task}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
-	\item 	\textbf{Precondizioni:} l'operatore ha raggiunto e soddisfatto una task\textsubscript{G};
+	\item 	\textbf{Precondizioni:} l'operatore ha raggiunto il POI di scarico interessato per il completamento di una task;
 	\item 	\textbf{Postcondizioni:} il sistema ha registrato il completamento della task\textsubscript{G} che verrà cancellata dalla lista completa di tutte le task\textsubscript{G} da soddisfare e da quella personale dell'operatore;
-	\item 	\textbf{Scenario principale:} l'operatore clicca sul POI\textsubscript{A} evidenziato in UC8.3 e conferma l'avvenuto scarico;
+	\item 	\textbf{Scenario principale:} appena l'operatore raggiunge il POI interessato, il sistema rende disponibile un bottone per segnalare il completamento della task. L'operatore lo prene non appena ha finito di scaricare la merce ed è pronto a ripartire;
 	\item 	\textbf{Descrizione:} l'operatore ha scaricato la merce nel punto destinato, quindi deve segnalare di aver completato la task\textsubscript{G} per poter proseguire con la prossima.
 
 \end{itemize}
@@ -897,7 +897,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} è attiva la guida automatica del muletto;
 	\item 	\textbf{Postcondizioni:} l'operatore visualizza la direzione degli spostamenti del pilota automatico;
-	\item 	\textbf{Scenario principale:} il sistema accende le icone delle quattro frecce direzionali e dello start/stop in base agli spostamenti che intende effettuare;
+	\item 	\textbf{Scenario principale:} il sistema controlla il movimento dell'unita e visualizza i cambi di direzione colorando la freccia interessata;
 	\item 	\textbf{Descrizione:} le unità possono essere guidate dal pilota automatico, ma gli spostamenti che il sistema ha intenzione di effettuare devono essere visualizzati dall'esterno.
 
 \end{itemize}
