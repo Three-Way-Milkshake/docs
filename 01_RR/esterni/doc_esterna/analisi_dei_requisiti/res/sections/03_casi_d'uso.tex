@@ -237,19 +237,17 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
 	\item 	\textbf{Precondizioni:} il responsabile è autenticato nel sistema il quale rende disponibile l'interfaccia per la gestione delle task\textsubscript{G} che verranno assegnati alle unità;
-	\item 	\textbf{Postcondizioni:} la lista delle task\textsubscript{G} è stata aggiornata;
-	\item 	\textbf{Scenario principale:} il responsabile effettua le operazioni necessarie per la gestione della lista delle task\textsubscript{G} che verranno assegnate dal sistema alle unità, esse possono essere:
+	\item 	\textbf{Postcondizioni:} l'insieme di task viene aggiornato;
+	\item 	\textbf{Scenario principale:} il responsabile effettua le operazioni necessarie per la gestione delle task da far soddisfare alle unità, esse possono essere:
 	\begin{itemize}
-		\item l'inserimento di una nuova task\textsubscript{G} (UC4.1) con la relativa priorità (UC4.1.1) e il POI\textsubscript{A} a cui fa riferimento, in cui bisogna scaricare la merce (UC4.1.5);
-		\item la conferma dell'inserimento della nuova task\textsubscript{G} (UC4.2);
-		\item l'eliminazione di una task\textsubscript{G} dalla lista (UC4.3);
-		\item la modifica della priorità di una task\textsubscript{G} esistente (UC4.4);
+		\item l'inserimento di una nuova lista ordinata di task (UC4.1) che verrà poi assegnata dal sistema ad un'unità;
+		\item l'eliminazione di una lista di task già creata precedentemente (UC4.2);
 	\end{itemize}
-	\item 	\textbf{Descrizione:} lo scarico delle merci in un determinato punto di interesse viene chiamato task\textsubscript{G}. Il responsabile deve inserire nel sistema quali task\textsubscript{G} devono essere completate e con quale priorità. L'applicativo riceve le informazioni, le ordina e le affida alle unità in base alle esigenze. 
+	\item 	\textbf{Descrizione:} lo scarico delle merci in un determinato punto di interesse di scarico viene chiamato task\textsubscript{G}. Il responsabile inserisce delle liste di task ordinate che verranno assegnate dal sistema ad ogni unità. 
 
 \end{itemize}
 
-\subsubsection{UC4.1 - Inserimento nuova task}
+\subsubsection{UC4.1 - Inserimento nuova lista ordinata di task}
 
 \begin{figure}[H]
 	\centering
@@ -259,77 +257,47 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} è resa disponibile l'interfaccia per l'inserimento di una nuova task\textsubscript{G}; 
-	\item 	\textbf{Postcondizioni:} il responsabile ha aggiunto con successo la task\textsubscript{G} alla lista. Il sistema assegnerà la nuova task\textsubscript{G} a un muletto, il quale la visualizzerà nella propria lista di compiti (UC8);
-	\item 	\textbf{Scenario principale:} il responsabile preme l'apposito pulsante per l'aggiunta di una nuova task\textsubscript{G}; 
-	\item 	\textbf{Descrizione:} il responsabile inserisce un nuovo compito da eseguire nella lista dei task\textsubscript{G};
+	\item 	\textbf{Precondizioni:} è resa disponibile l'interfaccia per l'inserimento di una nuova lista di task\textsubscript{G}; 
+	\item 	\textbf{Postcondizioni:} il responsabile ha aggiunto con successo una nuova lista di task ordinata la quale verrà assegnata ad un'unità, il quale la visualizzerà nella propria lista di compiti (UC8);
+	\item 	\textbf{Scenario principale:} il responsabile preme l'apposito pulsante per l'aggiunta di una nuova lista di task\textsubscript{G}; visualizza le operazioni che può intraprendere per creare una nuova lista, ossia:
+	\begin{itemize}
+		\item l'aggiunta di una task singola con il proprio POI di scarico per soddisfarla (UC4.1.1);
+		\item la rimozione di una task già aggiunta nella lista che si sta creando (UC4.1.2);
+		\item la conferma della lista che si è creata, così che il sistema la possa prendere in carico (UC4.1.3);
+	\end{itemize}
+	\item 	\textbf{Descrizione:} i compiti da svolgere sono organizzati in liste di task ordinate, ognuna assegnata ad un'unità che dovrà soddisfarla. Il responsabile ha il compito di creare ogni lista che verrà gestita dal sistema.
 \end{itemize}
 
-\paragraph{UC4.1.1 - Inserimento priorità}
+\paragraph{UC4.1.1 - Aggiunta nuova task alla lista}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task\textsubscript{G};
-	\item 	\textbf{Postcondizioni:} è stata compilata correttamente la priorità relativa alla task\textsubscript{G} che si vuole inserire;
-	\item 	\textbf{Scenario principale:} il responsabile le assegna una priorità (0,1,2) tramite una combobox\textsubscript{G};
-	\item 	\textbf{Descrizione:} le task\textsubscript{G} possono avere tre diversi gradi di priorità:
-	\begin{itemize}
-		\item 0: priorità bassa;
-		\item 1: priorità media;
-		\item 2: priorità alta.
-	\end{itemize}
-	\item 	\textbf{Specializzazione:}
-	\begin{itemize}
-		\item UC4.1.2 - Inserimento priorità 0;
-		\item UC4.1.3 - Inserimento priorità 1;
-		\item UC4.1.4 - Inserimento priorità 2;
-	\end{itemize}
-\end{itemize}
-
-\paragraph{UC4.1.2 - Inserimento priorità 0}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task\textsubscript{G} e deve scegliere che priorità assegnarle;
-	\item 	\textbf{Postcondizioni:} è stata assegnata alla nuova task\textsubscript{G} la priorità 0;
-	\item 	\textbf{Scenario principale:} il responsabile seleziona la priorità 0 attraverso la combobox\textsubscript{G};
-	\item 	\textbf{Descrizione:} ogni task\textsubscript{G} deve avere una priorità, il responsabile ha il compito di assegnarla. Una task\textsubscript{G} con priorità 0 significa che non ha la precenza sulle altre.	
-\end{itemize}
-\paragraph{UC4.1.3 - Inserimento priorità 1}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task\textsubscript{G} e deve scegliere che priorità assegnarle;
-	\item 	\textbf{Postcondizioni:} è stata assegnata alla nuova task\textsubscript{G} la priorità 1;
-	\item 	\textbf{Scenario principale:} il responsabile seleziona la priorità 1 attraverso la combobox\textsubscript{G};
-	\item 	\textbf{Descrizione:} ogni task\textsubscript{G} deve avere una priorità, il responsabile ha il compito di assegnarla. Una task\textsubscript{G} con priorità 1 significa che è un compito di media importanza.
+	\item 	\textbf{Precondizioni:} il responsabile sta creando una nuova lista di task;
+	\item 	\textbf{Postcondizioni:} è stata inserita alla lista corrente una nuova task;
+	\item 	\textbf{Scenario principale:} il responsabile preme un apposito pulsante per l'aggiunta di una nuova task alla lista che si sta creando. Il sistema farà apparire la lista di POI di scarico dal quale selezionerà il relativo punto per soddisfare tale compito. Successivamente conferma la creazione.
+	\item 	\textbf{Descrizione:} il responsabile inserisce il nuovo compito da eseguire nella lista ordinata di task che sta creando, inserendo il POI di scarico relativo dove avverrà lo scarico delle merci da parte dell'unità.
 	
 \end{itemize}
-\paragraph{UC4.1.4 - Inserimento priorità 2}
+
+\paragraph{UC4.1.2 - Rimozione task dalla lista}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task\textsubscript{G} e deve scegliere che priorità assegnarle;
-	\item 	\textbf{Postcondizioni:} è stata assegnata alla nuova task\textsubscript{G} la priorità 2;
-	\item 	\textbf{Scenario principale:} il responsabile seleziona la priorità 2 attraverso la combobox\textsubscript{G};
-	\item 	\textbf{Descrizione:} ogni task\textsubscript{G} deve avere una priorità, il responsabile ha il compito di assegnarla. Una task\textsubscript{G} con priorità 2 significa che ha la precenza sulle altre.
+	\item 	\textbf{Precondizioni:} il responsabile sta creando la lista ordinata e ha aggiunto almeno una task;
+	\item 	\textbf{Postcondizioni:} è stata eliminata una task dalla lista che si sta creando;
+	\item 	\textbf{Scenario principale:} il responsabile preme un pulsante di eliminazione a fianco della task interessata;
+	\item 	\textbf{Descrizione:} durante la creazione della lista ordinata, il responsabile deve poter rimediare ad aggiunte errate eliminando determinate task.
+\end{itemize}
+\paragraph{UC4.1.3 - Conferma inserimento lista}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} il responsabile ha completato la creazione di una lista ordinata di task;
+	\item 	\textbf{Postcondizioni:} la lista viene inviata al sistema che la assegnerà ad un'unità;
+	\item 	\textbf{Scenario principale:} il responsabile preme l'apposito pulsante di conferma per completare la creazione della lista ordinata;
+	\item 	\textbf{Descrizione:} una volta che il responsabile ha finito di creare la lista aggiungendo tutte le task che un'unità deve soddisfare, serve che confermi l'inserimento così che il sistema la possa gestire.
 	
 \end{itemize}
-\paragraph{UC4.1.5 - Inserimento relativo POI\textsubscript{A} di scarico}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta inserendo una nuova task\textsubscript{G};
-	\item 	\textbf{Postcondizioni:} è stato assegnato correttamente il POI\textsubscript{A} relativo alla nuova task\textsubscript{G};
-	\item 	\textbf{Scenario principale:}
-	\begin{itemize}
-		\item visualizza la mappa con tutti i POI\textsubscript{A} (UC6) e la lista di tutti i POI\textsubscript{A} di scarico (UC12);
-		\item seleziona il POI\textsubscript{A} in cui si vuole scaricare la merce;
-		\item viene confermata la selezione.
-	\end{itemize}
-	\item 	\textbf{Descrizione:} la task\textsubscript{G} rappresenta lo scarico merci in un determinato punto di interesse del magazzino, quindi ad ogni task\textsubscript{G} deve essere affidato il relativo POI\textsubscript{A}.
-\end{itemize}
 
 
-
-
-
-\subsubsection{UC4.2 - Conferma inserimento}
+\subsubsection{UC4.2 - Eliminazione lista di task}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
@@ -339,56 +307,6 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 	\item 	\textbf{Descrizione:} il responsabile visualizza il pulsante di conferma per inserire la task\textsubscript{G}.
 \end{itemize}
 
-\subsubsection{UC4.3 - Eliminazione task}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta visualizzando la lista di task\textsubscript{G} (UC13);
-	\item 	\textbf{Postcondizioni:} il responsabile ha eliminato una task\textsubscript{G} dalla lista;
-	\item 	\textbf{Scenario principale:} il responsabile seleziona dalla lista delle task\textsubscript{G} quella che intende eliminare e procede alla cancellazione premendo l'apposito pulsante;
-	\item 	\textbf{Descrizione:} il responsabile si accorge che non è più necessario lo svolgimento di un compito, quindi lo elimina dalla lista delle task\textsubscript{G}.
-
-\end{itemize}
-
-\subsubsection{UC4.4 - Modifica priorità di una task}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta visualizzando la lista di task(UC13);
-	\item 	\textbf{Postcondizioni:} la priorità della task\textsubscript{G} selezionata è stata aggiornata;
-	\item 	\textbf{Scenario principale:} il responsabile seleziona la task\textsubscript{G} che intende modificare, viene aperto un menu a tendina nel quale è possibile cambiare la priorità;
-	\item 	\textbf{Descrizione:} il responsabile si accorge che la priorità di una task\textsubscript{G} è errata o necessita di un aggiornamento, quindi procede con la modifica.
-	\item \textbf{Specializzazione:}
-	\begin{itemize}
-		\item UC4.5 - Aggiornamento priorità a 0;
-		\item UC4.1.3 - Aggiornamento priorità a 1;
-		\item UC4.1.4 - Aggiornamento priorità a 2;
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{UC4.5 - Aggiornamento priorità a 0}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta visualizzando la lista di task(UC13) e ha selezionato la task\textsubscript{G} della quale intende aggiornare la priorità;
-	\item 	\textbf{Postcondizioni:} la priorità della task\textsubscript{G} selezionata è stata aggiornata a 0;
-	\item 	\textbf{Scenario principale:} tramite una combobox, il responsabile seleziona la priorità 0.
-	\item 	\textbf{Descrizione:} il responsabile si accorge che la priorità di una task\textsubscript{G} è errata o necessita di un aggiornamento, quindi procede con la modifica.
-\end{itemize}
-\subsubsection{UC4.6 - Aggiornamento priorità a 1}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta visualizzando la lista di task(UC13) e ha selezionato la task\textsubscript{G} della quale intende aggiornare la priorità;
-	\item 	\textbf{Postcondizioni:} la priorità della task\textsubscript{G} selezionata è stata aggiornata a 1;
-	\item 	\textbf{Scenario principale:} tramite una combobox, il responsabile seleziona la priorità 0.
-	\item 	\textbf{Descrizione:} il responsabile si accorge che la priorità di una task\textsubscript{G} è errata o necessita di un aggiornamento, quindi procede con la modifica.
-\end{itemize}
-\subsubsection{UC4.7 - Aggiornamento priorità a 2}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile sta visualizzando la lista di task(UC13) e ha selezionato la task\textsubscript{G} della quale intende aggiornare la priorità;
-	\item 	\textbf{Postcondizioni:} la priorità della task\textsubscript{G} selezionata è stata aggiornata a 2;
-	\item 	\textbf{Scenario principale:} tramite una una combobox, il responsabile seleziona la priorità 2.
-	\item 	\textbf{Descrizione:} il responsabile si accorge che la priorità di una task\textsubscript{G} è errata o necessita di un aggiornamento, quindi procede con la modifica.
-\end{itemize}
 
 \subsection{UC5 - Logout}
 
@@ -1066,7 +984,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \end{itemize}
 
-\subsection{UC13.1 - Visualizzazione liste di task non ancora prese in carico}
+\subsubsection{UC13.1 - Visualizzazione liste di task non ancora prese in carico}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
 	\item 	\textbf{Precondizioni:} l'utente è autenticato come utente responsabile;
@@ -1077,7 +995,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \end{itemize}
 
-\subsection{UC13.2 - Visualizzazione liste di task assegnate}
+\subsubsection{UC13.2 - Visualizzazione liste di task assegnate}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
 	\item 	\textbf{Precondizioni:} l'utente è autenticato come utente responsabile;
