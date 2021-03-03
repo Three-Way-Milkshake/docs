@@ -1060,13 +1060,41 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \end{itemize}
 
-\subsection{UC13 - Visualizzazione lista completa di task}
+\subsection{UC13 - Visualizzazione liste ordinate di task}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.52]{res/images/uc13.png}
+	\caption{UC13 - Visualizzazione liste ordinate di task}
+\end{figure}
+
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
 	\item 	\textbf{Precondizioni:} l'utente è autenticato come utente responsabile;
-	\item 	\textbf{Postcondizioni:} il responsabile visualizza la lista di task\textsubscript{G};
-	\item 	\textbf{Scenario principale:} il responsabile clicca sul bottone apposito per poter visualizzare la lista completa delle task\textsubscript{G};
-	\item 	\textbf{Descrizione:} il responsabile necessita di visualizzare tutte le task\textsubscript{G} che sono state create per tenere sotto controllo quali compiti vengono soddisfatti.
+	\item 	\textbf{Postcondizioni:} il responsabile visualizza l'insieme di liste ordinate di task;
+	\item 	\textbf{Scenario principale:} nell'interfaccia utente del responsabile, viene visualizzato l'insieme di liste ordinate di task, divise per liste già assegnate a un'unità e quello non ancora prese in carico, che quindi possono ancora venire modificate;
+	\item 	\textbf{Descrizione:} la task sono inserite dal responsabile in liste, le quali ognuna viene assegnata dal sistema ad un'unità per essere completata. Il responsabile necessità di poter visualizzare l'insieme di task per tenere sotto controllo l'andamento del magazzino.
+
+\end{itemize}
+
+\subsection{UC13.1 - Visualizzazione liste di task non ancora prese in carico}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} l'utente è autenticato come utente responsabile;
+	\item 	\textbf{Postcondizioni:} il responsabile visualizza l'insieme di liste di task non ancora prese in carico dalle unità;
+	\item 	\textbf{Scenario principale:} il responsabile visualizza vicino alla mappa (UC6.1), un elenco delle liste di task non ancora assegnate al sistema a delle unità per essere soddisfatte;
+	\item 	\textbf{Descrizione:} la task sono inserite dal responsabile in liste, le quali ognuna viene assegnata dal sistema ad un'unità per essere completata. Il responsabile necessità di poter visualizzare l'insieme di task non ancora prese in carico per controllare quanto lavoro manca da completare.
+
+
+\end{itemize}
+
+\subsection{UC13.2 - Visualizzazione liste di task assegnate}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} responsabile;
+	\item 	\textbf{Precondizioni:} l'utente è autenticato come utente responsabile;
+	\item 	\textbf{Postcondizioni:} il responsabile visualizza l'insieme di liste di task assegnate a delle unità;
+	\item 	\textbf{Scenario principale:} il responsabile visualizza vicino alla mappa (UC6.1), un elenco delle liste di task con la relativa unità alla quale ogni lista è assegnata. Inoltre queste liste si aggiorneranno al soddisfacimento di una task per visualizzare solo la successiva;
+	\item 	\textbf{Descrizione:} la task sono inserite dal responsabile in liste, le quali ognuna viene assegnata dal sistema ad un'unità per essere completata. Il responsabile necessità di poter visualizzare l'insieme di task già assegnate e il loro andamento.
 
 \end{itemize}
 
