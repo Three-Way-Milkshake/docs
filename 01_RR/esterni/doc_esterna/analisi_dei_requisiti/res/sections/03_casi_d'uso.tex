@@ -943,67 +943,66 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \end{itemize}
 
-\subsubsection{UC11.4 - Spostamento muletto}
+\subsubsection{UC11.4 - Movimenti muletto}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.52]{res/images/uc11-4.png}
-	\caption{UC11.4 - Spostamento muletto}
+	\caption{UC11.4 - Movimenti muletto}
 \end{figure}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} la modalità di guida è quella manuale;
-	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento;
-	\item 	\textbf{Scenario principale:}il sistema rende disponibile l'interfaccia per lo spostamento del muletto, ossia le quattro frecce direzionali e un pulsante di start/stop. L'operatore può eseguire le seguenti operazioni:
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato un movimento;
+	\item 	\textbf{Scenario principale:}il sistema rende disponibile l'interfaccia per i movimenti del muletto, ossia le quattro frecce direzionali e un pulsante di start/stop. L'operatore può eseguire le seguenti operazioni:
 	\begin{itemize}
-		\item spostamento in avanti (UC1.4.1); 
-		\item spostamento indietro (UC1.4.2);
-		\item spostamento a destra (UC1.4.3);
-		\item spostamento a sinistra (UC1.4.4);
-		\item la fermata del muletto (UC1.4.5);
-		\item la partenza del muletto (UC1.4.6);
+		\item movimento in avanti (UC1.4.1); 
+		\item rotazione di 180 gradi (UC1.4.2);
+		\item rotazione di 90 gradi in senso orario (UC1.4.3);
+		\item rotazione di 90 gradi in senso antiorario (UC1.4.4);
+		\item fermata (UC1.4.5);
+		\item partenza (UC1.4.6);
 	\end{itemize}
-	\item 	\textbf{Descrizione:} i muletti possono intraprendere degli spostamenti all'interno della mappa per raggiungere i vari POI\textsubscript{A}. Essi possono essere controllati manualmente dall'operatore.
+	\item 	\textbf{Descrizione:} i muletti possono intraprendere degli spostamenti all'interno della mappa per raggiungere i vari POI. Essi possono essere controllati manualmente dall'operatore.
 \end{itemize}
 
 
-\paragraph{UC11.4.1 - Spostamento in avanti}
+\paragraph{UC11.4.1 - Movimento in avanti}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento in avanti; 
-	\item 	\textbf{Scenario principale:} l'operatore preme la freccia in alto;
-	\item 	\textbf{Descrizione:} l'operatore intende far effettuare al muletto uno spostamento in avanti, ripetto alla propria direzione, all'interno della mappa.
+	\item 	\textbf{Scenario principale:} la freccia direzionale verso l'alto è illuminata e il muletto si sta spostando in avanti;
+	\item 	\textbf{Descrizione:} il muletto si sta spostando in avanti, rispetto alla propria direzione, all'interno della mappa.
 
 \end{itemize}
 
-\paragraph{UC11.4.2 - Spostamento indietro}
+\paragraph{UC11.4.2 - Rotazione di 180 gradi}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
-	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento indietro; 
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato una rotazione di 180 gradi; 
 	\item 	\textbf{Scenario principale:} l'operatore preme la freccia in basso;
-	\item 	\textbf{Descrizione:} l'operatore intende far effettuare al muletto uno spostamento indietro, ripetto alla propria direzione, all'interno della mappa.
+	\item 	\textbf{Descrizione:} l'operatore intende invertire la rotta del muletto, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
-\paragraph{UC11.4.3 - Spostamento a destra}
+\paragraph{UC11.4.3 - Rotazione di 90 gradi in senso orario}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
-	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento a destra; 
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato rotazione di 90 gradi in senso orario; 
 	\item 	\textbf{Scenario principale:} l'operatore preme la freccia a destra;
-	\item 	\textbf{Descrizione:} l'operatore intende far effettuare al muletto uno spostamento a destra, ripetto alla propria direzione, all'interno della mappa.
-
+	\item 	\textbf{Descrizione:} l'operatore intende far fare al muletto una rotazione di 90 gradi in senso orario, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
-\paragraph{UC11.4.4 - Spostamento a sinistra}
+\paragraph{UC11.4.4 - Rotazione di 90 gradi in senso antiorario}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
-	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento a sinistra; 
+	\item 	\textbf{Postcondizioni:} il muletto ha effettuato rotazione di 90 gradi in senso antiorario; 
 	\item 	\textbf{Scenario principale:} l'operatore preme la freccia a sinistra;
-	\item 	\textbf{Descrizione:} l'operatore intende far effettuare al muletto uno spostamento a sinistra, ripetto alla propria direzione, all'interno della mappa.
+	\item 	\textbf{Descrizione:} l'operatore intende far fare al muletto una rotazione di 90 gradi in senso antiorario, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
 
@@ -1025,7 +1024,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante di start;
 	\item 	\textbf{Descrizione:} il muletto può essere azionato perchè l'operatore intende partire:
 	\begin{itemize}
-		\item dalla base per raggiungere i POI\textsubscript{A} da soddisfare;
+		\item dalla base per raggiungere i POI da soddisfare;
 		\item dopo aver effettuato una fermata a causa di un imprevisto o dello scarico delle merci (UC11.4.5).
 	\end{itemize}
 \end{itemize}
