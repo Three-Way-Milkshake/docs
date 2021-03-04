@@ -13,3 +13,26 @@
 			\end{center}
 			\end{table}	
 }
+
+
+\newcommand{\planningTable}[1]{
+	
+	
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{2}{pari}{dispari}
+	\begin{longtable}{ 
+			>{}p{0.25\textwidth} 
+			>{}p{0.40\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.25\textwidth} }
+		\rowcolorhead
+		\headertitle{Attività} &
+		\headertitle{Descrizione} &	
+		\headertitle{Ore} &
+		\headertitle{Ruolo interessato} 
+		\endfirsthead	
+		\endhead
+		#1		
+	\end{longtable}
+	
+}
