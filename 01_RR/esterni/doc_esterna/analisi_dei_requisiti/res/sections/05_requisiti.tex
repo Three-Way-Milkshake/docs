@@ -5,7 +5,7 @@ In questa sezione vengono riportati i requisito\textsubscript{G}, strutturati se
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{ 
-		>{}p{0.135\textwidth} 
+		>{}p{0.145\textwidth} 
 		>{}p{0.5425\textwidth}
 		>{\centering}p{0.22\textwidth} }
 	\rowcolorhead
@@ -14,75 +14,698 @@ In questa sezione vengono riportati i requisito\textsubscript{G}, strutturati se
 	\centering \headertitle{\normalfont \textbf{Fonte}}	
 	\endfirsthead	
 	\endhead
-RF-1-O		&	Un utente deve effettuare il login alla piattaforma tramite il suo codice identificativo	&	UC1\tabularnewline
-RF-2-O		&	Il processo di login dell'utente non va a buon fine se il codice inserito non è corretto o non è presente nel sistema	&	UC1.1\tabularnewline
-RF-3-O		&	L'amministratore può registrare un nuovo lavoratore all'interno del sistema	&	UC2\tabularnewline
-RF-4-O		&	L'amministratore può creare l'account di un responsabile o di un operatore	&	UC2\tabularnewline
-RF-4.1-O		&	La registrazione di un nuovo utente necessita del nome del lavoratore	&	UC2.1.1\tabularnewline
-RF-4.2-O		&	La registrazione di un nuovo utente necessita del cognome del lavoratore	&	UC2.1.2\tabularnewline
-RF-4.3-O		&	La registrazione di un nuovo utente necessita del ruolo del lavoratore (responsabile, operatore)	&	UC2.1.3\tabularnewline
-RF-5-O		&	La fase\textsubscript{G} di registrazione non va a buon fine se i dati inseriti risultano già presenti nel sistema	&	UC2.3\tabularnewline
-RF-6-O		&	Il sistema permette all'amministratore di gestire gli account inseriti	&	UC3\tabularnewline
-RF-6.1-O		&	Il sistema permette la modifica di un utente già registrato	&	UC3.1\tabularnewline
-RF-6.1.1-O	&	L'amministratore può modificare il campo nome di un account esistente	&	UC3.1.1\tabularnewline
-RF-6.1.2-O	&	L'amministratore può modificare il campo cognome di un account esistente	&	UC3.1.2\tabularnewline
-RF-6.1.3-O	&	L'amministratore può modificare il campo ruolo di un account esistente (responsabile, lavoratore)	&	UC3.1.3\tabularnewline
-RF-6.2-O		&	Il sistema permette l'eliminazione di un utente precedentemente registrato	&	UC3.2\tabularnewline				
-RF-7-O		&	Il responsabile si occupa della gestione della lista delle task\textsubscript{G}	&	UC4\tabularnewline
-RF-8-O		&	Il responsabile può inserire una nuova task\textsubscript{G} 	&	UC4.1\tabularnewline
-RF-8.1-O		&	Quando il responsabile inserisce una nuova task\textsubscript{G} dovrà specificare la sua priorità 	&	UC4.1.1\tabularnewline
-RF-8.2-O		&	Quando il responsabile inserisce una nuova task\textsubscript{G} dovrà specificare il POI\textsubscript{A} a cui fa riferimento	&	UC4.1.5\tabularnewline
-RF-8.3-O		&	Quando il responsabile conferma l'inserimento di una nuova task\textsubscript{G} e il sistema la assegna ad un'unità che la dovrà soddisfare	&	UC4.2\tabularnewline
-RF-9-O		&	Il responsabile può eliminare una task\textsubscript{G} 	&	UC4.3\tabularnewline
-RF-10-O		&	Il responsabile può modificare la priorità di una task\textsubscript{G} 	&	UC4.4\tabularnewline				
-RF-11-O		&	Il sistema permette all'utente di fare il logout dall'applicativo	&	UC5\tabularnewline
-RF-12-O		&	Il sistema abilita il logout all'amministratore in qualsiasi momento	&	UC5\tabularnewline
-RF-13-O		&	Il sistema abilita il logout al responsabile in qualsiasi momento	&	UC5\tabularnewline
-RF-14-O		&	Il sistema abilita il logout all'operatore solo quando si trova in base 	&	UC5\tabularnewline				
-RF-15-O		&	Il sistema permette la visualizzazione della mappa all'amministratore e ai responsabili	&	UC6\tabularnewline
-RF-15.1-O		&	Il sistema permette la visualizzazione di tutti i tipi di POI\textsubscript{A} nella mappa all'amministratore e ai responsabili	&	UC6\tabularnewline
-RF-15.2-O		&	Il sistema permette la visualizzazione delle caratteristiche delle zone di percorrenza\textsubscript{G} (senso di marcia, numero massimo di unità che possono transitare) all'amministratore e ai responsabili	& UC6\tabularnewline
-RF-15.2.1-O	&	Il sistema permette la visualizzazione delle zone non transitabili all'amministratore e ai responsabili	&	UC6 \tabularnewline
-RF-16-O		&	Il sistema permette la visualizzazione della posizione dei muletti in real-time sulla mappa	&	UC6.1\tabularnewline
-RF-17-F		&	Il sistema permette la visualizzazione della posizione delle persone in real-time sulla mappa	&	Capitolato\tabularnewline
-RF-18-O		&	Il sistema permette all'amministratore la visualizzazione di una notifica in caso della segnalazione da parte di un operatore di un evento eccezionale	&	UC6.2\tabularnewline				
-RF-19-O		&	L'amministratore autenticato può accedere all'interfaccia per gestire la mappa 	&	UC7\tabularnewline
-RF-19.1-O		&	L'amministratore può modificare planimetria\textsubscript{G} del magazzino	&	UC7.1\tabularnewline
-RF-19.2-O		&	L'amministratore può modificare la percorrenza\textsubscript{G} del magazzino	&	UC7.2\tabularnewline
-RF-20-O		&	L'amministratore può gestire i POI\textsubscript{A}	&	UC7.3\tabularnewline
-RF-20.1-O		&	L'amministratore può modificare la posizione di un POI\textsubscript{A} già esistente	&	UC7.3.1\tabularnewline
-RF-20.2-O		&	L'amministratore può inserire un nuovo POI\textsubscript{A}	&	UC7.3.2\tabularnewline
-RF-20.2.1-O	&	Inserendo un nuovo POI\textsubscript{A}, l'amministratore dovrà specificare la sua posizione nella mappa	&	UC7.3.2.1\tabularnewline
-RF-20.2.2-O	&	Inserendo un nuovo POI\textsubscript{A}, l'amministratore dovrà specificare il suo codice identificativo	&	UC7.3.2.2\tabularnewline
-RF-20.2.3-O	&	Inserendo un nuovo POI\textsubscript{A}, l'amministratore dovrà specificare il tipo di POI\textsubscript{A} inserito (carico, scarico, base)	&	UC7.3.2.3\tabularnewline
-RF-20.3-O		&	L'amministratore può eliminare un POI\textsubscript{A}	&	UC7.3.3\tabularnewline
-RF-20-O		&	La User Interface di una specifica unità attiva implementa una mappa contente i relativi POI\textsubscript{A} presenti nella lista delle task\textsubscript{G} da soddisfare, numerati secondo la lista	&	UC8.1\tabularnewline
-RF-22-O		&	La User Interface implementa sotto alla mappa una lista ordinata contenente la task\textsubscript{G} rimanenti da eseguire dell'operatore che sta usando l'unità	&	UC8.2\tabularnewline
-RF-23-O		&	La mappa mostra il prossimo task\textsubscript{G} da soddisfare (POI da raggiungere) 	&	UC8.1\tabularnewline
-RF-23.1-O		&	Nella mappa specifica dell'unità verrà evidenziato con un colore diverso il prossimo POI\textsubscript{A} da raggiungere	&	UC8.1\tabularnewline
-RF-24-O		&	L'operatore segnala al sistema la conclusione dell'incarico attraverso la User Interface	&	UC9\tabularnewline				
-RF-25-O		&	La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che indicano il suggerimento del server centrale	&	UC10\tabularnewline
-RF-25.1-O		&	Il sistema permette all'operatore la visualizzazione di direzione e spostamento del muletto a cui è a bordo, in caso in cui nel muletto sia attiva la guida automatica 	&	UC10\tabularnewline				
-RF-26-O		&	Nella User Interface è presente un pulsante che permette di passare dalla guida manuale alla guida autonoma dell'unità	&	UC11.1\tabularnewline
-RF-26.1-O		&	La User Interface del controllo manuale permette di passare alla guida autonoma	&	UC11.1, \textsc{\textsc{Verbale Esterno 1}}\tabularnewline
-RF-27-O		&	Nella User Interface è presente un pulsante che permette di passare dalla guida autonoma alla guida manuale dell'unità	&	UC11.2\tabularnewline
-RF-27.1-O		&	La User Interface del controllo automatico permette di passare alla guida manuale	&	UC11.2, \textsc{\textsc{Verbale Esterno 1}}\tabularnewline
-RF-28-O		&	Nella User Interface è presente un pulsante che permette di segnalare al server un evento eccezionale	&	UC11.3\tabularnewline
-RF-29-O		&	Nella User Interface comparirà  un pulsante per il ritorno alla base dell'unità se l'operatore avrà concluso tutte le task\textsubscript{G} assegnategli e la guida sarà impostata ad autonoma 	&	UC11.5\tabularnewline 
-RF-30-O		&	La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che permettono gli spostamenti manuali ed i pulsanti di start/stop	&	UC11.4, \textsc{\textsc{Verbale Esterno 1}}\tabularnewline
-RF-31-D		&	Il pannello permette di visualizzare l'indicatore di velocità attuale (che avrà come massimo la velocità massima anagrafica)	&	Capitolato\tabularnewline				
-RF-32-O		&	Il server centrale pilota e coordina tutte le unità per evitare incidenti e ingorghi	&	Capitolato\tabularnewline
-RF-33-F		&	Il server centrale fornisce il percorso migliore ad ogni unità tramite algoritmi di ricerca operativa	&	Capitolato\tabularnewline				
-RF-34-O		&	Il sistema permette al responsabile di visualizzare la lista di tutti i POI\textsubscript{A} con il proprio tipo (carico, scarico, base) presenti nella mappa	&	UC12\tabularnewline
-RF-35-O		&	Il sistema permette all'amministratore di visualizzare la lista di tutti i POI\textsubscript{A} con il proprio tipo (carico, scarico, base) presenti nella mappa	&	UC12\tabularnewline				
-RF-36-O		&	Il responsabile ha a disposizione un pulsante per poter vedere una lista completa delle task\textsubscript{G}	&	UC13\tabularnewline			
-RF-37-O		&	L'amministratore ha a disposizione un'interfaccia su cui può gestire le unità	&	UC14\tabularnewline
-RF-37.1-O		&	L'amministratore può aggiungere una nuova unità	&	UC14.1\tabularnewline
-RF-37.2-O		&	L'amministratore può eliminare un'unità	&	UC14.2\tabularnewline
+RF-1-O &
+Un utente deve effettuare il login alla piattaforma tramite il suo codice identificativo e password
+& UC1
+\tabularnewline
+RF-2-O &
+Il processo di login dell’utente non va a buon fine se il codice inserito e/o la password non sono corretti o non sono presenti nel sistema
+& UC1.1
+\tabularnewline
+RF-3-O &
+L’amministratore può creare l’account di un responsabile
+& UC2
+\tabularnewline
+RF-3.1-O &
+La registrazione di un nuovo utente necessita del nome del lavoratore
+& UC2.1.1
+\tabularnewline
+RF-3.2-O &
+La registrazione di un nuovo utente necessita del cognome del lavoratore
+& UC2.1.2
+\tabularnewline
+RF-4-O &
+Il server centrale permette all'amministratore di gestire gli account inseriti
+& UC3
+\tabularnewline
+RF-4.1-O &
+Il server centrale permette la modifica di un utente già registrato
+& UC3.1
+\tabularnewline
+RF-4.1.1-O
+&
+Il server permette all'amministratore e al responsabile di modificare il nome
+& UC3.1.1
+\tabularnewline
+RF-4.1.1.1-O &
+L’amministratore può modificare il campo nome di un account esistente
+& UC3.1.1
+\tabularnewline
+RF-4.1.1.2-O &
+L’amministratore può modificare il campo nome del proprio account
+& UC3.1.1
+\tabularnewline
+RF-4.1.1.3-O &
+Il responsabile può modificare il campo nome del proprio account
+& UC3.1.1
+\tabularnewline
+RF-4.1.2-O &
+Il server permette all'amministratore e al responsabile di modificare il cognome
+& UC3.1.2
+\tabularnewline
+RF-4.1.2.1-O &
+L’amministratore può modificare il campo cognome di un account esistente
+& UC3.1.2
+\tabularnewline
+RF-4.1.2.2-O &
+L’amministratore può modificare il campo cognome del proprio account
+& UC3.1.2
+\tabularnewline
+RF-4.1.2.3-O &
+Il responsabile può modificare il campo cognome del proprio account
+& UC3.1.2
+\tabularnewline
+RF-4.1.3-O &
+Il server permette all'amministratore e al responsabile di modificare la password
+& UC3.1.3
+\tabularnewline
+RF-4.1.3.1-O &
+L’amministratore può modificare il campo password del proprio account
+& UC3.1.3
+\tabularnewline
+RF-4.1.3.2-O &
+Il responsabile può modificare il campo password del proprio account
+& UC3.1.3
+\tabularnewline
+RF-4.1.4-O &
+L'amministratore può mandare un segnale al server per resettare la password di un preciso account di un responsabile
+&
+UC3.1.4
+\tabularnewline
+RF-4.2-O &
+L'amminisrtatore può eliminare un utente precedentemente registrato
+&UC3.2
+\tabularnewline
+RF-4.3-O&
+Il server centrale permette all'amministratore di visualizzare la lista di tutti gli account inseriti con i loro relativi dati pubblici
+&UC3.3
+\tabularnewline
+RF-5-O&
+Il responsabile si occupa della gestione della task
+&UC4
+\tabularnewline
+RF-5.1-O&
+Il responsabile può inserire una nuova lista ordinata di task
+&UC4.1
+\tabularnewline
+RF-5.1.2-O&
+Il server permette al responsabile di aggiungere una task singola con il proprio POI di scarico per soddisfarla
+&UC4.1.1
+\tabularnewline
+RF-5.1.3-O&
+Il server permette al responsabile la rimozione di una task già aggiunta nella lista che si sta creando
+&UC4.1.2
+\tabularnewline
+RF-5.1.4-O&
+Il server necessita della conferma della lista che si è creata, così che la possa prendere in carico
+&UC4.1.3
+\tabularnewline
+RF-5.2-O&
+Il server permette l'eliminazione di una lista di task
+&UC4.2
+\tabularnewline
+RF-6-O&
+Il server centrale permette all'amministratore e al responsabile di fare il logout dall'applicativo
+&UC5
+\tabularnewline
+RF-7-O&
+Il server centrale permette la visualizzazione della mappa all’amministratore e ai responsabili
+&UC6
+\tabularnewline
+RF-7.1-O&
+Il server centrale permette la visualizzazione di tutti i tipi di POI nella mappa all'amministratore e ai responsabili
+&UC6
+\tabularnewline
+RF-7.2-O&
+Il server centrale permette la visualizzazione delle caratteristiche delle zone di percorrenza (senso di marcia, numero massimo di unità che possono transitare) all’amministratore e ai responsabili
+&UC6
+\tabularnewline
+RF-7.2.1-O&
+Il server centrale permette la visualizzazione delle zone non transitabili all’amministratore e ai responsabili
+&UC6
+\tabularnewline
+RF-8-O&
+Il server centrale permette la visualizzazione della posizione dei muletti in real-time sulla mappa
+&UC6.1
+\tabularnewline
+RF-9-F&
+Il server centrale permette la visualizzazione della posizione delle persone in real-time sulla mappa
+&Capitolato
+\tabularnewline
+RF-10-O&
+Il server centrale permette all'amministratore la visualizzazione di una notifica in caso della segnalazione da parte di un operatore di un evento eccezionale
+&
+UC6.2
+\tabularnewline
+RF-11
+-
+O
+&
+L’amministratore autenticato può accedere all’interfaccia per gestire la mappa
+&
+UC7
+\tabularnewline
+RF-11.1
+-
+O
+&
+L’amministratore può modificare planimetria del magazzino
+&
+UC7.2
+\tabularnewline
+RF-11.2
+-
+O
+&
+L’amministratore può modificare la percorrenza del magazzino
+&
+UC7.3
+\tabularnewline
+RF-12
+-
+O
+&
+L’amministratore può gestire i POI
+&
+UC7.4
+\tabularnewline
+RF-12.1
+-
+O
+&
+L'amministratore può modificare la posizione di un POI già esistente
+&
+UC7.4.1
+\tabularnewline
+RF-12.2
+-
+O
+&
+L'amministratore può inserire un nuovo POI
+&
+UC7.4.2
+\tabularnewline
+RF-12.2.1
+-
+O
+&
+Inserendo un nuovo POI, l'amministratore dovrà specificare la sua posizione nella mappa
+&
+UC7.4.3
+\tabularnewline
+RF-12.2.2
+-
+O
+&
+Inserendo un nuovo POI, l'amministratore dovrà specificare il suo codice identificativo
+&
+UC7.4.4
+\tabularnewline
+RF-12.2.3
+-
+O
+&
+Inserendo un nuovo POI, l'amministratore dovrà specificare il tipo di POI inserito (carico, scarico, base)
+&
+UC7.4.5
+\tabularnewline
+RF-12.3
+-
+O
+&
+L'amministratore può eliminare un POI
+&
+UC7.4.6
+\tabularnewline
+RF-13
+-
+O
+&
+La User Interface di una specifica unità attiva implementa una mappa contente i relativi POI presenti nella lista delle task da soddisfare, numerati secondo la lista
+&
+UC8.1
+\tabularnewline
+RF-14
+-
+O
+&
+La User Interface implementa sotto alla mappa una lista ordinata contenente la task rimanenti da eseguire dell’operatore che sta usando l’unità
+&
+UC8.2
+\tabularnewline
+RF-15
+-
+O
+&
+La mappa mostra il prossimo task da soddisfare (POI da raggiungere)
+&
+UC8.3
+\tabularnewline
+RF-15.1
+-
+O
+&
+Nella mappa specifica dell’unità verrà evidenziato con un colore diverso il prossimo POI da raggiungere
+&
+UC8.3
+\tabularnewline
+RF-16
+-
+O
+&
+L’operatore segnala al server centrale la conclusione dell’incarico attraverso la user interface
+&
+UC9
+\tabularnewline
+RF-17
+-
+O
+&
+La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che indicano il suggerimento del sistema
+&
+UC10
+\tabularnewline
+RF-17.1
+-
+O
+&
+Il server centrale permette all’operatore la visualizzazione di direzione e spostamento del muletto a cui è a bordo, in caso in cui nel muletto sia attiva la guida automatica
+&
+UC10
+\tabularnewline
+RF-18
+-
+O
+&
+Nella user interface è presente un pulsante che permette di passare dalla guida manuale alla guida autonoma dell’unità
+&
+UC11.1
+\tabularnewline
+RF-18.1
+-
+O
+&
+La User Interface del controllo manuale permette di passare alla guida autonoma
+&
+UC11.1, verbale\_esterno\_1
+\tabularnewline
+RF-19
+-
+O
+&
+Nella user interface è presente un pulsante che permette di passare dalla guida autonoma alla guida manuale dell’unità
+&
+UC11.2
+\tabularnewline
+RF-19.1
+-
+O
+&
+La User Interface del controllo automatico permette di passare alla guida manuale
+&
+UC11.2, verbale\_esterno\_1
+\tabularnewline
+RF-20
+-
+O
+&
+Nella user interface è presente un pulsante che permette di segnalare al server un evento eccezionale
+&
+UC11.3
+\tabularnewline
+RF-21
+-
+O
+&
+Nella user interface comparirà un pulsante per il ritorno alla base dell’unità se l'operatore avrà concluso tutte le task assegnategli
+&
+UC11.5
+\tabularnewline
+RF-22
+-
+O
+&
+La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che permettono gli spostamenti manuali ed i pulsanti di start/stop
+&
+UC11.4, verbale\_esterno\_1
+\tabularnewline
+RF-23
+-
+D
+&
+Il pannello permette di visualizzare l’indicatore di velocità attuale (che avrà come massimo la velocità massima anagrafica)
+&
+Capitolato
+\tabularnewline
+RF-24
+-
+O
+&
+Il server centrale pilota e coordina tutte le unità per evitare incidenti e ingorghi
+&
+Capitolato
+\tabularnewline
+RF-25
+-
+F
+&
+il server centrale fornisce il percorso migliore ad ogni unità tramite algoritmi di ricerca operativa
+&
+Capitolato
+\tabularnewline
+RF-26
+-
+O
+&
+Il server centrale permette al responsabile di visualizzare la lista di tutti i POI con il proprio tipo (carico, scarico, base) presenti nella mappa
+&
+UC12
+\tabularnewline
+RF-27
+-
+O
+&
+Il server centrale permette all'amministratore di visualizzare la lista di tutti i POI con il proprio tipo (carico, scarico, base) presenti nella mappa
+&
+UC12
+\tabularnewline
+RF-28
+-
+O
+&
+Il responsabile ha a disposizione un pulsante per poter vedere una lista completa delle task non ancora prese in carico
+&
+UC13.1
+\tabularnewline
+RF-29
+-
+O
+&
+Il responsabile ha a disposizione un pulsante per poter vedere una lista completa delle task assegnate
+&
+UC13.2
+\tabularnewline
+RF-30
+-
+O
+&
+L'amministratore ha a disposizione un'interfaccia su cui può gestire le unità
+&
+UC14
+\tabularnewline
+RF-30.1
+-
+O
+&
+L'amministratore può aggiungere una nuova unità
+&
+UC14.1
+\tabularnewline
+RF-30.2
+-
+O
+&
+L'amministratore può eliminare un'unità
+&
+UC14.2
+\tabularnewline
+RF-31
+-
+O
+&
+Il server centrale necessita di conoscere la posizione nella mappa di una determinata unità
+&
+UC15
+\tabularnewline
+RF-32
+-
+O
+&
+Il server invia il percorso tra due POI quando un’unità deve partire da un punto nella mappa per raggiungere il prossimo POI per soddisfare la successiva task nella sua lista
+&
+UC16
+\tabularnewline
+RF-33
+-
+O
+&
+La geolocalizzazione va simulata
+&
+Capitolato
+\tabularnewline
+RF-34
+-
+O
+&
+L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle unità
+&
+Capitolato
+\tabularnewline
+RF-35
+-
+F
+&
+L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle persone
+&
+Capitolato
+\tabularnewline
+RF-36
+-
+O
+&
+Il server centrale deve prevedere ed evitare le collisioni
+&
+Capitolato
+\tabularnewline
+RF-37
+-
+O
+&
+Ogni unità deve rispettare i vincoli dimensionali delle zone
+&
+Capitolato
+\tabularnewline
+RF-38
+-
+O
+&
+Tutte le unità, quando sono in movimento, devono viaggiare tutte alla stessa velocità che rimane costante
+&
+Capitolato
+\tabularnewline
+RF-38.1
+-
+F
+&
+L’applicativo permette di gestire il cambiamento della velocità di un’unità
+&
+Capitolato
+\tabularnewline
+RF-38.2
+-
+D
+&
+Ogni unità ha una velocità di crociera
+&
+Capitolato
+\tabularnewline
+RF-38.3
+-
+D
+&
+Ogni unità ha una velocità massima
+&
+Capitolato
+\tabularnewline
+RF-39
+-
+O
+&
+Ogni unità ha un suo identificativo
+&
+Capitolato
+\tabularnewline
+RF-40
+-
+O
+&
+Il server centrale conosce la posizione di ogni singola unità
+&
+Capitolato
+\tabularnewline
+RF-41
+-
+O
+&
+Il server centrale conosce la direzione di ogni singola unità
+&
+Capitolato
+\tabularnewline
+RF-42
+-
+D
+&
+Il server centrale conosce la velocità di ogni singola unità
+&
+Capitolato
+\tabularnewline
+RF-43
+-
+O
+&
+Ogni unità ha una lista di task da risolvere ogni volta che fa carico
+&
+Capitolato
+\tabularnewline
+RF-44
+-
+O
+&
+Ogni task è collegata ad un POI da raggiungere
+&
+Capitolato
+\tabularnewline
+RF-45
+-
+O
+&
+Ogni POI può essere di carico o scarico o base
+&
+Decisione interna
+\tabularnewline
+RF-46
+-
+O
+&
+Ci devono essere più di un POI di scarico
+&
+Decisione interna
+\tabularnewline
+RF-47
+-
+O
+&
+Ci deve essere almeno un POI di base
+&
+Decisione interna
+\tabularnewline
+RF-48
+-
+O
+&
+Ci deve essere almeno un POI di carico
+&
+Decisione interna
+\tabularnewline
+RF-49
+-
+F
+&
+Ci possono essere più POI di base
+&
+Decisione interna
+\tabularnewline
+RF-50
+-
+F
+&
+Ci possono essere più POI di carico
+&
+Decisione interna
+\tabularnewline
+RF-51
+-
+O
+&
+Ogni unità parte da una base. La sua partenza dalla base determina l'inizio del turno di un operatore
+&
+Decisione interna
+\tabularnewline
+RF-52
+-
+O
+&
+Ogni unità torna ad una base quando termina il turno dell’operatore
+&
+Decisione interna
+\tabularnewline
+RF-53
+-
+O
+&
+Ogni unità passa per un’area di carico prima di iniziare la sequenza di scarichi (tasks)
+&
+Decisione interna
+\tabularnewline
+RF-54
+-
+O
+&
+Ogni unità torna ad un'area di carico se ha scaricato tutta la merce (completato i task) e il turno dell’operatore non è terminato
+&
+Decisione interna
+\tabularnewline
+RF-55
+-
+O
+&
+Il server centrale conosce ogni spostamento (in avanti, indietro, a destra e a sinistra) di ogni singola unità
+&
+Capitolato
+\tabularnewline
+RF-56
+-
+O
+&
+Il server centrale conosce la fermata di ogni singola unità
+&
+Capitolato
+\tabularnewline
+RF-57
+-
+O
+&
+Il server centrale conosce la partenza di ogni singola unità
+&
+Capitolato
+\tabularnewline
+RF-58
+-
+O
+&
+Ci deve uno e un solo account registrato con il ruolo di amministratore
+&
+Decisione interna
+\tabularnewline
+RF-59
+-
+O
+&
+Ci deve essere almeno un account registrato con il ruolo di responsabile
+&
+Decisione interna
+\tabularnewline
+RF-60
+-
+F
+&
+Ci possono essere più account registrati con il ruolo di responsabile
+&
+Decisione interna
+\tabularnewline
+RF-61
+-
+O
+&
+Ci devono essere più account registrati con il ruolo di operatore
+&
+Decisione interna
+\tabularnewline
 \caption{Tabella Requisiti Funzionali\label{ Tabella Requisiti Funzionali}}
-\end{longtable}.
+\end{longtable}
 \subsection{Requisiti prestazionali}
 In questo progetto\textsubscript{G} non sono stati rilevati alcuni requisito\textsubscript{G} prestazionali per quanto riguarda i requisito\textsubscript{G} obbligatori.
+
 \subsection{Requisiti di qualità}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
@@ -107,8 +730,7 @@ RQ-8-O & Fornire il Docker file (\#2) con la componente applicativa rappresentan
 RQ-9-O & Erogare il Docker file (\#3), da istanziare N volte, rappresentante la singola unità & Capitolato\tabularnewline
 RQ-10-F & Rendere disponibile il Docker file (\#4), da istanziare N volte, rappresentante il singolo pedone & Capitolato\tabularnewline 
 \caption{Tabella Requisiti di Qualità\label{ Tabella Requisiti di Qualità}}
-\end{longtable}.
-\newline 
+\end{longtable}
 \subsection{Requisiti di vincolo}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
@@ -122,43 +744,16 @@ RQ-10-F & Rendere disponibile il Docker file (\#4), da istanziare N volte, rappr
 	\centering \headertitle{\normalfont \textbf{Fonte}}	
 	\endfirsthead	
 	\endhead
-RV-1-O & La geolocalizzazione va simulata & Capitolato\tabularnewline
-RV-2-O & L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle unità & Capitolato\tabularnewline
-RV-3-F & L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle persone & Capitolato\tabularnewline
-RV-4-O & Le persone si muovano solo a bordo di mezzi & Decisione interna\tabularnewline
-RV-5-O & Il server centrale deve prevedere ed evitare le collisioni & Capitolato\tabularnewline
-RV-6-O & Ogni zona di percorrenza\textsubscript{G} ha un numero massimo di unità che possono percorrerla contemporaneamente (dimensione della zona) & Capitolato\tabularnewline
-RV-7-O & Ogni zona di percorrenza\textsubscript{G} ha un modo in cui può essere percorsa (senso unico, doppio senso) & Capitolato\tabularnewline
-RV-8-O & Ogni unità deve rispettare i vincoli dimensionali delle zone & Capitolato\tabularnewline
-RV-9-O & Tutte le unità, quando sono in movimento, viaggiano alla stessa velocità che rimane costante & Capitolato\tabularnewline
-RV-10-F & L'applicativo permette di gestire il cambiamento della velocità di un'unità & Capitolato\tabularnewline
-RV-11-D & Ogni unità ha una velocità di crociera & Capitolato\tabularnewline
-RV-12-D & Ogni unità ha una velocità massima & Capitolato\tabularnewline
-RV-13-O & Ogni unità ha un suo identificativo & Capitolato\tabularnewline
-RV-14-O & Il server centrale conosce la posizione di ogni singola unità & Capitolato\tabularnewline
-RV-15-O & Il server centrale centrale conosce la direzione di ogni singola unità & Capitolato\tabularnewline
-RV-16-D & Il server centrale conosce la velocità di ogni singola unità & Capitolato\tabularnewline
-RV-17-O & Ogni unità ha una lista di task\textsubscript{G} da risolvere ogni volta che fa carico & Capitolato\tabularnewline
-RV-18-O & Ogni task\textsubscript{G} è collegata ad un POI\textsubscript{A} da raggiungere & Capitolato\tabularnewline
-RV-19-O & Ogni POI\textsubscript{A} può essere di carico o scarico o base & Decisione interna\tabularnewline
-RV-20-O & Ci devono essere più di un POI\textsubscript{A} di scarico & Decisione interna\tabularnewline
-RV-21-O & Ci deve essere almeno un POI\textsubscript{A} di base & Decisione interna\tabularnewline
-RV-22-O & Ci deve essere almeno un POI\textsubscript{A} di carico & Decisione interna\tabularnewline
-RV-23-F & Ci possono essere più POI\textsubscript{A} di base & Decisione interna\tabularnewline
-RV-24-F & Ci possono essere più POI\textsubscript{A} di carico & Decisione interna\tabularnewline
-RV-25-O & Ogni unità parte da una base. La sua partenza dalla base determina l'inizio del turno di un operatore & Decisione interna\tabularnewline
-RV-26-O & Ogni unità torna ad una base quando termina il turno dell'operatore & Decisione interna\tabularnewline
-RV-27-O & Ogni unità passa per un'area di carico prima di iniziare la sequenza di scarichi (tasks) & Decisione interna\tabularnewline
-RV-28-O & Ogni unità torna ad un'area di carico se ha scaricato tutta la merce (completato i task) e il turno dell'operatore non è terminato & Decisione interna\tabularnewline
-RV-29-O & Il server centrale conosce ogni spostamento (in avanti, indietro, a destra e a sinistra) di ogni unità & Capitolato\tabularnewline
-RV-30-O & Il server centrale recepisce la fermata di ogni unità & Capitolato\tabularnewline
-RV-31-O & Il server centrale recepisce la partenza di ogni unità & Capitolato\tabularnewline
-RV-32-O	&	Ci deve uno e un solo account registrato con il ruolo di amministratore	&	Decisione interna	\tabularnewline
-RV-33-O	&	Ci deve essere almeno un account registrato con il ruolo di responsabile	&	Decisione interna	\tabularnewline
-RV-34-F	&	Ci possono essere più account registrati con il ruolo di responsabile	&	Decisione interna	\tabularnewline
-RV-35-O	&	Ci devono essere più account registrati con il ruolo di operatore	&	Decisione interna	\tabularnewline
+RV-1-O & Ogni zona di percorrenza ha un numero massimo di unità che possono percorrerla in parallelo (dimensione della zona) 
+& Capitolato \tabularnewline
+RV-2-O & Ogni zona di percorrenza ha un modo in cui può essere percorsa (senso unico, doppio senso)
+& Capitolato \tabularnewline
+RV-3-O & Tutto quello che si muove all'interno è censito dal server, in quanto non esiste unità non riconosciuta e controllata dal server e non c'è nulla che il server non conosca e da cui non riceva dati
+& Capitolato \tabularnewline
+RV-4-O & Versione di Chrome da utilizzare è la 88.0
+& Decisione interna \tabularnewline
 \caption{Tabella Requisiti di vincolo\label{ Tabella Requisiti di vincolo}}
-\end{longtable}.
+\end{longtable}
 \pagebreak
 \subsection{Tracciamento}
 \subsubsection{Fonti - Requisiti}
