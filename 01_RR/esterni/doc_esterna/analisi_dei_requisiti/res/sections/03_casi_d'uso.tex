@@ -13,11 +13,13 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item{\textbf{Utente autenticato:}\\
 	Si riferisce ad un utente generico che ha effettuato l'accesso all'applicativo tramite il codice identificativo generato al momento dell'iscrizione;}
 	\item{\textbf{Operatore:}\\
-	Si riferisce all'unità stessa e a chi la guida. Ha il compito di soddisfare le task che gli vengono assegnate raggiungendo i POI necessari tramite la guida manuale oppure servendosi del pilota automatico.}
+	Si riferisce alla persona che sta sopra all'unità e si interfaccia con il sistema. Può guidare il muletto attraverso la guida manuale e controllare i movimenti effettuati dal server. Inoltre gestisce il carico e lo scarico delle merci per soddisfare ogni task che gli viene assegnata.}
 	\item{\textbf{Responsabile:}\\
 	 \'E la figura in capo della logistica del magazzino: inserisce i task\textsubscript{G} che devono essere svolti dagli operatori.}
 	\item{\textbf{Amministratore:}\\
  Ha in capo la gestione operativa: inserisce, modifica ed elimina gli account del personale per l'accesso al server, censisce i muletti nel database, crea e modifica la planimetria\textsubscript{G} e la percorribilità della mappa del magazzino.}
+	\item {\textbf{Unità:}\\
+	Rappresenta il muletto che si muove all'interno della mappa per raggiungere i POI . }
 \end{itemize}
 
 \subsection{UC1 - Login}
@@ -1043,5 +1045,25 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Postcondizioni:} un'unità è stata rimossa dal sistema;
 	\item 	\textbf{Scenario principale:} l'amministratore seleziona l'unità che deve essere rimossa dal sistema e conferma la modifica;
 	\item 	\textbf{Descrizione:} quando un muletto all'interno del magazzino non viene più utilizzato ed è dismesso, esso deve venire rimosso dal sistema.
+	
+\end{itemize}
+
+\subsection{UC15 - Invio propria posizione}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} unità;
+	\item 	\textbf{Precondizioni:} l'unità si sta muovendo all'interno della mappa;
+	\item 	\textbf{Postcondizioni:} la posizione nella mappa di una determinata unità è stata inviata al sistema centrale;
+	\item 	\textbf{Scenario principale:} l'unità, ad ogni istante t, invia le coordinate della propria posizione e la direzione che è orientata;
+	\item 	\textbf{Descrizione:} ad ogni istante di tempo t, il server deve conoscere dove si trova esattamente ogni unità all'interno della mappa, così da poter gestirne il movimento ed evitare collisioni.
+	
+\end{itemize}
+
+\subsection{UC16 - Richiesta percorso fra due POI}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} unità;
+	\item 	\textbf{Precondizioni:} l'unità deve partire da un punto nella mappa per raggiungere il prossimo POI per soddisfare la successiva task nella sua lista;
+	\item 	\textbf{Postcondizioni:} è stato ricevuto il percorso per raggiungere il prossimo POI;
+	\item 	\textbf{Scenario principale:} l'unità una volta raggiunto un POI e soddisfatto la relativa task, richiede al sistema il percorso per raggiungere il prossimo punto di interesse in lista; tale percorso è un insieme di mosse che determinano gli spostamenti o il cambio di direzioni che essa deve intraprendere.
+	\item 	\textbf{Descrizione:} il sistema calcola il percorso ottimale per raggiungere il prossimo POI per soddisfare la nuova task. Questo percorso deve essere inviato all'unità che effettuerà i movimenti descritti.
 	
 \end{itemize}
