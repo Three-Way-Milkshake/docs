@@ -1,6 +1,6 @@
 \section{Casi d'uso}
 \subsection{Introduzione}
-Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati. Ogni caso d'uso\textsubscript{G} viene descritto attraverso diagrammi dei casi d'uso\textsubscript{G} e rappresenta uno scenario\textsubscript{G} di utilizzo da parte degli attore\textsubscript{G} che si interfacciano con esso.
+Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso viene descritto attraverso diagrammi dei casi d'uso e rappresenta uno scenario di utilizzo da parte degli attore che si interfacciano con esso.
 \subsection{Attori primari}
 \begin{figure}[H]
 	\centering
@@ -15,9 +15,9 @@ Nella seguente sezione vengono esposti i casi d'uso\textsubscript{G} individuati
 	\item{\textbf{Operatore:}\\
 	Si riferisce alla persona che sta sopra all'unità e si interfaccia con il sistema. Può guidare il muletto attraverso la guida manuale e controllare i movimenti effettuati dal server. Inoltre gestisce il carico e lo scarico delle merci per soddisfare ogni task che gli viene assegnata.}
 	\item{\textbf{Responsabile:}\\
-	 \'E la figura in capo della logistica del magazzino: inserisce i task\textsubscript{G} che devono essere svolti dagli operatori.}
+	 \'E la figura in capo della logistica del magazzino: inserisce i task che devono essere svolti dagli operatori.}
 	\item{\textbf{Amministratore:}\\
- Ha in capo la gestione operativa: inserisce, modifica ed elimina gli account del personale per l'accesso al server, censisce i muletti nel database, crea e modifica la planimetria\textsubscript{G} e la percorribilità della mappa del magazzino.}
+ Ha in capo la gestione operativa: inserisce, modifica ed elimina gli account del personale per l'accesso al server, censisce i muletti nel database, crea e modifica la planimetria e la percorribilità della mappa del magazzino.}
 	\item {\textbf{Unità:}\\
 	Rappresenta il muletto che si muove all'interno della mappa per raggiungere i POI . }
 \end{itemize}
@@ -238,7 +238,7 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile è autenticato nel sistema il quale rende disponibile l'interfaccia per la gestione delle task\textsubscript{G} che verranno assegnati alle unità;
+	\item 	\textbf{Precondizioni:} il responsabile è autenticato nel sistema il quale rende disponibile l'interfaccia per la gestione delle task che verranno assegnati alle unità;
 	\item 	\textbf{Postcondizioni:} l'insieme di task viene aggiornato;
 	\item 	\textbf{Scenario principale:} il responsabile effettua le operazioni necessarie per la gestione delle task da far soddisfare alle unità, esse possono essere:
 	\begin{itemize}
@@ -303,9 +303,9 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} responsabile;
-	\item 	\textbf{Precondizioni:} il responsabile ha creato la nuova task\textsubscript{G} e il sistema rende disponibile il pulsante di conferma;
-	\item 	\textbf{Postcondizioni:} il sistema ha ricevuto la nuova task\textsubscript{G} e lo assegna a un'unità che lo dovrà soddisfare;
-	\item 	\textbf{Scenario principale:} il responsabile conferma l'inserimento della nuova task\textsubscript{G} tramite un apposito pulsante;
+	\item 	\textbf{Precondizioni:} il responsabile ha creato la nuova task e il sistema rende disponibile il pulsante di conferma;
+	\item 	\textbf{Postcondizioni:} il sistema ha ricevuto la nuova task e lo assegna a un'unità che lo dovrà soddisfare;
+	\item 	\textbf{Scenario principale:} il responsabile conferma l'inserimento della nuova task tramite un apposito pulsante;
 	\item 	\textbf{Descrizione:} il responsabile visualizza il pulsante di conferma per inserire la task\textsubscript{G}.
 \end{itemize}
 
@@ -336,9 +336,9 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 	\item 	\textbf{Scenario principale:} il responsabile e l'amministratore, una volta autenticati, visualizzano la mappa completa del magazzino;
 	\item 	\textbf{Descrizione:} il responsabile e l'amministratore supervisionano il magazzino tramite una mappa che ne visualizza gli elementi strutturali. Gli elementi della mappa sono:
 	\begin{itemize}
-		\item POI\textsubscript{A} di carico:  punto in cui i muletti prelevano il carico di merce da smistare nel magazzino. Ogni volta che completano la loro lista di task\textsubscript{G} (ma non è finito il loro turno di lavoro), devono tornare su questo punto per effettuare un nuovo carico e ricevere nuove task\textsubscript{G};
-		\item POI\textsubscript{A} di scarico: punti in cui i muletti devono scaricare la merce prelevata;
-		\item POI\textsubscript{A} di sosta o di base: punto in cui gli operatori partono con il proprio muletto a inizio turno e arrivano alla fine del turno.
+		\item POI di carico:  punto in cui i muletti prelevano il carico di merce da smistare nel magazzino. Ogni volta che completano la loro lista di task (ma non è finito il loro turno di lavoro), devono tornare su questo punto per effettuare un nuovo carico e ricevere nuove task\textsubscript{G};
+		\item POI di scarico: punti in cui i muletti devono scaricare la merce prelevata;
+		\item POI di sosta o di base: punto in cui gli operatori partono con il proprio muletto a inizio turno e arrivano alla fine del turno.
 		\item zona di percorrenza\textsubscript{G}: strade in cui i muletti possono transitare, le cui caratteristiche sono:
 		\begin{itemize}
 			\item senso di marcia;
@@ -395,18 +395,18 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
   \item   \textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per la modifica, visualizza l'interfaccia per gestire i cambiamenti della mappa tra cui può scegliere tramite un menù a tendina se:
 
    \begin{itemize}
-     \item modificare la planimetria\textsubscript{G} del magazzino (UC7.1);
+     \item modificare la planimetria del magazzino (UC7.1);
 
-      \item modificare la percorrenza\textsubscript{G} del magazzino, per esempio i sensi di marcia (UC7.2);
+      \item modificare la percorrenza del magazzino, per esempio i sensi di marcia (UC7.2);
 
-      \item gestire i POI\textsubscript{A} (UC7.3);
+      \item gestire i POI (UC7.3);
   \end{itemize}
 
   e viene visualizzata l'intera mappa (UC6).
 
 Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di conferma;
 
- \item   \textbf{Descrizione:} l'amministratore ha il compito di tenere aggiornata la mappa dai cambiamenti reali del magazzino, modificandone la planimetria\textsubscript{G}, la percorrenza\textsubscript{G} e i POI\textsubscript{A} presenti.
+ \item   \textbf{Descrizione:} l'amministratore ha il compito di tenere aggiornata la mappa dai cambiamenti reali del magazzino, modificandone la planimetria\textsubscript{G}, la percorrenza e i POI presenti.
 
 \end{itemize}
 
@@ -420,7 +420,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
   \item   \textbf{Attori primari:} amministratore;
 
-  \item   \textbf{Precondizioni:} viene resa disponibile dal sistema l'interfaccia per la modifica della planimetria\textsubscript{G} della mappa; nessuna unità deve circolare al momento della modifica;
+  \item   \textbf{Precondizioni:} viene resa disponibile dal sistema l'interfaccia per la modifica della planimetria della mappa; nessuna unità deve circolare al momento della modifica;
 
  \item   \textbf{Postcondizioni:} la mappa è stata modificata dall'amministratore;
 
@@ -456,10 +456,10 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
   \item   \textbf{Attori primari:} amministratore;
 
-  \item   \textbf{Precondizioni:}  l'amministratore è autenticato nel sistema e viene reso disponibile dal sistema l'interfaccia per la modifica della percorrenza\textsubscript{G} della mappa; nessuna unità deve circolare nell'area selezionata per il cambiamento;
+  \item   \textbf{Precondizioni:}  l'amministratore è autenticato nel sistema e viene reso disponibile dal sistema l'interfaccia per la modifica della percorrenza della mappa; nessuna unità deve circolare nell'area selezionata per il cambiamento;
 
   \item   \textbf{Postcondizioni:} la mappa è stata modificata dall'amministratore;
- \item   \textbf{Scenario principale:} viene visualizzata la mappa con le caratteristiche che ogni area di percorrenza\textsubscript{G} ha (senso di marcia e numero massimo di unità). L'amministratore deve premere sopra la zona che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l'amministratore conferma tramite il pulsante di salvataggio;
+ \item   \textbf{Scenario principale:} viene visualizzata la mappa con le caratteristiche che ogni area di percorrenza ha (senso di marcia e numero massimo di unità). L'amministratore deve premere sopra la zona che intende cambiare per aprire un pop-up e inserire gli aggiornamenti. Una volta raggiunto il risultato desiderato, l'amministratore conferma tramite il pulsante di salvataggio;
 
   \item   \textbf{Descrizione:} il magazzino può subire dei cambiamenti nella percorrenza\textsubscript{G}. Sarà possibile modificare per ogni area:
 
@@ -503,11 +503,11 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
   \begin{itemize}
 
-    \item modificare la posizione di un POI\textsubscript{A} esistente (UC7.3.1);
+    \item modificare la posizione di un POI esistente (UC7.3.1);
 
-    \item aggiungere un nuovo POI\textsubscript{A} nella mappa (UC7.3.2);
+    \item aggiungere un nuovo POI nella mappa (UC7.3.2);
 
-   \item eliminare un POI\textsubscript{A} esistente (UC7.3.3).
+   \item eliminare un POI esistente (UC7.3.3).
 
  \end{itemize}
 
@@ -517,7 +517,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \item almeno una base;
 
-\item almeno un POI\textsubscript{A} di carico.
+\item almeno un POI di carico.
 
 \end{itemize}
 
@@ -525,7 +525,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 
 
-\paragraph{UC7.3.1 - Modifica posizione di un POI\textsubscript{A} esistente}
+\paragraph{UC7.3.1 - Modifica posizione di un POI esistente}
 
 
 
@@ -533,12 +533,12 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \item   \textbf{Attori primari:} amministratore;
 
-\item   \textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu della modifica dei POI\textsubscript{A} per il cambiamento della posizione di un POI\textsubscript{A} esistente; nessuna unità si trova nel POI\textsubscript{A} selezionato;
+\item   \textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu della modifica dei POI per il cambiamento della posizione di un POI esistente; nessuna unità si trova nel POI selezionato;
 
- \item   \textbf{Postcondizioni:} il POI\textsubscript{A} selezionato ha cambiato posizione nella mappa; 
+ \item   \textbf{Postcondizioni:} il POI selezionato ha cambiato posizione nella mappa; 
 
-\item   \textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per la modifica della posizione di un POI\textsubscript{A} esistente, visualizza la mappa (UC6) con tutti i POI\textsubscript{A} nella loro posizione, seleziona quello che gli interessa e lo sposta nella posizione aggiornata;
-   \item   \textbf{Descrizione:} l'amministratore può dover cambiare la posizione di alcuni POI\textsubscript{A} già esistenti all'interno del magazzino.
+\item   \textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per la modifica della posizione di un POI esistente, visualizza la mappa (UC6) con tutti i POI nella loro posizione, seleziona quello che gli interessa e lo sposta nella posizione aggiornata;
+   \item   \textbf{Descrizione:} l'amministratore può dover cambiare la posizione di alcuni POI già esistenti all'interno del magazzino.
 
 \end{itemize}
 
@@ -564,11 +564,11 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Precondizioni:} l'amministratore ha selezionato l'opzione, tra il menu, dell'aggiunta di un nuovo POI\textsubscript{A};
 
-  \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa;
+  \item   \textbf{Postcondizioni:} viene creato il nuovo POI nella mappa;
 
    \item   \textbf{Scenario principale:} l'amministratore dopo aver premuto il pulsante per l'aggiunta di un nuovo POI\textsubscript{A}, visualizzerà l'interfaccia per la creazione del nuovo punto d'interesse;
 
-  \item   \textbf{Descrizione:} per inserire un nuovo POI\textsubscript{A} all'interno della mappa devono essere specificati:
+  \item   \textbf{Descrizione:} per inserire un nuovo POI all'interno della mappa devono essere specificati:
 
   \begin{itemize}
 
@@ -576,7 +576,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
        \item posizione nella mappa;
 
-       \item tipo di POI\textsubscript{A} (carico, scarico, base);
+       \item tipo di POI (carico, scarico, base);
 
    \end{itemize}
 
@@ -592,7 +592,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
 \item   \textbf{Precondizioni:} l'amministratore visualizza la mappa per l'inserimento dei dati del nuovo POI\textsubscript{A}.
 
-  \item   \textbf{Postcondizioni:} l'amministratore ha inserito il POI\textsubscript{A} all'interno della mappa; 
+  \item   \textbf{Postcondizioni:} l'amministratore ha inserito il POI all'interno della mappa; 
 
    \item   \textbf{Scenario principale:}
 
@@ -604,7 +604,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \end{itemize}
 
-   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve posizionare il POI\textsubscript{A} nella mappa.
+   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve posizionare il POI nella mappa.
 
 
 
@@ -622,7 +622,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Postcondizioni:} l'amministratore ha inserito il codice identificativo del nuovo POI\textsubscript{A}; 
 
-   \item   \textbf{Scenario principale:} l'amministratore inserisce il codice identificativo del nuovo POI\textsubscript{A} nell'apposito form;
+   \item   \textbf{Scenario principale:} l'amministratore inserisce il codice identificativo del nuovo POI nell'apposito form;
 
    \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare un codice identificativo al nuovo POI\textsubscript{A}.
 
@@ -640,11 +640,11 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
   \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del tipo di POI\textsubscript{A};
 
-   \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa; 
+   \item   \textbf{Postcondizioni:} viene creato il nuovo POI nella mappa; 
 
-  \item   \textbf{Scenario principale:} l'amministratore inserisce il tipo di POI\textsubscript{A} e conferma;
+  \item   \textbf{Scenario principale:} l'amministratore inserisce il tipo di POI e conferma;
 
-   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa:
+   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI nella mappa:
 
   \begin{itemize}
 
@@ -681,11 +681,11 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del tipo di POI\textsubscript{A};
 
-   \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo base; 
+   \item   \textbf{Postcondizioni:} viene creato il nuovo POI nella mappa di tipo base; 
 
-   \item   \textbf{Scenario principale:} l'amministratore assegna al POI\textsubscript{A} il tipo base;
+   \item   \textbf{Scenario principale:} l'amministratore assegna al POI il tipo base;
 
-   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI\textsubscript{A} di base è il punto in cui un'unità inizia il proprio turno.
+   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI nella mappa. Un POI di base è il punto in cui un'unità inizia il proprio turno.
 
 
 
@@ -701,11 +701,11 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del tipo di POI\textsubscript{A};
 
-   \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo carico; 
+   \item   \textbf{Postcondizioni:} viene creato il nuovo POI nella mappa di tipo carico; 
 
- \item   \textbf{Scenario principale:} l'amministratore assegna al POI\textsubscript{A} il tipo carico;
+ \item   \textbf{Scenario principale:} l'amministratore assegna al POI il tipo carico;
 
-   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI\textsubscript{A} di carico è il punto in cui un'unità prende la merce da trasportare per completare le proprie task\textsubscript{G}.
+   \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI nella mappa. Un POI di carico è il punto in cui un'unità prende la merce da trasportare per completare le proprie task\textsubscript{G}.
 
 
 
@@ -721,11 +721,11 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Precondizioni:} l'amministratore visualizza il form per l'inserimento del tipo di POI\textsubscript{A};
 
-   \item   \textbf{Postcondizioni:} viene creato il nuovo POI\textsubscript{A} nella mappa di tipo scarico; 
+   \item   \textbf{Postcondizioni:} viene creato il nuovo POI nella mappa di tipo scarico; 
 
-   \item   \textbf{Scenario principale:} l'amministratore assegna al POI\textsubscript{A} il tipo scarico;
+   \item   \textbf{Scenario principale:} l'amministratore assegna al POI il tipo scarico;
 
-  \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI\textsubscript{A} nella mappa. Un POI\textsubscript{A} di scarico è il punto che un'unità deve raggiungere per completare una relativa task\textsubscript{G}.
+  \item   \textbf{Descrizione:} per completare l'aggiunta, l'amministratore deve assegnare il tipo di POI nella mappa. Un POI di scarico è il punto che un'unità deve raggiungere per completare una relativa task\textsubscript{G}.
 
 
 
@@ -741,13 +741,13 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 
    \item   \textbf{Attori primari:} amministratore;
 
-   \item   \textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu per l'eliminazione di un POI\textsubscript{A} esistente e visualizza la mappa con tutti i POI\textsubscript{A}; nessuna unità deve essere nel POI\textsubscript{A} selezionato;
+   \item   \textbf{Precondizioni:} l'amministratore ha selezionato l'opzione tra il menu per l'eliminazione di un POI esistente e visualizza la mappa con tutti i POI\textsubscript{A}; nessuna unità deve essere nel POI selezionato;
 
-   \item   \textbf{Postcondizioni:} viene eliminato un POI\textsubscript{A} dalla mappa e dalla lista; 
+   \item   \textbf{Postcondizioni:} viene eliminato un POI dalla mappa e dalla lista; 
 
-   \item   \textbf{Scenario principale:} seleziona dalla mappa il POI\textsubscript{A} di interesse e conferma, attraverso un apposito pulsante, l'eliminazione;
+   \item   \textbf{Scenario principale:} seleziona dalla mappa il POI di interesse e conferma, attraverso un apposito pulsante, l'eliminazione;
 
-   \item   \textbf{Descrizione:} si vuole eliminare un POI\textsubscript{A} esistente dalla mappa.
+   \item   \textbf{Descrizione:} si vuole eliminare un POI esistente dalla mappa.
 
 \end{itemize}
 \subsection{UC8 - Rappresentazione task}
@@ -762,19 +762,19 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore si appresta a svolgere i propri compiti;
-	\item 	\textbf{Postcondizioni:} l'operatore ha una visione completa dei suoi compiti tramite la mappa con i POI\textsubscript{A} interessati e la lista completa di task\textsubscript{G} da eseguire;
-	\item 	\textbf{Scenario principale:} il sistema rende disponibile la visualizzazione di tutte le task\textsubscript{G} assegnate all'operatore; essa avviene tramite la mappa con i POI\textsubscript{A} di interesse per l'operatore e sottostante la lista di tutte le task\textsubscript{G} con le relative informazioni;
-	\item 	\textbf{Descrizione:} per compiere il suo lavoro, l'operatore ha bisogno di visualizzare le task\textsubscript{G} che gli sono assegnate e la loro posizione, così da poter scaricare la merce nel luogo corretto.
+	\item 	\textbf{Postcondizioni:} l'operatore ha una visione completa dei suoi compiti tramite la mappa con i POI interessati e la lista completa di task da eseguire;
+	\item 	\textbf{Scenario principale:} il sistema rende disponibile la visualizzazione di tutte le task assegnate all'operatore; essa avviene tramite la mappa con i POI di interesse per l'operatore e sottostante la lista di tutte le task con le relative informazioni;
+	\item 	\textbf{Descrizione:} per compiere il suo lavoro, l'operatore ha bisogno di visualizzare le task che gli sono assegnate e la loro posizione, così da poter scaricare la merce nel luogo corretto.
 
 \end{itemize}
 
-\subsubsection{UC8.1 - Visualizzazione task\textsubscript{G} nella mappa}
+\subsubsection{UC8.1 - Visualizzazione task nella mappa}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore si appresta a svolgere i propri compiti;
-	\item 	\textbf{Postcondizioni:} vengono visualizzate nella mappa le task\textsubscript{G} nella relativa posizione, il prossimo POI\textsubscript{A} che deve raggiungere per completare la task\textsubscript{G} sarà evidenziato con un colore diverso;
-	\item 	\textbf{Scenario principale:} l'operatore visualizza la mappa del magazzino. Sono rappresentati graficamente i POI\textsubscript{A} relativi alle task\textsubscript{G} assegnate, inoltre il prossimo da raggiungere sarà evidenziato da un colore diverso;
-	\item 	\textbf{Descrizione:} per capire dove si trovano nel magazzino i punti da raggiungere per soddisfare le proprie task\textsubscript{G}, l'operatore deve avere una visione della mappa e dei POI\textsubscript{A} che gli interessano. Inoltre deve essere ben visibile il prossimo POI\textsubscript{A} che deve raggiungere per completare il prossimo compito che intende intraprendere.
+	\item 	\textbf{Postcondizioni:} vengono visualizzate nella mappa le task nella relativa posizione, il prossimo POI che deve raggiungere per completare la task sarà evidenziato con un colore diverso;
+	\item 	\textbf{Scenario principale:} l'operatore visualizza la mappa del magazzino. Sono rappresentati graficamente i POI relativi alle task assegnate, inoltre il prossimo da raggiungere sarà evidenziato da un colore diverso;
+	\item 	\textbf{Descrizione:} per capire dove si trovano nel magazzino i punti da raggiungere per soddisfare le proprie task\textsubscript{G}, l'operatore deve avere una visione della mappa e dei POI che gli interessano. Inoltre deve essere ben visibile il prossimo POI che deve raggiungere per completare il prossimo compito che intende intraprendere.
 \end{itemize}
 
 
@@ -783,18 +783,18 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore si appresta a svolgere i propri compiti;
-	\item 	\textbf{Postcondizioni:} viene visualizzata una lista di tutte le task\textsubscript{G} da eseguire con l'informazione sul relativo POI\textsubscript{A} di scarico;
-	\item 	\textbf{Scenario principale:} sotto alla mappa del magazzino, viene visualizzata una lista di tutte le task\textsubscript{G} che l'operatore deve soddisfare. Ognuna mostra anche il codice identificativo del relativo POI\textsubscript{A} di scarico;
-	\item 	\textbf{Descrizione:} viene visualizzata la lista di task\textsubscript{G} da completare da l'operatore.
+	\item 	\textbf{Postcondizioni:} viene visualizzata una lista di tutte le task da eseguire con l'informazione sul relativo POI di scarico;
+	\item 	\textbf{Scenario principale:} sotto alla mappa del magazzino, viene visualizzata una lista di tutte le task che l'operatore deve soddisfare. Ognuna mostra anche il codice identificativo del relativo POI di scarico;
+	\item 	\textbf{Descrizione:} viene visualizzata la lista di task da completare da l'operatore.
 \end{itemize}
 
 \subsection{UC9 - Segnalazione del completamento di una task}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore ha raggiunto il POI di scarico interessato per il completamento di una task;
-	\item 	\textbf{Postcondizioni:} il sistema ha registrato il completamento della task\textsubscript{G} che verrà cancellata dalla lista completa di tutte le task\textsubscript{G} da soddisfare e da quella personale dell'operatore;
+	\item 	\textbf{Postcondizioni:} il sistema ha registrato il completamento della task che verrà cancellata dalla lista completa di tutte le task da soddisfare e da quella personale dell'operatore;
 	\item 	\textbf{Scenario principale:} appena l'operatore raggiunge il POI interessato, il sistema rende disponibile un bottone per segnalare il completamento della task. L'operatore lo prene non appena ha finito di scaricare la merce ed è pronto a ripartire;
-	\item 	\textbf{Descrizione:} l'operatore ha scaricato la merce nel punto destinato, quindi deve segnalare di aver completato la task\textsubscript{G} per poter proseguire con la prossima.
+	\item 	\textbf{Descrizione:} l'operatore ha scaricato la merce nel punto destinato, quindi deve segnalare di aver completato la task per poter proseguire con la prossima.
 
 \end{itemize}
 
@@ -871,7 +871,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} la modalità di guida è quella manuale;
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato un movimento;
-	\item 	\textbf{Scenario principale:}il sistema rende disponibile l'interfaccia per i movimenti del muletto, ossia le quattro frecce direzionali e un pulsante di start/stop. L'operatore può eseguire le seguenti operazioni:
+	\item 	\textbf{Scenario principale:} il sistema rende disponibile l'interfaccia per i movimenti del muletto, ossia le quattro frecce direzionali e un pulsante di start/stop. L'operatore può eseguire le seguenti operazioni:
 	\begin{itemize}
 		\item movimento in avanti (UC1.4.1); 
 		\item rotazione di 180 gradi (UC1.4.2);
@@ -949,7 +949,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \subsubsection{UC11.5 - Ritorno alla base}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
-	\item 	\textbf{Precondizioni:} l'operatore ha finito il turno e ha eseguito tutte le task\textsubscript{G} assegnatoli. Il sistema rende disponibile un pulsante per il ritorno alla base;
+	\item 	\textbf{Precondizioni:} l'operatore ha finito il turno e ha eseguito tutte le task assegnatoli. Il sistema rende disponibile un pulsante per il ritorno alla base;
 	\item 	\textbf{Postcondizioni:} il muletto è nel punto della mappa base;
 	\item 	\textbf{Scenario principale:} l'operatore preme nell'apposito pulsante per il ritorno alla base. Se la guida è impostata in manuale dovrà guidare fino al punto, altrimenti il sistema lo porta a destinazione;
 	\item 	\textbf{Descrizione:} quando ha finito il turno, l'operatore deve ritornare alla base dove lascia il proprio mezzo per essere usato da un altro operatore.
@@ -959,9 +959,9 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
 	\item 	\textbf{Precondizioni:} gli utenti sono autenticati;
-	\item 	\textbf{Postcondizioni:} viene visualizzata la lista completa dei POI\textsubscript{A} presenti nella mappa;
-	\item 	\textbf{Scenario principale:} vicino alla visualizzazione della mappa (UC6), vi è un pulsante apposito per visualizzare la lista completa di POI\textsubscript{A} presenti nel magazzino;
-	\item 	\textbf{Descrizione:} per tener traccia di tutti i POI\textsubscript{A} con il proprio tipo (carico, scarico, base) presenti nella mappa, il sistema rende disponibile la lista.
+	\item 	\textbf{Postcondizioni:} viene visualizzata la lista completa dei POI presenti nella mappa;
+	\item 	\textbf{Scenario principale:} vicino alla visualizzazione della mappa (UC6), vi è un pulsante apposito per visualizzare la lista completa di POI presenti nel magazzino;
+	\item 	\textbf{Descrizione:} per tener traccia di tutti i POI con il proprio tipo (carico, scarico, base) presenti nella mappa, il sistema rende disponibile la lista.
 
 \end{itemize}
 
