@@ -94,7 +94,7 @@ Nella seguente sezione vengono esposti i casi d'uso individuati. Ogni caso d'uso
 		\item nome;
 		\item cognome.
 	\end{itemize}
-Il server poi ritornerà un codice identificativo e una password standard, con i quali il responsabile potrà fare il primo login, dove poi potrà modificare la password (UC3.1.4) per averne una tutta sua.
+Il server poi ritornerà un codice identificativo e una password standard, con i quali il responsabile potrà fare il primo login, dove poi potrà modificare la password (UC3.1.3) per averne una tutta sua.
 \end{itemize}
 
 \paragraph{UC2.1.1 - Inserimento nome}
@@ -186,7 +186,7 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 
 \end{itemize}
 
-\paragraph{UC3.1.4 - Modifica password}
+\paragraph{UC3.1.3 - Modifica password}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
@@ -197,14 +197,14 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 
 \end{itemize}
 
-\paragraph{UC3.1.5 - Reset password responsabile}
+\paragraph{UC3.1.4 - Reset password responsabile}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:} il server ha reso disponibile la visualizzazione della lista dei responsabili, nella quale l'amministratore può resettare la password;
 	\item 	\textbf{Postcondizioni:} il server riporta un messaggio di conferma del reset della password del responsabile specificato;
 	\item 	\textbf{Scenario principale:} l'amministratore segnala al server il responsabile a cui deve resettare la password;
-	\item 	\textbf{Descrizione:} qualora fosse necessario resettare la password ad un responsabile, l'amministratore deve segnalarlo al server tramite un bottone e il server imposta al responsabile indicato una password standard e manda un messaggio di conferma all'amministratore. Sarà poi compito del responsabile modificare la sua password (UC3.1.4) a suo piacimento, dopo aver fatto il login con la password standard.
+	\item 	\textbf{Descrizione:} qualora fosse necessario resettare la password ad un responsabile, l'amministratore deve segnalarlo al server tramite un bottone e il server imposta al responsabile indicato una password standard e manda un messaggio di conferma all'amministratore. Sarà poi compito del responsabile modificare la sua password (UC3.1.3) a suo piacimento, dopo aver fatto il login con la password standard.
 
 \end{itemize}
 
