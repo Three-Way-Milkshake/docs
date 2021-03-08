@@ -1,0 +1,76 @@
+\section{Verbale della riunione}
+
+\subsection{Collisioni}
+Spiegato un primo algoritmo per la rilevazione e la previsione delle collisioni delle unità.\\
+L'algoritmo funziona con una previsione di due tempi t in anticipo, calcolando per ogni unità le due sue successive mosse. Se viene rilevata in anticipo una collisione, le unità con maggior "incidenza" (numero di turni in cui causerebbero incidenti) rimarranno ferme. In caso di stallo verranno ricalcolati i percorsi da seguire.
+
+\subsection{Norme relative alla documentazione della programmazione}
+Rimandate al prossimo periodo.
+
+\subsection{Chiarimenti relativi al sistema di versionamento}
+Dati x.y.z :
+\begin{itemize}
+	\item z = viene incrementato ad ogni verifica di una modifica minore;
+	\item y = viene incrementato ad ogni verifica di una modifica sostanziale;
+	\item x = ad ogni approvazione del documento.
+\end{itemize}
+
+\subsection{Avanzamento PoC}
+Angular:
+\begin{itemize}
+	\item creare una interfaccia per il responsabile in cui far visualizzare la mappa con il movimento in real time dei muletti;
+	\item aggiustare la visualizzazione delle mosse eseguite in caso di guida automatica;
+	\item prevedere le unità multiple, cercando un modo per passare da terminale il numero di porta di Node per la configurazione di Angular.
+\end{itemize}
+Node:
+\begin{itemize}
+	\item node potrà interagire col server solamente quando interpellato da uno specifico socket;
+	\item interpretazione dello scambio dati tra Node e Java (presente nel dettaglio in un file su Confluence) per quanto riguarda:
+	\begin{itemize}
+		\item mappa;
+		\item lista task;
+		\item nuove mosse verso il prossimo POI;
+		\item segnale di stop.
+	\end{itemize}
+\end{itemize}
+Java:
+\begin{itemize}
+	\item configurare prestando attenzione anche a ciò che é stato suddetto;
+	\item aspetta che arrivino tutte le posizioni delle unità;
+	\item manda le informazioni richieste da Node;
+	\item leggere la mappa da un json, task assegnata a Greggio Nicolò.
+\end{itemize}
+
+\subsection{Assegnazione verbale 17}
+Tessari Andrea lo trascrive, Chiarello Sofia lo verifica.
+
+\subsection{Piano di Qualifica}
+Crivellari Alberto dovrà aggiornare e riportare i vari test presenti nel \textsc{Piano di Qualifica}.\\
+Chiarello Sofia verificherà il documento.
+
+\subsection{Cruscotto Web}
+Crivellari Alberto controllerà che sia a posto il cruscotto web.
+
+\subsection{Analisi dei Requisiti}
+Tessari Andrea dovrà verificare l'\textsc{Analisi dei Requisiti}.
+
+\subsection{Approvazione dei documenti}
+Assegnata a De Renzis Simone e Greggio Nicolò.
+
+\subsection{Lettera di presentazione}
+Assegnata a Chiarello Sofia, Crivellari Alberto, Tessari Andrea, Zuccolo Giada.
+
+\subsection{Piano di Progetto}
+Assegnato a Greggio Nicolò.\\
+Bisognerà:
+\begin{itemize}
+	\item inserire il consultivo;
+	\item inserire i grafici;
+	\item inserire Gantt
+	\item controllo fedeltà grafici assegnata a Zuccolo Giada.
+\end{itemize}
+Verifica assegnata a Chiarello Sofia.
+
+\subsection{Presentazione TB}
+Se avanzerà tempo bisognerà creare una breve presentazione per la TB.
+
