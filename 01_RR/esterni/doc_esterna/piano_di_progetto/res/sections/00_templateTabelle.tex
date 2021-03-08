@@ -25,7 +25,7 @@
 					!{\color[HTML]{9b240a}\vrule width 1pt}	
 					c}
 				\rowcolorhead
-				\headertitle{Ruolo} & \headertitle{Tempo (ore)} & \headertitle{Costo (euro)} \\
+				\headertitle{Ruolo} & \headertitle{Tempo (ore)} & \headertitle{Costo (\euro)} \\
 				#1
 			\end{center}
 		\end{table}	
@@ -53,3 +53,28 @@
 	\end{longtable}
 	
 }
+
+
+\newcommand{\pafTable}[1]{
+	
+	
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{2}{pari}{dispari}
+	\begin{longtable}{ 
+			>{}p{0.40\textwidth} 
+			>{\centering}p{0.10\textwidth}
+			>{\centering}p{0.20\textwidth}
+			>{\centering}p{0.15\textwidth} }
+		\rowcolorhead
+		\headertitle{Fase} &
+		\headertitle{Periodo} &	
+		\headertitle{Descrizione} &
+		\headertitle{Spesa (\euro)} 
+		\endfirsthead	
+		\endhead
+		#1		
+	\end{longtable}
+	
+}
+
+
