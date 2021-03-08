@@ -3,10 +3,9 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.62]{res/images/01_gantt_avvio.png}
-	\caption{Diagramma di gantt\textsubscript{G} relativo alla fase\textsubscript{G} di Avvio}
+	\includegraphics[scale=0.62]{res/images/gantt_fase/01_gantt_avvio.png}
+	\caption{Diagramma di Gantt\textsubscript{G} relativo alla fase\textsubscript{G} di Avvio}
 \end{figure}
-
 
 
 \subsection{Periodo 1}
@@ -14,7 +13,9 @@
 \subsubsection{Pianificazione preventiva}
 
 
+
 \paragraph{Attività}
+\subparagraph*{}
 
 \planningTable{
 	\input{res/tables/pianificazione/avvio_1_pian_prev.tex}
@@ -23,18 +24,29 @@
 
 
 \paragraph{Preventivo}
+\subparagraph*{}
 
-\smallPreventivoTable{
-	\input{res/tables/contabilita/preventivi/avvio_1_smallprev.tex}
+\hspace{-1cm}
+\begin{minipage}{0.60\textwidth}
+	\smallPreventivoTable{	\input{res/tables/contabilita/preventivi/avvio_1_smallprev.tex}
 }
+\end{minipage}
+\begin{minipage}{.40\textwidth}
+\begin{figure}[H]
+	\includegraphics[scale=0.21]{res/images/charts/preventivo_priori/Grafico4-0.png}
+	\caption{Distribuzione dei costi: preventivo - Avvio - Periodo 1}
+\end{figure}
+\end{minipage} 
+
 
 \subsubsection{Riscontro di fine periodo}
 
 
-\paragraph{Consuntivo orario ed economico}
+\subparagraph*{}
 
 
 \paragraph{Preventivo a finire}
+\subparagraph*{}
 
 \pafTable{
 	\input{res/tables/contabilita/paf/avvio_1_paf.tex}
