@@ -1,6 +1,6 @@
 \section{Requisiti}
 \subsection{Introduzione}
-In questa sezione vengono riportati i requisito\textsubscript{G}, strutturati secondo la loro classificazione per tipologia, ovvero requisito\textsubscript{G} funzionali, requisito\textsubscript{G} prestazionali, requisito\textsubscript{G} di qualità e requisito\textsubscript{G} di vincolo.
+In questa sezione vengono riportati i requisiti, strutturati secondo la loro classificazione per tipologia, ovvero requisiti funzionali, requisiti prestazionali, requisiti di qualità e requisiti di vincolo.
 \subsection{Requisiti funzionali}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
@@ -15,7 +15,7 @@ In questa sezione vengono riportati i requisito\textsubscript{G}, strutturati se
 	\endfirsthead	
 	\endhead
 RF-1-O &
-Un utente deve effettuare il login alla piattaforma tramite il suo codice identificativo e password
+Un utente deve effettuare il login alla piattaforma tramite il suo codice identificativo e la sua password
 & UC1
 \tabularnewline
 RF-2-O &
@@ -93,7 +93,7 @@ L'amministratore può mandare un segnale al server per resettare la password di 
 UC3.1.4
 \tabularnewline
 RF-4.2-O &
-L'amminisrtatore può eliminare un utente precedentemente registrato
+L'amministratore può eliminare un utente precedentemente registrato
 &UC3.2
 \tabularnewline
 RF-4.3-O&
@@ -137,7 +137,7 @@ Il server centrale permette la visualizzazione di tutti i tipi di POI nella mapp
 &UC6
 \tabularnewline
 RF-7.2-O&
-Il server centrale permette la visualizzazione delle caratteristiche delle zone di percorrenza (senso di marcia, numero massimo di unità che possono transitare) all’amministratore e ai responsabili
+Il server centrale permette la visualizzazione del senso di marcia delle zone di percorrenza all’amministratore e ai responsabili
 &UC6
 \tabularnewline
 RF-7.2.1-O&
@@ -153,7 +153,7 @@ Il server centrale permette la visualizzazione della posizione delle persone in 
 &Capitolato
 \tabularnewline
 RF-10-O&
-Il server centrale permette all'amministratore la visualizzazione di una notifica in caso della segnalazione da parte di un operatore di un evento eccezionale
+Il server centrale permette all'amministratore la visualizzazione di una notifica in caso di una segnalazione da parte di un operatore di un evento eccezionale
 &
 UC6.2
 \tabularnewline
@@ -249,7 +249,7 @@ RF-14
 -
 O
 &
-La User Interface implementa sotto alla mappa una lista ordinata contenente la task rimanenti da eseguire dell’operatore che sta usando l’unità
+La User Interface implementa sotto la mappa una lista ordinata delle task rimanenti da eseguire da parte dell’operatore che sta usando l’unità
 &
 UC8.2
 \tabularnewline
@@ -273,7 +273,7 @@ RF-16
 -
 O
 &
-L’operatore segnala al server centrale la conclusione dell’incarico attraverso la user interface
+L’operatore segnala al server centrale la conclusione dell’incarico attraverso la User Interface
 &
 UC9
 \tabularnewline
@@ -281,7 +281,7 @@ RF-17
 -
 O
 &
-La User Interface che rappresenterà ogni singola unità dovrà prevedere le 4 frecce direzionali che indicano il suggerimento del sistema
+La User Interface che rappresenterà ogni singola unità dovrà prevedere le 3 frecce rotazionali
 &
 UC10
 \tabularnewline
@@ -289,7 +289,7 @@ RF-17.1
 -
 O
 &
-Il server centrale permette all’operatore la visualizzazione di direzione e spostamento del muletto a cui è a bordo, in caso in cui nel muletto sia attiva la guida automatica
+Il server centrale permette all’operatore di visualizzare la direzione e lo spostamento del suo muletto, nel caso in cui sia attiva la guida automatica
 &
 UC10
 \tabularnewline
@@ -297,7 +297,7 @@ RF-18
 -
 O
 &
-Nella user interface è presente un pulsante che permette di passare dalla guida manuale alla guida autonoma dell’unità
+Nella User Interface è presente un pulsante che permette di passare dalla guida manuale alla guida autonoma dell’unità
 &
 UC11.1
 \tabularnewline
@@ -313,7 +313,7 @@ RF-19
 -
 O
 &
-Nella user interface è presente un pulsante che permette di passare dalla guida autonoma alla guida manuale dell’unità
+Nella User Interface è presente un pulsante che permette di passare dalla guida autonoma alla guida manuale dell’unità
 &
 UC11.2
 \tabularnewline
@@ -329,7 +329,7 @@ RF-20
 -
 O
 &
-Nella user interface è presente un pulsante che permette di segnalare al server un evento eccezionale
+Nella User Interface è presente un pulsante che permette di segnalare al server un evento eccezionale
 &
 UC11.3
 \tabularnewline
@@ -337,7 +337,7 @@ RF-21
 -
 O
 &
-Nella user interface comparirà un pulsante per il ritorno alla base dell’unità se l'operatore avrà concluso tutte le task assegnategli
+Nella User Interface comparirà un pulsante per il ritorno alla base dell’unità se l'operatore avrà concluso tutte le task assegnategli
 &
 UC11.5
 \tabularnewline
@@ -569,7 +569,7 @@ RF-45
 -
 O
 &
-Ogni POI può essere di carico o scarico o base
+Ogni POI può essere di carico, di scarico o di base
 &
 Decisione interna
 \tabularnewline
@@ -649,7 +649,7 @@ RF-55
 -
 O
 &
-Il server centrale conosce ogni spostamento (in avanti, indietro, a destra e a sinistra) di ogni singola unità
+Il server centrale conosce ogni spostamento in avanti, indietro, a destra e a sinistra di ogni singola unità
 &
 Capitolato
 \tabularnewline
@@ -673,7 +673,7 @@ RF-58
 -
 O
 &
-Ci deve uno e un solo account registrato con il ruolo di amministratore
+Ci deve essere uno e un solo account registrato con il ruolo di amministratore
 &
 Decisione interna
 \tabularnewline
@@ -742,7 +742,7 @@ RV-2-O & Ogni zona di percorrenza ha un modo in cui può essere percorsa (senso 
 & Capitolato \tabularnewline
 RV-3-O & Tutto quello che si muove all'interno è censito dal server, in quanto non esiste unità non riconosciuta e controllata dal server e non c'è nulla che il server non conosca e da cui non riceva dati
 & Capitolato \tabularnewline
-RV-4-O & Versione di Chrome da utilizzare è la 88.0
+RV-4-O & La versione di Chrome da utilizzare è la 88.0
 & Decisione interna \tabularnewline
 \caption{Tabella Requisiti di vincolo\label{ Tabella Requisiti di vincolo}}
 \end{longtable}
@@ -762,8 +762,7 @@ RV-4-O & Versione di Chrome da utilizzare è la 88.0
 Capitolato &
 	RV-1-O	\newline
 	RV-2-O	\newline
-	RV-3-O	\newline
-	
+	RV-3-O	\newline	
 	RF-9-F	\newline
 	RF-23-D	\newline
 	RF-24-O	\newline
@@ -785,8 +784,7 @@ Capitolato &
 	RF-44-O \newline
 	RF-55-O \newline
 	RF-56-O \newline
-	RF-57-O \newline
-	
+	RF-57-O \newline	
 	RQ-1-O	\newline
 	RQ-2-O	\newline
 	RQ-3-O	\newline
@@ -799,8 +797,7 @@ Capitolato &
 	RQ-10-F	\tabularnewline
 	
 Decisione interna &
-	RV-4-O	\newline
-	
+	RV-4-O	\newline	
 	RF-45-O \newline
 	RF-46-O \newline
 	RF-47-O \newline
@@ -904,7 +901,6 @@ UC16 &
 	RF-32-O		\tabularnewline
 \caption{Tabella Fonti - Requisiti\label{ Tabella Fonti - Requisiti}}
 \end{longtable}.
-\pagebreak
 \subsubsection{Requisiti - Fonti}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
