@@ -119,7 +119,7 @@ dove:
 	TAF-16.2-O & L'amministratore deve poter rimuovere un'unità. \newline All'utente è richiesto: \begin{itemize} \item autenticarsi come amministratore; \item accedere all'interfaccia per gestire le unità, con l'apposito pulsante; \item selezionare il pulsante per rimuovere un'unità; \item selezionare l'unità da rimuovere; \item confermare la rimozione dell'unità.\end{itemize} & 0\tabularnewline
 	
 	TAF-16.3-O & IL server centrale deve poter conoscere la posizione nella mappa di una precisa unità (e quindi potenzialmente di tutte). & 0\tabularnewline
-	TAF-16.4-O & Il server centrale deve poter inviare il percorso che l'unità deve fare per spostarsi da un POI al prossimo. & 0\tabularnewline
+	TAF-16.4-O & Il server centrale deve poter inviare il percorso che l'unità deve fare per spostarsi da un POI\textsubscript{A} al prossimo. & 0\tabularnewline
 	
 	TAF-17-O & La geolocalizzazione va simulata. & 0\tabularnewline
 	TAF-17.1-O & L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle unità. & 0\tabularnewline
@@ -138,18 +138,18 @@ dove:
 	
 	TAF-19-O & Il server centrale conosce la posizione/direzione/velocità di ogni singola unità. & 0\tabularnewline
 	
-	TAF-20-O & Ogni task è collegata ad un POI da raggiungere. & 0\tabularnewline
-	TAF-20.1-O & Ogni POI può essere di carico, scarico o base. & 0\tabularnewline
+	TAF-20-O & Ogni task\textsubscript{G} è collegata ad un POI\textsubscript{A} da raggiungere. & 0\tabularnewline
+	TAF-20.1-O & Ogni POI\textsubscript{A} può essere di carico, scarico o base. & 0\tabularnewline
 	TAF-20.2-O & Ci devono essere: \begin{itemize}
-		\item più di un POI di scarico;
-		\item almeno un POI di carico;
-		\item almeno un POI di base.
+		\item più di un POI\textsubscript{A} di scarico;
+		\item almeno un POI\textsubscript{A} di carico;
+		\item almeno un POI\textsubscript{A} di base.
 	\end{itemize}
  	& 0\tabularnewline
 	
 	TAF-21-O & Ogni unità parte da una base (inizio turno operatore) e torna ad una base, quando finisce il turno dell'operatore. & 0\tabularnewline
 	TAF-21.1-O & Ogni unità passa per un'area di carico prima di iniziare la sequenza di scarichi (tasks). & 0\tabularnewline
-	TAF-21.2-O & Ogni unità torna ad un'area di carico se ha completato i task e il turno dell'operatore non è terminato. & 0\tabularnewline
+	TAF-21.2-O & Ogni unità torna ad un'area di carico se ha completato i task\textsubscript{G} e il turno dell'operatore non è terminato. & 0\tabularnewline
 	TAF-22-O & Il server centrale conosce ogni spostamento, partenza e fermata di ogni singola unità. & 0 \tabularnewline
 	TAF-23-O & Ci deve essere uno e un solo account registrato con ruolo amministratore. 0\tabularnewline
 	TAF-23.1-O & Ci deve essere almeno un account con ruolo responsabile. 0\tabularnewline
