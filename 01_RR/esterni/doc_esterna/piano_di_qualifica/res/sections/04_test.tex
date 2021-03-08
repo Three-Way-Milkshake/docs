@@ -63,66 +63,51 @@ dove:
 
 
 
-	TAF-1-O & L'utente deve poter fare il login.\newline All'utente viene chiesto di: \begin{itemize}\item accedere alla pagina di login;\item inserire il proprio codice identificativo.\end{itemize} & 0\tabularnewline
+	TAF-1-O & L'utente deve poter fare il login.\newline All'utente viene chiesto di: \begin{itemize}\item accedere alla pagina di login;\item inserire il proprio codice identificativo;\item inserire la password.\end{itemize} & 0\tabularnewline
 
-	TAF-1.1-O & Se il codice non è corretto o non esiste nel sistema \newline il login fallisce.\newline Se il login dell'utente non va a buon fine deve venir mostrato un messaggio d'errore. & 0\tabularnewline
+	%% TAF-1.1-O & Se il codice e/o la password non sono corretti o non esistono nel sistema \newline il login fallisce.\newline Se il login dell'utente non va a buon fine deve venir mostrato un messaggio d'errore. & 0\tabularnewline
 
-	TAF-2-O & L'amministratore deve poter registrare un nuovo account, di operatore o responsabile.\newline All'amministratore viene chiesto di: \begin{itemize}\item inserire nome lavoratore; \item inserire cognome lavoratore; \item inserire ruolo lavoratore (operatore o responsabile).\end{itemize} & 0\tabularnewline
+	TAF-2-O & L'amministratore deve poter registrare un nuovo account di un responsabile.\newline All'amministratore viene chiesto di: \begin{itemize}\item inserire nome; \item inserire cognome.\end{itemize} & 0\tabularnewline
 
-	TAF-2.1-O & In caso di registrazione fallita (per lavoratore già esistente); allora deve venir mostrato un messaggio d'errore. & 0\tabularnewline
+	%% TAF-2.1-O & In caso di registrazione fallita (per lavoratore già esistente); allora deve venir mostrato un messaggio d'errore. & 0\tabularnewline
 
-	TAF-3-O & L'amministratore può modificare un account già esistente di un lavoratore.\newline In particolare può: \begin{itemize}\item modificare campo nome; \item modificare campo cognome; \item modificare campo ruolo. \end{itemize} & 0\tabularnewline
-
+	TAF-3-O & L'amministratore può gestire un account già esistente.\newline In particolare può: \begin{itemize}\item modificare campo nome; \item modificare campo cognome; \item modificare password. \end{itemize} & 0\tabularnewline
 	TAF-3.1-O & L'amministratore può eliminare un account già esistente. & 0\tabularnewline
-
+	TAF-3.2-O & L'amministratore può richiedere il reset password di un preciso account. & 0\tabularnewline
+	
 	TAF-4-O & Il responsabile deve poter aggiungere una task\textsubscript{G} alla lista delle task\textsubscript{G}.\newline Al responsabile è richiesto di: \begin{itemize}\item autenticarsi con account con ruolo responsabile; \item selezionare il pulsante per aggiungere una nuova task\textsubscript{G}; \item inserire la priorità della task\textsubscript{G}; \item inserire il POI\textsubscript{A} a cui fa riferimento; \item confermare l'inserimento di nuova task\textsubscript{G}. \end{itemize} & 0\tabularnewline
 
-	TAF-5-O & Il responsabile deve poter modificare la priorità di una task\textsubscript{G}.\newline Al responsabile è richiesto di: \begin{itemize}\item autenticarsi con account con ruolo responsabile; \item selezionare la task\textsubscript{G} da modificare; \item inserire la nuova priorità; \item confermare la modifica priorità della task\textsubscript{G}. \end{itemize} & 0\tabularnewline
+	TAF-5-O & Il responsabile deve poter modificare la priorità di una task\textsubscript{G}.\newline Al responsabile è richiesto di: \begin{itemize}\item autenticarsi con il suo account; \item selezionare la task\textsubscript{G} da modificare; \item inserire la nuova priorità; \item confermare la modifica priorità della task\textsubscript{G}. \end{itemize} & 0\tabularnewline
 
-	TAF-6-O & Il responsabile deve poter eliminare una task\textsubscript{G} dalla lista delle task\textsubscript{G}.\newline Al responsabile è richiesto di: \begin{itemize} \item autenticarsi con account con ruolo responsabile; \item selezionare la task\textsubscript{G} da eliminare; \item confermare l'eliminazione della task\textsubscript{G}. \end{itemize} & 0\tabularnewline
+	TAF-6-O & Il responsabile deve poter eliminare una task\textsubscript{G} dalla lista delle task\textsubscript{G}.\newline Al responsabile è richiesto di: \begin{itemize} \item autenticarsi con il suo account; \item selezionare la task\textsubscript{G} da eliminare; \item confermare l'eliminazione della task\textsubscript{G}. \end{itemize} & 0\tabularnewline
 
-	TAF-7-O & Il sistema deve permettere all'utente di effettuare il logout dall'applicativo. & 0\tabularnewline
-
-	TAF-7.1-O & Il sistema deve permettere all'operatore di effettuare il logout solo quando si trova in base.\newline All'utente è richiesto di: \begin{itemize} \item raggiungere la base; \item premere il pulsante logout nell'applicativo. \end{itemize} & 0\tabularnewline
-
-	TAF-7.2-O & Il sistema deve permettere a responsabile e amministratore di effettuare il logout in qualsiasi momento.\newline Al responsabile/amministratore è richiesto di: \begin{itemize} \item premere il pulsante logout nell'applicativo. \end{itemize} & 0\tabularnewline
+	TAF-7-O & Il sistema deve permettere all'amministratore e al responsabile di effettuare il logout dall'applicativo. & 0\tabularnewline
+	TAF-7.1-O & Il sistema deve permettere a responsabile e amministratore di effettuare il logout in qualsiasi momento.\newline Al responsabile/amministratore è richiesto di: \begin{itemize} \item premere il pulsante logout nell'applicativo. \end{itemize} & 0\tabularnewline
 
 	TAF-8-O & Il sistema deve permettere a responsabili e amministratore di visualizzare la mappa, e in particolare visualizzare i POI\textsubscript{A}, aree non transitabili, muletti in real-time e le zone di percorrenza\textsubscript{G}.\newline All'utente è richiesto:\begin{itemize} \item autenticarsi come responsabile o amministratore; \item selezionare il pulsante per la visualizzazione della mappa; \item visualizzare i vari elementi della mappa (POI\textsubscript{A}, zona di percorrenza\textsubscript{G}, aree non transitabili e muletti in real-time). \end{itemize} & 0\tabularnewline
-
 	TAF-8.1-F & Il sistema deve permettere agli utenti la visualizzazione delle persone in real-time sulla mappa & 0\tabularnewline
+	
 
 	TAF-9-O & Il sistema deve permettere all'amministratore la visualizzazione di una notifica in caso della segnalazione da parte di un utente di un evento eccezionale. & 0\tabularnewline
 
 	TAF-10-O & Il sistema deve permettere all'amministratore di modificare la mappa, in particolare modificare planimetria\textsubscript{G} e percorrenza\textsubscript{G}.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come amministratore; \item selezionare il pulsante per la gestione mappa; \item selezionare il pulsante relativo alla modifica della mappa da effettuare.\end{itemize} & 0\tabularnewline
-
 	TAF-10.1-O & Il sistema deve permettere all'amministratore di gestire i POI\textsubscript{A} nella mappa, in particolare modificarne la posizione di uno già esistente.\newline All'amministratore è richiesto: \begin{itemize}\item autenticarsi come amministratore; \item selezionare il pulsante per la gestione mappa; \item selezionare il pulsante per la gestione dei POI\textsubscript{A}; \item selezionare il pulsante per la modifica della posizione di un POI\textsubscript{A}; \item selezionare il POI\textsubscript{A} interessato e aggiornarne la posizione.\end{itemize} & 0\tabularnewline
-
 	TAF-10.2-O & Il sistema deve permettere all'amministratore di eliminare un POI\textsubscript{A} già esistente.\newline All'amministratore è richiesto: \begin{itemize}\item autenticarsi come amministratore; \item selezionare il pulsante per la gestione mappa; \item selezionare il pulsante per la gestione dei POI\textsubscript{A}; \item selezionare il POI\textsubscript{A} da eliminare; \item selezionare il pulsante di eliminazione del POI\textsubscript{A}.\end{itemize} & 0\tabularnewline
-
 	TAF-10.3-O & Il sistema deve permettere all'amministratore di creare un nuovo POI\textsubscript{A}.\newline All'amministratore è richiesto: \begin{itemize}\item autenticarsi come amministratore; \item selezionare il pulsante per la gestione mappa; \item inserire codice identificativo, posizione nella mappa, tipo di POI\textsubscript{A} (carico, scarico, base) del nuovo POI\textsubscript{A}; \item selezionare il pulsante di conferma dell'aggiunta del POI\textsubscript{A}.\end{itemize} & 0\tabularnewline
 
 	TAF-11-O & L'operatore deve poter accedere alla sua user interface. All'utente è richiesto di: \begin{itemize} \item autenticarsi come operatore; \item selezionare il pulsante per accedere alla user interface.\end{itemize} & 0\tabularnewline
-
 	TAF-11.1-O & L'operatore deve poter vedere sotto alla mappa una lista ordinata delle task\textsubscript{G} rimanenti da eseguire dall'operatore.\newline All'utente è richiesto di: \begin{itemize} \item autenticarsi come operatore; \item selezionare il pulsante per accedere alla user interface; \item nella user interface raggiunta, sotto la mappa deve apparire una lista ordinata contenente le task\textsubscript{G} rimanenti da soddisfare.\end{itemize} & 0\tabularnewline
-
 	TAF-11.2-O & L'operatore deve poter vedere nella mappa il prossimo task\textsubscript{G} da soddisfare(POI\textsubscript{A} da raggiungere) (evidenziato con colore diverso).\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come operatore; \item selezionare il pulsante per accedere alla user interface; \item nella user interface raggiunta, nella mappa deve mostrare il prossimo task\textsubscript{G} da raggiungere.\end{itemize} & 0\tabularnewline
-
 	TAF-11.3-O & L'operatore deve poter segnalare la conclusione dell'incarico attraverso la user interface.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come operatore; \item selezionare il pulsante per accedere alla user interface; \item nella user interface raggiunta, l'operatore deve cliccare sul POI\textsubscript{A} evidenziato (raggiunto) nella mappa e confermare l'avvenuto scarico.\end{itemize} & 0\tabularnewline
-
 	TAF-11.4-O & L'operatore deve poter vedere direzione e spostamento del muletto a cui è a bordo, in caso sia attiva la guida automatica; in particolare il sistema deve attivare le icone di frecce direzionali, start e stop.  & 0\tabularnewline
-
 	TAF-11.5-O & L'operatore deve poter passare da guida manuale a guida automatica attraverso la user interface.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come operatore; \item accedere alla user interface, attraverso l'apposito pulsante; \item selezionare il pulsante per cambiare tipo di guida (manuale, automatica). \end{itemize} & 0\tabularnewline
-
 	TAF-11.6-O & L'operatore deve poter segnalare un evento eccezionale al server attraverso la user interface.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come operatore; \item accedere alla user interface, attraverso l'apposito pulsante; \item segnalare un evento eccezionale, attraverso l'apposito pulsante.\end{itemize} & 0\tabularnewline
-
 	TAF-11.7-O & L'operatore deve poter impostare la guida automatica verso la base, dopo aver finito tutte le task\textsubscript{G}, attraverso l'apposito pulsante nella user interface.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come operatore; \item accedere alla user interface, attraverso l'apposito pulsante; \item dopo aver finito tutte le task\textsubscript{G}, appare un pulsante per ritornare alla base con guida automatica.\end{itemize} & 0\tabularnewline
-
 	TAF-11.8-O & La user interface che rappresenta una singola unità, deve prevedere pulsanti per 4 frecce direzionali, start e stop per gli spostamenti manuali. & 0\tabularnewline
 
 	TAF-12-D & Il pannello permette di visualizzare l'indicatore di velocità attuale. & 0\tabularnewline
 
 	TAF-13-O & Il sistema centrale deve pilotare e coordinare tutte le unità per evitare ingorghi e incidenti. & 0\tabularnewline
-
 	TAF-13.1-F & Il sistema fornisce il percorso migliore alle unità tramite algoritmi di ricerca operativa. & 0\tabularnewline
 
 	TAF-14-O & Il sistema deve permettere a amministratore e responsabili di visualizzare la lista di tutti i POI\textsubscript{A} presenti nella mappa. & 0\tabularnewline
@@ -130,12 +115,47 @@ dove:
 	TAF-15-O & Il responsabile deve poter vedere la lista completa delle task\textsubscript{G}.\newline All'utente è richiesto:\begin{itemize} \item autenticarsi come responsabile; \item selezionare il pulsante per visualizzare la lista completa delle task\textsubscript{G}. \end{itemize} & 0\tabularnewline
 
 	TAF-16-O & L'amministratore deve poter accedere a un'interfaccia per aggiungere o rimuovere un'unità.\newline All'utente è richiesto: \begin{itemize} \item autenticarsi come amministratore; \item accedere all'interfaccia per gestire le unità, con l'apposito pulsante.\end{itemize} & 0\tabularnewline
-
 	TAF-16.1-O & L'amministratore deve poter aggiungere un'unità. \newline All'utente è richiesto: \begin{itemize} \item autenticarsi come amministratore; \item accedere all'interfaccia per gestire le unità, con l'apposito pulsante; \item selezionare il pulsante per aggiungere una nuova unità; \item inserire il codice identificativo dell'unità; \item confermare l'aggiunta della nuova unità.\end{itemize} & 0\tabularnewline
-
 	TAF-16.2-O & L'amministratore deve poter rimuovere un'unità. \newline All'utente è richiesto: \begin{itemize} \item autenticarsi come amministratore; \item accedere all'interfaccia per gestire le unità, con l'apposito pulsante; \item selezionare il pulsante per rimuovere un'unità; \item selezionare l'unità da rimuovere; \item confermare la rimozione dell'unità.\end{itemize} & 0\tabularnewline
-
-
+	
+	TAF-16.3-O & IL server centrale deve poter conoscere la posizione nella mappa di una precisa unità (e quindi potenzialmente di tutte). & 0\tabularnewline
+	TAF-16.4-O & Il server centrale deve poter inviare il percorso che l'unità deve fare per spostarsi da un POI al prossimo. & 0\tabularnewline
+	
+	TAF-17-O & La geolocalizzazione va simulata. & 0\tabularnewline
+	TAF-17.1-O & L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle unità. & 0\tabularnewline
+	TAF-17-2-F & L'applicativo propone una mappatura in tempo reale della posizione georeferenziata delle persone. & 0\tabularnewline
+	
+	TAF-18-O & Il server centrale deve poter prevedere ed evitare le collisioni. & 0\tabularnewline
+	TAF-18.1-O & Ogni unità deve rispettare i vincoli dimensionali delle zone. & 0\tabularnewline
+	TAF-18.2-O & Tutte le unità in movimento devono viaggiare alla stessa velocità, che rimane costante. & 0\tabularnewline
+	TAF-18.3-O & Ogni unità ha una: \begin{itemize}
+		\item velocità massima;
+		\item velocità di crociera;
+		\item codice identificativo.
+	\end{itemize}
+	 & 0\tabularnewline
+	TAF-18.4-F & Il server centrale permette di gestire il cambiamento di velocità di un'unità. & 0\tabularnewline
+	
+	TAF-19-O & Il server centrale conosce la posizione/direzione/velocità di ogni singola unità. & 0\tabularnewline
+	
+	TAF-20-O & Ogni task è collegata ad un POI da raggiungere. & 0\tabularnewline
+	TAF-20.1-O & Ogni POI può essere di carico, scarico o base. & 0\tabularnewline
+	TAF-20.2-O & Ci devono essere: \begin{itemize}
+		\item più di un POI di scarico;
+		\item almeno un POI di carico;
+		\item almeno un POI di base.
+	\end{itemize}
+ 	& 0\tabularnewline
+	
+	TAF-21-O & Ogni unità parte da una base (inizio turno operatore) e torna ad una base, quando finisce il turno dell'operatore. & 0\tabularnewline
+	TAF-21.1-O & Ogni unità passa per un'area di carico prima di iniziare la sequenza di scarichi (tasks). & 0\tabularnewline
+	TAF-21.2-O & Ogni unità torna ad un'area di carico se ha completato i task e il turno dell'operatore non è terminato. & 0\tabularnewline
+	TAF-22-O & Il server centrale conosce ogni spostamento, partenza e fermata di ogni singola unità. & 0 \tabularnewline
+	TAF-23-O & Ci deve essere uno e un solo account registrato con ruolo amministratore. 0\tabularnewline
+	TAF-23.1-O & Ci deve essere almeno un account con ruolo responsabile. 0\tabularnewline
+	TAF-23.2-O & Ci possono essere più account con ruolo responsabile. 0\tabularnewline
+	
+	
 
 \end{longtable}
 %fine tabella
