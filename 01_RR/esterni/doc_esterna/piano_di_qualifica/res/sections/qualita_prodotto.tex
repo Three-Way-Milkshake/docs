@@ -5,7 +5,7 @@ Di seguito verrà descritto il modello della qualità, per quanto riguarda:
 \begin{itemize}
 	\item funzionalità;
 	\item affidabilità;
-	\item \gls{efficienza}\textsubscript{G};
+	\item efficienza\textsubscript{G};
 	\item usabilità;
 	\item manutenibilità;
 	\item portabilità.
@@ -33,7 +33,7 @@ Viene specificata la completezza del software.
 \end{itemize}
 \pagebreak
 \subsection{Affidabilità}
-L'affidabilità è la capacità di un certo software di mantenere un certo livello di prestazioni in determinate condizioni in un certo \gls{periodo}\textsubscript{G}.
+L'affidabilità è la capacità di un certo software di mantenere un certo livello di prestazioni in determinate condizioni in un certo periodo\textsubscript{G}.
 \subsubsection{Obiettivi}
 \begin{itemize}
 	\item \textbf{maturità:} capacità del prodotto di dare risultati corretti, esenti da errori o malfunzionamenti;
@@ -51,11 +51,11 @@ Viene specificata l'abilità del software di resistere a malfunzionamenti.
 \end{itemize}
 
 \subsection{Efficienza}
-L'efficienza è la capacità del software di poter offrire un determinato livello di prestazioni in date condizioni in un certo \gls{periodo}\textsubscript{G}.
+L'efficienza è la capacità del software di poter offrire un determinato livello di prestazioni in date condizioni in un certo periodo\textsubscript{G}.
 \subsubsection{Obiettivi}
 \begin{itemize}
 	\item \textbf{comportamento rispetto al tempo}: capacità del prodotto di fornire adeguati livelli di elaborazione, velocità e tempi di risposta;
-	\item \textbf{utilizzo delle risorse}: capacità del prodotto di utilizzare le \glspl{risorsa}\textsubscript{G} in maniera adeguata;
+	\item \textbf{utilizzo delle risorse}: capacità del prodotto di utilizzare le risorsa\textsubscript{G} in maniera adeguata;
 	\item \textbf{conformità}: capacità del prodotto di aderire a standard sull'efficienza.
 \end{itemize}
 \subsubsection{Metriche}
@@ -76,7 +76,7 @@ L'usabilità è la capacità del prodotto di essere compreso ed utilizzato dall'
 \subsubsection{Metriche}
 \textbf{Numero di tocchi/click necessari (C)}\\
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento.\\
-Si considera la capacità dell'operatore di visualizzare la propria lista delle \gls{task}\textsubscript{G}.
+Si considera la capacità dell'operatore di visualizzare la propria lista delle task\textsubscript{G}.
 \begin{itemize}
 	\item \textbf{misurazione:} numero di tocchi o click necessari per il raggiungimento dell'obiettivo;
 	\item \textbf{valore preferibile:} $C < 4$;
@@ -84,7 +84,7 @@ Si considera la capacità dell'operatore di visualizzare la propria lista delle 
 \end{itemize}
 \textbf{Numero di secondi necessari (S)}\\
 Viene specificata la facilità con cui l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
-Si considera la capacità dell'operatore di visualizzare la propria lista delle \gls{task}\textsubscript{G}.
+Si considera la capacità dell'operatore di visualizzare la propria lista delle task\textsubscript{G}.
 \begin{itemize}
 	\item \textbf{misurazione:} numero di secondi necessari per il raggiungimento dell'obiettivo;
 	\item \textbf{valore preferibile:} $S < 15$;
@@ -137,8 +137,8 @@ Il software dovrà eseguire solamente su ambiente \href{https://www.docker.com/w
 
 			Completezza del Software ($Cs$)        & Funzionalità non implementate rispetto alle funzionalità implementate                               & Funzionalità                & $Cs = 1  $                 & $Cs = 1   $                  \\
 			Affidabilità del Software ($A$)        & Errori rispetto al numero di test eseguiti                                                          & Affidabilità                & $A = 0   $                 & $A < 0.15 $                  \\
-			Numero di tocchi/click necessari ($C$) & Numero di tocchi o click necessari per visualizzare la propria lista di \gls{task}\textsubscript{G} & Usabilità                   & $C < 4   $                 & $C < 6    $                  \\
-			Numero di secondi necessari ($S$)      & Numero di secondi necessari per visualizzare la propria lista di \gls{task}\textsubscript{G}        & Usabilità                   & $S < 15  $                 & $S < 40   $                  \\
+			Numero di tocchi/click necessari ($C$) & Numero di tocchi o click necessari per visualizzare la propria lista di task\textsubscript{G} & Usabilità                   & $C < 4   $                 & $C < 6    $                  \\
+			Numero di secondi necessari ($S$)      & Numero di secondi necessari per visualizzare la propria lista di task\textsubscript{G}        & Usabilità                   & $S < 15  $                 & $S < 40   $                  \\
 			Profondità gerarchica ($P$)            & Profondità gerarchica massima dei collegamenti e funzionalità presenti all'interno del software     & Usabilità                   & $P < 4   $                 & $P < 6    $                  \\
 			Leggibilità software ($L$)             & Numero di linee di codice commentate rispetto al totale di linee di codice                          & Manutenibilità              & $L > 0.15$                 & $L > 0.10 $                  \\
 		\end{tabular}
