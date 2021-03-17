@@ -14,16 +14,14 @@
         \begin{itemize}
             \item  raccolta appunti e ordini del giorno per riunioni;
             \item  raccolta argomenti delle discussioni delle riunioni, per tracciare l'evoluzione delle stesse e favorire la stesura dei verbali in seguito;
-            \item  creazione di wiki\textsubscript{G}, workflow e how-to per condivisione di materiale utile riguardo l'uso di tecnologie o strumenti a supporto di qualsiasi attività\textsubscript{G};
-            \item raccolta di varie annotazioni, catalogate per documento .
-            \item 
+            \item  creazione di wiki\textsubscript{G} per condivisione di materiale utile riguardo l'uso di tecnologie o strumenti a supporto di qualsiasi attivita\textsubscript{G}.
         \end{itemize}
         Questi documenti saranno realizzati sfruttando Confluence per garantire semplicità, accentramento e condivisione real-time.
 
     \end{itemize}
     \subsubsection{Ciclo di vita dei documenti}
     \label{ciclovitadoc}
-    Ogni documento formale si redige ed incrementa tramite queste attività\textsubscript{G}:
+    Ogni documento formale si redige ed incrementa tramite queste attivita\textsubscript{G}:
     \begin{itemize}
         \item \textbf{stesura: }la scrittura del documento in sé, riguarda sia la creazione di nuove parti che l'aggiornamento di queste. Uno o più redattori si occupano di ciò;
         \item \textbf{verifica: }eseguita da uno o più verificatori, necessariamente diversi dai redattori, consiste nel controllo della correttezza sintattica, semantica, grammaticale ed ortografica e della conformità del documento rispetto alle suo scopo. Nel caso in cui si rendano necessarie modifiche sostanziali, i verificatori \hyperref[risoluzioneproblemi]{notificheranno il responsabile} che provvederà a riportare il documento in stesura e solleciterà i redattori affinché apportino le correzioni richieste. I verificatori sono autorizzati ad apportare piccole modifiche correttive quali:
@@ -39,18 +37,19 @@
         \end{itemize}
         \item \textbf{approvazione: }quando i verificatori riporteranno la completa correttezza ed aderenza ai requisito\textsubscript{G} del documento, il responsabile provvederà all'approvazione finale ed al rilascio di una nuova versione dello stesso.
     \end{itemize}
-    Adottando un approccio incrementale\textsubscript{G}, queste attività\textsubscript{G} possono ripetersi.
+    Adottando un approccio incrementale\textsubscript{G}, queste attivita\textsubscript{G} possono ripetersi.
     \subsubsection{Struttura dei documenti formali}
     \pparagraph{Organizzazione in file e cartelle}
     Ogni documento, ha una sua cartella dedicata, all'interno della quale ci devono essere:
     \begin{itemize}
-        \item \textbf{file principale del documento: }(nome\_documento.tex) che contiene l'impostazione della struttura, le dichiarazioni per importare i package \LaTeX{} aggiuntivi e le dichiarazioni di inclusione delle sezioni;
+        \item \textbf{file principale del documento: }(nome\_documento.tex) che contiene l'impostazione della struttura, le dichiarazioni per importare i package \LaTeX{} aggiuntivi e le dichiarazioni di inclusione delle sezioni e del glossario;
         \item \textbf{cartella config: }contenente file di configurazione relativi al documento, che consentono l'impostazione del frontespizio e del registro delle modifiche;
         \item \textbf{cartella res: }per contenere le risorsa\textsubscript{G} del documento, a sua volta questa contiene:
         \begin{itemize}
             \item \textbf{cartella images: }per le eventuali immagini;
             \item \textbf{cartella sections: }che contiene tutte le sezioni, ognuna in un file diverso, i quali seguono la \hyperref[convezionenomifile]{convenzione di nomenclatura} preceduta da un identificativo numerico progressivo ad indicare la posizione della stessa nel documento (e.g.: 01\_introduzione.tex, 02\_sezione1.tex)
         \end{itemize}
+        \item \textbf{file glossario.txt: }dove definire tutti gli acronimi e le voci di glossario, che verranno poi processate \hyperref[glossario]{dall'automazione}.
     \end{itemize}
     \pparagraph{Frontespizio}
     Fornisce delle informazioni generali e di introduzione al documento, ed è così composto:
@@ -71,7 +70,7 @@
     Raccoglie in forma tabellare tutte le modifiche e conseguentemente la storia del documento, così strutturate:
     \begin{itemize}
         \item versione del documento relativa alla modifica
-        \item breve descrizione delle attività\textsubscript{G} svolte
+        \item breve descrizione delle attivita\textsubscript{G} svolte
         \item data della modifica, secondo lo standard \href{https://www.iso.org/iso-8601-date-and-time-format.html}{ISO 8601}
         \item cognome e nome di chi ha apportato la modifica
         \item ruolo del modificatore rispetto al ciclo di vita del documento, può quindi essere: redattore, verificatore, responsabile.
@@ -84,11 +83,11 @@
     La prima sezione di contenuto di ogni documento formale è l'introduzione che si articola in:
     \begin{itemize}
         \item una sezione che descrive lo scopo del documento;
-        \item due sezioni condivise fra tutti i documenti, non verbali, che illustrano rispettivamente scopo del prodotto del capitolato\textsubscript{G} scelto e riferimenti ad altri documenti;
+        \item due sezioni condivise fra tutti i documenti, non verbali, che illustrano rispettivamente scopo del prodotto del capitolato\textsubscript{G} scelto e funzionamento di acronimi, voci di glossario e riferimenti ad altri documenti;
         \item una sezione che contiene tutti i riferimenti, di natura normativa o informativa.
     \end{itemize}
-    \pparagraph{Ulteriori sezioni e appendici}
-    Come indicato precedentemente ogni sezione di primo livello deve avere un suo file dedicato e si svilupperà in seguito all'introduzione. Al termine di tutte le sezioni vi può essere un'appendice.
+    \pparagraph{Ulteriori sezioni, appendici e glossari}
+    Come indicato precedentemente ogni sezione di primo livello deve avere un suo file dedicato e si svilupperà in seguito all'introduzione. Al termine di tutte le sezioni vi può essere un'appendice mentre le ultime pagine elencano la lista degli acronimi e i termini di glossario utilizzati nel documento, con riferimenti alle pagine dove questi appaiono.
 
     \subsubsection{Verbali}
     \label{verbali}
@@ -112,19 +111,20 @@
         \item \textbf{decisione: }breve riassunto che indichi in maniera chiara la decisione presa.
     \end{itemize}
     \subsubsection{Glossario e acronimi}
-    Ogni documento può contenere dei termini ambigui che necessitano di una definizione, scritta all'interno della wiki\textsubscript{G} in GitHub o nel file glossario.pdf, aggiornato ad ogni rilascio.
+    Ogni documento ha una sua sezione dedicata al glossario e agli acronimi a fine documento, dove sono indicate anche le pagine di apparizione delle rispettive voci.
     \pparagraph{Definzione ed utilizzo delle voci}
-    Gli acronimi ed i termini di glossario vanno definiti ed inseriti in ordine alfabetico all'interno della pagina web "Glossario" di GitHub, istruzioni precise su come utilizzare correttamente questo documento si trovano nella \textsc{wiki how-to glossario}. Una volta che una voce è stata aggiunta, la si può usare liberamente in qualsiasi sezione tramite il suo nome, nel caso di termine nel glossario, o abbreviazione nel caso di acronimo.
+    Gli acronimi ed i termini di glossario vanno definiti nel glossario.txt, istruzioni precise su come utilizzare correttamente questo documento si trovano nella \textsc{wiki how-to glossario}. Una volta che una voce è stata aggiunta, la si può usare liberamente in qualsiasi sezione tramite il suo nome, singolare o plurale nel caso di termine nel glossario, o abbreviazione nel caso di acronimo
 
     \pparagraph{Funzionamento}
-    Ad ogni azione di git\textsubscript{G} push\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
+    Ad ogni azione di push\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
     \begin{itemize}
-        \item controlla tutti i documenti che hanno almeno un termine definito nella pagina "Glossario" di GitHub;
-        \item sostituisce tutte le occorrenze delle voci di glossario e acronimi in ogni sezione con i rispettivi comandi \LaTeX{}\ (pedice A o G);
-        \item se ci sono stati cambiamenti, ricompila il documento per ottenere un pdf aggiornato;
-        \item se ci sono stati dei documenti aggiornati, effettua commit\textsubscript{G} e git\textsubscript{G} push\textsubscript{G}.
+        \item controlla tutti i documenti che hanno un glossario.txt;
+        \item ne genera un glossario.tex;
+        \item sostituisce tutte le occorrenze delle voci di glossario e acronimi in ogni sezione con i rispettivi comandi \LaTeX{}
+        \item se ci sono stati cambiamenti, ricompila il glossario e ricompila il documento per ottenere un pdf aggiornato;
+        \item se ci sono stati dei documenti aggiornati, effettua commit\textsubscript{G} e push\textsubscript{G}.
     \end{itemize}
-    Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una git\textsubscript{G} pull\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una git\textsubscript{G} push\textsubscript{G}, così da avere il documento aggiornato ed evitare problemi di conflitti e nel VCS\textsubscript{A}.
+    Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate e collegate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una pull\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una push\textsubscript{G}, così da avere il documento aggiornato ed evitare problemi di conflitti e nel VCS\textsubscript{A}.
     \subsubsection{Norme tipografiche}
         \pparagraph{Nomi di file e cartelle}
         \label{convezionenomifile}
@@ -176,8 +176,8 @@
         Si adotta la convenzione $x.y.z$ dove x, y e z sono numeri progressivi che partono da 0, x non si azzera mai, y si azzera ad ogni incremento di x e z si azzera ad ogni incremento di y o x. Gli incrementi avvengono:
         \begin{itemize}
             \item \textbf{per x: }quando avviene un accertamento da parte del responsabile di modifiche sostanziali
-            \item \textbf{per y: }quando viene apportato e verificato un insieme discreto di innovazioni;
-            \item \textbf{per z: }per ogni modifica verificata minore.
+            \item \textbf{per y: }quando viene apportato un insieme discreto di modifiche;
+            \item \textbf{per z: }per ogni modifica o verifica minore.
         \end{itemize}
         Nel caso si voglia specificare la versione nel nome di un file, per esempio per condivisioni esterne al gruppo, la nomenclatura dovrà essere: $$\text{[nome\_file]\_\_v[x.y.z].[estensione]}$$ $$\text{(e.g.: norme\_di\_progetto\_\_v1.0.3.tex)}$$
 
@@ -190,11 +190,11 @@
     \subsubsection{Aspettative}
         Avere uno spazio di lavoro versionato, condiviso ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
     \subsubsection{Descrizione}
-        Il gruppo, \group, ha un organizzazione su GitHub\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le repo\textsubscript{A} di cui necessita.
+        Il gruppo, \group, ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le repo\textsubscript{A} di cui necessita.
     \subsubsection{Workflow di versionamento}
         Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di git\textsubscript{G} e GitHub si trovano nella wiki\textsubscript{G} \textsc{GIT, Github \& Jira}
         \pparagraph{Pull requests}
-            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una git\textsubscript{G} pull\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
+            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una pull\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
 
     \subsubsection{Integrazione con Jira}
     \label{jiraintegration}
@@ -233,13 +233,13 @@
     \end{itemize}
 	Per ogni processo vengono descritti:
 	\begin{itemize}
-		\item gli obiettivi prefissati di qualità;
-		\item le metriche da utilizzare;
-		\item un intervallo, un valore di minimo o un valore di massimo che servono ad identificare uno standard minimo di qualità secondo la specifica metrica.
+		\item gli obiettivi da perseguire;
+		\item le strategie da applicare;
+		\item le metriche da utilizzare.
 	\end{itemize}
 	In questo caso si mira ad ottenere software e documentazione di qualità soddisfacente.
     \subsubsection{Attività}
-    Le tre attività\textsubscript{G} principali del processo sono:
+    Le tre attivita\textsubscript{G} principali del processo sono:
     \begin{itemize}
     	\item \textbf{Pianificazione:} porsi degli obiettivi di qualità, definire strategie per raggiungerli e disporre di conseguenza persone e risorse nel modo migliore;
     	\item \textbf{Valutazione:} mettere in atto la pianificazione, applicando i criteri, misurando e monitorando i risultati;
