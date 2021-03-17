@@ -7,7 +7,8 @@
 \usepackage{hyperref}
 \usepackage{ulem}
 \usepackage{listings}
-\input{glossario.tex}
+\usepackage{float}
+
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
 	\pagebreak
@@ -15,7 +16,6 @@
 	% Registro delle modifiche
 	\input{../../../../latex/changelog.tex}
 	\input{config/changelog_input.tex} % modifica questo file
-	\end{longtable}
 	\pagebreak
 
 	% indice
@@ -38,18 +38,20 @@
 	\input{res/sections/01_introduzione.tex}
 	\pagebreak
 
-	\input{res/sections/02_qualita_del_processo.tex}
+	\input{res/sections/02_visione_generale_delle_strategie.tex}
 	\pagebreak
 
-	\input{res/sections/03_qualita_del_prodotto.tex}
+	\input{res/sections/03_gestione_metriche.tex}
 	\pagebreak
-
+	\appendix
 	\input{res/sections/04_test.tex}
 	\pagebreak
 
 	\input{res/sections/05_resoconto.tex}
-
 	\pagebreak
-	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
-	\printglossary[title=Glossario dei Termini]
+
+	\input{res/sections/06_valutazioni_per_il_miglioramento.tex}
+	\pagebreak
+	\input{res/sections/07_standard_qualita.tex}
+	
 \end{document}
