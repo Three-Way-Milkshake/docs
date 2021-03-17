@@ -1,0 +1,46 @@
+\section{Verbale della riunione}
+
+\subsection {Docker}
+Non serve per il PoC, si può fare implementare più avanti.
+
+\subsection{Ordine delle task}
+Il Responsabile dovrà ordinare le task.\\
+Ogni unità riceverà la lista già ordinata che dovrà rispettare.
+
+\subsection{Invio della posizione da parte delle unità}
+L'invio della posizione dovrà essere continuo dall'unità (NodeJs) al server (Java).\\
+Per qualsiasi problema di connessione il muletto si ferma.\\
+
+\subsection{Movimento dell'unità}
+Discusse varie problematiche relative all'identificazione di casi limite che potrebbero succedere utilizzando un algoritmo di Path Finding in real time. Sono stati pensati dei casi pericolosi in cui si dovrà fare maggiore attenzione:
+\begin{itemize}
+	\item se è presente un ostacolo davanti;
+	\item se non è presente un margine di errore di distanza tra i muletti;
+	\item proseguire per file parallele non costituisce problema.
+\end{itemize}
+Bisognerà gestire il caso in ci sono due muletti provenienti da direzioni opposte lungo la stessa corsia: ciò porterebbe ad uno stallo infinito senza ricalcolo del percorso.
+
+\subsection{Mosse dell'unità}
+Ogni unità portra fare in ogni istante una sola cosa tra le seguenti:
+\begin{itemize}
+	\item andare avanti di una calla della mappa;
+	\item girarsi di 90 gradi;
+	\item girarsi di -90 gradi;
+	\item girarsi di 180 gradi;
+	\item stare ferma.
+\end{itemize}
+
+\subsection{Login}
+Il login dovrà essere fatto solamente dagli Amministratori e dal Reponsabile.\\
+Le unità dovranno essere identificate in altri modi, come l'indirizzo ip associato al collegamento tra unità e server.\\
+L'ambiente sarà una rete interna all'azienda e dovrà essere utilizzato il protocollo Https per la sicurezza dei dati trasmessi.
+
+\subsection{Architettura dell'applicazione}
+Si è deciso di utilizzare un istanza di NodeJs e una di Angular per ogni unità.\\
+Bisognerà salvare il timestamp per ogni nuova connessione.\\
+Per il PoC basterà visualizzare il minimo indispensabile di connessione tra le varie tecnologie.
+
+\subsection{Senso di circolazione}
+Il proponente ha specificato che il numero di celle attraversabili senza vincoli di circolazioni saranno più del 50 percento.\\
+Le aree vincolate da un senso di circolazione saranno poche.
+
