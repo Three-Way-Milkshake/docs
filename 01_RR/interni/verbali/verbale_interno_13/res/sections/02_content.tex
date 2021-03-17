@@ -1,0 +1,42 @@
+\section{Verbale della riunione}
+
+\subsection{Conclusione RR e invio dei documenti mancanti}
+Approvato \textsc{Piano di Qualifica} e inviata email al professore per sbloccare il giudizio in sospeso sulla RR.
+
+\subsection{Chiarimenti su uso di calendario e di git}
+Si è chiarito ai membri del gruppo i seguenti punti:
+\begin{itemize}
+	\item le riunioni private (che non coinvolgono l'intero gruppo ma solo alcuni membri) non devono essere segnate nel calendario condiviso, ma deve essere creato un evento a parte;
+	\item tutto il superfluo va ignorato attraverso il file \textit{.gitignore}, così che non venga salvato nella \textit{repository} ufficiale.
+\end{itemize}
+
+\subsection{Discussione sull'avanzamento del Poc}
+\subsubsection{Backend}
+\begin{itemize}
+	\item \textsc{Planimetria}: la mappa è costituita da quadrati 1x1. Ogni elemento (zona transitabile, non transitabile e unità) occupa un quadrato, ma ci potranno essere composizioni di queste. Un quadrato sulla mappa coincide con uno spazio reale di 2x2 metri;
+	\item \textsc{collisioni:} ci deve essere un controllo periodico da parte del server per far si che non ci siano unità in rotta di collisione. Si è pensato all'utilizzo di un thread dedicato. Per il PoC si è deciso di utilizzare il termine collisione in senso stretto (evitare solo lo scontro diretto) mentre successivamente bisognerà fare in modo che le unità non si avvicinino l'una all'altra più di uno specifico $\delta$;
+	\item \textsc{cambiamenti avvengono ad ogni intervallo di tempo:} ogni unità può 
+	\begin{itemize}
+		\item restare ferma;
+		\item cambiare verso di orientamento;
+		\item avanzare di un quadratino.
+	\end{itemize} 
+	Si è pensato, se è necessario, di aggiungere delle regole di circolazione all'interno della mappa, si rimanda la questione ad un incontro con l'azienda.
+	
+		
+\end{itemize}
+Per il prossimo incontro si dovrà:
+\begin{itemize}
+	\item aver deciso un protocollo condiviso per comunicare;
+	\item gestire il server;
+	\item decidere come implementare la gestione delle unità, se è efficiente l'uso di una \textit{tabella Hash} con al suo interno le coordinate e un oggetto di tipo muletto (\code{HashMap<Pair<x,y>,muletto}).
+\end{itemize}
+
+\subsection{Frontend}
+Sono state decise le prossime mansioni da compiere per il prossimo meeting:
+\begin{itemize}
+	\item sistemazione grafica della mappa;
+	\item collegare l'interfaccia al server centrale (attraverso i \textit{Socket});
+	\item implementare un sistema per far muovere graficamente le unità sulla mappa;
+	\item decidere e comunicare a chi si occupa del Backend, i dati richiesti dall'UI.
+\end{itemize}
