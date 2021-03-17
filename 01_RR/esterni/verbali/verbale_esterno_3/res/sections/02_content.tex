@@ -1,0 +1,132 @@
+\section{Verbale della riunione}
+
+\subsection{Meccanismi di login}
+\label{login}
+    \begin{itemize}
+        \item adottare login con user e password per amministratori e responsabili;
+        \item muletti come entità diventano nuovi attori per le operazioni che si possono svolgere a bordo
+            \subitem -- non serve login operatore;
+            \subitem -- al momento della connessione viene scambiato token con server per identificazione;
+            \subitem -- utente a bordo è un'informazione in più
+                \subsubitem * fa parte della sezione facoltativa "pedoni" solo quando scende dal mezzo;
+                \subsubitem * il muletto comunica con il server indipendentemente;
+        \item non serve appoggiarsi a servizi esterni, può essere realizzato internamente dal gruppo, seguendo buone pratiche di sicurezza:
+            \begin{itemize}
+                \item comunicazioni con protocollo https
+                    \subitem * certificato autogenerato "self signed" va bene;
+                    \subitem * non serve acquistare/generare;
+                \item salvare hash delle password
+                    \subitem * potenzialmente anche salted hash;
+                \item se si adottano sessioni queste devono avere scadenza.
+            \end{itemize}
+    \end{itemize}
+
+\subsection{Interfaccia di guida}
+    \begin{itemize}
+        \item guida manuale rimane obbligatoria
+            \subitem -- unico modo di testare capacità di adattamento del sistema;
+        \item il controllo delle unità non deve per forza avvenire su dispositivi/schermi/interfacce dedicate ma può essere centralizzato in unico pannello tramite il quale l'amministratore può far intraprendere qualunque azione ad ogni unità.
+    \end{itemize}
+
+\subsection{Riclassificazione dei Requisiti}
+\label{req}
+    Durante il confronto sono emersi i seguenti punti notabili riguardo le differenze tra requisiti di vincolo e funzionali:
+    \begin{itemize}
+        \item \textbf{vincolo: }
+            \begin{itemize}
+                \item tutto ciò che a sistema viene trattato come condizione iniziale;
+                \item sistema in cui si lavora è rigido, non c'è possibilità di ridiscutere questi punti fermi;
+                \item eg: tutto ciò che riguarda mappa e spazi;
+            \end{itemize}
+        \item \textbf{funzionale: }
+            \begin{itemize}
+                \item comportamento del sistema;
+                \item ciò che il software fa, su cui si può quindi lavorare e migliorare.
+            \end{itemize}
+    \end{itemize}
+    I requisiti di vincolo sono dunque stati rivisti e classificati come segue (\textbf{F: }funzionale, \textbf{V: }vincolo):
+    \begin{enumerate}
+        \item F;
+        \item F;
+        \item F;
+        \item tutto quello che si muove all'interno è censito dal sistema
+            \subitem (a) \; non esiste unità non riconosciuta e controllata dal sistema;
+            \subitem (b) \; non c'è nulla che il sistema non conosca e da cui non riceva dati;
+        \item F;
+        \item V;
+        \item V;
+        \item F, compito del nostro lavoro, derivato da 6 e 7, renderlo valido;
+        \item F
+            \subitem -- sparisce se 10, 11 e 12 vengono realizzati;
+            \subitem -- 10, 11 e 12 sono sotto funzionalità del 9.
+
+    \end{enumerate}
+
+    I requisiti di vincolo dal 10 al 35 diventano tutti funzionali.
+
+    \subsubsection{Sui vincoli}
+        \begin{itemize}
+            \item se si impongono vincoli su browser, dare 1 o più versioni "secche" e non intervalli
+                \subitem -- altrimenti si parla di requisiti tecnici;
+                \subitem -- lo può imporre il gruppo;
+            \item si possono introdurre altri tipi di vincoli come:
+                \subitem -- SO del server;
+                \subitem -- versioni docker, kubernetes se usati;
+                \subitem -- per garantire certezza nel funzionamento;
+                \subitem -- possono essere definiti alla fine dello sviluppo come requisiti tecnici.
+        \end{itemize}
+
+\pagebreak
+\subsection{Discussione bozza operativa PoC}
+\label{poc}
+    Il gruppo ha delineato la seguente bozza operativa:
+    \begin{longtable}{
+            >{}p{0.2\textwidth}
+            >{}p{0.22\textwidth}
+            >{}p{0.25\textwidth}
+            >{}p{0.25\textwidth}  }
+        \rowcolorhead
+        \centering \headertitle{Java} &
+        \centering \headertitle{Nodejs} &
+        \centering \headertitle{Angular} &
+        \centering \headertitle{JSON}
+        \endfirsthead
+        \endhead
+        utilizzo thread & comunicazione con socket server (java) & mostrare creazione interfacce utili & gestione salvataggio utenti fissi
+        \tabularnewline
+        utilizzo       socket & invio periodico di dati (riguardo unità) & interfaccia guida/suggerimenti basic probabilmente automatica/simulata & gestione salvataggio planimetria inizialmente finta e statica
+        \tabularnewline
+        liste          di task hardcoded & & potenzialmente abbozzare modifica planimetria &
+    \end{longtable}
+    la quale è stata confermata dal proponente, con le seguenti note:
+    \begin{itemize}
+        \item si possono adottare 3 strategie per la gestione della concorrenza nel server centrale:
+            \begin{enumerate}
+                \item completamente real time;
+                \item completamente temporizzata: il sistema rielabora ad ogni intervallo specifico;
+                \item ibrida: si rielabora ad intervalli, a meno che non ci siano dei segnali importanti che richiedono una gestione immediata;
+            \end{enumerate}
+        \item si consiglia di adottare approccio temporizzato tramite timer task, almeno per il PoC
+            \subitem -- gestire casi particolari (non ho ricevuto segnale da unità...);
+        \item per quanto riguarda i socket, montare sopra qualche web server per gestire chiamate con rest (eg: tomcat)
+            \subitem -- per aprire chiamate verso l'esterno;
+            \subitem -- ne esistono anche di piccoli;
+            \subitem -- per ridurre i tempi via api rest;
+        \item la gestione dei dati via JSON va bene, non è obbligatorio avere in seguito un db;
+        \item per scritture concorrenti è sufficiente adottare timestamps e metodi synchronized.
+    \end{itemize}
+    Riguardo agli sviluppi successivi sono emersi i seguenti commenti:
+    \begin{itemize}
+        \item si possono adottare librerie grafiche (js puro + wrapper) per il monitor real time;
+        \item l'utilizzo di java anche lato client potrebbe rendere più comoda la comunicazione con il server.
+    \end{itemize}
+
+    \subsubsection{Fonti suggerite dal proponente riguardo thread, timer e socket}
+        \begin{itemize}
+            \item \href{https://www.baeldung.com/java-timer-and-timertask}{Java and timer task};
+            \item \href{https://www.adam-bien.com/roller/abien/entry/scheduledexecutorservice\_a\_timertask\_alternative}{scheduled executor service};
+            \item \href{https://www.baeldung.com/a-guide-to-java-sockets}{guide to java sockets};
+            \item \href{https://dzone.com/articles/simple-http-server-in-java}{simple http server in java};
+            \item \href{https://www.html.it/guide/guida-java/}{corso java html.it}
+                \subitem -- capitoli: 33, 34, 35, 36, 79, 80, 81, 82.
+        \end{itemize}
