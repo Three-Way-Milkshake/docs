@@ -1,0 +1,116 @@
+\section{Verbale della riunione}
+
+\subsection{Sensori ed unità}
+\begin{itemize}
+    \item Nel contesto reale si rende naturalmente necessaria una parte di sensoristica
+    \subitem -- per gli scopi di questo progetto si può tralasciare;
+    \item il sistema ha tutte le informazioni di cui ha bisogno
+    \subitem -- il server centrale si occupa di tutto;
+    \item non è necessario simulare i sensori.
+\end{itemize}
+
+\subsection{Tecnologie e formazione}
+Sono state confermate le tecnologie discusse in confronti precedenti con il proponente.\\Sono emerse diverse fonti da sfruttare.
+    \subsubsection{Java}
+        \begin{itemize}
+            \item Corso su html.it;
+            \item si possono approfondire alcune novità delle versioni > 11
+                \subitem -- tuttavia versione 8 va bene.
+        \end{itemize}
+
+    \subsubsection{Node.js}
+        \begin{itemize}
+            \item Documentazione ufficiale;
+            \item corso su html.it.
+        \end{itemize}
+
+    \subsubsection{Frontend}
+        \begin{itemize}
+            \item Angular o AngularJS;
+            \item guide e documentazioni ufficiali su corrispondenti siti;
+            \item TypeScript vs JavaScript
+                \subitem -- dipende dal tempo che ci vogliamo dedicare.
+        \end{itemize}
+
+    \subsubsection{Design pattern}
+        \begin{itemize}
+            \item Nessun vincolo su design pattern;
+            \item potrebbe essere comodo il concetto di factory
+                \subitem -- eventualmente bypassato da librerie;
+                \subitem -- ma in generale come pattern più pulito è più pratico;
+                \subitem -- adatto per sistemi composti da tanti piccoli componenti.
+        \end{itemize}
+
+    \subsubsection{Salvataggio dati}
+        \begin{itemize}
+            \item Non è per forza necessaria una base di dati;
+            \item la configurazione iniziale può essere ricevuta da un file di testo;
+            \item consigliate strutture noSQL comunque;
+            \item semplici JSON possono essere sufficienti;
+            \item non è richiesto il tracciamento delle operazioni.
+        \end{itemize}
+
+    \subsubsection{Approccio al multithreading}
+        \begin{itemize}
+            \item L'introduzione di framework in questo ambito può portare ad una elevata complessità;
+            \item preferire come approccio l'uso di thread puri
+                \subitem -- timer task, runnable...;
+            \item solo in caso di difficoltà valutare e discutere l'introduzione di un framework per il multithreading;
+            \item limitare l'uso in generale di librerie di terze parti.
+        \end{itemize}
+
+    \subsubsection{Simulazione muletti}
+        \begin{itemize}
+            \item Carta bianca, si può usare tutto ciò che può dare una mano;
+            \item in questo contesto anche diverse librerie, anche se ne sfruttiamo solo  una piccola percentuale.
+        \end{itemize}
+
+    \subsubsection{Controllo diagrammi attività server}
+        \begin{itemize}
+            \item Bene in generale;
+            \item quando si introdurrà il concetto di tempo e timer task utilizzare apposita icona start con orologio.
+        \end{itemize}
+
+    \subsubsection{Possibili requisiti qualitativi}
+        \begin{itemize}
+            \item In genere 2 famiglie:
+                \begin{itemize}
+                    \item bontà software
+                        \begin{itemize}
+                            \item indicatori comuni sul sw;
+                            \item non serve stare dentro certi limiti, basta misurarli;
+                            \item editor moderni fanno quasi tutto da soli;
+                        \end{itemize}
+                    \item applicativi
+                        \begin{itemize}
+                            \item requisito sensato può essere: $\frac{\text{tempo risposta}}{\text{numero dispositivi}}$;
+                            \item e.g.: entro 1 sec fino a 50, entro 2 fino a 100...;
+                            \item sistema qualità basato su tempi di risposta e numero di fail, questi ultimi in ogni caso non devono mai bloccare l'applicativo (input received, no output producecd);
+                        \end{itemize}
+                \end{itemize}
+            \item decisioni che spettano al gruppo
+                \begin{itemize}
+                    \item i muletti vanno ad una certa velocità;
+                    \item considerando tempi di reazione e velocità, conseguirà uno spazio di spostamento;
+                    \item stabilire in quanto spazio massimo si vuole l'arresto;
+                    \item ricavare tempi di risposta che si dovranno attendere dal sistema;
+                    \item discorso analogo per il numero di fail.
+                \end{itemize}
+        \end{itemize}
+
+    \subsubsection{Strategie di progettazione}
+        \begin{itemize}
+            \item Inizialmente si consiglia di procedere in parallelo:
+                \subitem -- 3 progettazione;
+                \subitem -- 3 studio tecnologie ed approccio codice;
+            \item questo da vantaggi;
+            \item valutando eventuali scostamenti, riequilibrare le partizioni.
+        \end{itemize}
+
+
+
+
+
+
+
+
