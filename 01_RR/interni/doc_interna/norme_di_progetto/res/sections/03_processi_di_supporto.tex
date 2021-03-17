@@ -14,14 +14,14 @@
         \begin{itemize}
             \item  raccolta appunti e ordini del giorno per riunioni;
             \item  raccolta argomenti delle discussioni delle riunioni, per tracciare l'evoluzione delle stesse e favorire la stesura dei verbali in seguito;
-            \item  creazione di \gls{wiki}\textsubscript{G} per condivisione di materiale utile riguardo l'uso di tecnologie o strumenti a supporto di qualsiasi \gls{attivita}\textsubscript{G}.
+            \item  creazione di wiki\textsubscript{G} per condivisione di materiale utile riguardo l'uso di tecnologie o strumenti a supporto di qualsiasi attivita\textsubscript{G}.
         \end{itemize}
         Questi documenti saranno realizzati sfruttando Confluence per garantire semplicità, accentramento e condivisione real-time.
 
     \end{itemize}
     \subsubsection{Ciclo di vita dei documenti}
     \label{ciclovitadoc}
-    Ogni documento formale si redige ed incrementa tramite queste \gls{attivita}\textsubscript{G}:
+    Ogni documento formale si redige ed incrementa tramite queste attivita\textsubscript{G}:
     \begin{itemize}
         \item \textbf{stesura: }la scrittura del documento in sé, riguarda sia la creazione di nuove parti che l'aggiornamento di queste. Uno o più redattori si occupano di ciò;
         \item \textbf{verifica: }eseguita da uno o più verificatori, necessariamente diversi dai redattori, consiste nel controllo della correttezza sintattica, semantica, grammaticale ed ortografica e della conformità del documento rispetto alle suo scopo. Nel caso in cui si rendano necessarie modifiche sostanziali, i verificatori \hyperref[risoluzioneproblemi]{notificheranno il responsabile} che provvederà a riportare il documento in stesura e solleciterà i redattori affinché apportino le correzioni richieste. I verificatori sono autorizzati ad apportare piccole modifiche correttive quali:
@@ -35,16 +35,16 @@
 
             \item riformulazione di frasi per dare aspetto più formale e consistente nel caso non sia già sufficiente;
         \end{itemize}
-        \item \textbf{approvazione: }quando i verificatori riporteranno la completa correttezza ed aderenza ai \glspl{requisito}\textsubscript{G} del documento, il responsabile provvederà all'approvazione finale ed al rilascio di una nuova versione dello stesso.
+        \item \textbf{approvazione: }quando i verificatori riporteranno la completa correttezza ed aderenza ai requisito\textsubscript{G} del documento, il responsabile provvederà all'approvazione finale ed al rilascio di una nuova versione dello stesso.
     \end{itemize}
-    Adottando un approccio \gls{incrementale}\textsubscript{G}, queste \gls{attivita}\textsubscript{G} possono ripetersi.
+    Adottando un approccio incrementale\textsubscript{G}, queste attivita\textsubscript{G} possono ripetersi.
     \subsubsection{Struttura dei documenti formali}
     \pparagraph{Organizzazione in file e cartelle}
     Ogni documento, ha una sua cartella dedicata, all'interno della quale ci devono essere:
     \begin{itemize}
         \item \textbf{file principale del documento: }(nome\_documento.tex) che contiene l'impostazione della struttura, le dichiarazioni per importare i package \LaTeX{} aggiuntivi e le dichiarazioni di inclusione delle sezioni e del glossario;
         \item \textbf{cartella config: }contenente file di configurazione relativi al documento, che consentono l'impostazione del frontespizio e del registro delle modifiche;
-        \item \textbf{cartella res: }per contenere le \glspl{risorsa}\textsubscript{G} del documento, a sua volta questa contiene:
+        \item \textbf{cartella res: }per contenere le risorsa\textsubscript{G} del documento, a sua volta questa contiene:
         \begin{itemize}
             \item \textbf{cartella images: }per le eventuali immagini;
             \item \textbf{cartella sections: }che contiene tutte le sezioni, ognuna in un file diverso, i quali seguono la \hyperref[convezionenomifile]{convenzione di nomenclatura} preceduta da un identificativo numerico progressivo ad indicare la posizione della stessa nel documento (e.g.: 01\_introduzione.tex, 02\_sezione1.tex)
@@ -56,7 +56,7 @@
     \begin{itemize}
         \item logo esteso del gruppo;
         \item nome del documento;
-        \item nome del gruppo e del \gls{progetto}\textsubscript{G} relativo al \gls{capitolato}\textsubscript{G} scelto;
+        \item nome del gruppo e del progetto\textsubscript{G} relativo al capitolato\textsubscript{G} scelto;
         \item indirizzo email di riferimento del gruppo;
         \item versione del documento, secondo la \hyperref[versions]{convenzione};
         \item stato, in accordo con quanto descritto nel \hyperref[ciclovitadoc]{ciclo di vita dei documenti};
@@ -70,7 +70,7 @@
     Raccoglie in forma tabellare tutte le modifiche e conseguentemente la storia del documento, così strutturate:
     \begin{itemize}
         \item versione del documento relativa alla modifica
-        \item breve descrizione delle \gls{attivita}\textsubscript{G} svolte
+        \item breve descrizione delle attivita\textsubscript{G} svolte
         \item data della modifica, secondo lo standard \href{https://www.iso.org/iso-8601-date-and-time-format.html}{ISO 8601}
         \item cognome e nome di chi ha apportato la modifica
         \item ruolo del modificatore rispetto al ciclo di vita del documento, può quindi essere: redattore, verificatore, responsabile.
@@ -83,7 +83,7 @@
     La prima sezione di contenuto di ogni documento formale è l'introduzione che si articola in:
     \begin{itemize}
         \item una sezione che descrive lo scopo del documento;
-        \item due sezioni condivise fra tutti i documenti, non verbali, che illustrano rispettivamente scopo del prodotto del \gls{capitolato}\textsubscript{G} scelto e funzionamento di acronimi, voci di glossario e riferimenti ad altri documenti;
+        \item due sezioni condivise fra tutti i documenti, non verbali, che illustrano rispettivamente scopo del prodotto del capitolato\textsubscript{G} scelto e funzionamento di acronimi, voci di glossario e riferimenti ad altri documenti;
         \item una sezione che contiene tutti i riferimenti, di natura normativa o informativa.
     \end{itemize}
     \pparagraph{Ulteriori sezioni, appendici e glossari}
@@ -116,15 +116,15 @@
     Gli acronimi ed i termini di glossario vanno definiti nel glossario.txt, istruzioni precise su come utilizzare correttamente questo documento si trovano nella \textsc{wiki how-to glossario}. Una volta che una voce è stata aggiunta, la si può usare liberamente in qualsiasi sezione tramite il suo nome, singolare o plurale nel caso di termine nel glossario, o abbreviazione nel caso di acronimo
 
     \pparagraph{Funzionamento}
-    Ad ogni azione di \gls{gitpush}\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script \gls{bash}\textsubscript{G}, glossary\_builder.sh il quale:
+    Ad ogni azione di push\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
     \begin{itemize}
         \item controlla tutti i documenti che hanno un glossario.txt;
         \item ne genera un glossario.tex;
         \item sostituisce tutte le occorrenze delle voci di glossario e acronimi in ogni sezione con i rispettivi comandi \LaTeX{}
         \item se ci sono stati cambiamenti, ricompila il glossario e ricompila il documento per ottenere un pdf aggiornato;
-        \item se ci sono stati dei documenti aggiornati, effettua \gls{gitcommit}\textsubscript{G} e \gls{gitpush}\textsubscript{G}.
+        \item se ci sono stati dei documenti aggiornati, effettua commit\textsubscript{G} e push\textsubscript{G}.
     \end{itemize}
-    Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate e collegate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una \gls{gitpull}\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una \gls{gitpush}\textsubscript{G}, così da avere il documento aggioranto ed evitare problemi di conflitti e nel \acrshort{vcs}\textsubscript{A}.
+    Questo permette di avere sempre i file pdf dei documenti aggiornati e con le voci di glossario correttamente compilate e collegate, in maniera automatica e rapida. Si consiglia quindi ai membri di effettuare sempre una pull\textsubscript{G} prima di apportare nuove modifiche ai documenti se si ha precedentemente eseguito una push\textsubscript{G}, così da avere il documento aggiornato ed evitare problemi di conflitti e nel VCS\textsubscript{A}.
     \subsubsection{Norme tipografiche}
         \pparagraph{Nomi di file e cartelle}
         \label{convezionenomifile}
@@ -188,20 +188,20 @@
     \subsubsection{Scopo}
         Lo scopo del processo di gestione della configurazione è quello di applicare procedure amministrative e tecniche al fine di controllare e registrare modifche e rilasci ed assicurare la correttezza, consistenza, completezza ed archiviazione di ogni elemento.
     \subsubsection{Aspettative}
-        Avere uno spazio di lavoro versionato, condivisp ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
+        Avere uno spazio di lavoro versionato, condiviso ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
     \subsubsection{Descrizione}
-        Il gruppo, \group, ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le \acrshort{repo}\textsubscript{A} di cui necessita.
+        Il gruppo, \group, ha un organizzazione su github\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le repo\textsubscript{A} di cui necessita.
     \subsubsection{Workflow di versionamento}
-        Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno \acrshort{repo}\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di \gls{git}\textsubscript{G} e GitHub si trovano nella \gls{wiki}\textsubscript{G} \textsc{GIT, Github \& Jira}
+        Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di git\textsubscript{G} e GitHub si trovano nella wiki\textsubscript{G} \textsc{GIT, Github \& Jira}
         \pparagraph{Pull requests}
-            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una \gls{gitpull}\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in \gls{git}\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
+            Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una pull\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
 
     \subsubsection{Integrazione con Jira}
     \label{jiraintegration}
-        GitHub è stato configurato in maniera che ad ogni \gls{gitcommit}\textsubscript{G} si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, Github \& Jira}} è possibile collegare ogni \gls{gitcommit}\textsubscript{G} con una \gls{task}\textsubscript{G} o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
+        GitHub è stato configurato in maniera che ad ogni commit\textsubscript{G} si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, Github \& Jira}} è possibile collegare ogni commit\textsubscript{G} con una task\textsubscript{G} o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
 
     \subsubsection{Strumenti}
-    Come già detto, le \acrshort{repo}\textsubscript{A} sono tenute su GitHub, per quanto riguarda la gestione locale, ogni membro è libero di adottare lo strumento che preferisce.
+    Come già detto, le repo\textsubscript{A} sono tenute su GitHub, per quanto riguarda la gestione locale, ogni membro è libero di adottare lo strumento che preferisce.
 
 
 \subsection{Risoluzione dei problemi}
@@ -211,9 +211,9 @@
     \subsubsection{Aspettative}
         Identificazione, segnalazione e risoluzione dei problemi devono avvenire in maniera standardizzata all'interno del gruppo così che tutto il processo possa essere svolto nei tempi più brevi possibili.
     \subsubsection{Descrizione}
-        Quando un verificatore riscontra dei problemi o degli errori, aggiunge dei commenti che iniziano con "TODO", così da facilitare la ricerca poi, che indichino brevemente i problema individuati e, tramite il meccanismo degli \hyperref[jiraintegration]{\textit{smart commits}}, riporta la \gls{task}\textsubscript{G} o sottotask relativa nello stato \textit{in progress} ed aggiunge un commento che riassuntivo. Nel caso sia necessario aggiungere più informazioni, il verificatore si può recare nella board ed aggiungere ulteriori commenti. Il verificatore viene quindi sollevato automaticamente dal compito, il responsabile controlla il problema segnalato, se necessario imposta una priorità diversa da \textit{medium}, aggiunge eventuali commenti o descrizioni e riassegna la \gls{task}\textsubscript{G} ad un altro membro. Il responsabile può sfruttare le sezioni \textit{history} e \textit{comments} di ogni \gls{task}\textsubscript{G} per controllare chi ha lavorato in passato a quel compito di modo da facilitare la scelta di assegnazione.
+        Quando un verificatore riscontra dei problemi o degli errori, aggiunge dei commenti che iniziano con "TODO", così da facilitare la ricerca poi, che indichino brevemente i problema individuati e, tramite il meccanismo degli \hyperref[jiraintegration]{\textit{smart commits}}, riporta la task\textsubscript{G} o sottotask relativa nello stato \textit{in progress} ed aggiunge un commento che riassuntivo. Nel caso sia necessario aggiungere più informazioni, il verificatore si può recare nella board ed aggiungere ulteriori commenti. Il verificatore viene quindi sollevato automaticamente dal compito, il responsabile controlla il problema segnalato, se necessario imposta una priorità diversa da \textit{medium}, aggiunge eventuali commenti o descrizioni e riassegna la task\textsubscript{G} ad un altro membro. Il responsabile può sfruttare le sezioni \textit{history} e \textit{comments} di ogni task\textsubscript{G} per controllare chi ha lavorato in passato a quel compito di modo da facilitare la scelta di assegnazione.
 
-\subsection{Accertamento della qualità} 
+\subsection{Accertamento della qualità}
     \subsubsection{Scopo}
     Lo scopo del processo di accertamento della qualità è di garantire che il prodotto e i servizi offerti rispettino gli obiettivi di qualità e che i bisogni del proponente siano soddisfatti.
     \subsubsection{Aspettative}
@@ -225,11 +225,11 @@
     	\item qualità provata oggettivamente.
     \end{itemize}
     \subsubsection{Descrizione}
-    Per trattare approfonditamente la gestione della qualità si fa riferimento al \textsc{Piano di Qualifica v1.0.0} dove sono descritte le modalità impiegate per garantire la qualità nello sviluppo del \gls{progetto}\textsubscript{G}.\\In particolare, in tale documento:
+    Per trattare approfonditamente la gestione della qualità si fa riferimento al \textsc{Piano di Qualifica v1.0.0} dove sono descritte le modalità impiegate per garantire la qualità nello sviluppo del progetto\textsubscript{G}.\\In particolare, in tale documento:
     \begin{itemize}
     	\item sono presentati gli standard utilizzati;
     	\item sono individuati i processi di interesse negli standard;
-    	\item sono individuati gli attributi del software più significativi per il \gls{progetto}\textsubscript{G}.
+    	\item sono individuati gli attributi del software più significativi per il progetto\textsubscript{G}.
     \end{itemize}
 	Per ogni processo vengono descritti:
 	\begin{itemize}
@@ -239,9 +239,9 @@
 	\end{itemize}
 	In questo caso si mira ad ottenere software e documentazione di qualità soddisfacente.
     \subsubsection{Attività}
-    Le tre \gls{attivita}\textsubscript{G} principali del processo sono:
+    Le tre attivita\textsubscript{G} principali del processo sono:
     \begin{itemize}
-    	\item \textbf{Pianificazione:} porsi degli obiettivi di qualità, definire strategie per raggiungerli e disporre di conseguenza persone e risore nel modo migliore;
+    	\item \textbf{Pianificazione:} porsi degli obiettivi di qualità, definire strategie per raggiungerli e disporre di conseguenza persone e risorse nel modo migliore;
     	\item \textbf{Valutazione:} mettere in atto la pianificazione, applicando i criteri, misurando e monitorando i risultati;
     	\item \textbf{Reazione:} sulla base dei risultati, adottare le proprie strategie e criteri.
     \end{itemize}
@@ -251,7 +251,7 @@
 		\item forniti dallo standard ISO 12207;
 		\item le metriche.
 	\end{itemize}
-\subsection{Verifica} 
+\subsection{Verifica}
     \label{verifica}
     \subsubsection{Scopo}
     Il processo di verifica ha per scopo la realizzazione di prodotti corretti, funzionali e completi.\\Sono soggetti a verifica il software e i documenti.
@@ -260,20 +260,20 @@
     \begin{itemize}
     	\item viene effettuata seguendo le procedure definite;
     	\item vi sono criteri chiari e affidabili da seguire per verificare;
-    	\item ogni \gls{fase}\textsubscript{G} del ciclo di vita attraverso cui i prodotti passano deve essere verificata;
-    	\item dopo la \gls{fase}\textsubscript{G} di  verifica, il prodotto è in uno stato stabile;
+    	\item ogni fase\textsubscript{G} del ciclo di vita attraverso cui i prodotti passano deve essere verificata;
+    	\item dopo la fase\textsubscript{G} di  verifica, il prodotto è in uno stato stabile;
     	\item rende possibile la validazione del prodotto.
     \end{itemize}
     \subsubsection{Descrizione}
-    Il processo di verifica prende in input ciò che è già stato prodotto e lo restituisce in uno stato conforme alle aspettative.\\Per ottenere tale risultato, il processo si divide in due \glspl{fase}\textsubscript{G}:una di analisi e una di test.
+    Il processo di verifica prende in input ciò che è già stato prodotto e lo restituisce in uno stato conforme alle aspettative.\\Per ottenere tale risultato, il processo si divide in due fase\textsubscript{G}:una di analisi e una di test.
     \subsubsection{Attività}
     \pparagraph{Analisi}
-    La \gls{fase}\textsubscript{G} di analisi si divide in analisi statica e analisi dinamica.\\
+    La fase\textsubscript{G} di analisi si divide in analisi statica e analisi dinamica.\\
     \textbf{Analisi statica}\\
-    L'analisi statica è un processo che esegue controlli sulla correttezza di documenti e codice, senza alcuna esecuzione dello stesso.\\I metodi di analisi statica verificano la conformità dei prodotti con le regole fissate, tramite metodi manuali oppure metodi automatizzati.\\ 
+    L'analisi statica è un processo che esegue controlli sulla correttezza di documenti e codice, senza alcuna esecuzione dello stesso.\\I metodi di analisi statica verificano la conformità dei prodotti con le regole fissate, tramite metodi manuali oppure metodi automatizzati.\\
     \textbf{Analisi dinamica}\\
     L'analisi dinamica richiede l'esecuzione del codice per valutarne la qualità.\\Vengono realizzati dei test  che verificano la funzionalità dei frammenti di codice analizzati.
-    
+
     \pparagraph{Test}
     Per approfondimenti sui test, si fa riferimento al \textsc{Piano di Qualifica v1.0.0}.
     L'attività di testing è necessaria per assicurarsi del corretto funzionamento del prodotto.\\Ogni test verrà indicato nel seguente modo:\\
@@ -289,18 +289,18 @@
     		\item \textbf{S:} per i test di sistema;
     		\item \textbf{U:} per i test di unità.
     	\end{itemize}
-    	\item \textbf{Tipo$\_$requisito:} indica il tipo di \gls{requisito}\textsubscript{G} a cui il test è associato, può essere:
+    	\item \textbf{Tipo$\_$requisito:} indica il tipo di requisito\textsubscript{G} a cui il test è associato, può essere:
     	\begin{itemize}
-    		\item \textbf{F:} per i \glspl{requisito}\textsubscript{G} funzionali;
-    		\item \textbf{V:} per i \glspl{requisito}\textsubscript{G} di vincolo;
-    		\item \textbf{Q:} per i \glspl{requisito}\textsubscript{G} di qualità;
-    		\item \textbf{P:} per i \glspl{requisito}\textsubscript{G} prestazionali.
+    		\item \textbf{F:} per i requisito\textsubscript{G} funzionali;
+    		\item \textbf{V:} per i requisito\textsubscript{G} di vincolo;
+    		\item \textbf{Q:} per i requisito\textsubscript{G} di qualità;
+    		\item \textbf{P:} per i requisito\textsubscript{G} prestazionali.
     	\end{itemize}
-    	\item \textbf{Importanza:} indica l'importanza del \gls{requisito}\textsubscript{G}, può essere:
+    	\item \textbf{Importanza:} indica l'importanza del requisito\textsubscript{G}, può essere:
     	\begin{itemize}
-    		\item \textbf{O:} per i \glspl{requisito}\textsubscript{G} obbligatori;
-    		\item \textbf{D:} per i \glspl{requisito}\textsubscript{G} desiderabili;
-    		\item \textbf{F:} per i \glspl{requisito}\textsubscript{G} facoltativi.
+    		\item \textbf{O:} per i requisito\textsubscript{G} obbligatori;
+    		\item \textbf{D:} per i requisito\textsubscript{G} desiderabili;
+    		\item \textbf{F:} per i requisito\textsubscript{G} facoltativi.
     	\end{itemize}
     \end{itemize}
     Dei test ben scritti devono:
@@ -313,23 +313,23 @@
 	Di seguito una breve descrizione dei tipi di test:
 	\begin{itemize}
 		\item \textbf{Test di Sistema:} effettuato sulla totalità del sistema, verificandone la corretta integrazione tra le varie parti e corretto comportamento;
-		\item \textbf{Test di Unità:} effettuati sulle più piccole parti analizzabili individualmente sall'interno del prodotto;
+		\item \textbf{Test di Unità:} effettuati sulle più piccole parti analizzabili individualmente all'interno del prodotto;
 		\item \textbf{Test di Integrazione:} verificano la corretta collaborazione e integrazione tra le varie parti del sistema;
 		\item \textbf{Test di Accettazione:} verificano che il prodotto realizzato nel suo complesso soddisfi i criteri di accettazione decisi con il cliente.
 	\end{itemize}
-\subsection{Validazione} 
+\subsection{Validazione}
     \subsubsection{Scopo}
-    Lo scopo del processo di validazione è necessaria per verificare che il prodotto sia conforme alle pretese del cliente e ad i \glspl{requisito}\textsubscript{G} stabiliti nelle \glspl{fase}\textsubscript{G} iniziali del \gls{progetto}\textsubscript{G}.
+    Lo scopo del processo di validazione è necessaria per verificare che il prodotto sia conforme alle pretese del cliente e ad i requisito\textsubscript{G} stabiliti nelle fase\textsubscript{G} iniziali del progetto\textsubscript{G}.
     \subsubsection{Aspettative}
-    L'obiettivo della \gls{fase}\textsubscript{G} di validazione è portare i prodotti ad un livello soddisfacente.
+    L'obiettivo della fase\textsubscript{G} di validazione è portare i prodotti ad un livello soddisfacente.
     \subsubsection{Descrizione}
     Il processo di validazione prende in input ciò che è stato prodotto e verificare che sia ad un livello atteso.
     \subsubsection{Attività}
-    Anche la \gls{fase}\textsubscript{G} di validazione segue un processo diviso in più \glspl{fase}\textsubscript{G}:
+    Anche la fase\textsubscript{G} di validazione segue un processo diviso in più fase\textsubscript{G}:
     \begin{itemize}
     	\item identificare i prodotti completati che devono essere validati;
     	\item identificare una strategia di validazione adatta e riutilizzabile;
     	\item validare i documenti in esame con la strategia individuata e valutare gli esiti ottenuti.
     \end{itemize}
-    
+
 
