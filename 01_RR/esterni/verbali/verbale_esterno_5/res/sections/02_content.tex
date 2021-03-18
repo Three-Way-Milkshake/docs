@@ -1,0 +1,37 @@
+\section{Verbale della riunione}
+
+\subsection{Discussione su architettura}
+Vengono discussi alcuni modelli di design patter da poter utilizzare. E` emerso quanto segue:
+\begin{itemize}
+\item Observer\\in quanto il segnale deve essere gestito a seconda della sua tipologia;
+\item Layer: 
+\\Il proponente consiglia di non usare più di 5 layer.\\Più precisamente vengono indicati dal proponente:
+	\begin{itemize}
+	\item DAO (Data Access Object);
+	\item Business Logic;
+	\item Strato servizi che riceve segnali HTTP;
+	\item Layer di accesso al DB sono poco utilizzati;
+	\end{itemize}
+\item Il proponente ha consigliato al gruppo di visualizzare il Singleton Pattern
+\item Il proponente ha consigliato al gruppo di visualizzare il Factory Pattern.
+\item No microservizi poichè si aggiunge tempo di latenza, quindi sono inutili ed è più difficile da creare. Il proponente consiglia un sistema più simile a un monolite;
+\end{itemize}
+
+\subsection{Docker}
+Secondo il proponente il client va fatto containerizzando istanze di Node e Angular. 
+
+\subsection{Sicurezza}
+Discussione su come fare per la comunicazione sicura.
+\begin{itemize}
+	\item Si consiglia Java socket in HTTPS;
+	\item Procedura:\\
+	lato java → collegarsi ad un'api rest in http → fatto in automatico → serve il certificato da chi viene invocato → scambio chiavi → canale crittografato;
+	\item Utilizzare Secure Socket Layer;
+	\item Il proponente consiglia:\\\href{https://docs.oracle.com/javase/10/security/sample-code-illustrating-secure-socket-connection-client-and-server.htm\#JSSEC-GUID-AA1C27A1-2CA8-4309-B281-D6199F60E666}{https://docs.oracle.com/javase/10/security/sample-code-illustrating-secure-socket-connection-client-and-server.htm\#JSSEC-GUID-AA1C27A1-2CA8-4309-B281-D6199F60E666};	
+\end{itemize}
+
+\subsection{Confronto sull'algoritmo per la rilevazione delle collisioni}
+Mostrato al proponente la proposta di algoritmo prodotta per il rilevamento delle collisioni. Il proponente ha appoggiato la proposta e ha consigliato di fare autonomamente l'algoritmo senza cercare soluzioni accademiche ritenute troppo complicate.
+
+\subsection{PoC}
+E' stato mostrato al proponente il PoC e il suo funzionamento. 
