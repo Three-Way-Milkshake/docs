@@ -18,7 +18,7 @@
 \usepackage{ragged2e}
 \setlength{\columnseprule}{1pt}
 
-\input{glossario.tex}
+
 \begin{document}
 	\input{../../../../latex/titlepage.tex}
 	\pagebreak
@@ -26,7 +26,7 @@
 	% Registro delle modifiche
 	\input{../../../../latex/changelog.tex}
 	\input{config/changelog_input.tex} % modifica questo file
-	\end{longtable}
+	%\end{longtable}
 	\pagebreak
 
 	% indice
@@ -44,6 +44,8 @@
         \pagebreak
     }
 
+	\input{res/sections/00_templateTabelle.tex} % file con template tabelle con macro
+	
 
 	% contenuto del documento, ogni sezione in un file
 	\input{res/sections/01_introduzione.tex}
@@ -52,21 +54,43 @@
 	\input{res/sections/02_analisi_dei_rischi.tex}
 	\pagebreak
 
+	%\input{res/sections/03_pianificazione_old.tex}
+	%\pagebreak
+	
 	\input{res/sections/03_pianificazione.tex}
 	\pagebreak
+	
 
-	\input{res/sections/04_preventivo.tex}
-	\pagebreak
+	\input{res/sections/04_Avvio.tex}
+	\newpage
 
-	\input{res/sections/05_consuntivo.tex}
-	\pagebreak
+	\input{res/sections/05_Analisi_Requisiti.tex}
+	\newpage
+
+
+	\input{res/sections/06_Progettazione_Architetturale.tex}
+	\newpage
+
+
+	\input{res/sections/07_Progettazione_Codifica.tex}
+	\newpage
+
+
+	\input{res/sections/08_Validazione_Collaudo.tex}
+	\newpage
+	
+	\input{res/sections/08_1_Preventivo_finale.tex}
+	\newpage
+	
+	%\input{res/sections/04_preventivo.tex}
+	%\pagebreak
+
+	%\input{res/sections/05_consuntivo.tex}
+	%\pagebreak
+	
 
 	\appendix
 	\input{res/sections/06_appendice.tex}
 	\pagebreak
 
-
-	%\glsaddall
-	\printglossary[type=\acronymtype,title=Lista degli Acronimi]
-	\printglossary[title=Glossario dei Termini]
 \end{document}
