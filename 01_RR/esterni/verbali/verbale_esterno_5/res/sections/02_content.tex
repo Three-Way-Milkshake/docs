@@ -12,9 +12,9 @@ Vengono discussi alcuni modelli di design patter da poter utilizzare. E` emerso 
 	\item Strato servizi che riceve segnali HTTP;
 	\item Layer di accesso al DB sono poco utilizzati;
 	\end{itemize}
-\item Il proponente ha consigliato al gruppo di visualizzare il Singleton Pattern
-\item Il proponente ha consigliato al gruppo di visualizzare il Factory Pattern.
-\item No microservizi poichè si aggiunge tempo di latenza, quindi sono inutili ed è più difficile da creare. Il proponente consiglia un sistema più simile a un monolite;
+\item il proponente ha consigliato al gruppo di visualizzare il Singleton Pattern;
+\item il proponente ha consigliato al gruppo di visualizzare il Factory Pattern;
+\item no microservizi poichè si aggiunge tempo di latenza, quindi sono inutili ed è più difficile da creare. Il proponente consiglia un sistema più simile a un monolite.
 \end{itemize}
 
 \subsection{Docker}
@@ -24,10 +24,10 @@ Secondo il proponente il client va fatto containerizzando istanze di Node e Angu
 Discussione su come fare per la comunicazione sicura.
 \begin{itemize}
 	\item Si consiglia Java socket in HTTPS;
-	\item Procedura:\\
+	\item procedura:\\
 	lato java → collegarsi ad un'api rest in http → fatto in automatico → serve il certificato da chi viene invocato → scambio chiavi → canale crittografato;
-	\item Utilizzare Secure Socket Layer;
-	\item Il proponente consiglia:\\\href{https://docs.oracle.com/javase/10/security/sample-code-illustrating-secure-socket-connection-client-and-server.htm\#JSSEC-GUID-AA1C27A1-2CA8-4309-B281-D6199F60E666}{https://docs.oracle.com/javase/10/security/sample-code-illustrating-secure-socket-connection-client-and-server.htm\#JSSEC-GUID-AA1C27A1-2CA8-4309-B281-D6199F60E666};	
+	\item utilizzare Secure Socket Layer;
+	\item il proponente consiglia:\\\href{https://docs.oracle.com/javase/10/security/sample-code-illustrating-secure-socket-connection-client-and-server.htm\#JSSEC-GUID-AA1C27A1-2CA8-4309-B281-D6199F60E666}{https://docs.oracle.com/javase/10/security/sample-code-illustrating-secure-socket-connection-client-and-server.htm\#JSSEC-GUID-AA1C27A1-2CA8-4309-B281-D6199F60E666};	
 \end{itemize}
 
 \subsection{Confronto sull'algoritmo per la rilevazione delle collisioni}
