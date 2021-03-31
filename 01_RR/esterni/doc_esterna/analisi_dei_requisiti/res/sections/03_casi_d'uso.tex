@@ -816,7 +816,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} la guida inserita è quella manuale;
 	\item 	\textbf{Postcondizioni:} il sistema controlla il movimento del muletto;
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per il passaggio a guida automatica;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per il passaggio a guida automatica; il sistema cambia lo stato di guida e pilota autonomamente l'unità;
 	\item 	\textbf{Descrizione:} i muletti possono essere guidati sia in modo automatico dal sistema che manuale, in base alle esigenze dell'operatore.
 \end{itemize}
 
@@ -825,7 +825,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} il sistema centrale controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} l'operatore guida il muletto manualmente; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per il passaggio a guida manuale;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per il passaggio a guida manuale; il sistema rende disponibile l'interfaccia per guidare l'unità;
 	\item 	\textbf{Descrizione:} i muletti possono essere guidati sia in modo automatico dal sistema che manuale, in base alle esigenze dell'operatore.
 \end{itemize}
 
@@ -834,8 +834,8 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} il muletto si sta muovendo all'interno della mappa;
 	\item 	\textbf{Postcondizioni:} un evento eccezionale è stato segnalato al sistema centrale; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la segnalazione di un evento eccezionale;
-	\item 	\textbf{Descrizione:} durante la guida possono verificarsi degli eventi eccezionali per esempio collisioni, ingorghi o malfunzionamenti del muletto. L'operatore deve segnalarli e il sistema centrale ha il compito di propagarli al responsabile e all'amministratore affinché possano essere gestiti.
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la segnalazione di un evento eccezionale; il sistema riceve l'informazione che viene visualizzata dall'amministratore;
+	\item 	\textbf{Descrizione:} durante la guida possono verificarsi degli eventi eccezionali per esempio collisioni, ingorghi o malfunzionamenti del muletto. L'operatore deve segnalarli e il sistema centrale ha il compito di propagarli all'amministratore affinché possano essere gestiti.
 
 \end{itemize}
 
@@ -853,51 +853,40 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato un movimento;
 	\item 	\textbf{Scenario principale:} il sistema rende disponibile l'interfaccia per i movimenti del muletto, ossia le quattro frecce direzionali e un pulsante di start/stop. L'operatore può eseguire le seguenti operazioni:
 	\begin{itemize}
-		\item movimento in avanti (UC1.4.1); 
-		\item rotazione di 180 gradi (UC1.4.2);
-		\item rotazione di 90 gradi in senso orario (UC1.4.3);
-		\item rotazione di 90 gradi in senso antiorario (UC1.4.4);
-		\item fermata (UC1.4.5);
-		\item partenza (UC1.4.6);
+		\item rotazione di 180 gradi (UC1.4.1);
+		\item rotazione di 90 gradi in senso orario (UC1.4.2);
+		\item rotazione di 90 gradi in senso antiorario (UC1.4.3);
+		\item fermata (UC1.4.4);
+		\item partenza (UC1.4.5);
 	\end{itemize}
 	\item 	\textbf{Descrizione:} i muletti possono intraprendere degli spostamenti all'interno della mappa per raggiungere i vari POI. Essi possono essere controllati manualmente dall'operatore.
 \end{itemize}
 
 
-\paragraph{UC11.4.1 - Movimento in avanti}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} operatore;
-	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
-	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento in avanti rispetto alla sua direzione; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per lo spostamento in avanti dell'unità;
-	\item 	\textbf{Descrizione:} il muletto si sta spostando in avanti, rispetto alla propria direzione, all'interno della mappa.
-
-\end{itemize}
-
-\paragraph{UC11.4.2 - Rotazione di 180 gradi}
+\paragraph{UC11.4.1 - Rotazione di 180 gradi}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato una rotazione di 180 gradi; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 180 gradi;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 180 gradi; il sistema riceva lo spostamento; il muletto nell'interfaccia dell'operatore viene girato;
 	\item 	\textbf{Descrizione:} l'operatore intende invertire la rotta del muletto, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
-\paragraph{UC11.4.3 - Rotazione di 90 gradi in senso orario}
+\paragraph{UC11.4.2 - Rotazione di 90 gradi in senso orario}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato rotazione di 90 gradi in senso orario; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 90 gradi in senso orario;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 90 gradi in senso orario; l'unità effettua la rotazione;
 	\item 	\textbf{Descrizione:} l'operatore intende far fare al muletto una rotazione di 90 gradi in senso orario, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
-\paragraph{UC11.4.4 - Rotazione di 90 gradi in senso antiorario}
+\paragraph{UC11.4.3 - Rotazione di 90 gradi in senso antiorario}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato rotazione di 90 gradi in senso antiorario; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 90 gradi in senso antiorario;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 90 gradi in senso antiorario; l'unità effettua la rotazione;
 	\item 	\textbf{Descrizione:} l'operatore intende far fare al muletto una rotazione di 90 gradi in senso antiorario, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
@@ -907,8 +896,8 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto, esso è in azione e si sta muovendo; Il sistema rende disponibile il pulsante di stop;
 	\item 	\textbf{Postcondizioni:} il muletto è fermo all'interno della mappa o in base;
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante di stop;
-	\item 	\textbf{Descrizione:} quando il muletto è in movimento è possibile fermarne il moto. Per ripartire sarà necessario azionare il pulsante di partenza (UC11.4.6).
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante di stop; l'unità si ferma;
+	\item 	\textbf{Descrizione:} quando il muletto è in movimento è possibile fermarne il moto. Per ripartire sarà necessario azionare il pulsante di partenza (UC11.4.5).
 \end{itemize}
 
 
