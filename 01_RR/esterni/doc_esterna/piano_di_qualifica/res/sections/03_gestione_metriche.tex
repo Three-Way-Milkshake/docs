@@ -7,90 +7,251 @@ Per tenere traccia delle metriche per i processi, è stato utilizzato un foglio 
 
 \subsubsection{Scarto Riunioni Interne (SRI)}
 Questa metrica mostra la differenza fra il tempo preventivato e il tempo effettivo delle riunioni interne in minuti. In questo modo si può vedere se la pianificazione è corretta, oppure se serve un controllo.
-\[\frac{\sum_{i=1}^{num\_riunioni\_interne}min\_durata\_preventivata_i-min\_durata\_effettiva_i}{num\_riunioni\_interne}\]
-con $i = {numero\_della\_riunione\_interna}$.
-\subsubsection{Scarto Riunioni Esterne (SRE)}
-Con questo calcolo si può trovare la differenza tra il tempo preventivato e il tempo effettivo delle riunioni esterne in minuti, così da controllare se la pianificazione è corretta.
-\[\frac{\sum_{i=1}^{num\_riunioni\_esterne}min\_durata\_preventivata_i-min\_durata\_effettiva_i}{num\_riunioni\_esterne}\]
-con $i = {numero\_della\_riunione\_esterna}$.
-\subsubsection{Rapporto riunioni Esterne e Interne (REI)}
-Si tratta del rapporto tra il tempo totale impiegato nelle riunioni esterne e quello nelle riunioni interne. Serve per raggiungere un equilibrio negli incontri del gruppo.
-\[\frac{\sum_{i=1}^{num\_riunioni\_esterne} durata_i}{\sum_{i=1}^{num\_riunioni\_interne} durata_i}\]
-
-Se il valore calcolato tende a:
 \begin{itemize}
-    \item 1: vi è una distribuzione equa del tempo impiegato nelle riunioni interne e esterne;
-    \item 0: il tempo impiegato nelle riunioni esterne è molto inferiore rispetto a quello delle riunioni interne;
-    \item $+\infty$: il tempo impiegato nelle riunioni esterne è molto superiore rispetto a quello delle riunioni interne.
+	\item {\textbf{Formula: }}
+		\[\frac{\sum_{i=1}^{num\_riunioni\_interne}min\_durata\_preventivata_i-min\_durata\_effettiva_i}{num\_riunioni\_interne}\]
+		con $i = {numero\_della\_riunione\_interna}$;
+	\item {\textbf{Obiettivo: }}Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item {\textbf{Valori accettabili/preferibili: }} 
+		\begin{itemize}
+			\item Valori accettabili: $-90 \leq SRI \leq 90$;
+			\item Valori preferibili: 0.
+		\end{itemize}
 \end{itemize}
+
+\subsubsection{Scarto Riunioni Esterne (SRE)}
+	Con questo calcolo si può trovare la differenza tra il tempo preventivato e il tempo effettivo delle riunioni esterne in minuti, così da controllare se la pianificazione è corretta.
+\begin{itemize}
+	\item{\textbf{Formula:}}\[\frac{\sum_{i=1}^{num\_riunioni\_esterne}min\_durata\_preventivata_i-min\_durata\_effettiva_i}{num\_riunioni\_esterne}\]
+	con $i = {numero\_della\_riunione\_esterna}$;
+	\item {\textbf{Obiettivo: }}Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item {\textbf{Valori accettabili/preferibili: }}
+		\begin{itemize}
+			\item Valori accettabili: $-90 \leq SRE \leq 90$;
+			\item Valori preferibili: 0.
+		\end{itemize}
+\end{itemize}
+
+\subsubsection{Rapporto riunioni Esterne e Interne (REI)}
+	Si tratta del rapporto tra il tempo totale impiegato nelle riunioni esterne e quello nelle riunioni interne. Serve per raggiungere un equilibrio negli incontri del gruppo.
+\begin{itemize}	
+	\item {\textbf{Formula: }}\[\frac{\sum_{i=1}^{num\_riunioni\_esterne} durata_i}{\sum_{i=1}^{num\_riunioni\_interne} durata_i}\]
+	
+	Se il valore calcolato tende a:
+	\begin{itemize}
+		\item 1: vi è una distribuzione equa del tempo impiegato nelle riunioni interne e esterne;
+		\item 0: il tempo impiegato nelle riunioni esterne è molto inferiore rispetto a quello delle riunioni interne;
+		\item $+\infty$: il tempo impiegato nelle riunioni esterne è molto superiore rispetto a quello delle riunioni interne;
+	\end{itemize}
+	\item {\textbf{Obiettivo: }}Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item {\textbf{Valori accettabili/preferibili: }}
+	\begin{itemize}
+		\item Valori accettabili: $0.2 \leq REI \leq 0.5$;
+		\item Valori preferibili: $0.3 \leq REI \leq 0.5$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Rapporto tempo Riunioni e Lavoro individuale (RRL)}
 Indica il rapporto tra le ore dedicate alle riunioni, quindi al lavoro collettivo, e quelle dedicate al lavoro individuale.
-\[\dfrac{\sum_{i=1}^{num\_riunioni\_totali} durataRiunioni_i}{\sum_{i=1}^{num\_persone\_gruppo} durataLavoro_i}\]
-Offre una visione sulla distribuzione del lavoro collettivo e individuale.
+\begin{itemize}
+	\item \textbf{Formula:}\[\dfrac{\sum_{i=1}^{num\_riunioni\_totali} durataRiunioni_i}{\sum_{i=1}^{num\_persone\_gruppo} durataLavoro_i}\]
+	Offre una visione sulla distribuzione del lavoro collettivo e individuale;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+		\begin{itemize}
+			\item Valori accettabili: $0.08 \leq RRL \leq 0.12$;
+			\item Valori preferibili: $0.08 \leq RRL \leq 0.4$.
+		\end{itemize}
+\end{itemize}
+
 \subsubsection{Rapporto Tempo Effettivo totale e Individuale (RTEI)}
 Indica il rapporto tra i minuti di lavoro effettivamente spesi da ogni membro e il tempo di lavoro totale del gruppo.
-\[tot\_ore\_effettive\_persona / tot\_ore
-\]
-Questa metrica viene calcolata per ogni membro del gruppo.
+\begin{itemize}
+	\item \textbf{Formula:}\[tot\_ore\_effettive\_persona / tot\_ore
+	\]Questa metrica viene calcolata per ogni membro del gruppo;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $0.1 \leq RTEI \leq 0.2$;
+		\item Valori preferibili: $0.17$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Rapporto Tempo Preventivato totale e Individuale (RTPI)}
 Indica il rapporto tra i minuti di lavoro preventivato per svolgere i propri compiti da parte di ogni membro e il tempo di lavoro totale preventivato dal gruppo.
-\[tot\_min\_preventivati\_persona / tot\_min\_preventivato\]
-Questa metrica deve essere calcolata per ogni membro del gruppo.
+
+\begin{itemize}
+	\item \textbf{Formula:}\[tot\_min\_preventivati\_persona / tot\_min\_preventivato\]
+	Questa metrica deve essere calcolata per ogni membro del gruppo;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $0.14 \leq RTPI \leq 0.19$;
+		\item Valori preferibili: $0.17$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Differenza Tempo Effettivo e Preventivato (DTEP)}
 Questa metrica mostra la discrepanza tra il tempo effettivo impiegato allo svolgimento dei compiti e quello preventivato precedentemente, per ogni membro del gruppo.
-\[tempo\_effettivo_i - tempo\_preventivato_i\]
-con $i \in {componenti\_del\_gruppo}$
+\begin{itemize}
+	\item \textbf{Formula:}\[tempo\_effettivo_i - tempo\_preventivato_i\]
+	con $i \in {componenti\_del\_gruppo}$;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $-600 \leq DTEP \leq 600$;
+		\item Valori preferibili: $0$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Distribuzione Lavoro Preventivato (DLP)}
 Mostra se la pianificazione del lavoro preventivata è bilanciata, ovverosia distribuita in modo equo all'interno del gruppo.
-\[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
-con:\\
-$lavoro_i$ = lavoro individuale preventivato;\\
-$media\_lavoro$ = media lavoro preventivato;\\
-$n\_componenti$ = numero totale dei componenti (6).
-\\Se il risultato tende a:
 \begin{itemize}
-	\item 0: significa che il lavoro è uniformemente distribuito;
-	\item $+\infty$: il lavoro è distribuito in modo poco uniforme.
+	\item \textbf{Formula:}\[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
+	con:\\
+	$lavoro_i$ = lavoro individuale preventivato;\\
+	$media\_lavoro$ = media lavoro preventivato;\\
+	$n\_componenti$ = numero totale dei componenti (6).
+	\\Se il risultato tende a:
+	\begin{itemize}
+		\item 0: significa che il lavoro è uniformemente distribuito;
+		\item $+\infty$: il lavoro è distribuito in modo poco uniforme.
+	\end{itemize}
+	con $i \in {componenti\_del\_gruppo}$;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $600 \leq DLP \leq 900$;
+		\item Valori preferibili: $0$.
+	\end{itemize}
 \end{itemize}
+
 \subsubsection{Distribuzione Lavoro Effettivo (DLE)}
 Mostra quanto sia distribuito in modo uniforme il lavoro effettuato, così da poter adattare le future organizzazioni dei compiti.
-\[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
-
-Se il risultato tende a:
 \begin{itemize}
-	\item 0: significa che il lavoro è uniformemente distribuito;
-	\item $+\infty$: il lavoro è distribuito in modo poco uniforme.
+	\item \textbf{Formula:}\[\sqrt{\frac{\sum_{i=1}^{n\_componenti}(lavoro_i-media\_lavoro)^2}{n\_componenti}}\]
+	
+	Se il risultato tende a:
+	\begin{itemize}
+		\item 0: significa che il lavoro è uniformemente distribuito;
+		\item $+\infty$: il lavoro è distribuito in modo poco uniforme.
+	\end{itemize}
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $0 \leq DLE \leq 900$;
+		\item Valori preferibili: $0 \leq DLE \leq 600$.
+	\end{itemize}
 \end{itemize}
 
 \subsubsection{Percentuale Discostamento Totale (in Tempo) (PDTT)}
 Indica la percentuale dei compiti completati in tempo rispetto al numero totale. Per completati in tempo si intendono le task\textsubscript{G} che hanno terminato il loro ciclo, ovverosia che sono state verificate esattamente alla data di scadenza prefissata.
-\[\frac{n\_compiti\_risolti\_intempo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risolti\_intempo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDTT \geq 0.4$;
+		\item Valori preferibili: $1$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Percentuale Discostamento Totale (in Ritardo) (PDTR)}
 Indica la percentuale dei compiti completati in ritardo rispetto al numero totale. Per completati in ritardo si intendono le task\textsubscript{G} che hanno completato il loro ciclo, ovverosia che sono state verificate dopo la data di scadenza prefissata.
-\[\frac{n\_compiti\_risolti\_inritardo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risolti\_inritardo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDTR \leq 0.3$;
+		\item Valori preferibili: $0$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Percentuale Discostamento Totale (in Anticipo) (PDTA)}
 Indica la percentuale dei compiti completati in anticipo rispetto al numero totale. Per completati in anticipo si intendono le task\textsubscript{G} che hanno completato il loro ciclo, ovverosia che sono state verificate prima della data di scadenza prefissata.
-\[\frac{n\_compiti\_risolti\_inanticipo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risolti\_inanticipo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDTA \leq 0.3$;
+		\item Valori preferibili: $0$.
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Percentuale Discostamento DoneWorking (in Tempo) (PDDWT)}
 Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale. In questo caso si intendono solo i compiti completati esattamente alla data di scadenza prefissata.
-\[\frac{n\_compiti\_risoltiDW\_intempo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risoltiDW\_intempo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDDWT \geq 0.4$;
+		\item Valori preferibili: $1$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Percentuale Discostamento DoneWorking (in Ritardo) (PDDWR)}
 Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale. In questo caso si intendono solo i compiti completati dopo la data di scadenza prefissata.
-\[\frac{n\_compiti\_risoltiDW\_inritardo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risoltiDW\_inritardo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDDWR \leq 0.3$;
+		\item Valori preferibili: $0$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Percentuale Discostamento DoneWorking (in Anticipo) (PDDWA)}
 Indica la percentuale di compiti risolti, ma non ancora verificati, rispetto al numero totale. In questo caso si intendono solo i compiti completati prima della data di scadenza prefissata.
-\[\frac{n\_compiti\_risoltiDW\_inanticipo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risoltiDW\_inanticipo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDDWA \leq 0.3$;
+		\item Valori preferibili: $0$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Percentuale Discostamento DoneVerifying (in Tempo) (PDDVT)}
 Indica la percentuale dei compiti verificati, rispetto al numero totale. In questo caso si intendono solo le operazioni di verifica concluse esattamente alla data di scadenza prefissata.
-\[\frac{n\_compiti\_risoltiDV\_intempo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risoltiDV\_intempo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDDVT \geq 0.4$;
+		\item Valori preferibili: $1$.
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Percentuale Discostamento DoneVerifying (in Ritardo) (PDDVR)}
 Indica la percentuale dei compiti verificati, rispetto al numero totale. In questo caso si intendono solo le operazioni di verifica concluse dopo la data di scadenza prefissata.
-\[\frac{n\_compiti\_risoltiDV\_inritardo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risoltiDV\_inritardo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDDVR \leq 0.3$;
+		\item Valori preferibili: $0$.
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Percentuale Discostamento DoneVerifying (in Anticipo) (PDDVA)}
 Indica la percentuale dei compiti verificati, rispetto al numero totale. In questo caso si intendono solo le operazioni di verifica concluse prima della data di scadenza prefissata.
-\[\frac{n\_compiti\_risoltiDV\_inanticipo}{tot\_num\_compiti}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{n\_compiti\_risoltiDV\_inanticipo}{tot\_num\_compiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 1, "Miglioramento continuo";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PDDVA \leq 0.3$;
+		\item Valori preferibili: $0$.
+	\end{itemize}
+\end{itemize}
+
 \subsection{Metriche per la documentazione}
 
 \subsubsection{Indice di Gulpease (IG)}
@@ -103,72 +264,215 @@ Le soglie dei valori dell'indice di Gulpease sono:
     \item inferiore a 60, il documento è difficile da leggere per chi possiede la licenza media;
     \item inferiore a 40, il documento è difficile da leggere per chi ha un diploma superiore.
 \end{itemize}
-\[
-    89+ \frac{300\cdot (num\_frasi) - 10\cdot (num\_lettere)}{num\_parole}
-\]
+\begin{itemize}
+	\item \textbf{Formula:}\[
+	89+ \frac{300\cdot (num\_frasi) - 10\cdot (num\_lettere)}{num\_parole}
+	\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 2, "Leggibilità della documentazione";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $50 \leq IG \leq 100$;
+		\item Valori preferibili: $70 \leq IG \leq 100$.
+	\end{itemize}
+\end{itemize}
+
 
 \subsection{Metriche per il software}
 Questa sezione contiene le metriche che si cercherà di applicare al software prodotto. A causa dell'inesperienza del gruppo, tali valori sono una dichiarazione di intenti per la qualità del software e potrebbero essere rivisti con le successive revisioni.
 
 \subsubsection{Percentuale Requisiti Obbligatori Soddisfatti (PROS)}
 Indica la quantità di requisiti obbligatori soddisfatti rispetto al totale, così da poterli monitorare in ogni istante.
-\[\frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali}\]
+\begin{itemize}
+	\item \textbf{Formula:}\[\frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 3, "Implementazione requisiti obbligatori";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: 100\%;
+		\item Valori preferibili: 100\%.
+	\end{itemize}
+\end{itemize}
+
+
 
 \subsubsection{Coupling Between Objects (CBO)}
 Indica l'accoppiamento tra classi e oggetti; due classi si dicono accoppiate se una utilizza metodi o variabili dell'altra.
+\begin{itemize}
+	\item \textbf{Misurazione:} Per ogni coppia di classi, se una usa metodi e variabili dell'altra si dicono accoppiate, vengono contate quante coppie di classi accoppiate ci sono;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $0\leq CBO \leq 6$;
+		\item Valori preferibili: $0\leq CBO \leq 1$.
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Depth of hierarchies(DEP)}
 Indica la profondità delle gerarchie nel codice sviluppato. Va limitato questo valore in modo da limitare l'accoppiamento. Preferibilmente le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. In ogni caso non deve venire usata l'ereditarietà multipla.
+\begin{itemize}
+	\item \textbf{Misurazione:} Viene contato il numero di livelli della gerarchia più profonda;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $DEP \leq 3$;
+		\item Valori preferibili: $DEP \leq 2$.
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Level of nesting (LEV)}
 Questa metrica indica il livello di annidamento nei vari metodi presenti nel codice prodotto. Questo valore deve essere il più basso possibile, sia per una questione di leggibilità del codice, che di manutenibilità.
+\begin{itemize}
+	\item \textbf{Misurazione:} Viene contato il numero di livelli di annidamento del metodo con più livelli di annidamento;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $1\leq LEV \leq 6$;
+		\item Valori preferibili: $1\leq LEV \leq 3$.
+	\end{itemize}
+\end{itemize}
 
 
 \subsubsection{Parametri per metodo (PAR)}
 Indica il numero di parametri presenti nei metodi sviluppati nel codice. Un numero troppo elevato potrebbe indicare una complessità troppo elevata del metodo.
+\begin{itemize}
+	\item \textbf{Misurazione:} Viene contato il numero di parametri del metodo con più parametri;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PAR \leq 6$;
+		\item Valori preferibili: $PAR \leq 4$.
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Attributi per classe (ATT)}
-Considera il numero totale di attributi per ogni classe. Un valore elevato potrebbe indicare che la classe si fa carico di una quantità eccessiva di responsabilità, in questo caso si può optare per incapsulare parte di essa in un'altra classe.
+Considera il numero totale di attributi per classe. Un valore elevato potrebbe indicare che la classe si fa carico di una quantità eccessiva di responsabilità, in questo caso si può optare per incapsulare parte di essa in un'altra classe.
+\begin{itemize}
+	\item \textbf{Misurazione:} Viene contato il numero di attributi della classe con più attributi;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $0\leq ATT \leq 15$;
+		\item Valori preferibili: $0\leq ATT \leq 8$.
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Metodi per classe (MET)}
 Rappresenta il numero di metodi per classe. Se troppo elevato, potrebbe indicare che questa classe svolge troppi compiti, sarà quindi preferibile scomporla in più classi.
+\begin{itemize}
+	\item \textbf{Misurazione:} Viene contato il numero di metodi della classe con più metodi;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $0\leq MET \leq 15$;
+		\item Valori preferibili: $0\leq MET \leq 5$.
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Rapporto Codice Commenti (RCC)}
-Indica il rapporto tra le linee di codice e le linee di commento all'interno dei file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto
-\[\frac{linee\_commento}{linee\_codice}\]
+Indica il rapporto tra le linee di codice e le linee di commento all'interno dei file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto.
+\begin{itemize}
+	\item \textbf{Formula:} \[\frac{linee\_commento}{linee\_codice}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $RCC \geq 0.2$;
+		\item Valori preferibili: $RCC \geq 0.4$.
+	\end{itemize}
+\end{itemize}
+
 
 \subsubsection{Complessità Ciclomatica (CCL)}
-Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o classi di un programma. Questo valore rappresenta quanto complesso è un metodo tramite la misura del numero di cammini linearmente indipendenti che attraversano il grafo di flusso di controllo. Un valore troppo elevato porta ad un'eccessiva complessità del codice, che comporta difficile manutenzione. Al contrario, un valore ridotto potrebbe indicare una scarsa efficienza\textsubscript{G} dei metodi. Per calcolarlo si rappresenta il programma con un grafo dove i  nodi (\textbf{N}) sono i gruppi indivisibili di istruzioni e un arco (\textbf{E}) connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Quindi il valore interessato è:
-\[E-N+2P\]
-dove P è il numero di componenti connesse.
+Questa metrica è utilizzata per stimare la complessità di funzioni, metodi o classi di un programma. Questo valore rappresenta quanto complesso è un metodo tramite la misura del numero di cammini linearmente indipendenti che attraversano il grafo di flusso di controllo. Un valore troppo elevato porta ad un'eccessiva complessità del codice, che comporta difficile manutenzione. Al contrario, un valore ridotto potrebbe indicare una scarsa efficienza\textsubscript{G} dei metodi.
+\begin{itemize}
+	\item \textbf{Misurazione:}  Per calcolarlo si rappresenta il programma con un grafo dove i  nodi (\textbf{N}) sono i gruppi indivisibili di istruzioni e un arco (\textbf{E}) connette due nodi se le istruzioni di uno dei nodi possono essere eseguite direttamente dopo l'esecuzione delle istruzioni dell'altro nodo. Quindi il valore interessato è:
+	\[E-N+2P\]
+	dove P è il numero di componenti connesse;
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $CCL \leq 20$;
+		\item Valori preferibili: $CCL \leq 10$.
+	\end{itemize}
+\end{itemize}
 \subsubsection{Code Coverage (CC)}
 Indica la quantità di codice che viene effettivamente eseguito durante i test; aiuta a valutare la completezza di questi. Maggiore sarà la copertura del codice, maggiore sarà la possibilità che eventuali errori vengano individuati e risolti. Un valore troppo basso indica un'insufficiente verifica della correttezza del codice.
-\[\frac{linee\_codice\_verificate}{linee\_codice\_totali}\]
+\begin{itemize}
+	\item \textbf{Formula:} \[\frac{linee\_codice\_verificate}{linee\_codice\_totali}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Copertura del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $RCC \geq 50\%$;
+		\item Valori preferibili: $RCC \geq 70\%$.
+	\end{itemize}
+\end{itemize}
+
 
 \subsubsection{Percentuale Superamento Test (PST)}
 La seguente metrica indica la percentuale di test superati correttamente.
-\[\frac{n\_test\_superati}{n\_totale\_test\_implementati}\]
+\begin{itemize}
+	\item \textbf{Formula:} \[\frac{n\_test\_superati}{n\_totale\_test\_implementati}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 5, "Copertura del codice";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $PST \geq 85\%$;
+		\item Valori preferibili: $PST = 100\%$.
+	\end{itemize}
+\end{itemize}
+
 
 \subsubsection{Completezza del Software(CS)}
 Viene specificata la completezza del software. Questo rapporto serve per capire a che percentuale di completamento del software ci si trova.
-\[C = \frac{funzionalita\_implementate }{funzionalita\_totali}\]
-Se il valore calcolato è:
 \begin{itemize}
-    \item 1, allora sono state implementate tutte le funzionalità;
-    \item 0, non sono state implementate nessuna delle funzionalità.
+	\item \textbf{Formula:} \[C = \frac{funzionalita\_implementate }{funzionalita\_totali}\]
+	Se il valore calcolato è:
+	\begin{itemize}
+		\item 1, allora sono state implementate tutte le funzionalità;
+		\item 0, non sono state implementate nessuna delle funzionalità.
+	\end{itemize}
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 6, "Conformità";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $CS = 1$;
+		\item Valori preferibili: $CS = 1$.
+	\end{itemize}
 \end{itemize}
+
 
 \subsubsection{Affidabilità del software (A)}
 Viene specificata l'abilità del software di resistere a malfunzionamenti.
-\[A = \frac{numero\_di\_errori}{numero\_di\_test\_eseguiti}\]
+\begin{itemize}
+	\item \textbf{Formula:} \[A = \frac{numero\_di\_errori}{numero\_di\_test\_eseguiti}\];
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 7, "Robustezza";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $A < 0.15$;
+		\item Valori preferibili: $A = 0$.
+	\end{itemize}
+\end{itemize}
+
 
 \subsubsection{Numero di tocchi/Click necessari (C)}
-Viene specificata la facilità con la quale l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento. Più il valore è basso, più è facile per l'utente interagire con il sistema.\\
-Si considera per esempio la capacità dell'operatore di visualizzare la propria lista delle task\textsubscript{G}.
+Viene specificata la facilità con la quale l'utente riesce a raggiungere ciò che vuole attraverso il conteggio del numero di tocchi o click necessari al suo raggiungimento. Più il valore è basso, più è facile per l'utente interagire con il sistema.
+\begin{itemize}
+	\item \textbf{Misurazione:} Si considerano i tocchi/click necessari per visualizzare la propria lista delle task\textsubscript{G};
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 8, "Usabilità";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $C < 6$;
+		\item Valori preferibili: $C < 4$.
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Numero di Secondi necessari (S)}
-Viene specificata la rapidità con la quale l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.\\
-Si considera la capacità dell'operatore di visualizzare la propria lista delle task\textsubscript{G}.
+Viene specificata la rapidità con la quale l'utente riesce a raggiungere ciò che vuole attraverso il conteggio dei secondi necessari al suo raggiungimento.
+\begin{itemize}
+	\item \textbf{Misurazione:} Si considerano i secondi necessari per visualizzare la propria lista delle task\textsubscript{G};
+	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 8, "Usabilità";
+	\item \textbf{Valori accettabili/preferibili: }
+	\begin{itemize}
+		\item Valori accettabili: $S < 40$;
+		\item Valori preferibili: $S < 15$.
+	\end{itemize}
+\end{itemize}
 
 
 \subsection{Comunicazione e risoluzione delle anomalie}
@@ -181,3 +485,100 @@ Questa attività\textsubscript{G} è finalizzata alla tempestiva individuazione 
     \item incongruenze tra il prodotto e le funzionalità descritte nell'\textsc{Analisi dei Requisiti}.
 \end{itemize}
 Nel caso venga individuata una nuova anomalia, deve essere segnalata tempestivamente, nella modalità descritta nelle \textsc{Norme di Progetto}. In questo modo il Responsabile sarà informato dell'anomalia e sarà possibile gestirla in maniera corretta.
+\pagebreak
+\subsection{Metriche}
+Per raggiungere gli obiettivi di qualità è necessario che il processo di verifica produca dei risultati quantificabili, così da poterli confrontare con gli obiettivi fissati a priori. Per questo vengono prefissate delle metriche e dei valori di sufficienza minimi necessari, i quali serviranno a controllare che i livelli qualitativi di processo e di prodotto siano in linea con gli obiettivi prefissati.\\La seguente tabella riporta le metriche utilizzate, le rispettive soglie di valori preferibili e accettabili e i relativi obiettivi, così da poter monitorare e controllare gli obiettivi raggiunti e gli eventuali progressi.
+
+%sistemare
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{
+		>{\centering}p{0.1\textwidth}
+		>{}p{0.18\textwidth}
+		>{\centering}p{0.20\textwidth}
+		>{\centering}p{0.20\textwidth}
+		>{}p{0.12\textwidth} }
+	
+	\rowcolorhead
+	\centering \headertitle{Codice} &
+	\centering \headertitle{Nome} &
+	\centering \headertitle{Valori Preferibili} &
+	\centering \headertitle{Valori Accettabili}	&
+	\centering \headertitle{Obiettivi}
+	\endfirsthead
+	\endhead
+	
+	SRI & Scarto Riunioni Interne & 0 & $-90 \leq SRI \leq 90$ & 01 \\
+	
+	SRE & Scarto Riunioni Esterne &  0 & $-90 \leq SRE \leq 90$ & 01 \\
+	
+	REI & Rapporto riunioni Esterne e Interne & $0.2 \leq REI \leq 0.5$ & $0.3 \leq REI \leq 0.5$ & 01\\
+	
+	RRL & Rapporto tempo Riunioni e Lavoro individuale & $0.08 \leq RRL \leq 0.12$ & $0.08 \leq RRL \leq 0.4$ & 01 \\
+	
+	RTEI & Rapporto Tempo Effettivo totale e Individuale & $0.17$ & $0.1 \leq RTEI \leq 0.2$ & 01 \\
+	
+	RTPI & Rapporto Tempo Preventivato totale e Individuale & $0.17$ & $0.14 \leq RTPI \leq 0.19$ & 01 \\
+	
+	DTEP & Differenza Tempo Effettivo e Preventivato & $0$ & $-600 \leq DTEP \leq 600$ & 01 \\
+	
+	DLP & Distribuzione Lavoro Preventivato & $0 \leq DLP \leq 600$ & $0 \leq DLP \leq 900$ & 01 \\
+	
+	DLE & Distribuzione Lavoro Effettivo & $0 \leq DLE \leq 600$ & $0 \leq DLE \leq 900$ & 01 \\
+	
+	PDTT & Percentuale Discostamento Totale (in Tempo) & $1$ & $PDTT \geq 0.4$ & 01 \\
+	
+	PDTR & Percentuale Discostamento Totale (in Ritardo) & $0$ & $PDTR \leq 0.3$ & 01 \\
+	
+	PDTA & Percentuale Discostamento Totale (in Anticipo) & $0$ & $PDTA \leq 0.3$ & 01 \\
+	
+	PDDWT & Percentuale Discostamento DoneWorking (in Tempo) & $1$ & $PDDWT \geq 0.4$ & 01 \\
+	
+	PDDWR & Percentuale Discostamento DoneWorking (in Ritardo) & $0$ & $PDDWR \leq 0.3$ & 01 \\
+	
+	PDDWA & Percentuale Discostamento DoneWorking (in Anticipo) & $0$ & $PDDWA \leq 0.3$ & 01 \\
+	
+	PDDVT & Percentuale Discostamento DoneVerifying (in Tempo) & $1$ & $PDDVT \geq 0.4$ & 01 \\
+	
+	PDDVR & Percentuale Discostamento DoneVerifying (in Ritardo) & $0$ & $PDDVR \leq 0.3$ & 01 \\
+	
+	PDDVA & Percentuale Discostamento DoneVerifying (in Anticipo) & $0$ & $PDDVA \leq 0.3$ & 01 \\
+	
+	IG & Indice di Gulpease & $70 \leq IG \leq 100$ & $50 \leq IG \leq 100$ & 02 \\
+	
+	PROS & Percentuale Requisiti Obbligatori Soddisfatti & 100\% & 100\% & 03 \\
+	
+	CBO & Coupling Between Objects & $0\leq CBO \leq 1$ & $0\leq CBO \leq 6$ & 04 \\
+	
+	DEP & Depth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 04 \\
+	
+	LEV & Level of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 04 \\
+	
+	PAR & Parametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 04 \\
+	
+	ATT & Attributi per classe & $0 \leq ATT \leq 8$ & $0 \leq ATT \leq 15$ & 04 \\
+	
+	MET & Metodi per classe & $0 \leq MET \leq 5$ & $0 \leq MET \leq 15$ & 04 \\
+	
+	RCC & Rapporto Codice Commenti & $RCC \geq 0.4$ & $RCC \geq 0.2$  & 04 \\
+	
+	CCL & Complessità Ciclomatica & $CCL \leq 10 $ & $CCL \leq 20 $& 04 \\
+	
+	CC & Code Coverage & $CC\geq 70\%$ & $CC\geq 50\%$ & 05 \\
+	
+	PST & Percentuale Superamento Test & $PST=100\%$ & $PST\geq85\%$ & 05 \\
+	
+	CS & Completezza del Software & $CS=1$ & $CS=1$ & 06 \\
+	
+	A & Affidabilità del software & $A=0$ & $A < 0.15$ & 07 \\
+	
+	C & Numero di tocchi/Click necessari & $C<4$ & $C<6$& 08 \\
+	
+	S & Numero di Secondi necessari & $S<15$ & $S<40$ & 08 \\
+	
+	
+	\caption{Tabella delle Metriche}
+\end{longtable}
+
+
+
