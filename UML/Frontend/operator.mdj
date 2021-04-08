@@ -9298,51 +9298,6 @@
 									}
 								},
 								{
-									"_type": "UMLNoteView",
-									"_id": "AAAAAAF4ieoiMAQfl7E=",
-									"_parent": {
-										"$ref": "AAAAAAF4X512SjKC4Zs="
-									},
-									"font": "Arial;13;0",
-									"left": 720,
-									"top": 920,
-									"width": 71.3017578125,
-									"height": 40,
-									"text": "socket.io"
-								},
-								{
-									"_type": "UMLNoteLinkView",
-									"_id": "AAAAAAF4iepW7wTj09I=",
-									"_parent": {
-										"$ref": "AAAAAAF4X512SjKC4Zs="
-									},
-									"font": "Arial;13;0",
-									"head": {
-										"$ref": "AAAAAAF4ieoiMAQfl7E="
-									},
-									"tail": {
-										"$ref": "AAAAAAF4X7qZn1ZD5cE="
-									},
-									"lineStyle": 1,
-									"points": "601:948;719:941"
-								},
-								{
-									"_type": "UMLNoteLinkView",
-									"_id": "AAAAAAF4iepnGwVGGJ4=",
-									"_parent": {
-										"$ref": "AAAAAAF4X512SjKC4Zs="
-									},
-									"font": "Arial;13;0",
-									"head": {
-										"$ref": "AAAAAAF4cvAO2MnkRl4="
-									},
-									"tail": {
-										"$ref": "AAAAAAF4ieoiMAQfl7E="
-									},
-									"lineStyle": 1,
-									"points": "791:943;895:956"
-								},
-								{
 									"_type": "UMLAssociationView",
 									"_id": "AAAAAAF4lwgjyicB4PE=",
 									"_parent": {
@@ -10555,6 +10510,36 @@
 										"$ref": "AAAAAAF4cvytmUi+y6c="
 									},
 									"name": "Index",
+									"ownedElements": [
+										{
+											"_type": "UMLAssociation",
+											"_id": "AAAAAAF4seOjgJG2qoY=",
+											"_parent": {
+												"$ref": "AAAAAAF4X7qZn1ZBuHo="
+											},
+											"end1": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAF4seOjgJG3eJU=",
+												"_parent": {
+													"$ref": "AAAAAAF4seOjgJG2qoY="
+												},
+												"reference": {
+													"$ref": "AAAAAAF4X7qZn1ZBuHo="
+												},
+												"navigable": false
+											},
+											"end2": {
+												"_type": "UMLAssociationEnd",
+												"_id": "AAAAAAF4seOjgJG4N6U=",
+												"_parent": {
+													"$ref": "AAAAAAF4seOjgJG2qoY="
+												},
+												"reference": {
+													"$ref": "AAAAAAF4seOPUJAnOc4="
+												}
+											}
+										}
+									],
 									"operations": [
 										{
 											"_type": "UMLOperation",
@@ -10889,6 +10874,14 @@
 									]
 								}
 							]
+						},
+						{
+							"_type": "UMLClass",
+							"_id": "AAAAAAF4seOPUJAnOc4=",
+							"_parent": {
+								"$ref": "AAAAAAF4X5wctTIZIm4="
+							},
+							"name": "Socket"
 						}
 					]
 				},
