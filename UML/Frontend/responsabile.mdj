@@ -3934,7 +3934,7 @@
 											"top": 575,
 											"width": 71,
 											"height": 13,
-											"text": "ListsTask"
+											"text": "TaskLists"
 										},
 										{
 											"_type": "LabelView",
@@ -4466,9 +4466,9 @@
 											"font": "Arial;13;1",
 											"left": 789,
 											"top": 559,
-											"width": 71,
+											"width": 76.603515625,
 											"height": 13,
-											"text": "ListService"
+											"text": "ListsService"
 										},
 										{
 											"_type": "LabelView",
@@ -4499,7 +4499,7 @@
 									"font": "Arial;13;0",
 									"left": 784,
 									"top": 552,
-									"width": 81,
+									"width": 86.603515625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF4cyL9KSkkvbE="
@@ -4526,7 +4526,7 @@
 									"font": "Arial;13;0",
 									"left": 784,
 									"top": 577,
-									"width": 81,
+									"width": 86.603515625,
 									"height": 10
 								},
 								{
@@ -4541,7 +4541,7 @@
 									"font": "Arial;13;0",
 									"left": 784,
 									"top": 587,
-									"width": 81,
+									"width": 86.603515625,
 									"height": 10
 								},
 								{
@@ -4579,7 +4579,7 @@
 							"containerChangeable": true,
 							"left": 784,
 							"top": 552,
-							"width": 81,
+							"width": 86.603515625,
 							"height": 45,
 							"nameCompartment": {
 								"$ref": "AAAAAAF4cyL9KSkjMh4="
@@ -5333,7 +5333,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 916,
+									"left": 919,
 									"top": 563,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -5354,7 +5354,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 916,
+									"left": 919,
 									"top": 548,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -5375,7 +5375,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 916,
+									"left": 919,
 									"top": 593,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -5396,7 +5396,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 889,
+									"left": 895,
 									"top": 563,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -5417,7 +5417,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 892,
+									"left": 898,
 									"top": 549,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -5438,7 +5438,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 885,
+									"left": 891,
 									"top": 590,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -5544,7 +5544,7 @@
 							"tail": {
 								"$ref": "AAAAAAF4cyL9KSki/nc="
 							},
-							"points": "864:584;968:584",
+							"points": "870:584;968:584",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF4cyPQ7i6oIjA="
@@ -9552,7 +9552,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF4cyAP+Rl7pjw="
 							},
-							"name": "ListsTask",
+							"name": "TaskLists",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -9911,7 +9911,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "ListService",
+					"name": "ListsService",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
