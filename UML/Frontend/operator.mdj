@@ -4755,7 +4755,7 @@
 													"font": "Arial;13;1",
 													"left": 661,
 													"top": 734,
-													"width": 343,
+													"width": 335,
 													"height": 13,
 													"text": "model"
 												},
@@ -4790,7 +4790,7 @@
 											"font": "Arial;13;0",
 											"left": 656,
 											"top": 727,
-											"width": 353,
+											"width": 345,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF4cvytmkjCU5I="
@@ -4830,7 +4830,7 @@
 									"containerChangeable": true,
 									"left": 656,
 									"top": 712,
-									"width": 353,
+									"width": 345,
 									"height": 640,
 									"nameCompartment": {
 										"$ref": "AAAAAAF4cvytmkjBrw4="
