@@ -75,7 +75,7 @@
 											"font": "Arial;13;0",
 											"left": -384,
 											"top": -160,
-											"width": 73.67724609375,
+											"width": 133.65625,
 											"height": 13,
 											"text": "(from Model)"
 										},
@@ -1401,59 +1401,6 @@
 				},
 				{
 					"_type": "UMLClass",
-					"_id": "AAAAAAF4soNBDcan+5Y=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "CollisionDetection",
-					"ownedElements": [
-						{
-							"_type": "UMLInterfaceRealization",
-							"_id": "AAAAAAF4szWNBc1Rr1M=",
-							"_parent": {
-								"$ref": "AAAAAAF4soNBDcan+5Y="
-							},
-							"source": {
-								"$ref": "AAAAAAF4soNBDcan+5Y="
-							},
-							"target": {
-								"$ref": "AAAAAAF4szNIgcyM5rQ="
-							}
-						}
-					],
-					"operations": [
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF4s0bGa9FfEwM=",
-							"_parent": {
-								"$ref": "AAAAAAF4soNBDcan+5Y="
-							},
-							"name": "process",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAF4s0jD2dGNAXk=",
-									"_parent": {
-										"$ref": "AAAAAAF4s0bGa9FfEwM="
-									},
-									"name": "input",
-									"type": "List<Muletto>"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAF4s5REBtMsT34=",
-									"_parent": {
-										"$ref": "AAAAAAF4s0bGa9FfEwM="
-									},
-									"type": "Map<Point; List<Muletto>>",
-									"direction": "return"
-								}
-							]
-						}
-					]
-				},
-				{
-					"_type": "UMLClass",
 					"_id": "AAAAAAF4sxhKIsbTGdQ=",
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
@@ -1688,6 +1635,59 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Class1"
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAF4soNBDcan+5Y=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "CollisionDetection",
+					"ownedElements": [
+						{
+							"_type": "UMLInterfaceRealization",
+							"_id": "AAAAAAF4szWNBc1Rr1M=",
+							"_parent": {
+								"$ref": "AAAAAAF4soNBDcan+5Y="
+							},
+							"source": {
+								"$ref": "AAAAAAF4soNBDcan+5Y="
+							},
+							"target": {
+								"$ref": "AAAAAAF4szNIgcyM5rQ="
+							}
+						}
+					],
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF4s0bGa9FfEwM=",
+							"_parent": {
+								"$ref": "AAAAAAF4soNBDcan+5Y="
+							},
+							"name": "process",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4s0jD2dGNAXk=",
+									"_parent": {
+										"$ref": "AAAAAAF4s0bGa9FfEwM="
+									},
+									"name": "input",
+									"type": "List<Muletto>"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4s5REBtMsT34=",
+									"_parent": {
+										"$ref": "AAAAAAF4s0bGa9FfEwM="
+									},
+									"type": "Map<Point; List<Muletto>>",
+									"direction": "return"
+								}
+							]
+						}
+					]
 				}
 			]
 		}
