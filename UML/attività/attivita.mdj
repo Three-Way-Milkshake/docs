@@ -1,0 +1,43 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Diagrammi di attività",
+	"ownedElements": [
+		{
+			"_type": "UMLActivity",
+			"_id": "AAAAAAF4wXhsJepFp2A=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "ciclo vita muletto",
+			"ownedElements": [
+				{
+					"_type": "UMLActivityDiagram",
+					"_id": "AAAAAAF4wXhsJupGR3M=",
+					"_parent": {
+						"$ref": "AAAAAAF4wXhsJepFp2A="
+					},
+					"name": "Ciclo vita muletto"
+				}
+			]
+		},
+		{
+			"_type": "UMLActivity",
+			"_id": "AAAAAAF4wXixvepW28E=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "aggiunta lista task",
+			"ownedElements": [
+				{
+					"_type": "UMLActivityDiagram",
+					"_id": "AAAAAAF4wXixvepXK3U=",
+					"_parent": {
+						"$ref": "AAAAAAF4wXixvepW28E="
+					},
+					"name": "Aggiunta Lista Task"
+				}
+			]
+		}
+	]
+}
