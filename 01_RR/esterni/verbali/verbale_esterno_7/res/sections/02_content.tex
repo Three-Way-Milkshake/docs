@@ -1,0 +1,47 @@
+\section{Verbale della riunione}
+
+\subsection{Esposizione dell'architettura del software}
+
+Il meeting è iniziato con l'esposizione dell'archiettura del software modellata dal gruppo nelle ultime settimane. Sono stati quindi mostrati i diagrammi UML relativi alle componenti \textbf{client}: l'esposizione è stata motivo di conferma sulla bontà dell'applicazione del pattern architetturale \textit{MVC} nel contesto dei client. \'E stato spiegato il funzionamento di ognuno dei moduli. 
+
+Il proponente ha inoltre chiarito come sia preferibile predisporre un modulo unico (lato client) dedicato al login, piuttosto che averne due separati (uno per l'Amministratore e uno per il Responsabile).
+
+Si è proceduto poi a mostrare il diagramma UML del \textbf{server} e a spiegarne velocemente il funzionamento. La discussione si è focalizzata sui design pattern applicati (soprattutto Singleton): il proponente condivide le scelte fatte, e chiede dei chiarimenti in merito al modulo di gestione delle \textit{Task}. L'esposizione non può raggiungere una profondità troppo elevata, anche a causa dei limiti temporali della riunione.
+
+\subsection{Breve dimostrazione dell'eseguibile fin'ora prodotto}
+
+Approfittando della presenza concordata di Alessandra Piva, Responsabile della logistica presso l'azienda proponente Sanmarco Informatica, il gruppo ha predisposto una breve dimostrazione dell'eseguibile fin'ora realizzato. Sono stati mostrati il monitor di visualizzazione real-time dei muletti, testando i movimenti di 3 muletti al raggiungimento delle task assegnate. \'E stato messo alla prova il sistema di gestione delle collisioni e di calcolo del percorso; per poi passare alla guida manuale di un muletto. 
+
+L'esposizione ha avuto riscontro positivo da parte del proponente, che ha evidenziato come il "core" dell'applicazione sia stato realizzato coerentemente ai requisiti prefissati. \'E stato suggerito di distinguere i muletti in circolazione colorando in modo diverso (e coerente) le icone dei muletti. 
+
+\subsection{Chiarimenti su Docker}
+
+\begin{itemize}
+	\item dockerfile vanno customizzati/aggiunte configurazioni manualmente per ogni forklift aggiunto (va bene vero?   )
+	\begin{itemize}
+		\item creare cartella condivisa tra file system e container dove metto un file config.cfg
+		\item file con stesso nome 
+		\item si può anche gestire configurazione porta con file o passare parametro ambiente
+		\item in ogni caso PASSARE TUTTO ALLO STESSO MODO (per gli utenti manager/admin questo probabilmente non dev’essere vero)
+		
+	\end{itemize}
+	\item dockerfile da far girare su una macchina che faccia da server, l’ip di questa dev’essere conosciuto da tutti
+	\item dockerfile per unità da far girare su dispositivo (associato ai muletto) che abbia broswer e possibilità di eseguire tutta la roba che serve (necessaria configurazione manuale per ogni nuova, ma dopotutto il numero è statico e deciso dall’admin quindi non dovrebbe essere problema)
+	\item dockerfile da far girare su dispositivi dei responsabili/admin, che siano sempre in grado di far girare il tutto e un browser per usare l’interfaccia
+	\item ogni unità (che sia forklift/admin/manager) fa girare al suo interno un mini server node che da una parte di connette per gestire la comunicazione al suo esterno con il server java che tutti conoscono, e all’interno tramite un altro server http fa appoggiare socket.io per parlare con l’interfaccia ng e fare cose 
+\end{itemize}
+
+
+\subsection{Modalità di parcheggio dei muletti}
+
+\'E stata chiesta conferma al proponente sulla modalità di gestione dei muletti quando essi dovessero rimanere in uno stato di "pausa" perchè non presenti nuove \textit{Task} assegnabili: essi possono dirigersi in una località esterna alla mappa, tramite un passaggio nella stessa, nella quale sia previsto il "parcheggio" delle unità. Esse rimangono a disposizione per nuovi compiti da svolgersi qual ora questi venissero aggiunti dal Responsabile.
+
+\subsection{Proposta di file \textit{.json} per la persistenza}
+
+\'E stata presentata una proposta di file \textit{.json} da utilizzarsi per la persistenza dei dati di autenticazione dei muletti e degli utenti. La struttura si è rivelata coerente con quanto atteso, il proponente ha segnalato come non sia necessario conservare un token di password per i muletti.
+
+\subsection{Chiusura del server}
+
+L'applicativo non dispone di un modo per interrompere la componente server: per ora è prevista la chiusura tramite interruzione del processo (\textit{ctrl-c} da terminale). Il proponente non pone vincoli su questo aspetto, ma pone l'attenzione sull'importanza di mantenere uno stato coerente dopo la chiusura per quanto riguarda i dati salvati. Siccome la persistenza viene mantenuta in memoria durante l'esecuzione, e le scritture su file avvengono ad ogni modifica, l'interruzione dell'applicazione server non dovrebbe mettere a rischio la corretta conservazione dei dati.
+
+
