@@ -10,20 +10,29 @@ Per quanto riguarda la componente server, sono stati definiti 3 livelli su cui s
 \begin{enumerate}
 	\item \textbf{layer di comunicazione}: gestisce la comunicazione tra il server e i client, e si può specializzare in due sezioni: la prima può essere gestita tramite Socket, e riguarderà l'invio dei dati per il monitor real-time (di visualizzazione del magazzino con i muletti che si muovono al suo interno); la seconda, gestibile tramite API di tipo REST, regola l'interazione dei due attori "Amministratore" e "Responsabile" con l'interfaccia grafica. Per approcciarsi a questa pratica, il proponente suggerisce di usufruire della libreria "Jersey" di Java, indicando come possibile fonte di studio una guida dedicata sul sito html.it;
 	\item \textbf{layer di business}: il motore di calcolo del sistema;
-	\item \textbf{layer di persistenza}: per la gestione della persistenza, nel caso del nostro applicativo per il momento è previsto il salvataggio in file \textit{.json}. \'E stato evidenziato come sia importante assicurare, a questo livello, la maggior indipendenza possibile dagli altri layer per consentire, in un futuro, l'estensione ad altri tipi di database.
+	\item \textbf{layer di persistenza}: per la gestione della persistenza, nel caso del nostro applicativo per il momento è previsto il salvataggio in file \textit{.json}. \'E stato evidenziato come sia importante assicurare, a questo livello, la maggior indipendenza possibile dagli altri layer per consentire l'estensione ad altri tipi di persistenza.
 \end{enumerate}
 
 \subsubsection{Client}
 
-I client si differenziano a seconda della tipologia:
-\begin{enumerate}
-	\item i muletti prevedono una componente da realizzare in Node.js per interfacciarsi con le Socket con cui comunica il server;
-	\item per "Amministratore" e "Responsabile" è sufficiente la realizzazione dell'interfaccia in Angular, in quanto essa è in grado di comunicare tramite le API REST esposte dal server.
-\end{enumerate}
+I client si differenziano a seconda della tipologia, entrambi si compongono di una parte node e una angular:
+\begin{itemize}
+    \item muletti:
+    \begin{itemize}
+        \item node: comunicazione con il server;
+        \item angular: interfaccia di visualizzazione propria mappa e comandi di guida;
+    \end{itemize}
+    \item utenti (admin e responsabile):
+    \begin{itemize}
+        \item node: comunicazione mappa real time;
+        \item rest (da valutare): per le altre azioni (aggiunta/modifica/rimozione utenti/task ...).
+        \item angular: interfaccia di login, visualizzazione e modifica dati e varie funzionalità in base ai privilegi.
+    \end{itemize}
+\end{itemize}
 
 \subsection{Analisi dei design pattern da adottare}
 
-Sono stati evidenziate alcune componenti del server che potrebbero essere modellate nel design pattern \textbf{Singleton}:
+Sono stati evidenziate alcune componenti del server che potrebbero essere modellate tramite il design pattern \textit{Singleton}:
 \begin{enumerate}
 	\item path finder: che incapsula l'algoritmo per la ricerca del percorso migliore;
 	\item collision detection: per la gestione delle collisioni;
@@ -32,7 +41,7 @@ Sono stati evidenziate alcune componenti del server che potrebbero essere modell
 
 Per queste classi è necessario assicurare la presenza di un'unica istanza condivisa, motivo per cui il pattern Singleton può essere impiegato efficacemente.
 
-Per quanto riguarda ConnectionAccepter (classe dedicata ad accettare le connessioni entranti) è stata pensata la possibilità di introdurre un pattern di tipo \textbf{Factory}.
+Per quanto riguarda ConnectionAccepter (classe dedicata ad accettare le connessioni entranti) è stata pensata la possibilità di introdurre un pattern di tipo \textit{Factory}.
 
 \subsection{Guida manuale}
 
