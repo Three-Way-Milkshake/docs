@@ -4,10 +4,43 @@
 Sono stati discussi gli aggiustamenti dei diagrammi di classe del front end.
 \\Si è deciso di:
 \begin{itemize}
-	\item Non abbiamo a che fare con MVC;
-	\item Necessario aggiustare i diagrammi con le ultime modifiche.
+	\item non abbiamo a che fare con MVC;
+	\item aggiustare i diagrammi con le ultime modifiche;
+	\item iniziare a fare unit test.
 \end{itemize}
 
 
 \subsection{Diagrammi BE}
-qualcosa
+Si è discusso a riguardo di:
+\begin{itemize}
+	\item \href{https://docs.oracle.com/javase/8/docs/api/java/util/Observer.html}{observer};
+	\item \href{https://docs.oracle.com/javase/8/docs/api/java/util/Observable.html}{observable};
+\end{itemize}
+Sono affrontate le seguenti modifiche:
+\begin{itemize}
+	\item rimozione le classi Subject e Observer, per usare java.util.*;
+	\item singleton diventano bean di Spring;
+	\item rimozione di facade.
+\end{itemize}
+A questo punto è necessario:
+\begin{itemize}
+	\item correggere diagrammi;
+	\item finire implementazione engine
+	\item finire implementazione connection \\→ cambiare connection handler/accepter dependency;
+	\item finire implementazione persistenza\\+ capire la differenza tra il pattern chain of responsibility e il pattern pipeline.
+\end{itemize}
+
+\subsection{Diagrammi di sequenza}
+Sono stati ricontrollati i diagrammi di sequenza. Dalla discussione è emerso che:
+\begin{itemize}
+	\item bisogna riordinare la struttura (frecce che non si sovrappongano e siano squadrate);
+	\item continuare più possibile implementazione collisioni.
+\end{itemize}
+
+\subsection{Riorganizzazione presentazione PB}
+In vista della prossima presentazione della PB, si è deciso come ristrutturare le slide. In particolar modo risulta \textbf{necessario ridurre il numero delle slide} della presentazione, perciò si è deciso di:
+\begin{itemize}
+	\item lasciare una sola slide per il FE;
+	\item ridurre al minor numero possibile le slide riguardo i diagrammi di sequenza; 
+	\item rimuovere la slide iniziale e la slide finale dal conteggio; 
+\end{itemize}
