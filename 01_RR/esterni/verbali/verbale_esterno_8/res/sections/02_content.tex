@@ -1,9 +1,9 @@
 \section{Verbale della riunione}
 
-\subsection{Facades}
+\subsection{Facade}
     Si è deciso di rimuovere i facade presenti nell'architettura, i quali centralizzavano l'accesso rispettivamente alle liste di client e alla persistenza. Al loro posto si faranno fluire le dipendenze verso le interfacce o classi necessarie direttamente.
 
-\subsection{Singletons}
+\subsection{Singleton}
     Si è deciso di adottare Spring Boot per la gestione delle dipendenze e risolvere così il problema della gestione manuale dei singleton ed i conseguenti problemi correlati allo unit testing di tali componenti.
     Questo influenza i componenti:
     \begin{itemize}
