@@ -1,0 +1,48 @@
+\section{Verbale della riunione}
+
+\subsection{Esposizione dell'architettura del software}
+
+Il meeting è iniziato con l'esposizione dell'architettura del software modellata dal gruppo nelle ultime settimane. Sono stati quindi mostrati i diagrammi UML relativi alle componenti \textbf{client}: l'esposizione è stata motivo di conferma sulla bontà dell'applicazione del pattern architetturale \textit{MVC} nel contesto dei client. \'E stato spiegato il funzionamento di ognuno dei moduli.
+
+Il proponente ha inoltre chiarito come sia preferibile predisporre un modulo unico (lato client) dedicato al login, piuttosto che averne due separati (uno per l'Amministratore e uno per il Responsabile).
+
+Si è proceduto poi a mostrare il diagramma UML del \textbf{server} e a spiegarne velocemente il funzionamento. La discussione si è focalizzata sui design pattern applicati (soprattutto Singleton): il proponente condivide le scelte fatte, e chiede dei chiarimenti in merito al modulo di gestione delle \textit{Task}. L'esposizione non può raggiungere una profondità troppo elevata, anche a causa dei limiti temporali della riunione.
+
+\subsection{Breve dimostrazione dell'eseguibile fin'ora prodotto}
+
+Approfittando della presenza concordata di Alessandra Piva, Responsabile della logistica presso l'azienda proponente Sanmarco Informatica, il gruppo ha predisposto una breve dimostrazione dell'eseguibile fin'ora realizzato. Sono stati mostrati il monitor di visualizzazione real-time dei muletti, testando i movimenti di 3 muletti al raggiungimento delle task assegnate. \'E stato messo alla prova il sistema di gestione delle collisioni e di calcolo del percorso; per poi passare alla guida manuale di un muletto.
+
+L'esposizione ha avuto riscontro positivo da parte del proponente, che ha evidenziato come il "core" dell'applicazione sia stato realizzato coerentemente ai requisiti prefissati. \'E stato suggerito di distinguere i muletti in circolazione colorando in modo diverso o comunque differenziando in qualche modo le icone dei muletti.
+
+\subsection{Chiarimenti su Docker}
+Si sono discusse le difficoltà finora riscontrate con Docker ed i dubbi sulla configurazione con i seguenti riscontri:
+\begin{itemize}
+    \item esisteranno tre dockerfile:
+    \begin{enumerate}
+        \item macchina server, il quale ip dev'essere statico e conosciuto di modo da aggiungerlo nelle configurazioni dei client;
+        \item client per muletti, da far girare su un dispositivo associato a questi, che avrà le caratteristiche necessarie (eseguire node/angualr, browser per accedere all'interfaccia);
+        \item client per utenti (responsabili e admin), da far girare su dispositivi con caratteristiche analoghe a quelli per i client muletti;
+    \end{enumerate}
+    \item per le configurazioni di parametri variabili ci sono due possibilità:
+    \begin{enumerate}
+        \item creare una cartella condivisa tra il file system della macchina host ed il container che gira su questa, e qui mettere un file (e.g.: \textit{config.cfg} con il contenuto necessario);
+        \item passare parametri necessari alla configurazione tramite ambiente;
+    \end{enumerate}
+    \item in ogni caso, si dovrà scegliere una strada e mantenere la consistenza.
+\end{itemize}
+
+
+\subsection{Modalità di parcheggio dei muletti}
+
+\'E stata richiesta al proponente conferma sulla modalità di gestione dei muletti quando essi dovessero rimanere in uno stato di "pausa" perché non presenti nuove \textit{Task} assegnabili: essi possono dirigersi in una località esterna alla mappa, tramite un passaggio nella stessa, nella quale sia previsto il "parcheggio" delle unità. Esse rimangono a disposizione per nuovi compiti da svolgere qualora questi venissero aggiunti dal Responsabile.
+
+\subsection{Proposta di file \textit{.json} per la persistenza}
+
+\'E stata presentata una proposta di struttura per i file \textit{.json} da utilizzare per la persistenza dei dati di autenticazione di muletti e utenti. La struttura si è rivelata coerente con quanto atteso, il proponente ha segnalato come non sia necessario applicare \textit{hashing} anche ai token dei muletti.
+
+\subsection{Chiusura del server}
+
+L'applicativo non dispone di un modo per interrompere la componente server: per ora è prevista la chiusura tramite interruzione del processo (\textit{ctrl-c} da terminale). Il proponente non pone vincoli su questo aspetto, ma sottolinea l'importanza di mantenere uno stato stabile delle risorse dopo la chiusura per quanto riguarda i dati salvati.
+Dato che l'accesso alle risorse di persistenza avviene tramite cicli completi di \textit{apertura -- lettura/scrittura -- chiusura} delle risorse, l'interruzione dell'applicazione server non dovrebbe mettere a rischio la corretta conservazione dei dati.
+
+

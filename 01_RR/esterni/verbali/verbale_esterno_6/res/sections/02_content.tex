@@ -1,46 +1,60 @@
 \section{Verbale della riunione}
 
-\subsection {Docker}
-Non serve per il PoC, si può fare implementare più avanti.
+\subsection {Organizzazione dell'architettura del software}
 
-\subsection{Ordine delle task}
-Il Responsabile dovrà ordinare le task.\\
-Ogni unità riceverà la lista già ordinata che dovrà rispettare.
+\'E stata intavolato un confronto con il proponente per definire alcuni dettagli riguardanti l'architettura del software.
 
-\subsection{Invio della posizione da parte delle unità}
-L'invio della posizione dovrà essere continuo dall'unità (NodeJs) al server (Java).\\
-Per qualsiasi problema di connessione il muletto si ferma.\\
+\subsubsection{Server}
 
-\subsection{Movimento dell'unità}
-Discusse varie problematiche relative all'identificazione di casi limite che potrebbero succedere utilizzando un algoritmo di Path Finding in real time. Sono stati pensati dei casi pericolosi in cui si dovrà fare maggiore attenzione:
+Per quanto riguarda la componente server, sono stati definiti 3 livelli su cui si può articolare l'architettura:
+\begin{enumerate}
+	\item \textbf{layer di comunicazione}: gestisce la comunicazione tra il server e i client, e si può specializzare in due sezioni: la prima può essere gestita tramite Socket, e riguarderà l'invio dei dati per il monitor real-time (di visualizzazione del magazzino con i muletti che si muovono al suo interno); la seconda, gestibile tramite API di tipo REST, regola l'interazione dei due attori "Amministratore" e "Responsabile" con l'interfaccia grafica. Per approcciarsi a questa pratica, il proponente suggerisce di usufruire della libreria "Jersey" di Java, indicando come possibile fonte di studio una guida dedicata sul sito html.it;
+	\item \textbf{layer di business}: il motore di calcolo del sistema;
+	\item \textbf{layer di persistenza}: per la gestione della persistenza, nel caso del nostro applicativo per il momento è previsto il salvataggio in file \textit{.json}. \'E stato evidenziato come sia importante assicurare, a questo livello, la maggior indipendenza possibile dagli altri layer per consentire l'estensione ad altri tipi di persistenza.
+\end{enumerate}
+
+\subsubsection{Client}
+
+I client si differenziano a seconda della tipologia, entrambi si compongono di una parte node e una angular:
 \begin{itemize}
-	\item se è presente un ostacolo davanti;
-	\item se non è presente un margine di errore di distanza tra i muletti;
-	\item proseguire per file parallele non costituisce problema.
-\end{itemize}
-Bisognerà gestire il caso in ci sono due muletti provenienti da direzioni opposte lungo la stessa corsia: ciò porterebbe ad uno stallo infinito senza ricalcolo del percorso.
-
-\subsection{Mosse dell'unità}
-Ogni unità portra fare in ogni istante una sola cosa tra le seguenti:
-\begin{itemize}
-	\item andare avanti di una calla della mappa;
-	\item girarsi di 90 gradi;
-	\item girarsi di -90 gradi;
-	\item girarsi di 180 gradi;
-	\item stare ferma.
+    \item muletti:
+    \begin{itemize}
+        \item node: comunicazione con il server;
+        \item angular: interfaccia di visualizzazione propria mappa e comandi di guida;
+    \end{itemize}
+    \item utenti (admin e responsabile):
+    \begin{itemize}
+        \item node: comunicazione mappa real time;
+        \item rest (da valutare): per le altre azioni (aggiunta/modifica/rimozione utenti/task ...).
+        \item angular: interfaccia di login, visualizzazione e modifica dati e varie funzionalità in base ai privilegi.
+    \end{itemize}
 \end{itemize}
 
-\subsection{Login}
-Il login dovrà essere fatto solamente dagli Amministratori e dal Reponsabile.\\
-Le unità dovranno essere identificate in altri modi, come l'indirizzo ip associato al collegamento tra unità e server.\\
-L'ambiente sarà una rete interna all'azienda e dovrà essere utilizzato il protocollo Https per la sicurezza dei dati trasmessi.
+\subsection{Analisi dei design pattern da adottare}
 
-\subsection{Architettura dell'applicazione}
-Si è deciso di utilizzare un istanza di NodeJs e una di Angular per ogni unità.\\
-Bisognerà salvare il timestamp per ogni nuova connessione.\\
-Per il PoC basterà visualizzare il minimo indispensabile di connessione tra le varie tecnologie.
+Sono stati evidenziate alcune componenti del server che potrebbero essere modellate tramite il design pattern \textit{Singleton}:
+\begin{enumerate}
+	\item path finder: che incapsula l'algoritmo per la ricerca del percorso migliore;
+	\item collision detection: per la gestione delle collisioni;
+	\item warehouse map: la rappresentazione interna della mappa del magazzino.
+\end{enumerate}
 
-\subsection{Senso di circolazione}
-Il proponente ha specificato che il numero di celle attraversabili senza vincoli di circolazioni saranno più del 50 percento.\\
-Le aree vincolate da un senso di circolazione saranno poche.
+Per queste classi è necessario assicurare la presenza di un'unica istanza condivisa, motivo per cui il pattern Singleton può essere impiegato efficacemente.
+
+Per quanto riguarda ConnectionAccepter (classe dedicata ad accettare le connessioni entranti) è stata pensata la possibilità di introdurre un pattern di tipo \textit{Factory}.
+
+\subsection{Guida manuale}
+
+\'E stata discussa l'implementazione della guida manuale per i muletti: in particolare è stato evidenziato come non debba esserci alcuna attesa di feedback da parte del server nel movimento azionato da guida manuale. Tuttavia è comunque necessario, per le unità guidate manualmente, la comunicazione con il server della propria posizione, necessarie per il calcolo (ed eventualmente, i ricalcoli) del percorso migliore per raggiungere la destinazione.
+Una possibilità implementativa per assicurare queste caratteristiche è l'introduzione di un timer interno al client che regoli lo spostamento dell'unità sulla base degli input utente ricevuti.
+
+
+
+
+
+
+
+
+
+
 
