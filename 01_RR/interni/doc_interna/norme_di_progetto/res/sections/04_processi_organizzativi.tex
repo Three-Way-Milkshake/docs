@@ -48,19 +48,19 @@
         \pparagraph{Workflow per l'inizio di una nuova task}
         \begin{enumerate}
         	\item Si prende il codice della task\textsubscript{G} da Jira: PCS-\#\#\# e si va nel foglio di calcolo \textbf{Sincronizzazione Dati} alla riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo al lavoro);
-        	\item in \textbf{ATA \#StartWorking → \#DoneWorking: }
+        	\item in \textbf{DATA \#StartWorking → \#DoneWorking: }
         	\begin{itemize}
         		\item Settare date: \textbf{AVVIO} e \textbf{SCADENZA PREFISSATA};
-        		\item Ogni qualvolta si committa con 'git commit\textsubscript{G} -m “PCS-\#\#\# \#comment <commento> \#time <tempo>” ' (quindi usando tracciamento temporale di Jira) e si incrementa sull’excel.
+        		\item Ogni qualvolta si esegue un commit con 'git commit\textsubscript{G} -m “PCS-\#\#\# \#comment <commento> \#time <tempo>” ' (quindi usando tracciamento temporale di Jira) e si incrementa nel foglio di calcolo.
         	\end{itemize}
         	\item Al termine del lavoro della task\textsubscript{G} si dovrà andare ad inserire la data di fine effettiva della colonna \textbf{DATA \#StartWorking → \#DoneWorking FINE EFFETTIVA};
         	\item Aggiungere il \textbf{TEMPO (minuti) EFFETTIVO} con relativo \textbf{Ruolo};
-        	\item quando finito controllare \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verbali} e assegnare la verifica a chi tocca, secondo l’ordine.
+        	\item quando finito controllare \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verbali} e assegnare la verifica a chi tocca, secondo l'ordine
         \end{enumerate}
 
     	\pparagraph{Workflow per la verifica di una task}
     	\begin{enumerate}
-    		\item Si prende il codice della task\textsubscript{G} da Jira: PCS-\#\#\# e si va sull’Excel \textbf{Sincronizzazione Dati} nella riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo alla verifica);
+    		\item Si prende il codice della task\textsubscript{G} da Jira: PCS-\#\#\# e si va nel foglio di calcolo \textbf{Sincronizzazione Dati} nella riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo alla verifica);
     		\item settare \textbf{SCADENZA PREFISSATA} in \textbf{DATA \#StartVerifying → \#DoneVerifying};
     		\item Al termine della verifica si dovrà andare ad inserire la data di fine effettiva della colonna \textbf{DATA \#StartVerifying → \#DoneVerifying AVVIO (=EFFETTIVA FINE DI \#TOVERIFY) FINE EFFETTIVA}.
     	\end{enumerate}
@@ -103,12 +103,12 @@
         \pparagraph{Slack}
             Strumento di messaggistica fortemente orientato alla collaborazione in gruppi di lavoro \footnote{\url{https://slack.com/intl/en-it/about}}. Il gruppo \group ha un workspace dedicato nel quale sono presenti diversi canali, per suddividere ed organizzare le comunicazioni. Durante lo svolgimento del progetto\textsubscript{G} si possono creare tanti canali quanti se ne rendono necessari, il responsabile provvederà alla gestione di questi. Oltre ai canali dedicati alle attività\textsubscript{G} appena citati ci sono i seguenti:
             \begin{itemize}
-                \item \textbf{generale: }per le comunicazioni che non ricadono in nessun canale specifico già esistente e per le quali non si rende ncecessaria la creazione di un nuovo canale;
+                \item \textbf{generale: }per le comunicazioni che non ricadono in nessun canale specifico già esistente e per le quali non si rende necessaria la creazione di un nuovo canale;
                 \item \textbf{capitolato-c5-portacs: }all'interno del quale l'amministratore configura le integrazioni automatizzate utili a notificare i componenti del gruppo:
                 \begin{itemize}
-                    \item jira, invierà una notifica ogni qualvolta che si intraprenderà un'azione, manuale o automatica (\textit{smart commits}) sul cruscotto\textsubscript{G} di progetto\textsubscript{G};
-                    \item github, notificherà ogni azione intrapresa sui branch \textit{master} e \textit{develop};
-                    \item google calendar, che provvederà a notificare la programmazione di eventi e ricorderà quelli imminenti allegando codice Google meet per accedere direttamente alla riunione.
+                    \item Jira, invierà una notifica ogni qualvolta che si intraprenderà un'azione, manuale o automatica (\textit{smart commits}) sul cruscotto\textsubscript{G} di progetto\textsubscript{G};
+                    \item GitHub, notificherà ogni azione intrapresa sui branch \textit{master} e \textit{develop};
+                    \item Google Calendar, che provvederà a notificare la programmazione di eventi e ricorderà quelli imminenti allegando codice Google Meet per accedere direttamente alla riunione.
                 \end{itemize}
             \end{itemize}
         \pparagraph{Telegram}
