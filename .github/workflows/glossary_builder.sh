@@ -68,6 +68,9 @@ do
 	     echo "********** latex compilation went wrong. exiting **********"
 	     exit 1
 	fi
+	
+	sleep 1
+	pdflatex -file-line-error -halt-on-error $docName
 
 	#get back for the next doc, if any
 	cd -
