@@ -116,7 +116,7 @@
     Gli acronimi ed i termini di glossario vanno definiti ed inseriti in ordine alfabetico all'interno della pagina web "Glossario" di GitHub, istruzioni precise su come utilizzare correttamente questo documento si trovano nella \textsc{wiki how-to glossario}. Una volta che una voce è stata aggiunta, la si può usare liberamente in qualsiasi sezione tramite il suo nome, nel caso di termine nel glossario, o abbreviazione nel caso di acronimo.
 
     \pparagraph{Funzionamento}
-    Ad ogni azione di git\textsubscript{G} push\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{github action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
+    Ad ogni azione di git\textsubscript{G} push\textsubscript{G} su un branch feature, un'automazione \href{https://docs.github.com/en/free-pro-team@latest/actions}{GitHub action} si occupa di eseguire uno script bash\textsubscript{G}, glossary\_builder.sh il quale:
     \begin{itemize}
         \item controlla tutti i documenti che hanno almeno un termine definito nella pagina "Glossario" di GitHub;
         \item sostituisce tutte le occorrenze delle voci di glossario e acronimi in ogni sezione con i rispettivi comandi \LaTeX{}\ (pedice A o G);
@@ -185,19 +185,19 @@
 
 \subsection{Gestione della configurazione}
     \subsubsection{Scopo}
-        Lo scopo del processo di gestione della configurazione è quello di applicare procedure amministrative e tecniche al fine di controllare e registrare modifche e rilasci ed assicurare la correttezza, consistenza, completezza ed archiviazione di ogni elemento.
+        Lo scopo del processo di gestione della configurazione è quello di applicare procedure amministrative e tecniche al fine di controllare e registrare modifiche e rilasci ed assicurare la correttezza, consistenza, completezza ed archiviazione di ogni elemento.
     \subsubsection{Aspettative}
         Avere uno spazio di lavoro versionato, condiviso ed altamente orientato alla collaborazione è fondamentale in gruppo di lavoro con molteplici componenti. La storicizzazione, tracciabilità e reversibilità di ogni cambiamento permettono di concentrarsi sulla produzione di nuovo valore invece che sulle problematiche di versionamento, conflitti e condivisione.
     \subsubsection{Descrizione}
         Il gruppo, \group, ha un organizzazione su GitHub\footnote{\group su Github: \url{https://github.com/Three-Way-Milkshake}} all'interno della quale gestisce tutte le repo\textsubscript{A} di cui necessita.
     \subsubsection{Workflow di versionamento}
-        Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow}. Maggiori informazioni ed istruzioni per l'uso di git\textsubscript{G} e GitHub si trovano nella wiki\textsubscript{G} \textsc{GIT, Github \& Jira}
+        Il gruppo adotta il workflow \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{gitflow} all'interno di ciascuno repo\textsubscript{A}. Per semplificare le operazioni si può usare il pacchetto di estensioni \href{http://danielkummer.github.io/git-flow-cheatsheet/}{gitflow}. Maggiori informazioni ed istruzioni per l'uso di git\textsubscript{G} e GitHub si trovano nella wiki\textsubscript{G} \textsc{GIT, GitHub \& Jira}
         \pparagraph{Pull requests}
             Per l'implementazione delle feature dai branch di lavoro, bisogna aprire una git\textsubscript{G} pull\textsubscript{G} request su develop. A questo punto il responsabile o l'amministratore provvederanno a fare i controlli necessari ed effettueranno il merge\footnote{Il merge in git\textsubscript{G}: \url{https://www.atlassian.com/git/tutorials/using-branches/git-merge}} tramite \textit{squash}.
 
     \subsubsection{Integrazione con Jira}
     \label{jiraintegration}
-        GitHub è stato configurato in maniera che ad ogni commit\textsubscript{G} si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, Github \& Jira}} è possibile collegare ogni commit\textsubscript{G} con una task\textsubscript{G} o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
+        GitHub è stato configurato in maniera che ad ogni commit\textsubscript{G} si scatenino delle azioni che coinvolgono Jira. Usando una specifica sintassi\footnote{\url{https://support.atlassian.com/bitbucket-cloud/docs/use-smart-commits/}} \footnote{wiki \textsc{GIT, GitHub \& Jira}} è possibile collegare ogni commit\textsubscript{G} con una task\textsubscript{G} o sottotask di Jira, aggiungendo direttamente su questa commenti, tracciamento del tempo di lavoro ed apportando modifiche allo stato di progresso.
 
     \subsubsection{Strumenti}
     Come già detto, le repo\textsubscript{A} sono tenute su GitHub, per quanto riguarda la gestione locale, ogni membro è libero di adottare lo strumento che preferisce.
