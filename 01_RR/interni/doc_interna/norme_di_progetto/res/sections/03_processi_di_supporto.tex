@@ -67,14 +67,28 @@
         \item breve descrizione.
     \end{itemize}
     \pparagraph{Registro delle modifiche}
-    Raccoglie in forma tabellare tutte le modifiche e conseguentemente la storia del documento, così strutturate:
+    Raccoglie in forma tabellare tutte le modifiche e conseguentemente la storia del documento, dove ogni riga può essere:
     \begin{itemize}
-        \item versione del documento relativa alla modifica;
-        \item breve descrizione delle attività\textsubscript{G} svolte;
-        \item data della modifica, secondo lo standard; \href{https://www.iso.org/iso-8601-date-and-time-format.html}{ISO 8601};
-        \item cognome e nome di chi ha apportato la modifica;
-        \item ruolo del modificatore rispetto al ciclo di vita del documento, può quindi essere: redattore, verificatore, responsabile.
+        \item \textbf{modifica: } per modifiche seguite da verifiche, con questa sequenza:
+        \begin{itemize}
+            \item versione;
+            \item descrizione;
+            \item redattore;
+            \item data redazione;
+            \item verificatore;
+            \item data verifica;
+        \end{itemize}
+        \item \textbf{approvazione: }per le approvazioni dei documenti da parte del responsabile, queste seguono la struttura:
+        \begin{itemize}
+            \item versione;
+            \item descrizione;
+            \item data approvazione;
+            \item approvatore.
+        \end{itemize}
     \end{itemize}
+    Queste strutture possono essere richiamate rispettivamente tramite i comandi \textit{\textbackslash changelogTable\{...\}} e \textit{\textbackslash approvingTable\{...\}} definite nel template \LaTeX per i documenti formali.
+    Le date sono sempre scritte secondo lo standard \href{https://www.iso.org/iso-8601-date-and-time-format.html}{ISO 8601};
+
     \pparagraph{Indice}
     Riassume i contenuti del documento raccolti per sezioni ed intestazioni, indicando la pagina di inizio e collegando alla stessa
     \pparagraph{Elenchi delle figure e tabelle}
