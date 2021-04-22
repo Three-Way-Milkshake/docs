@@ -47,29 +47,33 @@
 
         \pparagraph{Workflow per l'inizio di una nuova task}
         \begin{enumerate}
-        	\item Si prende il codice della task\textsubscript{G} da Jira: PCS-\#\#\# e si va nel foglio di calcolo \textbf{Sincronizzazione Dati} alla riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo al lavoro);
+        	\item Si prende il codice della task\textsubscript{G} da Jira: PCS-\#\#\# e si va nel foglio di calcolo \textit{Sincronizzazione Dati} alla riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo al lavoro);
         	\item in \textbf{DATA \#StartWorking → \#DoneWorking: }
         	\begin{itemize}
-        		\item Settare date: \textbf{AVVIO} e \textbf{SCADENZA PREFISSATA};
-        		\item Ogni qualvolta si esegue un commit\textsubscript{G} con 'git commit\textsubscript{G} -m “PCS-\#\#\# \#comment <commento> \#time <tempo>” ' (quindi usando tracciamento temporale di Jira) e si incrementa nel foglio di calcolo.
+        		\item Settare date: AVVIO e SCADENZA PREFISSATA;
+        		\item Ogni qualvolta si esegue un commit\textsubscript{G} con 'git {commit} -m “PCS-\#\#\# [\#<eventuale transizione>] \#comment <commento> \#time <tempo>” ' (quindi usando tracciamento temporale di Jira) e si incrementa nel foglio di calcolo;
         	\end{itemize}
-        	\item Al termine del lavoro della task\textsubscript{G} si dovrà andare ad inserire la data di fine effettiva della colonna \textbf{DATA \#StartWorking → \#DoneWorking FINE EFFETTIVA};
-        	\item Aggiungere il \textbf{TEMPO (minuti) EFFETTIVO} con relativo \textbf{Ruolo};
-        	\item quando finito controllare \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verbali} e assegnare la verifica a chi tocca, secondo l'ordine
+        	\item al termine del lavoro della task\textsubscript{G} si dovrà andare ad inserire la data di fine effettiva della colonna \textbf{DATA \#StartWorking → \#DoneWorking FINE EFFETTIVA};
+        	\item aggiungere il \textbf{TEMPO (minuti) EFFETTIVO} con relativo \textbf{Ruolo};
         \end{enumerate}
 
     	\pparagraph{Workflow per la verifica di una task}
     	\begin{enumerate}
-    		\item Si prende il codice della task\textsubscript{G} da Jira: PCS-\#\#\# e si va nel foglio di calcolo \textbf{Sincronizzazione Dati} nella riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo alla verifica);
+    		\item Si prende il codice della task\textsubscript{G} da Jira: PCS-\#\#\# e si va nel foglio di calcolo \textit{Sincronizzazione Dati} nella riga corrispondente \textbf{TEMPO (minuti) PREVENTIVATO} → tempo durata preventivato (relativo alla verifica);
     		\item settare \textbf{SCADENZA PREFISSATA} in \textbf{DATA \#StartVerifying → \#DoneVerifying};
     		\item Al termine della verifica si dovrà andare ad inserire la data di fine effettiva della colonna \textbf{DATA \#StartVerifying → \#DoneVerifying AVVIO (=EFFETTIVA FINE DI \#TOVERIFY) FINE EFFETTIVA}.
     	\end{enumerate}
 
     	\pparagraph{Workflow per le riunioni}
-    	Chi dovrà redigere il verbale dovrà::
+    	Chi dovrà redigere il verbale dovrà:
     	\begin{enumerate}
-    		\item In \textbf{Durata Riunioni - Dati} inserire la \textbf{Data, Prevista ed Effettiva}  sotto \textbf{Durata riunioni interne / esterne};
-    		\item Creare branch feature/VT-n con T → {I, E}, n → numero
+    		\item nel foglio \textit{Durata Riunioni - Dati} inserire la data ed i tempi prevista ed effettivi  sotto \textbf{Durata riunioni interne / esterne};
+    		\item Creare un branch feature/<data-iso>\_verbale\_<T>\_<n>, dove:
+            \begin{enumerate}
+                \item \textbf{data-iso} è la data di svolgimento della riunione;
+                \item \textbf{T} indica il tipo, che può essere quindi interno o esterno;
+                \item \textbf{n} il numero progressivo nella sua categoria;
+            \end{enumerate}
     		\item Quando finito, oltre a settare tempi come per task\textsubscript{G} normali, controllare file in \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verb} e:
     		\begin{itemize}
     			\item Spuntare la propria box;
