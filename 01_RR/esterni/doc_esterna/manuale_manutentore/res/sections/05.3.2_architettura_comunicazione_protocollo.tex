@@ -1,13 +1,13 @@
 \subsubsection{Protocollo di comunicazione}
 \label{comm-protocol}
 
-Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando può avere 0 o più parametri, separati da ',’.
-\textbf{esempio sequenza:} POS,1,1,0;PATH,1
+Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando può avere 0 o più parametri, separati da ',’. \\
+\textbf{Esempio sequenza:} \texttt{POS,1,1,0;PATH,1}
 
 \pparagraph{Connessione: identificazione e login}
     Quando un client si connette deve essere identificato come tipo ed autenticato, perciò deve inviare separatamente ed in sequenza:
     \begin{enumerate}
-        \item \textbf{TYPE: }FORKLIFT o USER;
+        \item \textbf{TYPE: }\texttt{FORKLIFT} o \texttt{USER};
         \item \textbf{ID: } identificativo personale;
         \item \textbf{PWD/TOKEN: } password o token a seconda che sia rispettivamente un utente o un muletto.
     \end{enumerate}
@@ -19,9 +19,9 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
     \subparagraph{Esempio connessione ed autenticazione muletto}
         Dato un muletto con id=f1 e token=abcdef:
         \begin{itemize}
-            \item invia: FORKLIFT\textbackslash nf1\textbackslash nabcdef;
+            \item invia: \texttt{FORKLIFT\textbackslash nf1\textbackslash nabcdef};
 
-            \item riceve: OK oppure FAIL,messaggioErrore
+            \item riceve: \texttt{OK} oppure \texttt{FAIL,messaggioErrore}
         \end{itemize}
 
 
@@ -51,8 +51,330 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
         \end{tabular}
         \caption{Riepilogo enumerazioni}
     \end{table}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 
+\pparagraph{Comandi clients → server}
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{8cm}|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{FORKLIFTS}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            POS,X,Y,DIR & Posizione attuale del muletto, considerando la mappa come una matrice:
+            \begin{itemize}
+                \item X: riga della matrice
+                \item Y: colonna ““
+                \item DIR: orientamento assoluto secondo enum Orientation
+            \end{itemize}
+
+            & -- \\
+            LIST & Richiede nuova lista di task da completare & LIST,... \\
+
+            PATH,C & Richiede il percorso migliore per raggiungere il POI della task corrente a partire dalla posizione attuale. Se C=1 rimuove la task e passa alla successiva & PATH,... \\
+
+
+
+            last & last & last\\ [1ex]
+
+
+        \end{tabular}
+        \caption{Comandi clients → server | Forklifts}
+    \end{table}
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{8cm}|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{USER generico}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            EDIT,T,PAR & Modifica dati del proprio profilo
+            \begin{itemize}
+                \item T: NAME/LAST
+
+                \item PAR: nuova valore per T
+            \end{itemize}
+             & -- \\
+
+             LOGOUT & Richiesta di disconnessione & -- \\
+
+            last & last & last\\ [1ex]
+
+
+        \end{tabular}
+        \caption{Comandi clients → server | User generico}
+    \end{table}
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{8cm}|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{MANAGER}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            ADL,P1,P2,… & Aggiunge una nuova lista di task
+            \begin{itemize}
+                \item ID: identificativo della lista
+
+                \item P1..: id dei poi che compongono la lista
+            \end{itemize}
+            & ADL,...\\
+
+            RML,ID & Richiede la cancellazione della lista con id=ID & RML,... \\
+
+
+            last & last & last\\ [1ex]
+            \hline
+
+
+        \end{tabular}
+        \caption{Comandi clients → server | User Manager (Responsabile)}
+    \end{table}
+
+    %\begin{table}[h!]
+        %\centering
+        \begin{longtable}[h!]{|c|p{8cm}|c|}
+            \endfirsthead
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{ADMIN}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            \endhead
+
+            \texttt{MAP,R,C,SEQ} & Nuova planimetria
+            \begin{itemize}
+                \item R: num righe
+                \item C: “ colonne
+                \item SEQ: sequenza di interi corrispondenti all’enum CellType rappresentanti stati di una cella, indicanti la nuova planimetria, elencati per righe
+            \end{itemize}
+            & \texttt{MAP,...} \\
+
+            \texttt{CELL,X,Y,A[,T,NAME]} & Modifica una cella, la parte tra [ ] è presente solo in caso di POI
+            \begin{itemize}
+                \item X e Y riga e colonna della matrice
+
+                \item A: numero rappresentante l'azione  da intraprendere, corentemente con CellType
+            \end{itemize}
+
+            Solo nel caso di POI:
+            \begin{itemize}
+                \item T: tipo di POI secondo PoiType
+
+                \item NAME: stringa di caratteri da associare al POI
+            \end{itemize}
+            & \texttt{CELL,...} \\
+
+            \texttt{ADU,T,NAME,LAST} & aggiunge nuovo utente
+            \begin{itemize}
+                \item T: ADMIN o MANAGER
+
+                \item NAME e LAST nome e cognome
+            \end{itemize}
+            & \texttt{ADU,...} \\
+
+            \texttt{RMU,ID} & Rimuove l’utente con id=ID & \texttt{RMU,...} \\
+
+            \texttt{EDU,ID,A,PAR} & Modifica l’utente con id=ID, con
+            \begin{itemize}
+                \item A: azione da intraprendere tra:
+
+                    \subitem -- NAME: modifica nome
+
+                    \subitem -- LAST: modifica cognome
+
+                    \subitem -- RESET: esegue reset della password
+                \item PAR: nuovo valore da assegnare (assente in caso di reset)
+            \end{itemize}
+            & \texttt{EDU,...} \\
+
+            \texttt{ADF,ID} & Aggiunge nuovo muletto. ID: stringa che si vuole assegnare come identificativo al nuovo muletto (NON sarà più modificabile) & \texttt{ADF,...} \\
+
+            \texttt{RMF,ID} & rimuove il muletto con id=ID & \texttt{RMF,...} \\
+
+            \texttt{LISTF} & Richiede lista di tutti i muletti registrati & \texttt{LISTF,...} \\
+
+            \texttt{LISTU} & Richiede lista di tutti gli utenti registrati & \texttt{LISTU,...} \\
+
+            last & last & last\\ [1ex]
+            \hline
+        \caption{Comandi clients → server | User Admin (Amministratore)}
+        \end{longtable}
+
+    %\end{table}
+
+\pparagraph{Comandi server → clients}
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{8cm}|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{GENERICI}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            \texttt{MAP,R,C,SEQ} & Indica la planimetria
+            \begin{itemize}
+                \item R e C: numero di righe e colonne
+
+                \item SEQ: sequenza di interi corrispondenti all’enum CellType rappresentanti stati di una cella, indicanti la nuova planimetria, elencati per righe
+            \end{itemize}
+            & --\\
+            \texttt{POI,N,X,Y,T,ID,NAME} & rappresenta tutti i poi, la parte da X in poi si ripete per ogni POI da rappresentare
+            \begin{itemize}
+                \item N: num totale POI
+
+                \item X,Y e T posizione nella matrice e tipo secondo PoiType
+
+                \item ID e NAME: rispettivamente identificativo e nome del POI
+            \end{itemize}
+            & -- \\
+
+            \hline
+        \end{tabular}
+        \caption{Comandi clients → server | generici per tutti i client}
+    \end{table}
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{8cm}|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{SERVER → FORKLIFT}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            \texttt{ALIVE} & Ha lo scopo primario di verificare l’integrità della connessione ed ha come effetto l’ottenimento della nuova posizione. Se l’invio fallisce il muletto corrispondente viene considerato disconnesso, l’oggetto Connection relativo verrà chiuso e distrutto e il muletto dovrà riautenticarsi. Si presuppone che questo non si muova più finché la connessione non viene ristabilita, in quanto i suoi spostamenti sarebbero sconosciuti al server e questo non potrebbe intervenire per evitare eventuali collisioni.
+
+            Ad esso possono seguire ulteriori comandi o risposte a comandi precedente, secondo la sintassi generale per cui separati da ';'
+            & \texttt{POS,...} \\
+
+            \texttt{LIST,ID1,ID2…} & Invia lista di task assegnate. ID1.. sono gli id dei POI da raggiungere & -- \\
+
+            \texttt{PATH,SEQ} & Invia il percorso per raggiungere il prossimo POI, composto da mosse successive secondo Move & -- \\
+
+            \texttt{STOP,N} & Richiede lo stop immediato del muletto per N istanti, che verranno contati alle ricezioni dei futuri ALIVE. Se N=0 stop indefinito fino alla ricezione di \texttt{START}. & -- \\
+            \texttt{START} & consente ad un muletto fermato a tempo indeterminato di ripartire & -- \\
+
+            \hline
+        \end{tabular}
+        \caption{Comandi clients → server | Forklifts (muletti)}
+    \end{table}
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{8cm}|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{SERVER → USER generico}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            \texttt{UNI,N,ID1,X1,Y1,D1} & Indica le posizioni di tutti i muletti. Da ID1 in poi si ripete per ogni muletto
+            \begin{itemize}
+                \item N: num totale dei muletti attivi per i quali si sta ricevendo la posizione
+
+                \item IDn: id del muletto n
+
+                \item Xn, Yn e Dn: posizione rispetto alla matrice e orientamento secondo Orientation del muletto IDn.
+            \end{itemize}
+            Se l'invio di questo fallisce, l'utente viene considerato disconnesso. & -- \\
+
+            \texttt{LIST,IDF,N,IDP1,IDP2…} & Indica la lista di task presa in carico da un muletto
+            \begin{itemize}
+                \item IDF: id del muletto a cui ci si sta riferendo
+
+                \item N: numero di task prese in carico
+
+                \item IDP1…: sequenza di id dei POI da raggiungere
+            \end{itemize}
+            & -- \\
+
+
+            \hline
+        \end{tabular}
+        \caption{Comandi clients → server | User generico}
+    \end{table}
+
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{8cm}|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{SERVER → MANAGER}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            \texttt{UNI,N,ID1,X1,Y1,D1} & Indica le posizioni di tutti i muletti. Da ID1 in poi si ripete per ogni muletto
+            \begin{itemize}
+                \item N: num totale dei muletti attivi per i quali si sta ricevendo la posizione
+
+                \item IDn: id del muletto n
+
+                \item Xn, Yn e Dn: posizione rispetto alla matrice e orientamento secondo Orientation del muletto IDn.
+            \end{itemize}
+            Se l'invio di questo fallisce, l'utente viene considerato disconnesso. & -- \\
+
+            \texttt{LIST,IDF,N,IDP1,IDP2…} & Indica la lista di task presa in carico da un muletto
+            \begin{itemize}
+                \item IDF: id del muletto a cui ci si sta riferendo
+
+                \item N: numero di task prese in carico
+
+                \item IDP1…: sequenza di id dei POI da raggiungere
+            \end{itemize}
+            & -- \\
+
+
+            \hline
+        \end{tabular}
+        \caption{Comandi clients → server | Utente Manager (responsabile)}
+    \end{table}
+
+
+\begin{comment}
+\begin{longtable}[h!]{|p{2cm}|p{8cm}|p{2cm}|}
+\hline
+\rowcolorhead
+\multicolumn{3}{|c|}{\headertitle{FORKLIFTS}}\\
+\hline
+\rowcolorhead
+\headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+\hline
+POS,X,Y,DIR & posizione attuale del muletto, considerando la mappa come una matrice:\newline
+\begin{itemize}
+\item     X: riga della matrice
+\item     Y: colonna ““
+\item     DIR: orientamento assoluto secondo enum Orientation
+\end{itemize}
+
+& -- \\
+LIST & richiede nuova lista di task da completare & LIST... \\
+
+
+
+
+\caption{prova}
+\end{longtable}
+\end{comment}
 
 
 
