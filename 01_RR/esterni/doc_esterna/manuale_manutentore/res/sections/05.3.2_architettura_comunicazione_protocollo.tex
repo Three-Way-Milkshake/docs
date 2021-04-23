@@ -60,7 +60,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
         \begin{tabular}{|c|p{8cm}|c|}
             \hline
             \rowcolorhead
-            \multicolumn{3}{|c|}{\headertitle{FORKLIFTS}}\\
+            \multicolumn{3}{|c|}{\headertitle{FORKLIFTS → SERVER}}\\
             \hline
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
@@ -91,7 +91,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
         \begin{tabular}{|c|p{8cm}|c|}
             \hline
             \rowcolorhead
-            \multicolumn{3}{|c|}{\headertitle{USER generico}}\\
+            \multicolumn{3}{|c|}{\headertitle{USER generico → SERVER}}\\
             \hline
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
@@ -118,7 +118,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
         \begin{tabular}{|c|p{8cm}|c|}
             \hline
             \rowcolorhead
-            \multicolumn{3}{|c|}{\headertitle{MANAGER}}\\
+            \multicolumn{3}{|c|}{\headertitle{MANAGER → SERVER}}\\
             \hline
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
@@ -148,7 +148,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \endfirsthead
             \hline
             \rowcolorhead
-            \multicolumn{3}{|c|}{\headertitle{ADMIN}}\\
+            \multicolumn{3}{|c|}{\headertitle{ADMIN → SERVER}}\\
             \hline
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
@@ -217,12 +217,17 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
     %\end{table}
 
 \pparagraph{Comandi server → clients}
+    Tutti i comandi che possono ritornare un esito positivo o negativo hanno 2 varianti:
+    \begin{itemize}
+        \item \texttt{CMD,OK,MORE}: successo, eventualmente MORE contiene parametri di risposta aggiuntivi
+        \item \texttt{CMD,FAIL,MSG}: fallimento, MSG contiene maggiori informazioni sulle cause
+    \end{itemize}
     \begin{table}[h!]
         \centering
         \begin{tabular}{|c|p{8cm}|c|}
             \hline
             \rowcolorhead
-            \multicolumn{3}{|c|}{\headertitle{GENERICI}}\\
+            \multicolumn{3}{|c|}{\headertitle{SERVER → CLIENTS generici}}\\
             \hline
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
@@ -246,7 +251,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
 
             \hline
         \end{tabular}
-        \caption{Comandi clients → server | generici per tutti i client}
+        \caption{Comandi server → clients | generici per tutti i client}
     \end{table}
 
     \begin{table}[h!]
@@ -273,7 +278,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
 
             \hline
         \end{tabular}
-        \caption{Comandi clients → server | Forklifts (muletti)}
+        \caption{Comandi server → clients | Forklifts (muletti)}
     \end{table}
 
     \begin{table}[h!]
@@ -309,7 +314,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
 
             \hline
         \end{tabular}
-        \caption{Comandi clients → server | User generico}
+        \caption{Comandi server → clients | User generico}
     \end{table}
 
 
@@ -323,30 +328,14 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
             \hline
-            \texttt{UNI,N,ID1,X1,Y1,D1} & Indica le posizioni di tutti i muletti. Da ID1 in poi si ripete per ogni muletto
-            \begin{itemize}
-                \item N: num totale dei muletti attivi per i quali si sta ricevendo la posizione
+            \texttt{ADL,OK,ID} & Conferma aggiunta nuova lista di task. ID indica l'identificativo della nuova lista & -- \\
 
-                \item IDn: id del muletto n
-
-                \item Xn, Yn e Dn: posizione rispetto alla matrice e orientamento secondo Orientation del muletto IDn.
-            \end{itemize}
-            Se l'invio di questo fallisce, l'utente viene considerato disconnesso. & -- \\
-
-            \texttt{LIST,IDF,N,IDP1,IDP2…} & Indica la lista di task presa in carico da un muletto
-            \begin{itemize}
-                \item IDF: id del muletto a cui ci si sta riferendo
-
-                \item N: numero di task prese in carico
-
-                \item IDP1…: sequenza di id dei POI da raggiungere
-            \end{itemize}
-            & -- \\
+            \texttt{ADL,FAIL,MSG} & Segnala errore nella creazione di una nuova lista di task. MSG contiene maggiori informazioni sulle cause. & -- \\
 
 
             \hline
         \end{tabular}
-        \caption{Comandi clients → server | Utente Manager (responsabile)}
+        \caption{Comandi server → clients | Utente Manager (responsabile)}
     \end{table}
 
 
