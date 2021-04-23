@@ -220,7 +220,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
     Tutti i comandi che possono ritornare un esito positivo o negativo hanno 2 varianti:
     \begin{itemize}
         \item \texttt{CMD,OK,MORE}: successo, eventualmente MORE contiene parametri di risposta aggiuntivi
-        \item \texttt{CMD,FAIL,MSG}: fallimento, MSG contiene maggiori informazioni sulle cause
+        \item \texttt{CMD,FAIL,MSG}: fallimento, MSG contiene maggiori informazioni sulle cause.
     \end{itemize}
     \begin{table}[h!]
         \centering
@@ -330,12 +330,43 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \hline
             \texttt{ADL,OK,ID} & Conferma aggiunta nuova lista di task. ID indica l'identificativo della nuova lista & -- \\
 
-            \texttt{ADL,FAIL,MSG} & Segnala errore nella creazione di una nuova lista di task. MSG contiene maggiori informazioni sulle cause. & -- \\
+            \texttt{ADL,FAIL,MSG} & Segnala errore nella creazione di una nuova lista di task. & -- \\
+            \multicolumn{3}{|c|}{Funzionamento analogo per \texttt{RML}}\\
 
 
             \hline
         \end{tabular}
         \caption{Comandi server → clients | Utente Manager (responsabile)}
+    \end{table}
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|p{8cm}|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{3}{|c|}{\headertitle{SERVER → ADMIN}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
+            \hline
+            \texttt{MAP,OK} & Conferma successo modifica mappa & -- \\
+            \texttt{MAP,FAIL,MSG} & Modifica mappa fallita & -- \\
+            \multicolumn{3}{|c|}{Analogamente a quelli sopra, stesso discorso vale per: \texttt{CELL, RMU, RMF}} \\
+            \texttt{ADU,ID,PWD} & In risposta alla creazione di un utente
+
+            \begin{itemize}
+                \item ID che rappresenta il nuovo utente
+
+                \item PWD password temporanea per il nuovo utente, il quale è tenuto a cambiarla tempestivamente
+            \end{itemize}
+            & -- \\
+
+
+
+
+            \hline
+        \end{tabular}
+        \caption{Comandi server → clients | Utente Admin (amministratore)}
     \end{table}
 
 
