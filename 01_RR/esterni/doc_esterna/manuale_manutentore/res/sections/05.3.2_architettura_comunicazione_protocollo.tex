@@ -1,1 +1,69 @@
 \subsubsection{Protocollo di comunicazione}
+\label{comm-protocol}
+
+Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando può avere 0 o più parametri, separati da ',’.
+\textbf{esempio sequenza:} POS,1,1,0;PATH,1
+
+\pparagraph{Connessione: identificazione e login}
+    Quando un client si connette deve essere identificato come tipo ed autenticato, perciò deve inviare separatamente ed in sequenza:
+    \begin{enumerate}
+        \item \textbf{TYPE: }FORKLIFT o USER;
+        \item \textbf{ID: } identificativo personale;
+        \item \textbf{PWD/TOKEN: } password o token a seconda che sia rispettivamente un utente o un muletto.
+    \end{enumerate}
+    Quindi riceverà una risposta tra:
+    \begin{itemize}
+        \item \textbf{OK } se l'autenticazione è andata a buon fine;
+        \item \textbf{FAIL,msgErrore} se è fallita, dove msgErrore conterrà maggiori dettagli sulla causa.
+    \end{itemize}
+    \subparagraph{Esempio connessione ed autenticazione muletto}
+        Dato un muletto con id=f1 e token=abcdef:
+        \begin{itemize}
+            \item invia: FORKLIFT\textbackslash nf1\textbackslash nabcdef;
+
+            \item riceve: OK oppure FAIL,messaggioErrore
+        \end{itemize}
+
+
+        Funzionamento analogo per gli utenti con password al posto del token.
+
+\pparagraph{Enumerazioni}
+    Di seguito si farà riferimento più volte ai diversi tipi enum presenti nella logica di business, per cui segue un riassunto:
+
+
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \rowcolorhead
+            \multicolumn{5}{|c|}{\headertitle{ENUM}}\\
+            \hline
+            \rowcolorhead
+            \headertitle{↓Val \textbackslash{} Enum→} & \headertitle{PoiType} & \headertitle{Move}       & \headertitle{Orientation} & \headertitle{CellType} \\
+            0          & LOAD    & GOSTRAIGHT & UP          & OBSTACLE \\
+            1          & UNLOAD  & TURNAROUND & RIGHT       & NEUTRAL \\
+            2          & EXIT    & TURNRIGHT  & DOWN        & UP \\
+            3          & --      & TURNLEFT   & LEFT        & RIGHT \\
+            4          & --      & STOP       & --          & DOWN \\
+            5          & --      & --         & --          & LEFT \\
+            6          & --      & --         & --          & POI \\ [1ex]
+            \hline
+        \end{tabular}
+        \caption{Riepilogo enumerazioni}
+    \end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
