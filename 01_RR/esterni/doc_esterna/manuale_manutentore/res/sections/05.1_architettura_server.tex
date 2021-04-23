@@ -24,6 +24,16 @@ Le sezioni che seguono illustrano la struttura di ogni layer.
 \end{figure}
 
 
+Questo layer si interfaccia con i client esterni e ha lo scopo di gestire la comunicazione con questi. In particolare, la classe \texttt{ConnectionAccepter} si occupa di accettare le nuove connessioni entranti tramite \texttt{ServerSocket}: essa esegue su un thread dedicato in modo da non bloccare l'esecuzione all'arrivo di una nuova connessione. 
+
+Per ogni nuova connessione, ne crea un oggetto \texttt{Socket} che passa a \texttt{ConnectionHandler}. Quest'ultima è una componente che esegue su un thread dedicato: rimane in attesa fino al risveglio determinato da \texttt{ConnectionAccepter}: una volta attivato, procede a svuotare il buffer di \texttt{Socket} per creare oggetti di tipo \texttt{Connection}, instanziando per ognuno i buffer di input e output. Segue quindi il processo di autenticazione dei muletti o degli utenti, al termine del quale \texttt{ConnectionHandler} torna in attesa.
+
+
+
+
+
+
+
 \subsubsection{Business layer}
 
 Nel Business layer risiede il nucleo di elaborazione dei dati ricevuti dal layer superiore: i dominii principali di cui si occupa sono:
@@ -38,7 +48,6 @@ Per facilitare la consultazione, lo studio di questo layer si concentra separata
 
 
 
-
 \paragraph{Clients}
 \subparagraph*{ }
 
@@ -48,7 +57,7 @@ Per facilitare la consultazione, lo studio di questo layer si concentra separata
 	\caption{Visione di dettaglio del package Clients}
 \end{figure}
 
-Il server conserva nelle classi \texttt{UsersList} e \texttt{ForkliftList} le liste degli utenti e dei muletti (client) connessi con i relativi token di autenticazione. In particolare, la gerarchia dei client prevede una prima suddivisione suddivisione tra \texttt{Forklift} e \texttt{User} (muletto e utente), gli \texttt{User} si specializzano ulteriormente in \texttt{Manager} (responsabile) e \texttt{Admin} (amministratore).
+La gerarchia dei \texttt{Client} prevede una prima suddivisione suddivisione tra \texttt{Forklift} e \texttt{User} (muletto e utente), gli \texttt{User} si specializzano ulteriormente in \texttt{Manager} (responsabile) e \texttt{Admin} (amministratore). Il server conserva nelle classi \texttt{UsersList} e \texttt{ForkliftList} le liste degli utenti e dei muletti connessi.
 
 I \texttt{Forklift} di caratterizzano dagli attributi:
 \begin{itemize}
@@ -56,6 +65,8 @@ I \texttt{Forklift} di caratterizzano dagli attributi:
 	\item \texttt{TaskSequence}: una sequenza di task da compiere;
 	\item \texttt{Move}: una lista di mosse atte a raggiungere il prossimo POI (e quindi evadere la prossima task).
 \end{itemize} 
+
+Notare che ogni \texttt{Client} possiede un attributo di tipo \texttt{Connection}, attraverso il quale viene regolata la comunicazione tramite Socket (per i dettagli si rimanda alle sezioni 5.1.1 e 5.3).\\
 
 La classe \texttt{Engine} è il cuore del motore di calcolo: essa esegue su un thread dedicato e tramite un timer scandisce l'esecuzione temporizzata dell'elaborazione. In particolare, interroga periodicamente \texttt{UsersList} e \texttt{ForkliftList} con i seguenti obiettivi:
 \begin{itemize}
@@ -101,6 +112,18 @@ Si osserva l'applicazione di alcuni design pattern:
 \end{figure}
 
 
+Qui è contenuta la logica che gestisce le collisioni fra i muletti che circolano in guida autonoma all'interno del magazzino. L'elaborazione è scandita dal timer dell'\texttt{Engine}: ad ogni intervallo di tempo, vengono eseguite due operazioni sequenziali:
+\begin{itemize}
+	\item rilevazione delle collisioni: sulla base delle future mosse di ogni unità, viene determinata l'eventualità che ci siano delle collisioni;
+	\item risoluzione delle collisioni: in caso vengano rilevate, vengono elaborate le mosse, da trasmettere alle unità coinvolte, che impediscano alla collisione di avvenire.
+\end{itemize}
+Le classi \texttt{CollisionDetector} e \texttt{CollisionSolver} incapsulano rispettivamente le due funzionalità elencate.
+
+Viene applicato in questo contesto il design pattern \texttt{Pipeline}\footnote{Variante del pattern \textit{Chain Of Responsibility}: \url{https://java-design-patterns.com/patterns/pipeline/}}, che permette di definire vari \texttt{Handler} da comporre come catena di operazioni. La pipeline può essere poi eseguita (se necessario, come in questo caso, ripetutamente) con un comando che attiva i vari step sequenzialmente. Ogni \texttt{Handler} specifica i tipi del proprio parametro di input e di output: l'output di un \texttt{Handler} sarà l'input dell'\texttt{Handler} successivo.
+L'input della pipeline è \texttt{ForkliftList}, da cui vengono ricavate, per ogni muletto, la posizione attuale e le mosse successive.
+
+
+
 \subsubsection{Persistence layer}
 
 \begin{figure}[H]
@@ -119,4 +142,4 @@ L'accesso a questo layer è regolato da 3 interfacce che gestiscono la persisten
 Ogni interfaccia si rivolge alla relativa componente del layer superiore che conserva a runtime i dati impiegati nell'esecuzione. La presenza delle interfacce favorisce il disaccoppiamento tra i moduli e permette di estendere a tipi di persistenza alternativi. Attualmente è implementato il salvataggio dei dati su file di tipo .json, viene fatto uso della libreria standard java.io e GSON per gestire l'interazione con questo tipo di tecnologia.
 
 
-
+\pagebreak
