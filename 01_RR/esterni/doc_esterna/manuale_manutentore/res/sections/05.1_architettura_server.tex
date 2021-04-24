@@ -116,13 +116,13 @@ Si osserva l'applicazione di alcuni design pattern:
 
 Qui è contenuta la logica che gestisce le collisioni fra i muletti che circolano in guida autonoma all'interno del magazzino. L'elaborazione è scandita dal timer dell'\texttt{Engine}: ad ogni intervallo di tempo, vengono eseguite due operazioni sequenziali:
 \begin{itemize}
-	\item rilevazione delle collisioni: sulla base delle future mosse di ogni unità, viene determinata l'eventualità che ci siano delle collisioni;
-	\item risoluzione delle collisioni: in caso vengano rilevate, vengono elaborate le mosse, da trasmettere alle unità coinvolte, che impediscano alla collisione di avvenire.
+	\item \textbf{rilevazione:} sulla base delle future mosse di ogni unità, vengono determinate le possibili collisioni;
+	\item \textbf{risoluzione:} in caso vengano rilevate, vengono elaborate le mosse, da trasmettere alle unità coinvolte, che impediscano tali collisioni.
 \end{itemize}
 Le classi \texttt{CollisionDetector} e \texttt{CollisionSolver} incapsulano rispettivamente le due funzionalità elencate.
 
 Viene applicato in questo contesto il design pattern \texttt{Pipeline}\footnote{Variante del pattern \textit{Chain Of Responsibility}: \url{https://java-design-patterns.com/patterns/pipeline/}}, che permette di definire vari \texttt{Handler} da comporre come catena di operazioni. La pipeline può essere poi eseguita (se necessario, come in questo caso, ripetutamente) con un comando che attiva i vari step sequenzialmente. Ogni \texttt{Handler} specifica i tipi del proprio parametro di input e di output: l'output di un \texttt{Handler} sarà l'input dell'\texttt{Handler} successivo.
-L'input della pipeline è \texttt{ForkliftsList}, da cui vengono ricavate, per ogni muletto, la posizione attuale e le mosse successive.
+In questo caso l'input sarà una struttura rappresentante muletti attivi con le loro posizioni e prossime mosse, mentre l'output un'altra struttura che ad ogni punto con collisione associ i muletti coinvolti e le azioni da intraprendere così da poterle comunicare.
 
 
 
@@ -136,8 +136,8 @@ L'input della pipeline è \texttt{ForkliftsList}, da cui vengono ricavate, per o
 
 L'accesso a questo layer è regolato da 3 interfacce che gestiscono la persistenza delle tre tipologie di dati che vengono salvati:
 \begin{itemize}
-	\item le credenziali di autenticazione degli utenti;
-	\item i token di autenticazione dei muletti;
+	\item i dati e le credenziali degli utenti;
+	\item gli identificativi ed i token di autenticazione dei muletti;
 	\item la rappresentazione della mappa.
 \end{itemize}
 
