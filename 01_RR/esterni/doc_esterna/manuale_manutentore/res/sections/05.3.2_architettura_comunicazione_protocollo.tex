@@ -12,11 +12,16 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
         \item \textbf{ID: } identificativo personale;
         \item \textbf{PWD/TOKEN: } password o token a seconda che sia rispettivamente un utente o un muletto.
     \end{enumerate}
-    Quindi riceverà una risposta tra:
+    Quindi riceverà come risposta:
     \begin{itemize}
-        \item \textbf{OK: } se l'autenticazione è andata a buon fine;
-        \item \textbf{FAIL,msgErrore: } se è fallita, dove msgErrore conterrà maggiori dettagli sulla causa.
+
+        \item nel caso di FORKLIFT: OK oppure FAIL,MSG
+
+        \item nel caso di USER: OK,TYPE oppure FAIL,MSG
+
+        \subitem -- dove TYPE indica il ruolo dell’utente (ADMIN o MANAGER)
     \end{itemize}
+    dove MSG conterrà maggiori dettagli sulla causa.
 
     \subparagraph{Esempio connessione ed autenticazione muletto}
         Dato un muletto con id=f1 e token=abcdef:
