@@ -1,3 +1,4 @@
+\clearpage
 \subsubsection{Protocollo di comunicazione}
 \label{comm-protocol}
 
@@ -53,8 +54,9 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
     \end{table}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
-
+\clearpage
 \pparagraph{Comandi clients → server}
+Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-server-client}
     \begin{table}[h!]
         \centering
         \begin{tabular}{|c|p{8cm}|c|}
@@ -65,7 +67,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
             \hline
-            POS,X,Y,DIR & Posizione attuale del muletto, considerando la mappa come una matrice:
+            \texttt{POS,X,Y,DIR} & Posizione attuale del muletto, considerando la mappa come una matrice:
             \begin{itemize}
                 \item X: riga della matrice
                 \item Y: colonna ““
@@ -73,15 +75,11 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \end{itemize}
 
             & -- \\
-            LIST & Richiede nuova lista di task da completare & LIST,... \\
+            \texttt{LIST} & Richiede nuova lista di task da completare & \texttt{LIST,...} \\
 
-            PATH,C & Richiede il percorso migliore per raggiungere il POI della task corrente a partire dalla posizione attuale. Se C=1 rimuove la task e passa alla successiva & PATH,... \\
+            \texttt{PATH,C} & Richiede il percorso migliore per raggiungere il POI della task corrente a partire dalla posizione attuale. Se C=1 rimuove la task e passa alla successiva & \texttt{PATH,...} \\
 
-
-
-            last & last & last\\ [1ex]
-
-
+            \hline
         \end{tabular}
         \caption{Comandi clients → server | Forklifts}
     \end{table}
@@ -96,7 +94,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
             \hline
-            EDIT,T,PAR & Modifica dati del proprio profilo
+            \texttt{EDIT,T,PAR} & Modifica dati del proprio profilo
             \begin{itemize}
                 \item T: NAME/LAST
 
@@ -104,9 +102,9 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \end{itemize}
              & -- \\
 
-             LOGOUT & Richiesta di disconnessione & -- \\
+             \texttt{LOGOUT} & Richiesta di disconnessione & -- \\
 
-            last & last & last\\ [1ex]
+            \hline
 
 
         \end{tabular}
@@ -133,11 +131,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
 
             RML,ID & Richiede la cancellazione della lista con id=ID & RML,... \\
 
-
-            last & last & last\\ [1ex]
             \hline
-
-
         \end{tabular}
         \caption{Comandi clients → server | User Manager (Responsabile)}
     \end{table}
@@ -145,7 +139,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
     %\begin{table}[h!]
         %\centering
         \begin{longtable}[h!]{|c|p{8cm}|c|}
-            \endfirsthead
+            %\endfirsthead
             \hline
             \rowcolorhead
             \multicolumn{3}{|c|}{\headertitle{ADMIN → SERVER}}\\
@@ -208,20 +202,23 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \texttt{LISTF} & Richiede lista di tutti i muletti registrati & \texttt{LISTF,...} \\
 
             \texttt{LISTU} & Richiede lista di tutti gli utenti registrati & \texttt{LISTU,...} \\
-
-            last & last & last\\ [1ex]
             \hline
-        \caption{Comandi clients → server | User Admin (Amministratore)}
+        \hiderowcolors
+        \caption{Comandi clients → server | User Admin (Amministratore)}\\
+        \showrowcolors
         \end{longtable}
 
     %\end{table}
 
+\clearpage
 \pparagraph{Comandi server → clients}
+\label{commands-server-client}
     Tutti i comandi che possono ritornare un esito positivo o negativo hanno 2 varianti:
     \begin{itemize}
         \item \texttt{CMD,OK,MORE}: successo, eventualmente MORE contiene parametri di risposta aggiuntivi
         \item \texttt{CMD,FAIL,MSG}: fallimento, MSG contiene maggiori informazioni sulle cause.
     \end{itemize}
+
     \begin{table}[h!]
         \centering
         \begin{tabular}{|c|p{8cm}|c|}
@@ -239,7 +236,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
                 \item SEQ: sequenza di interi corrispondenti all’enum CellType rappresentanti stati di una cella, indicanti la nuova planimetria, elencati per righe
             \end{itemize}
             & --\\
-            \texttt{POI,N,X,Y,T,ID,NAME} & rappresenta tutti i poi, la parte da X in poi si ripete per ogni POI da rappresentare
+            \texttt{POI,N,X,Y,T,ID,NAME} & Rappresenta tutti i poi, la parte da X in poi si ripete per ogni POI
             \begin{itemize}
                 \item N: num totale POI
 
@@ -254,7 +251,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
         \caption{Comandi server → clients | generici per tutti i client}
     \end{table}
 
-    \begin{table}[ph]
+    \begin{table}[h!]
         \centering
         \begin{tabular}{|c|p{8cm}|c|}
             \hline
@@ -299,7 +296,8 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
 
                 \item Xn, Yn e Dn: posizione rispetto alla matrice e orientamento secondo Orientation del muletto IDn.
             \end{itemize}
-            Se l'invio di questo fallisce, l'utente viene considerato disconnesso. & -- \\
+            Se l'invio di questo fallisce, l'utente viene considerato disconnesso.
+            & -- \\
 
             \texttt{LIST,IDF,N,IDP1,IDP2…} & Indica la lista di task presa in carico da un muletto
             \begin{itemize}
@@ -351,7 +349,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \hline
             \texttt{MAP,OK} & Conferma successo modifica mappa & -- \\
             \texttt{MAP,FAIL,MSG} & Modifica mappa fallita & -- \\
-            \multicolumn{3}{|c|}{Analogamente a quelli sopra, stesso discorso vale per: \texttt{CELL, RMU, RMF, EDU}} \\
+            \multicolumn{3}{|c|}{Analogamente a quelli sopra, stesso discorso vale per: \texttt{CELL, RMU, RMF}} \\
             \texttt{ADU,ID,PWD} & In risposta alla creazione di un utente
 
             \begin{itemize}
@@ -359,6 +357,12 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
 
                 \item PWD password temporanea per il nuovo utente, il quale è tenuto a cambiarla tempestivamente
             \end{itemize}
+            & -- \\
+
+            \texttt{EDU,OK[,PWD]} & Modifica utente avvenuta con successo. PWD contiene la nuova password in caso di richiesta di reset. Anche in questo caso, l'utente una volta ricevuta la password dall'admin è tenuto a reimpostarla.
+            & --\\
+
+            \texttt{EDU,FAIL,MSG} & Modifica utente fallita
             & -- \\
 
             \texttt{ADF,OK,TOKEN} & Aggiunta di un nuovo muletto avvenuta con successo. Il TOKEN serve per la configurazione del nuovo muletto sul dispositivo client che verrà associato alla nuova unità & --\\
