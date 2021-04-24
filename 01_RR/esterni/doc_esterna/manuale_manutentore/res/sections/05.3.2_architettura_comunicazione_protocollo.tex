@@ -351,7 +351,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \hline
             \texttt{MAP,OK} & Conferma successo modifica mappa & -- \\
             \texttt{MAP,FAIL,MSG} & Modifica mappa fallita & -- \\
-            \multicolumn{3}{|c|}{Analogamente a quelli sopra, stesso discorso vale per: \texttt{CELL, RMU, RMF}} \\
+            \multicolumn{3}{|c|}{Analogamente a quelli sopra, stesso discorso vale per: \texttt{CELL, RMU, RMF, EDU}} \\
             \texttt{ADU,ID,PWD} & In risposta alla creazione di un utente
 
             \begin{itemize}
@@ -361,7 +361,24 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             \end{itemize}
             & -- \\
 
+            \texttt{ADF,OK,TOKEN} & Aggiunta di un nuovo muletto avvenuta con successo. Il TOKEN serve per la configurazione del nuovo muletto sul dispositivo client che verrà associato alla nuova unità & --\\
+            \texttt{ADF,FAIL,MSG} & Aggiunta nuovo muletto fallita (esiste già muletto con l'id richiesto) & -- \\
 
+            \texttt{LISTF,N,ID1,T1,ID2,T2…} & In risposta alla richiesta della lista dei muletti:
+            \begin{itemize}
+                \item N: num totale muletti
+
+                \item IDn, Tn: rispettivamente id e token del muletto n
+            \end{itemize}
+            & -- \\
+
+            \texttt{LISTU,N,UN1,UL1,R1…} & In risposta alla richiesta della lista degli utenti:
+            \begin{itemize}
+                \item N: num totale utenti registrati
+
+                \item UN…: rispettivamente nome, cognome e ruolo
+            \end{itemize}
+            & -- \\
 
 
             \hline
