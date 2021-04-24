@@ -26,10 +26,10 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
         \end{itemize}
 
 
-        Funzionamento analogo per gli utenti con password al posto del token.
+        Funzionamento analogo per gli utenti con password al posto di token.
 
 \pparagraph{Enumerazioni}
-    Di seguito si farà riferimento più volte ai diversi tipi enum presenti nella logica di business, per cui segue un riassunto:
+    In seguito si farà riferimento più volte ai diversi tipi enum presenti nella logica di business, per cui segue un riassunto:
 
 
     \begin{table}[h!]
@@ -121,15 +121,14 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
             \hline
-            ADL,P1,P2,… & Aggiunge una nuova lista di task
+            \texttt{ADL,P1,P2,…} & Aggiunge una nuova lista di task
             \begin{itemize}
-                \item ID: identificativo della lista
 
                 \item P1..: id dei poi che compongono la lista
             \end{itemize}
-            & ADL,...\\
+            & \texttt{ADL,...} \\
 
-            RML,ID & Richiede la cancellazione della lista con id=ID & RML,... \\
+            \texttt{RML,ID} & Richiede la cancellazione della lista con id=ID & \texttt{RML,...} \\
 
             \hline
         \end{tabular}
@@ -174,9 +173,9 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
 
             \texttt{ADU,T,NAME,LAST} & aggiunge nuovo utente
             \begin{itemize}
-                \item T: ADMIN o MANAGER
+                \item T: tipo (ADMIN o MANAGER)
 
-                \item NAME e LAST nome e cognome
+                \item NAME e LAST: rispettivamente nome e cognome
             \end{itemize}
             & \texttt{ADU,...} \\
 
@@ -197,7 +196,7 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
 
             \texttt{ADF,ID} & Aggiunge nuovo muletto. ID: stringa che si vuole assegnare come identificativo al nuovo muletto (NON sarà più modificabile) & \texttt{ADF,...} \\
 
-            \texttt{RMF,ID} & rimuove il muletto con id=ID & \texttt{RMF,...} \\
+            \texttt{RMF,ID} & Rimuove il muletto con id=ID & \texttt{RMF,...} \\
 
             \texttt{LISTF} & Richiede lista di tutti i muletti registrati & \texttt{LISTF,...} \\
 
@@ -378,7 +377,7 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
 
             \texttt{LISTU,N,UN1,UL1,R1…} & In risposta alla richiesta della lista degli utenti:
             \begin{itemize}
-                \item N: num totale utenti registrati
+                \item N: num totale utenti
 
                 \item UN…: rispettivamente nome, cognome e ruolo
             \end{itemize}
