@@ -1,1 +1,5 @@
 \subsection{Modificare handler nell'algoritmo di gestione delle collisioni}
+
+La struttura fornita dal design pattern \textit{Pipeline}, come anticipato nella \S \ref{collision-details}, consente di concatenare operazioni da eseguirsi sequenzialmente e il cui output di ognuna costituisce l'input della successiva. Per aggiungere un'operazione è necessario implementare l'interfaccia \texttt{Handler<I,O>} specificando i parametri di input (\texttt{I}) e di output (\texttt{O}) del nuovo \texttt{ConcreteHandler}. La logica dell'operazione si costruisce eseguendo l'\textit{Override} del metodo \texttt{Process(I input) : O}. La costruzione della pipeline prevederà l'aggiunta del nuovo \texttt{ConcreteHandler} tramite il metodo \texttt{addHandler} in modo che l'esecuzione, avviata invocando il metodo \texttt{execute}, includa la nuova operazione nella sua sequenza.
+
+L'applicazione di questo design pattern consente di modificare facilmente le operazioni che compongono la sequenza: se necessario, è possibile sostituirle anche tutte, cambiando di fatto l'implementazione dell'algoritmo; mantenendo però intatti i parametri di ingresso e uscita.
