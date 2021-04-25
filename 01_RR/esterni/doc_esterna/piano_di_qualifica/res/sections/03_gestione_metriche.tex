@@ -294,17 +294,6 @@ Indica la quantità di requisiti obbligatori soddisfatti rispetto al totale, cos
 
 
 
-\subsubsection{Coupling Between Objects (CBO)}
-Indica l'accoppiamento tra classi e oggetti; due classi si dicono accoppiate se una utilizza metodi o variabili dell'altra.
-\begin{itemize}
-	\item \textbf{Misurazione:} Per ogni coppia di classi, se una usa metodi e variabili dell'altra si dicono accoppiate, vengono contate quante coppie di classi accoppiate ci sono;
-	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
-	\item \textbf{Valori accettabili/preferibili: }
-	\begin{itemize}
-		\item Valori accettabili: $0\leq CBO \leq 6$;
-		\item Valori preferibili: $0\leq CBO \leq 1$.
-	\end{itemize}
-\end{itemize}
 
 \subsubsection{Depth of hierarchies(DEP)}
 Indica la profondità delle gerarchie nel codice sviluppato. Va limitato questo valore in modo da limitare l'accoppiamento. Preferibilmente le classi dovranno dipendere solo da classi astratte e potranno implementare una o più interfacce. In ogni caso non deve venire usata l'ereditarietà multipla.
@@ -319,9 +308,9 @@ Indica la profondità delle gerarchie nel codice sviluppato. Va limitato questo 
 \end{itemize}
 
 \subsubsection{Level of nesting (LEV)}
-Questa metrica indica il livello di annidamento nei vari metodi presenti nel codice prodotto. Questo valore deve essere il più basso possibile, sia per una questione di leggibilità del codice, che di manutenibilità.
+Questa metrica indica il livello di annidamento di cicli if nei vari metodi presenti nel codice prodotto. Questo valore deve essere il più basso possibile, sia per una questione di leggibilità del codice, che di manutenibilità.
 \begin{itemize}
-	\item \textbf{Misurazione:} Viene contato il numero di livelli di annidamento del metodo con più livelli di annidamento;
+	\item \textbf{Misurazione:} Viene contato il numero di livelli di annidamento di cicli if del metodo con più livelli di annidamento;
 	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
 	\item \textbf{Valori accettabili/preferibili: }
 	\begin{itemize}
@@ -343,29 +332,6 @@ Indica il numero di parametri presenti nei metodi sviluppati nel codice. Un nume
 	\end{itemize}
 \end{itemize}
 
-\subsubsection{Attributi per classe (ATT)}
-Considera il numero totale di attributi per classe. Un valore elevato potrebbe indicare che la classe si fa carico di una quantità eccessiva di responsabilità, in questo caso si può optare per incapsulare parte di essa in un'altra classe.
-\begin{itemize}
-	\item \textbf{Misurazione:} Viene contato il numero di attributi della classe con più attributi;
-	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
-	\item \textbf{Valori accettabili/preferibili: }
-	\begin{itemize}
-		\item Valori accettabili: $0\leq ATT \leq 15$;
-		\item Valori preferibili: $0\leq ATT \leq 8$.
-	\end{itemize}
-\end{itemize}
-
-\subsubsection{Metodi per classe (MET)}
-Rappresenta il numero di metodi per classe. Se troppo elevato, potrebbe indicare che questa classe svolge troppi compiti, sarà quindi preferibile scomporla in più classi.
-\begin{itemize}
-	\item \textbf{Misurazione:} Viene contato il numero di metodi della classe con più metodi;
-	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Manutenzione e comprensione del codice";
-	\item \textbf{Valori accettabili/preferibili: }
-	\begin{itemize}
-		\item Valori accettabili: $0\leq MET \leq 15$;
-		\item Valori preferibili: $0\leq MET \leq 5$.
-	\end{itemize}
-\end{itemize}
 
 \subsubsection{Rapporto Codice Commenti (RCC)}
 Indica il rapporto tra le linee di codice e le linee di commento all'interno dei file. Questo rapporto aiuta a stimare la manutenibilità del codice. Un rapporto troppo basso indica una carenza di informazioni necessarie alla comprensione del codice scritto.
@@ -400,8 +366,8 @@ Indica la quantità di codice che viene effettivamente eseguito durante i test; 
 	\item \textbf{Obiettivo:} Questa metrica rientra nell'obiettivo 4, "Copertura del codice";
 	\item \textbf{Valori accettabili/preferibili: }
 	\begin{itemize}
-		\item Valori accettabili: $RCC \geq 50\%$;
-		\item Valori preferibili: $RCC \geq 70\%$.
+		\item Valori accettabili: $CC \geq 50\%$;
+		\item Valori preferibili: $CC \geq 70\%$.
 	\end{itemize}
 \end{itemize}
 
@@ -548,17 +514,11 @@ Per raggiungere gli obiettivi di qualità è necessario che il processo di verif
 	
 	PROS & Percentuale Requisiti Obbligatori Soddisfatti & 100\% & 100\% & 03 \\
 	
-	CBO & Coupling Between Objects & $0\leq CBO \leq 1$ & $0\leq CBO \leq 6$ & 04 \\
-	
 	DEP & Depth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 04 \\
 	
 	LEV & Level of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 04 \\
 	
 	PAR & Parametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 04 \\
-	
-	ATT & Attributi per classe & $0 \leq ATT \leq 8$ & $0 \leq ATT \leq 15$ & 04 \\
-	
-	MET & Metodi per classe & $0 \leq MET \leq 5$ & $0 \leq MET \leq 15$ & 04 \\
 	
 	RCC & Rapporto Codice Commenti & $RCC \geq 0.4$ & $RCC \geq 0.2$  & 04 \\
 	
