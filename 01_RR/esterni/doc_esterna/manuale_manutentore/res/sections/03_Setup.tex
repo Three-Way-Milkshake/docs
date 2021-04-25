@@ -29,25 +29,34 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
 \end{itemize}
 
 \subsubsection{Requisiti Software}
-\begin{itemize}
-	\item Client:
-\begin{itemize}
-	\item Docker.
-	%\item Chrome Versione 90.0.4430.85 (Build ufficiale) (a 64 bit);
-	%\item Node.js;
-	%\item Angular;
-	
-	%\item Windows 10.
-\end{itemize}
-	\item Server:
-\begin{itemize}
-	\item Docker.
-	%\item Java;
-	%\item gradle;
-	
-	%\item Windows 10.
-\end{itemize}
-\end{itemize}
+    \pparagraph{Esecuzione}
+    \begin{itemize}
+        \item Docker (v19.03.*);
+        \item Google Chrome (v90).
+    \end{itemize}
+
+    \pparagraph{Sviluppo}
+    Vedi \S\ \ref{tecnologie}
+
+    \begin{comment}
+    	\item Client:
+    \begin{itemize}
+    	\item Docker.
+    	%\item Chrome Versione 90.0.4430.85 (Build ufficiale) (a 64 bit);
+    	%\item Node.js;
+    	%\item Angular;
+
+    	%\item Windows 10.
+    \end{itemize}
+    	\item Server:
+    \begin{itemize}
+    	\item Docker.
+    	%\item Java;
+    	%\item gradle;
+
+    	%\item Windows 10.
+    \end{itemize}
+    \end{comment}
 
 
 
@@ -55,8 +64,29 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
 
 
 
-\subsection{Installazione}
-%TODO
+\subsection{Installazione ed avvio degli applicativi}
+    \subsubsection{Server}
+    Nella macchina da utilizzare come server andrà scaricata l'immagine di portacs-server con la versione desiderata \href{https://hub.docker.com/r/threewaymilkshake}{docker hub di \group}.
+    Per l'avvio, in ambiente Linux e MacOS:
+    \begin{itemize}
+        \item predisporre una cartella che contenga un file \texttt{config.txt} ed una cartella \texttt{resources} che manterrà la persistenza;
+        \item eseguire:
+    \begin{verbatim}
+    docker run -v $(pwd)/resources:/resources \
+     --env-file config.txt threewaymilkshake/portacs-server}
+    \end{verbatim}
+    \end{itemize}
 
+    \subsubsection{Client}
+    Come per il server, scaricare l'immagine dal docker hub di \group{} relativa al client voluto (forklift o user). Dopodiché sul dispositivo che dovrà fungere da client andranno impostata la configurazione in un file \texttt{config.txt}:
+    \begin{itemize}
+        \item per i client \textit{user} sarà sufficiente specificare l'indirizzo IP della macchina server così: \texttt{SERVER\_ADDR=ip};
+        \item per i client \texttt{forklift}, oltre all'indirizzo come per gli utenti, bisognerà aggiungere altre 2 righe per la configurazione di ogni muletto:
+        \begin{itemize}
+            \item \texttt{ID=id del muletto};
+            \item \texttt{TOKEN=token del muletto}.
+        \end{itemize}
+        Queste informazioni sono a disposizione dell'admin.
+    \end{itemize}
 
 
