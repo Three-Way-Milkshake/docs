@@ -19,7 +19,7 @@ Il package component permette di visualizzare sullo schermo le informazioni rich
 	\item \texttt{AdminNotification} → visulizza un pulsante che, se premuto, notifica all'admin un evento eccezionale;
 	\item \texttt{ComeBack} → mostra un pulsante alla fine del turno dell'operatore che, se premuto, guida automaticamente il muletto verso la propria base.
 \end{itemize}
-Il package connection, attraverso le classi Index e CommandsToJava, instaura inoltre una comunicazione TCP Socket con java, permettendo di creare una connessione tra frontend e backend.\\
+Il package connection, attraverso le classi \texttt{Index} e \texttt{CommandsToJava}, instaura inoltre una comunicazione TCP Socket con java, permettendo di creare una connessione tra frontend e backend.\\
 
 \subsubsection{Diagramma di classe per l'admin-manager}
 
@@ -29,7 +29,7 @@ Il package connection, attraverso le classi Index e CommandsToJava, instaura ino
 	\caption{Diagramma UML delle classi per gli admin e i manager}
 \end{figure}
 Il diagramma di classe dell'admin-responsabile è molto simile a quello dell'unità: si avvale delle tecnologie Node, con il package connection, ed Angular, con tutti gli altri package.\\
-Il contesto dei package è lo stesso dell'unità, di cui però si fa una differenziazione tra le funzionalità del'admin e quelle del manager grazie alla classe Login e al routing di AppRouting presente nel package component: permette all'utente di effettuare il login, "attivando" solamente le funzionalità riferite al tipo di utente loggato.\\
+Il contesto dei package è lo stesso dell'unità, di cui però si fa una differenziazione tra le funzionalità del'admin e quelle del manager grazie alla classe Login e al routing di \texttt{AppRouting} presente nel package component: permette all'utente di effettuare il login, "attivando" solamente le funzionalità riferite al tipo di utente loggato.\\
 Il package generic contiene classi di funzionalità condivise tra amnagere e admin.\\
 Le classi presenti in component permettono di attivare certe classi riferite al package (e quindi alle funzionalità di uno specifico tipo di utente):
 \begin{itemize}
