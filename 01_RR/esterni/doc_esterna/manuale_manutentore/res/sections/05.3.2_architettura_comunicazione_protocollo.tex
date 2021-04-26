@@ -54,7 +54,7 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
             3          & --      & TURNLEFT   & LEFT        & RIGHT \\
             4          & --      & STOP       & --          & DOWN \\
             5          & --      & --         & --          & LEFT \\
-            6          & --      & --         & --          & POI \\ [1ex]
+            6          & --      & --         & --          & POI\textsubscript{A} \\ [1ex]
             \hline
         \end{tabular}
         \caption{Riepilogo enumerazioni}
@@ -82,9 +82,9 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             \end{itemize}
 
             & -- \\
-            \texttt{LIST} & Richiede nuova lista di task da completare & \texttt{LIST,...} \\
+            \texttt{LIST} & Richiede nuova lista di task\textsubscript{G} da completare & \texttt{LIST,...} \\
 
-            \texttt{PATH,C} & Richiede il percorso migliore per raggiungere il POI della task corrente a partire dalla posizione attuale. Se C=1 rimuove la task e passa alla successiva & \texttt{PATH,...} \\
+            \texttt{PATH,C} & Richiede il percorso migliore per raggiungere il POI\textsubscript{A} della task\textsubscript{G} corrente a partire dalla posizione attuale. Se C=1 rimuove la task\textsubscript{G} e passa alla successiva & \texttt{PATH,...} \\
 
             \hline
         \end{tabular}
@@ -128,7 +128,7 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
             \hline
-            \texttt{ADL,P1,P2,…} & Aggiunge una nuova lista di task
+            \texttt{ADL,P1,P2,…} & Aggiunge una nuova lista di task\textsubscript{G}
             \begin{itemize}
 
                 \item P1..: id dei poi che compongono la lista
@@ -155,26 +155,26 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             \hline
             \endhead
 
-            \texttt{MAP,R,C,SEQ} & Nuova planimetria
+            \texttt{MAP,R,C,SEQ} & Nuova planimetria\textsubscript{G}
             \begin{itemize}
                 \item R: num righe
                 \item C: “ colonne
-                \item SEQ: sequenza di interi corrispondenti all’enum CellType rappresentanti stati di una cella, indicanti la nuova planimetria, elencati per righe
+                \item SEQ: sequenza di interi corrispondenti all’enum CellType rappresentanti stati di una cella, indicanti la nuova planimetria\textsubscript{G}, elencati per righe
             \end{itemize}
             & \texttt{MAP,...} \\
 
-            \texttt{CELL,X,Y,A[,T,NAME]} & Modifica una cella, la parte tra [ ] è presente solo in caso di POI
+            \texttt{CELL,X,Y,A[,T,NAME]} & Modifica una cella, la parte tra [ ] è presente solo in caso di POI\textsubscript{A}
             \begin{itemize}
                 \item X e Y riga e colonna della matrice
 
                 \item A: numero rappresentante l'azione  da intraprendere, corentemente con CellType
             \end{itemize}
 
-            Solo nel caso di POI:
+            Solo nel caso di POI\textsubscript{A}:
             \begin{itemize}
-                \item T: tipo di POI secondo PoiType
+                \item T: tipo di POI\textsubscript{A} secondo PoiType
 
-                \item NAME: stringa di caratteri da associare al POI
+                \item NAME: stringa di caratteri da associare al POI\textsubscript{A}
             \end{itemize}
             & \texttt{CELL,...} \\
 
@@ -235,20 +235,20 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
             \hline
-            \texttt{MAP,R,C,SEQ} & Indica la planimetria
+            \texttt{MAP,R,C,SEQ} & Indica la planimetria\textsubscript{G}
             \begin{itemize}
                 \item R e C: numero di righe e colonne
 
-                \item SEQ: sequenza di interi corrispondenti all’enum CellType rappresentanti stati di una cella, indicanti la nuova planimetria, elencati per righe
+                \item SEQ: sequenza di interi corrispondenti all’enum CellType rappresentanti stati di una cella, indicanti la nuova planimetria\textsubscript{G}, elencati per righe
             \end{itemize}
             & --\\
-            \texttt{POI,N,X,Y,T,ID,NAME} & Rappresenta tutti i poi, la parte da X in poi si ripete per ogni POI
+            \texttt{POI,N,X,Y,T,ID,NAME} & Rappresenta tutti i poi, la parte da X in poi si ripete per ogni POI\textsubscript{A}
             \begin{itemize}
-                \item N: num totale POI
+                \item N: num totale POI\textsubscript{A}
 
                 \item X,Y e T posizione nella matrice e tipo secondo PoiType
 
-                \item ID e NAME: rispettivamente identificativo e nome del POI
+                \item ID e NAME: rispettivamente identificativo e nome del POI\textsubscript{A}
             \end{itemize}
             & -- \\
 
@@ -272,9 +272,9 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             Ad esso possono seguire ulteriori comandi o risposte a comandi precedente, secondo la sintassi generale per cui separati da ';'
             & \texttt{POS,...} \\
 
-            \texttt{LIST,ID1,ID2…} & Invia lista di task assegnate. ID1.. sono gli id dei POI da raggiungere & -- \\
+            \texttt{LIST,ID1,ID2…} & Invia lista di task\textsubscript{G} assegnate. ID1.. sono gli id dei POI\textsubscript{A} da raggiungere & -- \\
 
-            \texttt{PATH,SEQ} & Invia il percorso per raggiungere il prossimo POI, composto da mosse successive secondo Move & -- \\
+            \texttt{PATH,SEQ} & Invia il percorso per raggiungere il prossimo POI\textsubscript{A}, composto da mosse successive secondo Move & -- \\
 
             \texttt{STOP,N} & Richiede lo stop immediato del muletto per N istanti, che verranno contati alle ricezioni dei futuri ALIVE. Se N=0 stop indefinito fino alla ricezione di \texttt{START}. & -- \\
             \texttt{START} & Consente ad un muletto fermato a tempo indeterminato di ripartire & -- \\
@@ -305,13 +305,13 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             Se l'invio di questo fallisce, l'utente viene considerato disconnesso.
             & -- \\
 
-            \texttt{LIST,IDF,N,IDP1,IDP2…} & Indica la lista di task presa in carico da un muletto
+            \texttt{LIST,IDF,N,IDP1,IDP2…} & Indica la lista di task\textsubscript{G} presa in carico da un muletto
             \begin{itemize}
                 \item IDF: id del muletto a cui ci si sta riferendo
 
-                \item N: numero di task prese in carico
+                \item N: numero di task\textsubscript{G} prese in carico
 
-                \item IDP1…: sequenza di id dei POI da raggiungere
+                \item IDP1…: sequenza di id dei POI\textsubscript{A} da raggiungere
             \end{itemize}
             & -- \\
 
@@ -332,9 +332,9 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             \rowcolorhead
             \headertitle{Comando} & \headertitle{Descrizione} & \headertitle{Risposta} \\
             \hline
-            \texttt{ADL,OK,ID} & Conferma aggiunta nuova lista di task. ID indica l'identificativo della nuova lista & -- \\
+            \texttt{ADL,OK,ID} & Conferma aggiunta nuova lista di task\textsubscript{G}. ID indica l'identificativo della nuova lista & -- \\
 
-            \texttt{ADL,FAIL,MSG} & Segnala errore nella creazione di una nuova lista di task. & -- \\
+            \texttt{ADL,FAIL,MSG} & Segnala errore nella creazione di una nuova lista di task\textsubscript{G}. & -- \\
             \multicolumn{3}{|c|}{Funzionamento analogo per \texttt{RML}}\\
 
 
@@ -414,7 +414,7 @@ POS,X,Y,DIR & posizione attuale del muletto, considerando la mappa come una matr
 \end{itemize}
 
 & -- \\
-LIST & richiede nuova lista di task da completare & LIST... \\
+LIST & richiede nuova lista di task\textsubscript{G} da completare & LIST... \\
 
 
 
