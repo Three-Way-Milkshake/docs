@@ -68,19 +68,20 @@
     	Chi dovrà redigere il verbale dovrà:
     	\begin{enumerate}
     		\item nel foglio \textit{Durata Riunioni - Dati} inserire la data ed i tempi prevista ed effettivi  sotto \textbf{Durata riunioni interne / esterne};
-    		\item Creare un branch feature/<data-iso>\_verbale\_<T>\_<n>, dove:
+    		\item creare un branch feature/<data-iso>\_verbale\_<T>\_<n>, dove:
             \begin{enumerate}
                 \item \textbf{data-iso} è la data di svolgimento della riunione;
                 \item \textbf{T} indica il tipo, che può essere quindi interno o esterno;
                 \item \textbf{n} il numero progressivo nella sua categoria;
             \end{enumerate}
-    		\item Quando finito, oltre a settare tempi come per task\textsubscript{G} normali, controllare file in \url{https://threewaymilkshake.atlassian.net/wiki/spaces/VER/pages/138412040/Sequenza+Stesura+e+Verifica+verb} e:
+    		\item Terminata la stesura, oltre a settare tempi come per le task\textsubscript{G} normali, controllare la wiki \textsc{Sequenza Verbali} su Confluence e:
     		\begin{itemize}
-    			\item Spuntare la propria box;
-    			\item Una volta che la task\textsubscript{G} è in toVerify con l’assignee cancellato (si cancella da solo tramite automazione) assegnare a chi tocca la verifica.
+    			\item spuntare la propria box;
+    			\item una volta che la task\textsubscript{G} è in toVerify con l’assignee cancellato (si cancella da solo tramite automazione) assegnare a chi tocca la verifica;
     		\end{itemize}
-    		\item Spostare note su Confluence → Trascritti.
+    		\item spostare note su Confluence → Trascritti.
     	\end{enumerate}
+        Il verificatore terminato il suo lavoro dovrà aprire una pull request del branch relativo al verbale con develop come base.
 
 \subsection{I ruoli di progetto}
     La suddivisione in ruoli è necessaria per favorire la parallelizzazione e distribuzione del lavoro e delle responsabilità.
