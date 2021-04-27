@@ -1,0 +1,3 @@
+\subsection{Implementare tipi di persistenza alternativi}
+Le interfacce \texttt{UserDao}, \texttt{ForklistDao} e \texttt{MapDao} forniscono i contratti sulla persistenza di utenti, muletti e mappa. Per implementare un nuovo tipo di persistenza bisogna creare una classe, implementando una di questa 3 interfacce, in base alla tipologia, e implementare i metodi richiesti dall'interfaccia.
+Similmente all'algoritmo di \texttt{pathfinding}, per settare questo tipo di persistenza bisogna passare per la configurazione Spring, per la gestione delle \textit{dependency injection}.

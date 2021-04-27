@@ -1,0 +1,119 @@
+\documentclass[a4paper]{article}
+
+\input{../../../../latex/package.tex}
+\input{config/titlepage_input.tex} % modifica questo file
+\makeindex
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    hyperfootnotes=false
+}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\usepackage{pgf-pie}
+\usepackage{ragged2e}
+\usepackage[section]{placeins} %in teoria evita che elementi tipo tabelle rompano il flow e vadano in sezioni dopo rispetto a dove dichiarate (al momento semrba funzionare)
+\usepackage{caption}
+
+
+\setlength{\columnseprule}{1pt}
+\newcommand{\group}{Three Way Milkshake}
+\newcommand{\pparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+\makeatletter
+\renewcommand\subparagraph{%
+    \@startsection {subparagraph}{5}{\z@ }{3.25ex \@plus 1ex
+        \@minus .2ex}{-1em}{\normalfont \normalsize \bfseries }}%
+\makeatother
+
+\begin{document}
+	\input{../../../../latex/titlepage.tex}
+	\pagebreak
+
+	% Registro delle modifiche
+	\input{../../../../latex/changelog.tex}
+	\input{config/changelog_input.tex} % modifica questo file
+	%\end{longtable}
+	\pagebreak
+
+	% indice
+	{
+        \hypersetup{linkcolor=black}
+        \tableofcontents
+        \pagebreak
+
+        % indice delle figure
+        \listoffigures
+        \pagebreak
+
+        % indice delle tabelle
+        \listoftables
+        \pagebreak
+    }
+
+	\input{res/sections/00_templateTabelle.tex} % file con template tabelle con macro
+
+
+	% contenuto del documento, ogni sezione in un file
+	\input{res/sections/01_introduzione.tex} %@Tex
+	\pagebreak
+
+	\input{res/sections/02_tecnologie_e_librerie.tex} %@Simone - intro
+
+	\input{res/sections/02.1_tecnologie_e_librerie_server.tex} %@Simone
+
+	\input{res/sections/02.2_tecnologie_e_librerie_client.tex} %@TeamFE
+
+	\input{res/sections/02.3_tecnologie_e_librerie_VCS.tex} %@Gregg - fatto
+
+	\pagebreak
+
+
+	\input{res/sections/03_Setup.tex} %TODO
+	\pagebreak
+
+
+	\input{res/sections/04_testing.tex} %@Alberto
+
+	\input{res/sections/04.1_testing_server.tex} %@Alberto (aiuto di teamBE)
+
+	\input{res/sections/04.2_testing_client.tex} %@Alberto (aiuto di teamFE)
+
+	\pagebreak
+
+
+	\input{res/sections/05_architettura.tex} %@Simone - %Intro
+
+	\input{res/sections/05.1_architettura_server.tex} %@Simone
+
+	\input{res/sections/05.2_architettura_client.tex} %@TeamFE
+
+	\input{res/sections/05.3_architettura_comunicazione.tex} %@Gregg - Intro - fatto
+
+	\input{res/sections/05.3.1_architettura_comunicazione_diagsequenza.tex} %@Alberto
+
+	\input{res/sections/05.3.2_architettura_comunicazione_protocollo.tex} %@Gregg
+	\pagebreak
+
+    %\begin{comment}
+        	\input{res/sections/06_estensione.tex} %Tex - intro
+
+        \input{res/sections/06.1_estensione_path_finding.tex} %@Gregg
+
+        \input{res/sections/06.2.1_estensione_utenti_server.tex} %@Gregg
+
+        \input{res/sections/06.2.2_estensione_utenti_client.tex} %@TeamFE
+
+        \input{res/sections/06.3_estensione_persistenza.tex} %@Gregg
+
+        \input{res/sections/06.4_estensione_collisioni.tex} %@Simone
+        \pagebreak
+    %\end{comment}
+
+
+
+\end{document}
