@@ -60,6 +60,7 @@
         \pparagraph{Consegna e completamento}
             Il fornitore dovrà consegnare il prodotto in accordo con quanto specificato nel contratto. A seguito della consegna del prodotto, il gruppo \group{}  non si farà carico delle mansioni di supporto ed assistenza.
 
+\clearpage
 \subsection{Sviluppo}
 \label{sviluppo}
     \subsubsection{Scopo}
@@ -154,9 +155,45 @@
                 \end{itemize}
                 Si dovranno indicare le tecnologie che si andranno ad utilizzare, descrivendo il loro impiego e le motivazioni che hanno portato alla loro scelta.
         \pparagraph{Codifica}
-            Qui verranno definite le norme che i programmatori dovranno seguire, di modo da:
+            Qui si definiscono le norme che i programmatori dovranno seguire, di modo da:
              \begin{itemize}
                  \item perseguire: leggibilità, uniformità e consistenza;
                  \item agevolare: verifica, validazione e manutenzione.
              \end{itemize}
+             \ssubparagraph{Convenzioni}
+             Per uniformare lo stile di codifica all'interno del gruppo si seguono le linee guida di Google per i vari linguaggi adottati:
+             \begin{itemize}
+                 \item java: \\\url{https://google.github.io/styleguide/javaguide.html};
+                 \item javascript: \\\url{https://google.github.io/styleguide/jsguide.html};
+                 \item typescript: \\\url{https://google.github.io/styleguide/tsguide.html};
+                 \item JSON: \\\url{https://google.github.io/styleguide/jsoncstyleguide.xml};
+                 \item HTML/CSS: \\\url{https://google.github.io/styleguide/htmlcssguide.html}.
+             \end{itemize}
+
+            \ssubparagraph{Strumenti}
+            Viene adottato l'editor di testo Visual Studio Code \footnote{Documentazione VS Code: \url{https://code.visualstudio.com/docs}} in quanto molto leggero ma allo stesso tempo ricco e potente grazie all'ampio ventaglio di estensioni e plugin a disposizione. Inoltre è ugualmente disponibile per Linux, MacOS e Windows.\\
+            Per il rispetto delle regole sopracitate e per automatizzare la formattazione uniforme del codice si adottano gli strumenti:
+            \begin{itemize}
+                \item spotless per java, configurabile come plugin gradle:
+                    \subitem -- \url{https://github.com/diffplug/spotless/tree/master/plugin-gradle};
+                \item prettier per tutti gli altri linguaggi, installabile ed utilizzabile tramit npm:
+                    \subitem -- \url{https://prettier.io/docs/en/index.html}.
+            \end{itemize}
+
+
+
+
+
+
+
+
     %\subsubsection{Strumenti}
+
+
+
+
+
+
+
+
+
