@@ -1,0 +1,49 @@
+\section{Verbale della riunione}
+
+\subsection{Modifica workflow dei verbali, pull request dopo la verifica}
+Abbiamo deciso di modificare il workflow aggiungendo una \textbf{fase di pull request} per integrare i verbali al ramo principale.
+Prima questa fase si faceva lo stesso ma non faceva parte del workflow del ticket del verbale, ma si creava un nuovo task di approvazione e inclusione nel branch principale del verbale.
+Dobbiamo inoltre modificare la sezione relativa delle norme.
+Workflow:
+\begin{itemize}
+	\item fine verbale;
+	\item assegnare l'approvazione al prossimo componente relativamente all'adeguato foglio su cofluence, relativo alla stesura dei verbali;
+	\item compilare l'approvazione con  frontespizio e changelog con \textbf{approvingTable};
+	\item vado nel branch del verbale e creo una pull request, per unire il branch del verbale al ramo principale (\textbf{preferibile:} assegnare a Nicolò il task di gestire le pull request dei verbali).
+	
+\end{itemize}
+\subsection{Discussione su modifiche per il PdQ}
+Abbiamo discusso cosa fare riguardo l'incremento del \textsc{Piano di Qualifica}, e abbiamo identificato alcuni punti da migliorare:
+\begin{itemize}
+	\item abbassare il limite minimo della metrica REI a 0.2;
+	\item abbassare il limite minimo della metrica RTPI a 0.14;
+	\item aggiornare appendice B, sezione 1 con considerazioni sul cruscotto più dettagliate e divise per fasi;
+	\item aggiornare appendice C, sezione 1, aggiungendo altri problemi incontrati e suddividendo per fasi;
+	\item aggiornare appendice C, sezione 2, integrando il ruolo programmatore;
+	\item aggiornare appendice C, sezione 3, aggiungendo tutti gli altri strumenti utilizzati.
+\end{itemize}
+
+\subsection{Discussione su come procedere con il design}
+Dobbiamo contattare il proponente, probabilmente attraverso un meeting telematico, per chiarire alcuni dubbi sui design pattern del nostro applicativo.
+Abbiamo deciso di proseguire con il design creando i vari diagrammi, e ci siamo suddivisi il lavoro:
+\begin{itemize}
+	\item diagrammi di classe relativi a Java: \textbf{Greggio Nicolò} e \textbf{De Renzis Simone};
+	\item diagrammi di classe relativi a NodeJS: \textbf{Tessari Andrea};
+	\item diagrammi di classe relativi a Angular: \textbf{Chiarello Sofia} e \textbf{Zuccolo Giada};
+	\item diagrammi dei package: \textbf{De Renzis Simone};
+	\item diagrammi di attività: \textbf{Crivellari Alberto};
+	\item diagrammi di sequenza: \textbf{Crivellari Alberto}.
+\end{itemize}
+
+\subsection{Discussione su come procedere con il PoC}
+Abbiamo riscontrato alcuni aspetti da migliorare o aggiungere al nostro applicativo:
+\begin{itemize}
+	\item implementare il login;
+	\item modificare la planimetria, ad esempio a magazzino fermo;
+	\item implementare la guida manuale;
+	\item gestire la collisione con muri e ostacoli;
+	\item rivedere l'algoritmo pathfinding per i sensi di percorrenza;
+	\item implementare interfaccia aggiunta dei task;
+	\item capire nuove tecnologie da implementare, ad esempio secure communication e docker;
+	\item sistemare \textbf{service} di angular.
+\end{itemize}
