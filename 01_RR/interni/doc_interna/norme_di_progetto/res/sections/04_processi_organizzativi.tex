@@ -23,7 +23,10 @@
         Il gruppo adotta \href{https://www.atlassian.com/software/jira}{Jira} per la gestione dei compiti, così da avere:
         \begin{itemize}
             \item cruscotto\textsubscript{G} di lavoro che mostri lo stato di ogni compito:
-                \subitem -- ogni task\textsubscript{G} ha diversi campi oltre al nome (descrizione, data di scadenza, assegnatari, eventuali sottotask), comprende una sezione \textit{history} che raccoglie tutte le modifiche avvenute sulla stessa, una sezione \textit{comments} che raccoglie commenti apportati manualmente o automaticamente importati dagli \textit{smart commits} ed una sezione per il tracciamento del tempo, nel quale si può impostare un tempo stimato e tracciare quello effettivo mano a mano che si prosegue;
+            \begin{itemize}
+                \item ogni task\textsubscript{G} ha diversi campi oltre al nome (descrizione, data di scadenza, assegnatari, eventuali sottotask), comprende una sezione \textit{history} che raccoglie tutte le modifiche avvenute sulla stessa, una sezione \textit{comments} che raccoglie commenti apportati manualmente o automaticamente importati dagli \textit{smart commits} ed una sezione per il tracciamento del tempo, nel quale si può impostare un tempo stimato e tracciare quello effettivo mano a mano che si prosegue;
+            \end{itemize}
+
             \item integrazione con Confluence, essendo entrambi prodotti di \href{https://www.atlassian.com/}{Atlassian};
             \item automazioni per azioni con gli \textit{smart commits};
             \item automazioni di notifiche su Slack.
@@ -36,14 +39,14 @@
             \caption{Diagramma degli stati e delle transizioni del workflow}
         \end{figure}
             Come si può vedere dall'immagine, il workflow di task\textsubscript{G} e sottotask è stato configurato di modo che ci siano delle precise transizioni da uno stato all'altro e che solo quelle siano permesse. I nomi delle transizioni sulle frecce corrispondono ai comandi da usare nella sintassi degli smart commit\textsubscript{G}. Maggiori dettagli si trovano nella wiki\textsubscript{G} \textsc{Git, GitHub \& Jira}.
-        \pparagraph{Google Sheet}
-        Si fa uso del foglio elettronico di Google Sheets per tenere traccia di tutte le informazioni relative alle metriche usate nel \textsc{Piano di Qualifica}. Contiene dati essenziali al controllo dello svolgimento del progetto\textsubscript{G}, come il tempo per ogni lavoro individuale svolto dal singolo soggetto o il tempo effettivo e preventivato di una specifica riunione. Parte di questo foglio è stato bloccato in maniera tale da favorire l'inserimento dei soli dati da parte dei componenti del gruppo.
+        \pparagraph{Google Sheets}
+        Si fa uso dei fogli di calcolo Google Sheets per tenere traccia di tutte le informazioni relative alle metriche usate nel \textsc{Piano di Qualifica}. Contiene dati essenziali al controllo dello svolgimento del progetto\textsubscript{G}, come il tempo per ogni lavoro individuale svolto dal singolo soggetto o il tempo effettivo e preventivato di una specifica riunione. Parte di questo foglio è stato bloccato in maniera tale da favorire l'inserimento dei soli dati da parte dei componenti del gruppo ed evitare modifiche accidentali.
 
         \pparagraph{Google Sites}
-        Collegato direttamente con i grafici del cruscotto\textsubscript{G} presente in Google Sheets, il sito interattivo creato tramite Google Sites permette di avere una rapida visualizzazione dell'avanzamento del progetto\textsubscript{G}. Questo sito, diviso in periodi, propone delle "fotografie" ritraenti degli specifici grafici utili a verificare velocemente metriche essenziali del \textsc{Piano di Qualifica} e la loro variazione tra periodi diversi.
+        Collegato direttamente con i grafici del cruscotto\textsubscript{G} presenti in Google Sheets, il sito interattivo creato tramite Google Sites permette di avere una rapida visualizzazione dell'avanzamento del progetto\textsubscript{G}. Questo sito, diviso in periodi, propone delle "fotografie" ritraenti degli specifici grafici utili a verificare velocemente metriche essenziali del \textsc{Piano di Qualifica} e la loro variazione tra periodi diversi.
 
         \pparagraph{Google Drive}
-        Viene utilizzato uno spazio Google Drive per contenere tutti i file utili al gruppo, come presentazioni, materiale utile alla comprensione delle tecnologie da utilizzare, un foglio elettronico contenente le varie metriche per \textsc{Piano di Qualifica} e diagrammi \href{https://drawio-app.com/}{Draw.io}
+        Viene utilizzato uno spazio Google Drive per contenere tutti i file utili al gruppo, come presentazioni, materiale utile alla comprensione delle tecnologie da utilizzare, un foglio elettronico contenente le varie metriche e diagrammi \href{https://drawio-app.com/}{Draw.io}
 
         \pparagraph{Workflow per l'inizio di una nuova task}
         \begin{enumerate}
@@ -86,17 +89,17 @@
 \subsection{I ruoli di progetto}
     La suddivisione in ruoli è necessaria per favorire la parallelizzazione e distribuzione del lavoro e delle responsabilità.
     \subsubsection{Analista}
-    Hai il compito specifico di comprendere il problema. Ha un ruolo attivo fin quando la comprensione non è adeguata. Adottando un modello incrementale\textsubscript{G}, rimane più a lungo ed evolve. E auspicabile che ci siano più analisti per portare punti di vista diversi e sommare le conoscenze. Redige \textsc{Studio di Fattibilità} ed \textsc{Analisi dei Requisiti}.
+    Ha il compito specifico di comprendere il problema. Ha un ruolo attivo fin quando la comprensione non è adeguata. Adottando un modello incrementale\textsubscript{G}, rimane più a lungo ed evolve. E auspicabile che ci siano più analisti per portare punti di vista diversi e sommare le conoscenze. Redige \textsc{Studio di Fattibilità} ed \textsc{Analisi dei Requisiti}.
     \subsubsection{Progettista}
-    Traduce il problema in una possibile soluzione, descritta come architettura, divisa in parti per agevolare lo sviluppo individuale di queste. Dati i vincoli ha il compito di trovare una buona soluzione. Redige le specifiche tecniche e le definizioni del prodotto.
+    Traduce il problema in una possibile soluzione, descritta come architettura, divisa in parti per agevolare lo sviluppo individuale di queste. Dati i vincoli ha il compito di trovare una buona soluzione. Formalizza le scelte architetturali tramite diagrammi UML.
     \subsubsection{Verificatore}
-    Agisce su ogni attività\textsubscript{G} ed attua una verifica oggettiva, segnalando eventuali problemi secondo il \hyperref[label]{text}{processo rispettivo}.
+    Agisce su ogni attività\textsubscript{G} ed attua una verifica oggettiva, segnalando eventuali problemi secondo il processo rispettivo.
     \subsubsection{Programmatore}
     Implementa in codice ciò che i progettisti hanno definito come design. Un'adeguata divisione dei compiti tra diversi programmatori consente un alto parallelismo, ideale per avanzare rapidamente. Deve svolgere compiti piccoli, che siano facilmente verificabili.
     \subsubsection{Responsabile}
-    Gestisce il controllo sul progetto\textsubscript{G} e tramite un cruscotto\textsubscript{G} di controllo aggiorna, revisiona ed adatta lo svolgimento dei lavori. Elabora piani e scadenze, assegna compiti, approva documenti, gestisce i problemi, redige l'\textsc{Organigramma} ed il \textsc{Piano di Progetto} ed approva l'offerta prima di sottoporla al committente.
+    Gestisce il controllo sul progetto\textsubscript{G} e tramite un cruscotto\textsubscript{G} di controllo aggiorna, revisiona ed adatta lo svolgimento dei lavori. Elabora piani e scadenze, assegna compiti, approva documenti, gestisce i problemi, redige l'organigramma ed il \textsc{Piano di Progetto} ed approva l'offerta prima di sottoporla al committente.
     \subsubsection{Amministratore}
-    Ha in carico la definizione, modifica ed agevolazione del way of working. È un percorso in logica JiT\textsubscript{A} procede per incrementi. È responsabile dell'efficacia e dell'efficienza nell'ambiente di lavoro, gestisce la documentazione, organizza il glossario, collabora alla redazione del \textsc{Piano di Progetto} e redige le \textsc{Norme di Progetto}.
+    Ha in carico la definizione, modifica ed agevolazione del way of working. È un percorso in logica JiT\textsubscript{A} e procede per incrementi. È responsabile dell'efficacia e dell'efficienza nell'ambiente di lavoro, gestisce la documentazione, organizza il glossario, collabora alla redazione del \textsc{Piano di Progetto} e redige le \textsc{Norme di Progetto}.
 
 \subsection{Gestione delle comunicazioni}
     Di seguito si definiscono le procedure e gli strumenti adottati per standardizzare ed organizzare le comunicazioni all'interno ed all'esterno del gruppo.
