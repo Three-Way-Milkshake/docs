@@ -1,3 +1,5 @@
+[![Glossary builder and updater](https://github.com/Three-Way-Milkshake/docs/actions/workflows/glossary.yml/badge.svg?branch=develop)](https://github.com/Three-Way-Milkshake/docs/actions/workflows/glossary.yml)
+
 # docs
 Repository per la documentazione del progetto PORTACS del gruppo Three Way Milkshake per il corso di Ingegneria del Software 2020/2021
 

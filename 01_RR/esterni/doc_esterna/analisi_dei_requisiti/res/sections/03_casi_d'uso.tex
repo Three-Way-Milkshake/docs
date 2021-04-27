@@ -137,16 +137,18 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 \end{figure}
 
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore, responsabile;
+	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:} l'utente intende svolgere delle azioni su uno o più account inseriti;
 	\item 	\textbf{Postcondizioni:} l'utente ha effettuato le azioni che intendeva fare (o di modifica o di eliminazione di uno o più utenti o di visualizzazione della lista di utenti inseriti);
-	\item 	\textbf{Scenario principale:} vengono visualizzate le operazioni che possono essere effettuate per gestire gli account già presenti. Esse sono:
+	\item 	\textbf{Scenario principale:} 
+	l'amministratore preme l'apposito pulsante per la gestione degli account presenti. Il sistema riceve la richiesta e visualizza le operazioni tra cui può scegliere, ovvero:
 	\begin{itemize}
-		\item modificare i dati di un utente (UC3.1);
-		\item eliminare l'account di un utente (UC3.2);
-		\item visualizzare la lista degli utenti presenti (UC3.3).
+		\item UC3.1 - Modifica utente;
+		\item UC3.2 - Eliminazione utente;
+		\item UC3.3 - Visualizzazione lista utenti;
+		\item UC3.4 - Reset password responsabile;
 	\end{itemize}
-	\item 	\textbf{Descrizione:} Ogni account può gestire (e quindi modificare) i propri dati personali mentre solo l'amministratore ha il compito di gestire tutti gli account presenti, quindi di poterli visualizzare in lista e di poterli aggiornare o eliminare.
+	\item 	\textbf{Descrizione:} L'amministratore può gestire (e quindi modificare) i dati personali di tutti gli account registrati.
 \end{itemize}
 
 \subsubsection{UC3.1 - Modifica utente}
@@ -158,18 +160,18 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 \end{figure}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} l'utente intende modificare o il proprio profilo (nel caso del responsabile) o il profilo di un altro utente selezionato (amministratore). In entrambi i casi i profili sono già stati precedentemente registrati all'interno dell'applicativo;
-	\item 	\textbf{Postcondizioni:} l'utente ha cambiato un campo dell'account di un profilo;
-	\item 	\textbf{Scenario principale:} l'utente modifica un campo del profilo;
-	\item 	\textbf{Descrizione:} per modificare un campo dell'account, l'utente deve modificare quello corrente con quello corretto.
+	\item 	\textbf{Precondizioni:} l'amministratore è entrato nella pagina di gestione account già presenti e premuto sul pulsante per la modifica di un utente;
+	\item 	\textbf{Postcondizioni:} l'amminsitratore ha cambiato il profilo di un utente;
+	\item 	\textbf{Scenario principale:} l'amministratore visualizza la lista di utenti e seleziona quello che intende modificare. Il sistema visualizza i dettagli dell'account (nome, cognome)  modificati. Infine conferma le operazioni;
+	\item 	\textbf{Descrizione:} l'amministratore vuole modificare i dati di un account.
 
 \end{itemize}
 
 \paragraph{UC3.1.1 - Modifica nome}
 
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} il server ha reso disponibile il campo del form per modificare il nome dell'utente;
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} è stato reso disponibile il campo per la modifica del nome utente;
 	\item 	\textbf{Postcondizioni:}  l'utente ha compilato il campo con il nome aggiornato;
 	\item 	\textbf{Scenario principale:} l'utente compila il campo del form per aggiornare il nome;
 	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al nome, l'utente aggiorna il valore nel form.
@@ -178,43 +180,22 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 \paragraph{UC3.1.2 - Modifica cognome}
 
 \begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} il server ha reso disponibile il campo del form per modificare il cognome dell'utente;
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} è stato reso disponibile il campo per la modifica del cognome utente;
 	\item 	\textbf{Postcondizioni:} l'utente ha compilato il campo con il cognome aggiornato;
 	\item 	\textbf{Scenario principale:} l'utente compila il campo del form relativo al cognome da aggiornare;
 	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo al cognome, l'utente aggiorna il valore nel form.
 
 \end{itemize}
 
-\paragraph{UC3.1.3 - Modifica password}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore, responsabile;
-	\item 	\textbf{Precondizioni:} il server ha reso disponibile il campo del form per modificare la password dell'utente;
-	\item 	\textbf{Postcondizioni:} l'utente ha compilato il campo con la password aggiornata;
-	\item 	\textbf{Scenario principale:} l'utente compila il campo del form relativo alla password da aggiornare;
-	\item 	\textbf{Descrizione:} per effettuare la modifica del campo relativo alla password, l'utente aggiorna il valore nel form.
-
-\end{itemize}
-
-\paragraph{UC3.1.4 - Reset password responsabile}
-
-\begin{itemize}
-	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} il server ha reso disponibile la visualizzazione della lista dei responsabili, nella quale l'amministratore può resettare la password;
-	\item 	\textbf{Postcondizioni:} il server riporta un messaggio di conferma del reset della password del responsabile specificato;
-	\item 	\textbf{Scenario principale:} l'amministratore deve segnalare il reset della password al server tramite un bottone e il server imposta al responsabile indicato una password standard e manda un messaggio di conferma, contenente anche quest'ultima password, all'amministratore. Sarà poi compito del responsabile modificare la sua password (UC3.1.3) a suo piacimento, dopo aver fatto il login con la nuova password standard;
-	\item 	\textbf{Descrizione:} un responsabile può perdere o dimenticare la propria password di accesso. L'amministratore quindi dovrà aver a disposizione un sistema che permetta di resettare la password di un certo responsabile.
-
-\end{itemize}
 
 \subsubsection{UC3.2 - Elimina utente}
 
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
-	\item 	\textbf{Precondizioni:} l'amministratore intende eliminare il profilo dell'utente selezionato;
+	\item 	\textbf{Precondizioni:} l'amministratore ha premuto l'apposito pulsante per l'eliminazione di un utente;
 	\item 	\textbf{Postcondizioni:} è stato eliminato dal server l'account dell'utente selezionato;
-	\item 	\textbf{Scenario principale:} l'amministratore preme il pulsante apposito per l'eliminazione dell'account;
+	\item 	\textbf{Scenario principale:} l'amministratore visualizza la lista di tutti gli utenti registrati nel sistema. Seleziona l'account desiderato, il sistema visualizza un messaggio di conferma per l'eliminazione. L'attore quindi conferma tramite l'apposito bottone; 
 	\item 	\textbf{Descrizione:} può essere necessario eliminare l'account di un utente.
 \end{itemize}
 
@@ -223,9 +204,20 @@ Il server poi ritornerà un codice identificativo e una password standard, con i
 \begin{itemize}
 	\item 	\textbf{Attori primari:} amministratore;
 	\item 	\textbf{Precondizioni:} l'amministratore vuole vedere la lista dei responsabili presenti nel server;
-	\item 	\textbf{Postcondizioni:} l'amministratore può vedere una lista con tutti i responsabili registrati nel server;
-	\item 	\textbf{Scenario principale:} l'amministratore vuole vedere la lista dei responsabili presenti nel server con tutti i loro dati pubblici (quindi nome, cognome e codice identificativo);
+	\item 	\textbf{Postcondizioni:} l'amministratore preme l'apposito pulsante per la visualizzazione della lista di utenti;
+	\item 	\textbf{Scenario principale:} l'amministratore visualizza l'intera lista di utenti;
 	\item 	\textbf{Descrizione:} può essere necessario da parte dell'amministratore, visualizzare la lista di tutti i responsabili inseriti e i loro relativi dati pubblici.
+\end{itemize}
+
+\paragraph{UC3.4 - Reset password responsabile}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} amministratore;
+	\item 	\textbf{Precondizioni:} l'amministratore ha premuto il pulsante per il reset password;
+	\item 	\textbf{Postcondizioni:} viene resettata la password di un responsabile e viene visualizzata a video la nuova password di default;
+	\item 	\textbf{Scenario principale:} l'amministratore visualizza la lista completa di responsabili. Seleziona l'utente desiderato. Il sistema viene notificato e rielabora una nuova password che poi stampa a video all'amministratore;
+	\item 	\textbf{Descrizione:} un responsabile può perdere o dimenticare la propria password di accesso. L'amministratore quindi dovrà aver a disposizione un sistema che permetta di resettare la password di un certo responsabile.
+
 \end{itemize}
 
 \subsection{UC4 - Gestione task}
@@ -824,7 +816,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} la guida inserita è quella manuale;
 	\item 	\textbf{Postcondizioni:} il sistema controlla il movimento del muletto;
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per il passaggio a guida automatica;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per il passaggio a guida automatica; il sistema cambia lo stato di guida e pilota autonomamente l'unità;
 	\item 	\textbf{Descrizione:} i muletti possono essere guidati sia in modo automatico dal sistema che manuale, in base alle esigenze dell'operatore.
 \end{itemize}
 
@@ -833,7 +825,7 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} il sistema centrale controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} l'operatore guida il muletto manualmente; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per il passaggio a guida manuale;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per il passaggio a guida manuale; il sistema rende disponibile l'interfaccia per guidare l'unità;
 	\item 	\textbf{Descrizione:} i muletti possono essere guidati sia in modo automatico dal sistema che manuale, in base alle esigenze dell'operatore.
 \end{itemize}
 
@@ -842,8 +834,8 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} il muletto si sta muovendo all'interno della mappa;
 	\item 	\textbf{Postcondizioni:} un evento eccezionale è stato segnalato al sistema centrale; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la segnalazione di un evento eccezionale;
-	\item 	\textbf{Descrizione:} durante la guida possono verificarsi degli eventi eccezionali per esempio collisioni, ingorghi o malfunzionamenti del muletto. L'operatore deve segnalarli e il sistema centrale ha il compito di propagarli al responsabile e all'amministratore affinché possano essere gestiti.
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la segnalazione di un evento eccezionale; il sistema riceve l'informazione che viene visualizzata dall'amministratore;
+	\item 	\textbf{Descrizione:} durante la guida possono verificarsi degli eventi eccezionali per esempio collisioni, ingorghi o malfunzionamenti del muletto. L'operatore deve segnalarli e il sistema centrale ha il compito di propagarli all'amministratore affinché possano essere gestiti.
 
 \end{itemize}
 
@@ -861,51 +853,40 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato un movimento;
 	\item 	\textbf{Scenario principale:} il sistema rende disponibile l'interfaccia per i movimenti del muletto, ossia le quattro frecce direzionali e un pulsante di start/stop. L'operatore può eseguire le seguenti operazioni:
 	\begin{itemize}
-		\item movimento in avanti (UC1.4.1); 
-		\item rotazione di 180 gradi (UC1.4.2);
-		\item rotazione di 90 gradi in senso orario (UC1.4.3);
-		\item rotazione di 90 gradi in senso antiorario (UC1.4.4);
-		\item fermata (UC1.4.5);
-		\item partenza (UC1.4.6);
+		\item rotazione di 180 gradi (UC1.4.1);
+		\item rotazione di 90 gradi in senso orario (UC1.4.2);
+		\item rotazione di 90 gradi in senso antiorario (UC1.4.3);
+		\item fermata (UC1.4.4);
+		\item partenza (UC1.4.5);
 	\end{itemize}
 	\item 	\textbf{Descrizione:} i muletti possono intraprendere degli spostamenti all'interno della mappa per raggiungere i vari POI. Essi possono essere controllati manualmente dall'operatore.
 \end{itemize}
 
 
-\paragraph{UC11.4.1 - Movimento in avanti}
-\begin{itemize}
-	\item 	\textbf{Attori primari:} operatore;
-	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
-	\item 	\textbf{Postcondizioni:} il muletto ha effettuato uno spostamento in avanti rispetto alla sua direzione; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per lo spostamento in avanti dell'unità;
-	\item 	\textbf{Descrizione:} il muletto si sta spostando in avanti, rispetto alla propria direzione, all'interno della mappa.
-
-\end{itemize}
-
-\paragraph{UC11.4.2 - Rotazione di 180 gradi}
+\paragraph{UC11.4.1 - Rotazione di 180 gradi}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato una rotazione di 180 gradi; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 180 gradi;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 180 gradi; il sistema riceva lo spostamento; il muletto nell'interfaccia dell'operatore viene girato;
 	\item 	\textbf{Descrizione:} l'operatore intende invertire la rotta del muletto, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
-\paragraph{UC11.4.3 - Rotazione di 90 gradi in senso orario}
+\paragraph{UC11.4.2 - Rotazione di 90 gradi in senso orario}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato rotazione di 90 gradi in senso orario; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 90 gradi in senso orario;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 90 gradi in senso orario; l'unità effettua la rotazione;
 	\item 	\textbf{Descrizione:} l'operatore intende far fare al muletto una rotazione di 90 gradi in senso orario, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
-\paragraph{UC11.4.4 - Rotazione di 90 gradi in senso antiorario}
+\paragraph{UC11.4.3 - Rotazione di 90 gradi in senso antiorario}
 \begin{itemize}
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto;
 	\item 	\textbf{Postcondizioni:} il muletto ha effettuato rotazione di 90 gradi in senso antiorario; 
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 90 gradi in senso antiorario;
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante apposito per la rotazione dell'unità di 90 gradi in senso antiorario; l'unità effettua la rotazione;
 	\item 	\textbf{Descrizione:} l'operatore intende far fare al muletto una rotazione di 90 gradi in senso antiorario, rispetto alla propria direzione, all'interno della mappa.
 \end{itemize}
 
@@ -915,8 +896,8 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Attori primari:} operatore;
 	\item 	\textbf{Precondizioni:} l'operatore controlla il movimento del muletto, esso è in azione e si sta muovendo; Il sistema rende disponibile il pulsante di stop;
 	\item 	\textbf{Postcondizioni:} il muletto è fermo all'interno della mappa o in base;
-	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante di stop;
-	\item 	\textbf{Descrizione:} quando il muletto è in movimento è possibile fermarne il moto. Per ripartire sarà necessario azionare il pulsante di partenza (UC11.4.6).
+	\item 	\textbf{Scenario principale:} l'operatore preme il pulsante di stop; l'unità si ferma;
+	\item 	\textbf{Descrizione:} quando il muletto è in movimento è possibile fermarne il moto. Per ripartire sarà necessario azionare il pulsante di partenza (UC11.4.5).
 \end{itemize}
 
 
@@ -1050,4 +1031,53 @@ Terminata la modifica, l'amministratore salva tramite l'apposito pulsante di con
 	\item 	\textbf{Scenario principale:} l'unità una volta raggiunto un POI e soddisfatto la relativa task, richiede al sistema il percorso per raggiungere il prossimo punto di interesse in lista; tale percorso è un insieme di mosse che determinano gli spostamenti o il cambio di direzioni che l'unità dovrà intraprendere.
 	\item 	\textbf{Descrizione:} il sistema calcola il percorso ottimale per raggiungere il prossimo POI per soddisfare la nuova task. Questo percorso deve essere inviato all'unità che effettuerà i movimenti descritti.
 	
+\end{itemize}
+
+\subsection{UC17 - Modifica proprio account}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.52]{res/images/uc17.png}
+	\caption{UC17 - Modifica proprio account}
+\end{figure}
+
+\begin{itemize}
+	\item 	\textbf{Attori primari:} utente autenticato;
+	\item 	\textbf{Precondizioni:} l'utente è autenticato nel sistema;
+	\item 	\textbf{Postcondizioni:} viene cambiato il profilo dell'utente;
+	\item 	\textbf{Scenario principale:} l'utente preme l'apposito pulsante per la modifica del proprio account. Il sistema rende disponibile l'interfaccia per la selezione del campo che si intende modificare:
+	\begin{itemize}
+		\item nome;
+		\item cognome;
+		\item password.
+	\end{itemize}
+	A questo punto l'utente conferma le modifiche.
+	\item 	\textbf{Descrizione:} l'utente modifica il proprio account personale.
+\end{itemize}
+
+\subsubsection{UC17.1 - Modifica nome}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} utente autenticato;
+	\item 	\textbf{Precondizioni:} l'utente autenticato ha premuto il pulsante per la modifica dell'account;
+	\item 	\textbf{Postcondizioni:} viene cambiato il nome dell'utente;
+	\item 	\textbf{Scenario principale:} l'utente modifica l'apposito form del proprio nome e conferma.
+	\item 	\textbf{Descrizione:} l'utente modifica il proprio nome.
+\end{itemize}
+
+\subsubsection{UC17.2 - Modifica cognome}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} utente autenticato;
+	\item 	\textbf{Precondizioni:} l'utente autenticato ha premuto il pulsante per la modifica dell'account;
+	\item 	\textbf{Postcondizioni:} viene cambiato il cognome dell'utente;
+	\item 	\textbf{Scenario principale:} l'utente modifica l'apposito form del proprio cognome e conferma.
+	\item 	\textbf{Descrizione:} l'utente modifica il proprio cognome.
+\end{itemize}
+
+\subsubsection{UC17.3 - Modifica password}
+\begin{itemize}
+	\item 	\textbf{Attori primari:} utente autenticato;
+	\item 	\textbf{Precondizioni:} l'utente autenticato ha premuto il pulsante per la modifica dell'account;
+	\item 	\textbf{Postcondizioni:} viene cambiato la password dell'utente;
+	\item 	\textbf{Scenario principale:} l'utente modifica l'apposito form della propria password e conferma.
+	\item 	\textbf{Descrizione:} l'utente modifica la propria password.
 \end{itemize}
