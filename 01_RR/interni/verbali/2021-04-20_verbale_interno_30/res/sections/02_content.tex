@@ -1,19 +1,151 @@
 \section{Verbale della riunione}
 
-\subsection{Login}
-Vedere se usare JAAS.
-
-\subsection{Forklift}
-Discussione su come configurare token e le varie porte fino ad adesso configurate attraverso "process.argv" e "process.env".
-
-\subsection{Admin-responsabile}
-Concretizzare in un'unica componente.\\
-Login effettuato tramite Angular e, in base all'utente, istanziare l'oggetto in Node per gestire le funzionalità necessarie.
-
-\subsection{Docker}
+\subsection{Codifica}
 \begin{itemize}
-	\item Lato client:\\
-	capire con libreria net (quella in uso per la connessione) come operare tramite https e se e come serve il certificato in qualche modo;
-	\item lato server:\\
-	capire e far funzionare; assegnato a Greggio Nicolò.
+	\item FE:
+	\begin{itemize}
+		\item logout;
+		
+		\item registrazione nuovo utente;
+		
+		\item registrazione nuova unità;
+		
+		\item gestione unità già presenti;
+		
+		\item gestione account già presenti;
+		
+		\item evento eccezionale;
+		
+		\item visualizzazione task;
+		
+		\item gestione (aggiunta liste, rimozione liste non prese in carico);
+		
+		\item discussione se usare tecnologia PrimeNG.
+	\end{itemize}
 \end{itemize}
+
+\subsection{Manuale utente}
+	\begin{itemize}
+		\item Introduzione classica;
+		
+		\item requisiti di sistema hardware/software;
+		
+		\item come installare/far partire le varie robe (anche docker);
+		
+		\item funzionalità: dividiamo i 3 attori;
+		\begin{itemize}
+			\item operatore;
+		
+			\item admin;
+		
+			\item manager;
+		\end{itemize}
+		
+		\item glossario built-in minimale.
+	\end{itemize}
+
+\subsection{Manuale manutentore}
+	\begin{itemize}
+		\item Introduzione;
+		
+		\item tecnologie e librerie e framework coinvolti;
+		\begin{itemize}
+		
+		
+		\item server:
+		\begin{itemize}
+		
+		\item java;
+		
+		\item spring;
+		
+		\item junit;
+		
+		\item mockito;
+		
+		\item gson;
+		
+		\item json;
+		
+		\item docker;
+		
+		\item gradle;
+		
+		\item shadow jar;
+	\end{itemize}
+		
+		\item client:
+		\begin{itemize}
+		
+		\item node.js;
+		
+		\item angular (html, css, js/ts);
+		
+		\item framework primeNG;
+	\end{itemize}
+	\item altro:
+	\begin{itemize}
+		\item scm con git su github;
+		
+		\item build automation con github action;
+	\end{itemize}
+	\end{itemize}
+	\item requisiti di sistema (simil manuale utente);
+	
+	\item installazione componenit (manuale utente);
+	
+	\item test;
+	
+	\item architettura:
+	\begin{itemize}
+	
+	
+	\item diag classi server + loro descrizione ed analisi;
+	\begin{itemize}
+	\item minimal visione complessiva;
+	
+	\item zoom su:
+	\begin{itemize}
+	\item persistence;
+	
+	\item map;
+	
+	\item client;
+	
+	\item connection;
+\end{itemize}
+\end{itemize}
+	\item diag classi client + loro descrizione ed analisi:
+	\begin{itemize}
+	\item resp/admin;
+	
+	\item muletto;
+\end{itemize}
+	\item diagrammi di sequenza:
+	\begin{itemize}
+		\item 2 delle slide + eventualmente altri;
+	\end{itemize}
+\end{itemize}
+	\item come estendere PORTACS:
+	\begin{itemize}
+	
+	\item strategy per l’algoritmo path finding;
+	
+	\item nuovi utenti / nuovi client:
+	\begin{itemize}
+	
+	\item server → estendere User / Client;
+	
+	\item client → nuova cartellaa con codice specifico + usare generic;
+\end{itemize}
+	
+	\item persistenza;
+	
+	\item nuovo handler per collision / ma anche l’intero algoritmo;
+\end{itemize}
+	
+	\item glossario.
+	\end{itemize}
+
+\subsection{Cruscotto}
+Nella verifica del prodotto inserire i test d'unità e l'analisi statica.
