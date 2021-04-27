@@ -1,3 +1,5 @@
+[![Glossary builder and updater](https://github.com/Three-Way-Milkshake/docs/actions/workflows/glossary.yml/badge.svg?branch=develop)](https://github.com/Three-Way-Milkshake/docs/actions/workflows/glossary.yml)
+
 # docs
 Repository per la documentazione del progetto PORTACS del gruppo Three Way Milkshake per il corso di Ingegneria del Software 2020/2021
 
@@ -7,12 +9,13 @@ Repository per la documentazione del progetto PORTACS del gruppo Three Way Milks
 
 ### Documentazione esterna
 
-| Documento                | Google Drive | Github viewer                                                |
-| ------------------------ | ------------ | ------------------------------------------------------------ |
-| Analisi dei Requisiti    | [Apri in drive](https://drive.google.com/file/d/1J4Lqfyr_ZEbYPqtD8X_NhwKWo72ATonj/view?usp=sharing)             | [Apri in Github](01_RR/esterni/doc_esterna/analisi_dei_requisiti/analisi_dei_requisiti.pdf) |
-| Lettera di Presentazione | [Apri in drive](https://drive.google.com/file/d/1C3nJhVJR241nHTMyKqx_Sgu1uY3ZM9-Q/view?usp=sharing)             | [Apri in Github](01_RR/esterni/doc_esterna/lettera_di_presentazione/lettera_di_presentazione.pdf) |
-| Piano di Progetto        | [Apri in drive](https://drive.google.com/file/d/1Czgkr-LlC_mm9bKR0ucdRCSxpf1CCjTs/view?usp=sharing)             | [Apri in Github](01_RR/esterni/doc_esterna/piano_di_progetto/piano_di_progetto.pdf) |
-| Piano di Qualifica       | [Apri in drive](https://drive.google.com/file/d/1s6TZfCuMf4QIur1nriIpXzCPwYWAzikr/view?usp=sharing)             | [Apri in Github](01_RR/esterni/doc_esterna/piano_di_qualifica/piano_di_qualifica.pdf) |
+| Documento                   | Google Drive                                                 | Github viewer                                                |
+| --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Analisi dei Requisiti       | [Apri in drive](https://drive.google.com/file/d/1J4Lqfyr_ZEbYPqtD8X_NhwKWo72ATonj/view?usp=sharing) | [Apri in Github](01_RR/esterni/doc_esterna/analisi_dei_requisiti/analisi_dei_requisiti.pdf) |
+| Lettera di Presentazione    | [Apri in drive](https://drive.google.com/file/d/1C3nJhVJR241nHTMyKqx_Sgu1uY3ZM9-Q/view?usp=sharing) | [Apri in Github](01_RR/esterni/doc_esterna/lettera_di_presentazione/lettera_di_presentazione.pdf) |
+| Piano di Progetto           | [Apri in drive](https://drive.google.com/file/d/1Czgkr-LlC_mm9bKR0ucdRCSxpf1CCjTs/view?usp=sharing) | [Apri in Github](01_RR/esterni/doc_esterna/piano_di_progetto/piano_di_progetto.pdf) |
+| Piano di Qualifica          | [Apri in drive](https://drive.google.com/file/d/1s6TZfCuMf4QIur1nriIpXzCPwYWAzikr/view?usp=sharing) | [Apri in Github](01_RR/esterni/doc_esterna/piano_di_qualifica/piano_di_qualifica.pdf) |
+| Lettera di Presentazione RP | [Apri in drive](https://drive.google.com/file/d/1mrErwhD1so3Z4MSjAOwzQ5KTw44QLu07/view?usp=sharing) | [Apri in Github](01_RR/esterni/doc_esterna/lettera_di_presentazione/lettera_di_presentazione_RP.pdf) |
 
 - [cartella verbali esterni in Github](01_RR/esterni/verbali)
 - [cartella tutti i verbali in Drive](https://drive.google.com/drive/folders/1-qrO8Uq3n6aP4bdzLB5x_sYksJ-doJmZ)

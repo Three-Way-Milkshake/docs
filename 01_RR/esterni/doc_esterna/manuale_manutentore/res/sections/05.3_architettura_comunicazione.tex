@@ -1,0 +1,5 @@
+\clearpage
+\subsection{Comunicazione}
+\label{communication-section}
+
+Le comunicazioni tra client e server avvengono tramite stringhe inviate sui TCPSocket che li connettono, secondo il protocollo descritto alla \S\ \ref{comm-protocol}. La creazione di un socket che viene mantenuto fino alla disconnessione permette di richiedere l'autenticazione di ogni client solo alla connessione, senza bisogno di scambi ulteriori di token o codici di sessioni, in quanto ogni client ha i suoi canali dedicati di input e output per cui si sa sempre a chi si scrive e da chi si legge. Le connessioni all'interno del server sono rappresentate con una classe dedicata, i client poi aggregano un attributo di tale classe: ciò permette di mantenere lo stato di questi anche in caso di disconnessione in quanto verrà distrutto solo l'oggetto connessione, e alla successiva autenticazione del client verrà correttamente abbinato lo stato interno che non avrà subito modifiche se non per l'associazione della nuova connessione.

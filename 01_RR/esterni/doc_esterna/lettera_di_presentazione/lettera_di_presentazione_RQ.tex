@@ -1,0 +1,143 @@
+\documentclass[10pt,stdletter,dateno,sigright]{newlfm}  % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+\usepackage{etoolbox}
+\usepackage{multicol}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+\usepackage{charter} % Use the Charter font for the document text
+\usepackage{eurosym}
+\usepackage{hyperref}
+
+
+
+\newsavebox{\Luiuc}
+\sbox{\Luiuc}{
+    \parbox[b]{1.75in}{
+        \vspace{0.5in}
+        \includegraphics[width=1.9\linewidth]{../../../../latex/images/logoTWM.png}
+    }
+}
+% Company/institution logo at the top left of the page
+
+
+
+
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=0.1in} % Slightly decrease the height of the signature field
+%\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+%\PhrPhone{Phone} % Customize the "Telephone" text
+\PhrEmail{Email} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{Chiarello Sofia \\ Responsabile di Progetto } % Name
+
+\addrfrom{
+    Gruppo: Three Way Milkshake  \\ Corso di Ingegneria del Software AA 2020/2021 \\ Padova, 27 Aprile 2021
+}
+
+
+
+\emailfrom{threewaymilkshake@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{Egregio Prof. Vardanega Tullio, \\ Egregio Prof. Cardin Riccardo,} % Greeting text
+\closeline{Cordiali Saluti} % Closing text
+
+\nameto{Prof. Vardanega Tullio \\ Prof. Cardin Riccardo } % Addressee of the letter above the to address
+\signature{\includegraphics[width=0.5\linewidth]{../../../../latex/images/signatures/sofia.png}}
+\addrto{
+    Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63 \\ 35121 Padova
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+    \begin{newlfm}
+
+        %----------------------------------------------------------------------------------------
+        %	LETTER CONTENT
+        %----------------------------------------------------------------------------------------
+
+        Con la presente, il gruppo Three Way Milkshake intende candidarsi alla Revisione di Qualifica in qualità di fornitori per il progetto
+        \begin{center}
+            \textbf{PORTACS: piattaforma di controllo mobilità autonoma}
+        \end{center}
+        proposto da Sanmarco Informatica.
+
+        Allegati alla presente lettera i documenti che illustrano in dettaglio analisi del prodotto, pianificazione, criteri a garanzia della qualità e manuali per l'utilizzo e mantenimento del prodotto:
+	\begin{multicols}{2}
+        \begin{itemize}
+            \item \textsc{Analisi dei Requisiti v3.0.0;}
+            \item \textsc{Piano di Progetto v3.0.0;}
+            \item \textsc{Glossario }(\href{https://github.com/Three-Way-Milkshake/docs/wiki/Glossario}{\underline{online a questo indirizzo}});
+            \item \textsc{Piano di Qualifica v4.0.0;}
+            \item \textsc{Norme di Progetto v3.0.0;}
+            \item \textsc{Verbale Interno 18} - 10 Marzo 2021;
+            \item \textsc{Verbale Interno 19} - 12 Marzo 2021;
+            \item \textsc{Verbale Interno 20} - 17 Marzo 2021;
+            \item \textsc{Verbale Interno 21} - 18 Marzo 2021;
+            \item \textsc{Verbale Interno 22} - 19 Marzo 2021;
+            \item \textsc{Verbale Interno 23} - 24 Marzo 2021;
+            \item \textsc{Verbale Interno 24} - 29 Marzo 2021;
+            \item \textsc{Verbale Interno 25} - 1 Aprile 2021;
+            \item \textsc{Verbale Interno 26} - 3 Aprile 2021;
+            \item \textsc{Verbale Interno 27} - 10 Aprile 2021;
+            \item \textsc{Verbale Interno 28} - 17 Aprile 2021;
+            \item \textsc{Verbale Interno 29} - 19 Aprile 2021;
+            \item \textsc{Verbale Interno 30} - 20 Aprile 2021;
+            \item \textsc{Verbale Interno 31} - 22 Aprile 2021;
+            \item \textsc{Verbale Esterno 5} - 16 Marzo 2021;
+            \item \textsc{Verbale Esterno 6} - 23 Marzo 2021;
+            \item \textsc{Verbale Esterno 7} - 9 Aprile 2021;
+            \item \textsc{Verbale Esterno 8} - 13 Aprile 2021;
+        \end{itemize}
+    \end{multicols}
+
+
+		\ \\
+
+		Al seguente link, l'organizzazione GitHub del gruppo:
+		\begin{center}
+			\url{https://github.com/Three-Way-Milkshake}
+		\end{center}
+		\
+
+        A fronte delle spese sostenute nei periodi trascorsi, la stima dei costi per la realizzazione del prodotto risulta pari a \textbf{10744 \euro}, come da preventivo a finire \S 7.2.3.2 del \textsc{Piano di Progetto v3.0.0}.
+        \\
+
+        Di seguito \`e riportato l'organigramma del gruppo:
+        \begin{center}
+            \begin{tabular}{l | l}
+                Chiarello Sofia & 1187024
+                \\
+                Crivellari Alberto & 1170913
+                \\
+                De Renzis Simone & 1187510
+                \\
+                Greggio Nicolò & 1193398
+                \\
+                Tessari Andrea & 1188322
+                \\
+                Zuccolo Giada & 1193485
+                \\
+            \end{tabular}
+        \end{center}
+        \ \newline
+        \\Rimaniamo a Vostra completa disposizione per qualsiasi chiarimento;
+        %----------------------------------------------------------------------------------------
+
+    \end{newlfm}
+\end{document}

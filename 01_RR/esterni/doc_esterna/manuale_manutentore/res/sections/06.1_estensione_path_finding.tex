@@ -1,0 +1,4 @@
+\subsection{Algoritmo alternativo per il path finding}
+Si può aggiungere un algoritmo alternativo di path finding, oltre a quello già implementato con una strategia breadth first (in ampiezza).
+Per farlo, bisogna creare una classe che implementi l'interfaccia \texttt{PathfindingStrategy}. Implementando questa interfaccia, viene creata una nuova strategia, e l'unica cosa necessaria da fare è implementare il metodo pubblico \texttt{getPath}, in quanto unico metodo utilizzato dall'esterno, che ritorna il percorso dal punto start a end sulla mappa, fatto di una list di moves (il nostro campo enum).
+La strategia può essere cambiata tramite il metodo \texttt{setStrategy} nella classe \texttt{WareHouseMap} e dunque cambiare quella di default nella configurazione di Spring, oppure si può aggiungere un'operazione per l'amministratore per cambiare quella di default a run-time.

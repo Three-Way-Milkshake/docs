@@ -2,6 +2,7 @@
 
 cd `dirname $0`
 
+
 git clone https://github.com/Three-Way-Milkshake/docs.wiki.git wiki
 cd wiki
 mapfile -t acr < <(more Glossario.md | grep "Glossario dei Termini" -B9999 | grep -E "\*\*.+\*\*" -o | cut -f3 -d '*' ) #save acronyms in acr array
@@ -67,6 +68,9 @@ do
 	     echo "********** latex compilation went wrong. exiting **********"
 	     exit 1
 	fi
+	
+	sleep 1
+	pdflatex -file-line-error -halt-on-error $docName
 
 	#get back for the next doc, if any
 	cd -

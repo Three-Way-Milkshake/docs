@@ -1,0 +1,51 @@
+\documentclass[a4paper]{article}
+
+\input{../../../../latex/package.tex}
+\input{config/titlepage_input.tex} % modifica questo file
+\makeindex
+
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{listings}
+\usepackage{float}
+
+\begin{document}
+	\input{../../../../latex/titlepage.tex}
+	\pagebreak
+
+	% Registro delle modifiche
+	\input{../../../../latex/changelog.tex}
+	\input{config/changelog_input.tex} % modifica questo file
+	\pagebreak
+
+	% indice
+	{
+    	\hypersetup{linkcolor=black}
+    	\tableofcontents
+    	\pagebreak
+
+        % indice delle figure, non ci sono figure
+        \listoffigures
+        \pagebreak
+
+	}
+
+
+	% contenuto del documento, ogni sezione in un file
+	\input{res/sections/01_introduzione.tex}
+	\pagebreak
+
+	\input{res/sections/02_requisiti_di_sistema.tex}
+	\pagebreak
+
+
+	\pagebreak
+	\input{res/sections/04_utilizzo_admin.tex}
+	\pagebreak
+	\input{res/sections/05_utilizzo_manager.tex}
+	\pagebreak
+	\input{res/sections/06_utilizzo_operatore.tex}
+
+	\pagebreak
+	
+\end{document}
