@@ -1,46 +1,47 @@
 \section{Verbale della riunione}
 
-\subsection{Diagrammi FE}
-Sono stati discussi gli aggiustamenti dei diagrammi di classe del front end.
-\\Si è deciso di:
+\subsection{Funzioni critiche}
+\subsubsection{Lato front end}
+Si è discusso riguardo gli aggiornamenti degli aggiustamenti delle funzioni critiche dell'applicativo lato front end.
+\\Risulta da ultimare:
 \begin{itemize}
-	\item non avere a che fare con MVC;
-	\item aggiustare i diagrammi con le ultime modifiche;
-	\item iniziare a fare unit test.
+	\item modifica ed eliminazione dei POI;
+	\item tabella task-muletto in parte alla mappa;
+	\item modifica POI quando si rimuovono righe/colonne dalla mappa.
+\end{itemize}
+Rimane in sospeso la decisione di dove parcheggiare le unità a fine turno, e da dove farle entrare nella mappa ad inizio turno.
+\subsubsection{Test}
+\begin{itemize}
+	\item prettier/eslint da ultimare;
+	\item code coverage: \\lato server per ottenere risultati aggiornati bisogna fare un merge;\\lato client da sistemare l'automazione.
 \end{itemize}
 
-
-\subsection{Diagrammi BE}
-Si è discusso a riguardo di:
+\subsection{Funzioni extra}
+Sono state discusse eventuali funzioni aggiuntive da implementare. L'unica contrassegnata da capire se fare o meno è:
 \begin{itemize}
-	\item \href{https://docs.oracle.com/javase/8/docs/api/java/util/Observer.html}{observer};
-	\item \href{https://docs.oracle.com/javase/8/docs/api/java/util/Observable.html}{observable};
-\end{itemize}
-Sono state eseguite le seguenti modifiche:
-\begin{itemize}
-	\item rimozione delle classi Subject e Observer, per usare java.util.*;
-	\item i singleton diventano bean di Spring;
-	\item rimozione di facade.
-\end{itemize}
-A questo punto è necessario:
-\begin{itemize}
-	\item correggere i diagrammi;
-	\item finire implementazione engine;
-	\item finire implementazione connection \\→ cambiare connection handler/accepter dependency;
-	\item finire implementazione persistenza\\+ capire la differenza tra il pattern chain of responsibility e il pattern pipeline.
+	\item Mettere un hover sui pulsanti di movimento quando in modalità guida automatica.
 \end{itemize}
 
-\subsection{Diagrammi di sequenza}
-Sono stati ricontrollati i diagrammi di sequenza. Dalla discussione è emerso che:
+\subsection{Controllo stato documentazione}
+Sono stati ricontrollati i documenti da presentare e le modifiche da fare su ognuno di essi. 
+\subsubsection{Manuale utente}
 \begin{itemize}
-	\item bisogna riordinare la struttura (frecce che non si sovrappongano e siano squadrate);
-	\item continuare più possibile implementazione collisioni.
+	\item controllare consistenza di quanto precedentemente scritto;
+	\item inserire screen interfaccia manager e admin;
+	\item inserire screen delle nuove funzionalità.	
 \end{itemize}
+\subsubsection{Manuale manutentore}
+Risulta necessario sistemare e ampliare:
+\begin{itemize}
+	\item sezione riguardante installazione di Docker;
+	\item sezione riguardante requisiti hardware;
+	\item sezione riguardante requisiti software;
+	\item sezione riguardante la comunicazione.	
+\end{itemize}
+\subsubsection{Analisi dei requisiti}
+Sistemare versione di Java, cambiando in Java 15.
+\subsubsection{Piano di qualifica}
+Fare un incremento nelle sezioni riguardanti i test e l'appendice riguardante le osservazioni.
+\subsubsection{Piano di progetto}
+Inserire sezioni riguardanti questo periodo.
 
-\subsection{Riorganizzazione presentazione PB}
-In vista della prossima presentazione della PB, si è deciso come ristrutturare le slide. In particolar modo risulta \textbf{necessario ridurre il numero delle slide} della presentazione, perciò si è deciso di:
-\begin{itemize}
-	\item lasciare una sola slide per il FE;
-	\item ridurre al minor numero possibile le slide riguardo i diagrammi di sequenza; 
-	\item rimuovere la slide iniziale e la slide finale dal conteggio; 
-\end{itemize}
