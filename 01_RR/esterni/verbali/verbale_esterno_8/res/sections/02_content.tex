@@ -1,0 +1,33 @@
+\section{Verbale della riunione}
+
+\subsection{Facade}
+    Si è deciso di rimuovere i facade presenti nell'architettura, i quali centralizzavano l'accesso rispettivamente alle liste di client e alla persistenza. Al loro posto si faranno fluire le dipendenze verso le interfacce o classi necessarie direttamente.
+
+\subsection{Singleton}
+    Si è deciso di adottare Spring Boot per la gestione delle dipendenze e risolvere così il problema della gestione manuale dei singleton ed i conseguenti problemi correlati allo unit testing di tali componenti.
+    Questo influenza i componenti:
+    \begin{itemize}
+        \item WarehouseMap;
+        \item UsersList;
+        \item ForkliftsList;
+        \item TasksSequencesList.
+    \end{itemize}
+
+\subsection{Observer}
+    Dopo il confronto con il proponente e la decisione congiunta di adottare Spring Boot per gestire le dipendenze ed eliminare i singleton, non si è rilevata alcuna criticità nel mantenere il pattern observer per la mappa, per cui rimarrà tale.
+
+\subsection{MVC nel client}
+    Il gruppo approfondirà internamente come rivedere l'architettura del client e il pattern dichiarato per sanare la criticità.
+
+\subsection{Ulteriori note}
+    Il proponente ha sollevato i seguenti punti:
+    \begin{itemize}
+        \item l'introduzione di Spring Boot per la sola gestione delle dipendenze dovrebbe essere abbastanza rapida;
+        \item Spring è uno strumento molto ampio e potente, iniziare a sfruttare altre caratteristiche arrivati a questo punto potrebbe essere troppo costoso;
+        \item Spring semplifica un po' la codifica, ma i costrutti di base rimangono gli stessi;
+        \item riferimenti a lavori dei gruppi dello scorso anno che hanno avuto Sanmarco Informatica come proponente:
+        \begin{itemize}
+            \item \href{https://github.com/RedRoundRobin/riot/tree/master/\_documentazione/Documenti\%20esterni/Manuale\%20del\%20Manutentore/Immagini}{Red Round Robin};
+            \item \href{https://github.com/heptagon-group/ThiReMa}{Heptagon}.
+        \end{itemize}
+    \end{itemize}

@@ -1,0 +1,81 @@
+\newcommand{\contabilitaTable}[1]{
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{c
+				!{\color[HTML]{9b240a}\vrule width 1pt}
+				cccccc
+				!{\color[HTML]{9b240a}\vrule width 1pt}	
+				c}
+			\rowcolorhead
+			\headertitle{Nome} & \headertitle{R} & \headertitle{V} & \headertitle{An} & \headertitle{Am} & \headertitle{Pr} & \headertitle{Pt} & \headertitle{Tot} \\	
+			#1
+			\end{center}
+			\end{table}	
+}
+
+
+\newcommand{\smallPreventivoTable}[1]{
+	
+	\begin{table}[H]
+
+			\begin{tabular}{c
+					!{\color[HTML]{9b240a}\vrule width 1pt}
+					cccccc
+					!{\color[HTML]{9b240a}\vrule width 1pt}	
+					c}
+				\rowcolorhead
+				\headertitle{Ruolo} & \headertitle{Tempo (ore)} & \headertitle{Costo (\euro)} \\
+				#1
+			\end{table}
+		
+
+	}
+
+
+\newcommand{\planningTable}[1]{
+	
+	
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{2}{pari}{dispari}
+	\begin{longtable}{ 
+			>{}p{0.25\textwidth} 
+			>{}p{0.42\textwidth}
+			>{\centering}p{0.05\textwidth}
+			>{\centering}p{0.17\textwidth} }
+		\rowcolorhead
+		\headertitle{Attività} &
+		\headertitle{Descrizione} &	
+		\headertitle{Ore} &
+		\headertitle{Ruolo} 
+		\endfirsthead	
+		\endhead
+		#1		
+	\end{longtable}
+	
+}
+
+
+\newcommand{\pafTable}[1]{
+	
+	
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{2}{pari}{dispari}
+	\begin{longtable}{ 
+			>{}p{0.40\textwidth} 
+			>{\centering}p{0.10\textwidth}
+			>{\centering}p{0.20\textwidth}
+			>{\centering}p{0.15\textwidth} }
+		\rowcolorhead
+		\headertitle{Fase} &
+		\headertitle{Periodo} &	
+		\headertitle{Descrizione} &
+		\headertitle{Spesa (\euro)} 
+		\endfirsthead	
+		\endhead
+		#1		
+	\end{longtable}
+	
+}
+
+
