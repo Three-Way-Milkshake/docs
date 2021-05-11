@@ -3,17 +3,29 @@
 La seguente sezione fornirà indicazioni utili per il corretto utilizzo del software nel caso l'utente interessato sia l'amministratore.
 
 \subsection{Login}
-Il primo passo da effettuare è l'inserimento del proprio codice identificativo e password all'interno dei campi visualizzati nella pagina di login. Dopo aver premuto il pulsante di conferma, si sarà indirizzati alla pagina dedicata alle funzionalità di amministratore. Nel caso le credenziali inserite non risultino corrette, sarà visualizzato un messaggio d'errore e sarà quindi necessario inserire di nuovo i dati.
+Il primo passo da effettuare è l'inserimento del proprio codice identificativo e password all'interno dei campi visualizzati nella pagina di login. Dopo aver premuto il pulsante di conferma, si sarà indirizzati alla pagina dedicata alle funzionalità di amministratore. 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.12]{res/images/login.png}
-    \caption{Login}
+    \caption{Schermata di login}
 \end{figure}
+Nel caso le credenziali inserite non risultino corrette, sarà visualizzato un messaggio d'errore e sarà quindi necessario inserire di nuovo i dati.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.2]{res/images/login_errato.png}
+    \caption{Schermata di login con errore}
+\end{figure}
+
 \subsection{Visualizzazione situazione in real time del magazzino}
 \begin{itemize}
     \item Dopo l'autenticazione, tramite il menù selezionare il pulsante "Mappa";
-    \item viene visualizzata la planimetria del magazzino con la relativa legenda e la rappresentazione dei muletti che si spostano;
-    \item la tabella a destra rappresentano le liste di task con i relativi muletti che le stanno soddisfando.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/dashboard1.png}
+        \caption{Schermata dashboard con indicazione per visualizzare la mappa in real time}
+    \end{figure}
+    \item viene visualizzata la planimetria del magazzino e la rappresentazione dei muletti che si spostano tramite l'icona blu e il proprio id;
+    \item la tabella a destra rappresenta le liste di task con i relativi muletti che le stanno soddisfando.
     
 \end{itemize}
 
@@ -26,111 +38,201 @@ Il primo passo da effettuare è l'inserimento del proprio codice identificativo 
 \subsection{Visualizzazione lista completa punti di interesse}
 \begin{itemize}
     \item Dopo l'autenticazione, tramite il menù selezionare il pulsante "Lista POI";
-    \item si viene indirizzati alla pagina con l'elenco di tutti i punti di interesse presenti nel magazzino.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/dashboard2.png}
+        \caption{Schermata dashboard con indicazione per la visualizzazione di tutti i POI}
+    \end{figure}
+    \item si viene indirizzati alla pagina con l'elenco di tutti i punti di interesse presenti nel magazzino con il relativo id e nome.
 
 \end{itemize}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.12]{res/images/listpoi_user.png}
-    \caption{Schermata guida automatica dell'unità}
+    \caption{Schermata visualizzazione lista punti di interesse}
 \end{figure}
 
 \subsection{Visualizzazione dati del proprio profilo e modifica}
 \begin{itemize}
     \item Dopo l'autenticazione, tramite il menù selezionare il pulsante "Il tuo account";
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/dashboard3.png}
+        \caption{Schermata dashboard con indicazione per la visualizzazione del proprio profilo}
+    \end{figure}
+    
     \item si viene indirizzati alla pagina con i propri dati utente: Name, Surname, Password;
-    \item se si desidera modificare alcuni campi, è necessario scrivere nell'apposito form i nuovi dati e premere il pulsante "Salva Modifiche". Se si intende cambiare la Password, l'inserimento nei due campi deve coincidere.
+    \item se si desidera modificare alcuni campi, è necessario scrivere nell'apposito form i nuovi dati e premere il pulsante "Salva Modifiche".
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/account_user.png}
+        \caption{Schermata proprio profilo}
+    \end{figure}
+    \item Se si intende cambiare la Password, l'inserimento nei due campi deve coincidere altrimenti si visualizzerà un errore.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/account_errore.png}
+        \caption{Schermata modifica
+        password con messaggio d'errore}
+    \end{figure}
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.12]{res/images/account_user.png}
-    \caption{Schermata proprio profilo}
-\end{figure}
+
 
 \subsection{Registrazione di un nuovo utente}
 \begin{itemize}
     \item Dopo l'autenticazione, tramite il menù selezionare il pulsante "Registra un manager";
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/dashboard4.png}
+        \caption{Schermata dashboard con indicazione per registrare un nuovo utente}
+    \end{figure}
     \item si viene indirizzati alla pagina con i campi da compilare: Nome, Cognome;
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.12]{res/images/newmanager_admin.png}
-    \caption{Schermata registrazione manager 1}
+    \includegraphics[scale=0.12]{res/images/newmanager.png}
+    \caption{Schermata registrazione manager}
 \end{figure}
 \begin{itemize}
     \item inserire i dati e premere sul pulsante "Conferma";
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/newmanager_2.png}
+        \caption{Schermata registrazione manager 2}
+    \end{figure}
     \item viene visualizzato a video la password e il codice identificativo da riferire al nuovo utente per il suo primo accesso.
+    \item \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/newmanager3.png}
+        \caption{Schermata registrazione manager 3}
+    \end{figure}
 \end{itemize}
 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.12]{res/images/newmanager_2.png}
-    \caption{Schermata registrazione manager 2}
-\end{figure}
+
 
 \subsection{Gestione account già presenti}
 \begin{itemize}
     \item Dopo l'autenticazione, tramite il menù selezionare il pulsante "Visualizza lista manager";
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/dashboard5.png}
+        \caption{Schermata dashboard con indicazione per la visualizzazione della lista di utente}
+    \end{figure}
     \item si viene indirizzati alla pagina con la lista di tutti gli account presenti;
     \item per ogni account è possibile:
         \begin{itemize}
             \item cambiare i campi "Name" e "Surname" e premere su "Conferma Modifica" per confermare le modifiche;
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/modificamanager.png}
+                \caption{Schermata per la modifica di un utente}
+            \end{figure}
             \item premere il pulsate "Elimina" per cancellare definitivamente un account dal sistema;
-            \item premere il pulsante "Reset password" per cambiare la password di un utente in caso di smarrimento; verrà visualizzata a video la nuova password.
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/eliminamanager.png}
+                \caption{Schermata per l'eliminazione di un utente}
+            \end{figure}
+            \item premere il pulsante "Reset password" per cambiare la password di un utente in caso di smarrimento; 
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/resetpassword1.png}
+                \caption{Schermata per il reset di una password}
+            \end{figure}
+            \item verrà visualizzata a video la nuova password.
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/resetpassowrd2.png}
+                \caption{Schermata per il reset di una password}
+            \end{figure}
         \end{itemize}
 \end{itemize}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.12]{res/images/listmanager_admin.png}
-    \caption{Schermata visualizzazione lista di manager}
-\end{figure}
 
 \subsection{Modifica mappa del magazzino}
 \begin{itemize}
     \item Dopo l'autenticazione, tramite il menù selezionare il pulsante "Modifica mappa";
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/dashboard6.png}
+        \caption{Schermata dashboard con l'indicazione per la modifica della mappa}
+    \end{figure}
     \item si viene indirizzati alla pagina con la rappresentazione della mappa;
     \item è possibile intraprendere le seguenti operazioni:
         \begin{itemize}
             \item aggiungere una riga: \\premere sul pulsante "Aggiungi riga" per ampliare la planimetria di una riga;
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/modificamappa1.png}
+                \caption{Schermata ampliamento mappa per riga}
+            \end{figure}
             \item eliminare una riga: \\premere sul pulsante "Rimuovi riga" per diminuire la planimetria di una riga;
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/modificamappa2.png}
+                \caption{Schermata diminuimento mappa per riga}
+            \end{figure}
             \item aggiungere una colonna: \\premere sul pulsante "Aggiungi colonna" per ampliare la planimetria di una colonna;
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/modificamappa3.png}
+                \caption{Schermata ampliamento mappa per colonna}
+            \end{figure}
             \item eliminare una colonna: \\premere sul pulsante "Rimuovi colonna" per diminuire la planimetria di una colonna;
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.12]{res/images/managemap_admni1.png}
-                \caption{Schermata modifica mappa}
+                \includegraphics[scale=0.12]{res/images/modificamappa4.png}
+                \caption{Schermata ampliamento mappa per riga}
             \end{figure}
-            \item cambiare il tipo di cella: \\premere sulla cella nella mappa che si intende modificare. Verrà allora visualizzata un'interfaccia con i colori possibili (bianco: zona transitabile, nero: zona non transitabile, frecce: sensi unici, rosso: POI). Nel caso di POI è possibile scrivere l'identificativo. \\Una volta scelto premere sul tasto "Conferma".
+            \item cambiare il tipo di cella: \\premere sulla cella nella mappa che si intende modificare. Verrà allora visualizzata un'interfaccia con i colori possibili (bianco: zona transitabile, nero: zona non transitabile, frecce: sensi unici, rosso: POI). 
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/modificamappa5.png}
+                \caption{Schermata modifica tipo di cella}
+            \end{figure}
+            Nel caso di aggiunta POI è possibile scrivere l'identificativo e scegliere il tipo tra carico, scarico e uscita. \\Una volta scelto premere sul tasto "Aggiungi POI".
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.12]{res/images/modificamappa6.png}
+                \caption{Schermata per aggiunta o modifica POI}
+            \end{figure}
         \end{itemize}
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.12]{res/images/managemap2.png}
-            \caption{Schermata modifica mappa}
-        \end{figure}
+        
     \item quando si è soddisfatti delle modifiche premere sul pulsante "Conferma".
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/modificamappa7.png}
+        \caption{Schermata modifica mappa con conferma}
+    \end{figure}
 \end{itemize}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.12]{res/images/managemap2.png}
-    \caption{Schermata guida automatica dell'unità}
-\end{figure}
+
 
 \subsection{Gestione unità}
 \begin{itemize}
-\item Dopo l'autenticazione, tramite il menù selezionare il pulsante "Visualizza lista unità"; è possibile effettuare le seguenti operazioni:
+\item Dopo l'autenticazione, tramite il menù selezionare il pulsante "Visualizza lista unità"; 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.12]{res/images/dashboard7.png}
+    \caption{Schermata lista unità}
+\end{figure}
+è possibile effettuare le seguenti operazioni:
     \item aggiungere una nuova unità: \\inserire il codice identificativo nel form e premere il pulsante "Registra";
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/nuovaunita.png}
+        \caption{Schermata per l'aggiunta di una nuova unità}
+    \end{figure}
     \item eliminare un'unità presente: 
     \begin{itemize}
         \item selezione dal menu a tendina l'id dell'untià che si intende eliminare;
         \item premere sul pulsante "Elimina" per confermare l'eliminazione.
     \end{itemize}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.12]{res/images/eliminaunita.png}
+        \caption{Schermata per l'eliminazione di un'unità}
+    \end{figure}
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.12]{res/images/newunit_admin.png}
-    \caption{Schermata lista unità}
-\end{figure}
