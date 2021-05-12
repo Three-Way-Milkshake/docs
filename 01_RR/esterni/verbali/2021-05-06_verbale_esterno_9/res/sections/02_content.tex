@@ -1,0 +1,68 @@
+\section{Verbale della riunione}
+
+\subsection{Feedback sul contenuto dei manuali utente e manutentore}
+\label{manuali}
+    I manuali svolgono la loro funzione, si riscontrano le seguenti possibili migliorie:
+    \begin{itemize}
+        \item tra i requisiti hardware, indicare:
+        \begin{itemize}
+            \item versione specifica o superiore;
+            \item frequenza indicativa non vincolante o equivalente;
+            \item RAM: quantità dedicata o condivisa (con il SO e gli altri applicativi);
+        \end{itemize}
+        \item tra quelli software:
+        \begin{itemize}
+            \item specificare gli ulteriori requisiti software, driver, libreria, sistema operativo (es versione di linux per docker…);
+
+            \item specificare come installare (ad esempio docker, il tipo di installazione minima necessaria);
+
+        \end{itemize}
+        \item nella sezione dedicata al protocollo di comunicazione, fornire degli esempi di righe di codice che facciano capire come utilizzare, modificare ed aggiungere le funzionalità ed i comandi relativi alle API di comunicazione.
+    \end{itemize}
+
+\subsection{Discussione su test di sistema ed integrazione}
+    Per i test di integrazione:
+    \begin{itemize}
+        \item si suggerisce di testare i layer a salire dalla componente più bassa:
+        \begin{itemize}
+            \item ciò che il layer di persistenza mette a disposizione agli altri layer;
+
+            \item poi collisioni;
+
+            \item mappa;
+
+            \item client;
+
+        \end{itemize}
+        \item certifico il pezzo piccolo, poi certifico come i pezzi piccoli collaborano insieme.
+    \end{itemize}
+
+
+    Per i test di sistema:
+    \begin{itemize}
+        \item verificare in modo automatizzato o non tramite ambiente di test che le modifiche non rompano alcuni requisiti;
+
+        \item anche dei semplici test delle componenti sfruttando \textit{netcat} per verificare le connessioni dei socket ed un primo scambio di messaggi può essere sufficiente.
+    \end{itemize}
+
+\subsection{Feedback su stato di avanzamento del prodotto esibendo demo}
+    Il prodotto soddisfa le aspettative del proponente, viene suggerito di richiedere la conferma all'atto della modifica password.
+
+\subsection{Discussione sul concetto di parcheggio}
+\label{park}
+    \begin{itemize}
+        \item viene proposto di indicare una lista dei muletti parcheggiati/non attivi;
+        \item questa potrebbe venire integrata in quella che indica i compiti presi in carico;
+        \item predisporre uno o più punti di uscita dalla mappa, sui quali può passare un muletto alla volta e dopodiché viene considerato al di fuori della responsabilità del motore di calcolo.
+    \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
