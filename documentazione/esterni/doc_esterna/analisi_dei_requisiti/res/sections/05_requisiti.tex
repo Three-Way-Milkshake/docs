@@ -106,7 +106,7 @@ UC4.1
 \tabularnewline
 RF-5.1.2-O
 &
-Il server permette al responsabile di aggiungere una task singola con il proprio POI di scarico per soddisfarla
+Il server permette al responsabile di aggiungere una task singola con il proprio POI di scarico o carico per soddisfarla
 &
 UC4.1.1
 \tabularnewline
@@ -244,7 +244,7 @@ UC8.1
 \tabularnewline
 RF-14-O
 &
-La User Interface implementa sotto alla mappa una lista ordinata contenente la task rimanenti da eseguire dell’operatore che sta usando l’unità
+La User Interface implementa vicino alla mappa una lista ordinata contenente la task rimanenti da eseguire dell’operatore che sta usando l’unità
 &
 UC8.2
 \tabularnewline
@@ -509,7 +509,7 @@ RF-39-O
 &
 Tutte le unità, quando sono in movimento, devono viaggiare tutte alla stessa velocità che rimane costante
 &
-Capitolato
+Decisione interna
 \tabularnewline
 RF-39.1-F
 &
@@ -613,49 +613,38 @@ Ogni unità torna ad una base quando termina il turno dell’operatore
 &
 Decisione interna
 \tabularnewline
+
 RF-54-O
-&
-Ogni unità passa per un’area di carico prima di iniziare la sequenza di scarichi (tasks)
-&
-Decisione interna
-\tabularnewline
-RF-55-O
-&
-Ogni unità torna ad un'area di carico se ha scaricato tutta la merce (completato i task) e il turno dell’operatore non è terminato
-&
-Decisione interna
-\tabularnewline
-RF-56-O
 &
 Il server centrale conosce ogni spostamento (in avanti, indietro, a destra e a sinistra) di ogni singola unità
 &
 Capitolato
 \tabularnewline
-RF-57-O
+RF-55-O
 &
 Il server centrale conosce la fermata di ogni singola unità
 &
 Capitolato
 \tabularnewline
-RF-58-O
+RF-56-O
 &
 Il server centrale conosce la partenza di ogni singola unità
 &
 Capitolato
 \tabularnewline
-RF-59-O
+RF-57-O
 &
 Ci deve essere uno e un solo account registrato con il ruolo di amministratore
 &
 Decisione interna
 \tabularnewline
-RF-60-O
+RF-58-O
 &
 Ci deve essere almeno un account registrato con il ruolo di responsabile
 &
 Decisione interna
 \tabularnewline
-RF-61-F
+RF-59-F
 &
 Ci possono essere più account registrati con il ruolo di responsabile
 &
@@ -715,9 +704,9 @@ RV-3-O & Tutto quello che si muove all'interno è censito dal server, in quanto 
 & Capitolato \tabularnewline
 RV-4-O & La versione di Chrome da utilizzare è la 90.0
 & Decisione interna \tabularnewline
-RV-5-O & La versione di Angular da utilizzare è la 11.2.1
+RV-5-O & La versione di Angular da utilizzare è la 11.2.0
 & Decisione interna \tabularnewline
-RV-6-O & La versione di NodeJs da utilizzare è la 12.16.3
+RV-6-O & La versione di NodeJs da utilizzare è la 14
 & Decisione interna \tabularnewline
 RV-7-O & La versione di Java da utilizzare è la 15
 & Decisione interna \tabularnewline
@@ -746,7 +735,6 @@ RF-35-O \newline
 RF-36-F \newline
 RF-37-O \newline
 RF-38-O \newline
-RF-39-O \newline
 RF-39.1-F \newline
 RF-39.2-D \newline
 RF-39.3-D \newline
@@ -756,9 +744,9 @@ RF-42-O \newline
 RF-43-D \newline
 RF-44-O \newline
 RF-45-O \newline
+RF-54-O \newline
+RF-55-O \newline
 RF-56-O \newline
-RF-57-O \newline
-RF-58-O \newline
 RQ-1-O \newline
 RQ-2-O \newline
 RQ-3-O \newline
@@ -781,6 +769,7 @@ RF-22.2.1-O \newline
 RF-22.2.2-O \newline
 RF-22.3.1-O \newline
 RF-22.3.2-O \newline
+RF-39-O \newline
 RF-46-O \newline
 RF-47-O \newline
 RF-48-O \newline
@@ -789,11 +778,9 @@ RF-50-F \newline
 RF-51-F \newline
 RF-52-O \newline
 RF-53-O \newline
-RF-54-O \newline
-RF-55-O \newline
-RF-59-O \newline
-RF-60-O \newline
-RF-61-F \newline
+RF-57-O \newline
+RF-58-O \newline
+RF-59-F \newline
 RV-4-O \newline
 RV-5-O \newline
 RV-6-O \newline
@@ -1021,7 +1008,7 @@ RF-35-O & Capitolato \tabularnewline
 RF-36-F & Capitolato \tabularnewline
 RF-37-O & Capitolato \tabularnewline
 RF-38-O & Capitolato \tabularnewline
-RF-39-O & Capitolato \tabularnewline
+RF-39-O & Decisione interna \tabularnewline
 RF-39.1-F & Capitolato \tabularnewline
 RF-39.2-D & Capitolato \tabularnewline
 RF-39.3-D & Capitolato \tabularnewline
@@ -1039,14 +1026,12 @@ RF-50-F & Decisione interna \tabularnewline
 RF-51-F & Decisione interna \tabularnewline
 RF-52-O & Decisione interna \tabularnewline
 RF-53-O & Decisione interna \tabularnewline
-RF-54-O & Decisione interna \tabularnewline
-RF-55-O & Decisione interna \tabularnewline
+RF-54-O & Capitolato \tabularnewline
+RF-55-O & Capitolato \tabularnewline
 RF-56-O & Capitolato \tabularnewline
-RF-57-O & Capitolato \tabularnewline
-RF-58-O & Capitolato \tabularnewline
-RF-59-O & Decisione interna \tabularnewline
-RF-60-O & Decisione interna \tabularnewline
-RF-61-F & Decisione interna \tabularnewline
+RF-57-O & Decisione interna \tabularnewline
+RF-58-O & Decisione interna \tabularnewline
+RF-59-F & Decisione interna \tabularnewline
 RQ-1-O & Capitolato\tabularnewline
 RQ-2-O & Capitolato\tabularnewline
 RQ-3-O & Capitolato\tabularnewline
@@ -1085,7 +1070,7 @@ RV-7-O & Decisione interna \tabularnewline
 	\headertitle{\normalfont \textbf{Totale}}	
 	\endfirsthead	
 	\endhead
-Funzionale & 97 & 7 & 4 & 108 \tabularnewline
+Funzionale & 95 & 7 & 4 & 106 \tabularnewline
 Di Qualità & 6 & 0 & 0 & 6\tabularnewline
 Di Vincolo & 7 & 0 & 0 & 7\tabularnewline
 \caption{Tabella Riepilogo dei Requisiti\label{ Tabella Riepilogo dei Requisiti}}
