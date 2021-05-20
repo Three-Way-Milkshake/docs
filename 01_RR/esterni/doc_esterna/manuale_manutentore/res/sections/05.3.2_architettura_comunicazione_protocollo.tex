@@ -156,6 +156,10 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
 
             \texttt{PATH,C} & Richiede il percorso migliore per raggiungere il POI\textsubscript{A} della task\textsubscript{G} corrente a partire dalla posizione attuale. Se C=1 rimuove la task\textsubscript{G} e passa alla successiva & \texttt{PATH,...} \\
 
+            \texttt{BASE} & Segnala l'arrivo ad una base & -- \\
+
+            \texttt{ECC} & Segnala il verificarsi di un evento eccezionale & -- \\
+
             \hline
         \end{tabular}
         \caption{Comandi clients → server | Forklifts}
@@ -233,7 +237,7 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             \end{itemize}
             & \texttt{MAP,...} \\
 
-            \texttt{CELL,X,Y,A[,T,NAME]} & Modifica una cella, la parte tra [ ] è presente solo in caso di POI\textsubscript{A}
+            \texttt{CELL,X,Y,A[,ID,T,NAME]} & Modifica una cella, la parte tra [ ] è presente solo in caso di POI\textsubscript{A}
             \begin{itemize}
                 \item X e Y riga e colonna della matrice
 
@@ -242,6 +246,8 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
 
             Solo nel caso di POI\textsubscript{A}:
             \begin{itemize}
+                \item ID: id del POI, 0 se in creazione;
+
                 \item T: tipo di POI\textsubscript{A} secondo PoiType
 
                 \item NAME: stringa di caratteri da associare al POI\textsubscript{A}
@@ -344,7 +350,7 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
 
             \texttt{LIST,ID1,ID2…} & Invia lista di task\textsubscript{G} assegnate. ID1.. sono gli id dei POI\textsubscript{A} da raggiungere & -- \\
 
-            \texttt{PATH,SEQ} & Invia il percorso per raggiungere il prossimo POI\textsubscript{A}, composto da mosse successive secondo Move & -- \\
+            \texttt{PATH,SEQ} & Invia il percorso per raggiungere il prossimo POI\textsubscript{A}, composto da mosse successive secondo Move, separate da ','& -- \\
 
             \texttt{STOP,N} & Richiede lo stop immediato del muletto per N istanti, che verranno contati alle ricezioni dei futuri ALIVE. Se N=0 stop indefinito fino alla ricezione di \texttt{START}. & -- \\
             \texttt{START} & Consente ad un muletto fermato a tempo indeterminato di ripartire & -- \\
@@ -375,8 +381,10 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             Se l'invio di questo fallisce, l'utente viene considerato disconnesso.
             & -- \\
 
-            \texttt{LIST,IDF,N,IDP1,IDP2…} & Indica la lista di task\textsubscript{G} presa in carico da un muletto
+            \texttt{LIST,NF,IDF,N,IDP1,IDP2…} & Indica la lista di task\textsubscript{G} presa in carico da un muletto
             \begin{itemize}
+                \item NF: numero totale muletti dei quali si stanno ricevendo le task;
+
                 \item IDF: id del muletto a cui ci si sta riferendo
 
                 \item N: numero di task\textsubscript{G} prese in carico
@@ -452,11 +460,11 @@ Per i comandi di risposta, controllare i corrispondenti in \S\ \ref{commands-ser
             \end{itemize}
             & -- \\
 
-            \texttt{LISTU,N,UN1,UL1,R1…} & In risposta alla richiesta della lista degli utenti:
+            \texttt{LISTU,N,ID1,UN1,UL1,R1…} & In risposta alla richiesta della lista degli utenti:
             \begin{itemize}
                 \item N: num totale utenti
 
-                \item UN…: rispettivamente nome, cognome e ruolo
+                \item ID1,UN…: rispettivamente: identificativo, nome, cognome e ruolo
             \end{itemize}
             & -- \\
 
