@@ -5,6 +5,76 @@
 Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando può avere 0 o più parametri, separati da ',’. \\
 \textbf{Esempio sequenza:} \texttt{POS,1,1,0;PATH,1}
 
+\pparagraph{Modificare il protocollo}
+    Per la modifica di parti esistenti o per l'aggiunta di nuove funzionalità riguardo la comunicazione è sufficiente andare a modificare le corrispondenti sezioni.
+%    \ssubparagraph{Lato server}
+    In base alla necessità:
+    \begin{longtable}[h!]{
+            %|m{3cm}|m{5.25cm}|m{5.25cm}|
+            |>{\raggedright\arraybackslash}p{0.2\textwidth}|
+            >{\raggedright\arraybackslash}p{0.4\textwidth}|
+            >{\raggedright\arraybackslash}p{0.4\textwidth}|
+        }
+        %\endfirsthead
+        \hline
+        \rowcolorhead
+        \headertitle{Contesto} & \headertitle{Lato Server} & \headertitle{Lato Client} \\
+        \hline
+        \endhead
+
+        Connessione &
+        \texttt{ConnectionAccepter.java: run} &
+        TODO
+        \\
+
+        Autenticazione &
+        \texttt{ConnectionHandler.java: execute}, \texttt{auth} di \texttt{Users/ForkliftsList} e conseguentemente \texttt{authenticate} di \texttt{Forklift/User}&
+        TODO
+        \\
+
+        Modificare una funzionalità generica utente esistente &
+        \texttt{User.java: processCommuncation}, all'interno dello switch, identificare la funzionalità voluta (esiste un case per ogni possibile messaggio ricevibile) ed apportare le modifiche desiderate &
+        TODO
+        \\
+
+        Aggiungere una funzionalità generica utente &
+        Aggiungere un case all'interno dello switch di cui sopra avendo cura di terminare con \texttt{break;} per evitare \textit{fallthrough} &
+        TODO
+        \\
+
+        Modificare una funzionalità amministratore / responsabile &
+        \texttt{Admin/Manager.java: processCommuncation}, all'interno dello switch, identificare la funzionalità voluta (esiste un case per ogni possibile messaggio ricevibile) ed apportare le modifiche desiderate &
+        TODO
+        \\
+
+        Aggiungere una funzionalità amministratore / responsabile &
+        Aggiungere un case all'interno dello switch di cui sopra avendo cura di terminare con \texttt{break;} per evitare \textit{fallthrough} &
+        TODO
+        \\
+
+        Modificare una funzionalità muletto &
+        \texttt{Forklift.java: processCommuncation}, all'interno dello switch, identificare la funzionalità voluta (esiste un case per ogni possibile messaggio ricevibile) ed apportare le modifiche desiderate &
+        TODO
+        \\
+
+        Aggiungere una funzionalità muletto &
+        Aggiungere un case all'interno dello switch di cui sopra avendo cura di terminare con \texttt{break;} per evitare \textit{fallthrough} &
+        TODO
+        \\
+
+
+        \hline
+        \hiderowcolors
+        \caption{Modificare il protocollo do comunicazione}\\
+        \showrowcolors
+    \end{longtable}
+
+    \ssubparagraph{Esempio modifica lato server}
+    Volendo modificare il comportamento del comando \texttt{RMU} (remove user) sarà sufficiente andare nel metodo \texttt{processCommunication} all'interno di \texttt{Admin.java}, identificare il case \texttt{"RMU"} e al suo interno fare il \textit{parsing} degli argomenti che ci si aspetta e processarli come voluto. Si consiglia di delegare queste operazioni ad altri metodi come visibile in gran parte del codice già esistente, per evitare di sovraccaricare \texttt{processCommuncation} di responsabilità. Poi come si può osservare all'interno di \texttt{removeUser} quando si deve inviare una risposta al client (la quale dovrà essere ben formata, vedi inizio \ref{comm-protocol}) sarà sufficiente chiamare \texttt{connection.writeToBuffer(...)} passandogli il messaggio da inviare.
+
+    \ssubparagraph{Esempio modifica lato client} %TODO
+    TODO
+
 \pparagraph{Connessione: identificazione e login}
     Quando un client si connette deve essere identificato come tipo ed autenticato, perciò deve inviare separatamente ed in sequenza:
     \begin{enumerate}
