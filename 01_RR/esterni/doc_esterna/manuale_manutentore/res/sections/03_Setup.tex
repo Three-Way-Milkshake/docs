@@ -87,32 +87,109 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
     Nella macchina da utilizzare come server andrà scaricata l'immagine di portacs-server con la versione desiderata \href{https://hub.docker.com/r/threewaymilkshake}{docker hub di \group}.
     Per l'avvio, in ambiente Linux e MacOS:
     \begin{itemize}
-        \item predisporre una cartella che contenga un file \texttt{config.txt} ed una cartella \texttt{resources} che manterrà la persistenza;
+        \item predisporre una cartella nella quale posizionarsi per l'esecuzione che contenga una cartella \texttt{database} che manterrà la persistenza, questa dovrà contenere i file \texttt{map.json}, \texttt{forklifts.json} e \texttt{users.json};
         \item posizionarsi su tale cartella;
         \item eseguire:
     \begin{verbatim}
-    docker run -v $(pwd)/resources:/resources \
-        --env-file config.txt threewaymilkshake/portacs-server
+    docker run --rm --name server \
+        -v $(pwd)/database:/database \
+        -p 1723:1723 \
+        threewaymilkshake/portacs-server
     \end{verbatim}
     \end{itemize}
-    All'interno del file \texttt{config.txt} si possono specificare (come coppie key=value) delle configurazioni diverse da quelle di default per quanto riguardo percorso della persistenza e porta sulla quale il server dovrà esporre il Server Socket per il collegamento. Se non si desiderano modificare i valori di default il file e la relativa parte nel comando possono essere omessi.
+    Il container verrà avviato nella finestra corrente e si potranno osservare i log del server, questo può essere terminato dalla stessa finestra con la combinazione \texttt{Ctrl+C}. Se si vuole eseguire il container in background è sufficiente aggiungere l'opzione \texttt{-d}, per terminarlo a questo punto bisognerà eseguire: \texttt{docker stop server}.
+    Si raccomanda di impostare un ip statico per la macchina server, così da non dover richiedere variazioni frequenti nelle configurazioni dei client.
 
     \subsubsection{Client}
-    Come per il server, scaricare l'immagine dal docker hub di \group{} relativa al client voluto (forklift o user). Dopodiché sul dispositivo che dovrà fungere da client andranno impostata la configurazione in un file \texttt{config.txt}:
+    Come per il server, scaricare l'immagine dal docker hub di \group{} relativa al client voluto (forklift o user). Dopodiché posizionarsi in una cartella dove predisporre un file di configurazione \texttt{config.txt}:
     \begin{itemize}
         \item per i client \textit{user} sarà sufficiente specificare l'indirizzo IP della macchina server così: \texttt{SERVER\_ADDR=ip};
-        \item per i client \texttt{forklift}, oltre all'indirizzo come per gli utenti, bisognerà aggiungere altre 2 righe per la configurazione di ogni muletto:
+        \item per i client \texttt{forklift}, oltre all'indirizzo come per gli utenti, bisognerà aggiungere altre informazioni:
         \begin{itemize}
-            \item \texttt{ID=id del muletto};
-            \item \texttt{TOKEN=token del muletto}.
+            \item \textbf{obbligatorie: }
+            \begin{itemize}
+                \item id e token del muletto;
+                \item posizione iniziale (corrispondendte alla base dove il muletto verrà posizionato al primo avvio);
+            \end{itemize}
+            \item \textbf{opzionali: }
+            \begin{itemize}
+                \item per specificare delle porte diverse da far utilizzare ai servizi, quest'operazione è necessaria solo se si vogliono simulare più unità nella stessa macchina locale, al fine di evitare collisioni tra le porte;
+                \item bisogna impostare due campi, \texttt{ngPort1} e \texttt{ngPort2}, devono essere diversi da altre configurazioni in uso sulla stessa macchina scopi simulativi;
+                \item bisogna predisporre un file diverso per ogni unità che si vuole simulare.
+            \end{itemize}
         \end{itemize}
+        Dev'essere poi sempre presente \texttt{configurationEnv=custom}. L'ordine in cui vengono specificati i campi non è importante. Segue un esempio di configurazione ben formata con utilizzo delle impostazioni opzionali:
+        \begin{verbatim}
+            startX=0
+            startY=1
+            ngPort1=4201
+            ngPort2=8081
+            forkliftId=f1
+            forkliftToken=abc
+            configurationEnv=custom
+            SERVER_ADDR=192.168.3.129
+        \end{verbatim}
         Queste informazioni sono a disposizione degli admin.
     \end{itemize}
 
-    Dopodiché, in entrambi i casi, sarà sufficiente eseguire:
+    Per avviare un muletto sarà sufficiente (i valori di default per \texttt{ngPort1} e \texttt{ngPort2} sono rispettivamente \texttt{4201} e \texttt{8081}):
     \begin{verbatim}
         docker run --env-file config.txt threewaymilshake/portacs-client-<type>
+
+        docker run --rm --name <nome> -d \
+            --env-file config.txt
+            -p 4201:4201 \
+            -p 8081:8081 \
+            portacs-client-forklift
     \end{verbatim}
-    con \texttt{<type>} tra \texttt{forklift} o \texttt{user}.
+    Il <nome> specificato dopo \texttt{--name} serve per terminare il container
+
+    Per avviare un utente invece:
+    \begin{verbatim}
+        docker run --rm --name user -d \
+            --env-file user.txt \
+            -p 4300:4300 \
+            -p 8090:8090 \
+            portacs-client-user
+    \end{verbatim}
+
+    \pparagraph{Terminazione dei container}
+        Se si vuole terminare un container l'istruzione è: \texttt{docker stop <nome>}, dove <nome> è il parametro che si ha specificato dopo \texttt{---name}. La specifica del nome all'avvio del container non è obbligatoria, nel caso di esecuzione con opzione \texttt{-d} verrà stampato l'id che si potrà usare al posto del nome per terminare il container o in ogni caso si possono ispezionare i container attivi tramite \texttt{docker ps}.
+
+\clearpage
+\subsection{Costruzione degli artefatti e delle immagini}
+    Quando il codice sorgente viene modificato le immagini docker corrispondenti devono essere ricostruite e prima di ciò bisogna produrre gli artefatti necessari. Per le operazioni descritte in seguito si assume di avere le cartelle con i sorgenti relativi.
+    \subsubsection{Server}
+        Per produrre l'unico artefatto jar necessario, si deve eseguire \texttt{./gradlew build}, questo produrrà appunto l'eseguibile segnandolo con la versione specificata in \texttt{build.gradle}. Questo comando esegue anche tutti i test di unità segnalando eventuali fallimenti. La build ha come precondizione la corretta formattazione del codice, la si può ottenere con \texttt{./gradlew spotlessApply}.
+        Con il jar aggiornato si può eseguire la build di docker per ottenere l'immagine aggiornata:
+        \begin{verbatim}
+            docker build -t threewaymilkshake/portacs-server .
+        \end{verbatim}
+
+    \subsubsection{Client}
+        Per entrambi i client bisogna assicurarsi che il file \texttt{node\_package.json} nelle cartelle corrispondenti contenga tutte e sole le dipendenze necessarie a node. Dopodiché bisogna compilare la parte angular:
+        \begin{itemize}
+            \item per i muletti: \texttt{ng build -c dev1};
+            \item per gli utenti: \texttt{ng build}.
+        \end{itemize}
+        A questo punto si possono generare le rispettive immagini:
+        \begin{verbatim}
+            docker build -t threewaymilkshake/portacs-client-forklift .
+            docker build -t threewaymilkshake/portacs-client-user .
+        \end{verbatim}
+
+
+    \subsubsection{Caricamento nel docker hub}
+        \noindent Per aggiornare le immagini nel docker hub, è necessario avere le credenziali o essere collaboratori. Dopo aver effettuato l'accesso tramite tramite \texttt{docker login}, è sufficiente eseguire: \texttt{docker push <nome-immagine>}
+
+
+
+
+
+
+
+
+
+
 
 
