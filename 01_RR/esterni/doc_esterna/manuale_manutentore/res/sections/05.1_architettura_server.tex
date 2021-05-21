@@ -52,8 +52,7 @@ Per facilitare la consultazione, lo studio di questo layer si concentra separata
 
 
 \clearpage
-\paragraph{Clients}
-\subparagraph*{ }
+\pparagraph{Clients}
 
 \begin{figure}[H]
 	\centering
@@ -82,11 +81,12 @@ Dopodichè la \texttt{ForkliftsList} viene utilizzata dal modulo di rilevazione 
 
 In questo layer si concentra l'utilizzo del framework\textsubscript{G} Spring, utilizzato per gestire le dipendenze: alcune classi di utilizzo frequente e condiviso come \texttt{UsersList}, \texttt{ForkliftsList} e \texttt{TasksSequencesLists} (quest'ultima contenente tutte le liste di task\textsubscript{G} inserite dal responsabile) vengono istanziate tramite \textit{Dependency Injection} sfruttando il meccanismo dei \textit{Bean} di Spring.
 
+    \ssubparagraph{Introdurre nuove tipologie di utenti}
+        Per introdurre nuove tipologie di utenti, bisogna estendere la classe astratta User e concretizzare in classi concrete, erediterà i campi principali, si può aggiungere altri metodi e attributi, ma è necessario fare l'override del metodo ProcessComunication, che si occupa di gestire la comunicazione, in particolare ricevere i messagi, eseguire quello che viene richiesto e inviare i dati necessari.
 
 
-
-\paragraph{Mappa}
-\subparagraph*{ }
+\clearpage
+\pparagraph{Mappa}
 
 \begin{figure}[H]
 	\centering
@@ -101,14 +101,17 @@ Si osserva l'applicazione di alcuni design pattern\textsubscript{G}:
 	\item \textbf{observer}: tramite \texttt{PropertyChangeSupport} e \texttt{PropertyChangeListener} di \texttt{java.beans} viene applicato il pattern \textit{observer}, definendo la \texttt{WarehouseMap} come Subject, e i \texttt{Client} come \textit{Observer}: essi verranno notificati ad ogni cambiamento della stessa in modo che possano comunicarlo tramite le connessioni, così da riflettere le modifiche ed aggiornare le interfacce grafiche che visualizzano la mappa;
 	\item \textbf{strategy}: per l’algoritmo di path finding attualmente viene implementata una strategia di tipo \textit{breadth-first}, ma l’impostazione del pattern permette di aggiungere e variare dinamicamente eventuali altre implementazioni aggiunte in futuro. \texttt{WarehouseMap} assume il ruolo di \textit{context}, e i beneficiari sono i \texttt{Forklift}, i quali richiederanno il percorso ogni qualvolta si renderà necessario.
 \end{itemize}
+\ssubparagraph{Estendere il path finding}
+Si può aggiungere un algoritmo alternativo di path finding, oltre a quello già implementato con una strategia breadth first (in ampiezza).
+Per farlo, bisogna creare una classe che implementi l'interfaccia \texttt{PathfindingStrategy}. Implementando questa interfaccia, viene creata una nuova strategia, e l'unica cosa necessaria da fare è implementare il metodo pubblico \texttt{getPath}, in quanto unico metodo utilizzato dall'esterno, che ritorna il percorso dal punto start a end sulla mappa, fatto di una list di moves (il nostro campo enum).
+La strategia può essere cambiata tramite il metodo \texttt{setStrategy} nella classe \texttt{WareHouseMap} e dunque cambiare quella di default nella configurazione di Spring, oppure si può aggiungere un'operazione per l'amministratore per cambiare quella di default a run-time.
 
 
 
 
-
-\paragraph{Collisioni}
+\clearpage
+\pparagraph{Collisioni}
 \label{collision-details}
-\subparagraph*{ }
 
 \begin{figure}[H]
 	\centering
@@ -126,6 +129,11 @@ Le classi \texttt{CollisionDetector} e \texttt{CollisionSolver} incapsulano risp
 
 Viene applicato in questo contesto il design pattern\textsubscript{G} \texttt{Pipeline}\footnote{Variante del pattern \textit{Chain Of Responsibility}: \url{https://java-design-patterns.com/patterns/pipeline/}}, che permette di definire vari \texttt{Handler} da comporre come catena di operazioni. La pipeline può essere poi eseguita (se necessario, come in questo caso, ripetutamente) con un comando che attiva i vari step sequenzialmente. Ogni \texttt{Handler} specifica i tipi del proprio parametro di input e di output: l'output di un \texttt{Handler} sarà l'input dell'\texttt{Handler} successivo.
 In questo caso l'input sarà una struttura rappresentante muletti attivi con le loro posizioni e prossime mosse, mentre l'output un'altra struttura che ad ogni punto con collisione associ i muletti coinvolti e le azioni da intraprendere così da poterle comunicare.
+
+    \ssubparagraph{Modificare handler per la gestione delle collisioni}
+        La struttura fornita dal design pattern\textsubscript{G} \textit{Pipeline}, come anticipato nella \S \ref{collision-details}, consente di concatenare operazioni da eseguirsi sequenzialmente e il cui output di ognuna costituisce l'input della successiva. Per aggiungere un'operazione è necessario implementare l'interfaccia \texttt{Handler<I,O>} specificando i parametri di input (\texttt{I}) e di output (\texttt{O}) del nuovo \texttt{ConcreteHandler}. La logica dell'operazione si costruisce eseguendo l'\textit{Override} del metodo \texttt{Process(I input) : O}. La costruzione della pipeline prevederà l'aggiunta del nuovo \texttt{ConcreteHandler} tramite il metodo \texttt{addHandler} in modo che l'esecuzione, avviata invocando il metodo \texttt{execute}, includa la nuova operazione nella sua sequenza.
+
+        L'applicazione di questo design pattern\textsubscript{G} consente di modificare facilmente le operazioni che compongono la sequenza: se necessario, è possibile sostituirle anche tutte, cambiando di fatto l'implementazione dell'algoritmo; mantenendo però intatti i parametri di ingresso e uscita.
 
 
 
@@ -145,6 +153,10 @@ L'accesso a questo layer è regolato da 3 interfacce che gestiscono la persisten
 \end{itemize}
 
 Ogni interfaccia si rivolge alla relativa componente del layer superiore che conserva a runtime i dati impiegati nell'esecuzione. La presenza delle interfacce favorisce il disaccoppiamento tra i moduli e permette di estendere a tipi di persistenza alternativi. Attualmente è implementato il salvataggio dei dati su file di tipo .json, viene fatto uso della libreria standard java.io e GSON per gestire l'interazione con questo tipo di tecnologia.
+
+    \pparagraph{Implementare tipi di persistenza alternativi}
+        Le interfacce \texttt{UserDao}, \texttt{ForklistDao} e \texttt{MapDao} forniscono i contratti sulla persistenza di utenti, muletti e mappa. Per implementare un nuovo tipo di persistenza bisogna creare una classe, implementando una di questa 3 interfacce, in base alla tipologia, e implementare i metodi richiesti dall'interfaccia.
+        Similmente all'algoritmo di \texttt{pathfinding}, per settare questo tipo di persistenza bisogna passare per la configurazione Spring, per la gestione delle \textit{dependency injection}.
 
 
 \pagebreak

@@ -16,40 +16,43 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
 	\item Client → unità:
 \begin{itemize}
 	\item CPU\textsubscript{A} dual-core o maggiore con frequenza indicativa >= 3 Ghz;
-	\item memoria Ram >= 4GB dedicati;
+	\item memoria RAM >= 4GB dedicati;
 	\item connessione con bassi tempi di risposta.
 \end{itemize}
 	\item Client → admin o responsabile:
 \begin{itemize}
 	\item CPU\textsubscript{A} dual-core o maggiore con frequenza indicativa >= 3 Ghz;
-	\item memoria Ram >= 4GB dedicati;
+	\item memoria RAM >= 4GB dedicati;
 	\item connessione con bassi tempi di risposta.
 \end{itemize}
 	\item Server:
 \begin{itemize}
 	\item CPU\textsubscript{A} quad-core o maggiore con frequenza indicativa >= 4 Ghz;
-	\item memoria Ram >= 8GB dedicati;
+	\item memoria RAM >= 8GB dedicati;
 	\item connessione con bassi tempi di risposta.
 \end{itemize}
 \end{itemize}
 
 \subsubsection{Requisiti Software}
-	\pparagraph{Librerie}
-	\begin{itemize}
-		\item express (v4.17.1);
-		\item http (v0.0.1-security);
-		\item mocha (v8.3.2);
-		\item net (v1.0.2);
-		\item primeicons (v4.1.0);
-		\item primeng (v11.3.2);
-		\item rxjs (v6.6.0);
-		\item socket.io (v3.1.2);
-		\item spring boot (v2.4.5).
-	\end{itemize}
+	\begin{comment}
+        \pparagraph{Librerie}
+        \begin{itemize}
+        \item express (v4.17.1);
+        \item http (v0.0.1-security);
+        \item mocha (v8.3.2);
+        \item net (v1.0.2);
+        \item primeicons (v4.1.0);
+        \item primeng (v11.3.2);
+        \item rxjs (v6.6.0);
+        \item socket.io (v3.1.2);
+        \item spring boot (v2.4.5).
+        \end{itemize}
+    \end{comment}
+
     \pparagraph{Esecuzione}
     \begin{itemize}
-    		\item Linux (v5.*);
-        \item Docker (v19.03.*);
+   		\item Utilizzando Docker, il sistema operativo host non dovrebbe essere un problema, tuttavia in seguito si daranno le istruzioni per l'esecuzione valide in ambiente unix, nel quale si è anche effettuato la maggior parte dei test (Linux kernel v5.8 o MacOS v10.15);
+        \item Docker (v19.03.*), installazione base, per esempio in Linux è sufficiente: \texttt{sudo snap install docker};
         \item Google Chrome (v90).
     \end{itemize}
 
@@ -84,7 +87,7 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
 
 \subsection{Installazione ed avvio degli applicativi}
     \subsubsection{Server}
-    Nella macchina da utilizzare come server andrà scaricata l'immagine di portacs-server con la versione desiderata \href{https://hub.docker.com/r/threewaymilkshake}{docker hub di \group}.
+    Nella macchina da utilizzare come server andrà scaricata l'immagine di portacs-server con la versione desiderata dal \href{https://hub.docker.com/r/threewaymilkshake}{docker hub di \group}.
     Per l'avvio, in ambiente Linux e MacOS:
     \begin{itemize}
         \item predisporre una cartella nella quale posizionarsi per l'esecuzione che contenga una cartella \texttt{database} che manterrà la persistenza, questa dovrà contenere i file \texttt{map.json}, \texttt{forklifts.json} e \texttt{users.json};
@@ -101,10 +104,10 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
     Si raccomanda di impostare un ip statico per la macchina server, così da non dover richiedere variazioni frequenti nelle configurazioni dei client.
 
     \subsubsection{Client}
-    Come per il server, scaricare l'immagine dal docker hub di \group{} relativa al client voluto (forklift o user). Dopodiché posizionarsi in una cartella dove predisporre un file di configurazione \texttt{config.txt}:
+    Come per il server, scaricare l'immagine dal \href{https://hub.docker.com/r/threewaymilkshake}{docker hub di \group{}} relativa al client voluto (forklift o user). Dopodiché posizionarsi in una cartella dove predisporre un file di configurazione \texttt{config.txt}:
     \begin{itemize}
         \item per i client \textit{user} sarà sufficiente specificare l'indirizzo IP della macchina server così: \texttt{SERVER\_ADDR=ip};
-        \item per i client \texttt{forklift}, oltre all'indirizzo come per gli utenti, bisognerà aggiungere altre informazioni:
+        \item per i client \texttt{forklift}, oltre all'indirizzo del server come per gli utenti, bisognerà aggiungere altre informazioni:
         \begin{itemize}
             \item \textbf{obbligatorie: }
             \begin{itemize}
@@ -114,7 +117,7 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
             \item \textbf{opzionali: }
             \begin{itemize}
                 \item per specificare delle porte diverse da far utilizzare ai servizi, quest'operazione è necessaria solo se si vogliono simulare più unità nella stessa macchina locale, al fine di evitare collisioni tra le porte;
-                \item bisogna impostare due campi, \texttt{ngPort1} e \texttt{ngPort2}, devono essere diversi da altre configurazioni in uso sulla stessa macchina scopi simulativi;
+                \item bisogna impostare due campi, \texttt{ngPort1} e \texttt{ngPort2}, devono essere diversi da altre configurazioni in uso sulla stessa macchina;
                 \item bisogna predisporre un file diverso per ogni unità che si vuole simulare.
             \end{itemize}
         \end{itemize}
@@ -122,9 +125,9 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
         \begin{verbatim}
             startX=0
             startY=1
-            ngPort1=4201
-            ngPort2=8081
-            forkliftId=f1
+            ngPort1=4203
+            ngPort2=8083
+            forkliftId=f3
             forkliftToken=abc
             configurationEnv=custom
             SERVER_ADDR=192.168.3.129
@@ -132,17 +135,15 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
         Queste informazioni sono a disposizione degli admin.
     \end{itemize}
 
-    Per avviare un muletto sarà sufficiente (i valori di default per \texttt{ngPort1} e \texttt{ngPort2} sono rispettivamente \texttt{4201} e \texttt{8081}):
+    Per avviare un muletto sarà sufficiente eseguire (i valori di default per \texttt{ngPort1} e \texttt{ngPort2} sono rispettivamente \texttt{4201} e \texttt{8081}):
     \begin{verbatim}
-        docker run --env-file config.txt threewaymilshake/portacs-client-<type>
-
         docker run --rm --name <nome> -d \
             --env-file config.txt
             -p 4201:4201 \
             -p 8081:8081 \
             portacs-client-forklift
     \end{verbatim}
-    Il <nome> specificato dopo \texttt{--name} serve per terminare il container
+    Il <nome> specificato dopo \texttt{---name} servirà per terminare il container.
 
     Per avviare un utente invece:
     \begin{verbatim}
@@ -160,7 +161,7 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
 \subsection{Costruzione degli artefatti e delle immagini}
     Quando il codice sorgente viene modificato le immagini docker corrispondenti devono essere ricostruite e prima di ciò bisogna produrre gli artefatti necessari. Per le operazioni descritte in seguito si assume di avere le cartelle con i sorgenti relativi.
     \subsubsection{Server}
-        Per produrre l'unico artefatto\textsubscript{G} jar necessario, si deve eseguire \texttt{./gradlew build}, questo produrrà appunto l'eseguibile segnandolo con la versione specificata in \texttt{build.gradle}. Questo comando esegue anche tutti i test di unità segnalando eventuali fallimenti. La build ha come precondizione\textsubscript{G} la corretta formattazione del codice, la si può ottenere con \texttt{./gradlew spotlessApply}.
+        Per produrre l'unico artefatto\textsubscript{G} jar necessario, si deve eseguire \texttt{./gradlew build}, questo produrrà appunto l'eseguibile segnandolo con la versione specificata in \texttt{build.gradle}. Questo comando esegue anche tutti i test di unità segnalando eventuali fallimenti. La build ha come precondizione\textsubscript{G} la corretta formattazione del codice, la quale può essere ottenuta con \texttt{./gradlew spotlessApply}.
         Con il jar aggiornato si può eseguire la build di docker per ottenere l'immagine aggiornata:
         \begin{verbatim}
             docker build -t threewaymilkshake/portacs-server .
@@ -180,7 +181,7 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
 
 
     \subsubsection{Caricamento nel docker hub}
-        \noindent Per aggiornare le immagini nel docker hub, è necessario avere le credenziali o essere collaboratori. Dopo aver effettuato l'accesso tramite tramite \texttt{docker login}, è sufficiente eseguire: \texttt{docker push\textsubscript{G} <nome-immagine>}
+        \noindent Per aggiornare le immagini nel docker hub, è necessario avere le credenziali o essere collaboratori. Dopo aver effettuato l'accesso tramite tramite \texttt{docker login}, è sufficiente eseguire: \texttt{docker {push} <nome-immagine>}
 
 
 

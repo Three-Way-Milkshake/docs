@@ -1,5 +1,5 @@
 \subsection{Client}
-\subsubsection{Diagramma di classe per l'unità}
+\subsubsection{Muletti}
 
 \begin{figure}[H]
 	\centering
@@ -21,7 +21,7 @@ Il package \texttt{component} permette di visualizzare sullo schermo le informaz
 \end{itemize}
 Il package connection, attraverso le classi \texttt{Index} e \texttt{CommandsToJava}, instaura inoltre una comunicazione TCP Socket con java, permettendo di creare una connessione tra frontend e backend.\\
 
-\subsubsection{Diagramma di classe per l'admin-manager}
+\subsubsection{Utenti (amministratori/responsabili)}
 
 \begin{figure}[H]
 	\centering
@@ -50,5 +50,6 @@ Le classi presenti in component permettono di attivare certe classi riferite al 
 	\end{itemize}
 \end{itemize}
 
-
+    \pparagraph{Introdurre nuovi tipi di utenti}
+        Per introdurre nuovi tipi di utente basterà creare un nuovo package dentro \texttt{Connection} lato Node del sistema, inserendo tutte le funzionalità necessarie al tipo d'utente. \\Successivamente bisognerà implementare le corrispondenti parti nel package \texttt{Services} e \texttt{Component} di Angular per la visualizzazione. \\Infine bisognerà inserire il nuovo tipo di utente dentro la classe di \texttt{Login}.
 
