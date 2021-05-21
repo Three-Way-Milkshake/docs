@@ -31,6 +31,14 @@ Questo layer si interfaccia con i client esterni e ha lo scopo di gestire la com
 
 Per ogni nuova connessione, crea un oggetto \texttt{Socket} che passa a \texttt{ConnectionHandler}. Quest'ultima è una componente che esegue su un altro thread dedicato: rimane in attesa fino al risveglio determinato da \texttt{ConnectionAccepter}: una volta attivato, procede a svuotare il buffer di \texttt{Socket} per creare oggetti di tipo \texttt{Connection}, istanziando per ognuno i buffer di input e output. Segue quindi il processo di autenticazione dei muletti o degli utenti, al termine del quale \texttt{ConnectionHandler} torna in attesa.
 
+    \pparagraph{Incrementare il livello di sicurezza}
+    Essendo PORTACS inserito in un contesto limitato al campo di operazione e non pubblico, gode di una sicurezza intrinseca essendo la rete privata e non esposta o accedibile all'esterno. Tuttavia all'interno della rete, le comunicazioni tra server e clients avvengono in chiaro. Se si vuole più sicurezza ci si può dotare di un certificato TLS e sostituire l'implementazione di ServerSocket e Socket rispettivamente con SSLServerSocket e SSLSocket. Dopodiché si dovrà sostituire nella parte node dei client la libreria net con quella tls e configurare il certificato. Non saranno necessarie ulteriori variazioni. Maggiori informazioni:
+    \begin{itemize}
+        \item \href{https://docs.oracle.com/en/java/javase/15/docs/api/java.base/javax/net/ssl/SSLServerSocket.html}{SSLServerSocket};
+        \item \href{https://docs.oracle.com/en/java/javase/15/docs/api/java.base/javax/net/ssl/SSLSocket.html}{SSLSocket};
+        \item \href{https://blogs.oracle.com/blogbypuneeth/steps-to-create-a-self-signed-certificate-using-openssl}{blog oracle sui certificati};
+        \item \href{https://nodejs.org/api/tls.html}{libreria TLS per node}.
+    \end{itemize}
 
 
 
