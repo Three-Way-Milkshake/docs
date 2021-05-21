@@ -24,42 +24,42 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
 
         Connessione &
         \texttt{ConnectionAccepter.java: run} &
-        TODO
+        \texttt{index.js: createConnectionServer}
         \\
 
         Autenticazione &
         \texttt{ConnectionHandler.java: execute}, \texttt{auth} di \texttt{Users/ForkliftsList} e conseguentemente \texttt{authenticate} di \texttt{Forklift/User}&
-        TODO
+        \texttt{index.js: createConnectionServer} e quindi in \texttt{net.connect}
         \\
 
         Modificare una funzionalità generica utente esistente &
         \texttt{User.java: processCommuncation}, all'interno dello switch, identificare la funzionalità voluta (esiste un case per ogni possibile messaggio ricevibile) ed apportare le modifiche desiderate &
-        TODO
+        Trovare all'interno dello switch in \texttt{index.js: createConnectionServer} il case desiderato e modificarlo
         \\
 
         Aggiungere una funzionalità generica utente &
         Aggiungere un case all'interno dello switch di cui sopra avendo cura di terminare con \texttt{break;} per evitare \textit{fallthrough} &
-        TODO
+        Aggiungere un case all'interno dello switch in \texttt{index.js: createConnectionServer}
         \\
 
         Modificare una funzionalità amministratore / responsabile &
         \texttt{Admin/Manager.java: processCommuncation}, all'interno dello switch, identificare la funzionalità voluta (esiste un case per ogni possibile messaggio ricevibile) ed apportare le modifiche desiderate &
-        TODO
+        Modificare il comportamento dell'opportuno case all'interno dello switch in \texttt{index.js: createConnectionServer}
         \\
 
         Aggiungere una funzionalità amministratore / responsabile &
         Aggiungere un case all'interno dello switch di cui sopra avendo cura di terminare con \texttt{break;} per evitare \textit{fallthrough} &
-        TODO
+        Aggiungere un case all'interno dello switch in \texttt{index.js: createConnectionServer}
         \\
 
         Modificare una funzionalità muletto &
         \texttt{Forklift.java: processCommuncation}, all'interno dello switch, identificare la funzionalità voluta (esiste un case per ogni possibile messaggio ricevibile) ed apportare le modifiche desiderate &
-        TODO
+        Modificare il comportamento dell'opportuno case all'interno dello switch in \texttt{index.js: createConnectionServer}
         \\
 
         Aggiungere una funzionalità muletto &
         Aggiungere un case all'interno dello switch di cui sopra avendo cura di terminare con \texttt{break;} per evitare \textit{fallthrough} &
-        TODO
+        Aggiungere un case all'interno dello switch in \texttt{index.js: createConnectionServer}
         \\
 
 
@@ -72,8 +72,8 @@ Ogni stringa può contenere uno o più comandi, separati da ‘;' e ogni comando
     \ssubparagraph{Esempio modifica lato server}
     Volendo modificare il comportamento del comando \texttt{RMU} (remove user) sarà sufficiente andare nel metodo \texttt{processCommunication} all'interno di \texttt{Admin.java}, identificare il case \texttt{"RMU"} e al suo interno fare il \textit{parsing} degli argomenti che ci si aspetta e processarli come voluto. Si consiglia di delegare queste operazioni ad altri metodi come visibile in gran parte del codice già esistente, per evitare di sovraccaricare \texttt{processCommuncation} di responsabilità. Poi come si può osservare all'interno di \texttt{removeUser} quando si deve inviare una risposta al client (la quale dovrà essere ben formata, vedi inizio \ref{comm-protocol}) sarà sufficiente chiamare \texttt{connection.writeToBuffer(...)} passandogli il messaggio da inviare.
 
-    \ssubparagraph{Esempio modifica lato client} %TODO
-    TODO
+    \ssubparagraph{Esempio modifica lato client}
+    Volendo modificare il comportamento del comando \texttt{RMU} (remove user) sarà sufficiente andare nel metodo \texttt{createCommunicationServer} all'interno di \texttt{index.js}, identificare il case \texttt{"RMU"} e al suo interno modificarne il comportamento, conoscendo il protocollo di comunicazione e come queste informazioni vengono passate.
 
 \pparagraph{Connessione: identificazione e login}
     Quando un client si connette deve essere identificato come tipo ed autenticato, perciò deve inviare separatamente ed in sequenza:
