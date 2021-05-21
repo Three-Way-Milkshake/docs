@@ -160,7 +160,7 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
 \subsection{Costruzione degli artefatti e delle immagini}
     Quando il codice sorgente viene modificato le immagini docker corrispondenti devono essere ricostruite e prima di ciò bisogna produrre gli artefatti necessari. Per le operazioni descritte in seguito si assume di avere le cartelle con i sorgenti relativi.
     \subsubsection{Server}
-        Per produrre l'unico artefatto jar necessario, si deve eseguire \texttt{./gradlew build}, questo produrrà appunto l'eseguibile segnandolo con la versione specificata in \texttt{build.gradle}. Questo comando esegue anche tutti i test di unità segnalando eventuali fallimenti. La build ha come precondizione la corretta formattazione del codice, la si può ottenere con \texttt{./gradlew spotlessApply}.
+        Per produrre l'unico artefatto\textsubscript{G} jar necessario, si deve eseguire \texttt{./gradlew build}, questo produrrà appunto l'eseguibile segnandolo con la versione specificata in \texttt{build.gradle}. Questo comando esegue anche tutti i test di unità segnalando eventuali fallimenti. La build ha come precondizione\textsubscript{G} la corretta formattazione del codice, la si può ottenere con \texttt{./gradlew spotlessApply}.
         Con il jar aggiornato si può eseguire la build di docker per ottenere l'immagine aggiornata:
         \begin{verbatim}
             docker build -t threewaymilkshake/portacs-server .
@@ -180,7 +180,7 @@ Sotto elencati saranno descritti i requisiti minimi del sistema per un corretto 
 
 
     \subsubsection{Caricamento nel docker hub}
-        \noindent Per aggiornare le immagini nel docker hub, è necessario avere le credenziali o essere collaboratori. Dopo aver effettuato l'accesso tramite tramite \texttt{docker login}, è sufficiente eseguire: \texttt{docker push <nome-immagine>}
+        \noindent Per aggiornare le immagini nel docker hub, è necessario avere le credenziali o essere collaboratori. Dopo aver effettuato l'accesso tramite tramite \texttt{docker login}, è sufficiente eseguire: \texttt{docker push\textsubscript{G} <nome-immagine>}
 
 
 
