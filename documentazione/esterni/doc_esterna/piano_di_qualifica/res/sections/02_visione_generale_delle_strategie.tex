@@ -22,6 +22,13 @@ I prodotti realizzati sono:
 \subsection{Tabella Obiettivi}
 Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e le relative metriche di misura.
 
+Abbiamo un punteggio, che corrisponde al punteggio delle metriche sotto quell'obiettivo.
+In particolare ogni metrica conferisce un punteggio:
+\begin{itemize}
+	\item 0 se non superato;
+	\item 1 se accettabile;
+	\item 2 se preferibile.
+\end{itemize}
 
 
 \renewcommand{\arraystretch}{1.5}
@@ -29,34 +36,121 @@ Viene presentata in seguito la tabella degli obiettivi di qualità prefissati e 
 \begin{longtable}{
 		>{}p{0.1\textwidth}
 		>{}p{0.2\textwidth}
-        >{}p{0.5\textwidth}
+        >{}p{0.3\textwidth}
+        >{\centering}p{0.15\textwidth}
         >{\centering}p{0.30\textwidth} }
 
 	\rowcolorhead
 	\centering \headertitle{Codice} &
 	\centering \headertitle{Nome} &
-    \centering \headertitle{Descrizione} 
+    \centering \headertitle{Descrizione} &
+    \centering \headertitle{Totale}
 	\endfirsthead
     \endhead
 
-        01 & Miglioramento continuo & Capacità del processo di misurare e migliorare le proprie capacità 
+        01 & Miglioramento continuo & Capacità del processo di misurare e migliorare le proprie capacità & 0/18
                          \tabularnewline
 
-        02 & Leggibilità della documentazione & I documenti devono essere leggibili e comprensibili da persone con licenza di scuola media/superiore  \tabularnewline
+        02 & Leggibilità della documentazione & I documenti devono essere leggibili e comprensibili da persone con licenza di scuola media/superiore & 0/1  \tabularnewline
 
-        03 & Implementazione Requisiti Obbligatori & Devono venire implementati tutti i requisiti obbligatori descritti dall'\textsc{Analisi dei Requisiti} \tabularnewline
+        03 & Implementazione Requisiti Obbligatori & Devono venire implementati tutti i requisiti obbligatori descritti dall'\textsc{Analisi dei Requisiti} & 0/1 \tabularnewline
 
-        04 & Manutenzione e comprensione del codice & Il codice deve essere quanto più comprensibile e mantenibile  \tabularnewline
+        04 & Manutenzione e comprensione del codice & Il codice deve essere quanto più comprensibile e mantenibile & 0/4 \tabularnewline
 
-        05 & Copertura del codice & Il codice dovrà essere testato per buona parte per garantire le funzionalità previste dai requisiti \tabularnewline
+        05 & Copertura del codice & Il codice dovrà essere testato per buona parte per garantire le funzionalità previste dai requisiti & 0/2 \tabularnewline
 
-        06 & Conformità & Il prodotto dovrà essere conforme ai requisiti, implementando le funzionalità richieste \tabularnewline
+        06 & Conformità & Il prodotto dovrà essere conforme ai requisiti, implementando le funzionalità richieste & 0/1 \tabularnewline
 
-        07 & Robustezza & Il prodotto dovrà far fronte a situazioni anomale gestendole senza arrestare la sua esecuzione  \tabularnewline
+        07 & Robustezza & Il prodotto dovrà far fronte a situazioni anomale gestendole senza arrestare la sua esecuzione & 0/1 \tabularnewline
 
-        08 & Usabilità & Il prodotto dovrà essere il più semplice possibile da utilizzare \tabularnewline
+        08 & Usabilità & Il prodotto dovrà essere il più semplice possibile da utilizzare & 0/2 \tabularnewline
         \caption{Tabella Obiettivi}
     \end{longtable}
 
+\subsection{Tabella Metriche}
+Per raggiungere gli obiettivi di qualità è necessario che il processo di verifica produca dei risultati quantificabili, così da poterli confrontare con gli obiettivi fissati a priori. Per questo vengono prefissate delle metriche e dei valori di sufficienza minimi necessari, i quali serviranno a controllare che i livelli qualitativi di processo e di prodotto siano in linea con gli obiettivi prefissati.\\La seguente tabella riporta le metriche utilizzate, le rispettive soglie di valori preferibili e accettabili e i relativi obiettivi, così da poter monitorare e controllare gli obiettivi raggiunti e gli eventuali progressi.
+
+%sistemare
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{
+		>{\centering}p{0.1\textwidth}
+		>{}p{0.18\textwidth}
+		>{\centering}p{0.20\textwidth}
+		>{\centering}p{0.20\textwidth}
+		>{}p{0.12\textwidth} }
+	
+	\rowcolorhead
+	\centering \headertitle{Codice} &
+	\centering \headertitle{Nome} &
+	\centering \headertitle{Valori Preferibili} &
+	\centering \headertitle{Valori Accettabili}	&
+	\centering \headertitle{Obiettivi}
+	\endfirsthead
+	\endhead
+	
+	SRI & Scarto Riunioni Interne & 0 & $-90 \leq SRI \leq 90$ & 01 \\
+	
+	SRE & Scarto Riunioni Esterne &  0 & $-90 \leq SRE \leq 90$ & 01 \\
+	
+	REI & Rapporto riunioni Esterne e Interne & $0.2 \leq REI \leq 0.5$ & $0.3 \leq REI \leq 0.5$ & 01\\
+	
+	RRL & Rapporto tempo Riunioni e Lavoro individuale & $0.08 \leq RRL \leq 0.12$ & $0.08 \leq RRL \leq 0.4$ & 01 \\
+	
+	RTEI & Rapporto Tempo Effettivo totale e Individuale & $0.17$ & $0.1 \leq RTEI \leq 0.2$ & 01 \\
+	
+	RTPI & Rapporto Tempo Preventivato totale e Individuale & $0.17$ & $0.14 \leq RTPI \leq 0.19$ & 01 \\
+	
+	DTEP & Differenza Tempo Effettivo e Preventivato & $0$ & $-600 \leq DTEP \leq 600$ & 01 \\
+	
+	DLP & Distribuzione Lavoro Preventivato & $0 \leq DLP \leq 600$ & $0 \leq DLP \leq 900$ & 01 \\
+	
+	DLE & Distribuzione Lavoro Effettivo & $0 \leq DLE \leq 600$ & $0 \leq DLE \leq 900$ & 01 \\
+	
+	PDTT & Percentuale Discostamento Totale (in Tempo) & $1$ & $PDTT \geq 0.4$ & 01 \\
+	
+	PDTR & Percentuale Discostamento Totale (in Ritardo) & $0$ & $PDTR \leq 0.3$ & 01 \\
+	
+	PDTA & Percentuale Discostamento Totale (in Anticipo) & $0$ & $PDTA \leq 0.3$ & 01 \\
+	
+	PDDWT & Percentuale Discostamento DoneWorking (in Tempo) & $1$ & $PDDWT \geq 0.4$ & 01 \\
+	
+	PDDWR & Percentuale Discostamento DoneWorking (in Ritardo) & $0$ & $PDDWR \leq 0.3$ & 01 \\
+	
+	PDDWA & Percentuale Discostamento DoneWorking (in Anticipo) & $0$ & $PDDWA \leq 0.3$ & 01 \\
+	
+	PDDVT & Percentuale Discostamento DoneVerifying (in Tempo) & $1$ & $PDDVT \geq 0.4$ & 01 \\
+	
+	PDDVR & Percentuale Discostamento DoneVerifying (in Ritardo) & $0$ & $PDDVR \leq 0.3$ & 01 \\
+	
+	PDDVA & Percentuale Discostamento DoneVerifying (in Anticipo) & $0$ & $PDDVA \leq 0.3$ & 01 \\
+	
+	IG & Indice di Gulpease & $70 \leq IG \leq 100$ & $50 \leq IG \leq 100$ & 02 \\
+	
+	PROS & Percentuale Requisiti Obbligatori Soddisfatti & 100\% & 100\% & 03 \\
+	
+	DEP & Depth of hierarchies & $DEP \leq 2$ & $DEP \leq 3$ & 04 \\
+	
+	LEV & Level of nesting & $1\leq LEV \leq 3$ & $1\leq LEV \leq 6$ & 04 \\
+	
+	PAR & Parametri per metodo & $PAR \leq 4$ & $PAR \leq 6$ & 04 \\
+	
+	CCL & Complessità Ciclomatica & $CCL \leq 10 $ & $CCL \leq 20 $& 04 \\
+	
+	CC & Code Coverage & $CC\geq 70\%$ & $CC\geq 50\%$ & 05 \\
+	
+	PST & Percentuale Superamento Test & $PST=100\%$ & $PST\geq85\%$ & 05 \\
+	
+	CS & Completezza del Software & $CS=1$ & $CS=1$ & 06 \\
+	
+	A & Affidabilità del software & $A=0$ & $A < 0.15$ & 07 \\
+	
+	C & Numero di tocchi/Click necessari & $C<4$ & $C<6$& 08 \\
+	
+	S & Numero di Secondi necessari & $S<15$ & $S<40$ & 08 \\
+	
+	
+	\caption{Tabella delle Metriche}
+\end{longtable}
 
 \pagebreak
