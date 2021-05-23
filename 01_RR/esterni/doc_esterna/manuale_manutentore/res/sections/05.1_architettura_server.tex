@@ -123,17 +123,19 @@ La strategia può essere cambiata tramite il metodo \texttt{setStrategy} nella c
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.50]{res/diagrams/server/server_pack_collision.jpg}
+	\includegraphics[scale=0.60]{res/diagrams/server/server_pack_collision.jpg}
 	\caption{Visione di dettaglio del package Collision}
 \end{figure}
 
 
 Qui è contenuta la logica che gestisce le collisioni fra i muletti che circolano in guida autonoma all'interno del magazzino. L'elaborazione è scandita dal timer dell'\texttt{Engine}: ad ogni intervallo di tempo, vengono eseguite due operazioni sequenziali:
 \begin{itemize}
-	\item \textbf{rilevazione:} sulla base delle future mosse di ogni unità, vengono determinate le possibili collisioni;
-	\item \textbf{risoluzione:} in caso vengano rilevate, vengono elaborate le mosse, da trasmettere alle unità coinvolte, che impediscano tali collisioni.
+	\item \textbf {rilevazione degli stalli:} vengono individuate le unità che rimangono in stallo per un tempo superiore ad una soglia prestabilita, sintomo di una condizione critica nella circolazione dei muletti. La componente \texttt{DeadlockCheck} si occupa di gestire queste situazioni;
+	\item \textbf{rilevazione delle collisioni:} conoscendo le future mosse di ogni unità, vengono determinate le possibili collisioni tra le stesse. La componente \texttt{CollisionDetection} esegue queste operazioni;
+	\item \textbf{gestione collisioni frontali:} sulla base delle collisioni eventualmente rilevate, vengono gestite le potenziali collisioni frontali, che richiedono una risoluzione particolare. Questo step è svolto dalla componente \texttt{HeadOnCollisions};
+	\item \textbf{gestione delle precedenze:} l'ultimo passo risponde all'esigenza di stabilire delle precedenze durante la normale circolazione dei muletti: sulla base delle potenziali collisioni rilevate, alcuni si fermeranno per lasciare passare gli altri. Di ciò si occupa la componente \texttt{NearestToCollision}.
 \end{itemize}
-Le classi \texttt{CollisionDetector} e \texttt{CollisionSolver} incapsulano rispettivamente le due funzionalità elencate.
+
 
 Viene applicato in questo contesto il design pattern\textsubscript{G} \texttt{Pipeline}\footnote{Variante del pattern \textit{Chain Of Responsibility}: \url{https://java-design-patterns.com/patterns/pipeline/}}, che permette di definire vari \texttt{Handler} da comporre come catena di operazioni. La pipeline può essere poi eseguita (se necessario, come in questo caso, ripetutamente) con un comando che attiva i vari step sequenzialmente. Ogni \texttt{Handler} specifica i tipi del proprio parametro di input e di output: l'output di un \texttt{Handler} sarà l'input dell'\texttt{Handler} successivo.
 In questo caso l'input sarà una struttura rappresentante muletti attivi con le loro posizioni e prossime mosse, mentre l'output un'altra struttura che ad ogni punto con collisione associ i muletti coinvolti e le azioni da intraprendere così da poterle comunicare.
