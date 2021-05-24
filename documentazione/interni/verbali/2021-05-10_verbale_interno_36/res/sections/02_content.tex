@@ -1,8 +1,23 @@
 \section{Verbale della riunione}
 
 \subsection{Analisi e osservazioni sui periodi trascorsi}
-
-// alberto
+Osservazioni sull'andamento delle metriche nel periodo Validazione e Collaudo:
+\begin{itemize}
+	\item Iniziamo dalle metriche dei processi:
+		\begin{itemize}
+			\item le metriche \textbf{SRE}, \textbf{SRI}, \textbf{RRL} e \textbf{REI} risultano superate, col tempo siamo migliorati nel bilanciare i tempi e la quantità delle riunioni;
+			\item le metriche \textbf{RTEI} e \textbf{DTEP} risultano superate da tutti i membri, mentre \textbf{RTPI} risulta non superata da tutti i membri, poichè abbiamo voluto bilanciare le ore per persona diversamente in quest'ultimo periodo;
+			\item le metriche relative ai ticket risultano quasi tutte superate, le uniche non superate sono \textbf{PDTR} e \textbf{PDDWR}, entrambe stanno a significare che abbiamo avuto più ticket del previsto terminati in ritardo;
+		\end{itemize}
+	\item Riguardo alle metriche di documentazione, ovvero gli Indici di Gulpease (\textbf{IG}), calcolati attraverso uno script in python, sono stati superati su tutti i documenti;
+	\item Infine le metriche di prodotto:
+		\begin{itemize}
+			\item le metriche \textbf{PROS}, \textbf{PST} e \textbf{DEP} sono state superate, per calcolarle abbiamo osservato le tabelle dei test, per le prime due e i diagrammi di classe, per la terza;
+			\item le metriche \textbf{LEV}, \textbf{PAR} e \textbf{CCL} sono state superate, queste metriche le abbiamo calcolate attraverso il CheckStyle;
+			\item la metrica di \textbf{CC} è stat superata con 55\%, abbiamo calcolato la Cove Coverage, attraverso Coveralls.IO e GitHubActions, in particolare JacocoReports con Junit per Java, e MochaJS, Karma e Jasmine per la parte in JavaScript.
+		\end{itemize}
+	\item Il gruppo si ritiene soddisfatto del miglioramento, misurato dalle metriche definite nel PdQ e NdP, il cruscotto web ha sicuramente facilitato il tracciamento e calcolo delle metriche.
+\end{itemize}
 
 \subsection{Osservazioni sulla contabilità dei periodi trascorsi}
 
