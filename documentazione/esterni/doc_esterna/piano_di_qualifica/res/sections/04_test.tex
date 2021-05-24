@@ -341,21 +341,15 @@ dove:
 		TI23-O & Si verifichi l'integrazione tra \texttt{JsonForklift} e la libreria \texttt{gson}. \tabularnewline
 		TI24-O & Si verifichi l'integrazione tra \texttt{JsonMap} e la libreria \texttt{gson}. \tabularnewline
 	\end{longtable}
-
+\pagebreak
 \subsection{Test di Unità}
 I Test di Unità verificano le parti atomiche del software (per esempio funzioni o procedure). Vengono utilizzati per assicurarsi che la logica interna del codice sia rispettata.\\I Test di Unità verranno sviluppati quando verrà raggiunto il macro periodo\textsubscript{G} appropriata, secondo il modello a V\textsubscript{G}.
 \begin{center}
-	TU[Codice]-[Importanza]\\
+	TU-[Codice]\\
 \end{center}
 dove:
 \begin{itemize}
 	\item \textbf{Codice:} rappresenta il codice identificativo crescente del componente da verificare.
-	\item \textbf{Importanza:} indica l'importanza del requisito\textsubscript{G} che può essere:
-	\begin{itemize}
-		\item \textbf{O} per i requisiti\textsubscript{G} obbligatori;
-		\item \textbf{D} per i requisiti\textsubscript{G} desiderabili;
-		\item \textbf{F} per i requisiti\textsubscript{G} facoltativi.
-	\end{itemize}
 \end{itemize}
 
 %tabella
@@ -381,6 +375,116 @@ dove:
 	TU-7 & Viene verificato il metodo updateMap() della classe JsonMap. \tabularnewline
 	TU-8 & Viene verificato il metodo readUser() della classe JsonUser. \tabularnewline
 	TU-9 & Viene verificato il metodo updateUser() della classe JsonUser. \tabularnewline
-
+	TU-10 & Viene verificato il metodo initializationError() della classe PortacsApplication. \tabularnewline
+	TU-11 & Viene verificato la creazione e ricerca delle liste di sequenza di task, attraverso il metodo testSequencesCreationAndRetrieval() di TasksSequencesListTest. \tabularnewline
+	TU-12 & Viene verificato la creazione e l'avvio della classe ConnectionAccepter. \tabularnewline
+	TU-13 & Viene verificata la creazione ed esecuzione della classe ConnectionHandler. \tabularnewline
+	TU-14 & Viene verificato l'utilizzo di Enums della classe ConnectionHandler. \tabularnewline
+	TU-15 & Viene verificata la creazione di una connessione della classe Connection. \tabularnewline
+	TU-16 & Viene verificato il metodo Read() della classe Connection. \tabularnewline
+	TU-17 & Viene verificato il metodo NextPositions() della classe Position, con molti test, ben 16 diversi metodi per testare tutte le possibilità, per ottenere la massima copertura relativa a questo metodo di questa classe. \tabularnewline
+	TU-18 & Viene testato se la distanza tra due punti di tipo SimplePoint entrambi nello stesso asse x, viene calcolata esattamente, relativo alla classe SimplePoint. \tabularnewline
+	TU-19 & Viene testato se la distanza tra due punti di tipo SimplePoint entrambi nello stesso asse y, viene calcolata esattamente, relativo alla classe SimplePoint. \tabularnewline
+	TU-20 & Viene verificato la creazione e ricerca delle liste di sequenza di task, attraverso il metodo testSequencesCreationAndRetrieval() di TasksSequencesTest. \tabularnewline
+	TU-21 & Viene verificato il meccanismo di connessione, binding e active status relativo alla classe Client. \tabularnewline
+	TU-22 & Viene verificato il metodo di PropertyChangeMechanicsm() relativo alla classe Client. \tabularnewline
+	TU-23 & Viene verificata il corretto invio delle informazioni della mappa, da parte del Client. \tabularnewline
+	TU-24 & Viene verificato se la prossima posizione di un'unità attiva, viene ritornato correttamente, relativo alla classe Forklift. \tabularnewline
+	TU-25 & Viene verificato se la prossima posizione di un'unità non attiva, viene ritornato correttamente, relativo alla classe Forklift. \tabularnewline
+	TU-26 & Viene verificato la conversione da task a stringa, della classe Forklift. \tabularnewline
+	TU-27 & Viene verificata la conversione di forklift e forklift token in stringa, della classe ForkliftsList. \tabularnewline
+	TU-28 & Viene verificata la conversione di forklift position in stringa, della classe ForkliftsList. \tabularnewline
+	TU-29 & Viene verificato il metodo di token generation della classe ForkliftsList. \tabularnewline
+	TU-30 & Viene verificato il metodo che ritona le task dei forklifts della classe ForkliftsList. \tabularnewline
+	TU-31 & Viene verificato l'algoritmo di collision detection, della classe CollisionDetection. \tabularnewline
+	TU-32 & Viene verificato il metodo getCollision, della classe CollisionMap. \tabularnewline
+	TU-33 & Viene verificato il metodo sum() della classe CollisionMap. \tabularnewline
+	TU-34 & Viene verificato l'anti-deadlock system con uno stallo di 3 turni della classe DeadlockCheck. \tabularnewline
+	TU-35 & Viene verificato l'anti-deadlock system con uno stallo di 6 turni della classe DeadlockCheck. \tabularnewline
+	TU-36 & Viene verificato se viene trovata la collisione, metodo collisionOccurred() della classe HeadOnCollisions. \tabularnewline
+	TU-37 & Viene verificato se stop e ricalcolamento percorso funziona, con la prima unità già ferma, nella classe HeadOnCollisions. \tabularnewline
+	TU-38 & Viene verificato se stop e ricalcolamento percorso funziona, con entrambe le unità già ferme, nella classe HeadOnCollisions. \tabularnewline
+	TU-39 & Viene verificato se stop e ricalcolamento percorso funziona, con nessuna delle due unità già ferme, nella classe HeadOnCollisions. \tabularnewline
+	TU-40 & Viene verificato se stop e ricalcolamento percorso funziona, con la seconda unità già ferma, nella classe HeadOnCollisions. \tabularnewline
+	TU-41 & Viene verificato se il sistema di rilevamento collisione funziona nella classe HeadOnCollisions, quando entrambe le unità sono nello stesso asse x, mentre la coordinata y della prima unità è inferiore alla coordinata y della seconda. \tabularnewline
+	TU-42 & Viene verificato se il sistema di rilevamento collisione funziona nella classe HeadOnCollisions, quando entrambe le unità sono nello stesso asse x, mentre la coordinata y della prima unità è superiore alla coordinata y della seconda. \tabularnewline
+	TU-43 & Viene verificato se il sistema di rilevamento collisione funziona nella classe HeadOnCollisions, quando entrambe le unità sono nello stesso asse y, mentre la coordinata x della prima unità è superiore alla coordinata x della seconda. \tabularnewline
+	TU-44 & Viene verificato se il sistema di rilevamento collisione funziona nella classe HeadOnCollisions, quando entrambe le unità sono nello stesso asse y, mentre la coordinata x della prima unità è inferiore alla coordinata x della seconda. \tabularnewline
+	TU-45 & Viene verificato se nella classe NearestToCollision il comando di stop è stato assegnato alla corretta unità, l'unità più distante è già ferma. \tabularnewline
+	TU-46 & Viene verificato se nella classe NearestToCollision il comando di stop è stato assegnato alla corretta unità, l'unità più distante sta già ricalcolando. \tabularnewline
+	TU-47 & Viene verificato se nella classe NearestToCollision il comando di stop è stato assegnato alla corretta unità, nessuna unità è ferma. \tabularnewline
+	TU-48 & Viene verificato se nella classe NearestToCollision il comando di stop è stato assegnato alla corretta unità, le unità sono equalmente distanti dal punto di collisione. \tabularnewline
+	TU-49 & Viene verificato il metodo compexPath() della classe StrategyBreadthFirst. \tabularnewline
+	TU-50 & Viene verificato il metodo MoveConverter() della classe StrategyBreadthFirst(). \tabularnewline
+	TU-51 & Viene verificato l'algoritmo di path finding nella classe StrategyBreadthFirst, con le varie alternative, di direzioni in entrata. \tabularnewline
+	TU-52 & Viene verificato il metodo che restituisce il POI più vicino della classe WarehouseMap. \tabularnewline
+	TU-53 & Viene verificata la conversione da Map e POI a Stringa della classe WarehouseMap. \tabularnewline
+	TU-54 & Viene verificato il metodo PropertChangeMechanism() della classe WarehouseMap. \tabularnewline
+	TU-55 & Viene verificata la conversione da Mappa a Intero della classe WarehouseMap. \tabularnewline
+	TU-56 & Viene verificato il metodo di creazione della mappa della classe WarehouseMap. \tabularnewline
+	TU-57 & Viene verificato il metodo di lettura dei forklift da file JSON, della classe JsonForklift. \tabularnewline
+	TU-58 & Viene verificato il metodo di update dei forklift da file JSON, della classe JsonForklift. \tabularnewline
+	TU-59 & Viene verificato il metodo di lettura della mappa dal file JSON, della classe JsonMap. \tabularnewline
+	TU-60 & Viene verificato il metodo di update della mappa dal file JSON, della classe JsonMap. \tabularnewline
+	TU-61 & Viene verificato il metodo di lettura di utenti dal file JSON, della classe JsonUser. \tabularnewline
+	TU-62 & Viene verificato il metodo di update di utenti dal file JSON, della classe JsonUser. \tabularnewline
+	TU-63 & Viene verificato il corretto funzionamento del metodo addPOI(), della classe ListPOI. \tabularnewline
+	TU-64 & Viene verificato il corretto funzionamento del metodo getListMap(), della classe ListPOI. \tabularnewline
+	TU-65 & Viene verificato il corretto funzionamento del metodo delete(), della classe ListPOI. \tabularnewline
+	TU-66 & Viene verificato il corretto funzionamento del metodo aggiungiComando(\textit{parametro}), della classe CommandsToJava. \tabularnewline
+	TU-67 & Viene verificato il corretto funzionamento del metodo getContainer(), della classe CommandsToJava. \tabularnewline
+	TU-68 & Viene verificato il corretto funzionamento del metodo getDatiESvuota(), della classe CommandsToJava. \tabularnewline
+	TU-69 & Viene verificato il corretto funzionamento del metodo getListManager(), della classe ListManager. \tabularnewline
+	TU-70 & Viene verificato il corretto funzionamento del metodo add(), della classe ListManager. \tabularnewline
+	TU-71 & Viene verificato il corretto funzionamento del metodo delete(), della classe ListManager. \tabularnewline
+	TU-72 & Viene verificato il corretto funzionamento del metodo removeOne(\textit{id}), della classe ListManager. \tabularnewline
+	TU-73 & Viene verificato il corretto funzionamento del metodo delete(), della classe ListManager. \tabularnewline
+	TU-74 & Viene verificato il metodo getAssigned() della classe ListsTask. \tabularnewline
+	TU-75 & Viene verificato il metodo getNotAssigned() della classe ListTask. \tabularnewline
+	TU-76 & Viene verificato il metodo addListAssigned(\textit{list}) della classe ListTask. \tabularnewline
+	TU-77 & Viene verificato il metodo addListNotAssigned(\textit{id}) della classe ListTask. \tabularnewline
+	TU-78 & Viene verificato il metodo addTempoaryList(\textit{list}) della classe ListTask. \tabularnewline
+	TU-79 & Viene verificato il metodo remove() della classe ListTask. \tabularnewline
+	TU-80 & Viene verificato il metodo removeList(\textit{id}) della classe ListTask. \tabularnewline
+	TU-81 & Viene verificato il metodo getRows() della classe Map. \tabularnewline
+	TU-82 & Viene verificato il metodo getColumns() della classe Map. \tabularnewline
+	TU-83 & Viene verificato il metodo mapToString() della classe Map. \tabularnewline
+	TU-84 & Viene verificato il metodo getMap() della classe Map. \tabularnewline
+	TU-85 & Viene verificato il metodo getPoisWellMapped() della classe Map. \tabularnewline
+	TU-86 & Viene verificato il metodo getMapForServer() della classe Map. \tabularnewline
+	TU-87 & Viene verificato il metodo createMap() della classe Map. \tabularnewline
+	TU-88 & Viene verificato il metodo setMap() della classe Map. \tabularnewline
+	TU-89 & Viene verificato il metodo getListsUnit() della classe UnitsList. \tabularnewline
+	TU-90 & Viene verificato il metodo add() della classe UnitsList. \tabularnewline
+	TU-91 & Viene verificato il metodo delete() della classe UnitsList. \tabularnewline
+	TU-92 & Viene verificato il metodo getInformation() della classe UserInformation. \tabularnewline
+	TU-93 & Viene verificato il metodo setId() della classe UserInformation. \tabularnewline
+	TU-94 & Viene verificato il metodo setPassword() della classe UserInformation. \tabularnewline
+	TU-95 & Viene verificato il metodo setInfo() della classe UserInformation. \tabularnewline
+	TU-96 & Viene verificato il metodo getListForCell() della classe ListPOI. \tabularnewline
+	TU-97 & Viene verificato il metodo contains() della classe ListPOI. \tabularnewline
+	TU-98 & Viene verificato il component RegistrationManagerComponent. \tabularnewline
+	TU-99 & Viene verificato il component ViewListManagerComponent. \tabularnewline
+	TU-100 & Viene verificato il component ManageListService. \tabularnewline
+	TU-101 & Viene verificato il component ListUnitCOmponent. \tabularnewline
+	TU-102 & Viene verificato il component ViewListManagerserice. \tabularnewline
+	TU-103 & Viene verificato il component ManageTaskComponent. \tabularnewline
+	TU-104 & Viene verificato il component ManageMapComponent. \tabularnewline
+	TU-105 & Viene verificato il component AdminComponent. \tabularnewline
+	TU-106 & Viene verificato il component ManageMapService. \tabularnewline
+	TU-107 & Viene verificato il component TaskListsService. \tabularnewline
+	TU-108 & Viene verificato il component RegistrationManagerService. \tabularnewline
+	TU-109 & Viene verificato il component TaskListsComponent. \tabularnewline
+	TU-110 & Viene verificato il component ManagerComponent. \tabularnewline
+	TU-111 & Viene verificato il component ListUnitService. \tabularnewline
+	TU-112 & Viene verificato il component AppComponent. \tabularnewline
+	TU-113 & Viene verificato il component POIListService. \tabularnewline
+	TU-114 & Viene verificato il component PersonalAccountService. \tabularnewline
+	TU-115 & Viene verificato il component PersonalAccountComponent. \tabularnewline
+	TU-116 & Viene verificato il component POIListComponent. \tabularnewline
+	TU-117 & Viene verificato il component GenericComponent. \tabularnewline
+	TU-118 & Viene verificato il component LoginComponent. \tabularnewline
+	TU-119 & Viene verificato il component ViewMapComponent. \tabularnewline
+	
 \end{longtable}
 %fine tabella
