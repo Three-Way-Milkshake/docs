@@ -1,0 +1,157 @@
+\section{Verbale della riunione}
+
+\subsection{Analisi e osservazioni sui periodi trascorsi}
+Osservazioni sull'andamento delle metriche nel periodo Validazione e Collaudo:
+\begin{itemize}
+	\item Iniziamo dalle metriche dei processi:
+		\begin{itemize}
+			\item le metriche \textbf{SRE}, \textbf{SRI}, \textbf{RRL} e \textbf{REI} risultano superate, col tempo siamo migliorati nel bilanciare i tempi e la quantità delle riunioni;
+			\item le metriche \textbf{RTEI} e \textbf{DTEP} risultano superate da tutti i membri, mentre \textbf{RTPI} risulta non superata da tutti i membri, poichè abbiamo voluto bilanciare le ore per persona diversamente in quest'ultimo periodo;
+			\item le metriche relative ai ticket risultano quasi tutte superate, le uniche non superate sono \textbf{PDTR} e \textbf{PDDWR}, entrambe stanno a significare che abbiamo avuto più ticket del previsto terminati in ritardo;
+		\end{itemize}
+	\item Riguardo alle metriche di documentazione, ovvero gli Indici di Gulpease (\textbf{IG}), calcolati attraverso uno script in python, sono stati superati su tutti i documenti;
+	\item Infine le metriche di prodotto:
+		\begin{itemize}
+			\item le metriche \textbf{PROS}, \textbf{PST} e \textbf{DEP} sono state superate, per calcolarle abbiamo osservato le tabelle dei test, per le prime due e i diagrammi di classe, per la terza;
+			\item le metriche \textbf{LEV}, \textbf{PAR} e \textbf{CCL} sono state superate, queste metriche le abbiamo calcolate attraverso il CheckStyle;
+			\item la metrica di \textbf{CC} è stata superata con 55\%, abbiamo calcolato la Code Coverage, attraverso Coveralls.IO e GitHub Actions, in particolare JacocoReports con Junit per Java, e MochaJS, Karma e Jasmine per la parte in JavaScript.
+		\end{itemize}
+	\item Il gruppo si ritiene soddisfatto del miglioramento, misurato dalle metriche definite nel PdQ e NdP, il cruscotto web ha sicuramente facilitato il tracciamento e calcolo delle metriche.
+\end{itemize}
+
+\subsection{Osservazioni sulla contabilità dei periodi trascorsi}
+
+In questa sezione vengono raccolte le osservazioni rilevate dai consuntivi calcolati al termine degli ultimi periodi. Il documento di riferimento è il \textsc{Piano di Progetto v4.0.0} e le seguenti sezioni si riferiscono a questo:
+
+\subsubsection{Consuntivo Progettazione di Dettaglio e Codifica, periodo 3}
+
+Dalla \S 7.3.3.1: il periodo chiude in perdita di 108\euro: la preparazione della presentazione ha richiesto più tempo del previsto, e sono stati portati a termine alcuni obiettivi del periodo precedente. Con la conclusione di questo periodo sono stati soddisfatti tutti gli obiettivi del macroperiodo Progettazione di Dettaglio e Codifica.
+
+\subsubsection{Consuntivo Validazione e Collaudo, periodo 1}
+\S 8.1.3.1: il periodo chiude in pari. La documentazione è stata incrementata sulla base degli ultimi avanzamenti previsti: nulla da segnalare.
+
+
+\subsubsection{Consuntivo Validazione e Collaudo, periodo 2}
+
+\S 8.2.3.1: il periodo chiude con un risparmio di 645\euro: le attività di testing e collaudo si sono svolte in relativa agilità e hanno permesso un discreto avanzo temporale. Sono stati portati a compimento tutti gli obiettivi prefissati.
+
+\subsubsection{Consuntivo Validazione e Collaudo, periodo 3}
+
+\S 8.3.3.1: il periodo chiude in pari: nulla da segnalare.
+
+\subsubsection{Osservazioni finali}
+
+I componenti del gruppo hanno riportato il seguente carico orario individuale:
+\begin{itemize}
+	\item \textbf{Chiarello Sofia:} 103 ore;
+	\item \textbf{Crivellari Alberto}: 103 ore;
+	\item \textbf{De Renzis Simone}: 103 ore;
+	\item \textbf{Greggio Nicolò}: 105 ore;
+	\item \textbf{Tessari Andrea}: 103 ore;
+	\item \textbf{Zuccolo Giada}: 103 ore;
+\end{itemize}
+
+Il costo finale per la realizzazione del progetto ammonta a \textbf{10152\euro}: sono stati soddisfatti tutti i requisiti obbligatori, e nessun requisito desiderabile o facoltativo.
+
+
+\subsection{Analisi dei rischi}
+
+\subsubsection{Analisi dei Requisiti}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable} { 
+		>{}M{0.12\textwidth}
+		>{\centering}p{0.15\textwidth} 
+		>{}p{0.35\textwidth}
+		>{}p{0.35\textwidth} 
+	}
+	\rowcolorhead
+	\centering\headertitle{Codice} &
+	\centering\headertitle{Macro periodo} &
+	\centering\headertitle{Riscontro} &
+	\centering\headertitle{Piano di contingenza}
+	\endfirsthead	
+	\endhead
+	\caption{Analisi dei rischi} \endhead	
+	
+	RIS\_T - 3 & Analisi dei Requisiti & La documentazione del capitolato\textsubscript{G} è risultata insufficiente per una completa comprensione del problema e non è stato possibile derivarne direttamente dei requisiti\textsubscript{G} dettagliati. & \'E stato quindi tenuto un incontro con il proponente, il quale ha chiarito con precisione il dominio del problema e i suoi vincoli principali. La disponibilità del proponente ha permesso un intenso scambio di domande e risposte che è continuato per tutta la durata dell'Analisi, attraverso il quale i dubbi del gruppo sono stati risolti.		
+	\tabularnewline	
+	RIS\_O - 2 & Analisi dei Requisiti & Complice anche il periodo\textsubscript{G} di festività, alcuni membri non hanno partecipato alle riunioni, si sono presentati in ritardo o sono dovuti uscire in anticipo a causa di impegni personali. & In tutti questi casi il gruppo era comunque stato avvisato per tempo, e l'assenza o i ritardi erano giustificati. I membri interessati hanno potuto consultare i verbali prodotti in seguito agli incontri per rimanere aggiornati sulle decisioni prese.
+	
+\end{longtable}
+\subsubsection{Progettazione Architetturale}
+
+\begin{longtable} { 
+		>{}M{0.12\textwidth}
+		>{\centering}p{0.15\textwidth} 
+		>{}p{0.35\textwidth}
+		>{}p{0.35\textwidth} 
+	}
+	\rowcolorhead
+	\centering\headertitle{Codice} &
+	\centering\headertitle{Macro periodo} &
+	\centering\headertitle{Riscontro} &
+	\centering\headertitle{Piano di contingenza}
+	\endfirsthead	
+	\endhead
+	\caption{Analisi dei rischi} \endhead	
+	RIS\_O - 1 & Progettazione Architetturale & Sono stati rilevati ampi discostamenti tra le spese preventivate e quelle sostenute. Anche le scadenze fissate hanno subìto slittamenti a causa dell'intenso carico di lavoro a cui sono stati soggetti i componenti del gruppo. Gli intensi lavori di ristrutturazione dei documenti \textsc{Piano di Qualifica}, \textsc{Piano di Progetto}, e la creazione del cruscotto\textsubscript{G} interattivo web hanno richiesto molte ore. & I preventivi successivi verranno rimodulati per aderire con più precisione alle spese che effettivamente dovranno essere sostenute.
+
+\end{longtable}
+
+
+\subsubsection{Progettazione di Dettaglio e Codifica}
+
+\begin{longtable} { 
+		>{}M{0.12\textwidth}
+		>{\centering}p{0.15\textwidth} 
+		>{}p{0.35\textwidth}
+		>{}p{0.35\textwidth} 
+	}
+	\rowcolorhead
+	\centering\headertitle{Codice} &
+	\centering\headertitle{Macro periodo} &
+	\centering\headertitle{Riscontro} &
+	\centering\headertitle{Piano di contingenza}
+	\endfirsthead	
+	\endhead
+	\caption{Analisi dei rischi} \endhead
+		RIS\_T - 1 & Progettazione di Dettaglio e Codifica & L'utilizzo di Java nella sua versione standard si è rilevata poco adatta nel contesto della gestione delle dipendenze. \'E stato difficile implementare dei test di unità quando l'oggetto sotto test è modellato con il design pattern\textsubscript{G} Singleton & In accordo con il proponente, dopo aver esploato alcune alternative è stato deciso di adottare un framework\textsubscript{G} per la gestione delle dipendenze che facilitasse il disaccoppiamento tra le classi e prevenisse la necessità di utilizzare il Singleton.
+\end{longtable}
+
+\subsubsection{Validazione e Collaudo}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable} { 
+		>{}M{0.12\textwidth}
+		>{}p{0.28\textwidth}
+		>{}p{0.28\textwidth} 
+		>{}p{0.28\textwidth}
+	}
+	\rowcolorhead
+	\centering\headertitle{Codice} &
+	\centering\headertitle{Riscontro} &
+	\centering\headertitle{Piano di contingenza} & 
+	\centering\headertitle{Miglioramento}
+	\endfirsthead	
+	\endhead
+	\caption{Analisi dei rischi} \endhead	
+	RIS\_O - 2 & A causa del periodo sempre più ricco di impegni per tutti i componenti del gruppo, alcune scadenze non sono state rispettate o sono state trascurate alcune segnalazioni effettuate. I componenti hanno avuto difficoltà a partecipare alle riunioni, talvolta per ragioni giustificate, in altri casi no.  & In base alle disponibilità dei componenti, quelli in difficoltà sono stati aiutati a colmare le lacune nel proprio lavoro. & Nelle occasioni future, sarà importante organizzare un incontro con il fine di allinearsi sugli impegni di ciascuno in modo da poter organizzare al meglio il lavoro: il responsabile di progetto dovrà comunicare con maggior decisione la necessità di lavorare con costanza per raggiungere gli obiettivi prefissati.
+\end{longtable}
+
+
+
+
+
+\subsection{Preparazione presentazione}
+
+Sono stati suddivisi i ruoli per la presentazione:
+\begin{enumerate}
+	\item Elevator pitch: Sofia e Giada;
+	\item dimostrazione pratica: Nicolò, Simone e Alberto;
+	\item contabilità di tempi e costi: Andrea.
+\end{enumerate}
