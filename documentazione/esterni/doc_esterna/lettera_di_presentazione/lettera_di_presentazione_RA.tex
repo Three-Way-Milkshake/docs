@@ -1,0 +1,176 @@
+\documentclass[10pt,stdletter,dateno,sigright]{newlfm}  % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+\usepackage{etoolbox}
+\usepackage{multicol}
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+\usepackage{charter} % Use the Charter font for the document text
+\usepackage{eurosym}
+\usepackage{hyperref}
+
+
+
+\newsavebox{\Luiuc}
+\sbox{\Luiuc}{
+    \parbox[b]{1.75in}{
+        \vspace{0.5in}
+        \includegraphics[width=1.9\linewidth]{../../../../latex/images/logoTWM.png}
+    }
+}
+% Company/institution logo at the top left of the page
+
+
+
+
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=0.1in} % Slightly decrease the height of the signature field
+%\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+%\PhrPhone{Phone} % Customize the "Telephone" text
+\PhrEmail{Email} % Customize the "E-mail" text
+
+\lthUiuc % Print the company/institution logo
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{Tessari Andrea \\ Responsabile di Progetto } % Name
+
+\addrfrom{
+    Gruppo: Three Way Milksahke  \\ Corso di Ingegneria del Software AA 2020/2021 \\ Padova, 24 Maggio 2021
+}
+
+
+
+\emailfrom{threewaymilkshake@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{Egregio Prof. Vardanega Tullio, \\ Egregio Prof. Cardin Riccardo,} % Greeting text
+\closeline{Cordiali Saluti} % Closing text
+
+\nameto{Prof. Vardanega Tullio \\ Prof. Cardin Riccardo } % Addressee of the letter above the to address
+\signature{\includegraphics[width=0.4\linewidth]{../../../../latex/images/signatures/andrea.png}}
+\addrto{
+    Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63 \\ 35121 Padova
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+    \begin{newlfm}
+
+        %----------------------------------------------------------------------------------------
+        %	LETTER CONTENT
+        %----------------------------------------------------------------------------------------
+
+        Con la presente, il gruppo Three Way Milkshake intende comunicarVi ufficialmente la partecipazione alla Revisione di Accettazione, al fine di esporvi il prodotto da Voi commissionato, denominato:
+        \begin{center}
+            \textbf{PORTACS: piattaforma di controllo mobilità autonoma}
+        \end{center}
+        proposto da Sanmarco Informatica.
+
+        Allegati alla presente lettera i documenti che illustrano in dettaglio analisi del prodotto, pianificazione e criteri a garanzia della qualità:
+
+        \begin{multicols}{2}
+            \begin{itemize}
+                \item \textsc{Analisi dei Requisiti v4.0.0;}
+                \item \textsc{Piano di Progetto v4.0.0;}
+                \item \textsc{Glossario }(\href{https://github.com/Three-Way-Milkshake/docs/wiki/Glossario}{\underline{online a questo indirizzo}});
+                \item \textsc{Piano di Qualifica v5.0.0;}
+                \item \textsc{Studio di Fattibilità v1.0.0;}
+                \item \textsc{Norme di Progetto v4.0.0;}
+                \item \textsc{Manuale Utente v2.0.0;}
+                \item \textsc{Manuale Manutentore v2.0.0;}
+                \item \textsc{Verbale Interno 1} - 7 Dicembre 2020;
+            \item \textsc{Verbale Interno 2} - 14 Dicembre 2020;
+            \item \textsc{Verbale Interno 3} - 28 Dicembre 2020;
+            \item \textsc{Verbale Interno 4} - 30 Dicembre 2020;
+            \item \textsc{Verbale Interno 5} - 4 Gennaio 2021;
+            \item \textsc{Verbale Interno 6} - 11 Gennaio 2021;
+            \item \textsc{Verbale Interno 7} - 15 Gennaio 2021;
+            \item \textsc{Verbale Interno 8} - 3 Febbraio 2021;
+            \item \textsc{Verbale Interno 9} - 5 Febbraio 2021;
+            \item \textsc{Verbale Interno 10} - 10 Febbraio 2021;
+            \item \textsc{Verbale Interno 11} - 12 Febbraio 2021;
+            \item \textsc{Verbale Interno 12} - 18 Febbraio 2021;
+            \item \textsc{Verbale Interno 13} - 22 Febbraio 2021;
+            \item \textsc{Verbale Interno 14} - 24 Febbraio 2021;
+            \item \textsc{Verbale Interno 15} - 26 Febbraio 2021;
+            \item \textsc{Verbale Interno 16} - 2 Marzo 2021;
+
+            \item \textsc{Verbale Interno 17} - 5 Marzo 2021;
+            \item \textsc{Verbale Interno 18} - 10 Marzo 2021;
+            \item \textsc{Verbale Interno 19} - 12 Marzo 2021;
+            \item \textsc{Verbale Interno 20} - 17 Marzo 2021;
+            \item \textsc{Verbale Interno 21} - 18 Marzo 2021;
+            \item \textsc{Verbale Interno 22} - 19 Marzo 2021;
+            \item \textsc{Verbale Interno 23} - 24 Marzo 2021;
+            \item \textsc{Verbale Interno 24} - 29 Marzo 2021;
+            \item \textsc{Verbale Interno 25} - 1 Aprile 2021;
+            \item \textsc{Verbale Interno 26} - 3 Aprile 2021;
+            \item \textsc{Verbale Interno 27} - 10 Aprile 2021;
+            \item \textsc{Verbale Interno 28} - 17 Aprile 2021;
+            \item \textsc{Verbale Interno 29} - 19 Aprile 2021;
+            \item \textsc{Verbale Interno 30} - 20 Aprile 2021;
+            \item \textsc{Verbale Interno 31} - 22 Aprile 2021;
+                \item \textsc{Verbale Interno 32} - 28 Aprile 2021;
+                \item \textsc{Verbale Interno 33} - 6 Maggio 2021;
+                \item \textsc{Verbale Interno 34} - 10 Maggio 2021;
+                \item \textsc{Verbale Interno 35} - 15 Maggio 2021;
+               \item \textsc{Verbale Interno 36} - 23 Maggio 2021;
+               \item \textsc{Verbale Esterno 1} - 22 Dicembre 2020;
+               \item \textsc{Verbale Esterno 2} - 22 Gennaio 2021;
+            \item \textsc{Verbale Esterno 3} - 17 Febbraio 2021;
+            \item \textsc{Verbale Esterno 4} - 1 Marzo 2021;
+            \item \textsc{Verbale Esterno 5} - 16 Marzo 2021;
+            \item \textsc{Verbale Esterno 6} - 23 Marzo 2021;
+            \item \textsc{Verbale Esterno 7} - 9 Aprile 2021;
+            \item \textsc{Verbale Esterno 8} - 13 Aprile 2021;
+            \item \textsc{Verbale Esterno 9} - 6 Maggio 2021;
+                \item \textsc{Verbale Esterno 10} - 18 Maggio 2021;
+            \end{itemize}
+        \end{multicols}
+ 
+        \ \\
+        Il codice del prodotto, insieme alla documentazione ufficiale, è disponibile al seguente indirizzo:
+		\begin{center}
+			\url{https://github.com/Three-Way-Milkshake/C5-PORTACS_SWE}
+		\end{center}
+		\
+
+         Il gruppo consegna il prodotto il giorno 2021-05-24, con relativo collaudo fissato il 2021-05-25.
+         Come descritto nel documento {Piano di Progetto v4.0.0}, il preventivo di costo finale è pari a \textbf{10152 \euro}.
+        \\
+        \\
+
+        Di seguito \`e riportato l'organigramma del gruppo:
+        \begin{center}
+            \begin{tabular}{l | l}
+                Chiarello Sofia & 1187024
+                \\
+                Crivellari Alberto & 1170913
+                \\
+                De Renzis Simone & 1187510
+                \\
+                Greggio Nicolò & 1193398
+                \\
+                Tessari Andrea & 1188322
+                \\
+                Zuccolo Giada & 1193485
+                \\
+            \end{tabular}
+        \end{center}
+        \ \newline
+        \\Rimaniamo a Vostra completa disposizione per qualsiasi chiarimento;
+        %----------------------------------------------------------------------------------------
+
+    \end{newlfm}
+\end{document}
